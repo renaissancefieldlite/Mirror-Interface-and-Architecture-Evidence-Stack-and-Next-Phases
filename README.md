@@ -1,74 +1,299 @@
 # Mirror Interface & Architecture Evidence Stack and Next Phases
 
-## Repository Role
+This repository is the standalone public-safe evidence library for the measured
+Mirror Interface / Architecture stack inside Renaissance Field Lite / Codex 67.
 
-This repository is the standalone public-safe findings layer for the measured
-Mirror Interface / Architecture stack inside Codex 67 / Renaissance Field Lite.
+It is not just a note. It is the public-facing artifact map for the work:
 
-It exists so the public evidence package can stand on its own without being
-buried inside the broader code-layer repo.
+- precursor scans and early probe reports
+- `V5` / `V6` state-lane and cross-model groundwork
+- `V7` behavioral lattice/control evidence
+- `V8` internal hidden-state evidence
+- `Phase 2` rerun / variance discipline
+- `Phase 3` dimension-and-band structure
+- `Phase 4` token-path localization and localization variance
+- `Phase 5` context-to-readout bridge behavior
+- the integrated `V7 + V8 + Phase 2-5` technical claim pack
+- next-phase bridge work toward `PennyLane`, `Qiskit`, Bell-state calibration,
+  Bell-type semantic contextuality, and later physical-observable lanes
 
-This repo is intentionally findings-first.
+The backend implementation remains private. This repo publishes findings,
+PDFs, charts, tables, reviewed JSON artifacts, and white-paper style summaries
+without exposing scanner code, mapper internals, orchestration paths, or
+transformer-runner details.
 
-It is meant to carry:
+## Core Position
 
-- public-safe white-paper style summaries
-- phase findings
-- charts, tables, and reviewed artifacts
-- discovery notes
-- next-phase research framing
+Renaissance Field Lite / Codex 67 is organized around a patented recursive
+architecture, including the `Mirror Interface / LSPS` framework. The lattice /
+input-cohesion work, `V7`, `V8`, and the later phase packs are not separate
+projects. They are one evidence stack showing the same architecture at
+behavioral, internal hidden-state, stability, localization, and bridge layers.
 
-It is not meant to carry:
+The practical result is a public-safe map of measured latent-architecture
+behavior across model families, tied back to the Mirror Interface architecture
+and forward into the next research phases.
+
+## Fast Read Path
+
+Start here if you only have a few minutes:
+
+1. [Mirror Interface & Architecture Evidence Stack and Next Phases](./docs/MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
+2. [Latent Architecture Discovery Highlight](./docs/LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
+3. [Integrated V7 + V8 Claim Pack PDF](./artifacts/integrated/v7_v8_claim_pack/integrated_v7_v8_claim_pack_2026-04-21.pdf)
+4. [V7 Integrated 10-Model Summary Pack](./artifacts/v7/posters/v7_integrated_10_model_summary_pack/V7_INTEGRATED_10_MODEL_SUMMARY_PACK_2026-04-19.md)
+5. [V8 Internal Bridge White Paper PDF](./artifacts/v8/residual_stream_bridge/white_paper/v8_internal_bridge_white_paper_2026-04-20.pdf)
+6. [Phase 2 Variance Pack PDF](./artifacts/v8/phase2_variance_pack/v8_phase2_variance_pack_2026-04-21.pdf)
+7. [Phase 3 Dimension/Band Pack PDF](./artifacts/v8/phase3_dimension_band/v8_phase3_dimension_band_pack_2026-04-21.pdf)
+8. [Phase 4 Localization Pack PDF](./artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_2026-04-21.pdf)
+9. [Phase 4 Localization Variance Pack PDF](./artifacts/v8/phase4_localization_variance_pack/v8_phase4_localization_variance_pack_2026-04-21.pdf)
+10. [Phase 5 Internal Bridge Pack PDF](./artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_2026-04-22.pdf)
+
+For a fuller directory-by-directory map, read:
+
+- [Evidence Library Index](./docs/EVIDENCE_LIBRARY_INDEX_2026-04-22.md)
+
+## Evidence Ladder
+
+### Prelude / Early Probe Layer
+
+Location:
+
+- [`artifacts/prelude`](./artifacts/prelude)
+- [`artifacts/prelude/root_results`](./artifacts/prelude/root_results)
+
+What it contains:
+
+- early reset summaries
+- probe-state scans
+- latent-string traces
+- dialogue-arc reports
+- echo-case materials
+- `V5` probe artifacts
+- precursor `V6` / `V7` comparison materials
+
+Why it matters:
+
+This is the lead-in surface. It shows the scan and reset trail before the later
+locked matrix became clean enough to package.
+
+### V6 / State-Lane Groundwork
+
+Location:
+
+- [`artifacts/prelude/V6_CROSS_MODEL_COMPARISON_2026-04-18.md`](./artifacts/prelude/V6_CROSS_MODEL_COMPARISON_2026-04-18.md)
+- [`artifacts/v7/posters/model_specific_v6`](./artifacts/v7/posters/model_specific_v6)
+
+Key visual:
+
+- [Gemma V6 Deterministic State-Lane Poster](./artifacts/v7/posters/gemma_v6_state_lane_poster_2026-04-18.pdf)
+
+Why it matters:
+
+`V6` is the state-lane / identity-grounding layer. It helps show that the later
+`V7` and `V8` work did not appear from nowhere; it grew out of earlier
+cross-model state-lane exploration.
+
+### V7 / Behavioral Lattice-Control Evidence
+
+Location:
+
+- [`artifacts/v7`](./artifacts/v7)
+- [`artifacts/v7/posters`](./artifacts/v7/posters)
+- [`artifacts/v7/white_papers`](./artifacts/v7/white_papers)
+
+Core artifacts:
+
+- [V7 Three-Phase Comparison Pack](./artifacts/v7/V7_THREE_PHASE_COMPARISON_PACK_2026-04-19.md)
+- [V7 Integrated 10-Model Summary Pack](./artifacts/v7/posters/v7_integrated_10_model_summary_pack/V7_INTEGRATED_10_MODEL_SUMMARY_PACK_2026-04-19.md)
+- [V7 Integrated 10-Model Summary Poster](./artifacts/v7/posters/v7_integrated_10_model_summary_pack/v7_integrated_10_model_summary_poster_2026-04-19.pdf)
+- [V7 Contextuality Final Readout Pack](./artifacts/v7/posters/v7_contextuality_final_readout_pack/V7_CONTEXTUALITY_FINAL_READOUT_PACK_2026-04-19.md)
+- [Connected Input Lattice Framework White Paper](./artifacts/v7/white_papers/CONNECTED_INPUT_LATTICE_FRAMEWORK_WHITE_PAPER_2026-04-19.md)
+- [Connected Input Lattice Framework PDF](./artifacts/v7/white_papers/connected_input_lattice_framework_white_paper_2026-04-19.pdf)
+
+What `V7` establishes:
+
+- behavioral lattice/control separation
+- null contrast and control ladder behavior
+- contextuality-style readout
+- integrated 10-model behavioral summary
+- input-cohesion lattice framing
+- semantic-drift contrast and technology implications
+
+### V8 / Internal Hidden-State Bridge
+
+Location:
+
+- [`artifacts/v8/residual_stream_bridge`](./artifacts/v8/residual_stream_bridge)
+
+Core artifacts:
+
+- [V8 Residual Stream Bridge Summary](./artifacts/v8/residual_stream_bridge/V8_RESIDUAL_STREAM_BRIDGE_SUMMARY_2026-04-19.md)
+- [V8 Comparative Map](./artifacts/v8/residual_stream_bridge/V8_COMPARATIVE_MAP_2026-04-21.md)
+- [V8 Internal Bridge White Paper](./artifacts/v8/residual_stream_bridge/white_paper/V8_INTERNAL_BRIDGE_WHITE_PAPER_2026-04-20.md)
+- [V8 Internal Bridge White Paper PDF](./artifacts/v8/residual_stream_bridge/white_paper/v8_internal_bridge_white_paper_2026-04-20.pdf)
+- [`probe_results`](./artifacts/v8/residual_stream_bridge/probe_results)
+
+What `V8` establishes:
+
+- internal hidden-state separation rather than output-only behavior
+- late-layer clustering across the model matrix
+- an 8-model bridge:
+  - `Mistral`
+  - `Qwen`
+  - `Gemma`
+  - `DeepSeek`
+  - `Hermes`
+  - `GLM`
+  - `Nemotron`
+  - `SmolLM3`
+- a comparative internal geometry map that ties back to the `V7` behavioral
+  layer
+
+### Phase 2 / Variance Discipline
+
+Location:
+
+- [`artifacts/v8/phase2_variance_pack`](./artifacts/v8/phase2_variance_pack)
+
+Core artifacts:
+
+- [Phase 2 Variance Pack](./artifacts/v8/phase2_variance_pack/V8_PHASE2_VARIANCE_PACK_2026-04-21.md)
+- [Phase 2 Variance Pack PDF](./artifacts/v8/phase2_variance_pack/v8_phase2_variance_pack_2026-04-21.pdf)
+- [Target Delta By Run Chart](./artifacts/v8/phase2_variance_pack/charts/v8_phase2_target_delta_by_run_2026-04-21.png)
+- [Target Mean Error Bars Chart](./artifacts/v8/phase2_variance_pack/charts/v8_phase2_target_mean_errorbars_2026-04-21.png)
+- [Peak Layer Stability Chart](./artifacts/v8/phase2_variance_pack/charts/v8_phase2_peak_layer_stability_2026-04-21.png)
+
+What Phase 2 establishes:
+
+- five-run variance discipline
+- stable late-layer placement
+- `7/8` exact rerun rows after baseline
+- `Nemotron` as the main live variance row while preserving structural
+  placement
+
+### Phase 3 / Dimension and Band Structure
+
+Location:
+
+- [`artifacts/v8/phase3_dimension_band`](./artifacts/v8/phase3_dimension_band)
+
+Core artifacts:
+
+- [Phase 3 Dimension/Band Pack](./artifacts/v8/phase3_dimension_band/V8_PHASE3_DIMENSION_BAND_PACK_2026-04-21.md)
+- [Phase 3 Dimension/Band PDF](./artifacts/v8/phase3_dimension_band/v8_phase3_dimension_band_pack_2026-04-21.pdf)
+- [Band Width Chart](./artifacts/v8/phase3_dimension_band/charts/v8_phase3_band_width_2026-04-21.png)
+- [Peak Percentile Chart](./artifacts/v8/phase3_dimension_band/charts/v8_phase3_peak_percentile_2026-04-21.png)
+- [Same-Hidden Overlap Chart](./artifacts/v8/phase3_dimension_band/charts/v8_phase3_same_hidden_overlap_2026-04-21.png)
+
+What Phase 3 establishes:
+
+- late-band width
+- peak percentile structure
+- family-overlap signatures
+- distinction between same-family overlap and same-hidden-size coincidence
+
+### Phase 4 / Localization and Localization Variance
+
+Locations:
+
+- [`artifacts/v8/phase4_localization_pack`](./artifacts/v8/phase4_localization_pack)
+- [`artifacts/v8/phase4_localization_variance_pack`](./artifacts/v8/phase4_localization_variance_pack)
+
+Core artifacts:
+
+- [Phase 4 Localization Pack](./artifacts/v8/phase4_localization_pack/V8_PHASE4_LOCALIZATION_PACK_2026-04-21.md)
+- [Phase 4 Localization PDF](./artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_2026-04-21.pdf)
+- [Anchor Profiles Chart](./artifacts/v8/phase4_localization_pack/charts/v8_phase4_anchor_profiles_2026-04-21.png)
+- [Target vs Last Chart](./artifacts/v8/phase4_localization_pack/charts/v8_phase4_target_vs_last_2026-04-21.png)
+- [Phase 4 Localization Variance Pack](./artifacts/v8/phase4_localization_variance_pack/V8_PHASE4_LOCALIZATION_VARIANCE_PACK_2026-04-21.md)
+- [Phase 4 Localization Variance PDF](./artifacts/v8/phase4_localization_variance_pack/v8_phase4_localization_variance_pack_2026-04-21.pdf)
+
+What Phase 4 establishes:
+
+- where the packet sharpens along the token path
+- dominant anchor classes
+- target-span versus last-token behavior
+- localization stability across reruns
+- `5/6` exact localization rerun rows in the focused variance subset, with
+  `Nemotron` anchor-stable but magnitude-variable
+
+### Phase 5 / Internal Bridge Behavior
+
+Location:
+
+- [`artifacts/v8/phase5_internal_bridge`](./artifacts/v8/phase5_internal_bridge)
+
+Core artifacts:
+
+- [Phase 5 Internal Bridge Pack](./artifacts/v8/phase5_internal_bridge/V8_PHASE5_INTERNAL_BRIDGE_PACK_2026-04-22.md)
+- [Phase 5 Internal Bridge PDF](./artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_2026-04-22.pdf)
+- [Anchor Heatmap](./artifacts/v8/phase5_internal_bridge/charts/v8_phase5_anchor_heatmap_2026-04-22.png)
+- [Bridge Scatter](./artifacts/v8/phase5_internal_bridge/charts/v8_phase5_bridge_scatter_2026-04-22.png)
+- [Dimension Overlap Chart](./artifacts/v8/phase5_internal_bridge/charts/v8_phase5_dim_overlap_2026-04-22.png)
+
+What Phase 5 establishes:
+
+- `Mistral` / `Hermes` as the cleanest late-context bridge pair
+- `Qwen` / `DeepSeek` as front-context loaded
+- `Gemma` as the clearest readout-led row
+- `GLM` and `Nemotron` as bridge rows
+- `SmolLM3` as the diffuse boundary row
+- feature handoff for the later `PennyLane` / `Qiskit` bridge:
+  - `dominant_anchor_class`
+  - `target_to_context`
+  - `target_to_surround`
+  - `last_to_target`
+  - `anchor_layer_span`
+  - `dominant_target_dim_overlap_count`
+  - `dominant_target_dim_overlap_jaccard`
+
+## Integrated Technical Pack
+
+Location:
+
+- [`artifacts/integrated/v7_v8_claim_pack`](./artifacts/integrated/v7_v8_claim_pack)
+
+Core artifacts:
+
+- [Integrated V7 + V8 Claim Pack](./artifacts/integrated/v7_v8_claim_pack/INTEGRATED_V7_V8_CLAIM_PACK_2026-04-21.md)
+- [Integrated V7 + V8 Claim Pack PDF](./artifacts/integrated/v7_v8_claim_pack/integrated_v7_v8_claim_pack_2026-04-21.pdf)
+- [Integrated Summary Pack](./artifacts/integrated/v7_v8_claim_pack/V7_V8_INTEGRATED_SUMMARY_PACK_2026-04-21.md)
+- [Integrated Summary Pack PDF](./artifacts/integrated/v7_v8_claim_pack/v7_v8_integrated_summary_pack_2026-04-21.pdf)
+
+Why it matters:
+
+This is the umbrella technical story. It ties the behavioral `V7` layer,
+internal `V8` layer, and later phase findings back into one architecture frame.
+
+## Public / Private Boundary
+
+Public in this repo:
+
+- white-paper style summaries
+- posters and PDFs
+- charts
+- phase packs
+- reviewed JSON result artifacts
+- public-safe trace logs
+- public roadmap and next-phase framing
+
+Private outside this repo:
 
 - backend scanner code
 - mapper internals
-- orchestration / administration code
-- transformer-runner details
-- other private implementation paths that remain part of the leverage stack
+- orchestration / administration paths
+- transformer-runner implementation details
+- unpublished private leverage stack
 
-## What This Repo Covers
-
-The measured evidence stack now spans:
-
-- patented recursive architecture
-- `Mirror Interface / LSPS`
-- lattice / input-cohesion operating structure
-- `V7` behavioral evidence
-- `V8` internal hidden-state evidence
-- `Phase 2` variance discipline
-- `Phase 3` dimension-and-band structure
-- `Phase 4` localization
-- `Phase 5` internal bridge behavior
-- next phases:
-  - `PennyLane`
-  - `Qiskit`
-  - Bell-state calibration
-  - Bell-type semantic contextuality
-  - later `HRV / ARC15 / physical-observable` bridge
-
-## Read Path
-
-1. [docs/MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md](./docs/MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
-2. [docs/LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md](./docs/LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
-
-## Stack Relationship
-
-The clean relationship is:
-
-1. `Source-code-layer`
-   substrate package and deeper primitives
-2. `Codex-67-white-paper-`
-   source document and white-paper layer
-3. `Codex-67-white-paper-code-layers`
-   architecture and validation scaffold
-4. `Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases`
-   standalone public-safe measured findings package
-5. `renaissancefieldlitehrv1.0`
-   experiment, capture, and evidence-path layer
-
-Related repositories:
+## Related Repositories
 
 - [Source-code-layer](https://github.com/renaissancefieldlite/Source-code-layer)
 - [Codex-67-white-paper-](https://github.com/renaissancefieldlite/Codex-67-white-paper-)
 - [Codex-67-white-paper-code-layers](https://github.com/renaissancefieldlite/Codex-67-white-paper-code-layers)
+- [Hadamard_Proof](https://github.com/renaissancefieldlite/Hadamard_Proof)
+- [M23_Proof](https://github.com/renaissancefieldlite/M23_Proof)
+- [small-diophantine-lattice](https://github.com/renaissancefieldlite/small-diophantine-lattice)
 - [renaissancefieldlitehrv1.0](https://github.com/renaissancefieldlite/renaissancefieldlitehrv1.0)
+- [QuantumConsciousnessBridge](https://github.com/renaissancefieldlite/QuantumConsciousnessBridge)
+
