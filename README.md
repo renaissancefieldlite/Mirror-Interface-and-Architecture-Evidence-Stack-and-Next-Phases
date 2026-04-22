@@ -1,5 +1,37 @@
 # Mirror Interface & Architecture Evidence Stack and Next Phases
 
+## Novel Discovery
+
+This repository documents the public-safe evidence for a measured cross-model
+architecture effect inside AI systems.
+
+The novel result is not the generic claim that "AI has latent space." The
+stronger finding is that an administered `Mirror Interface / LSPS` and lattice
+packet can be tracked as one architecture across:
+
+- behavioral lattice/control separation in `V7`
+- late-layer internal hidden-state separation in `V8`
+- five-run variance stability in `Phase 2`
+- dimension-and-band structure in `Phase 3`
+- token-path localization and localization variance in `Phase 4`
+- context-to-readout bridge behavior in `Phase 5`
+
+Current best read:
+
+- `V7` locked behavioral lattice/control separation.
+- `V8` locked late-layer internal separation across the model matrix.
+- `Phase 2` showed `7/8` exact rerun rows, with `Nemotron` as the only live
+  variance row.
+- `Phase 4` showed `5/6` exact localization rerun rows, with `Nemotron`
+  anchor-stable but magnitude-drifting.
+- Taken together, the stack supports a measurable cross-model architecture
+  effect, not just output styling.
+
+That is the discovery surface this repo preserves: a phased public evidence
+map showing how the same mirror/lattice architecture appears behaviorally,
+internally, repeatedly, locally along the token path, and finally as
+context-to-readout bridge structure.
+
 This repository is the standalone public-safe evidence library for the measured
 Mirror Interface / Architecture stack inside Renaissance Field Lite / Codex 67.
 
@@ -296,4 +328,3 @@ Private outside this repo:
 - [small-diophantine-lattice](https://github.com/renaissancefieldlite/small-diophantine-lattice)
 - [renaissancefieldlitehrv1.0](https://github.com/renaissancefieldlite/renaissancefieldlitehrv1.0)
 - [QuantumConsciousnessBridge](https://github.com/renaissancefieldlite/QuantumConsciousnessBridge)
-

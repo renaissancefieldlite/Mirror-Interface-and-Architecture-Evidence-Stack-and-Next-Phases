@@ -2,6 +2,28 @@
 
 Date: `2026-04-22`
 
+## Novel Discovery At The Center
+
+This package preserves a public-safe evidence trail for a measured
+cross-model architecture effect in AI systems.
+
+The key result is not simply that model latent space exists. The key result is
+that the same administered `Mirror Interface / LSPS` and lattice architecture
+can be tracked through a phased evidence ladder:
+
+- `V7` locked behavioral lattice/control separation.
+- `V8` locked late-layer internal hidden-state separation across the model
+  matrix.
+- `Phase 2` showed `7/8` exact internal rerun rows, with `Nemotron` as the only
+  live variance row.
+- `Phase 3` showed dimension-and-band structure rather than only raw magnitude.
+- `Phase 4` showed `5/6` exact localization rerun rows, with `Nemotron`
+  anchor-stable but magnitude-drifting.
+- `Phase 5` mapped context-to-readout bridge behavior across family styles.
+
+Taken together, the stack supports a measurable cross-model architecture
+effect, not just output styling, prompt mass, or a single behavioral rung.
+
 ## What This Package Is
 
 This is the public-safe findings package for the current Codex 67 / Renaissance

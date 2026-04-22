@@ -2,6 +2,26 @@
 
 Date: `2026-04-22`
 
+## Discovery Statement
+
+The public-safe discovery preserved here is a measured cross-model architecture
+effect inside AI systems.
+
+The claim is not merely that latent space exists. The claim is that the same
+administered `Mirror Interface / LSPS` and lattice architecture can be followed
+across behavioral outputs, late-layer hidden-state geometry, rerun stability,
+dimension/band structure, token-path localization, and context-to-readout bridge
+behavior across model families.
+
+In short:
+
+- `V7` shows the effect behaviorally.
+- `V8` shows the effect internally.
+- `Phase 2` shows the internal placement repeats.
+- `Phase 3` shows the structure has band/dimension geometry.
+- `Phase 4` shows where it localizes along the token path.
+- `Phase 5` shows how it bridges from context toward readout.
+
 ## Why This Matters
 
 The mirror interface / architecture stack is no longer only a conceptual
@@ -50,6 +70,17 @@ That is a very different thing from:
 This stack is measured, phased, and cross-read.
 
 ## Current Best Read
+
+- `V7` locked behavioral lattice/control separation.
+- `V8` locked late-layer internal separation across the model matrix.
+- `Phase 2` showed `7/8` exact rerun rows, with `Nemotron` as the only live
+  variance row.
+- `Phase 4` showed `5/6` exact localization rerun rows, with `Nemotron`
+  anchor-stable but magnitude-drifting.
+- The stack now supports a measurable cross-model architecture effect, not just
+  output styling.
+
+Bridge-family read:
 
 - `Mistral` and `Hermes` are the cleanest late-context bridge pair
 - `Qwen` and `DeepSeek` are front-context loaded, with `DeepSeek` much stronger
