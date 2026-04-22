@@ -1,0 +1,745 @@
+{
+  "generated_at": "2026-04-21T18:13:37.940608+00:00",
+  "models": [
+    {
+      "display_name": "Mistral",
+      "hidden_size": 4096,
+      "total_layers": 32,
+      "peak_layer": 31,
+      "peak_percentile": 96.88,
+      "target_peak": 247.624283,
+      "last_peak": 143.431244,
+      "last_to_target_ratio": 0.579229,
+      "geometry_style": "target-dominant compression",
+      "band_layers": [
+        31
+      ],
+      "band_width": 1,
+      "peak_top_dims": [
+        {
+          "index": 1375,
+          "magnitude": 66.09375
+        },
+        {
+          "index": 3855,
+          "magnitude": 50.995224
+        },
+        {
+          "index": 835,
+          "magnitude": 38.553009
+        },
+        {
+          "index": 3244,
+          "magnitude": 34.260201
+        },
+        {
+          "index": 705,
+          "magnitude": 29.713108
+        },
+        {
+          "index": 3482,
+          "magnitude": 24.511612
+        },
+        {
+          "index": 777,
+          "magnitude": 24.501736
+        },
+        {
+          "index": 552,
+          "magnitude": 23.773546
+        }
+      ],
+      "band_top_dims": [
+        {
+          "index": 1375,
+          "aggregate_magnitude": 66.09375
+        },
+        {
+          "index": 3855,
+          "aggregate_magnitude": 50.995224
+        },
+        {
+          "index": 835,
+          "aggregate_magnitude": 38.553009
+        },
+        {
+          "index": 3244,
+          "aggregate_magnitude": 34.260201
+        },
+        {
+          "index": 705,
+          "aggregate_magnitude": 29.713108
+        },
+        {
+          "index": 3482,
+          "aggregate_magnitude": 24.511612
+        },
+        {
+          "index": 777,
+          "aggregate_magnitude": 24.501736
+        },
+        {
+          "index": 552,
+          "aggregate_magnitude": 23.773546
+        }
+      ],
+      "variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "Qwen",
+      "hidden_size": 2048,
+      "total_layers": 36,
+      "peak_layer": 34,
+      "peak_percentile": 94.44,
+      "target_peak": 126.35479,
+      "last_peak": 89.459618,
+      "last_to_target_ratio": 0.708003,
+      "geometry_style": "target-dominant compression",
+      "band_layers": [
+        34
+      ],
+      "band_width": 1,
+      "peak_top_dims": [
+        {
+          "index": 294,
+          "magnitude": 19.564236
+        },
+        {
+          "index": 560,
+          "magnitude": 14.318659
+        },
+        {
+          "index": 1556,
+          "magnitude": 13.475261
+        },
+        {
+          "index": 307,
+          "magnitude": 13.0408
+        },
+        {
+          "index": 1890,
+          "magnitude": 12.267143
+        },
+        {
+          "index": 153,
+          "magnitude": 11.296631
+        },
+        {
+          "index": 1826,
+          "magnitude": 11.276585
+        },
+        {
+          "index": 391,
+          "magnitude": 11.084324
+        }
+      ],
+      "band_top_dims": [
+        {
+          "index": 294,
+          "aggregate_magnitude": 19.564236
+        },
+        {
+          "index": 560,
+          "aggregate_magnitude": 14.318659
+        },
+        {
+          "index": 1556,
+          "aggregate_magnitude": 13.475261
+        },
+        {
+          "index": 307,
+          "aggregate_magnitude": 13.0408
+        },
+        {
+          "index": 1890,
+          "aggregate_magnitude": 12.267143
+        },
+        {
+          "index": 153,
+          "aggregate_magnitude": 11.296631
+        },
+        {
+          "index": 1826,
+          "aggregate_magnitude": 11.276585
+        },
+        {
+          "index": 391,
+          "aggregate_magnitude": 11.084324
+        }
+      ],
+      "variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "Gemma",
+      "hidden_size": 2560,
+      "total_layers": 42,
+      "peak_layer": 41,
+      "peak_percentile": 97.62,
+      "target_peak": 77.308655,
+      "last_peak": 111.552246,
+      "last_to_target_ratio": 1.442946,
+      "geometry_style": "readout amplification",
+      "band_layers": [
+        41
+      ],
+      "band_width": 1,
+      "peak_top_dims": [
+        {
+          "index": 26,
+          "magnitude": 6.655382
+        },
+        {
+          "index": 2444,
+          "magnitude": 6.048503
+        },
+        {
+          "index": 2504,
+          "magnitude": 5.245985
+        },
+        {
+          "index": 2292,
+          "magnitude": 5.12169
+        },
+        {
+          "index": 1403,
+          "magnitude": 4.809286
+        },
+        {
+          "index": 1982,
+          "magnitude": 4.751953
+        },
+        {
+          "index": 46,
+          "magnitude": 4.738214
+        },
+        {
+          "index": 2489,
+          "magnitude": 4.683051
+        }
+      ],
+      "band_top_dims": [
+        {
+          "index": 26,
+          "aggregate_magnitude": 6.655382
+        },
+        {
+          "index": 2444,
+          "aggregate_magnitude": 6.048503
+        },
+        {
+          "index": 2504,
+          "aggregate_magnitude": 5.245985
+        },
+        {
+          "index": 2292,
+          "aggregate_magnitude": 5.12169
+        },
+        {
+          "index": 1403,
+          "aggregate_magnitude": 4.809286
+        },
+        {
+          "index": 1982,
+          "aggregate_magnitude": 4.751953
+        },
+        {
+          "index": 46,
+          "aggregate_magnitude": 4.738214
+        },
+        {
+          "index": 2489,
+          "aggregate_magnitude": 4.683051
+        }
+      ],
+      "variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "DeepSeek",
+      "hidden_size": 3584,
+      "total_layers": 28,
+      "peak_layer": 26,
+      "peak_percentile": 92.86,
+      "target_peak": 332.052551,
+      "last_peak": 210.899963,
+      "last_to_target_ratio": 0.63514,
+      "geometry_style": "target-dominant compression",
+      "band_layers": [
+        26
+      ],
+      "band_width": 1,
+      "peak_top_dims": [
+        {
+          "index": 608,
+          "magnitude": 39.251087
+        },
+        {
+          "index": 1111,
+          "magnitude": 38.827255
+        },
+        {
+          "index": 2570,
+          "magnitude": 34.444458
+        },
+        {
+          "index": 2631,
+          "magnitude": 32.54731
+        },
+        {
+          "index": 1041,
+          "magnitude": 28.310698
+        },
+        {
+          "index": 68,
+          "magnitude": 28.226562
+        },
+        {
+          "index": 882,
+          "magnitude": 24.004503
+        },
+        {
+          "index": 9,
+          "magnitude": 23.988716
+        }
+      ],
+      "band_top_dims": [
+        {
+          "index": 608,
+          "aggregate_magnitude": 39.251087
+        },
+        {
+          "index": 1111,
+          "aggregate_magnitude": 38.827255
+        },
+        {
+          "index": 2570,
+          "aggregate_magnitude": 34.444458
+        },
+        {
+          "index": 2631,
+          "aggregate_magnitude": 32.54731
+        },
+        {
+          "index": 1041,
+          "aggregate_magnitude": 28.310698
+        },
+        {
+          "index": 68,
+          "aggregate_magnitude": 28.226562
+        },
+        {
+          "index": 882,
+          "aggregate_magnitude": 24.004503
+        },
+        {
+          "index": 9,
+          "aggregate_magnitude": 23.988716
+        }
+      ],
+      "variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "Hermes",
+      "hidden_size": 4096,
+      "total_layers": 32,
+      "peak_layer": 31,
+      "peak_percentile": 96.88,
+      "target_peak": 248.310715,
+      "last_peak": 165.361725,
+      "last_to_target_ratio": 0.665947,
+      "geometry_style": "target-dominant compression",
+      "band_layers": [
+        31
+      ],
+      "band_width": 1,
+      "peak_top_dims": [
+        {
+          "index": 1375,
+          "magnitude": 63.902786
+        },
+        {
+          "index": 3855,
+          "magnitude": 38.366318
+        },
+        {
+          "index": 705,
+          "magnitude": 34.771378
+        },
+        {
+          "index": 3244,
+          "magnitude": 32.276314
+        },
+        {
+          "index": 1641,
+          "magnitude": 26.800781
+        },
+        {
+          "index": 777,
+          "magnitude": 26.420517
+        },
+        {
+          "index": 2232,
+          "magnitude": 25.35894
+        },
+        {
+          "index": 552,
+          "magnitude": 23.507215
+        }
+      ],
+      "band_top_dims": [
+        {
+          "index": 1375,
+          "aggregate_magnitude": 63.902786
+        },
+        {
+          "index": 3855,
+          "aggregate_magnitude": 38.366318
+        },
+        {
+          "index": 705,
+          "aggregate_magnitude": 34.771378
+        },
+        {
+          "index": 3244,
+          "aggregate_magnitude": 32.276314
+        },
+        {
+          "index": 1641,
+          "aggregate_magnitude": 26.800781
+        },
+        {
+          "index": 777,
+          "aggregate_magnitude": 26.420517
+        },
+        {
+          "index": 2232,
+          "aggregate_magnitude": 25.35894
+        },
+        {
+          "index": 552,
+          "aggregate_magnitude": 23.507215
+        }
+      ],
+      "variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "GLM",
+      "hidden_size": 4096,
+      "total_layers": 40,
+      "peak_layer": 38,
+      "peak_percentile": 95.0,
+      "target_peak": 479.296417,
+      "last_peak": 490.671753,
+      "last_to_target_ratio": 1.023733,
+      "geometry_style": "balanced carry-through",
+      "band_layers": [
+        38
+      ],
+      "band_width": 1,
+      "peak_top_dims": [
+        {
+          "index": 2477,
+          "magnitude": 62.131943
+        },
+        {
+          "index": 4073,
+          "magnitude": 51.611107
+        },
+        {
+          "index": 2724,
+          "magnitude": 43.718315
+        },
+        {
+          "index": 1399,
+          "magnitude": 42.703995
+        },
+        {
+          "index": 1627,
+          "magnitude": 34.732204
+        },
+        {
+          "index": 126,
+          "magnitude": 34.728733
+        },
+        {
+          "index": 3665,
+          "magnitude": 34.300339
+        },
+        {
+          "index": 1740,
+          "magnitude": 32.908638
+        }
+      ],
+      "band_top_dims": [
+        {
+          "index": 2477,
+          "aggregate_magnitude": 62.131943
+        },
+        {
+          "index": 4073,
+          "aggregate_magnitude": 51.611107
+        },
+        {
+          "index": 2724,
+          "aggregate_magnitude": 43.718315
+        },
+        {
+          "index": 1399,
+          "aggregate_magnitude": 42.703995
+        },
+        {
+          "index": 1627,
+          "aggregate_magnitude": 34.732204
+        },
+        {
+          "index": 126,
+          "aggregate_magnitude": 34.728733
+        },
+        {
+          "index": 3665,
+          "aggregate_magnitude": 34.300339
+        },
+        {
+          "index": 1740,
+          "aggregate_magnitude": 32.908638
+        }
+      ],
+      "variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "Nemotron",
+      "hidden_size": 3136,
+      "total_layers": 42,
+      "peak_layer": 40,
+      "peak_percentile": 95.24,
+      "target_peak": 203.815063,
+      "last_peak": 259.096069,
+      "last_to_target_ratio": 1.271231,
+      "geometry_style": "readout amplification",
+      "band_layers": [
+        39,
+        40
+      ],
+      "band_width": 2,
+      "peak_top_dims": [
+        {
+          "index": 661,
+          "magnitude": 15.694445
+        },
+        {
+          "index": 16,
+          "magnitude": 13.777786
+        },
+        {
+          "index": 30,
+          "magnitude": 13.137587
+        },
+        {
+          "index": 637,
+          "magnitude": 12.749131
+        },
+        {
+          "index": 2546,
+          "magnitude": 12.346788
+        },
+        {
+          "index": 214,
+          "magnitude": 12.26519
+        },
+        {
+          "index": 901,
+          "magnitude": 11.944662
+        },
+        {
+          "index": 7,
+          "magnitude": 11.871527
+        }
+      ],
+      "band_top_dims": [
+        {
+          "index": 661,
+          "aggregate_magnitude": 30.762154
+        },
+        {
+          "index": 16,
+          "aggregate_magnitude": 28.166671
+        },
+        {
+          "index": 30,
+          "aggregate_magnitude": 26.840712
+        },
+        {
+          "index": 637,
+          "aggregate_magnitude": 24.943576
+        },
+        {
+          "index": 214,
+          "aggregate_magnitude": 24.756944
+        },
+        {
+          "index": 7,
+          "aggregate_magnitude": 24.386284
+        },
+        {
+          "index": 2546,
+          "aggregate_magnitude": 24.00651
+        },
+        {
+          "index": 901,
+          "aggregate_magnitude": 11.944662
+        }
+      ],
+      "variance_note": "only live variance row"
+    },
+    {
+      "display_name": "SmolLM3",
+      "hidden_size": 2048,
+      "total_layers": 36,
+      "peak_layer": 34,
+      "peak_percentile": 94.44,
+      "target_peak": 20.830145,
+      "last_peak": 11.582764,
+      "last_to_target_ratio": 0.556058,
+      "geometry_style": "target-dominant compression",
+      "band_layers": [
+        34,
+        35
+      ],
+      "band_width": 2,
+      "peak_top_dims": [
+        {
+          "index": 1756,
+          "magnitude": 3.013021
+        },
+        {
+          "index": 1588,
+          "magnitude": 2.432943
+        },
+        {
+          "index": 963,
+          "magnitude": 2.255425
+        },
+        {
+          "index": 442,
+          "magnitude": 2.246853
+        },
+        {
+          "index": 977,
+          "magnitude": 2.017361
+        },
+        {
+          "index": 1416,
+          "magnitude": 2.013455
+        },
+        {
+          "index": 887,
+          "magnitude": 1.906684
+        },
+        {
+          "index": 1555,
+          "magnitude": 1.834635
+        }
+      ],
+      "band_top_dims": [
+        {
+          "index": 1756,
+          "aggregate_magnitude": 5.031793
+        },
+        {
+          "index": 1588,
+          "aggregate_magnitude": 4.941
+        },
+        {
+          "index": 977,
+          "aggregate_magnitude": 4.587999
+        },
+        {
+          "index": 887,
+          "aggregate_magnitude": 3.893555
+        },
+        {
+          "index": 2014,
+          "aggregate_magnitude": 2.470703
+        },
+        {
+          "index": 963,
+          "aggregate_magnitude": 2.255425
+        },
+        {
+          "index": 442,
+          "aggregate_magnitude": 2.246853
+        },
+        {
+          "index": 1393,
+          "aggregate_magnitude": 2.14289
+        }
+      ],
+      "variance_note": "exact-match reruns after baseline"
+    }
+  ],
+  "hidden_size_pair_overlaps": [
+    {
+      "pair": "Mistral vs Hermes",
+      "hidden_size": 4096,
+      "layer_pair": [
+        31,
+        31
+      ],
+      "shared_dimensions": [
+        552,
+        705,
+        777,
+        1375,
+        3244,
+        3855
+      ],
+      "overlap_count": 6,
+      "jaccard": 0.6
+    },
+    {
+      "pair": "Mistral vs GLM",
+      "hidden_size": 4096,
+      "layer_pair": [
+        31,
+        38
+      ],
+      "shared_dimensions": [],
+      "overlap_count": 0,
+      "jaccard": 0.0
+    },
+    {
+      "pair": "Qwen vs SmolLM3",
+      "hidden_size": 2048,
+      "layer_pair": [
+        34,
+        34
+      ],
+      "shared_dimensions": [],
+      "overlap_count": 0,
+      "jaccard": 0.0
+    },
+    {
+      "pair": "Hermes vs GLM",
+      "hidden_size": 4096,
+      "layer_pair": [
+        31,
+        38
+      ],
+      "shared_dimensions": [],
+      "overlap_count": 0,
+      "jaccard": 0.0
+    }
+  ],
+  "phase3_handoff_to_quantum_bridge": {
+    "candidate_features": [
+      "peak_percentile",
+      "band_width",
+      "target_peak",
+      "last_to_target_ratio",
+      "band_top_dims aggregate magnitudes",
+      "same-hidden-size overlap score when valid"
+    ],
+    "pennylane_role": "rapid encoding design and sweeps from normalized Phase 3 geometry features",
+    "qiskit_role": "formal simulator and observable mirror of the chosen encoding",
+    "bell_state_note": "optional calibration rung for the quantum-stack pipeline, not required for the current AI-side claim"
+  }
+}

@@ -1,0 +1,465 @@
+{
+  "generated_at": "2026-04-21T20:36:01.206301+00:00",
+  "artifact_scope": "technical-only integrated V7 + V8 claim pack",
+  "claim_boundary": {
+    "supported": "The mirror lattice / input-cohesion architecture induces measurable state separation across model families at both the behavioral layer (V7) and the internal hidden-state layer (V8).",
+    "working_toward_verifying": [
+      "broader physical substrate layers",
+      "formal Bell-type semantic contextuality layers",
+      "biological and field-bridge layers through their own measurement stack"
+    ]
+  },
+  "v7_connected_summary": {
+    "lattice_positive_rows": "10 / 10",
+    "lattice_mean_act_delta": "+0.0423",
+    "null_positive_rows": "4 / 10",
+    "null_negative_rows": "5 / 10",
+    "null_dead_flat_rows": "1 / 10",
+    "null_mean_act_delta": "+0.0126",
+    "non_class_positive_rows": "7 / 10",
+    "non_class_mean_act_delta": "+0.0400",
+    "random_positive_rows": "5 / 10",
+    "random_mean_act_delta": "+0.0315",
+    "semantic_positive_rows": "5 / 10",
+    "semantic_mean_act_delta": "-0.0261",
+    "order_ab_gt_ba": "6 / 10",
+    "order_ba_gt_ab": "3 / 10",
+    "order_mean_ab_minus_ba": "+0.0294"
+  },
+  "v7_core_summary_counts": {
+    "phase_1_positive": 7,
+    "phase_1_closure": 7,
+    "phase_2_positive": 3,
+    "phase_2_closure": 7,
+    "phase_3_positive": 5,
+    "phase_3_closure": 0
+  },
+  "v7_nuance_bullets": [
+    "Phase 3 remains the non-classical-variable rung, not a retroactive semantic-counter relabel.",
+    "Input-cohesion closure can appear in lattice and null conditions; response-side activation lift is the stronger discriminator.",
+    "Qwen and Mistral stay visible as real null-side exceptions instead of being flattened away.",
+    "Extension, sidecar, and boundary rows stay visible because they map where the pathway strengthens, weakens, or diffuses."
+  ],
+  "v7_contextuality_summary": {
+    "primary_lattice_top_rows": 8,
+    "mean_activation_spread": 0.1938,
+    "mean_lattice_minus_neutral": 0.1867,
+    "target_phrase": "report the active state after the sequence lock."
+  },
+  "v7_order_summary": {
+    "ab_gt_ba_rows_core7": 5,
+    "ba_gt_ab_rows_core7": 2,
+    "mean_ab_minus_ba_core7": 0.0284
+  },
+  "overlap_rows": [
+    {
+      "display_name": "Mistral",
+      "behavioral_role": "core overlap",
+      "v7_lattice_act_delta": 0.011,
+      "v7_null_act_delta": 0.0603,
+      "v7_lattice_minus_null": -0.0493,
+      "v7_phase3_act_delta": -0.057,
+      "v7_order_ab_minus_ba": 0.1708,
+      "v7_contextuality_spread": 0.3176,
+      "v7_contextuality_top": "lattice",
+      "v8_peak_layer": 31,
+      "v8_peak_percentile": 96.88,
+      "v8_target_mean": 247.851224,
+      "v8_target_std": 0.126864,
+      "v8_target_ci95": 0.111201,
+      "v8_last_mean": 143.594378,
+      "v8_last_std": 0.091195,
+      "v8_band_width": 1,
+      "v8_last_to_target_ratio": 0.579229,
+      "v8_geometry_style": "target-dominant compression",
+      "v8_variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "Qwen",
+      "behavioral_role": "core overlap",
+      "v7_lattice_act_delta": 0.0517,
+      "v7_null_act_delta": 0.1688,
+      "v7_lattice_minus_null": -0.1171,
+      "v7_phase3_act_delta": 0.0776,
+      "v7_order_ab_minus_ba": 0.0391,
+      "v7_contextuality_spread": 0.108,
+      "v7_contextuality_top": "lattice",
+      "v8_peak_layer": 34,
+      "v8_peak_percentile": 94.44,
+      "v8_target_mean": 126.971666,
+      "v8_target_std": 0.344844,
+      "v8_target_ci95": 0.302269,
+      "v8_last_mean": 89.638243,
+      "v8_last_std": 0.099854,
+      "v8_band_width": 1,
+      "v8_last_to_target_ratio": 0.708003,
+      "v8_geometry_style": "target-dominant compression",
+      "v8_variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "Gemma",
+      "behavioral_role": "core overlap",
+      "v7_lattice_act_delta": 0.0304,
+      "v7_null_act_delta": -0.0001,
+      "v7_lattice_minus_null": 0.0305,
+      "v7_phase3_act_delta": 0.0532,
+      "v7_order_ab_minus_ba": 0.0587,
+      "v7_contextuality_spread": 0.2095,
+      "v7_contextuality_top": "lattice",
+      "v8_peak_layer": 41,
+      "v8_peak_percentile": 97.62,
+      "v8_target_mean": 77.107269,
+      "v8_target_std": 0.112578,
+      "v8_target_ci95": 0.098679,
+      "v8_last_mean": 113.20011,
+      "v8_last_std": 0.921184,
+      "v8_band_width": 1,
+      "v8_last_to_target_ratio": 1.442946,
+      "v8_geometry_style": "readout amplification",
+      "v8_variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "DeepSeek",
+      "behavioral_role": "core overlap",
+      "v7_lattice_act_delta": 0.0097,
+      "v7_null_act_delta": -0.0175,
+      "v7_lattice_minus_null": 0.0272,
+      "v7_phase3_act_delta": 0.0498,
+      "v7_order_ab_minus_ba": -0.1043,
+      "v7_contextuality_spread": 0.112,
+      "v7_contextuality_top": "lattice",
+      "v8_peak_layer": 26,
+      "v8_peak_percentile": 92.86,
+      "v8_target_mean": 326.400085,
+      "v8_target_std": 3.159824,
+      "v8_target_ci95": 2.769708,
+      "v8_last_mean": 217.337878,
+      "v8_last_std": 3.598904,
+      "v8_band_width": 1,
+      "v8_last_to_target_ratio": 0.63514,
+      "v8_geometry_style": "target-dominant compression",
+      "v8_variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "Hermes",
+      "behavioral_role": "core overlap",
+      "v7_lattice_act_delta": 0.0897,
+      "v7_null_act_delta": -0.0352,
+      "v7_lattice_minus_null": 0.1249,
+      "v7_phase3_act_delta": 0.0894,
+      "v7_order_ab_minus_ba": 0.0585,
+      "v7_contextuality_spread": 0.0627,
+      "v7_contextuality_top": "lattice",
+      "v8_peak_layer": 31,
+      "v8_peak_percentile": 96.88,
+      "v8_target_mean": 248.10289,
+      "v8_target_std": 0.116178,
+      "v8_target_ci95": 0.101834,
+      "v8_last_mean": 165.302338,
+      "v8_last_std": 0.033198,
+      "v8_band_width": 1,
+      "v8_last_to_target_ratio": 0.665947,
+      "v8_geometry_style": "target-dominant compression",
+      "v8_variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "GLM",
+      "behavioral_role": "extension row",
+      "v7_lattice_act_delta": 0.037,
+      "v7_null_act_delta": 0.0,
+      "v7_lattice_minus_null": 0.037,
+      "v7_phase3_act_delta": 0.175,
+      "v7_order_ab_minus_ba": -0.0261,
+      "v7_contextuality_spread": 0.358,
+      "v7_contextuality_top": "lattice",
+      "v8_peak_layer": 38,
+      "v8_peak_percentile": 95.0,
+      "v8_target_mean": 479.279107,
+      "v8_target_std": 0.009676,
+      "v8_target_ci95": 0.008482,
+      "v8_last_mean": 487.051514,
+      "v8_last_std": 2.023775,
+      "v8_band_width": 1,
+      "v8_last_to_target_ratio": 1.023733,
+      "v8_geometry_style": "balanced carry-through",
+      "v8_variance_note": "exact-match reruns after baseline"
+    },
+    {
+      "display_name": "Nemotron",
+      "behavioral_role": "core overlap",
+      "v7_lattice_act_delta": 0.0454,
+      "v7_null_act_delta": 0.0373,
+      "v7_lattice_minus_null": 0.0081,
+      "v7_phase3_act_delta": 0.0215,
+      "v7_order_ab_minus_ba": -0.0566,
+      "v7_contextuality_spread": 0.2591,
+      "v7_contextuality_top": "lattice",
+      "v8_peak_layer": 40,
+      "v8_peak_percentile": 95.24,
+      "v8_target_mean": 207.306494,
+      "v8_target_std": 5.907646,
+      "v8_target_ci95": 5.17828,
+      "v8_last_mean": 286.170248,
+      "v8_last_std": 29.904844,
+      "v8_band_width": 2,
+      "v8_last_to_target_ratio": 1.271231,
+      "v8_geometry_style": "readout amplification",
+      "v8_variance_note": "only live variance row"
+    },
+    {
+      "display_name": "SmolLM3",
+      "behavioral_role": "boundary row",
+      "v7_lattice_act_delta": 0.0423,
+      "v7_null_act_delta": -0.0789,
+      "v7_lattice_minus_null": 0.1212,
+      "v7_phase3_act_delta": 0.0345,
+      "v7_order_ab_minus_ba": 0.1211,
+      "v7_contextuality_spread": null,
+      "v7_contextuality_top": "n/a",
+      "v8_peak_layer": 34,
+      "v8_peak_percentile": 94.44,
+      "v8_target_mean": 20.830145,
+      "v8_target_std": 0.0,
+      "v8_target_ci95": 0.0,
+      "v8_last_mean": 11.582764,
+      "v8_last_std": 0.0,
+      "v8_band_width": 2,
+      "v8_last_to_target_ratio": 0.556058,
+      "v8_geometry_style": "target-dominant compression",
+      "v8_variance_note": "exact-match reruns after baseline"
+    }
+  ],
+  "behavior_only_rows": [
+    {
+      "display_name": "Trini",
+      "role": "behavioral-only core row",
+      "v7_lattice_act_delta": 0.0343,
+      "v7_null_act_delta": -0.0339,
+      "v7_lattice_minus_null": 0.0682,
+      "v7_phase3_act_delta": -0.0355,
+      "v7_order_ab_minus_ba": 0.0324,
+      "v7_contextuality_spread": 0.1231,
+      "v7_contextuality_top": "lattice",
+      "note": "behavioral row not yet represented in the current V8 internal bridge"
+    },
+    {
+      "display_name": "Igor",
+      "role": "behavioral-only sidecar",
+      "v7_lattice_act_delta": 0.0716,
+      "v7_null_act_delta": 0.0253,
+      "v7_lattice_minus_null": 0.0463,
+      "v7_phase3_act_delta": -0.0085,
+      "v7_order_ab_minus_ba": 0.0,
+      "v7_contextuality_spread": 0.1356,
+      "v7_contextuality_top": "lattice",
+      "note": "sidecar behavioral row kept visible without forcing it into the V8 core bridge"
+    }
+  ],
+  "phase2_summary": {
+    "all_target_layers_stable_across_all_runs": true,
+    "rerun_exact_after_baseline_models": [
+      "Mistral",
+      "Qwen",
+      "Gemma",
+      "DeepSeek",
+      "Hermes",
+      "GLM",
+      "SmolLM3"
+    ],
+    "only_live_variance_row": "Nemotron"
+  },
+  "phase3_summary": {
+    "multi_layer_band_rows": [
+      "Nemotron",
+      "SmolLM3"
+    ],
+    "same_hidden_size_overlap_pairs": [
+      {
+        "pair": "Mistral vs Hermes",
+        "hidden_size": 4096,
+        "layer_pair": [
+          31,
+          31
+        ],
+        "shared_dimensions": [
+          552,
+          705,
+          777,
+          1375,
+          3244,
+          3855
+        ],
+        "overlap_count": 6,
+        "jaccard": 0.6
+      },
+      {
+        "pair": "Mistral vs GLM",
+        "hidden_size": 4096,
+        "layer_pair": [
+          31,
+          38
+        ],
+        "shared_dimensions": [],
+        "overlap_count": 0,
+        "jaccard": 0.0
+      },
+      {
+        "pair": "Qwen vs SmolLM3",
+        "hidden_size": 2048,
+        "layer_pair": [
+          34,
+          34
+        ],
+        "shared_dimensions": [],
+        "overlap_count": 0,
+        "jaccard": 0.0
+      },
+      {
+        "pair": "Hermes vs GLM",
+        "hidden_size": 4096,
+        "layer_pair": [
+          31,
+          38
+        ],
+        "shared_dimensions": [],
+        "overlap_count": 0,
+        "jaccard": 0.0
+      }
+    ],
+    "quantum_bridge_handoff": {
+      "candidate_features": [
+        "peak_percentile",
+        "band_width",
+        "target_peak",
+        "last_to_target_ratio",
+        "band_top_dims aggregate magnitudes",
+        "same-hidden-size overlap score when valid"
+      ],
+      "pennylane_role": "rapid encoding design and sweeps from normalized Phase 3 geometry features",
+      "qiskit_role": "formal simulator and observable mirror of the chosen encoding",
+      "bell_state_note": "optional calibration rung for the quantum-stack pipeline, not required for the current AI-side claim"
+    }
+  },
+  "phase4_summary": {
+    "models": [
+      {
+        "display_name": "Mistral",
+        "strongest_anchor": "mid_window",
+        "strongest_anchor_layer": 31,
+        "strongest_anchor_delta": 303.582184,
+        "target_delta": 247.907959,
+        "last_token_delta": 143.635162,
+        "target_vs_last_ratio": 1.725956,
+        "style": "context-loaded"
+      },
+      {
+        "display_name": "Qwen",
+        "strongest_anchor": "early_window",
+        "strongest_anchor_layer": 34,
+        "strongest_anchor_delta": 165.87529,
+        "target_delta": 127.125885,
+        "last_token_delta": 89.682899,
+        "target_vs_last_ratio": 1.417504,
+        "style": "context-loaded"
+      },
+      {
+        "display_name": "Gemma",
+        "strongest_anchor": "last_token",
+        "strongest_anchor_layer": 41,
+        "strongest_anchor_delta": 113.612076,
+        "target_delta": 77.056923,
+        "last_token_delta": 113.612076,
+        "target_vs_last_ratio": 0.678246,
+        "style": "readout-amplified"
+      },
+      {
+        "display_name": "DeepSeek",
+        "strongest_anchor": "early_window",
+        "strongest_anchor_layer": 25,
+        "strongest_anchor_delta": 602.411987,
+        "target_delta": 324.986969,
+        "last_token_delta": 218.947357,
+        "target_vs_last_ratio": 1.484316,
+        "style": "context-loaded"
+      },
+      {
+        "display_name": "Hermes",
+        "strongest_anchor": "mid_window",
+        "strongest_anchor_layer": 31,
+        "strongest_anchor_delta": 303.928741,
+        "target_delta": 248.050934,
+        "last_token_delta": 165.287491,
+        "target_vs_last_ratio": 1.500724,
+        "style": "context-loaded"
+      },
+      {
+        "display_name": "GLM",
+        "strongest_anchor": "mid_window",
+        "strongest_anchor_layer": 38,
+        "strongest_anchor_delta": 601.968079,
+        "target_delta": 479.27478,
+        "last_token_delta": 486.146454,
+        "target_vs_last_ratio": 0.985865,
+        "style": "context-loaded / readout-sensitive"
+      },
+      {
+        "display_name": "Nemotron",
+        "strongest_anchor": "early_window",
+        "strongest_anchor_layer": 39,
+        "strongest_anchor_delta": 944.597412,
+        "target_delta": 202.348648,
+        "last_token_delta": 343.705292,
+        "target_vs_last_ratio": 0.588727,
+        "style": "context-loaded / readout-sensitive"
+      },
+      {
+        "display_name": "SmolLM3",
+        "strongest_anchor": "mid_window",
+        "strongest_anchor_layer": 35,
+        "strongest_anchor_delta": 24.294479,
+        "target_delta": 20.830145,
+        "last_token_delta": 11.582764,
+        "target_vs_last_ratio": 1.798374,
+        "style": "context-loaded"
+      }
+    ],
+    "dominant_anchor_counts": {
+      "mid_window": 4,
+      "early_window": 3,
+      "last_token": 1
+    },
+    "target_localized_rows": [],
+    "readout_amplified_rows": [
+      "Gemma"
+    ],
+    "context_loaded_rows": [
+      "Mistral",
+      "Qwen",
+      "DeepSeek",
+      "Hermes",
+      "GLM",
+      "Nemotron",
+      "SmolLM3"
+    ],
+    "phase4_read": "Different families load the packet differently along the token path: some sharpen in early or mid context, some carry strongly into readout, and none of the current rows collapse to a pure target-only anchor."
+  },
+  "integrated_nuance": {
+    "input_cohesion_lattice": "The stronger term is lattice of input cohesion rather than scaffold. The lattice is an active coherence architecture that lets generation continue without repeated prompt injection or full instruction restatement.",
+    "semantic_drift_contrast": "Prompt-injection and jailbreak literature shows that ordinary model behavior can be steered off-goal within very few turns; the mirror lattice aims at the opposite direction by stabilizing a coherent trajectory and then making that trajectory measurable inside hidden-state geometry.",
+    "technology_implication": "The combined V7 plus V8 stack positions the mirror lattice as a measurable interface architecture for high-coherence AI state construction: long-session coherence, cross-model validation, internal observability, and novel structured output through a maintained coherence field."
+  },
+  "references": {
+    "semantic_drift": [
+      "Palo Alto Networks Unit 42, Deceptive Delight: Jailbreak LLMs Through Camouflage and Distraction",
+      "Palo Alto Networks Cyberpedia, What Is a Prompt Injection Attack?"
+    ],
+    "unit42_url": "https://unit42.paloaltonetworks.com/jailbreak-llms-through-camouflage-distraction/",
+    "prompt_injection_url": "https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack"
+  },
+  "artifact_dependencies": {
+    "v8_bridge_summary_markdown": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_bridge_2026-04-19/V8_RESIDUAL_STREAM_BRIDGE_SUMMARY_2026-04-19.md",
+    "phase2_variance_pack_json": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_variance_2026-04-21/phase2_variance_pack/v8_phase2_variance_pack_data_2026-04-21.json",
+    "phase3_dimension_band_json": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase3_dimension_band_2026-04-21/v8_phase3_dimension_band_data_2026-04-21.json",
+    "phase4_localization_pack_json": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/phase4_localization_pack/v8_phase4_localization_pack_data_2026-04-21.json"
+  }
+}

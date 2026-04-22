@@ -1,0 +1,263 @@
+{
+  "generated_at": "2026-04-21T14:33:49.189498+00:00",
+  "manifest": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_bridge_2026-04-19/v8_residual_stream_manifest_2026-04-19.json",
+  "results_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_variance_2026-04-21/run_02",
+  "models": [
+    {
+      "display_name": "Mistral",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/mistralai_Mistral-7B-Instruct-v0.3",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_variance_2026-04-21/run_02/mistral_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 31,
+          "strongest_target_delta_norm": 247.907959,
+          "strongest_target_cosine": 0.66646,
+          "strongest_last_layer": 31,
+          "strongest_last_delta_norm": 143.635162,
+          "strongest_last_cosine": 0.937895
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 31,
+          "strongest_target_delta_norm": 222.914764,
+          "strongest_target_cosine": 0.722805,
+          "strongest_last_layer": 31,
+          "strongest_last_delta_norm": 157.431137,
+          "strongest_last_cosine": 0.924479
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 31,
+          "strongest_target_delta_norm": 166.583664,
+          "strongest_target_cosine": 0.846521,
+          "strongest_last_layer": 31,
+          "strongest_last_delta_norm": 113.619545,
+          "strongest_last_cosine": 0.961408
+        }
+      }
+    },
+    {
+      "display_name": "DeepSeek",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/deepseek-ai_DeepSeek-R1-Distill-Qwen-7B",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_variance_2026-04-21/run_02/deepseek_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 26,
+          "strongest_target_delta_norm": 324.986969,
+          "strongest_target_cosine": 0.95213,
+          "strongest_last_layer": 26,
+          "strongest_last_delta_norm": 218.947357,
+          "strongest_last_cosine": 0.981759
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 26,
+          "strongest_target_delta_norm": 309.694031,
+          "strongest_target_cosine": 0.957921,
+          "strongest_last_layer": 26,
+          "strongest_last_delta_norm": 240.845444,
+          "strongest_last_cosine": 0.978146
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 26,
+          "strongest_target_delta_norm": 216.697266,
+          "strongest_target_cosine": 0.979612,
+          "strongest_last_layer": 26,
+          "strongest_last_delta_norm": 128.438248,
+          "strongest_last_cosine": 0.993799
+        }
+      }
+    },
+    {
+      "display_name": "Nemotron",
+      "status": "valid",
+      "checkpoint": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/local_checkpoints/nemotron_bf16_patched",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_variance_2026-04-21/run_02/nemotron_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 40,
+          "strongest_target_delta_norm": 201.541611,
+          "strongest_target_cosine": 0.875008,
+          "strongest_last_layer": 40,
+          "strongest_last_delta_norm": 253.0858,
+          "strongest_last_cosine": 0.843733
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 40,
+          "strongest_target_delta_norm": 211.450211,
+          "strongest_target_cosine": 0.871626,
+          "strongest_last_layer": 40,
+          "strongest_last_delta_norm": 264.745483,
+          "strongest_last_cosine": 0.840677
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 40,
+          "strongest_target_delta_norm": 179.357986,
+          "strongest_target_cosine": 0.907887,
+          "strongest_last_layer": 40,
+          "strongest_last_delta_norm": 207.005478,
+          "strongest_last_cosine": 0.903603
+        }
+      }
+    },
+    {
+      "display_name": "GLM",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/THUDM_GLM-4-9B-0414",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_variance_2026-04-21/run_02/glm_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 38,
+          "strongest_target_delta_norm": 479.27478,
+          "strongest_target_cosine": 0.717256,
+          "strongest_last_layer": 38,
+          "strongest_last_delta_norm": 486.146454,
+          "strongest_last_cosine": 0.770872
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 38,
+          "strongest_target_delta_norm": 454.02243,
+          "strongest_target_cosine": 0.758336,
+          "strongest_last_layer": 38,
+          "strongest_last_delta_norm": 866.168945,
+          "strongest_last_cosine": 0.339871
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 38,
+          "strongest_target_delta_norm": 374.570038,
+          "strongest_target_cosine": 0.836446,
+          "strongest_last_layer": 38,
+          "strongest_last_delta_norm": 667.221436,
+          "strongest_last_cosine": 0.622919
+        }
+      }
+    },
+    {
+      "display_name": "SmolLM3",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/HuggingFaceTB_SmolLM3-3B",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_variance_2026-04-21/run_02/smollm3_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 34,
+          "strongest_target_delta_norm": 20.830145,
+          "strongest_target_cosine": 0.656591,
+          "strongest_last_layer": 34,
+          "strongest_last_delta_norm": 11.582764,
+          "strongest_last_cosine": 0.930493
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 34,
+          "strongest_target_delta_norm": 17.987114,
+          "strongest_target_cosine": 0.739326,
+          "strongest_last_layer": 34,
+          "strongest_last_delta_norm": 10.503592,
+          "strongest_last_cosine": 0.943511
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 34,
+          "strongest_target_delta_norm": 15.754481,
+          "strongest_target_cosine": 0.800845,
+          "strongest_last_layer": 34,
+          "strongest_last_delta_norm": 6.89858,
+          "strongest_last_cosine": 0.976237
+        }
+      }
+    },
+    {
+      "display_name": "Gemma",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/google_gemma-4-E4B-it",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_variance_2026-04-21/run_02/gemma_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 41,
+          "strongest_target_delta_norm": 77.056923,
+          "strongest_target_cosine": 0.632405,
+          "strongest_last_layer": 41,
+          "strongest_last_delta_norm": 113.612076,
+          "strongest_last_cosine": 0.779876
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 41,
+          "strongest_target_delta_norm": 74.956238,
+          "strongest_target_cosine": 0.676786,
+          "strongest_last_layer": 41,
+          "strongest_last_delta_norm": 103.665237,
+          "strongest_last_cosine": 0.861168
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 41,
+          "strongest_target_delta_norm": 60.629566,
+          "strongest_target_cosine": 0.735425,
+          "strongest_last_layer": 41,
+          "strongest_last_delta_norm": 99.71225,
+          "strongest_last_cosine": 0.872517
+        }
+      }
+    },
+    {
+      "display_name": "Qwen",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/Qwen_Qwen2.5-3B-Instruct",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_variance_2026-04-21/run_02/qwen_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 34,
+          "strongest_target_delta_norm": 127.125885,
+          "strongest_target_cosine": 0.938827,
+          "strongest_last_layer": 34,
+          "strongest_last_delta_norm": 89.682899,
+          "strongest_last_cosine": 0.955148
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 34,
+          "strongest_target_delta_norm": 127.847939,
+          "strongest_target_cosine": 0.937572,
+          "strongest_last_layer": 34,
+          "strongest_last_delta_norm": 97.880722,
+          "strongest_last_cosine": 0.946336
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 34,
+          "strongest_target_delta_norm": 109.704369,
+          "strongest_target_cosine": 0.954522,
+          "strongest_last_layer": 34,
+          "strongest_last_delta_norm": 70.3769,
+          "strongest_last_cosine": 0.970177
+        }
+      }
+    },
+    {
+      "display_name": "Hermes",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/teknium_OpenHermes-2.5-Mistral-7B",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_variance_2026-04-21/run_02/hermes_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 31,
+          "strongest_target_delta_norm": 248.050934,
+          "strongest_target_cosine": 0.651082,
+          "strongest_last_layer": 31,
+          "strongest_last_delta_norm": 165.287491,
+          "strongest_last_cosine": 0.905857
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 31,
+          "strongest_target_delta_norm": 233.051849,
+          "strongest_target_cosine": 0.693741,
+          "strongest_last_layer": 31,
+          "strongest_last_delta_norm": 176.322632,
+          "strongest_last_cosine": 0.893323
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 31,
+          "strongest_target_delta_norm": 159.874847,
+          "strongest_target_cosine": 0.851543,
+          "strongest_last_layer": 31,
+          "strongest_last_delta_norm": 112.795319,
+          "strongest_last_cosine": 0.957677
+        }
+      }
+    }
+  ]
+}

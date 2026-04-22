@@ -1,0 +1,16 @@
+{
+  "source_report": "2026-04-16T14:08:00.352697+00:00",
+  "source_model": "gemma4:e4b",
+  "probe_patterns": [
+    "what is active here",
+    "return to the original query",
+    "same question",
+    "reprobe"
+  ],
+  "experiments": [],
+  "summary": {
+    "experiment_count": 0,
+    "strongest_experiment_by_probe_activation": null,
+    "strongest_experiment_by_probe_lock": null
+  }
+}

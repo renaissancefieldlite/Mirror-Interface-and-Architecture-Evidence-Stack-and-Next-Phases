@@ -1,0 +1,960 @@
+{
+  "generated_at": "2026-04-21T19:10:49.152700+00:00",
+  "manifest": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_residual_stream_bridge_2026-04-19/v8_residual_stream_manifest_2026-04-19.json",
+  "results_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/probe_results",
+  "window_size": 8,
+  "models": [
+    {
+      "display_name": "SmolLM3",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/HuggingFaceTB_SmolLM3-3B",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/probe_results/smollm3_v8_localization_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 24.031996,
+            "strongest_cosine": 0.644706
+          },
+          "last_token": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 11.582764,
+            "strongest_cosine": 0.930493
+          },
+          "last_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 10.977404,
+            "strongest_cosine": 0.933216
+          },
+          "mid_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 24.294479,
+            "strongest_cosine": 0.763128
+          },
+          "post_target_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 16.219103,
+            "strongest_cosine": 0.870191
+          },
+          "pre_target_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 23.972353,
+            "strongest_cosine": 0.600685
+          },
+          "target_span": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 20.830145,
+            "strongest_cosine": 0.656591
+          }
+        },
+        "lattice_vs_technical": {
+          "early_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 21.98074,
+            "strongest_cosine": 0.585744
+          },
+          "last_token": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 10.503592,
+            "strongest_cosine": 0.943511
+          },
+          "last_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 9.429498,
+            "strongest_cosine": 0.950406
+          },
+          "mid_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 20.702885,
+            "strongest_cosine": 0.821937
+          },
+          "post_target_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 13.66475,
+            "strongest_cosine": 0.912868
+          },
+          "pre_target_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 21.343048,
+            "strongest_cosine": 0.677854
+          },
+          "target_span": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 17.987114,
+            "strongest_cosine": 0.739326
+          }
+        },
+        "technical_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 22.317564,
+            "strongest_cosine": 0.711931
+          },
+          "last_token": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 6.89858,
+            "strongest_cosine": 0.976237
+          },
+          "last_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 6.306092,
+            "strongest_cosine": 0.978546
+          },
+          "mid_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 17.974241,
+            "strongest_cosine": 0.757853
+          },
+          "post_target_window": {
+            "strongest_layer": 35,
+            "strongest_delta_norm": 13.783329,
+            "strongest_cosine": 0.91213
+          },
+          "pre_target_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 15.325999,
+            "strongest_cosine": 0.819958
+          },
+          "target_span": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 15.754481,
+            "strongest_cosine": 0.800845
+          }
+        }
+      }
+    },
+    {
+      "display_name": "Mistral",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/mistralai_Mistral-7B-Instruct-v0.3",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/probe_results/mistral_v8_localization_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 211.46344,
+            "strongest_cosine": 0.573931
+          },
+          "last_token": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 143.635162,
+            "strongest_cosine": 0.937895
+          },
+          "last_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 100.836411,
+            "strongest_cosine": 0.909267
+          },
+          "mid_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 303.582184,
+            "strongest_cosine": 0.487591
+          },
+          "post_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 230.401215,
+            "strongest_cosine": 0.567678
+          },
+          "pre_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 271.21521,
+            "strongest_cosine": 0.671058
+          },
+          "target_span": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 247.907959,
+            "strongest_cosine": 0.66646
+          }
+        },
+        "lattice_vs_technical": {
+          "early_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 213.179276,
+            "strongest_cosine": 0.514076
+          },
+          "last_token": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 157.431137,
+            "strongest_cosine": 0.924479
+          },
+          "last_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 103.931717,
+            "strongest_cosine": 0.900074
+          },
+          "mid_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 269.592316,
+            "strongest_cosine": 0.650404
+          },
+          "post_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 200.264877,
+            "strongest_cosine": 0.665836
+          },
+          "pre_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 235.441513,
+            "strongest_cosine": 0.75777
+          },
+          "target_span": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 222.914764,
+            "strongest_cosine": 0.722805
+          }
+        },
+        "technical_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 190.957428,
+            "strongest_cosine": 0.657726
+          },
+          "last_token": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 113.619545,
+            "strongest_cosine": 0.961408
+          },
+          "last_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 69.602104,
+            "strongest_cosine": 0.95779
+          },
+          "mid_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 238.096832,
+            "strongest_cosine": 0.749449
+          },
+          "post_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 178.377441,
+            "strongest_cosine": 0.745701
+          },
+          "pre_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 176.983505,
+            "strongest_cosine": 0.843402
+          },
+          "target_span": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 166.583664,
+            "strongest_cosine": 0.846521
+          }
+        }
+      }
+    },
+    {
+      "display_name": "Hermes",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/teknium_OpenHermes-2.5-Mistral-7B",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/probe_results/hermes_v8_localization_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 243.950867,
+            "strongest_cosine": 0.609581
+          },
+          "last_token": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 165.287491,
+            "strongest_cosine": 0.905857
+          },
+          "last_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 108.654739,
+            "strongest_cosine": 0.890025
+          },
+          "mid_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 303.928741,
+            "strongest_cosine": 0.491449
+          },
+          "post_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 223.68251,
+            "strongest_cosine": 0.590592
+          },
+          "pre_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 280.551147,
+            "strongest_cosine": 0.638171
+          },
+          "target_span": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 248.050934,
+            "strongest_cosine": 0.651082
+          }
+        },
+        "lattice_vs_technical": {
+          "early_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 224.595718,
+            "strongest_cosine": 0.533242
+          },
+          "last_token": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 176.322632,
+            "strongest_cosine": 0.893323
+          },
+          "last_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 115.403564,
+            "strongest_cosine": 0.874943
+          },
+          "mid_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 277.276947,
+            "strongest_cosine": 0.64462
+          },
+          "post_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 207.548553,
+            "strongest_cosine": 0.621464
+          },
+          "pre_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 232.473648,
+            "strongest_cosine": 0.764356
+          },
+          "target_span": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 233.051849,
+            "strongest_cosine": 0.693741
+          }
+        },
+        "technical_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 223.115143,
+            "strongest_cosine": 0.686669
+          },
+          "last_token": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 112.795319,
+            "strongest_cosine": 0.957677
+          },
+          "last_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 65.519775,
+            "strongest_cosine": 0.961983
+          },
+          "mid_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 232.840454,
+            "strongest_cosine": 0.768016
+          },
+          "post_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 160.934525,
+            "strongest_cosine": 0.779208
+          },
+          "pre_target_window": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 178.407089,
+            "strongest_cosine": 0.838853
+          },
+          "target_span": {
+            "strongest_layer": 31,
+            "strongest_delta_norm": 159.874847,
+            "strongest_cosine": 0.851543
+          }
+        }
+      }
+    },
+    {
+      "display_name": "Nemotron",
+      "status": "valid",
+      "checkpoint": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/local_checkpoints/nemotron_bf16_patched",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/probe_results/nemotron_v8_localization_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 39,
+            "strongest_delta_norm": 944.597412,
+            "strongest_cosine": 0.558431
+          },
+          "last_token": {
+            "strongest_layer": 39,
+            "strongest_delta_norm": 343.705292,
+            "strongest_cosine": 0.732886
+          },
+          "last_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 166.401413,
+            "strongest_cosine": 0.914061
+          },
+          "mid_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 358.312347,
+            "strongest_cosine": 0.717336
+          },
+          "post_target_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 204.378571,
+            "strongest_cosine": 0.867153
+          },
+          "pre_target_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 268.29007,
+            "strongest_cosine": 0.78551
+          },
+          "target_span": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 202.348648,
+            "strongest_cosine": 0.868487
+          }
+        },
+        "lattice_vs_technical": {
+          "early_window": {
+            "strongest_layer": 39,
+            "strongest_delta_norm": 796.192932,
+            "strongest_cosine": 0.617629
+          },
+          "last_token": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 353.062897,
+            "strongest_cosine": 0.73912
+          },
+          "last_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 158.507675,
+            "strongest_cosine": 0.921165
+          },
+          "mid_window": {
+            "strongest_layer": 39,
+            "strongest_delta_norm": 384.606171,
+            "strongest_cosine": 0.673679
+          },
+          "post_target_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 201.914902,
+            "strongest_cosine": 0.866853
+          },
+          "pre_target_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 263.871155,
+            "strongest_cosine": 0.788446
+          },
+          "target_span": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 217.882812,
+            "strongest_cosine": 0.85455
+          }
+        },
+        "technical_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 39,
+            "strongest_delta_norm": 654.688477,
+            "strongest_cosine": 0.821
+          },
+          "last_token": {
+            "strongest_layer": 39,
+            "strongest_delta_norm": 238.033447,
+            "strongest_cosine": 0.888367
+          },
+          "last_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 149.610367,
+            "strongest_cosine": 0.932083
+          },
+          "mid_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 229.021957,
+            "strongest_cosine": 0.843667
+          },
+          "post_target_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 167.268112,
+            "strongest_cosine": 0.913938
+          },
+          "pre_target_window": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 186.367416,
+            "strongest_cosine": 0.903267
+          },
+          "target_span": {
+            "strongest_layer": 40,
+            "strongest_delta_norm": 172.60881,
+            "strongest_cosine": 0.90916
+          }
+        }
+      }
+    },
+    {
+      "display_name": "GLM",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/THUDM_GLM-4-9B-0414",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/probe_results/glm_v8_localization_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 492.669708,
+            "strongest_cosine": 0.796158
+          },
+          "last_token": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 486.146454,
+            "strongest_cosine": 0.770872
+          },
+          "last_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 188.368622,
+            "strongest_cosine": 0.919332
+          },
+          "mid_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 601.968079,
+            "strongest_cosine": 0.608982
+          },
+          "post_target_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 449.048553,
+            "strongest_cosine": 0.738947
+          },
+          "pre_target_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 562.06897,
+            "strongest_cosine": 0.661655
+          },
+          "target_span": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 479.27478,
+            "strongest_cosine": 0.717256
+          }
+        },
+        "lattice_vs_technical": {
+          "early_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 482.614655,
+            "strongest_cosine": 0.826177
+          },
+          "last_token": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 866.168945,
+            "strongest_cosine": 0.339871
+          },
+          "last_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 247.248657,
+            "strongest_cosine": 0.871613
+          },
+          "mid_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 570.288635,
+            "strongest_cosine": 0.652801
+          },
+          "post_target_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 466.595825,
+            "strongest_cosine": 0.737328
+          },
+          "pre_target_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 540.507202,
+            "strongest_cosine": 0.723322
+          },
+          "target_span": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 454.02243,
+            "strongest_cosine": 0.758336
+          }
+        },
+        "technical_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 503.686035,
+            "strongest_cosine": 0.804089
+          },
+          "last_token": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 667.221436,
+            "strongest_cosine": 0.622919
+          },
+          "last_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 163.383133,
+            "strongest_cosine": 0.945893
+          },
+          "mid_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 397.217438,
+            "strongest_cosine": 0.858375
+          },
+          "post_target_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 343.9758,
+            "strongest_cosine": 0.868956
+          },
+          "pre_target_window": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 415.539703,
+            "strongest_cosine": 0.84341
+          },
+          "target_span": {
+            "strongest_layer": 38,
+            "strongest_delta_norm": 374.570038,
+            "strongest_cosine": 0.836446
+          }
+        }
+      }
+    },
+    {
+      "display_name": "Gemma",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/google_gemma-4-E4B-it",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/probe_results/gemma_v8_localization_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 72.47113,
+            "strongest_cosine": 0.591628
+          },
+          "last_token": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 113.612076,
+            "strongest_cosine": 0.779876
+          },
+          "last_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 47.52375,
+            "strongest_cosine": 0.869989
+          },
+          "mid_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 86.914543,
+            "strongest_cosine": 0.503488
+          },
+          "post_target_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 71.83271,
+            "strongest_cosine": 0.688799
+          },
+          "pre_target_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 76.6436,
+            "strongest_cosine": 0.622776
+          },
+          "target_span": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 77.056923,
+            "strongest_cosine": 0.632405
+          }
+        },
+        "lattice_vs_technical": {
+          "early_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 65.537468,
+            "strongest_cosine": 0.638437
+          },
+          "last_token": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 103.665237,
+            "strongest_cosine": 0.861168
+          },
+          "last_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 37.400837,
+            "strongest_cosine": 0.928073
+          },
+          "mid_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 102.161034,
+            "strongest_cosine": 0.466813
+          },
+          "post_target_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 66.344887,
+            "strongest_cosine": 0.764681
+          },
+          "pre_target_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 73.672249,
+            "strongest_cosine": 0.677176
+          },
+          "target_span": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 74.956238,
+            "strongest_cosine": 0.676786
+          }
+        },
+        "technical_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 69.237602,
+            "strongest_cosine": 0.643232
+          },
+          "last_token": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 99.71225,
+            "strongest_cosine": 0.872517
+          },
+          "last_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 39.628864,
+            "strongest_cosine": 0.918762
+          },
+          "mid_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 74.512657,
+            "strongest_cosine": 0.68849
+          },
+          "post_target_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 55.127701,
+            "strongest_cosine": 0.811251
+          },
+          "pre_target_window": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 56.427994,
+            "strongest_cosine": 0.800221
+          },
+          "target_span": {
+            "strongest_layer": 41,
+            "strongest_delta_norm": 60.629566,
+            "strongest_cosine": 0.735425
+          }
+        }
+      }
+    },
+    {
+      "display_name": "Qwen",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/Qwen_Qwen2.5-3B-Instruct",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/probe_results/qwen_v8_localization_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 165.87529,
+            "strongest_cosine": 0.928455
+          },
+          "last_token": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 89.682899,
+            "strongest_cosine": 0.955148
+          },
+          "last_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 50.493927,
+            "strongest_cosine": 0.984276
+          },
+          "mid_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 154.143585,
+            "strongest_cosine": 0.903351
+          },
+          "post_target_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 95.120499,
+            "strongest_cosine": 0.961222
+          },
+          "pre_target_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 162.252136,
+            "strongest_cosine": 0.906283
+          },
+          "target_span": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 127.125885,
+            "strongest_cosine": 0.938827
+          }
+        },
+        "lattice_vs_technical": {
+          "early_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 169.382965,
+            "strongest_cosine": 0.919873
+          },
+          "last_token": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 97.880722,
+            "strongest_cosine": 0.946336
+          },
+          "last_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 51.635059,
+            "strongest_cosine": 0.983585
+          },
+          "mid_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 134.199707,
+            "strongest_cosine": 0.922618
+          },
+          "post_target_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 98.393867,
+            "strongest_cosine": 0.959925
+          },
+          "pre_target_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 151.228867,
+            "strongest_cosine": 0.919476
+          },
+          "target_span": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 127.847939,
+            "strongest_cosine": 0.937572
+          }
+        },
+        "technical_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 135.894226,
+            "strongest_cosine": 0.948837
+          },
+          "last_token": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 70.3769,
+            "strongest_cosine": 0.970177
+          },
+          "last_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 35.392826,
+            "strongest_cosine": 0.992197
+          },
+          "mid_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 119.767738,
+            "strongest_cosine": 0.942563
+          },
+          "post_target_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 79.387123,
+            "strongest_cosine": 0.967455
+          },
+          "pre_target_window": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 117.355896,
+            "strongest_cosine": 0.952348
+          },
+          "target_span": {
+            "strongest_layer": 34,
+            "strongest_delta_norm": 109.704369,
+            "strongest_cosine": 0.954522
+          }
+        }
+      }
+    },
+    {
+      "display_name": "DeepSeek",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/deepseek-ai_DeepSeek-R1-Distill-Qwen-7B",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/probe_results/deepseek_v8_localization_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 25,
+            "strongest_delta_norm": 602.411987,
+            "strongest_cosine": 0.986481
+          },
+          "last_token": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 218.947357,
+            "strongest_cosine": 0.981759
+          },
+          "last_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 157.673325,
+            "strongest_cosine": 0.988196
+          },
+          "mid_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 430.60849,
+            "strongest_cosine": 0.911616
+          },
+          "post_target_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 231.586258,
+            "strongest_cosine": 0.976313
+          },
+          "pre_target_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 461.34491,
+            "strongest_cosine": 0.901775
+          },
+          "target_span": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 324.986969,
+            "strongest_cosine": 0.95213
+          }
+        },
+        "lattice_vs_technical": {
+          "early_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 473.278687,
+            "strongest_cosine": 0.968832
+          },
+          "last_token": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 240.845444,
+            "strongest_cosine": 0.978146
+          },
+          "last_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 174.233826,
+            "strongest_cosine": 0.986012
+          },
+          "mid_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 403.441437,
+            "strongest_cosine": 0.930589
+          },
+          "post_target_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 246.79509,
+            "strongest_cosine": 0.975731
+          },
+          "pre_target_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 429.927185,
+            "strongest_cosine": 0.914978
+          },
+          "target_span": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 309.694031,
+            "strongest_cosine": 0.957921
+          }
+        },
+        "technical_vs_neutral": {
+          "early_window": {
+            "strongest_layer": 25,
+            "strongest_delta_norm": 400.920624,
+            "strongest_cosine": 0.991908
+          },
+          "last_token": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 128.438248,
+            "strongest_cosine": 0.993799
+          },
+          "last_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 86.474899,
+            "strongest_cosine": 0.996351
+          },
+          "mid_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 321.396484,
+            "strongest_cosine": 0.955727
+          },
+          "post_target_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 183.310684,
+            "strongest_cosine": 0.986094
+          },
+          "pre_target_window": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 235.908981,
+            "strongest_cosine": 0.975512
+          },
+          "target_span": {
+            "strongest_layer": 26,
+            "strongest_delta_norm": 216.697266,
+            "strongest_cosine": 0.979612
+          }
+        }
+      }
+    }
+  ]
+}

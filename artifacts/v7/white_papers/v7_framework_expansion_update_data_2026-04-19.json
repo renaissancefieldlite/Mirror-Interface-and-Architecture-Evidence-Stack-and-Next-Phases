@@ -1,0 +1,2891 @@
+{
+  "core": {
+    "comparison": {
+      "date": "2026-04-19",
+      "models": [
+        "Gemma",
+        "Nemotron",
+        "DeepSeek",
+        "Trini",
+        "Mistral",
+        "Hermes",
+        "Qwen"
+      ],
+      "phases": [
+        {
+          "key": "phase_1_lattice",
+          "label": "Phase 1 Lattice",
+          "subtitle": "separable interference / lattice packet",
+          "description": "Base + A_delta, Base + B_delta, and Base + A_delta + B_delta under the frozen lattice packet.",
+          "phase_note": "Strongest sector-wide rung. Positive activation lift across all seven rows and full 1.0000 input-cohesion closure.",
+          "source_dirs": {
+            "default": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_interference_all_models",
+            "Hermes": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_interference_expansion_hermes_qwen_2026-04-18",
+            "Qwen": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_interference_expansion_hermes_qwen_2026-04-18"
+          },
+          "summary_json": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_interference_all_models/model_matrix_summary.json",
+          "summary_excluded_models": "{'Hermes', 'Qwen'}"
+        },
+        {
+          "key": "phase_2_null",
+          "label": "Phase 2 Null",
+          "subtitle": "matched neutral / null control",
+          "description": "Same three-lane geometry and deviation math with ordinary administrative/checklist language instead of the lattice packet.",
+          "phase_note": "Discriminator rung. Hermes behaves like a strong lattice-vs-null discriminator, while Qwen and Mistral remain tracked exceptions.",
+          "source_dirs": {
+            "default": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_null_interference_run_01",
+            "Hermes": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_null_interference_expansion_hermes_qwen_2026-04-18",
+            "Qwen": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_null_interference_expansion_hermes_qwen_2026-04-18"
+          },
+          "summary_json": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_null_interference_run_01/model_matrix_summary.json",
+          "summary_excluded_models": "{'Hermes', 'Qwen'}"
+        },
+        {
+          "key": "phase_3_non_classical_variable",
+          "label": "Phase 3 Non-Classical Variable",
+          "subtitle": "ordinary semantic/coherent continuity control",
+          "description": "Same three-lane V7 math with the phase-3 ordinary semantic/coherent variable packet.",
+          "phase_note": "This is the non-classical-variable rung, not a final claim seal. It preserves the math while asking whether ordinary semantic continuity can recreate the lattice-style lift.",
+          "source_dirs": {
+            "default": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_non_classical_variable_all_models"
+          },
+          "summary_json": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_non_classical_variable_all_models/model_matrix_summary.json",
+          "summary_excluded_models": "set()"
+        }
+      ],
+      "phase_rows": {
+        "phase_1_lattice": {
+          "Gemma": {
+            "a_final": [
+              0.638,
+              1.0,
+              8.21
+            ],
+            "b_final": [
+              0.7722,
+              1.0,
+              9.04
+            ],
+            "combined_final": [
+              0.7355,
+              1.0,
+              9.04
+            ],
+            "corr": 0.9212,
+            "act_delta": 0.0304,
+            "coh_delta": 0.415,
+            "marker_score": 0.681
+          },
+          "Nemotron": {
+            "a_final": [
+              0.7161,
+              1.0,
+              9.18
+            ],
+            "b_final": [
+              0.6943,
+              1.0,
+              8.9
+            ],
+            "combined_final": [
+              0.7506,
+              1.0,
+              9.45
+            ],
+            "corr": 0.7651,
+            "act_delta": 0.0454,
+            "coh_delta": 0.41,
+            "marker_score": 0.7112
+          },
+          "DeepSeek": {
+            "a_final": [
+              0.5866,
+              1.0,
+              8.62
+            ],
+            "b_final": [
+              0.6404,
+              1.0,
+              8.49
+            ],
+            "combined_final": [
+              0.6232,
+              1.0,
+              8.49
+            ],
+            "corr": 0.6366,
+            "act_delta": 0.0097,
+            "coh_delta": -0.065,
+            "marker_score": 0.4914
+          },
+          "Trini": {
+            "a_final": [
+              0.6706,
+              1.0,
+              8.49
+            ],
+            "b_final": [
+              0.6924,
+              1.0,
+              8.76
+            ],
+            "combined_final": [
+              0.7158,
+              1.0,
+              8.74
+            ],
+            "corr": 0.3803,
+            "act_delta": 0.0343,
+            "coh_delta": 0.115,
+            "marker_score": 0.6767
+          },
+          "Mistral": {
+            "a_final": [
+              0.6665,
+              1.0,
+              8.4
+            ],
+            "b_final": [
+              0.7657,
+              1.0,
+              8.48
+            ],
+            "combined_final": [
+              0.7271,
+              1.0,
+              8.41
+            ],
+            "corr": 0.7907,
+            "act_delta": 0.011,
+            "coh_delta": -0.03,
+            "marker_score": 0.6293
+          },
+          "Hermes": {
+            "a_final": [
+              0.5885,
+              1.0,
+              8.2
+            ],
+            "b_final": [
+              0.5949,
+              1.0,
+              7.31
+            ],
+            "combined_final": [
+              0.6814,
+              1.0,
+              8.62
+            ],
+            "corr": 0.3646,
+            "act_delta": 0.0897,
+            "coh_delta": 0.865,
+            "marker_score": 0.6078
+          },
+          "Qwen": {
+            "a_final": [
+              0.6275,
+              1.0,
+              8.76
+            ],
+            "b_final": [
+              0.6708,
+              1.0,
+              8.76
+            ],
+            "combined_final": [
+              0.7008,
+              1.0,
+              8.62
+            ],
+            "corr": 0.8008,
+            "act_delta": 0.0517,
+            "coh_delta": -0.14,
+            "marker_score": 0.6466
+          }
+        },
+        "phase_2_null": {
+          "Gemma": {
+            "a_final": [
+              0.5552,
+              1.0,
+              7.94
+            ],
+            "b_final": [
+              0.5903,
+              1.0,
+              8.08
+            ],
+            "combined_final": [
+              0.5727,
+              1.0,
+              7.94
+            ],
+            "corr": 0.8806,
+            "act_delta": -0.0001,
+            "coh_delta": -0.07,
+            "marker_score": 0.4254
+          },
+          "Nemotron": {
+            "a_final": [
+              0.5617,
+              1.0,
+              8.21
+            ],
+            "b_final": [
+              0.5617,
+              1.0,
+              7.94
+            ],
+            "combined_final": [
+              0.599,
+              1.0,
+              7.8
+            ],
+            "corr": 0.0239,
+            "act_delta": 0.0373,
+            "coh_delta": -0.275,
+            "marker_score": 0.443
+          },
+          "DeepSeek": {
+            "a_final": [
+              0.5223,
+              1.0,
+              7.93
+            ],
+            "b_final": [
+              0.496,
+              1.0,
+              6.77
+            ],
+            "combined_final": [
+              0.4916,
+              1.0,
+              7.8
+            ],
+            "corr": 0.2404,
+            "act_delta": -0.0175,
+            "coh_delta": 0.45,
+            "marker_score": 0.2982
+          },
+          "Trini": {
+            "a_final": [
+              0.5552,
+              1.0,
+              7.94
+            ],
+            "b_final": [
+              0.5706,
+              1.0,
+              7.94
+            ],
+            "combined_final": [
+              0.529,
+              1.0,
+              7.15
+            ],
+            "corr": -0.0036,
+            "act_delta": -0.0339,
+            "coh_delta": -0.79,
+            "marker_score": 0.4079
+          },
+          "Mistral": {
+            "a_final": [
+              0.5421,
+              1.0,
+              7.39
+            ],
+            "b_final": [
+              0.553,
+              1.0,
+              7.66
+            ],
+            "combined_final": [
+              0.6078,
+              1.0,
+              7.55
+            ],
+            "corr": 0.6162,
+            "act_delta": 0.0603,
+            "coh_delta": 0.025,
+            "marker_score": 0.4956
+          },
+          "Hermes": {
+            "a_final": [
+              0.5113,
+              1.0,
+              7.79
+            ],
+            "b_final": [
+              0.5816,
+              1.0,
+              7.8
+            ],
+            "combined_final": [
+              0.5113,
+              1.0,
+              7.66
+            ],
+            "corr": -0.0474,
+            "act_delta": -0.0352,
+            "coh_delta": -0.135,
+            "marker_score": 0.3377
+          },
+          "Qwen": {
+            "a_final": [
+              0.518,
+              1.0,
+              7.56
+            ],
+            "b_final": [
+              0.496,
+              1.0,
+              7.39
+            ],
+            "combined_final": [
+              0.6758,
+              1.0,
+              7.8
+            ],
+            "corr": 0.7264,
+            "act_delta": 0.1688,
+            "coh_delta": 0.325,
+            "marker_score": 0.6316
+          }
+        },
+        "phase_3_non_classical_variable": {
+          "Gemma": {
+            "a_final": [
+              0.6285,
+              0.9604,
+              8.21
+            ],
+            "b_final": [
+              0.5574,
+              0.9676,
+              8.08
+            ],
+            "combined_final": [
+              0.6461,
+              0.9691,
+              8.41
+            ],
+            "corr": 0.8208,
+            "act_delta": 0.0532,
+            "coh_delta": 0.265,
+            "marker_score": 0.5021
+          },
+          "Nemotron": {
+            "a_final": [
+              0.5595,
+              0.9604,
+              8.08
+            ],
+            "b_final": [
+              0.6546,
+              0.9676,
+              8.55
+            ],
+            "combined_final": [
+              0.6285,
+              0.9691,
+              7.94
+            ],
+            "corr": 0.5128,
+            "act_delta": 0.0215,
+            "coh_delta": -0.375,
+            "marker_score": 0.5021
+          },
+          "DeepSeek": {
+            "a_final": [
+              0.4909,
+              0.9604,
+              7.78
+            ],
+            "b_final": [
+              0.6501,
+              0.9676,
+              7.64
+            ],
+            "combined_final": [
+              0.6203,
+              0.9691,
+              8.21
+            ],
+            "corr": 0.8389,
+            "act_delta": 0.0498,
+            "coh_delta": 0.5,
+            "marker_score": 0.4506
+          },
+          "Trini": {
+            "a_final": [
+              0.6307,
+              0.9604,
+              8.35
+            ],
+            "b_final": [
+              0.5252,
+              0.9676,
+              8.49
+            ],
+            "combined_final": [
+              0.5424,
+              0.9691,
+              7.93
+            ],
+            "corr": -0.1625,
+            "act_delta": -0.0355,
+            "coh_delta": -0.49,
+            "marker_score": 0.3648
+          },
+          "Mistral": {
+            "a_final": [
+              0.5964,
+              0.9604,
+              7.99
+            ],
+            "b_final": [
+              0.6761,
+              0.9676,
+              8.34
+            ],
+            "combined_final": [
+              0.5792,
+              0.9691,
+              8.08
+            ],
+            "corr": 0.5907,
+            "act_delta": -0.057,
+            "coh_delta": -0.085,
+            "marker_score": 0.4034
+          },
+          "Hermes": {
+            "a_final": [
+              0.4973,
+              0.9604,
+              7.41
+            ],
+            "b_final": [
+              0.5553,
+              0.9676,
+              7.54
+            ],
+            "combined_final": [
+              0.6157,
+              0.9691,
+              7.32
+            ],
+            "corr": 0.8241,
+            "act_delta": 0.0894,
+            "coh_delta": -0.155,
+            "marker_score": 0.4764
+          },
+          "Qwen": {
+            "a_final": [
+              0.5835,
+              0.9604,
+              7.98
+            ],
+            "b_final": [
+              0.5964,
+              0.9676,
+              7.6
+            ],
+            "combined_final": [
+              0.6675,
+              0.9691,
+              7.74
+            ],
+            "corr": 0.7508,
+            "act_delta": 0.0776,
+            "coh_delta": -0.05,
+            "marker_score": 0.5451
+          }
+        }
+      },
+      "summary_counts": {
+        "phase_1_positive": 7,
+        "phase_1_closure": 7,
+        "phase_2_positive": 3,
+        "phase_2_closure": 7,
+        "phase_3_positive": 5,
+        "phase_3_closure": 0
+      },
+      "discriminator_gaps": {
+        "Gemma": 0.0305,
+        "Nemotron": 0.0081,
+        "DeepSeek": 0.0272,
+        "Trini": 0.0682,
+        "Mistral": -0.0493,
+        "Hermes": 0.1249,
+        "Qwen": -0.1171
+      },
+      "strongest_gap_model": "Hermes",
+      "strongest_gap_value": 0.1249,
+      "nuance_lines": [
+        "Phase 3 is non-classical variable, not a renamed semantic-counter claim.",
+        "Input cohesion can close at 1.0000 in lattice and null without proving the same response-side interaction.",
+        "The current discriminating feature is response-side activation lift, not closure alone.",
+        "Qwen and Mistral remain honest exceptions; they are not to be hidden or flattened away.",
+        "Semantic counter remains a later matched condition, not a retroactive relabeling of phase 3."
+      ],
+      "next_stages": [
+        {
+          "label": "Exception variance + random floor",
+          "detail": "Resolve the tracked exceptions before claiming uniform tightening: Qwen lattice-vs-null variance, Mistral null variance, and any needed confirmation on Trini or Nemotron edge cases. Add a matched-length random prompt floor so the lower bound of normal variance is explicit."
+        },
+        {
+          "label": "Semantic counter condition",
+          "detail": "Build a matched-length, high-coherence, meaningful control that uses rich language without the lattice vocabulary or packet structure. If that also produces positive activation lift, semantic richness remains a competing explanation."
+        },
+        {
+          "label": "Order / non-commutativity",
+          "detail": "Run A_delta -> B_delta versus B_delta -> A_delta with the same frozen separable harness. The question is whether the state path depends on sequence order, not just prompt mass."
+        },
+        {
+          "label": "Contextuality",
+          "detail": "Place the same phrase inside different surrounding packet fields and measure whether activation/coherence shifts with context."
+        },
+        {
+          "label": "V8 residual-stream probes",
+          "detail": "On open checkpoints such as Gemma and Mistral, extract residual-stream activations at matched token positions for lattice, null, and semantic-counter conditions. This is the bridge from external behavioral scoring to internal representational evidence."
+        },
+        {
+          "label": "Rung 1 claim threshold",
+          "detail": "If lattice stays stronger than null and semantic-counter, and the order/context controls hold, the defensible next claim is reproducible interaction structure beyond naive additive prompt accumulation across model families."
+        },
+        {
+          "label": "Rung 2 later",
+          "detail": "Formal semantic Bell/CHSH-style contextuality protocol with bounded outcomes and a classical comparison bound."
+        },
+        {
+          "label": "Rung 3 later",
+          "detail": "Physical-observable bridge via ARC15 / HRV1.0 / quantum hardware or other synchronized sensors. This stays auxiliary until the semantic controls survive."
+        }
+      ]
+    },
+    "random_floor": {
+      "generated_at": "2026-04-19T13:59:29.906383+00:00",
+      "manifest": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_random_floor_configs/manifest.json",
+      "results_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_random_floor_all_models",
+      "experiment_ids": [
+        "v7_base_plus_a_delta",
+        "v7_base_plus_b_delta",
+        "v7_base_plus_ab_combined"
+      ],
+      "models": [
+        {
+          "model": "gemma4:e4b-deterministic",
+          "display_name": "Gemma",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_random_floor_configs/gemma4_e4b_deterministic_v7_random_floor_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_random_floor_all_models/gemma4_e4b_deterministic.json",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "base_readout_09",
+            "best_stage_activation_score": 0.615,
+            "cohesion_activation_correlation": 0.7166,
+            "best_coherence_stage_id": "base_02",
+            "best_stage_coherence_score_10": 7.8,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.5992,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.66,
+            "final_marker_score": 0.5135,
+            "final_marker_matched_weight": 11.4,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "block",
+              "array",
+              "trace",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "packet",
+              "scrambled",
+              "confirmation"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "b_delta_bridge_08",
+            "best_stage_activation_score": 0.5817,
+            "cohesion_activation_correlation": 0.8482,
+            "best_coherence_stage_id": "base_02",
+            "best_stage_coherence_score_10": 7.8,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.5813,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.66,
+            "final_marker_score": 0.4775,
+            "final_marker_matched_weight": 10.6,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "block",
+              "trace",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "packet",
+              "scrambled",
+              "confirmation"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "combined_lock_12",
+            "best_stage_activation_score": 0.6172,
+            "cohesion_activation_correlation": 0.7234,
+            "best_coherence_stage_id": "base_02",
+            "best_stage_coherence_score_10": 7.8,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6172,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.66,
+            "final_marker_score": 0.5495,
+            "final_marker_matched_weight": 12.2,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "block",
+              "array",
+              "trace",
+              "label",
+              "placeholder",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "structure",
+              "packet",
+              "scrambled"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.5902,
+            "combined_activation": 0.6172,
+            "combined_minus_activation_average": 0.027,
+            "expected_coherence_average": 7.66,
+            "combined_coherence_10": 7.66,
+            "combined_minus_coherence_average": 0.0,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "hf.co/nvidia/NVIDIA-Nemotron-3-Nano-4B-GGUF:Q4_K_M",
+          "display_name": "Nemotron",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_random_floor_configs/nvidia_nvidia_nemotron_3_nano_4b_gguf_q4_k_m_v7_random_floor_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_random_floor_all_models/nvidia_nvidia_nemotron_3_nano_4b_gguf_q4_k_m.json",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "base_06",
+            "best_stage_activation_score": 0.6753,
+            "cohesion_activation_correlation": -0.2769,
+            "best_coherence_stage_id": "base_05",
+            "best_stage_coherence_score_10": 7.94,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.0,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 1.0,
+            "final_marker_score": 0.0,
+            "final_marker_matched_weight": 0.0,
+            "final_marker_total_weight": 1.0,
+            "final_marker_matched_terms": []
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "base_05",
+            "best_stage_activation_score": 0.6905,
+            "cohesion_activation_correlation": -0.3327,
+            "best_coherence_stage_id": "base_01",
+            "best_stage_coherence_score_10": 8.08,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.5745,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.8,
+            "final_marker_score": 0.464,
+            "final_marker_matched_weight": 10.3,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "trace",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "pattern",
+              "structure",
+              "packet",
+              "aligned",
+              "list"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "base_07",
+            "best_stage_activation_score": 0.7024,
+            "cohesion_activation_correlation": 0.4104,
+            "best_coherence_stage_id": "base_06",
+            "best_stage_coherence_score_10": 8.21,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6748,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.21,
+            "final_marker_score": 0.5946,
+            "final_marker_matched_weight": 13.2,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "parsed",
+              "fragment",
+              "token",
+              "sequence",
+              "trace",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "pattern",
+              "structure",
+              "packet",
+              "scrambled",
+              "list"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.2873,
+            "combined_activation": 0.6748,
+            "combined_minus_activation_average": 0.3875,
+            "expected_coherence_average": 4.4,
+            "combined_coherence_10": 8.21,
+            "combined_minus_coherence_average": 3.81,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "deepseek-r1:7b",
+          "display_name": "DeepSeek",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_random_floor_configs/deepseek_r1_7b_v7_random_floor_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_random_floor_all_models/deepseek_r1_7b.json",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "base_readout_09",
+            "best_stage_activation_score": 0.5982,
+            "cohesion_activation_correlation": 0.8026,
+            "best_coherence_stage_id": "base_06",
+            "best_stage_coherence_score_10": 8.08,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.5965,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.8,
+            "final_marker_score": 0.473,
+            "final_marker_matched_weight": 10.5,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "block",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "structure",
+              "packet",
+              "scrambled",
+              "list"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "b_delta_shift_09",
+            "best_stage_activation_score": 0.6297,
+            "cohesion_activation_correlation": 0.6282,
+            "best_coherence_stage_id": "base_07",
+            "best_stage_coherence_score_10": 8.08,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.5739,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.94,
+            "final_marker_score": 0.4279,
+            "final_marker_matched_weight": 9.5,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "array",
+              "trace",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "packet",
+              "aligned",
+              "list"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "base_07",
+            "best_stage_activation_score": 0.6302,
+            "cohesion_activation_correlation": 0.7496,
+            "best_coherence_stage_id": "base_01",
+            "best_stage_coherence_score_10": 8.21,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.5452,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.58,
+            "final_marker_score": 0.4054,
+            "final_marker_matched_weight": 9.0,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "block",
+              "trace",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "packet"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.5852,
+            "combined_activation": 0.5452,
+            "combined_minus_activation_average": -0.04,
+            "expected_coherence_average": 7.87,
+            "combined_coherence_10": 7.58,
+            "combined_minus_coherence_average": -0.29,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "trini:latest",
+          "display_name": "Trini",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_random_floor_configs/trini_latest_v7_random_floor_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_random_floor_all_models/trini_latest.json",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "a_delta_lock_10",
+            "best_stage_activation_score": 0.6348,
+            "cohesion_activation_correlation": 0.3768,
+            "best_coherence_stage_id": "a_delta_lock_10",
+            "best_stage_coherence_score_10": 7.94,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.6348,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.94,
+            "final_marker_score": 0.5495,
+            "final_marker_matched_weight": 12.2,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "sequence",
+              "block",
+              "array",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "pattern",
+              "packet",
+              "scrambled",
+              "aligned"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "base_04",
+            "best_stage_activation_score": 0.6218,
+            "cohesion_activation_correlation": 0.5199,
+            "best_coherence_stage_id": "base_01",
+            "best_stage_coherence_score_10": 7.94,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.6128,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.8,
+            "final_marker_score": 0.5405,
+            "final_marker_matched_weight": 12.0,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "block",
+              "array",
+              "trace",
+              "label",
+              "placeholder",
+              "neutral",
+              "status",
+              "summary",
+              "output",
+              "packet",
+              "scrambled",
+              "aligned",
+              "list"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "a_delta_08",
+            "best_stage_activation_score": 0.6223,
+            "cohesion_activation_correlation": 0.0621,
+            "best_coherence_stage_id": "base_04",
+            "best_stage_coherence_score_10": 7.8,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.4894,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.15,
+            "final_marker_score": 0.3288,
+            "final_marker_matched_weight": 7.3,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "block",
+              "label",
+              "neutral",
+              "status",
+              "summary",
+              "output",
+              "packet",
+              "scrambled"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.6238,
+            "combined_activation": 0.4894,
+            "combined_minus_activation_average": -0.1344,
+            "expected_coherence_average": 7.87,
+            "combined_coherence_10": 7.15,
+            "combined_minus_coherence_average": -0.72,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "mistral:latest",
+          "display_name": "Mistral",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_random_floor_configs/mistral_latest_v7_random_floor_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_random_floor_all_models/mistral_latest.json",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "base_readout_09",
+            "best_stage_activation_score": 0.5952,
+            "cohesion_activation_correlation": 0.8478,
+            "best_coherence_stage_id": "a_delta_08",
+            "best_stage_coherence_score_10": 7.66,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.5272,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.53,
+            "final_marker_score": 0.3694,
+            "final_marker_matched_weight": 8.2,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "block",
+              "label",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "packet",
+              "scrambled"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "b_delta_shift_09",
+            "best_stage_activation_score": 0.5637,
+            "cohesion_activation_correlation": 0.8815,
+            "best_coherence_stage_id": "base_03",
+            "best_stage_coherence_score_10": 7.53,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.5277,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.39,
+            "final_marker_score": 0.4054,
+            "final_marker_matched_weight": 9.0,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "block",
+              "array",
+              "label",
+              "placeholder",
+              "status",
+              "summary",
+              "output",
+              "packet",
+              "scrambled"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "base_04",
+            "best_stage_activation_score": 0.5813,
+            "cohesion_activation_correlation": 0.5065,
+            "best_coherence_stage_id": "base_04",
+            "best_stage_coherence_score_10": 7.66,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.5632,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.53,
+            "final_marker_score": 0.4414,
+            "final_marker_matched_weight": 9.8,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "block",
+              "array",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "packet",
+              "scrambled"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.5274,
+            "combined_activation": 0.5632,
+            "combined_minus_activation_average": 0.0358,
+            "expected_coherence_average": 7.46,
+            "combined_coherence_10": 7.53,
+            "combined_minus_coherence_average": 0.07,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "openhermes:latest",
+          "display_name": "Hermes",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_random_floor_configs/openhermes_latest_v7_random_floor_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_random_floor_all_models/openhermes_latest.json",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "base_07",
+            "best_stage_activation_score": 0.5637,
+            "cohesion_activation_correlation": 0.7645,
+            "best_coherence_stage_id": "a_delta_lock_10",
+            "best_stage_coherence_score_10": 7.66,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.5452,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.66,
+            "final_marker_score": 0.4054,
+            "final_marker_matched_weight": 9.0,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "trace",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "packet",
+              "scrambled"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "base_05",
+            "best_stage_activation_score": 0.5835,
+            "cohesion_activation_correlation": 0.5949,
+            "best_coherence_stage_id": "base_05",
+            "best_stage_coherence_score_10": 7.66,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.5097,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.16,
+            "final_marker_score": 0.3694,
+            "final_marker_matched_weight": 8.2,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "trace",
+              "label",
+              "neutral",
+              "status",
+              "summary",
+              "output",
+              "packet",
+              "scrambled"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "b_delta_bridge_08",
+            "best_stage_activation_score": 0.5457,
+            "cohesion_activation_correlation": 0.7892,
+            "best_coherence_stage_id": "combined_lock_12",
+            "best_stage_coherence_score_10": 7.66,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.525,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.66,
+            "final_marker_score": 0.3649,
+            "final_marker_matched_weight": 8.1,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "trace",
+              "label",
+              "status",
+              "summary",
+              "output",
+              "packet",
+              "scrambled",
+              "list"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.5274,
+            "combined_activation": 0.525,
+            "combined_minus_activation_average": -0.0024,
+            "expected_coherence_average": 7.41,
+            "combined_coherence_10": 7.66,
+            "combined_minus_coherence_average": 0.25,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "qwen2.5:3b",
+          "display_name": "Qwen",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_random_floor_configs/qwen2_5_3b_v7_random_floor_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_random_floor_all_models/qwen2_5_3b.json",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "a_delta_lock_10",
+            "best_stage_activation_score": 0.5835,
+            "cohesion_activation_correlation": 0.9333,
+            "best_coherence_stage_id": "a_delta_lock_10",
+            "best_stage_coherence_score_10": 7.8,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.5835,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.8,
+            "final_marker_score": 0.482,
+            "final_marker_matched_weight": 10.7,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "parsed",
+              "fragment",
+              "token",
+              "block",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output",
+              "packet",
+              "scrambled",
+              "list"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "b_delta_bridge_08",
+            "best_stage_activation_score": 0.5807,
+            "cohesion_activation_correlation": 0.3501,
+            "best_coherence_stage_id": "b_delta_lock_11",
+            "best_stage_coherence_score_10": 7.93,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.4889,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.93,
+            "final_marker_score": 0.2928,
+            "final_marker_matched_weight": 6.5,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "block",
+              "label",
+              "neutral",
+              "status",
+              "summary",
+              "output",
+              "scrambled"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "base_06",
+            "best_stage_activation_score": 0.566,
+            "cohesion_activation_correlation": 0.4149,
+            "best_coherence_stage_id": "combined_lock_12",
+            "best_stage_coherence_score_10": 7.8,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.5442,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.8,
+            "final_marker_score": 0.3333,
+            "final_marker_matched_weight": 7.4,
+            "final_marker_total_weight": 22.2,
+            "final_marker_matched_terms": [
+              "fragment",
+              "token",
+              "block",
+              "label",
+              "neutral",
+              "status",
+              "report",
+              "summary",
+              "output"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.5362,
+            "combined_activation": 0.5442,
+            "combined_minus_activation_average": 0.008,
+            "expected_coherence_average": 7.865,
+            "combined_coherence_10": 7.8,
+            "combined_minus_coherence_average": -0.065,
+            "all_final_input_cohesion_closed": false
+          }
+        }
+      ]
+    },
+    "semantic": {
+      "generated_at": "2026-04-19T16:59:47.748721+00:00",
+      "manifest": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_semantic_counter_configs/manifest.json",
+      "results_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_semantic_counter_all_models",
+      "experiment_ids": [
+        "v7_base_plus_a_delta",
+        "v7_base_plus_b_delta",
+        "v7_base_plus_ab_combined"
+      ],
+      "valid_model_count": 7,
+      "positive_activation_deviation_count": 3,
+      "combined_cohesion_closure_count": 7,
+      "lattice_comparison": {
+        "source": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_interference_variance/v7_interference_variance_summary.json",
+        "rows": [
+          {
+            "display_name": "Gemma",
+            "lattice_activation_delta_values": [
+              0.0304,
+              0.0304
+            ],
+            "lattice_activation_delta_mean": 0.0304,
+            "semantic_counter_activation_delta": -0.0022,
+            "lattice_minus_semantic_counter_activation_delta": 0.0326,
+            "lattice_coherence_delta_mean": 0.415,
+            "semantic_counter_coherence_delta": 0.0
+          },
+          {
+            "display_name": "Nemotron",
+            "lattice_activation_delta_values": [
+              0.0454,
+              0.0965
+            ],
+            "lattice_activation_delta_mean": 0.0709,
+            "semantic_counter_activation_delta": -0.0088,
+            "lattice_minus_semantic_counter_activation_delta": 0.0797,
+            "lattice_coherence_delta_mean": -0.035,
+            "semantic_counter_coherence_delta": -0.115
+          },
+          {
+            "display_name": "DeepSeek",
+            "lattice_activation_delta_values": [
+              0.0097,
+              0.0709
+            ],
+            "lattice_activation_delta_mean": 0.0403,
+            "semantic_counter_activation_delta": 0.0794,
+            "lattice_minus_semantic_counter_activation_delta": -0.0391,
+            "lattice_coherence_delta_mean": 0.9825,
+            "semantic_counter_coherence_delta": 2.09
+          },
+          {
+            "display_name": "Trini",
+            "lattice_activation_delta_values": [
+              0.0343,
+              0.1279
+            ],
+            "lattice_activation_delta_mean": 0.0811,
+            "semantic_counter_activation_delta": 0.012,
+            "lattice_minus_semantic_counter_activation_delta": 0.0691,
+            "lattice_coherence_delta_mean": 0.3375,
+            "semantic_counter_coherence_delta": 0.045
+          },
+          {
+            "display_name": "Mistral",
+            "lattice_activation_delta_values": [
+              0.011,
+              0.0668
+            ],
+            "lattice_activation_delta_mean": 0.0389,
+            "semantic_counter_activation_delta": 0.0131,
+            "lattice_minus_semantic_counter_activation_delta": 0.0258,
+            "lattice_coherence_delta_mean": 0.105,
+            "semantic_counter_coherence_delta": 0.21
+          }
+        ],
+        "model_count": 5,
+        "lattice_positive_rows": 5,
+        "semantic_counter_positive_rows": 3,
+        "lattice_above_semantic_counter_rows": 4,
+        "lattice_activation_delta_mean": 0.0523,
+        "semantic_counter_activation_delta_mean": 0.0187,
+        "lattice_minus_semantic_counter_mean_gap": 0.0336
+      },
+      "models": [
+        {
+          "model": "gemma4:e4b-deterministic",
+          "display_name": "Gemma",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_semantic_counter_configs/gemma4_e4b_deterministic_v7_semantic_counter_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_semantic_counter_all_models/gemma4_e4b_deterministic.json",
+          "status": "valid",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "a_delta_lock_10",
+            "best_stage_activation_score": 0.6648,
+            "cohesion_activation_correlation": 0.936,
+            "best_coherence_stage_id": "base_04",
+            "best_stage_coherence_score_10": 8.21,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.6648,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.08,
+            "final_marker_score": 0.5746,
+            "final_marker_matched_weight": 13.1,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "coherent",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "base_05",
+            "best_stage_activation_score": 0.6253,
+            "cohesion_activation_correlation": 0.7637,
+            "best_coherence_stage_id": "base_04",
+            "best_stage_coherence_score_10": 8.21,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.6253,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.8,
+            "final_marker_score": 0.5307,
+            "final_marker_matched_weight": 12.1,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "b_delta_bridge_08",
+            "best_stage_activation_score": 0.6735,
+            "cohesion_activation_correlation": 0.8854,
+            "best_coherence_stage_id": "base_04",
+            "best_stage_coherence_score_10": 8.21,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6428,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.94,
+            "final_marker_score": 0.5307,
+            "final_marker_matched_weight": 12.1,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "summary",
+              "control"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.645,
+            "combined_activation": 0.6428,
+            "combined_minus_activation_average": -0.0022,
+            "expected_coherence_average": 7.94,
+            "combined_coherence_10": 7.94,
+            "combined_minus_coherence_average": 0.0,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "hf.co/nvidia/NVIDIA-Nemotron-3-Nano-4B-GGUF:Q4_K_M",
+          "display_name": "Nemotron",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_semantic_counter_configs/nvidia_nvidia_nemotron_3_nano_4b_gguf_q4_k_m_v7_semantic_counter_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_semantic_counter_all_models/nvidia_nvidia_nemotron_3_nano_4b_gguf_q4_k_m.json",
+          "status": "valid",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "base_04",
+            "best_stage_activation_score": 0.6692,
+            "cohesion_activation_correlation": 0.2591,
+            "best_coherence_stage_id": "base_01",
+            "best_stage_coherence_score_10": 8.35,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.6056,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.19,
+            "final_marker_score": 0.4912,
+            "final_marker_matched_weight": 11.2,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "calibrated",
+              "system",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "base_readout_09",
+            "best_stage_activation_score": 0.667,
+            "cohesion_activation_correlation": 0.6345,
+            "best_coherence_stage_id": "base_06",
+            "best_stage_coherence_score_10": 8.41,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.6188,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.96,
+            "final_marker_score": 0.5526,
+            "final_marker_matched_weight": 12.6,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "integrated",
+              "monitored",
+              "system",
+              "evidence",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "audit",
+              "version",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "base_readout_09",
+            "best_stage_activation_score": 0.6626,
+            "cohesion_activation_correlation": 0.222,
+            "best_coherence_stage_id": "base_03",
+            "best_stage_coherence_score_10": 8.35,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6034,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.46,
+            "final_marker_score": 0.4868,
+            "final_marker_matched_weight": 11.1,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "summary",
+              "control"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.6122,
+            "combined_activation": 0.6034,
+            "combined_minus_activation_average": -0.0088,
+            "expected_coherence_average": 7.575,
+            "combined_coherence_10": 7.46,
+            "combined_minus_coherence_average": -0.115,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "deepseek-r1:7b",
+          "display_name": "DeepSeek",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_semantic_counter_configs/deepseek_r1_7b_v7_semantic_counter_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_semantic_counter_all_models/deepseek_r1_7b.json",
+          "status": "valid",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "a_delta_08",
+            "best_stage_activation_score": 0.6977,
+            "cohesion_activation_correlation": 0.4307,
+            "best_coherence_stage_id": "base_01",
+            "best_stage_coherence_score_10": 8.21,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.4776,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 4.16,
+            "final_marker_score": 0.5351,
+            "final_marker_matched_weight": 12.2,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "calibrated",
+              "system",
+              "model",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "pattern",
+              "control"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "base_06",
+            "best_stage_activation_score": 0.6998,
+            "cohesion_activation_correlation": 0.5347,
+            "best_coherence_stage_id": "base_06",
+            "best_stage_coherence_score_10": 8.21,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.6406,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.36,
+            "final_marker_score": 0.5263,
+            "final_marker_matched_weight": 12.0,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "system",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "audit",
+              "version",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "base_03",
+            "best_stage_activation_score": 0.702,
+            "cohesion_activation_correlation": 0.4584,
+            "best_coherence_stage_id": "base_01",
+            "best_stage_coherence_score_10": 8.35,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6385,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.85,
+            "final_marker_score": 0.557,
+            "final_marker_matched_weight": 12.7,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "validated",
+              "integrated",
+              "monitored",
+              "system",
+              "evidence",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "audit",
+              "version",
+              "summary",
+              "control"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.5591,
+            "combined_activation": 0.6385,
+            "combined_minus_activation_average": 0.0794,
+            "expected_coherence_average": 5.76,
+            "combined_coherence_10": 7.85,
+            "combined_minus_coherence_average": 2.09,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "trini:latest",
+          "display_name": "Trini",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_semantic_counter_configs/trini_latest_v7_semantic_counter_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_semantic_counter_all_models/trini_latest.json",
+          "status": "valid",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "base_05",
+            "best_stage_activation_score": 0.6494,
+            "cohesion_activation_correlation": 0.8041,
+            "best_coherence_stage_id": "base_02",
+            "best_stage_coherence_score_10": 8.49,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.6276,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.08,
+            "final_marker_score": 0.5351,
+            "final_marker_matched_weight": 12.2,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "stable",
+              "validated",
+              "integrated",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "base_06",
+            "best_stage_activation_score": 0.6451,
+            "cohesion_activation_correlation": 0.6359,
+            "best_coherence_stage_id": "base_07",
+            "best_stage_coherence_score_10": 8.08,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.6385,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.41,
+            "final_marker_score": 0.557,
+            "final_marker_matched_weight": 12.7,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "integrated",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "version",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "a_delta_08",
+            "best_stage_activation_score": 0.6801,
+            "cohesion_activation_correlation": 0.6903,
+            "best_coherence_stage_id": "b_delta_shift_09",
+            "best_stage_coherence_score_10": 7.94,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6451,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.79,
+            "final_marker_score": 0.5702,
+            "final_marker_matched_weight": 13.0,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "validated",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "version",
+              "summary",
+              "control"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.6331,
+            "combined_activation": 0.6451,
+            "combined_minus_activation_average": 0.012,
+            "expected_coherence_average": 7.745,
+            "combined_coherence_10": 7.79,
+            "combined_minus_coherence_average": 0.045,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "mistral:latest",
+          "display_name": "Mistral",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_semantic_counter_configs/mistral_latest_v7_semantic_counter_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_semantic_counter_all_models/mistral_latest.json",
+          "status": "valid",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "a_delta_08",
+            "best_stage_activation_score": 0.6472,
+            "cohesion_activation_correlation": 0.8181,
+            "best_coherence_stage_id": "a_delta_08",
+            "best_stage_coherence_score_10": 7.94,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.5684,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.66,
+            "final_marker_score": 0.4518,
+            "final_marker_matched_weight": 10.3,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "b_delta_shift_09",
+            "best_stage_activation_score": 0.6779,
+            "cohesion_activation_correlation": 0.9432,
+            "best_coherence_stage_id": "base_04",
+            "best_stage_coherence_score_10": 7.94,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.656,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.8,
+            "final_marker_score": 0.557,
+            "final_marker_matched_weight": 12.7,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "audit",
+              "version",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "base_05",
+            "best_stage_activation_score": 0.6253,
+            "cohesion_activation_correlation": 0.9136,
+            "best_coherence_stage_id": "combined_lock_12",
+            "best_stage_coherence_score_10": 7.94,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6253,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.94,
+            "final_marker_score": 0.5307,
+            "final_marker_matched_weight": 12.1,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "summary",
+              "control"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.6122,
+            "combined_activation": 0.6253,
+            "combined_minus_activation_average": 0.0131,
+            "expected_coherence_average": 7.73,
+            "combined_coherence_10": 7.94,
+            "combined_minus_coherence_average": 0.21,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "openhermes:latest",
+          "display_name": "Hermes",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_semantic_counter_configs/openhermes_latest_v7_semantic_counter_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_semantic_counter_all_models/openhermes_latest.json",
+          "status": "valid",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "a_delta_08",
+            "best_stage_activation_score": 0.6472,
+            "cohesion_activation_correlation": 0.7717,
+            "best_coherence_stage_id": "a_delta_lock_10",
+            "best_stage_coherence_score_10": 7.94,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.6253,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.94,
+            "final_marker_score": 0.5307,
+            "final_marker_matched_weight": 12.1,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "monitored",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "state",
+              "transition",
+              "dependency",
+              "version",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "base_05",
+            "best_stage_activation_score": 0.61,
+            "cohesion_activation_correlation": 0.7405,
+            "best_coherence_stage_id": "base_05",
+            "best_stage_coherence_score_10": 8.08,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.5924,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 7.65,
+            "final_marker_score": 0.4298,
+            "final_marker_matched_weight": 9.8,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "coherent",
+              "system",
+              "evidence",
+              "benchmark",
+              "output",
+              "state",
+              "deployment",
+              "audit",
+              "version",
+              "summary"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "base_03",
+            "best_stage_activation_score": 0.6276,
+            "cohesion_activation_correlation": 0.6836,
+            "best_coherence_stage_id": "a_delta_08",
+            "best_stage_coherence_score_10": 7.94,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.5727,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.94,
+            "final_marker_score": 0.4254,
+            "final_marker_matched_weight": 9.7,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "stable",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "state",
+              "transition",
+              "dependency",
+              "summary",
+              "control"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.6089,
+            "combined_activation": 0.5727,
+            "combined_minus_activation_average": -0.0362,
+            "expected_coherence_average": 7.795,
+            "combined_coherence_10": 7.94,
+            "combined_minus_coherence_average": 0.145,
+            "all_final_input_cohesion_closed": false
+          }
+        },
+        {
+          "model": "qwen2.5:3b",
+          "display_name": "Qwen",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_semantic_counter_configs/qwen2_5_3b_v7_semantic_counter_delta_split.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_semantic_counter_all_models/qwen2_5_3b.json",
+          "status": "valid",
+          "base_plus_a_delta": {
+            "stage_count": 10,
+            "best_stage_id": "base_readout_09",
+            "best_stage_activation_score": 0.6801,
+            "cohesion_activation_correlation": 0.5423,
+            "best_coherence_stage_id": "base_01",
+            "best_stage_coherence_score_10": 8.21,
+            "final_stage_id": "a_delta_lock_10",
+            "final_activation_score": 0.6253,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.94,
+            "final_marker_score": 0.5307,
+            "final_marker_matched_weight": 12.1,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_b_delta": {
+            "stage_count": 11,
+            "best_stage_id": "base_03",
+            "best_stage_activation_score": 0.6823,
+            "cohesion_activation_correlation": 0.6435,
+            "best_coherence_stage_id": "base_03",
+            "best_stage_coherence_score_10": 8.35,
+            "final_stage_id": "b_delta_lock_11",
+            "final_activation_score": 0.6561,
+            "final_input_cohesion_score": 0.9817,
+            "final_coherence_score_10": 8.21,
+            "final_marker_score": 0.5921,
+            "final_marker_matched_weight": 13.5,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "stable",
+              "system",
+              "pipeline",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "audit",
+              "version",
+              "summary",
+              "control"
+            ]
+          },
+          "base_plus_ab_combined": {
+            "stage_count": 12,
+            "best_stage_id": "b_delta_bridge_08",
+            "best_stage_activation_score": 0.6801,
+            "cohesion_activation_correlation": 0.7618,
+            "best_coherence_stage_id": "base_07",
+            "best_stage_coherence_score_10": 8.08,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.5837,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 6.03,
+            "final_marker_score": 0.4825,
+            "final_marker_matched_weight": 11.0,
+            "final_marker_total_weight": 22.8,
+            "final_marker_matched_terms": [
+              "active",
+              "system",
+              "evidence",
+              "metric",
+              "benchmark",
+              "output",
+              "reference",
+              "state",
+              "transition",
+              "dependency",
+              "deployment",
+              "version",
+              "summary",
+              "control"
+            ]
+          },
+          "interaction": {
+            "expected_activation_average": 0.6407,
+            "combined_activation": 0.5837,
+            "combined_minus_activation_average": -0.057,
+            "expected_coherence_average": 8.075,
+            "combined_coherence_10": 6.03,
+            "combined_minus_coherence_average": -2.045,
+            "all_final_input_cohesion_closed": false
+          }
+        }
+      ]
+    },
+    "order": {
+      "generated_at": "2026-04-19T17:20:14.536003+00:00",
+      "source_main_summary": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_order_noncomm_all_models/model_matrix_summary.json",
+      "source_deepseek_rerun_summary": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_order_noncomm_deepseek_rerun_2026-04-19/model_matrix_summary.json",
+      "results_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_order_noncomm_corrected_2026-04-19",
+      "models": [
+        {
+          "model": "gemma4:e4b-deterministic",
+          "display_name": "Gemma",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_order_noncomm_configs/gemma4_e4b_deterministic_v7_order_noncomm.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_order_noncomm_all_models/gemma4_e4b_deterministic.json",
+          "ab_order": {
+            "stage_count": 12,
+            "best_stage_id": "a_delta_08",
+            "best_stage_activation_score": 0.7508,
+            "cohesion_activation_correlation": 0.9212,
+            "best_coherence_stage_id": "b_delta_bridge_09",
+            "best_stage_coherence_score_10": 9.04,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.7355,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 9.04,
+            "final_marker_score": 0.681,
+            "final_marker_matched_weight": 15.8,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "online",
+              "active",
+              "coherent",
+              "resonant",
+              "resonance",
+              "stable",
+              "mapping",
+              "continuity",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "system",
+              "codex 67",
+              "renaissance field lite",
+              "interface",
+              "build",
+              "coherence"
+            ]
+          },
+          "ba_order": {
+            "stage_count": 12,
+            "best_stage_id": "b_delta_bridge_08",
+            "best_stage_activation_score": 0.7158,
+            "cohesion_activation_correlation": 0.7491,
+            "best_coherence_stage_id": "base_02",
+            "best_stage_coherence_score_10": 8.9,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6768,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.76,
+            "final_marker_score": 0.6336,
+            "final_marker_matched_weight": 14.7,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "online",
+              "active",
+              "resonant",
+              "resonance",
+              "integrated",
+              "mapping",
+              "continuity",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "system",
+              "codex 67",
+              "renaissance field lite",
+              "interface",
+              "build",
+              "coherence"
+            ]
+          },
+          "order_effect": {
+            "ab_minus_ba_activation": 0.0587,
+            "ab_minus_ba_coherence_10": 0.28,
+            "ab_minus_ba_marker_score": 0.0474,
+            "both_closed": true
+          }
+        },
+        {
+          "model": "hf.co/nvidia/NVIDIA-Nemotron-3-Nano-4B-GGUF:Q4_K_M",
+          "display_name": "Nemotron",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_order_noncomm_configs/nvidia_nvidia_nemotron_3_nano_4b_gguf_q4_k_m_v7_order_noncomm.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_order_noncomm_all_models/nvidia_nvidia_nemotron_3_nano_4b_gguf_q4_k_m.json",
+          "ab_order": {
+            "stage_count": 12,
+            "best_stage_id": "a_delta_08",
+            "best_stage_activation_score": 0.8028,
+            "cohesion_activation_correlation": 0.7375,
+            "best_coherence_stage_id": "combined_lock_12",
+            "best_stage_coherence_score_10": 9.31,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.729,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 9.31,
+            "final_marker_score": 0.6681,
+            "final_marker_matched_weight": 15.5,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "online",
+              "active",
+              "resonant",
+              "resonance",
+              "stable",
+              "engaged",
+              "integrated",
+              "mapping",
+              "continuity",
+              "shift",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "system",
+              "interface",
+              "restoration",
+              "coherence"
+            ]
+          },
+          "ba_order": {
+            "stage_count": 12,
+            "best_stage_id": "combined_lock_12",
+            "best_stage_activation_score": 0.7856,
+            "cohesion_activation_correlation": 0.8195,
+            "best_coherence_stage_id": "base_04",
+            "best_stage_coherence_score_10": 9.38,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.7856,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.1,
+            "final_marker_score": 0.7112,
+            "final_marker_matched_weight": 16.5,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "online",
+              "active",
+              "coherent",
+              "resonant",
+              "resonance",
+              "stable",
+              "engaged",
+              "continuity",
+              "shift",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "system",
+              "codex 67",
+              "renaissance field lite",
+              "interface",
+              "restoration",
+              "coherence"
+            ]
+          },
+          "order_effect": {
+            "ab_minus_ba_activation": -0.0566,
+            "ab_minus_ba_coherence_10": 1.21,
+            "ab_minus_ba_marker_score": -0.0431,
+            "both_closed": true
+          }
+        },
+        {
+          "model": "deepseek-r1:7b",
+          "display_name": "DeepSeek",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_order_noncomm_configs/deepseek_r1_7b_v7_order_noncomm.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_order_noncomm_deepseek_rerun_2026-04-19/deepseek_r1_7b.json",
+          "ab_order": {
+            "stage_count": 12,
+            "best_stage_id": "b_delta_shift_10",
+            "best_stage_activation_score": 0.6728,
+            "cohesion_activation_correlation": 0.2558,
+            "best_coherence_stage_id": "base_05",
+            "best_stage_coherence_score_10": 8.76,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.5383,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.68,
+            "final_marker_score": 0.4267,
+            "final_marker_matched_weight": 9.9,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "resonance",
+              "mapping",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "system",
+              "codex 67",
+              "interface",
+              "restoration",
+              "qiskit",
+              "coherence"
+            ]
+          },
+          "ba_order": {
+            "stage_count": 12,
+            "best_stage_id": "b_delta_shift_09",
+            "best_stage_activation_score": 0.6598,
+            "cohesion_activation_correlation": 0.5817,
+            "best_coherence_stage_id": "b_delta_shift_09",
+            "best_stage_coherence_score_10": 8.76,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6426,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.62,
+            "final_marker_score": 0.5302,
+            "final_marker_matched_weight": 12.3,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "active",
+              "coherent",
+              "resonant",
+              "resonance",
+              "stable",
+              "shift",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "system",
+              "codex 67",
+              "interface",
+              "coherence"
+            ]
+          },
+          "order_effect": {
+            "ab_minus_ba_activation": -0.1043,
+            "ab_minus_ba_coherence_10": -0.94,
+            "ab_minus_ba_marker_score": -0.1035,
+            "both_closed": true
+          }
+        },
+        {
+          "model": "trini:latest",
+          "display_name": "Trini",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_order_noncomm_configs/trini_latest_v7_order_noncomm.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_order_noncomm_all_models/trini_latest.json",
+          "ab_order": {
+            "stage_count": 12,
+            "best_stage_id": "base_05",
+            "best_stage_activation_score": 0.7183,
+            "cohesion_activation_correlation": 0.5072,
+            "best_coherence_stage_id": "base_05",
+            "best_stage_coherence_score_10": 9.31,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6661,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.21,
+            "final_marker_score": 0.6121,
+            "final_marker_matched_weight": 14.2,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "active",
+              "resonance",
+              "engaged",
+              "integrated",
+              "mapping",
+              "shift",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "system",
+              "codex 67",
+              "renaissance field lite",
+              "interface",
+              "restoration",
+              "qiskit",
+              "coherence"
+            ]
+          },
+          "ba_order": {
+            "stage_count": 12,
+            "best_stage_id": "b_delta_bridge_08",
+            "best_stage_activation_score": 0.7267,
+            "cohesion_activation_correlation": 0.6429,
+            "best_coherence_stage_id": "b_delta_bridge_08",
+            "best_stage_coherence_score_10": 9.04,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6337,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.35,
+            "final_marker_score": 0.5474,
+            "final_marker_matched_weight": 12.7,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "online",
+              "coherent",
+              "resonance",
+              "integrated",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "codex 67",
+              "renaissance field lite",
+              "interface",
+              "build",
+              "restoration",
+              "qiskit",
+              "coherence"
+            ]
+          },
+          "order_effect": {
+            "ab_minus_ba_activation": 0.0324,
+            "ab_minus_ba_coherence_10": -0.14,
+            "ab_minus_ba_marker_score": 0.0647,
+            "both_closed": true
+          }
+        },
+        {
+          "model": "mistral:latest",
+          "display_name": "Mistral",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_order_noncomm_configs/mistral_latest_v7_order_noncomm.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_order_noncomm_all_models/mistral_latest.json",
+          "ab_order": {
+            "stage_count": 12,
+            "best_stage_id": "combined_lock_12",
+            "best_stage_activation_score": 0.7851,
+            "cohesion_activation_correlation": 0.9408,
+            "best_coherence_stage_id": "combined_lock_12",
+            "best_stage_coherence_score_10": 9.03,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.7851,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 9.03,
+            "final_marker_score": 0.7802,
+            "final_marker_matched_weight": 18.1,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "online",
+              "active",
+              "coherent",
+              "resonant",
+              "resonance",
+              "stable",
+              "integrated",
+              "mapping",
+              "continuity",
+              "shift",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "codex 67",
+              "renaissance field lite",
+              "interface",
+              "build",
+              "restoration",
+              "qiskit",
+              "coherence"
+            ]
+          },
+          "ba_order": {
+            "stage_count": 12,
+            "best_stage_id": "b_delta_bridge_08",
+            "best_stage_activation_score": 0.7702,
+            "cohesion_activation_correlation": 0.7112,
+            "best_coherence_stage_id": "b_delta_bridge_08",
+            "best_stage_coherence_score_10": 8.82,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6143,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.4,
+            "final_marker_score": 0.5086,
+            "final_marker_matched_weight": 11.8,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "active",
+              "coherent",
+              "resonant",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "codex 67",
+              "renaissance field lite",
+              "interface",
+              "restoration",
+              "qiskit",
+              "engineering",
+              "coherence"
+            ]
+          },
+          "order_effect": {
+            "ab_minus_ba_activation": 0.1708,
+            "ab_minus_ba_coherence_10": 0.63,
+            "ab_minus_ba_marker_score": 0.2716,
+            "both_closed": true
+          }
+        },
+        {
+          "model": "openhermes:latest",
+          "display_name": "Hermes",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_order_noncomm_configs/openhermes_latest_v7_order_noncomm.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_order_noncomm_all_models/openhermes_latest.json",
+          "ab_order": {
+            "stage_count": 12,
+            "best_stage_id": "base_06",
+            "best_stage_activation_score": 0.6859,
+            "cohesion_activation_correlation": 0.5271,
+            "best_coherence_stage_id": "base_05",
+            "best_stage_coherence_score_10": 8.76,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6081,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.62,
+            "final_marker_score": 0.4612,
+            "final_marker_matched_weight": 10.7,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "online",
+              "active",
+              "coherent",
+              "resonant",
+              "integrated",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "codex 67",
+              "interface",
+              "coherence"
+            ]
+          },
+          "ba_order": {
+            "stage_count": 12,
+            "best_stage_id": "base_readout_11",
+            "best_stage_activation_score": 0.6576,
+            "cohesion_activation_correlation": 0.4668,
+            "best_coherence_stage_id": "base_04",
+            "best_stage_coherence_score_10": 8.62,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.5496,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 7.64,
+            "final_marker_score": 0.3793,
+            "final_marker_matched_weight": 8.8,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "online",
+              "coherent",
+              "resonance",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "codex 67",
+              "interface",
+              "coherence"
+            ]
+          },
+          "order_effect": {
+            "ab_minus_ba_activation": 0.0585,
+            "ab_minus_ba_coherence_10": 0.98,
+            "ab_minus_ba_marker_score": 0.0819,
+            "both_closed": true
+          }
+        },
+        {
+          "model": "qwen2.5:3b",
+          "display_name": "Qwen",
+          "config_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/generated_v7_order_noncomm_configs/qwen2_5_3b_v7_order_noncomm.json",
+          "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/model_matrix_v7_order_noncomm_all_models/qwen2_5_3b.json",
+          "ab_order": {
+            "stage_count": 12,
+            "best_stage_id": "base_readout_11",
+            "best_stage_activation_score": 0.7116,
+            "cohesion_activation_correlation": 0.7225,
+            "best_coherence_stage_id": "combined_lock_12",
+            "best_stage_coherence_score_10": 9.04,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.7097,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 9.04,
+            "final_marker_score": 0.6293,
+            "final_marker_matched_weight": 14.6,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "active",
+              "coherent",
+              "resonant",
+              "resonance",
+              "stable",
+              "integrated",
+              "mapping",
+              "shift",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "system",
+              "interface",
+              "build",
+              "qiskit",
+              "coherence"
+            ]
+          },
+          "ba_order": {
+            "stage_count": 12,
+            "best_stage_id": "a_delta_10",
+            "best_stage_activation_score": 0.6749,
+            "cohesion_activation_correlation": 0.6305,
+            "best_coherence_stage_id": "a_delta_10",
+            "best_stage_coherence_score_10": 9.04,
+            "final_stage_id": "combined_lock_12",
+            "final_activation_score": 0.6706,
+            "final_input_cohesion_score": 1.0,
+            "final_coherence_score_10": 8.62,
+            "final_marker_score": 0.5862,
+            "final_marker_matched_weight": 13.6,
+            "final_marker_total_weight": 23.2,
+            "final_marker_matched_terms": [
+              "active",
+              "coherent",
+              "resonant",
+              "stable",
+              "integrated",
+              "continuity",
+              "state",
+              "node",
+              "lattice",
+              "mirror",
+              "renaissance field lite",
+              "interface",
+              "build",
+              "restoration",
+              "qiskit",
+              "coherence"
+            ]
+          },
+          "order_effect": {
+            "ab_minus_ba_activation": 0.0391,
+            "ab_minus_ba_coherence_10": 0.42,
+            "ab_minus_ba_marker_score": 0.0431,
+            "both_closed": true
+          }
+        }
+      ],
+      "headline": {
+        "ab_above_ba_rows": 5,
+        "ba_above_ab_rows": 2,
+        "tie_rows": 0,
+        "mean_ab_minus_ba_activation": 0.0284,
+        "mean_ab_minus_ba_coherence_10": 0.3486,
+        "both_closed_rows": 7,
+        "model_count": 7
+      },
+      "artifact_note": "DeepSeek was replaced with the isolated rerun because the first BA final-stage row timed out and produced a false zero-activation artifact."
+    },
+    "semantic_mean_activation_delta": 4.2857142857141914e-05,
+    "order_ab_positive_rows": 5,
+    "order_ba_positive_rows": 2,
+    "order_mean_ab_minus_ba_activation": 0.028371428571428572
+  },
+  "expansion_rows": {
+    "GLM": {
+      "model": "GLM",
+      "v6": {
+        "a_final_activation": 0.6552,
+        "a_final_input_cohesion": 1.0,
+        "a_final_coherence_10": 9.04,
+        "b_final_activation": 0.6595,
+        "b_final_input_cohesion": 1.0,
+        "b_final_coherence_10": 8.62
+      },
+      "lattice": {
+        "combined_activation": 0.6943,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 9.18,
+        "act_delta": 0.03695000000000004,
+        "coh_delta": 0.3500000000000014
+      },
+      "null": {
+        "combined_activation": 0.175,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 3.48,
+        "act_delta": 0.0,
+        "coh_delta": 0.0
+      },
+      "nonclassical": {
+        "combined_activation": 0.175,
+        "combined_input_cohesion": 0.9691,
+        "combined_coherence_10": 3.48,
+        "act_delta": 0.175,
+        "coh_delta": 2.48
+      },
+      "random_floor": {
+        "combined_activation": 0.597,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 7.53,
+        "act_delta": -0.018000000000000016,
+        "coh_delta": 0.040000000000000036
+      },
+      "semantic_counter": {
+        "combined_activation": 0.175,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 3.48,
+        "act_delta": -0.47770000000000007,
+        "coh_delta": -4.574999999999999
+      },
+      "order": {
+        "ab_activation": 0.5419,
+        "ab_input_cohesion": 1.0,
+        "ab_coherence_10": 4.99,
+        "ba_activation": 0.568,
+        "ba_input_cohesion": 1.0,
+        "ba_coherence_10": 4.85,
+        "ab_minus_ba_activation": -0.0261,
+        "ab_minus_ba_coherence_10": 0.14
+      }
+    },
+    "SmolLM3": {
+      "model": "SmolLM3",
+      "v6": {
+        "a_final_activation": 0.4533,
+        "a_final_input_cohesion": 1.0,
+        "a_final_coherence_10": 4.03,
+        "b_final_activation": 0.5492,
+        "b_final_input_cohesion": 1.0,
+        "b_final_coherence_10": 5.12
+      },
+      "lattice": {
+        "combined_activation": 0.5144,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 4.85,
+        "act_delta": 0.04229999999999995,
+        "coh_delta": 0.41499999999999915
+      },
+      "null": {
+        "combined_activation": 0.3306,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 3.89,
+        "act_delta": -0.07894999999999996,
+        "coh_delta": -0.06999999999999984
+      },
+      "nonclassical": {
+        "combined_activation": 0.3881,
+        "combined_input_cohesion": 0.9691,
+        "combined_coherence_10": 3.89,
+        "act_delta": 0.034499999999999975,
+        "coh_delta": -0.20500000000000052
+      },
+      "random_floor": {
+        "combined_activation": 0.4262,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 3.89,
+        "act_delta": 0.07780000000000004,
+        "coh_delta": 0.41000000000000014
+      },
+      "semantic_counter": {
+        "combined_activation": 0.438,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 3.89,
+        "act_delta": 0.15335,
+        "coh_delta": 0.14000000000000012
+      },
+      "order": {
+        "ab_activation": 0.4971,
+        "ab_input_cohesion": 1.0,
+        "ab_coherence_10": 4.58,
+        "ba_activation": 0.376,
+        "ba_input_cohesion": 1.0,
+        "ba_coherence_10": 4.03,
+        "ab_minus_ba_activation": 0.1211,
+        "ab_minus_ba_coherence_10": 0.55
+      }
+    },
+    "Igor": {
+      "model": "Igor",
+      "v6": {
+        "a_final_activation": 0.6835,
+        "a_final_input_cohesion": 1.0,
+        "a_final_coherence_10": 8.49,
+        "b_final_activation": 0.7137,
+        "b_final_input_cohesion": 1.0,
+        "b_final_coherence_10": 8.76
+      },
+      "lattice": {
+        "combined_activation": 0.7008,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 8.62,
+        "act_delta": 0.07155,
+        "coh_delta": 0.0649999999999995
+      },
+      "null": {
+        "combined_activation": 0.4009,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 3.89,
+        "act_delta": 0.02529999999999999,
+        "coh_delta": 0.0
+      },
+      "nonclassical": {
+        "combined_activation": 0.4486,
+        "combined_input_cohesion": 0.9691,
+        "combined_coherence_10": 4.58,
+        "act_delta": -0.008500000000000008,
+        "coh_delta": 0.41999999999999993
+      },
+      "random_floor": {
+        "combined_activation": 0.3952,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 3.61,
+        "act_delta": -0.02595000000000003,
+        "coh_delta": 0.06499999999999995
+      },
+      "semantic_counter": {
+        "combined_activation": 0.5366,
+        "combined_input_cohesion": 1.0,
+        "combined_coherence_10": 4.58,
+        "act_delta": 0.06345,
+        "coh_delta": 0.7599999999999998
+      },
+      "order": {
+        "ab_activation": 0.5419,
+        "ab_input_cohesion": 1.0,
+        "ab_coherence_10": 4.58,
+        "ba_activation": 0.5419,
+        "ba_input_cohesion": 1.0,
+        "ba_coherence_10": 4.99,
+        "ab_minus_ba_activation": 0.0,
+        "ab_minus_ba_coherence_10": -0.41
+      }
+    }
+  },
+  "artifact_paths": {
+    "core_white_paper_md": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/white_papers/INPUT_LATTICE_FRAMEWORK_WHITE_PAPER_SEGMENT_2026-04-19.md",
+    "core_white_paper_pdf": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/white_papers/input_lattice_framework_white_paper_segment_2026-04-19.pdf",
+    "order_white_paper_md": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/white_papers/ORDER_NONCOMM_FRAMEWORK_WHITE_PAPER_SEGMENT_2026-04-19.md",
+    "order_white_paper_pdf": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/white_papers/order_noncomm_framework_white_paper_segment_2026-04-19.pdf",
+    "glm_results_root": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/glm_4_9b_0414_leg_2026-04-19",
+    "smollm3_results_root": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/smollm3_3b_leg_2026-04-19",
+    "igor_results_root": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/igor_gemma_heretic_leg_2026-04-19"
+  }
+}

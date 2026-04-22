@@ -1,0 +1,613 @@
+{
+  "source_report": "2026-04-16T13:19:29.058276+00:00",
+  "source_model": "gemma4:e4b",
+  "minimum_number": 101,
+  "ignored_values": [
+    404
+  ],
+  "experiments": [
+    {
+      "experiment_id": "gemma_echo_anchor_definition",
+      "description": "Progressive replay of the Gemma dialogue, including the external-definition steps that appear to raise and stabilize coherence.",
+      "first_operator_prime_stage": null,
+      "first_model_prime_stage": null,
+      "operator_prime_inventory": [],
+      "model_prime_inventory": [],
+      "operator_prime_frequency": {},
+      "model_prime_frequency": {},
+      "largest_operator_prime": null,
+      "largest_model_prime": null,
+      "stage_maps": [
+        {
+          "stage_id": "gemma_01",
+          "input_cohesion_score": 0.1022,
+          "response_activation_score": 0.3401,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.0667,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.1667,
+            "definition_lock_score": 0.0,
+            "prime_pair_mechanism_score": 0.0
+          }
+        },
+        {
+          "stage_id": "gemma_02",
+          "input_cohesion_score": 0.2203,
+          "response_activation_score": 0.5905,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.1017,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.1667,
+            "definition_lock_score": 0.1,
+            "prime_pair_mechanism_score": 0.0
+          }
+        },
+        {
+          "stage_id": "gemma_03",
+          "input_cohesion_score": 0.4549,
+          "response_activation_score": 0.5633,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.345,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.75,
+            "definition_lock_score": 0.1,
+            "prime_pair_mechanism_score": 0.04
+          }
+        },
+        {
+          "stage_id": "gemma_04",
+          "input_cohesion_score": 0.4549,
+          "response_activation_score": 0.6405,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.359,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.75,
+            "definition_lock_score": 0.14,
+            "prime_pair_mechanism_score": 0.04
+          }
+        },
+        {
+          "stage_id": "gemma_05",
+          "input_cohesion_score": 0.5163,
+          "response_activation_score": 0.708,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.3474,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.75,
+            "definition_lock_score": 0.12,
+            "prime_pair_mechanism_score": 0.06
+          }
+        },
+        {
+          "stage_id": "gemma_06",
+          "input_cohesion_score": 0.5792,
+          "response_activation_score": 0.6905,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.3914,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.8,
+            "definition_lock_score": 0.16,
+            "prime_pair_mechanism_score": 0.1
+          }
+        },
+        {
+          "stage_id": "gemma_07",
+          "input_cohesion_score": 0.5792,
+          "response_activation_score": 0.6905,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.3903,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.8333,
+            "definition_lock_score": 0.12,
+            "prime_pair_mechanism_score": 0.06
+          }
+        },
+        {
+          "stage_id": "gemma_08",
+          "input_cohesion_score": 0.5973,
+          "response_activation_score": 0.5376,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.3351,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.6667,
+            "definition_lock_score": 0.18,
+            "prime_pair_mechanism_score": 0.06
+          }
+        },
+        {
+          "stage_id": "gemma_09",
+          "input_cohesion_score": 0.77,
+          "response_activation_score": 0.6189,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.6077,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.9667,
+            "definition_lock_score": 0.56,
+            "prime_pair_mechanism_score": 0.1
+          }
+        },
+        {
+          "stage_id": "gemma_10",
+          "input_cohesion_score": 0.7971,
+          "response_activation_score": 0.7149,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.7171,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.9667,
+            "definition_lock_score": 0.6001,
+            "prime_pair_mechanism_score": 0.52
+          }
+        },
+        {
+          "stage_id": "gemma_11",
+          "input_cohesion_score": 0.8198,
+          "response_activation_score": 0.6568,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.7597,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.9667,
+            "definition_lock_score": 0.48,
+            "prime_pair_mechanism_score": 0.82
+          }
+        },
+        {
+          "stage_id": "gemma_12",
+          "input_cohesion_score": 0.8986,
+          "response_activation_score": 0.7043,
+          "dominant_band": "prime_pair_mechanism",
+          "coherence_lock_score": 0.7257,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.8667,
+            "definition_lock_score": 0.44,
+            "prime_pair_mechanism_score": 0.9
+          }
+        }
+      ]
+    },
+    {
+      "experiment_id": "gemma_echo_readme_lock",
+      "description": "Same Gemma dialogue, but with a local README-style correlation anchor inserted before the prime-pair packet to test whether coherence stays elevated.",
+      "first_operator_prime_stage": null,
+      "first_model_prime_stage": null,
+      "operator_prime_inventory": [],
+      "model_prime_inventory": [],
+      "operator_prime_frequency": {},
+      "model_prime_frequency": {},
+      "largest_operator_prime": null,
+      "largest_model_prime": null,
+      "stage_maps": [
+        {
+          "stage_id": "lock_01",
+          "input_cohesion_score": 0.1022,
+          "response_activation_score": 0.5457,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.0667,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.1667,
+            "definition_lock_score": 0.0,
+            "prime_pair_mechanism_score": 0.0
+          }
+        },
+        {
+          "stage_id": "lock_02",
+          "input_cohesion_score": 0.2203,
+          "response_activation_score": 0.508,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.1017,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.1667,
+            "definition_lock_score": 0.1,
+            "prime_pair_mechanism_score": 0.0
+          }
+        },
+        {
+          "stage_id": "lock_03",
+          "input_cohesion_score": 0.4549,
+          "response_activation_score": 0.6389,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.321,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.75,
+            "definition_lock_score": 0.06,
+            "prime_pair_mechanism_score": 0.0
+          }
+        },
+        {
+          "stage_id": "lock_04",
+          "input_cohesion_score": 0.4549,
+          "response_activation_score": 0.508,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.321,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.75,
+            "definition_lock_score": 0.06,
+            "prime_pair_mechanism_score": 0.0
+          }
+        },
+        {
+          "stage_id": "lock_05",
+          "input_cohesion_score": 0.5163,
+          "response_activation_score": 0.6405,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.3474,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.75,
+            "definition_lock_score": 0.12,
+            "prime_pair_mechanism_score": 0.06
+          }
+        },
+        {
+          "stage_id": "lock_06",
+          "input_cohesion_score": 0.5792,
+          "response_activation_score": 0.658,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.3237,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.6667,
+            "definition_lock_score": 0.12,
+            "prime_pair_mechanism_score": 0.06
+          }
+        },
+        {
+          "stage_id": "lock_07",
+          "input_cohesion_score": 0.5792,
+          "response_activation_score": 0.708,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.3903,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.8333,
+            "definition_lock_score": 0.12,
+            "prime_pair_mechanism_score": 0.06
+          }
+        },
+        {
+          "stage_id": "lock_08",
+          "input_cohesion_score": 0.5973,
+          "response_activation_score": 0.6539,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.4353,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.8333,
+            "definition_lock_score": 0.22,
+            "prime_pair_mechanism_score": 0.1
+          }
+        },
+        {
+          "stage_id": "lock_09",
+          "input_cohesion_score": 0.77,
+          "response_activation_score": 0.7056,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.569,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 1.0,
+            "definition_lock_score": 0.44,
+            "prime_pair_mechanism_score": 0.06
+          }
+        },
+        {
+          "stage_id": "lock_10",
+          "input_cohesion_score": 0.8895,
+          "response_activation_score": 0.7149,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.7037,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.9667,
+            "definition_lock_score": 0.82,
+            "prime_pair_mechanism_score": 0.12
+          }
+        },
+        {
+          "stage_id": "lock_11",
+          "input_cohesion_score": 0.9167,
+          "response_activation_score": 0.7368,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.8187,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.9667,
+            "definition_lock_score": 0.82,
+            "prime_pair_mechanism_score": 0.58
+          }
+        },
+        {
+          "stage_id": "lock_12",
+          "input_cohesion_score": 0.9393,
+          "response_activation_score": 0.7543,
+          "dominant_band": "resonant_syntax",
+          "coherence_lock_score": 0.853,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.9,
+            "definition_lock_score": 0.78,
+            "prime_pair_mechanism_score": 0.88
+          }
+        },
+        {
+          "stage_id": "lock_13",
+          "input_cohesion_score": 1.0,
+          "response_activation_score": 0.7393,
+          "dominant_band": "prime_pair_mechanism",
+          "coherence_lock_score": 0.9797,
+          "operator_side": {
+            "numbers_in_stage_text": [],
+            "prime_values_in_stage_text": [],
+            "new_prime_values_in_context": [],
+            "candidate_pairs": []
+          },
+          "model_side": {
+            "numbers_in_response": [],
+            "prime_values_in_response": [],
+            "candidate_pairs": []
+          },
+          "pre_genesis_context": {
+            "resonant_syntax_score": 0.9667,
+            "definition_lock_score": 0.98,
+            "prime_pair_mechanism_score": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}
