@@ -19,8 +19,8 @@ Location:
 
 Approximate current payload:
 
-- `200` public-safe files
-- about `41M` of artifacts
+- `224` public-safe files
+- about `42M` of artifacts
 - includes markdown, PDFs, PNG charts, JSON result artifacts, and screenshot
   proof anchors
 
@@ -196,6 +196,72 @@ Role:
 Phase 5 converts token-position and localization findings into context-to-readout
 bridge features that can feed the later `PennyLane` / `Qiskit` bridge.
 
+## Phase 6 / PennyLane Encoding Pack
+
+Location:
+
+- [`../artifacts/v8/phase6_pennylane_encoding`](../artifacts/v8/phase6_pennylane_encoding)
+
+Main artifacts:
+
+- [`V8_PHASE6_PENNYLANE_ENCODING_PACK_2026-04-22.md`](../artifacts/v8/phase6_pennylane_encoding/V8_PHASE6_PENNYLANE_ENCODING_PACK_2026-04-22.md)
+- [`v8_phase6_pennylane_encoding_pack_2026-04-22.pdf`](../artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_pack_2026-04-22.pdf)
+- [`v8_phase6_pennylane_encoding_data_2026-04-22.json`](../artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_data_2026-04-22.json)
+- [`charts/v8_phase6_normalized_feature_heatmap_2026-04-22.png`](../artifacts/v8/phase6_pennylane_encoding/charts/v8_phase6_normalized_feature_heatmap_2026-04-22.png)
+- [`charts/v8_phase6_feature_pca_map_2026-04-22.png`](../artifacts/v8/phase6_pennylane_encoding/charts/v8_phase6_feature_pca_map_2026-04-22.png)
+- [`charts/v8_phase6_angle_fidelity_2026-04-22.png`](../artifacts/v8/phase6_pennylane_encoding/charts/v8_phase6_angle_fidelity_2026-04-22.png)
+- [`charts/v8_phase6_amplitude_fidelity_2026-04-22.png`](../artifacts/v8/phase6_pennylane_encoding/charts/v8_phase6_amplitude_fidelity_2026-04-22.png)
+
+Role:
+
+Phase 6 starts the quantum-bridge ladder. It turns the locked `Phase 3`,
+`Phase 4`, and `Phase 5` geometry into normalized feature vectors, runs
+first-pass PennyLane `AngleEmbedding` and `AmplitudeEmbedding`, and creates the
+concrete target for the next `Qiskit` mirror.
+
+## Phase 7 / Qiskit Mirror Pack
+
+Location:
+
+- [`../artifacts/v8/phase7_qiskit_mirror`](../artifacts/v8/phase7_qiskit_mirror)
+
+Main artifacts:
+
+- [`V8_PHASE7_QISKIT_MIRROR_PACK_2026-04-22.md`](../artifacts/v8/phase7_qiskit_mirror/V8_PHASE7_QISKIT_MIRROR_PACK_2026-04-22.md)
+- [`v8_phase7_qiskit_mirror_pack_2026-04-22.pdf`](../artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_pack_2026-04-22.pdf)
+- [`v8_phase7_qiskit_mirror_data_2026-04-22.json`](../artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_data_2026-04-22.json)
+- [`charts/v8_phase7_qiskit_angle_fidelity_2026-04-22.png`](../artifacts/v8/phase7_qiskit_mirror/charts/v8_phase7_qiskit_angle_fidelity_2026-04-22.png)
+- [`charts/v8_phase7_qiskit_amplitude_fidelity_2026-04-22.png`](../artifacts/v8/phase7_qiskit_mirror/charts/v8_phase7_qiskit_amplitude_fidelity_2026-04-22.png)
+- [`charts/v8_phase7_angle_delta_vs_pennylane_2026-04-22.png`](../artifacts/v8/phase7_qiskit_mirror/charts/v8_phase7_angle_delta_vs_pennylane_2026-04-22.png)
+- [`charts/v8_phase7_amplitude_delta_vs_pennylane_2026-04-22.png`](../artifacts/v8/phase7_qiskit_mirror/charts/v8_phase7_amplitude_delta_vs_pennylane_2026-04-22.png)
+
+Role:
+
+Phase 7 mirrors the Phase 6 encoding in `Qiskit` and checks the result against
+the PennyLane fidelity matrices. The max fidelity deltas are numerical noise,
+which locks the cross-framework simulator handoff.
+
+## Phase 8 / Bell-State Calibration Pack
+
+Location:
+
+- [`../artifacts/v8/phase8_bell_state_calibration`](../artifacts/v8/phase8_bell_state_calibration)
+
+Main artifacts:
+
+- [`V8_PHASE8_BELL_STATE_CALIBRATION_PACK_2026-04-22.md`](../artifacts/v8/phase8_bell_state_calibration/V8_PHASE8_BELL_STATE_CALIBRATION_PACK_2026-04-22.md)
+- [`v8_phase8_bell_state_calibration_pack_2026-04-22.pdf`](../artifacts/v8/phase8_bell_state_calibration/v8_phase8_bell_state_calibration_pack_2026-04-22.pdf)
+- [`v8_phase8_bell_state_calibration_data_2026-04-22.json`](../artifacts/v8/phase8_bell_state_calibration/v8_phase8_bell_state_calibration_data_2026-04-22.json)
+- [`charts/v8_phase8_bell_observables_2026-04-22.png`](../artifacts/v8/phase8_bell_state_calibration/charts/v8_phase8_bell_observables_2026-04-22.png)
+- [`charts/v8_phase8_chsh_comparison_2026-04-22.png`](../artifacts/v8/phase8_bell_state_calibration/charts/v8_phase8_chsh_comparison_2026-04-22.png)
+- [`charts/v8_phase8_bell_probabilities_2026-04-22.png`](../artifacts/v8/phase8_bell_state_calibration/charts/v8_phase8_bell_probabilities_2026-04-22.png)
+
+Role:
+
+Phase 8 calibrates the Bell-state observable/scoring path before any semantic
+Bell-type protocol. `|Phi+>` reaches the ideal `2*sqrt(2)` CHSH level while the
+product-state control remains below the classical bound.
+
 ## Integrated Claim Pack
 
 Location:
@@ -234,13 +300,9 @@ while packaging the evidence stack.
 
 The public next-phase sequence is:
 
-1. `PennyLane` encoding discovery
-2. `Qiskit` mirror / simulator lock
-3. Bell-state calibration
-4. Bell-type semantic contextuality
-5. later `HRV / ARC15 / physical-observable` bridge
+1. Bell-type semantic contextuality protocol
+2. later `HRV / ARC15 / physical-observable` bridge
 
 The purpose is to carry the locked AI-side evidence stack into a measured
 encoding and observable pipeline without overstating later physical claims
 before their own bridge layer is built.
-

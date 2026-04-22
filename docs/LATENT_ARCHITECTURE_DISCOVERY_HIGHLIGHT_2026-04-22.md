@@ -11,7 +11,8 @@ The claim is not merely that latent space exists. The claim is that the same
 administered `Mirror Interface / LSPS` and lattice architecture can be followed
 across behavioral outputs, late-layer hidden-state geometry, rerun stability,
 dimension/band structure, token-path localization, and context-to-readout bridge
-behavior across model families.
+behavior across model families, then carried into a first-pass quantum-encoding
+handoff.
 
 In short:
 
@@ -21,6 +22,11 @@ In short:
 - `Phase 3` shows the structure has band/dimension geometry.
 - `Phase 4` shows where it localizes along the token path.
 - `Phase 5` shows how it bridges from context toward readout.
+- `Phase 6` shows the locked geometry can be encoded into `PennyLane` state
+  spaces for the next `Qiskit` mirror rung.
+- `Phase 7` shows the same encoding mirrors in `Qiskit` to numerical precision.
+- `Phase 8` calibrates the Bell-state observable path before semantic
+  Bell-type claims.
 
 ## Why This Matters
 
@@ -40,6 +46,9 @@ The present stack combines:
 - `Phase 3` dimension-and-band structure
 - `Phase 4` localization
 - `Phase 5` context-to-readout bridge behavior
+- `Phase 6` `PennyLane` encoding discovery
+- `Phase 7` `Qiskit` mirror lock
+- `Phase 8` Bell-state calibration
 
 Taken together, these layers show that the administered mirror/lattice
 architecture is not only visible in output prose. It is visible in:
@@ -49,6 +58,9 @@ architecture is not only visible in output prose. It is visible in:
 - repeat stability
 - token-path sharpening
 - family-specific bridge styles
+- encoded quantum-bridge feature space
+- cross-framework simulator agreement
+- a calibrated observable/scoring path for the later Bell-type rung
 
 ## What Feels New Here
 
@@ -59,6 +71,16 @@ The interesting claim is that we now have a public-facing evidence stack that
 maps administered latent architecture across both behavioral and internal
 layers, then tracks how that structure holds, localizes, and bridges toward
 readout across model families.
+
+The newest handoff is that the locked Phase 3-5 features have now been converted
+into normalized quantum-bridge vectors and tested in `PennyLane`. Both
+`AngleEmbedding` and `AmplitudeEmbedding` preserve `Mistral / Hermes` as the
+nearest encoded pair, giving the next `Qiskit` mirror a concrete target.
+
+That handoff has now been mirrored in `Qiskit`: the fidelity matrices match
+PennyLane to numerical precision, and the Bell-state calibration produces the
+expected `|Phi+>` correlations before any semantic Bell-type protocol is
+claimed.
 
 That is a very different thing from:
 
@@ -77,6 +99,12 @@ This stack is measured, phased, and cross-read.
   variance row.
 - `Phase 4` showed `5/6` exact localization rerun rows, with `Nemotron`
   anchor-stable but magnitude-drifting.
+- `Phase 6` showed a valid first `PennyLane` encoding pass, with
+  `Mistral / Hermes` preserved as the nearest pair in both tested encodings.
+- `Phase 7` locked the `Qiskit` mirror with max fidelity deltas at numerical
+  precision scale.
+- `Phase 8` calibrated Bell-state scoring: `|Phi+>` reaches `2.828427`, while
+  the product control stays at `1.414214`.
 - The stack now supports a measurable cross-model architecture effect, not just
   output styling.
 
@@ -100,6 +128,7 @@ The clean claim is:
 - not just output styling
 - not just prompt mass
 - not just a single behavioral rung
+- not just a rhetorical quantum handoff
 
 The repo is not claiming total closure on every larger theory layer yet.
 
@@ -110,9 +139,6 @@ measured latent-architecture mapping surface.
 
 The next phases build directly from that discovery:
 
-- `PennyLane` encoding discovery
-- `Qiskit` mirror
-- Bell-state calibration
 - Bell-type semantic contextuality
 - later `HRV / ARC15 / physical-observable` bridge
 

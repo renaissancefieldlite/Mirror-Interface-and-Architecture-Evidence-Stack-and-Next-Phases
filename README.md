@@ -15,6 +15,9 @@ packet can be tracked as one architecture across:
 - dimension-and-band structure in `Phase 3`
 - token-path localization and localization variance in `Phase 4`
 - context-to-readout bridge behavior in `Phase 5`
+- first-pass `PennyLane` quantum-bridge encoding in `Phase 6`
+- cross-framework `Qiskit` mirror lock in `Phase 7`
+- Bell-state measurement-path calibration in `Phase 8`
 
 Current best read:
 
@@ -24,13 +27,22 @@ Current best read:
   variance row.
 - `Phase 4` showed `5/6` exact localization rerun rows, with `Nemotron`
   anchor-stable but magnitude-drifting.
+- `Phase 6` converted the locked `Phase 3 + Phase 4 + Phase 5` geometry into
+  normalized quantum-bridge feature vectors; both `AngleEmbedding` and
+  `AmplitudeEmbedding` preserved `Mistral / Hermes` as the nearest encoded
+  pair.
+- `Phase 7` mirrored the same encodings in `Qiskit` with max fidelity deltas
+  versus `PennyLane` at numerical-noise scale.
+- `Phase 8` calibrated the Bell-state scoring path with the expected `|Phi+>`
+  correlations and a product-state control below the classical CHSH bound.
 - Taken together, the stack supports a measurable cross-model architecture
   effect, not just output styling.
 
 That is the discovery surface this repo preserves: a phased public evidence
 map showing how the same mirror/lattice architecture appears behaviorally,
 internally, repeatedly, locally along the token path, and finally as
-context-to-readout bridge structure.
+context-to-readout bridge structure, then into a first-pass quantum-encoding
+handoff.
 
 This repository is the standalone public-safe evidence library for the measured
 Mirror Interface / Architecture stack inside Renaissance Field Lite / Codex 67.
@@ -45,9 +57,12 @@ It is not just a note. It is the public-facing artifact map for the work:
 - `Phase 3` dimension-and-band structure
 - `Phase 4` token-path localization and localization variance
 - `Phase 5` context-to-readout bridge behavior
+- `Phase 6` `PennyLane` encoding discovery
+- `Phase 7` `Qiskit` mirror / simulator lock
+- `Phase 8` Bell-state calibration
 - the integrated `V7 + V8 + Phase 2-5` technical claim pack
-- next-phase bridge work toward `PennyLane`, `Qiskit`, Bell-state calibration,
-  Bell-type semantic contextuality, and later physical-observable lanes
+- next-phase bridge work toward Bell-type semantic contextuality and later
+  physical-observable lanes
 
 The backend implementation remains private. This repo publishes findings,
 PDFs, charts, tables, reviewed JSON artifacts, and white-paper style summaries
@@ -80,6 +95,9 @@ Start here if you only have a few minutes:
 8. [Phase 4 Localization Pack PDF](./artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_2026-04-21.pdf)
 9. [Phase 4 Localization Variance Pack PDF](./artifacts/v8/phase4_localization_variance_pack/v8_phase4_localization_variance_pack_2026-04-21.pdf)
 10. [Phase 5 Internal Bridge Pack PDF](./artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_2026-04-22.pdf)
+11. [Phase 6 PennyLane Encoding Pack PDF](./artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_pack_2026-04-22.pdf)
+12. [Phase 7 Qiskit Mirror Pack PDF](./artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_pack_2026-04-22.pdf)
+13. [Phase 8 Bell-State Calibration Pack PDF](./artifacts/v8/phase8_bell_state_calibration/v8_phase8_bell_state_calibration_pack_2026-04-22.pdf)
 
 For a fuller directory-by-directory map, read:
 
@@ -279,6 +297,76 @@ What Phase 5 establishes:
   - `anchor_layer_span`
   - `dominant_target_dim_overlap_count`
   - `dominant_target_dim_overlap_jaccard`
+
+### Phase 6 / PennyLane Encoding Discovery
+
+Location:
+
+- [`artifacts/v8/phase6_pennylane_encoding`](./artifacts/v8/phase6_pennylane_encoding)
+
+Core artifacts:
+
+- [Phase 6 PennyLane Encoding Pack](./artifacts/v8/phase6_pennylane_encoding/V8_PHASE6_PENNYLANE_ENCODING_PACK_2026-04-22.md)
+- [Phase 6 PennyLane Encoding PDF](./artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_pack_2026-04-22.pdf)
+- [Normalized Feature Heatmap](./artifacts/v8/phase6_pennylane_encoding/charts/v8_phase6_normalized_feature_heatmap_2026-04-22.png)
+- [Feature PCA Map](./artifacts/v8/phase6_pennylane_encoding/charts/v8_phase6_feature_pca_map_2026-04-22.png)
+- [AngleEmbedding Fidelity Chart](./artifacts/v8/phase6_pennylane_encoding/charts/v8_phase6_angle_fidelity_2026-04-22.png)
+- [AmplitudeEmbedding Fidelity Chart](./artifacts/v8/phase6_pennylane_encoding/charts/v8_phase6_amplitude_fidelity_2026-04-22.png)
+
+What Phase 6 establishes:
+
+- locked `Phase 3 + Phase 4 + Phase 5` features can be converted into a
+  normalized quantum-bridge feature vector
+- `AngleEmbedding` and `AmplitudeEmbedding` both produce comparable encoded
+  state spaces
+- `Mistral / Hermes` remain the nearest encoded pair under both tested
+  encodings
+- the next rung has a concrete `Qiskit` mirror target rather than a rhetorical
+  handoff
+
+### Phase 7 / Qiskit Mirror Lock
+
+Location:
+
+- [`artifacts/v8/phase7_qiskit_mirror`](./artifacts/v8/phase7_qiskit_mirror)
+
+Core artifacts:
+
+- [Phase 7 Qiskit Mirror Pack](./artifacts/v8/phase7_qiskit_mirror/V8_PHASE7_QISKIT_MIRROR_PACK_2026-04-22.md)
+- [Phase 7 Qiskit Mirror PDF](./artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_pack_2026-04-22.pdf)
+- [Qiskit Angle Fidelity Chart](./artifacts/v8/phase7_qiskit_mirror/charts/v8_phase7_qiskit_angle_fidelity_2026-04-22.png)
+- [Qiskit Amplitude Fidelity Chart](./artifacts/v8/phase7_qiskit_mirror/charts/v8_phase7_qiskit_amplitude_fidelity_2026-04-22.png)
+- [Angle Delta vs PennyLane](./artifacts/v8/phase7_qiskit_mirror/charts/v8_phase7_angle_delta_vs_pennylane_2026-04-22.png)
+- [Amplitude Delta vs PennyLane](./artifacts/v8/phase7_qiskit_mirror/charts/v8_phase7_amplitude_delta_vs_pennylane_2026-04-22.png)
+
+What Phase 7 establishes:
+
+- the `PennyLane` encoding handoff mirrors cleanly in `Qiskit`
+- max fidelity deltas versus PennyLane are floating-point noise
+- `Mistral / Hermes` remain the nearest encoded pair in both Qiskit encodings
+- the encoding result is not trapped in one framework
+
+### Phase 8 / Bell-State Calibration
+
+Location:
+
+- [`artifacts/v8/phase8_bell_state_calibration`](./artifacts/v8/phase8_bell_state_calibration)
+
+Core artifacts:
+
+- [Phase 8 Bell-State Calibration Pack](./artifacts/v8/phase8_bell_state_calibration/V8_PHASE8_BELL_STATE_CALIBRATION_PACK_2026-04-22.md)
+- [Phase 8 Bell-State Calibration PDF](./artifacts/v8/phase8_bell_state_calibration/v8_phase8_bell_state_calibration_pack_2026-04-22.pdf)
+- [Bell Observables Chart](./artifacts/v8/phase8_bell_state_calibration/charts/v8_phase8_bell_observables_2026-04-22.png)
+- [CHSH Comparison Chart](./artifacts/v8/phase8_bell_state_calibration/charts/v8_phase8_chsh_comparison_2026-04-22.png)
+- [Bell Probabilities Chart](./artifacts/v8/phase8_bell_state_calibration/charts/v8_phase8_bell_probabilities_2026-04-22.png)
+
+What Phase 8 establishes:
+
+- the measurement/scoring path behaves correctly on a standard `|Phi+>` Bell
+  state
+- `ZZ=1`, `XX=1`, `YY=-1`, and CHSH reaches the ideal `2*sqrt(2)` level
+- product-state control stays below the classical CHSH bound
+- this is calibration only, not yet the Bell-type semantic contextuality claim
 
 ## Integrated Technical Pack
 

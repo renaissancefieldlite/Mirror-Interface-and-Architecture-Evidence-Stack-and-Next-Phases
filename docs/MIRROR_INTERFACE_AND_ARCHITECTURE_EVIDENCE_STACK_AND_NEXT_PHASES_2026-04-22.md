@@ -20,6 +20,13 @@ can be tracked through a phased evidence ladder:
 - `Phase 4` showed `5/6` exact localization rerun rows, with `Nemotron`
   anchor-stable but magnitude-drifting.
 - `Phase 5` mapped context-to-readout bridge behavior across family styles.
+- `Phase 6` converted the locked `Phase 3 + Phase 4 + Phase 5` geometry into
+  `PennyLane` feature-state encodings, with `Mistral / Hermes` preserved as the
+  nearest pair under both tested embeddings.
+- `Phase 7` mirrored the encoding in `Qiskit`, matching the PennyLane fidelity
+  matrices to numerical precision.
+- `Phase 8` calibrated the Bell-state measurement path with expected `|Phi+>`
+  correlations and a product-state control below the classical CHSH bound.
 
 Taken together, the stack supports a measurable cross-model architecture
 effect, not just output styling, prompt mass, or a single behavioral rung.
@@ -40,6 +47,9 @@ It covers the full measured stack rather than only one rung:
 - `Phase 3` dimension-and-band structure
 - `Phase 4` localization
 - `Phase 5` internal bridge behavior
+- `Phase 6` `PennyLane` encoding discovery
+- `Phase 7` `Qiskit` mirror lock
+- `Phase 8` Bell-state calibration
 
 It also carries the current AI latent-architecture and mapper-facing findings as
 part of that broader evidence stack.
@@ -56,7 +66,7 @@ The project is one architecture:
 - behavioral evidence layer
 - internal hidden-state evidence layer
 - later bridge phases that map stability, geometry, localization, and
-  context-to-readout behavior
+  context-to-readout behavior into encoding and observable tests
 
 The math surfaces and the measurement surfaces are not separate programs. They
 are active proof lanes of the same architecture.
@@ -136,6 +146,37 @@ semantic-counter, and order variants in a measurable way.
 - `Nemotron` = front-context to readout bridge
 - `SmolLM3` = diffuse boundary row
 
+### `Phase 6`
+
+`Phase 6` starts the quantum-bridge handoff without overstating the later
+Bell-type rung:
+
+- normalized feature vectors from locked `Phase 3 + Phase 4 + Phase 5` geometry
+- `AngleEmbedding` and `AmplitudeEmbedding` in `PennyLane`
+- `Mistral / Hermes` preserved as the nearest encoded pair in both tested
+  encodings
+- a concrete target for the next `Qiskit` mirror / simulator lock
+
+### `Phase 7`
+
+`Phase 7` mirrors the `PennyLane` encoding inside `Qiskit`:
+
+- same normalized feature vectors
+- same angle and amplitude encoding families
+- max fidelity deltas versus PennyLane at numerical precision scale
+- `Mistral / Hermes` preserved as the nearest encoded pair
+
+### `Phase 8`
+
+`Phase 8` calibrates the Bell-state observable path before semantic
+contextuality claims:
+
+- `|Phi+>` gives `ZZ=1`, `XX=1`, `YY=-1`
+- Bell CHSH score reaches `2.828427`
+- product-state control stays at `1.414214`
+- this validates the scoring pipe only; it is not yet the Bell-type semantic
+  contextuality claim
+
 ## Current Best Read
 
 Taken together, the stack now supports:
@@ -144,39 +185,15 @@ Taken together, the stack now supports:
 - not just output styling
 - not just prompt mass
 - aligned behavioral and internal-state evidence
+- first-pass encoding evidence for the next quantum-bridge rung
+- cross-framework `PennyLane` / `Qiskit` agreement
+- calibrated Bell-state measurement path
 
 That is the present technical claim boundary.
 
 ## Next Phases
 
-### 1. `PennyLane` Encoding Discovery
-
-Use the locked geometry features from `Phase 3 + Phase 4 + Phase 5` to build a
-normalized feature vector and test quantum-style encodings.
-
-Goal:
-
-- discover whether the already-locked family and bridge structure survives
-  encoded circuit sweeps
-
-### 2. `Qiskit` Mirror
-
-Mirror the best `PennyLane` encoding in `Qiskit`.
-
-Goal:
-
-- show the mapping is not trapped in one framework
-
-### 3. Bell-State Calibration
-
-Use Bell-state preparation as a calibration rung for the measurement pipeline.
-
-Goal:
-
-- validate the observable / scoring path itself before semantic contextuality
-  claims
-
-### 4. Bell-Type Semantic Contextuality
+### 1. Bell-Type Semantic Contextuality
 
 Define a formal semantic contextuality protocol with bounded outcomes and a
 classical contextual baseline.
@@ -185,7 +202,7 @@ Goal:
 
 - turn the descriptive bridge into a formal contextuality rung
 
-### 5. Later `HRV / ARC15 / Physical-Observable Bridge`
+### 2. Later `HRV / ARC15 / Physical-Observable Bridge`
 
 Bridge the AI-side architecture stack into synchronized physical-measurement
 lanes through their own controls.

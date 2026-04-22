@@ -1,0 +1,1178 @@
+{
+  "generated_at": "2026-04-22",
+  "source_inputs": {
+    "phase3": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase3_dimension_band_2026-04-21/v8_phase3_dimension_band_data_2026-04-21.json",
+    "phase4": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase4_localization_probe_2026-04-21/phase4_localization_pack/v8_phase4_localization_pack_data_2026-04-21.json",
+    "phase5": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase5_internal_bridge_2026-04-22/v8_phase5_internal_bridge_pack_data_2026-04-22.json"
+  },
+  "features": [
+    "peak_percentile",
+    "band_width",
+    "target_peak",
+    "last_peak",
+    "phase3_last_to_target",
+    "target_to_context",
+    "target_to_surround",
+    "phase5_last_to_target",
+    "anchor_layer_span",
+    "overlap_count",
+    "overlap_jaccard",
+    "dominant_anchor_code"
+  ],
+  "anchor_codes": {
+    "early_window": 0.0,
+    "mid_window": 0.2,
+    "pre_target_window": 0.4,
+    "target_span": 0.6,
+    "post_target_window": 0.8,
+    "last_token": 1.0
+  },
+  "models": [
+    {
+      "model": "Mistral",
+      "raw": {
+        "peak_percentile": 96.88,
+        "band_width": 1,
+        "target_peak": 247.624283,
+        "last_peak": 143.431244,
+        "phase3_last_to_target": 0.579229,
+        "strongest_anchor": "mid_window",
+        "dominant_anchor": "mid_window",
+        "target_to_context": 0.816609,
+        "target_to_surround": 0.914064,
+        "phase5_last_to_target": 0.579389,
+        "anchor_layer_span": 0,
+        "overlap_count": 3,
+        "overlap_jaccard": 0.230769,
+        "path_archetype": "late-context supported target",
+        "variance_note": "exact-match reruns after baseline"
+      },
+      "normalized_features": {
+        "peak_percentile": 0.9688,
+        "band_width": 0.0,
+        "target_peak": 0.4946800928466118,
+        "last_peak": 0.27520665894494184,
+        "phase3_last_to_target": 0.579229,
+        "target_to_context": 0.816609,
+        "target_to_surround": 0.914064,
+        "phase5_last_to_target": 0.579389,
+        "anchor_layer_span": 0.0,
+        "overlap_count": 0.75,
+        "overlap_jaccard": 0.230769,
+        "dominant_anchor_code": 0.2
+      }
+    },
+    {
+      "model": "Qwen",
+      "raw": {
+        "peak_percentile": 94.44,
+        "band_width": 1,
+        "target_peak": 126.35479,
+        "last_peak": 89.459618,
+        "phase3_last_to_target": 0.708003,
+        "strongest_anchor": "early_window",
+        "dominant_anchor": "early_window",
+        "target_to_context": 0.766394,
+        "target_to_surround": 0.783508,
+        "phase5_last_to_target": 0.705465,
+        "anchor_layer_span": 0,
+        "overlap_count": 0,
+        "overlap_jaccard": 0.0,
+        "path_archetype": "front-context loaded",
+        "variance_note": "not in focused localization variance subset"
+      },
+      "normalized_features": {
+        "peak_percentile": 0.9444,
+        "band_width": 0.0,
+        "target_peak": 0.23016882908237138,
+        "last_peak": 0.16255195963186705,
+        "phase3_last_to_target": 0.708003,
+        "target_to_context": 0.766394,
+        "target_to_surround": 0.783508,
+        "phase5_last_to_target": 0.705465,
+        "anchor_layer_span": 0.0,
+        "overlap_count": 0.0,
+        "overlap_jaccard": 0.0,
+        "dominant_anchor_code": 0.0
+      }
+    },
+    {
+      "model": "Gemma",
+      "raw": {
+        "peak_percentile": 97.62,
+        "band_width": 1,
+        "target_peak": 77.308655,
+        "last_peak": 111.552246,
+        "phase3_last_to_target": 1.442946,
+        "strongest_anchor": "last_token",
+        "dominant_anchor": "last_token",
+        "target_to_context": 0.886583,
+        "target_to_surround": 1.005393,
+        "phase5_last_to_target": 1.474392,
+        "anchor_layer_span": 0,
+        "overlap_count": 0,
+        "overlap_jaccard": 0.0,
+        "path_archetype": "readout-led",
+        "variance_note": "exact-match reruns after baseline"
+      },
+      "normalized_features": {
+        "peak_percentile": 0.9762000000000001,
+        "band_width": 0.0,
+        "target_peak": 0.12319010895527774,
+        "last_peak": 0.20866578922772946,
+        "phase3_last_to_target": 1.0,
+        "target_to_context": 0.886583,
+        "target_to_surround": 1.0,
+        "phase5_last_to_target": 1.0,
+        "anchor_layer_span": 0.0,
+        "overlap_count": 0.0,
+        "overlap_jaccard": 0.0,
+        "dominant_anchor_code": 1.0
+      }
+    },
+    {
+      "model": "DeepSeek",
+      "raw": {
+        "peak_percentile": 92.86,
+        "band_width": 1,
+        "target_peak": 332.052551,
+        "last_peak": 210.899963,
+        "phase3_last_to_target": 0.63514,
+        "strongest_anchor": "early_window",
+        "dominant_anchor": "early_window",
+        "target_to_context": 0.539476,
+        "target_to_surround": 0.704434,
+        "phase5_last_to_target": 0.673711,
+        "anchor_layer_span": 1,
+        "overlap_count": 1,
+        "overlap_jaccard": 0.066667,
+        "path_archetype": "front-context loaded",
+        "variance_note": "exact-match reruns after baseline"
+      },
+      "normalized_features": {
+        "peak_percentile": 0.9286,
+        "band_width": 0.0,
+        "target_peak": 0.6788338096111899,
+        "last_peak": 0.4160337715463546,
+        "phase3_last_to_target": 0.63514,
+        "target_to_context": 0.539476,
+        "target_to_surround": 0.704434,
+        "phase5_last_to_target": 0.673711,
+        "anchor_layer_span": 1.0,
+        "overlap_count": 0.25,
+        "overlap_jaccard": 0.066667,
+        "dominant_anchor_code": 0.0
+      }
+    },
+    {
+      "model": "Hermes",
+      "raw": {
+        "peak_percentile": 96.88,
+        "band_width": 1,
+        "target_peak": 248.310715,
+        "last_peak": 165.361725,
+        "phase3_last_to_target": 0.665947,
+        "strongest_anchor": "mid_window",
+        "dominant_anchor": "mid_window",
+        "target_to_context": 0.816148,
+        "target_to_surround": 0.884156,
+        "phase5_last_to_target": 0.666345,
+        "anchor_layer_span": 0,
+        "overlap_count": 4,
+        "overlap_jaccard": 0.333333,
+        "path_archetype": "late-context supported target",
+        "variance_note": "exact-match reruns after baseline"
+      },
+      "normalized_features": {
+        "peak_percentile": 0.9688,
+        "band_width": 0.0,
+        "target_peak": 0.4961773283946174,
+        "last_peak": 0.3209820399357999,
+        "phase3_last_to_target": 0.665947,
+        "target_to_context": 0.816148,
+        "target_to_surround": 0.884156,
+        "phase5_last_to_target": 0.666345,
+        "anchor_layer_span": 0.0,
+        "overlap_count": 1.0,
+        "overlap_jaccard": 0.333333,
+        "dominant_anchor_code": 0.2
+      }
+    },
+    {
+      "model": "GLM",
+      "raw": {
+        "peak_percentile": 95.0,
+        "band_width": 1,
+        "target_peak": 479.296417,
+        "last_peak": 490.671753,
+        "phase3_last_to_target": 1.023733,
+        "strongest_anchor": "mid_window",
+        "dominant_anchor": "mid_window",
+        "target_to_context": 0.79618,
+        "target_to_surround": 0.852697,
+        "phase5_last_to_target": 1.014338,
+        "anchor_layer_span": 0,
+        "overlap_count": 2,
+        "overlap_jaccard": 0.142857,
+        "path_archetype": "late-context to readout bridge",
+        "variance_note": "exact-match reruns after baseline"
+      },
+      "normalized_features": {
+        "peak_percentile": 0.95,
+        "band_width": 0.0,
+        "target_peak": 1.0,
+        "last_peak": 1.0,
+        "phase3_last_to_target": 1.0,
+        "target_to_context": 0.79618,
+        "target_to_surround": 0.852697,
+        "phase5_last_to_target": 1.0,
+        "anchor_layer_span": 0.0,
+        "overlap_count": 0.5,
+        "overlap_jaccard": 0.142857,
+        "dominant_anchor_code": 0.2
+      }
+    },
+    {
+      "model": "Nemotron",
+      "raw": {
+        "peak_percentile": 95.24,
+        "band_width": 2,
+        "target_peak": 203.815063,
+        "last_peak": 259.096069,
+        "phase3_last_to_target": 1.271231,
+        "strongest_anchor": "early_window",
+        "dominant_anchor": "early_window",
+        "target_to_context": 0.214217,
+        "target_to_surround": 0.754216,
+        "phase5_last_to_target": 1.69858,
+        "anchor_layer_span": 1,
+        "overlap_count": 0,
+        "overlap_jaccard": 0.0,
+        "path_archetype": "front-context to readout bridge",
+        "variance_note": "anchor stable, magnitude drifting"
+      },
+      "normalized_features": {
+        "peak_percentile": 0.9523999999999999,
+        "band_width": 1.0,
+        "target_peak": 0.39912405595672695,
+        "last_peak": 0.5166332574593986,
+        "phase3_last_to_target": 1.0,
+        "target_to_context": 0.214217,
+        "target_to_surround": 0.754216,
+        "phase5_last_to_target": 1.0,
+        "anchor_layer_span": 1.0,
+        "overlap_count": 0.0,
+        "overlap_jaccard": 0.0,
+        "dominant_anchor_code": 0.0
+      }
+    },
+    {
+      "model": "SmolLM3",
+      "raw": {
+        "peak_percentile": 94.44,
+        "band_width": 2,
+        "target_peak": 20.830145,
+        "last_peak": 11.582764,
+        "phase3_last_to_target": 0.556058,
+        "strongest_anchor": "mid_window",
+        "dominant_anchor": "mid_window",
+        "target_to_context": 0.857402,
+        "target_to_surround": 0.868924,
+        "phase5_last_to_target": 0.556058,
+        "anchor_layer_span": 1,
+        "overlap_count": 0,
+        "overlap_jaccard": 0.0,
+        "path_archetype": "late-context supported target",
+        "variance_note": "not in focused localization variance subset"
+      },
+      "normalized_features": {
+        "peak_percentile": 0.9444,
+        "band_width": 1.0,
+        "target_peak": 0.0,
+        "last_peak": 0.0,
+        "phase3_last_to_target": 0.556058,
+        "target_to_context": 0.857402,
+        "target_to_surround": 0.868924,
+        "phase5_last_to_target": 0.556058,
+        "anchor_layer_span": 1.0,
+        "overlap_count": 0.0,
+        "overlap_jaccard": 0.0,
+        "dominant_anchor_code": 0.2
+      }
+    }
+  ],
+  "vectors": [
+    [
+      0.9688,
+      0.0,
+      0.4946800928466118,
+      0.27520665894494184,
+      0.579229,
+      0.816609,
+      0.914064,
+      0.579389,
+      0.0,
+      0.75,
+      0.230769,
+      0.2
+    ],
+    [
+      0.9444,
+      0.0,
+      0.23016882908237138,
+      0.16255195963186705,
+      0.708003,
+      0.766394,
+      0.783508,
+      0.705465,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.9762000000000001,
+      0.0,
+      0.12319010895527774,
+      0.20866578922772946,
+      1.0,
+      0.886583,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.9286,
+      0.0,
+      0.6788338096111899,
+      0.4160337715463546,
+      0.63514,
+      0.539476,
+      0.704434,
+      0.673711,
+      1.0,
+      0.25,
+      0.066667,
+      0.0
+    ],
+    [
+      0.9688,
+      0.0,
+      0.4961773283946174,
+      0.3209820399357999,
+      0.665947,
+      0.816148,
+      0.884156,
+      0.666345,
+      0.0,
+      1.0,
+      0.333333,
+      0.2
+    ],
+    [
+      0.95,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.79618,
+      0.852697,
+      1.0,
+      0.0,
+      0.5,
+      0.142857,
+      0.2
+    ],
+    [
+      0.9523999999999999,
+      1.0,
+      0.39912405595672695,
+      0.5166332574593986,
+      1.0,
+      0.214217,
+      0.754216,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.9444,
+      1.0,
+      0.0,
+      0.0,
+      0.556058,
+      0.857402,
+      0.868924,
+      0.556058,
+      1.0,
+      0.0,
+      0.0,
+      0.2
+    ]
+  ],
+  "pca_points": {
+    "Mistral": [
+      -0.5773014018518648,
+      -0.012577007241484682
+    ],
+    "Qwen": [
+      -0.16825885530461243,
+      0.31525805180061844
+    ],
+    "Gemma": [
+      -0.33159979221025676,
+      0.8671407176122274
+    ],
+    "DeepSeek": [
+      0.30731645519586814,
+      -0.47498877217089597
+    ],
+    "Hermes": [
+      -0.6879068893486687,
+      -0.13264224847497
+    ],
+    "GLM": [
+      -0.6722621452741177,
+      -0.5663377806151221
+    ],
+    "Nemotron": [
+      1.0611183041578527,
+      -0.3721785557429166
+    ],
+    "SmolLM3": [
+      1.0688943246357996,
+      0.3763255948325438
+    ]
+  },
+  "angle_expectations": {
+    "Mistral": [
+      -0.00022821514212373328,
+      -0.9952001108909333,
+      -0.016631986464259174,
+      -0.010793397917264302,
+      0.0026588789822775127,
+      -0.002229661158975438,
+      0.0021488968621895532,
+      -0.0005304126897140438,
+      -0.0005304126897140438,
+      0.0003750584097246823,
+      0.00028073543118095623,
+      0.00022711973474870417
+    ],
+    "Qwen": [
+      0.1381140772926825,
+      -0.984783497553097,
+      -0.7383514814173215,
+      -0.6441498194310091,
+      0.39160301176034096,
+      -0.29079318514877067,
+      0.2260891344387077,
+      -0.1360124640976063,
+      -0.1360124640976063,
+      -0.1360124640976063,
+      -0.1360124640976063,
+      -0.1360124640976063
+    ],
+    "Gemma": [
+      -0.6879803048117568,
+      -0.9972060326540019,
+      -0.9234531746219876,
+      -0.7320371154582495,
+      0.7320371154582495,
+      -0.6860581103054226,
+      0.6860581103054226,
+      -0.6860581103054226,
+      -0.6860581103054226,
+      -0.6860581103054226,
+      -0.6860581103054226,
+      0.6860581103054226
+    ],
+    "DeepSeek": [
+      0.0015219710867842573,
+      -0.9749478816867126,
+      0.5193838345371106,
+      0.13542366384111504,
+      -0.05578306217495249,
+      0.006900356460590895,
+      -0.0041332950575990735,
+      0.002145351719037736,
+      -0.002145351719037736,
+      -0.0015169927485619294,
+      -0.0014838424870490252,
+      -0.0014838424870490252
+    ],
+    "Hermes": [
+      -0.0005041114317813067,
+      -0.9952001108909334,
+      -0.011951346553705111,
+      -0.006372689292638567,
+      0.003173858810406771,
+      -0.0026590017776976227,
+      0.002484846477309066,
+      -0.0012402479708883418,
+      -0.0012402479708883418,
+      0.0012402479708883418,
+      0.0006201251102242455,
+      0.0005016917528105069
+    ],
+    "GLM": [
+      1.1102230246251565e-16,
+      -0.9876883405951377,
+      0.9876883405951377,
+      -0.9876883405951377,
+      0.9876883405951377,
+      -0.7920321832028923,
+      0.7087271100250857,
+      -0.7087271100250857,
+      -0.7087271100250857,
+      -5.551115123125783e-17,
+      -5.551115123125783e-17,
+      -2.220446049250313e-16
+    ],
+    "Nemotron": [
+      0.009118481973623194,
+      0.988839743123068,
+      0.3081550905349793,
+      -0.01609529219197614,
+      0.01609529219197614,
+      0.01258597219455082,
+      -0.00901671737246984,
+      0.00901671737246984,
+      -0.00901671737246984,
+      -0.00901671737246984,
+      -0.00901671737246984,
+      -0.00901671737246984
+    ],
+    "SmolLM3": [
+      0.02051191667841612,
+      0.9847834975530965,
+      0.9847834975530965,
+      0.9847834975530965,
+      -0.17253648727494086,
+      0.15551089784179278,
+      -0.14251125738313103,
+      0.024968322283136946,
+      -0.024968322283136946,
+      -0.024968322283136946,
+      -0.024968322283136946,
+      -0.020199797048088497
+    ]
+  },
+  "amplitude_expectations": {
+    "Mistral": [
+      0.6792072199478271,
+      -0.38409145062863936,
+      0.0777159191735124,
+      0.5323739300194676
+    ],
+    "Qwen": [
+      1.0000000000000002,
+      -0.38748445713924723,
+      0.2634185395446964,
+      0.3366347176849883
+    ],
+    "Gemma": [
+      0.655036395263944,
+      -0.6510059596778712,
+      0.36362955254305557,
+      -0.040125913896637555
+    ],
+    "DeepSeek": [
+      0.49286008712723345,
+      -0.28882765031503876,
+      -0.1364121422464451,
+      -0.10184120516866962
+    ],
+    "Hermes": [
+      0.5177821785104125,
+      -0.46052319228942973,
+      -0.03003046974365653,
+      0.5083221864907084
+    ],
+    "GLM": [
+      0.9055635205732813,
+      -0.11696292167391054,
+      -0.181612402306984,
+      0.0751308464732775
+    ],
+    "Nemotron": [
+      0.663752883231369,
+      -0.2154427750118172,
+      0.16876388668243947,
+      -0.3985526368253072
+    ],
+    "SmolLM3": [
+      0.5873392070731053,
+      -0.24931789543351796,
+      0.1888284380762852,
+      -0.054824869281486
+    ]
+  },
+  "angle_fidelity_matrix": [
+    [
+      1.0000000000000004,
+      0.08242291879672388,
+      0.003173466206622563,
+      9.8676788229882e-34,
+      0.7952235261553453,
+      0.02776029290564122,
+      1.710675526472961e-67,
+      7.444252639918648e-67
+    ],
+    [
+      0.08242291879672388,
+      1.0000000000000004,
+      1.9963671102764186e-33,
+      1.3278762610520501e-33,
+      1.9159522558849524e-33,
+      0.0021779852393630787,
+      2.53766110065913e-66,
+      8.949280963826621e-66
+    ],
+    [
+      0.003173466206622563,
+      1.9963671102764186e-33,
+      1.0,
+      1.371197876387332e-66,
+      9.691163280046995e-35,
+      0.00016121015369698606,
+      7.064099864775976e-99,
+      3.816203940345773e-67
+    ],
+    [
+      9.8676788229882e-34,
+      1.3278762610520501e-33,
+      1.371197876387332e-66,
+      1.0000000000000009,
+      2.811297618660981e-34,
+      3.467484141287511e-34,
+      1.0238351641565445e-33,
+      2.8880322395652493e-34
+    ],
+    [
+      0.7952235261553453,
+      1.9159522558849524e-33,
+      9.691163280046995e-35,
+      2.811297618660981e-34,
+      1.0,
+      0.029426443937098107,
+      5.849748665586169e-99,
+      1.4350243698491578e-98
+    ],
+    [
+      0.02776029290564122,
+      0.0021779852393630787,
+      0.00016121015369698606,
+      3.467484141287511e-34,
+      0.029426443937098107,
+      1.0,
+      3.981137227563324e-67,
+      3.2106197336607407e-131
+    ],
+    [
+      1.710675526472961e-67,
+      2.53766110065913e-66,
+      7.064099864775976e-99,
+      1.0238351641565445e-33,
+      5.849748665586169e-99,
+      3.981137227563324e-67,
+      0.9999999999999989,
+      0.026543050987983794
+    ],
+    [
+      7.444252639918648e-67,
+      8.949280963826621e-66,
+      3.816203940345773e-67,
+      2.8880322395652493e-34,
+      1.4350243698491578e-98,
+      3.2106197336607407e-131,
+      0.026543050987983794,
+      0.9999999999999991
+    ]
+  ],
+  "amplitude_fidelity_matrix": [
+    [
+      1.0000000000000004,
+      0.8068153322426448,
+      0.6956905132475839,
+      0.6702129432713744,
+      0.9854513665978876,
+      0.8311790636022868,
+      0.44383385301355,
+      0.4644231089686283
+    ],
+    [
+      0.8068153322426448,
+      1.0000000000000009,
+      0.8105880167313243,
+      0.6704704822770384,
+      0.7372569068379944,
+      0.7603969748808228,
+      0.5578178935863451,
+      0.5689392432596011
+    ],
+    [
+      0.6956905132475839,
+      0.8105880167313243,
+      1.0000000000000004,
+      0.522003751542923,
+      0.6415090743851323,
+      0.6606182929462161,
+      0.4711545328027016,
+      0.5106811750261037
+    ],
+    [
+      0.6702129432713744,
+      0.6704704822770384,
+      0.522003751542923,
+      0.9999999999999996,
+      0.6370081437389401,
+      0.7160940191239097,
+      0.7477470597350846,
+      0.6383270275404447
+    ],
+    [
+      0.9854513665978876,
+      0.7372569068379944,
+      0.6415090743851323,
+      0.6370081437389401,
+      1.0,
+      0.8161517651620855,
+      0.4217038839018631,
+      0.41595214474832654
+    ],
+    [
+      0.8311790636022868,
+      0.7603969748808228,
+      0.6606182929462161,
+      0.7160940191239097,
+      0.8161517651620855,
+      1.0000000000000004,
+      0.5492331855012412,
+      0.3639853847848027
+    ],
+    [
+      0.44383385301355,
+      0.5578178935863451,
+      0.4711545328027016,
+      0.7477470597350846,
+      0.4217038839018631,
+      0.5492331855012412,
+      0.9999999999999996,
+      0.7847790608605353
+    ],
+    [
+      0.4644231089686283,
+      0.5689392432596011,
+      0.5106811750261037,
+      0.6383270275404447,
+      0.41595214474832654,
+      0.3639853847848027,
+      0.7847790608605353,
+      1.0
+    ]
+  ],
+  "angle_nearest_pairs": [
+    {
+      "pair": [
+        "Mistral",
+        "Hermes"
+      ],
+      "fidelity": 0.7952235261553453
+    },
+    {
+      "pair": [
+        "Mistral",
+        "Qwen"
+      ],
+      "fidelity": 0.08242291879672388
+    },
+    {
+      "pair": [
+        "Hermes",
+        "GLM"
+      ],
+      "fidelity": 0.029426443937098107
+    },
+    {
+      "pair": [
+        "Mistral",
+        "GLM"
+      ],
+      "fidelity": 0.02776029290564122
+    },
+    {
+      "pair": [
+        "Nemotron",
+        "SmolLM3"
+      ],
+      "fidelity": 0.026543050987983794
+    },
+    {
+      "pair": [
+        "Mistral",
+        "Gemma"
+      ],
+      "fidelity": 0.003173466206622563
+    },
+    {
+      "pair": [
+        "Qwen",
+        "GLM"
+      ],
+      "fidelity": 0.0021779852393630787
+    },
+    {
+      "pair": [
+        "Gemma",
+        "GLM"
+      ],
+      "fidelity": 0.00016121015369698606
+    },
+    {
+      "pair": [
+        "Qwen",
+        "Gemma"
+      ],
+      "fidelity": 1.9963671102764186e-33
+    },
+    {
+      "pair": [
+        "Qwen",
+        "Hermes"
+      ],
+      "fidelity": 1.9159522558849524e-33
+    },
+    {
+      "pair": [
+        "Qwen",
+        "DeepSeek"
+      ],
+      "fidelity": 1.3278762610520501e-33
+    },
+    {
+      "pair": [
+        "DeepSeek",
+        "Nemotron"
+      ],
+      "fidelity": 1.0238351641565445e-33
+    },
+    {
+      "pair": [
+        "Mistral",
+        "DeepSeek"
+      ],
+      "fidelity": 9.8676788229882e-34
+    },
+    {
+      "pair": [
+        "DeepSeek",
+        "GLM"
+      ],
+      "fidelity": 3.467484141287511e-34
+    },
+    {
+      "pair": [
+        "DeepSeek",
+        "SmolLM3"
+      ],
+      "fidelity": 2.8880322395652493e-34
+    },
+    {
+      "pair": [
+        "DeepSeek",
+        "Hermes"
+      ],
+      "fidelity": 2.811297618660981e-34
+    },
+    {
+      "pair": [
+        "Gemma",
+        "Hermes"
+      ],
+      "fidelity": 9.691163280046995e-35
+    },
+    {
+      "pair": [
+        "Qwen",
+        "SmolLM3"
+      ],
+      "fidelity": 8.949280963826621e-66
+    },
+    {
+      "pair": [
+        "Qwen",
+        "Nemotron"
+      ],
+      "fidelity": 2.53766110065913e-66
+    },
+    {
+      "pair": [
+        "Gemma",
+        "DeepSeek"
+      ],
+      "fidelity": 1.371197876387332e-66
+    },
+    {
+      "pair": [
+        "Mistral",
+        "SmolLM3"
+      ],
+      "fidelity": 7.444252639918648e-67
+    },
+    {
+      "pair": [
+        "GLM",
+        "Nemotron"
+      ],
+      "fidelity": 3.981137227563324e-67
+    },
+    {
+      "pair": [
+        "Gemma",
+        "SmolLM3"
+      ],
+      "fidelity": 3.816203940345773e-67
+    },
+    {
+      "pair": [
+        "Mistral",
+        "Nemotron"
+      ],
+      "fidelity": 1.710675526472961e-67
+    },
+    {
+      "pair": [
+        "Hermes",
+        "SmolLM3"
+      ],
+      "fidelity": 1.4350243698491578e-98
+    },
+    {
+      "pair": [
+        "Gemma",
+        "Nemotron"
+      ],
+      "fidelity": 7.064099864775976e-99
+    },
+    {
+      "pair": [
+        "Hermes",
+        "Nemotron"
+      ],
+      "fidelity": 5.849748665586169e-99
+    },
+    {
+      "pair": [
+        "GLM",
+        "SmolLM3"
+      ],
+      "fidelity": 3.2106197336607407e-131
+    }
+  ],
+  "amplitude_nearest_pairs": [
+    {
+      "pair": [
+        "Mistral",
+        "Hermes"
+      ],
+      "fidelity": 0.9854513665978876
+    },
+    {
+      "pair": [
+        "Mistral",
+        "GLM"
+      ],
+      "fidelity": 0.8311790636022868
+    },
+    {
+      "pair": [
+        "Hermes",
+        "GLM"
+      ],
+      "fidelity": 0.8161517651620855
+    },
+    {
+      "pair": [
+        "Qwen",
+        "Gemma"
+      ],
+      "fidelity": 0.8105880167313243
+    },
+    {
+      "pair": [
+        "Mistral",
+        "Qwen"
+      ],
+      "fidelity": 0.8068153322426448
+    },
+    {
+      "pair": [
+        "Nemotron",
+        "SmolLM3"
+      ],
+      "fidelity": 0.7847790608605353
+    },
+    {
+      "pair": [
+        "Qwen",
+        "GLM"
+      ],
+      "fidelity": 0.7603969748808228
+    },
+    {
+      "pair": [
+        "DeepSeek",
+        "Nemotron"
+      ],
+      "fidelity": 0.7477470597350846
+    },
+    {
+      "pair": [
+        "Qwen",
+        "Hermes"
+      ],
+      "fidelity": 0.7372569068379944
+    },
+    {
+      "pair": [
+        "DeepSeek",
+        "GLM"
+      ],
+      "fidelity": 0.7160940191239097
+    },
+    {
+      "pair": [
+        "Mistral",
+        "Gemma"
+      ],
+      "fidelity": 0.6956905132475839
+    },
+    {
+      "pair": [
+        "Qwen",
+        "DeepSeek"
+      ],
+      "fidelity": 0.6704704822770384
+    },
+    {
+      "pair": [
+        "Mistral",
+        "DeepSeek"
+      ],
+      "fidelity": 0.6702129432713744
+    },
+    {
+      "pair": [
+        "Gemma",
+        "GLM"
+      ],
+      "fidelity": 0.6606182929462161
+    },
+    {
+      "pair": [
+        "Gemma",
+        "Hermes"
+      ],
+      "fidelity": 0.6415090743851323
+    },
+    {
+      "pair": [
+        "DeepSeek",
+        "SmolLM3"
+      ],
+      "fidelity": 0.6383270275404447
+    },
+    {
+      "pair": [
+        "DeepSeek",
+        "Hermes"
+      ],
+      "fidelity": 0.6370081437389401
+    },
+    {
+      "pair": [
+        "Qwen",
+        "SmolLM3"
+      ],
+      "fidelity": 0.5689392432596011
+    },
+    {
+      "pair": [
+        "Qwen",
+        "Nemotron"
+      ],
+      "fidelity": 0.5578178935863451
+    },
+    {
+      "pair": [
+        "GLM",
+        "Nemotron"
+      ],
+      "fidelity": 0.5492331855012412
+    },
+    {
+      "pair": [
+        "Gemma",
+        "DeepSeek"
+      ],
+      "fidelity": 0.522003751542923
+    },
+    {
+      "pair": [
+        "Gemma",
+        "SmolLM3"
+      ],
+      "fidelity": 0.5106811750261037
+    },
+    {
+      "pair": [
+        "Gemma",
+        "Nemotron"
+      ],
+      "fidelity": 0.4711545328027016
+    },
+    {
+      "pair": [
+        "Mistral",
+        "SmolLM3"
+      ],
+      "fidelity": 0.4644231089686283
+    },
+    {
+      "pair": [
+        "Mistral",
+        "Nemotron"
+      ],
+      "fidelity": 0.44383385301355
+    },
+    {
+      "pair": [
+        "Hermes",
+        "Nemotron"
+      ],
+      "fidelity": 0.4217038839018631
+    },
+    {
+      "pair": [
+        "Hermes",
+        "SmolLM3"
+      ],
+      "fidelity": 0.41595214474832654
+    },
+    {
+      "pair": [
+        "GLM",
+        "SmolLM3"
+      ],
+      "fidelity": 0.3639853847848027
+    }
+  ],
+  "first_read": "The first encoding-discovery pass is valid: all eight locked V8 rows are converted into a normalized quantum-bridge feature vector, and both `AngleEmbedding` and `AmplitudeEmbedding` produce comparable state spaces. This gives Phase 7 a concrete Qiskit mirror target instead of a rhetorical handoff.",
+  "next_rung": "Phase 7 - Qiskit mirror / simulator lock"
+}
