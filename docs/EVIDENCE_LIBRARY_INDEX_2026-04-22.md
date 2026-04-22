@@ -10,6 +10,8 @@ code.
 
 - [Mirror Interface & Architecture Evidence Stack and Next Phases](./MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
 - [Latent Architecture Discovery Highlight](./LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
+- [Architecture Hierarchy And Non-Classical Vocabulary](./ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
+- [Next Phase Research Plan From Phase 8](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Artifact Root
 

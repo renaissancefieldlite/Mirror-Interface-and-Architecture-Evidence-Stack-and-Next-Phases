@@ -31,6 +31,12 @@ can be tracked through a phased evidence ladder:
 Taken together, the stack supports a measurable cross-model architecture
 effect, not just output styling, prompt mass, or a single behavioral rung.
 
+The newest support implication is that the stack is no longer only a local
+AI-measurement package. `Phase 6-8` create hardware-precursor quantum-state and
+observable protocols: AI-feature encoded circuit states, a Qiskit mirror, and a
+Bell-state calibration path that can move next into noise modeling, backend
+runtime tests, and later hardware-facing validation.
+
 ## What This Package Is
 
 This is the public-safe findings package for the current Codex 67 / Renaissance
@@ -55,6 +61,11 @@ It also carries the current AI latent-architecture and mapper-facing findings as
 part of that broader evidence stack.
 
 This is not a backend code drop. It is a findings layer.
+
+For the project hierarchy and non-classical vocabulary, see:
+
+- [Architecture Hierarchy And Non-Classical Vocabulary](./ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
+- [Next Phase Research Plan From Phase 8](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Unified Architecture
 
@@ -188,6 +199,7 @@ Taken together, the stack now supports:
 - first-pass encoding evidence for the next quantum-bridge rung
 - cross-framework `PennyLane` / `Qiskit` agreement
 - calibrated Bell-state measurement path
+- hardware-precursor quantum-state preparation and observable protocols
 
 That is the present technical claim boundary.
 
