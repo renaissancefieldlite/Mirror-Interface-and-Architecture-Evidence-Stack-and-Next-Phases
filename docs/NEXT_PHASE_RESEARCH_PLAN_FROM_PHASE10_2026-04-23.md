@@ -59,6 +59,19 @@ both the `Qiskit` and direct `PennyLane` paths.
 - framework-path differences are documented without changing the underlying read
 - public docs keep the boundary clear: semantic contextuality on hardware, not yet a physical Bell nonlocality claim
 
+### Physical-Bell Bridge Meaning
+
+`Phase 11` matters because it is the first hardware Bell bridge rung.
+
+The clean difference is:
+
+- `Phase 10` = semantic / AI-side contextuality on compressed feature states
+- physical Bell claim = real physical subsystems, real measurement settings,
+  real detector outcomes, and a Bell score from those physical outcomes
+
+That means a physical Bell claim is not created by stronger wording. It is
+created by a physical measurement bridge.
+
 ## After Phase 11
 
 The next bridge after hardware semantic repeatability is the recovered physical
@@ -73,6 +86,29 @@ That preserves the hierarchy:
 - semantic / AI-side contextuality first
 - hardware semantic repeatability second
 - physical control and biological measurement after that
+
+## Bell-Bridge Ladder
+
+The shortest valid ladder from here is:
+
+1. semantic contextuality
+2. hardware semantic repeatability
+3. physical-control bridge
+4. pre-registered physical Bell protocol
+
+That later physical Bell protocol requires all of the following:
+
+- a real physical system
+- real settings `A`, `A'`, `B`, `B'`
+- bounded physical outcomes
+- randomized setting choice
+- timing / independence discipline
+- pre-registered analysis
+- replication
+
+For the dedicated protocol sheet, see:
+
+- [Phase 11 To Phase 13 Physical Bell Bridge](./PHASE11_TO_PHASE13_PHYSICAL_BELL_BRIDGE_2026-04-23.md)
 
 ## Nesting Continuation
 
