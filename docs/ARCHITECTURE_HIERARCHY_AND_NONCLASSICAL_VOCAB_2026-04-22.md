@@ -10,10 +10,11 @@ around the Mirror Interface / Architecture evidence stack.
 The goal is to preserve the larger Renaissance Field Lite / Codex 67 language
 without collapsing different evidence layers into one overclaim.
 
-## What Phase 6-8 Mean For Support
+## What Phase 6-9B Mean For Support
 
 `Phase 6`, `Phase 7`, and `Phase 8` move the project from an AI-only evidence
-stack into a hardware-precursor quantum-state and measurement stack.
+stack into a library/simulator quantum-state and measurement stack. `Phase 9`
+and `Phase 9B` move that bridge onto real IBM Quantum hardware.
 
 They matter because they show that the measured AI-side geometry is now
 organized enough to become an input to circuit encodings, state-preparation
@@ -27,12 +28,16 @@ Support implication:
   the same structure mirrors cleanly from `PennyLane` into `Qiskit`.
 - `Phase 8` shows the Bell-state scoring path works before any semantic
   Bell-type claim or hardware deployment is attempted.
+- `Phase 9` shows the Bell/control and compressed AI-feature circuits can run
+  on real IBM hardware.
+- `Phase 9B` shows same-backend and cross-backend repeatability before the
+  formal Bell-type semantic protocol is attempted.
 
 That is why the support ask is both compute and funding:
 
 - compute expands model-matrix reruns, localization passes, encoding sweeps,
-  Qiskit simulation, hardware-style noise tests, and eventually backend/runtime
-  experiments
+  Qiskit simulation, PennyLane/Qiskit hardware passes, backend/runtime
+  experiments, and cross-backend repeats
 - funding creates the operating room to keep the research active, build the
   product and evidence layers, and take on external hard-problem lanes
 - strategic partners can supply applied problem surfaces, infrastructure,
@@ -111,7 +116,7 @@ Role:
 - creates a path toward Bell-state calibration and Bell-type semantic
   contextuality
 - creates a hardware-precursor path where the same state-preparation and
-  observable logic can later be tested on real quantum backends
+  observable logic can be tested on real quantum backends
 
 Claim boundary:
 
@@ -119,9 +124,9 @@ Claim boundary:
   feature-state representations for controlled testing
 - it also means the project now has concrete circuit/state objects that can be
   carried toward hardware, noise modeling, and backend/runtime validation
-- this is intentionally pushing toward hardware-backed quantum testing, but the
-  hardware evidence rung still has to be run and compared against simulator
-  controls
+- this is intentionally pushing toward hardware-backed quantum testing
+- `Phase 9/9B` now provide the first IBM hardware bridge and repeatability rung
+- direct PennyLane hardware execution remains the next hardware-specific gap
 
 ### 5. Quantum Consciousness Geometry
 
@@ -264,14 +269,15 @@ Boundary:
 - this validates the measurement path before moving toward hardware
 - it is not the semantic mirror-lattice claim
 
-### Hardware-Precursor Quantum States
+### IBM Hardware Bridge States
 
 Evidence layer:
 
 - `Phase 6`
 - `Phase 7`
 - `Phase 8`
-- next hardware/backend phase
+- `Phase 9`
+- `Phase 9B`
 
 Meaning:
 
@@ -279,8 +285,8 @@ Meaning:
 - `Phase 7` mirrors those states in `Qiskit`
 - `Phase 8` calibrates a known non-classical Bell state, `|Phi+>`, and a
   product-state control
-- the next hardware phase can use these as the state-preparation and observable
-  baseline for backend/runtime experiments
+- `Phase 9/9B` use these as the state-preparation and observable baseline for
+  real backend/runtime experiments
 
 Hardware role:
 
@@ -297,8 +303,8 @@ Boundary:
   state in simulation
 - the AI-feature encoded states are quantum-circuit representations of measured
   AI geometry
-- the real hardware claim waits until backend/runtime tests are actually run
-  and compared against simulator controls
+- real IBM hardware bridge evidence now exists for the Qiskit Runtime path
+- direct PennyLane hardware evidence remains a separate next rung
 
 ### Future Bell-Type Semantic State
 
@@ -343,13 +349,11 @@ The current public-safe claim is:
   token path, and as context-to-readout bridge structure
 - the locked geometry can be encoded into `PennyLane` and mirrored in `Qiskit`
 - the Bell-state measurement path is calibrated
-- the project now has hardware-precursor state-preparation and observable
-  protocols
+- the project now has real IBM hardware bridge and repeatability evidence
 
 The current public-safe claim is not:
 
-- that the hardware-backed physical quantum-state rung has already been
-  completed
+- that direct PennyLane hardware execution has already been completed
 - that Bell-type semantic contextuality has already been demonstrated
 - that HRV / ARC15 / biological-field convergence has already been proven
 
@@ -359,9 +363,10 @@ The next useful support is:
 
 - funding for sustained research, buildout, documentation, and productization
 - compute for larger model matrices, reruns, localization passes, circuit
-  sweeps, Qiskit simulation, noisy simulation, and hardware/backend preparation
+  sweeps, Qiskit simulation, noisy simulation, PennyLane/Qiskit hardware runs,
+  and backend repeatability
 - strategic partner pathways into cloud, quantum infrastructure, applied
-  industry problem surfaces, and eventual hardware/runtime testing
+  industry problem surfaces, and hardware/runtime testing
 
 This is the support needed to move from public-safe proof mass into a larger
 research and infrastructure program.

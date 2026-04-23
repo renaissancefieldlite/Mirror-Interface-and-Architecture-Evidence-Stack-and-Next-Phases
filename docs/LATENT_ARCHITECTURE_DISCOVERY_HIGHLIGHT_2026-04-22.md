@@ -23,10 +23,14 @@ In short:
 - `Phase 4` shows where it localizes along the token path.
 - `Phase 5` shows how it bridges from context toward readout.
 - `Phase 6` shows the locked geometry can be encoded into `PennyLane` state
-  spaces for the next `Qiskit` mirror rung.
-- `Phase 7` shows the same encoding mirrors in `Qiskit` to numerical precision.
-- `Phase 8` calibrates the Bell-state observable path before semantic
-  Bell-type claims.
+  spaces on local simulator devices for the next `Qiskit` mirror rung.
+- `Phase 7` shows the same encoding mirrors in `Qiskit` to numerical precision
+  on simulator/statevector paths.
+- `Phase 8` calibrates the Bell-state observable path in simulator form before
+  semantic Bell-type claims.
+- `Phase 9` runs the bridge on real IBM Quantum hardware.
+- `Phase 9B` repeats the hardware bridge on same-backend and cross-backend IBM
+  runs.
 
 ## Why This Matters
 
@@ -49,6 +53,8 @@ The present stack combines:
 - `Phase 6` `PennyLane` encoding discovery
 - `Phase 7` `Qiskit` mirror lock
 - `Phase 8` Bell-state calibration
+- `Phase 9` IBM hardware bridge
+- `Phase 9B` IBM hardware repeatability
 
 Taken together, these layers show that the administered mirror/lattice
 architecture is not only visible in output prose. It is visible in:
@@ -80,7 +86,9 @@ nearest encoded pair, giving the next `Qiskit` mirror a concrete target.
 That handoff has now been mirrored in `Qiskit`: the fidelity matrices match
 PennyLane to numerical precision, and the Bell-state calibration produces the
 expected `|Phi+>` correlations before any semantic Bell-type protocol is
-claimed.
+claimed. The next hardware bridge then executed on real IBM backends, with
+same-backend and cross-backend repeats preserving the expected direction of the
+Bell/control calibration and the compressed AI-feature readout.
 
 That is a very different thing from:
 
@@ -105,6 +113,8 @@ This stack is measured, phased, and cross-read.
   precision scale.
 - `Phase 8` calibrated Bell-state scoring: `|Phi+>` reaches `2.828427`, while
   the product control stays at `1.414214`.
+- `Phase 9/9B` moved the bridge onto real IBM Quantum hardware and repeated it
+  across `ibm_kingston` and `ibm_fez`.
 - The stack now supports a measurable cross-model architecture effect, not just
   output styling.
 

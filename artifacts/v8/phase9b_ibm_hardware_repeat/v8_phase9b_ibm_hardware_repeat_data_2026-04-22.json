@@ -1,0 +1,390 @@
+{
+  "schema_version": "rfl.v8.phase9b.ibm_hardware_repeat.result.v1",
+  "generated_at_utc": "2026-04-23T03:23:46.102931+00:00",
+  "phase_label": "V8 Phase 9B - IBM hardware repeatability",
+  "claim_boundary": "Real IBM hardware repeatability and cross-backend bridge; not final Bell-type semantic contextuality evidence.",
+  "runs": [
+    {
+      "job_id": "d7kn84q8ui0s73b5fee0",
+      "backend": {
+        "name": "ibm_kingston",
+        "num_qubits": 156,
+        "pending_jobs_at_submit": 0,
+        "operational_at_submit": true,
+        "status_message": "active"
+      },
+      "shots": 64,
+      "final_status": "DONE",
+      "manifest_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase9_ibm_hardware_bridge_2026-04-22/v8_phase9_ibm_hardware_submission_d7kn84q8ui0s73b5fee0.json",
+      "circuit_results": [
+        {
+          "name": "bell_phi_plus_zz",
+          "counts": {
+            "00": 24,
+            "01": 3,
+            "10": 0,
+            "11": 37
+          },
+          "shots": 64,
+          "parity_expectation": 0.90625,
+          "dominant_bitstring": "11"
+        },
+        {
+          "name": "bell_phi_plus_xx",
+          "counts": {
+            "00": 33,
+            "01": 0,
+            "10": 0,
+            "11": 31
+          },
+          "shots": 64,
+          "parity_expectation": 1.0,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "bell_phi_plus_yy",
+          "counts": {
+            "00": 0,
+            "01": 31,
+            "10": 33,
+            "11": 0
+          },
+          "shots": 64,
+          "parity_expectation": -1.0,
+          "dominant_bitstring": "10"
+        },
+        {
+          "name": "product_00_zz",
+          "counts": {
+            "00": 63,
+            "01": 1,
+            "10": 0,
+            "11": 0
+          },
+          "shots": 64,
+          "parity_expectation": 0.96875,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "phase6_feature_mistral",
+          "counts": {
+            "00": 0,
+            "01": 61,
+            "10": 0,
+            "11": 3
+          },
+          "shots": 64,
+          "parity_expectation": -0.90625,
+          "dominant_bitstring": "01"
+        },
+        {
+          "name": "phase6_feature_hermes",
+          "counts": {
+            "00": 0,
+            "01": 57,
+            "10": 5,
+            "11": 2
+          },
+          "shots": 64,
+          "parity_expectation": -0.9375,
+          "dominant_bitstring": "01"
+        },
+        {
+          "name": "phase6_feature_nemotron",
+          "counts": {
+            "00": 0,
+            "01": 56,
+            "10": 1,
+            "11": 7
+          },
+          "shots": 64,
+          "parity_expectation": -0.78125,
+          "dominant_bitstring": "01"
+        }
+      ],
+      "bell_correlators": {
+        "ZZ": 0.90625,
+        "XX": 1.0,
+        "YY": -1.0,
+        "product_ZZ": 0.96875
+      },
+      "feature_parities": {
+        "mistral": -0.90625,
+        "hermes": -0.9375,
+        "nemotron": -0.78125
+      },
+      "feature_dominant_bitstrings": {
+        "mistral": "01",
+        "hermes": "01",
+        "nemotron": "01"
+      }
+    },
+    {
+      "job_id": "d7kovhq8ui0s73b5hf2g",
+      "backend": {
+        "name": "ibm_kingston",
+        "num_qubits": 156,
+        "pending_jobs_at_submit": 1,
+        "operational_at_submit": true,
+        "status_message": "active"
+      },
+      "shots": 64,
+      "final_status": "DONE",
+      "manifest_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase9_ibm_hardware_bridge_2026-04-22/v8_phase9_ibm_hardware_submission_d7kovhq8ui0s73b5hf2g.json",
+      "circuit_results": [
+        {
+          "name": "bell_phi_plus_zz",
+          "counts": {
+            "00": 32,
+            "01": 1,
+            "10": 1,
+            "11": 30
+          },
+          "shots": 64,
+          "parity_expectation": 0.9375,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "bell_phi_plus_xx",
+          "counts": {
+            "00": 35,
+            "01": 1,
+            "10": 0,
+            "11": 28
+          },
+          "shots": 64,
+          "parity_expectation": 0.96875,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "bell_phi_plus_yy",
+          "counts": {
+            "00": 1,
+            "01": 34,
+            "10": 27,
+            "11": 2
+          },
+          "shots": 64,
+          "parity_expectation": -0.90625,
+          "dominant_bitstring": "01"
+        },
+        {
+          "name": "product_00_zz",
+          "counts": {
+            "00": 63,
+            "01": 1,
+            "10": 0,
+            "11": 0
+          },
+          "shots": 64,
+          "parity_expectation": 0.96875,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "phase6_feature_mistral",
+          "counts": {
+            "00": 0,
+            "01": 55,
+            "10": 1,
+            "11": 8
+          },
+          "shots": 64,
+          "parity_expectation": -0.75,
+          "dominant_bitstring": "01"
+        },
+        {
+          "name": "phase6_feature_hermes",
+          "counts": {
+            "00": 1,
+            "01": 54,
+            "10": 1,
+            "11": 8
+          },
+          "shots": 64,
+          "parity_expectation": -0.71875,
+          "dominant_bitstring": "01"
+        },
+        {
+          "name": "phase6_feature_nemotron",
+          "counts": {
+            "00": 1,
+            "01": 53,
+            "10": 1,
+            "11": 9
+          },
+          "shots": 64,
+          "parity_expectation": -0.6875,
+          "dominant_bitstring": "01"
+        }
+      ],
+      "bell_correlators": {
+        "ZZ": 0.9375,
+        "XX": 0.96875,
+        "YY": -0.90625,
+        "product_ZZ": 0.96875
+      },
+      "feature_parities": {
+        "mistral": -0.75,
+        "hermes": -0.71875,
+        "nemotron": -0.6875
+      },
+      "feature_dominant_bitstrings": {
+        "mistral": "01",
+        "hermes": "01",
+        "nemotron": "01"
+      }
+    },
+    {
+      "job_id": "d7kp0a8e7usc73f53d8g",
+      "backend": {
+        "name": "ibm_fez",
+        "num_qubits": 156,
+        "pending_jobs_at_submit": 1,
+        "operational_at_submit": true,
+        "status_message": "active"
+      },
+      "shots": 64,
+      "final_status": "DONE",
+      "manifest_path": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase9_ibm_hardware_bridge_2026-04-22/v8_phase9_ibm_hardware_submission_d7kp0a8e7usc73f53d8g.json",
+      "circuit_results": [
+        {
+          "name": "bell_phi_plus_zz",
+          "counts": {
+            "00": 25,
+            "01": 2,
+            "10": 0,
+            "11": 37
+          },
+          "shots": 64,
+          "parity_expectation": 0.9375,
+          "dominant_bitstring": "11"
+        },
+        {
+          "name": "bell_phi_plus_xx",
+          "counts": {
+            "00": 33,
+            "01": 1,
+            "10": 0,
+            "11": 30
+          },
+          "shots": 64,
+          "parity_expectation": 0.96875,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "bell_phi_plus_yy",
+          "counts": {
+            "00": 4,
+            "01": 27,
+            "10": 29,
+            "11": 4
+          },
+          "shots": 64,
+          "parity_expectation": -0.75,
+          "dominant_bitstring": "10"
+        },
+        {
+          "name": "product_00_zz",
+          "counts": {
+            "00": 62,
+            "01": 0,
+            "10": 2,
+            "11": 0
+          },
+          "shots": 64,
+          "parity_expectation": 0.9375,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "phase6_feature_mistral",
+          "counts": {
+            "00": 3,
+            "01": 57,
+            "10": 0,
+            "11": 4
+          },
+          "shots": 64,
+          "parity_expectation": -0.78125,
+          "dominant_bitstring": "01"
+        },
+        {
+          "name": "phase6_feature_hermes",
+          "counts": {
+            "00": 4,
+            "01": 53,
+            "10": 0,
+            "11": 7
+          },
+          "shots": 64,
+          "parity_expectation": -0.65625,
+          "dominant_bitstring": "01"
+        },
+        {
+          "name": "phase6_feature_nemotron",
+          "counts": {
+            "00": 0,
+            "01": 52,
+            "10": 2,
+            "11": 10
+          },
+          "shots": 64,
+          "parity_expectation": -0.6875,
+          "dominant_bitstring": "01"
+        }
+      ],
+      "bell_correlators": {
+        "ZZ": 0.9375,
+        "XX": 0.96875,
+        "YY": -0.75,
+        "product_ZZ": 0.9375
+      },
+      "feature_parities": {
+        "mistral": -0.78125,
+        "hermes": -0.65625,
+        "nemotron": -0.6875
+      },
+      "feature_dominant_bitstrings": {
+        "mistral": "01",
+        "hermes": "01",
+        "nemotron": "01"
+      }
+    }
+  ],
+  "delta_summary": {
+    "baseline_job_id": "d7kn84q8ui0s73b5fee0",
+    "deltas": [
+      {
+        "job_id": "d7kovhq8ui0s73b5hf2g",
+        "backend": "ibm_kingston",
+        "bell_delta_from_first_run": {
+          "ZZ": 0.03125,
+          "XX": -0.03125,
+          "YY": 0.09375,
+          "product_ZZ": 0.0
+        },
+        "feature_delta_from_first_run": {
+          "mistral": 0.15625,
+          "hermes": 0.21875,
+          "nemotron": 0.09375
+        }
+      },
+      {
+        "job_id": "d7kp0a8e7usc73f53d8g",
+        "backend": "ibm_fez",
+        "bell_delta_from_first_run": {
+          "ZZ": 0.03125,
+          "XX": -0.03125,
+          "YY": 0.25,
+          "product_ZZ": -0.03125
+        },
+        "feature_delta_from_first_run": {
+          "mistral": 0.125,
+          "hermes": 0.28125,
+          "nemotron": 0.09375
+        }
+      }
+    ]
+  },
+  "first_read": "The IBM hardware bridge repeated successfully. The Bell/control calibration remains directionally aligned across same-backend and cross-backend runs, while compressed Phase 6 AI-feature circuits retain a consistent negative-parity signature with finite-shot and device-level variation.",
+  "next_rung": "Formal Bell-type semantic contextuality protocol with explicit A/A'/B/B' settings, bounded outcomes, controls, backend repeats, and public-safe docs/artifacts only."
+}

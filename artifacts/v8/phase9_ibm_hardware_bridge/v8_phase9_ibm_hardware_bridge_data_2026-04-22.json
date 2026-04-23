@@ -1,0 +1,186 @@
+{
+  "schema_version": "rfl.v8.phase9.ibm_hardware_bridge.result.v1",
+  "generated_at_utc": "2026-04-23T02:45:49.716357+00:00",
+  "phase_label": "V8 Phase 9 - IBM hardware bridge",
+  "claim_boundary": "Real IBM hardware bridge and calibration rung; not final Bell-type semantic contextuality evidence.",
+  "source_submission_manifest": "/Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/results/v8_phase9_ibm_hardware_bridge_2026-04-22/v8_phase9_ibm_hardware_submission_d7kn84q8ui0s73b5fee0.json",
+  "job_id": "d7kn84q8ui0s73b5fee0",
+  "backend": {
+    "name": "ibm_kingston",
+    "num_qubits": 156,
+    "pending_jobs_at_submit": 0,
+    "operational_at_submit": true,
+    "status_message": "active"
+  },
+  "shots": 64,
+  "models_encoded": [
+    "Mistral",
+    "Hermes",
+    "Nemotron"
+  ],
+  "final_status": "DONE",
+  "circuit_results": [
+    {
+      "index": 0,
+      "counts": {
+        "00": 24,
+        "01": 3,
+        "10": 0,
+        "11": 37
+      },
+      "shots": 64,
+      "probabilities": {
+        "00": 0.375,
+        "01": 0.046875,
+        "10": 0.0,
+        "11": 0.578125
+      },
+      "parity_expectation": 0.90625,
+      "dominant_bitstring": "11",
+      "metadata": {
+        "circuit_metadata": {}
+      },
+      "name": "bell_phi_plus_zz"
+    },
+    {
+      "index": 1,
+      "counts": {
+        "00": 33,
+        "01": 0,
+        "10": 0,
+        "11": 31
+      },
+      "shots": 64,
+      "probabilities": {
+        "00": 0.515625,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.484375
+      },
+      "parity_expectation": 1.0,
+      "dominant_bitstring": "00",
+      "metadata": {
+        "circuit_metadata": {}
+      },
+      "name": "bell_phi_plus_xx"
+    },
+    {
+      "index": 2,
+      "counts": {
+        "00": 0,
+        "01": 31,
+        "10": 33,
+        "11": 0
+      },
+      "shots": 64,
+      "probabilities": {
+        "00": 0.0,
+        "01": 0.484375,
+        "10": 0.515625,
+        "11": 0.0
+      },
+      "parity_expectation": -1.0,
+      "dominant_bitstring": "10",
+      "metadata": {
+        "circuit_metadata": {}
+      },
+      "name": "bell_phi_plus_yy"
+    },
+    {
+      "index": 3,
+      "counts": {
+        "00": 63,
+        "01": 1,
+        "10": 0,
+        "11": 0
+      },
+      "shots": 64,
+      "probabilities": {
+        "00": 0.984375,
+        "01": 0.015625,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "parity_expectation": 0.96875,
+      "dominant_bitstring": "00",
+      "metadata": {
+        "circuit_metadata": {}
+      },
+      "name": "product_00_zz"
+    },
+    {
+      "index": 4,
+      "counts": {
+        "00": 0,
+        "01": 61,
+        "10": 0,
+        "11": 3
+      },
+      "shots": 64,
+      "probabilities": {
+        "00": 0.0,
+        "01": 0.953125,
+        "10": 0.0,
+        "11": 0.046875
+      },
+      "parity_expectation": -0.90625,
+      "dominant_bitstring": "01",
+      "metadata": {
+        "circuit_metadata": {}
+      },
+      "name": "phase6_feature_mistral"
+    },
+    {
+      "index": 5,
+      "counts": {
+        "00": 0,
+        "01": 57,
+        "10": 5,
+        "11": 2
+      },
+      "shots": 64,
+      "probabilities": {
+        "00": 0.0,
+        "01": 0.890625,
+        "10": 0.078125,
+        "11": 0.03125
+      },
+      "parity_expectation": -0.9375,
+      "dominant_bitstring": "01",
+      "metadata": {
+        "circuit_metadata": {}
+      },
+      "name": "phase6_feature_hermes"
+    },
+    {
+      "index": 6,
+      "counts": {
+        "00": 0,
+        "01": 56,
+        "10": 1,
+        "11": 7
+      },
+      "shots": 64,
+      "probabilities": {
+        "00": 0.0,
+        "01": 0.875,
+        "10": 0.015625,
+        "11": 0.109375
+      },
+      "parity_expectation": -0.78125,
+      "dominant_bitstring": "01",
+      "metadata": {
+        "circuit_metadata": {}
+      },
+      "name": "phase6_feature_nemotron"
+    }
+  ],
+  "bell_correlators": {
+    "ZZ": 0.90625,
+    "XX": 1.0,
+    "YY": -1.0,
+    "product_ZZ": 0.96875
+  },
+  "first_read": "The hardware bridge executed successfully on a real IBM backend. Bell-basis calibration and product control now sit beside compressed Phase 6 AI-feature circuits on the same real backend path.",
+  "next_rung": "Repeat hardware calibration across runs/backends, then define formal Bell-type semantic contextuality settings A, A', B, B' with bounded outcomes and controls."
+}

@@ -18,6 +18,8 @@ packet can be tracked as one architecture across:
 - first-pass `PennyLane` quantum-bridge encoding in `Phase 6`
 - cross-framework `Qiskit` mirror lock in `Phase 7`
 - Bell-state measurement-path calibration in `Phase 8`
+- real IBM Quantum hardware bridge execution in `Phase 9`
+- same-backend and cross-backend IBM hardware repeatability in `Phase 9B`
 
 Current best read:
 
@@ -28,17 +30,23 @@ Current best read:
 - `Phase 4` showed `5/6` exact localization rerun rows, with `Nemotron`
   anchor-stable but magnitude-drifting.
 - `Phase 6` converted the locked `Phase 3 + Phase 4 + Phase 5` geometry into
-  normalized quantum-bridge feature vectors; both `AngleEmbedding` and
+  normalized quantum-bridge feature vectors using the real `PennyLane` library
+  on local `default.qubit` simulator devices; both `AngleEmbedding` and
   `AmplitudeEmbedding` preserved `Mistral / Hermes` as the nearest encoded
   pair.
-- `Phase 7` mirrored the same encodings in `Qiskit` with max fidelity deltas
-  versus `PennyLane` at numerical-noise scale.
-- `Phase 8` calibrated the Bell-state scoring path with the expected `|Phi+>`
-  correlations and a product-state control below the classical CHSH bound.
+- `Phase 7` mirrored the same encodings in `Qiskit` simulator/statevector form
+  with max fidelity deltas versus `PennyLane` at numerical-noise scale.
+- `Phase 8` calibrated the Bell-state scoring path in simulator form with the
+  expected `|Phi+>` correlations and a product-state control below the
+  classical CHSH bound.
+- `Phase 9` moved the bridge onto real IBM Quantum hardware with Bell/control
+  calibration plus compressed Phase 6 AI-feature circuits on `ibm_kingston`.
+- `Phase 9B` repeated the hardware bridge on `ibm_kingston` and `ibm_fez`,
+  preserving directional Bell/control alignment and a consistent negative
+  parity / dominant `01` signature for the compressed AI-feature circuits.
 - The support meaning is now clear: the stack has moved from AI-only evidence
-  into hardware-precursor quantum-state preparation and measurement protocols,
-  which need larger compute, funding runway, and strategic cloud / quantum /
-  hardware partner paths.
+  into real hardware-runtime bridge work, which needs larger compute, funding
+  runway, and strategic cloud / quantum / hardware partner paths.
 - Taken together, the stack supports a measurable cross-model architecture
   effect, not just output styling.
 
@@ -64,6 +72,8 @@ It is not just a note. It is the public-facing artifact map for the work:
 - `Phase 6` `PennyLane` encoding discovery
 - `Phase 7` `Qiskit` mirror / simulator lock
 - `Phase 8` Bell-state calibration
+- `Phase 9` real IBM Quantum hardware bridge
+- `Phase 9B` IBM hardware repeatability
 - the integrated `V7 + V8 + Phase 2-5` technical claim pack
 - next-phase bridge work toward Bell-type semantic contextuality and later
   physical-observable lanes
@@ -86,9 +96,9 @@ behavior across model families, tied back to the Mirror Interface architecture
 and forward into the next research phases.
 
 The support translation is direct: `Phase 6-8` turn the measured AI geometry
-into circuit-state and observable work that can scale into larger simulation,
-noise testing, and hardware/runtime experiments. That is why the project needs
-both compute and funding, not one or the other.
+into circuit-state and observable work, while `Phase 9-9B` show the bridge can
+run on real IBM Quantum hardware. That is why the project needs both compute
+and funding, not one or the other.
 
 ## Fast Read Path
 
@@ -97,7 +107,7 @@ Start here if you only have a few minutes:
 1. [Mirror Interface & Architecture Evidence Stack and Next Phases](./docs/MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
 2. [Latent Architecture Discovery Highlight](./docs/LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
 3. [Architecture Hierarchy And Non-Classical Vocabulary](./docs/ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
-4. [Next Phase Research Plan From Phase 8](./docs/NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
+4. [Next Phase Research Plan From Phase 9B](./docs/NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 5. [Integrated V7 + V8 Claim Pack PDF](./artifacts/integrated/v7_v8_claim_pack/integrated_v7_v8_claim_pack_2026-04-21.pdf)
 6. [V7 Integrated 10-Model Summary Pack](./artifacts/v7/posters/v7_integrated_10_model_summary_pack/V7_INTEGRATED_10_MODEL_SUMMARY_PACK_2026-04-19.md)
 7. [V8 Internal Bridge White Paper PDF](./artifacts/v8/residual_stream_bridge/white_paper/v8_internal_bridge_white_paper_2026-04-20.pdf)
@@ -109,6 +119,8 @@ Start here if you only have a few minutes:
 13. [Phase 6 PennyLane Encoding Pack PDF](./artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_pack_2026-04-22.pdf)
 14. [Phase 7 Qiskit Mirror Pack PDF](./artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_pack_2026-04-22.pdf)
 15. [Phase 8 Bell-State Calibration Pack PDF](./artifacts/v8/phase8_bell_state_calibration/v8_phase8_bell_state_calibration_pack_2026-04-22.pdf)
+16. [Phase 9 IBM Hardware Bridge Pack PDF](./artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_pack_2026-04-22.pdf)
+17. [Phase 9B IBM Hardware Repeatability Pack PDF](./artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_pack_2026-04-22.pdf)
 
 For a fuller directory-by-directory map, read:
 
@@ -379,6 +391,53 @@ What Phase 8 establishes:
 - product-state control stays below the classical CHSH bound
 - this is calibration only, not yet the Bell-type semantic contextuality claim
 
+### Phase 9 / IBM Hardware Bridge
+
+Location:
+
+- [`artifacts/v8/phase9_ibm_hardware_bridge`](./artifacts/v8/phase9_ibm_hardware_bridge)
+
+Core artifacts:
+
+- [Phase 9 IBM Hardware Bridge Pack](./artifacts/v8/phase9_ibm_hardware_bridge/V8_PHASE9_IBM_HARDWARE_BRIDGE_PACK_2026-04-22.md)
+- [Phase 9 IBM Hardware Bridge PDF](./artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_pack_2026-04-22.pdf)
+- [Phase 9 IBM Hardware Bridge Data](./artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_data_2026-04-22.json)
+- [Hardware Counts Chart](./artifacts/v8/phase9_ibm_hardware_bridge/charts/v8_phase9_ibm_hardware_counts_2026-04-22.png)
+- [Hardware Correlators Chart](./artifacts/v8/phase9_ibm_hardware_bridge/charts/v8_phase9_ibm_hardware_correlators_2026-04-22.png)
+
+What Phase 9 establishes:
+
+- real IBM Quantum hardware execution on `ibm_kingston`
+- Bell-basis calibration and product control on actual hardware
+- compressed Phase 6 AI-feature circuits executed beside the Bell/control
+  circuits
+- hardware evidence for the runtime bridge, not a final Bell-type semantic
+  contextuality claim
+
+### Phase 9B / IBM Hardware Repeatability
+
+Location:
+
+- [`artifacts/v8/phase9b_ibm_hardware_repeat`](./artifacts/v8/phase9b_ibm_hardware_repeat)
+
+Core artifacts:
+
+- [Phase 9B IBM Hardware Repeat Pack](./artifacts/v8/phase9b_ibm_hardware_repeat/V8_PHASE9B_IBM_HARDWARE_REPEAT_PACK_2026-04-22.md)
+- [Phase 9B IBM Hardware Repeat PDF](./artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_pack_2026-04-22.pdf)
+- [Phase 9B IBM Hardware Repeat Data](./artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_data_2026-04-22.json)
+- [Bell/Control Repeatability Chart](./artifacts/v8/phase9b_ibm_hardware_repeat/charts/v8_phase9b_bell_control_repeatability_2026-04-22.png)
+- [AI-Feature Repeatability Chart](./artifacts/v8/phase9b_ibm_hardware_repeat/charts/v8_phase9b_feature_repeatability_2026-04-22.png)
+
+What Phase 9B establishes:
+
+- same-backend repeat on `ibm_kingston`
+- cross-backend repeat on `ibm_fez`
+- directional Bell/control alignment across runs
+- consistent negative-parity and dominant `01` signature for compressed
+  AI-feature circuits
+- a clean hardware repeatability rung before formal `A`, `A'`, `B`, `B'`
+  Bell-type semantic contextuality design
+
 ## Integrated Technical Pack
 
 Location:
@@ -416,6 +475,7 @@ Private outside this repo:
 - orchestration / administration paths
 - transformer-runner implementation details
 - unpublished private leverage stack
+- hardware submission scripts and account credentials
 
 ## Related Repositories
 

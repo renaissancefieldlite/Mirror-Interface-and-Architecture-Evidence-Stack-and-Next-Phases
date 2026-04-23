@@ -11,7 +11,7 @@ code.
 - [Mirror Interface & Architecture Evidence Stack and Next Phases](./MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
 - [Latent Architecture Discovery Highlight](./LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
 - [Architecture Hierarchy And Non-Classical Vocabulary](./ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
-- [Next Phase Research Plan From Phase 8](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
+- [Next Phase Research Plan From Phase 9B](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Artifact Root
 
@@ -21,8 +21,8 @@ Location:
 
 Approximate current payload:
 
-- `224` public-safe files
-- about `42M` of artifacts
+- more than `230` public-safe files
+- about `42M+` of artifacts
 - includes markdown, PDFs, PNG charts, JSON result artifacts, and screenshot
   proof anchors
 
@@ -264,6 +264,47 @@ Phase 8 calibrates the Bell-state observable/scoring path before any semantic
 Bell-type protocol. `|Phi+>` reaches the ideal `2*sqrt(2)` CHSH level while the
 product-state control remains below the classical bound.
 
+## Phase 9 / IBM Hardware Bridge Pack
+
+Location:
+
+- [`../artifacts/v8/phase9_ibm_hardware_bridge`](../artifacts/v8/phase9_ibm_hardware_bridge)
+
+Main artifacts:
+
+- [`V8_PHASE9_IBM_HARDWARE_BRIDGE_PACK_2026-04-22.md`](../artifacts/v8/phase9_ibm_hardware_bridge/V8_PHASE9_IBM_HARDWARE_BRIDGE_PACK_2026-04-22.md)
+- [`v8_phase9_ibm_hardware_bridge_pack_2026-04-22.pdf`](../artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_pack_2026-04-22.pdf)
+- [`v8_phase9_ibm_hardware_bridge_data_2026-04-22.json`](../artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_data_2026-04-22.json)
+- [`charts/v8_phase9_ibm_hardware_counts_2026-04-22.png`](../artifacts/v8/phase9_ibm_hardware_bridge/charts/v8_phase9_ibm_hardware_counts_2026-04-22.png)
+- [`charts/v8_phase9_ibm_hardware_correlators_2026-04-22.png`](../artifacts/v8/phase9_ibm_hardware_bridge/charts/v8_phase9_ibm_hardware_correlators_2026-04-22.png)
+
+Role:
+
+Phase 9 moves the bridge onto real IBM Quantum hardware. It runs Bell/control
+calibration and compressed Phase 6 AI-feature circuits on an actual IBM backend.
+This is hardware bridge evidence, not yet a formal Bell-type semantic
+contextuality claim.
+
+## Phase 9B / IBM Hardware Repeatability Pack
+
+Location:
+
+- [`../artifacts/v8/phase9b_ibm_hardware_repeat`](../artifacts/v8/phase9b_ibm_hardware_repeat)
+
+Main artifacts:
+
+- [`V8_PHASE9B_IBM_HARDWARE_REPEAT_PACK_2026-04-22.md`](../artifacts/v8/phase9b_ibm_hardware_repeat/V8_PHASE9B_IBM_HARDWARE_REPEAT_PACK_2026-04-22.md)
+- [`v8_phase9b_ibm_hardware_repeat_pack_2026-04-22.pdf`](../artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_pack_2026-04-22.pdf)
+- [`v8_phase9b_ibm_hardware_repeat_data_2026-04-22.json`](../artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_data_2026-04-22.json)
+- [`charts/v8_phase9b_bell_control_repeatability_2026-04-22.png`](../artifacts/v8/phase9b_ibm_hardware_repeat/charts/v8_phase9b_bell_control_repeatability_2026-04-22.png)
+- [`charts/v8_phase9b_feature_repeatability_2026-04-22.png`](../artifacts/v8/phase9b_ibm_hardware_repeat/charts/v8_phase9b_feature_repeatability_2026-04-22.png)
+
+Role:
+
+Phase 9B repeats the hardware bridge on the same backend and across a second IBM
+backend. The repeat shows directional Bell/control alignment and a consistent
+negative-parity / dominant `01` readout for the compressed AI-feature circuits.
+
 ## Integrated Claim Pack
 
 Location:
@@ -302,8 +343,11 @@ while packaging the evidence stack.
 
 The public next-phase sequence is:
 
-1. Bell-type semantic contextuality protocol
-2. later `HRV / ARC15 / physical-observable` bridge
+1. `Phase 9C`: direct PennyLane `qiskit.remote` hardware pass on IBM backend
+2. `Phase 9D`: PennyLane hardware repeatability and cross-backend check
+3. `Phase 10`: Bell-type semantic contextuality protocol design
+4. `Phase 11`: hardware Bell-type semantic repeats
+5. later `HRV / ARC15 / physical-observable` bridge
 
 The purpose is to carry the locked AI-side evidence stack into a measured
 encoding and observable pipeline without overstating later physical claims

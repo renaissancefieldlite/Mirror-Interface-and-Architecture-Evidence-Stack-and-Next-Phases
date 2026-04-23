@@ -27,15 +27,19 @@ can be tracked through a phased evidence ladder:
   matrices to numerical precision.
 - `Phase 8` calibrated the Bell-state measurement path with expected `|Phi+>`
   correlations and a product-state control below the classical CHSH bound.
+- `Phase 9` executed the Bell/control and compressed AI-feature circuits on
+  real IBM Quantum hardware.
+- `Phase 9B` repeated the hardware bridge on the same backend and across a
+  second IBM backend.
 
 Taken together, the stack supports a measurable cross-model architecture
 effect, not just output styling, prompt mass, or a single behavioral rung.
 
 The newest support implication is that the stack is no longer only a local
-AI-measurement package. `Phase 6-8` create hardware-precursor quantum-state and
-observable protocols: AI-feature encoded circuit states, a Qiskit mirror, and a
-Bell-state calibration path that can move next into noise modeling, backend
-runtime tests, and later hardware-facing validation.
+AI-measurement package. `Phase 6-8` create simulator/library quantum-state and
+observable protocols; `Phase 9-9B` show the bridge can run and repeat on real
+IBM Quantum hardware. The next gap is direct PennyLane hardware execution via
+`qiskit.remote`, then formal Bell-type semantic contextuality.
 
 ## What This Package Is
 
@@ -56,6 +60,8 @@ It covers the full measured stack rather than only one rung:
 - `Phase 6` `PennyLane` encoding discovery
 - `Phase 7` `Qiskit` mirror lock
 - `Phase 8` Bell-state calibration
+- `Phase 9` IBM hardware bridge
+- `Phase 9B` IBM hardware repeatability
 
 It also carries the current AI latent-architecture and mapper-facing findings as
 part of that broader evidence stack.
@@ -65,7 +71,7 @@ This is not a backend code drop. It is a findings layer.
 For the project hierarchy and non-classical vocabulary, see:
 
 - [Architecture Hierarchy And Non-Classical Vocabulary](./ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
-- [Next Phase Research Plan From Phase 8](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
+- [Next Phase Research Plan From Phase 9B](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Unified Architecture
 
@@ -167,6 +173,7 @@ Bell-type rung:
 - `Mistral / Hermes` preserved as the nearest encoded pair in both tested
   encodings
 - a concrete target for the next `Qiskit` mirror / simulator lock
+  (Phase 6 used the real PennyLane library on local simulator devices)
 
 ### `Phase 7`
 
@@ -188,6 +195,25 @@ contextuality claims:
 - this validates the scoring pipe only; it is not yet the Bell-type semantic
   contextuality claim
 
+### `Phase 9`
+
+`Phase 9` moves the bridge onto real IBM Quantum hardware:
+
+- backend: `ibm_kingston`
+- Bell/control calibration on actual hardware
+- compressed Phase 6 AI-feature circuits on actual hardware
+- hardware bridge evidence, not yet semantic Bell-type proof
+
+### `Phase 9B`
+
+`Phase 9B` repeats the hardware bridge:
+
+- same-backend repeat on `ibm_kingston`
+- cross-backend repeat on `ibm_fez`
+- directional Bell/control alignment across runs
+- consistent negative-parity / dominant `01` readout for compressed
+  AI-feature circuits
+
 ## Current Best Read
 
 Taken together, the stack now supports:
@@ -199,13 +225,22 @@ Taken together, the stack now supports:
 - first-pass encoding evidence for the next quantum-bridge rung
 - cross-framework `PennyLane` / `Qiskit` agreement
 - calibrated Bell-state measurement path
-- hardware-precursor quantum-state preparation and observable protocols
+- real IBM hardware bridge and repeatability evidence
 
 That is the present technical claim boundary.
 
 ## Next Phases
 
-### 1. Bell-Type Semantic Contextuality
+### 1. Direct PennyLane Hardware Pass
+
+Use `pennylane-qiskit` and `qml.device("qiskit.remote", ...)` to run the
+PennyLane-authored circuits directly on real IBM hardware.
+
+Goal:
+
+- close the remaining PennyLane hardware gap before stronger protocol claims
+
+### 2. Bell-Type Semantic Contextuality
 
 Define a formal semantic contextuality protocol with bounded outcomes and a
 classical contextual baseline.
@@ -214,7 +249,7 @@ Goal:
 
 - turn the descriptive bridge into a formal contextuality rung
 
-### 2. Later `HRV / ARC15 / Physical-Observable Bridge`
+### 3. Later `HRV / ARC15 / Physical-Observable Bridge`
 
 Bridge the AI-side architecture stack into synchronized physical-measurement
 lanes through their own controls.

@@ -1,10 +1,10 @@
-# Next Phase Research Plan From Phase 8
+# Next Phase Research Plan From Phase 9B
 
 Date: `2026-04-22`
 
 ## Current Locked State
 
-The evidence stack is now locked through `Phase 8`.
+The evidence stack is now locked through `Phase 9B`.
 
 Current ladder:
 
@@ -14,9 +14,11 @@ Current ladder:
 4. `Phase 3` - dimension and late-band structure
 5. `Phase 4` - token-path localization and localization variance
 6. `Phase 5` - context-to-readout bridge map
-7. `Phase 6` - `PennyLane` quantum-bridge encoding discovery
+7. `Phase 6` - `PennyLane` quantum-bridge encoding discovery on local simulator backend
 8. `Phase 7` - `Qiskit` mirror / simulator lock
-9. `Phase 8` - Bell-state calibration
+9. `Phase 8` - Bell-state calibration on simulator backend
+10. `Phase 9` - real IBM Quantum hardware bridge
+11. `Phase 9B` - same-backend and cross-backend IBM hardware repeatability
 
 Current best read:
 
@@ -28,31 +30,91 @@ Current best read:
 - the locked geometry can be encoded into circuit state spaces
 - the `PennyLane` encoding mirrors cleanly in `Qiskit`
 - the Bell-state observable path is calibrated on a known `|Phi+>` state
+- the bridge now runs on real IBM Quantum hardware
+- the hardware bridge repeats across `ibm_kingston` and `ibm_fez`
 
 The next plan starts from that base.
 
-## Strategic Meaning Of Phase 6-8
+## Strategic Meaning Of Phase 6-9B
 
 `Phase 6-8` shift the work from only "AI model evidence" into a quantum-bridge
-program.
+program. `Phase 9-9B` then move that bridge from simulator preparation into
+real IBM Quantum backend execution.
 
 They create:
 
 - AI-feature encoded circuit states
 - cross-framework simulator agreement
 - a calibrated Bell-state observable/scoring path
-- a concrete path toward noisy simulation, hardware/backend tests, and later
-  Bell-type semantic contextuality
+- real hardware bridge runs and repeatability checks
+- a concrete path toward direct PennyLane hardware execution and later Bell-type
+  semantic contextuality
 
 This is why the support need is now more explicit:
 
 - funding creates the operating room to keep building and researching
 - compute expands reruns, model matrices, encoding sweeps, Qiskit/noisy
-  simulation, and hardware preparation
+  simulation, PennyLane/Qiskit hardware passes, and backend repeats
 - strategic support opens applied problem surfaces, cloud/quantum
   infrastructure, and partner validation paths
 
-## Phase 9 - Bell-Type Semantic Contextuality Protocol
+## Phase 9C - Direct PennyLane Hardware Pass
+
+### Objective
+
+Run the PennyLane encoding layer directly through the PennyLane `qiskit.remote`
+device onto real IBM Quantum hardware.
+
+### Core Question
+
+Can the Phase 6 PennyLane-authored circuit layer execute against real IBM
+hardware while preserving the same compressed AI-feature readout structure seen
+in Phase 9/9B?
+
+### Important Boundary
+
+This is different from Phase 9.
+
+- `Phase 9/9B` used Qiskit Runtime submission for real IBM hardware.
+- `Phase 9C` should use the PennyLane device stack directly:
+  `qml.device("qiskit.remote", backend=<real IBM backend>, shots=<n>)`.
+
+### Minimum Circuit Set
+
+- Bell/control calibration through PennyLane remote device
+- compressed `Mistral` Phase 6 feature circuit
+- compressed `Hermes` Phase 6 feature circuit
+- compressed `Nemotron` Phase 6 feature circuit
+
+### Success Condition
+
+Phase 9C is successful if:
+
+- execution uses `pennylane-qiskit` with `qiskit.remote`
+- backend is a real IBM backend, not `default.qubit`, Aer, or fake backend
+- result artifacts record backend, shots, circuit names, counts/samples, and
+  parity expectations
+- public docs keep the boundary clear: direct PennyLane hardware pass, not yet
+  Bell-type semantic contextuality
+
+## Phase 9D - PennyLane Hardware Repeatability
+
+### Objective
+
+Repeat Phase 9C across at least one same-backend repeat and one cross-backend
+run.
+
+### Success Condition
+
+Phase 9D is successful if:
+
+- Bell/control calibration remains directionally aligned
+- compressed AI-feature circuits retain a stable readout direction
+- finite-shot and device noise are documented
+- the public artifact remains docs/results only, with no private code or
+  credentials
+
+## Phase 10 - Bell-Type Semantic Contextuality Protocol
 
 ### Objective
 
@@ -208,7 +270,7 @@ Private outputs:
 
 ### Success Condition
 
-Phase 9 is successful if:
+Phase 10 is successful if:
 
 - all settings are pre-registered
 - outcomes are bounded
@@ -216,7 +278,7 @@ Phase 9 is successful if:
 - the score is reproducible under rerun discipline
 - the interpretation stays within semantic contextuality boundaries
 
-## Phase 10 - Noisy Simulation And Hardware-Ready Qiskit Path
+## Phase 11 - Noisy Simulation And Hardware-Ready Qiskit Path
 
 ### Objective
 
@@ -281,7 +343,7 @@ Phase 10 is successful if:
 - hardware candidate circuits are shallow enough to attempt responsibly
 - product-state controls stay separated from Bell-state / encoded-state results
 
-## Phase 11 - Expanded Model Matrix And Fresh Variance
+## Phase 12 - Expanded Model Matrix And Fresh Variance
 
 ### Objective
 
@@ -320,16 +382,16 @@ Expansion is useful only if it clarifies:
 
 Avoid collecting model names just to collect names.
 
-## Phase 12 - Integrated Public Technical Pack Refresh
+## Phase 13 - Integrated Public Technical Pack Refresh
 
 ### Objective
 
 Refresh the public technical pack so it reads as one coherent stack from `V7`
-through `Phase 8`.
+through `Phase 9B`, then update again after `Phase 9C/9D`.
 
 ### Required Updates
 
-- update integrated white paper with Phase 6-8 results
+- update integrated white paper with Phase 6-9B results
 - update diagrams with the full ladder
 - add architecture hierarchy / non-classical vocabulary
 - add support translation in technical terms
@@ -350,10 +412,10 @@ The public repo should answer:
 - what was discovered
 - what was measured
 - what is non-classical vocabulary versus current evidence
-- why Phase 6-8 matter
+- why Phase 6-9B matter
 - what support is needed next
 
-## Phase 13 - Partner / Applied Problem Translation
+## Phase 14 - Partner / Applied Problem Translation
 
 ### Objective
 
@@ -397,7 +459,7 @@ Each partner pitch should clearly answer:
 - what proof exists already
 - what remains protected
 
-## Phase 14 - HRV / ARC15 / Physical-Observable Bridge
+## Phase 15 - HRV / ARC15 / Physical-Observable Bridge
 
 ### Objective
 
