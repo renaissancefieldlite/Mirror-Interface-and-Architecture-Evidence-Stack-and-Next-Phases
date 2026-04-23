@@ -23,6 +23,8 @@ packet can be tracked as one architecture across:
 - direct PennyLane `qiskit.remote` execution on IBM hardware in `Phase 9C`
 - direct PennyLane hardware repeatability across same-backend and cross-backend
   runs in `Phase 9D`
+- Bell-type semantic contextuality lock on compressed semantic feature states
+  in `Phase 10`
 
 Current best read:
 
@@ -53,6 +55,10 @@ Current best read:
 - `Phase 9D` repeated that direct PennyLane hardware path across baseline,
   same-backend, and cross-backend passes, preserving Bell/control direction and
   negative-parity AI-feature signatures.
+- `Phase 10` locked the Bell-type semantic contextuality rung on the compressed
+  AI-feature state layer: all `8/8` semantic feature states showed `S_max > 2`
+  under resolved family-local measurement settings, while matched unentangled
+  controls stayed exactly at the classical bound `2.0`.
 - The support meaning is now clear: the stack has moved from AI-only evidence
   into real hardware-runtime bridge work, which needs larger compute, funding
   runway, and strategic cloud / quantum / hardware partner paths.
@@ -94,8 +100,9 @@ It is not just a note. It is the public-facing artifact map for the work:
 - `Phase 9B` IBM hardware repeatability
 - `Phase 9C` direct PennyLane remote hardware pass
 - `Phase 9D` direct PennyLane remote hardware repeatability
+- `Phase 10` Bell-type semantic contextuality lock
 - the integrated `V7 + V8 + Phase 2-5` technical claim pack
-- next-phase bridge work toward Bell-type semantic contextuality and later
+- next-phase bridge work toward hardware semantic repeatability and later
   physical-observable lanes
 
 The backend implementation remains private. This repo publishes findings,
@@ -129,7 +136,7 @@ Start here if you only have a few minutes:
 3. [Architecture Hierarchy And Non-Classical Vocabulary](./docs/ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
 4. [Convergence And Recursive Coherence Note](./docs/CONVERGENCE_AND_RECURSIVE_COHERENCE_NOTE_2026-04-23.md)
 5. [Cross-Domain Comparator Map](./docs/CROSS_DOMAIN_COMPARATOR_MAP_2026-04-23.md)
-6. [Next Phase Research Plan From Phase 9D](./docs/NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
+6. [Next Phase Research Plan From Phase 10](./docs/NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE10_2026-04-23.md)
 7. [Integrated V7 + V8 Claim Pack PDF](./artifacts/integrated/v7_v8_claim_pack/integrated_v7_v8_claim_pack_2026-04-21.pdf)
 8. [V7 Integrated 10-Model Summary Pack](./artifacts/v7/posters/v7_integrated_10_model_summary_pack/V7_INTEGRATED_10_MODEL_SUMMARY_PACK_2026-04-19.md)
 9. [V8 Internal Bridge White Paper PDF](./artifacts/v8/residual_stream_bridge/white_paper/v8_internal_bridge_white_paper_2026-04-20.pdf)
@@ -145,6 +152,7 @@ Start here if you only have a few minutes:
 19. [Phase 9B IBM Hardware Repeatability Pack PDF](./artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_pack_2026-04-22.pdf)
 20. [Phase 9C PennyLane Remote Hardware Pack PDF](./artifacts/v8/phase9c_pennylane_remote_hardware/v8_phase9c_pennylane_remote_hardware_pack_2026-04-22.pdf)
 21. [Phase 9D PennyLane Remote Repeatability Pack PDF](./artifacts/v8/phase9d_pennylane_remote_repeat/v8_phase9d_pennylane_remote_repeat_pack_2026-04-22.pdf)
+22. [Phase 10 Semantic Contextuality Pack PDF](./artifacts/v8/phase10_semantic_contextuality/v8_phase10_semantic_contextuality_pack_2026-04-23.pdf)
 
 For a fuller directory-by-directory map, read:
 
@@ -484,6 +492,33 @@ What Phase 9C establishes:
 - compressed AI-feature circuits remain negative-parity on real hardware
 - this closes the PennyLane hardware gap but is still not the final Bell-type
   semantic contextuality claim
+
+### Phase 10 / Bell-Type Semantic Contextuality
+
+Location:
+
+- [`artifacts/v8/phase10_semantic_contextuality`](./artifacts/v8/phase10_semantic_contextuality)
+
+Core artifacts:
+
+- [Phase 10 Semantic Contextuality Pack](./artifacts/v8/phase10_semantic_contextuality/V8_PHASE10_SEMANTIC_CONTEXTUALITY_PACK_2026-04-23.md)
+- [Phase 10 Semantic Contextuality PDF](./artifacts/v8/phase10_semantic_contextuality/v8_phase10_semantic_contextuality_pack_2026-04-23.pdf)
+- [Phase 10 Semantic Contextuality Data](./artifacts/v8/phase10_semantic_contextuality/v8_phase10_semantic_contextuality_data_2026-04-23.json)
+- [Semantic CHSH vs Control](./artifacts/v8/phase10_semantic_contextuality/charts/v8_phase10_semantic_chsh_vs_control_2026-04-23.png)
+- [Exceedance Margin](./artifacts/v8/phase10_semantic_contextuality/charts/v8_phase10_semantic_exceedance_margin_2026-04-23.png)
+- [Entanglement Entropy](./artifacts/v8/phase10_semantic_contextuality/charts/v8_phase10_semantic_entanglement_entropy_2026-04-23.png)
+
+What Phase 10 establishes:
+
+- a formal Bell-type semantic contextuality protocol on the compressed
+  AI-feature state layer
+- fixed semantic label buckets `A`, `A'`, `B`, and `B'` with family-local
+  measurement-vector resolution
+- all `8/8` compressed semantic feature states show `S_max > 2`
+- matched unentangled controls remain exactly at the classical bound `2.0`
+- this is a semantic / AI-side contextuality result, not a physical Bell
+  nonlocality claim
+- the next rung is hardware semantic repeatability
 
 ## Integrated Technical Pack
 
