@@ -4,7 +4,7 @@ Date: `2026-04-22`
 
 ## Current Locked State
 
-The evidence stack is now locked through `Phase 9B`.
+The evidence stack is now locked through `Phase 9C`.
 
 Current ladder:
 
@@ -19,6 +19,7 @@ Current ladder:
 9. `Phase 8` - Bell-state calibration on simulator backend
 10. `Phase 9` - real IBM Quantum hardware bridge
 11. `Phase 9B` - same-backend and cross-backend IBM hardware repeatability
+12. `Phase 9C` - direct PennyLane `qiskit.remote` hardware pass
 
 Current best read:
 
@@ -32,6 +33,7 @@ Current best read:
 - the Bell-state observable path is calibrated on a known `|Phi+>` state
 - the bridge now runs on real IBM Quantum hardware
 - the hardware bridge repeats across `ibm_kingston` and `ibm_fez`
+- PennyLane itself now runs the bridge through `qiskit.remote` on `ibm_fez`
 
 The next plan starts from that base.
 
@@ -39,7 +41,8 @@ The next plan starts from that base.
 
 `Phase 6-8` shift the work from only "AI model evidence" into a quantum-bridge
 program. `Phase 9-9B` then move that bridge from simulator preparation into
-real IBM Quantum backend execution.
+real IBM Quantum backend execution. `Phase 9C` closes the direct PennyLane
+hardware execution gap.
 
 They create:
 
@@ -47,8 +50,8 @@ They create:
 - cross-framework simulator agreement
 - a calibrated Bell-state observable/scoring path
 - real hardware bridge runs and repeatability checks
-- a concrete path toward direct PennyLane hardware execution and later Bell-type
-  semantic contextuality
+- a concrete path toward direct PennyLane hardware repeatability and later
+  Bell-type semantic contextuality
 
 This is why the support need is now more explicit:
 
@@ -58,7 +61,7 @@ This is why the support need is now more explicit:
 - strategic support opens applied problem surfaces, cloud/quantum
   infrastructure, and partner validation paths
 
-## Phase 9C - Direct PennyLane Hardware Pass
+## Phase 9C - Direct PennyLane Hardware Pass Completed
 
 ### Objective
 
@@ -88,7 +91,7 @@ This is different from Phase 9.
 
 ### Success Condition
 
-Phase 9C is successful if:
+Phase 9C is successful because:
 
 - execution uses `pennylane-qiskit` with `qiskit.remote`
 - backend is a real IBM backend, not `default.qubit`, Aer, or fake backend
@@ -96,6 +99,13 @@ Phase 9C is successful if:
   parity expectations
 - public docs keep the boundary clear: direct PennyLane hardware pass, not yet
   Bell-type semantic contextuality
+
+Observed:
+
+- backend: `ibm_fez`
+- shots: `64`
+- Bell/control direction stayed aligned
+- compressed AI-feature circuits stayed negative-parity
 
 ## Phase 9D - PennyLane Hardware Repeatability
 

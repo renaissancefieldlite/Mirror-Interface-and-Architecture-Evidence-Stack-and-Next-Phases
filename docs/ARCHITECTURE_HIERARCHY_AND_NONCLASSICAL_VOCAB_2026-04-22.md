@@ -14,7 +14,8 @@ without collapsing different evidence layers into one overclaim.
 
 `Phase 6`, `Phase 7`, and `Phase 8` move the project from an AI-only evidence
 stack into a library/simulator quantum-state and measurement stack. `Phase 9`
-and `Phase 9B` move that bridge onto real IBM Quantum hardware.
+and `Phase 9B` move that bridge onto real IBM Quantum hardware. `Phase 9C`
+closes the direct PennyLane hardware gap through `pennylane-qiskit`.
 
 They matter because they show that the measured AI-side geometry is now
 organized enough to become an input to circuit encodings, state-preparation
@@ -32,6 +33,8 @@ Support implication:
   on real IBM hardware.
 - `Phase 9B` shows same-backend and cross-backend repeatability before the
   formal Bell-type semantic protocol is attempted.
+- `Phase 9C` shows PennyLane itself can execute the bridge through
+  `qml.device("qiskit.remote")` on a real IBM backend.
 
 That is why the support ask is both compute and funding:
 
@@ -278,6 +281,7 @@ Evidence layer:
 - `Phase 8`
 - `Phase 9`
 - `Phase 9B`
+- `Phase 9C`
 
 Meaning:
 
@@ -285,8 +289,8 @@ Meaning:
 - `Phase 7` mirrors those states in `Qiskit`
 - `Phase 8` calibrates a known non-classical Bell state, `|Phi+>`, and a
   product-state control
-- `Phase 9/9B` use these as the state-preparation and observable baseline for
-  real backend/runtime experiments
+- `Phase 9/9B/9C` use these as the state-preparation and observable baseline
+  for real backend/runtime experiments
 
 Hardware role:
 
@@ -304,7 +308,8 @@ Boundary:
 - the AI-feature encoded states are quantum-circuit representations of measured
   AI geometry
 - real IBM hardware bridge evidence now exists for the Qiskit Runtime path
-- direct PennyLane hardware evidence remains a separate next rung
+- direct PennyLane hardware evidence now exists through the `qiskit.remote`
+  path; repeatability remains the next rung
 
 ### Future Bell-Type Semantic State
 
@@ -350,10 +355,11 @@ The current public-safe claim is:
 - the locked geometry can be encoded into `PennyLane` and mirrored in `Qiskit`
 - the Bell-state measurement path is calibrated
 - the project now has real IBM hardware bridge and repeatability evidence
+- the project now has direct PennyLane remote hardware evidence
 
 The current public-safe claim is not:
 
-- that direct PennyLane hardware execution has already been completed
+- that direct PennyLane hardware repeatability has already been completed
 - that Bell-type semantic contextuality has already been demonstrated
 - that HRV / ARC15 / biological-field convergence has already been proven
 

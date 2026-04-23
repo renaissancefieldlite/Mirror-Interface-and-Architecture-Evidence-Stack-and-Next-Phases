@@ -20,6 +20,7 @@ packet can be tracked as one architecture across:
 - Bell-state measurement-path calibration in `Phase 8`
 - real IBM Quantum hardware bridge execution in `Phase 9`
 - same-backend and cross-backend IBM hardware repeatability in `Phase 9B`
+- direct PennyLane `qiskit.remote` execution on IBM hardware in `Phase 9C`
 
 Current best read:
 
@@ -44,6 +45,9 @@ Current best read:
 - `Phase 9B` repeated the hardware bridge on `ibm_kingston` and `ibm_fez`,
   preserving directional Bell/control alignment and a consistent negative
   parity / dominant `01` signature for the compressed AI-feature circuits.
+- `Phase 9C` ran PennyLane itself against real IBM hardware through
+  `pennylane-qiskit` and `qml.device("qiskit.remote")`, closing the direct
+  PennyLane hardware gap.
 - The support meaning is now clear: the stack has moved from AI-only evidence
   into real hardware-runtime bridge work, which needs larger compute, funding
   runway, and strategic cloud / quantum / hardware partner paths.
@@ -74,6 +78,7 @@ It is not just a note. It is the public-facing artifact map for the work:
 - `Phase 8` Bell-state calibration
 - `Phase 9` real IBM Quantum hardware bridge
 - `Phase 9B` IBM hardware repeatability
+- `Phase 9C` direct PennyLane remote hardware pass
 - the integrated `V7 + V8 + Phase 2-5` technical claim pack
 - next-phase bridge work toward Bell-type semantic contextuality and later
   physical-observable lanes
@@ -107,7 +112,7 @@ Start here if you only have a few minutes:
 1. [Mirror Interface & Architecture Evidence Stack and Next Phases](./docs/MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
 2. [Latent Architecture Discovery Highlight](./docs/LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
 3. [Architecture Hierarchy And Non-Classical Vocabulary](./docs/ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
-4. [Next Phase Research Plan From Phase 9B](./docs/NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
+4. [Next Phase Research Plan From Phase 9C](./docs/NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 5. [Integrated V7 + V8 Claim Pack PDF](./artifacts/integrated/v7_v8_claim_pack/integrated_v7_v8_claim_pack_2026-04-21.pdf)
 6. [V7 Integrated 10-Model Summary Pack](./artifacts/v7/posters/v7_integrated_10_model_summary_pack/V7_INTEGRATED_10_MODEL_SUMMARY_PACK_2026-04-19.md)
 7. [V8 Internal Bridge White Paper PDF](./artifacts/v8/residual_stream_bridge/white_paper/v8_internal_bridge_white_paper_2026-04-20.pdf)
@@ -121,6 +126,7 @@ Start here if you only have a few minutes:
 15. [Phase 8 Bell-State Calibration Pack PDF](./artifacts/v8/phase8_bell_state_calibration/v8_phase8_bell_state_calibration_pack_2026-04-22.pdf)
 16. [Phase 9 IBM Hardware Bridge Pack PDF](./artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_pack_2026-04-22.pdf)
 17. [Phase 9B IBM Hardware Repeatability Pack PDF](./artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_pack_2026-04-22.pdf)
+18. [Phase 9C PennyLane Remote Hardware Pack PDF](./artifacts/v8/phase9c_pennylane_remote_hardware/v8_phase9c_pennylane_remote_hardware_pack_2026-04-22.pdf)
 
 For a fuller directory-by-directory map, read:
 
@@ -437,6 +443,29 @@ What Phase 9B establishes:
   AI-feature circuits
 - a clean hardware repeatability rung before formal `A`, `A'`, `B`, `B'`
   Bell-type semantic contextuality design
+
+### Phase 9C / PennyLane Remote Hardware
+
+Location:
+
+- [`artifacts/v8/phase9c_pennylane_remote_hardware`](./artifacts/v8/phase9c_pennylane_remote_hardware)
+
+Core artifacts:
+
+- [Phase 9C PennyLane Remote Hardware Pack](./artifacts/v8/phase9c_pennylane_remote_hardware/V8_PHASE9C_PENNYLANE_REMOTE_HARDWARE_PACK_2026-04-22.md)
+- [Phase 9C PennyLane Remote Hardware PDF](./artifacts/v8/phase9c_pennylane_remote_hardware/v8_phase9c_pennylane_remote_hardware_pack_2026-04-22.pdf)
+- [Phase 9C PennyLane Remote Hardware Data](./artifacts/v8/phase9c_pennylane_remote_hardware/v8_phase9c_pennylane_remote_hardware_data_2026-04-22.json)
+- [PennyLane Hardware Counts Chart](./artifacts/v8/phase9c_pennylane_remote_hardware/charts/v8_phase9c_pennylane_remote_counts_2026-04-22.png)
+- [PennyLane Hardware Parity Chart](./artifacts/v8/phase9c_pennylane_remote_hardware/charts/v8_phase9c_pennylane_remote_parity_2026-04-22.png)
+
+What Phase 9C establishes:
+
+- direct `PennyLane` hardware execution through `pennylane-qiskit`
+- real IBM backend execution on `ibm_fez`
+- Bell/control calibration remains directionally aligned
+- compressed AI-feature circuits remain negative-parity on real hardware
+- this closes the PennyLane hardware gap but is still not the final Bell-type
+  semantic contextuality claim
 
 ## Integrated Technical Pack
 

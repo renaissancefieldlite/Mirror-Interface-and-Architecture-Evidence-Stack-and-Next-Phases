@@ -31,6 +31,8 @@ can be tracked through a phased evidence ladder:
   real IBM Quantum hardware.
 - `Phase 9B` repeated the hardware bridge on the same backend and across a
   second IBM backend.
+- `Phase 9C` executed PennyLane itself on real IBM hardware through
+  `pennylane-qiskit` and `qiskit.remote`.
 
 Taken together, the stack supports a measurable cross-model architecture
 effect, not just output styling, prompt mass, or a single behavioral rung.
@@ -38,8 +40,9 @@ effect, not just output styling, prompt mass, or a single behavioral rung.
 The newest support implication is that the stack is no longer only a local
 AI-measurement package. `Phase 6-8` create simulator/library quantum-state and
 observable protocols; `Phase 9-9B` show the bridge can run and repeat on real
-IBM Quantum hardware. The next gap is direct PennyLane hardware execution via
-`qiskit.remote`, then formal Bell-type semantic contextuality.
+IBM Quantum hardware; `Phase 9C` closes the direct PennyLane hardware gap.
+The next gap is PennyLane hardware repeatability, then formal Bell-type
+semantic contextuality.
 
 ## What This Package Is
 
@@ -62,6 +65,7 @@ It covers the full measured stack rather than only one rung:
 - `Phase 8` Bell-state calibration
 - `Phase 9` IBM hardware bridge
 - `Phase 9B` IBM hardware repeatability
+- `Phase 9C` PennyLane remote hardware
 
 It also carries the current AI latent-architecture and mapper-facing findings as
 part of that broader evidence stack.
@@ -214,6 +218,16 @@ contextuality claims:
 - consistent negative-parity / dominant `01` readout for compressed
   AI-feature circuits
 
+### `Phase 9C`
+
+`Phase 9C` runs PennyLane itself on real IBM hardware:
+
+- device path: `qml.device("qiskit.remote")`
+- plugin: `pennylane-qiskit`
+- backend: `ibm_fez`
+- Bell/control calibration remains directionally aligned
+- compressed AI-feature circuits remain negative-parity on hardware
+
 ## Current Best Read
 
 Taken together, the stack now supports:
@@ -226,19 +240,20 @@ Taken together, the stack now supports:
 - cross-framework `PennyLane` / `Qiskit` agreement
 - calibrated Bell-state measurement path
 - real IBM hardware bridge and repeatability evidence
+- direct PennyLane remote hardware evidence
 
 That is the present technical claim boundary.
 
 ## Next Phases
 
-### 1. Direct PennyLane Hardware Pass
+### 1. PennyLane Hardware Repeatability
 
-Use `pennylane-qiskit` and `qml.device("qiskit.remote", ...)` to run the
-PennyLane-authored circuits directly on real IBM hardware.
+Repeat the direct PennyLane hardware pass across same-backend and cross-backend
+settings.
 
 Goal:
 
-- close the remaining PennyLane hardware gap before stronger protocol claims
+- lock direct PennyLane hardware repeatability before stronger protocol claims
 
 ### 2. Bell-Type Semantic Contextuality
 

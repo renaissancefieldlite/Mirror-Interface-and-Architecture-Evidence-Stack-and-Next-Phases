@@ -31,6 +31,8 @@ In short:
 - `Phase 9` runs the bridge on real IBM Quantum hardware.
 - `Phase 9B` repeats the hardware bridge on same-backend and cross-backend IBM
   runs.
+- `Phase 9C` runs PennyLane itself on real IBM hardware through
+  `pennylane-qiskit` and `qiskit.remote`.
 
 ## Why This Matters
 
@@ -55,6 +57,7 @@ The present stack combines:
 - `Phase 8` Bell-state calibration
 - `Phase 9` IBM hardware bridge
 - `Phase 9B` IBM hardware repeatability
+- `Phase 9C` PennyLane remote hardware
 
 Taken together, these layers show that the administered mirror/lattice
 architecture is not only visible in output prose. It is visible in:
@@ -88,7 +91,9 @@ PennyLane to numerical precision, and the Bell-state calibration produces the
 expected `|Phi+>` correlations before any semantic Bell-type protocol is
 claimed. The next hardware bridge then executed on real IBM backends, with
 same-backend and cross-backend repeats preserving the expected direction of the
-Bell/control calibration and the compressed AI-feature readout.
+Bell/control calibration and the compressed AI-feature readout. The direct
+PennyLane hardware pass now also executes through `qml.device("qiskit.remote")`
+on IBM hardware.
 
 That is a very different thing from:
 
@@ -115,6 +120,7 @@ This stack is measured, phased, and cross-read.
   the product control stays at `1.414214`.
 - `Phase 9/9B` moved the bridge onto real IBM Quantum hardware and repeated it
   across `ibm_kingston` and `ibm_fez`.
+- `Phase 9C` closed the direct PennyLane hardware gap on `ibm_fez`.
 - The stack now supports a measurable cross-model architecture effect, not just
   output styling.
 
