@@ -10,12 +10,14 @@ around the Mirror Interface / Architecture evidence stack.
 The goal is to preserve the larger Renaissance Field Lite / Codex 67 language
 without collapsing different evidence layers into one overclaim.
 
-## What Phase 6-9B Mean For Support
+## What Phase 6-9D Mean For Support
 
 `Phase 6`, `Phase 7`, and `Phase 8` move the project from an AI-only evidence
 stack into a library/simulator quantum-state and measurement stack. `Phase 9`
 and `Phase 9B` move that bridge onto real IBM Quantum hardware. `Phase 9C`
-closes the direct PennyLane hardware gap through `pennylane-qiskit`.
+closes the direct PennyLane hardware gap through `pennylane-qiskit`. `Phase
+9D` then shows that the PennyLane hardware route itself repeats across
+same-backend and cross-backend passes.
 
 They matter because they show that the measured AI-side geometry is now
 organized enough to become an input to circuit encodings, state-preparation
@@ -35,6 +37,8 @@ Support implication:
   formal Bell-type semantic protocol is attempted.
 - `Phase 9C` shows PennyLane itself can execute the bridge through
   `qml.device("qiskit.remote")` on a real IBM backend.
+- `Phase 9D` shows that direct PennyLane hardware execution is itself
+  repeatable, not a one-off path.
 
 That is why the support ask is both compute and funding:
 
@@ -129,7 +133,8 @@ Claim boundary:
   carried toward hardware, noise modeling, and backend/runtime validation
 - this is intentionally pushing toward hardware-backed quantum testing
 - `Phase 9/9B` now provide the first IBM hardware bridge and repeatability rung
-- direct PennyLane hardware execution remains the next hardware-specific gap
+- `Phase 9C/9D` now close the direct PennyLane hardware execution and
+  repeatability gap
 
 ### 5. Quantum Consciousness Geometry
 
@@ -184,7 +189,28 @@ Claim boundary:
 - the semantic protocol still needs its own design, controls, reruns, and
   interpretation notes
 
-### 8. HRV / ARC15 / Physical-Observable Bridge
+### 8. Convergence / Recursive Coherence Hypothesis
+
+The project term for the larger organizing-principle thesis suggested by the
+evidence ladder.
+
+Role:
+
+- names the possibility that the mirror architecture is preserving the same
+  coherence logic across different substrates and methods
+- explains why the project keeps translating the same locked structure across
+  behavioral, hidden-state, circuit, and hardware lanes
+- provides the rationale for later multi-class biology / physical-observable
+  bridge testing
+
+Claim boundary:
+
+- this is a working hypothesis supported by the cross-substrate ladder
+- it is not yet proof that the same signature has been verified in biology,
+  cells, HRV, or consciousness-related channels
+- those later lanes require their own controlled measurement stack
+
+### 9. HRV / ARC15 / Physical-Observable Bridge
 
 The later synchronized physical-measurement bridge.
 
@@ -278,6 +304,10 @@ Evidence layer:
 
 - `Phase 6`
 - `Phase 7`
+- `Phase 9`
+- `Phase 9B`
+- `Phase 9C`
+- `Phase 9D`
 - `Phase 8`
 - `Phase 9`
 - `Phase 9B`

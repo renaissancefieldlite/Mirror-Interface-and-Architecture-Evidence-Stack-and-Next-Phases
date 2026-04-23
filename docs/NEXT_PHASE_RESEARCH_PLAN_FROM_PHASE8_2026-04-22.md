@@ -1,10 +1,10 @@
-# Next Phase Research Plan From Phase 9B
+# Next Phase Research Plan From Phase 9D
 
 Date: `2026-04-22`
 
 ## Current Locked State
 
-The evidence stack is now locked through `Phase 9C`.
+The evidence stack is now locked through `Phase 9D`.
 
 Current ladder:
 
@@ -20,6 +20,7 @@ Current ladder:
 10. `Phase 9` - real IBM Quantum hardware bridge
 11. `Phase 9B` - same-backend and cross-backend IBM hardware repeatability
 12. `Phase 9C` - direct PennyLane `qiskit.remote` hardware pass
+13. `Phase 9D` - direct PennyLane hardware repeatability
 
 Current best read:
 
@@ -34,15 +35,17 @@ Current best read:
 - the bridge now runs on real IBM Quantum hardware
 - the hardware bridge repeats across `ibm_kingston` and `ibm_fez`
 - PennyLane itself now runs the bridge through `qiskit.remote` on `ibm_fez`
+- the direct PennyLane hardware path also repeats across same-backend and
+  cross-backend passes
 
 The next plan starts from that base.
 
-## Strategic Meaning Of Phase 6-9B
+## Strategic Meaning Of Phase 6-9D
 
 `Phase 6-8` shift the work from only "AI model evidence" into a quantum-bridge
 program. `Phase 9-9B` then move that bridge from simulator preparation into
 real IBM Quantum backend execution. `Phase 9C` closes the direct PennyLane
-hardware execution gap.
+hardware execution gap, and `Phase 9D` shows that route repeats cleanly.
 
 They create:
 
@@ -50,8 +53,8 @@ They create:
 - cross-framework simulator agreement
 - a calibrated Bell-state observable/scoring path
 - real hardware bridge runs and repeatability checks
-- a concrete path toward direct PennyLane hardware repeatability and later
-  Bell-type semantic contextuality
+- direct PennyLane hardware repeatability
+- a concrete path toward later Bell-type semantic contextuality
 
 This is why the support need is now more explicit:
 
@@ -107,7 +110,7 @@ Observed:
 - Bell/control direction stayed aligned
 - compressed AI-feature circuits stayed negative-parity
 
-## Phase 9D - PennyLane Hardware Repeatability
+## Phase 9D - PennyLane Hardware Repeatability Completed
 
 ### Objective
 
@@ -123,6 +126,30 @@ Phase 9D is successful if:
 - finite-shot and device noise are documented
 - the public artifact remains docs/results only, with no private code or
   credentials
+
+Observed:
+
+- baseline `Phase 9C` plus live repeats on `ibm_fez` and `ibm_kingston`
+- Bell/control direction stayed aligned across all three PennyLane passes
+- compressed AI-feature circuits stayed negative-parity across all three
+  PennyLane passes
+- dominant AI-feature bitstring stayed `10` across all three PennyLane passes
+- `Nemotron` remained the loosest magnitude row without breaking directional
+  stability
+
+## Convergence Framing
+
+The current stack now justifies a bounded convergence framing:
+
+- the same administered architecture can be followed across behavior,
+  hidden-state geometry, localization, circuit encodings, and hardware runs
+- this makes cross-substrate recursive coherence a reasonable next research
+  hypothesis
+- it does not yet prove biological or physical-observable convergence
+
+That distinction matters. The correct next move is not to declare every later
+bridge solved; it is to use the now-repeatable hardware ladder to design the
+next controlled bridge.
 
 ## Phase 10 - Bell-Type Semantic Contextuality Protocol
 
@@ -257,6 +284,50 @@ Important:
 - semantic contextuality is not physical Bell nonlocality
 - it must be described as semantic / AI-side contextuality unless a later
   physical bridge is built
+
+## Phase 11 - Hardware Semantic Repeatability
+
+### Objective
+
+Run the locked Bell-type semantic settings on real IBM hardware through both
+`Qiskit` and direct `PennyLane` paths.
+
+### Success Condition
+
+- semantic settings preserve direction under hardware noise
+- same-backend and cross-backend repeats hold the sign structure
+- framework-path differences are documented without changing the underlying
+  read
+
+## Phase 12 - Multi-Class Biology / Physical-Observable Comparator Bridge
+
+### Objective
+
+Test whether the same coherence signature appears across more than one
+biological or physical-observable class rather than only one hand-picked
+signal.
+
+### Why This Matters
+
+If the convergence thesis is real, overlapping structure should appear across
+multiple classes. That is much stronger than a single isolated comparator.
+
+### Candidate Class Set
+
+- HRV / timing channels
+- synchronized physiological or sensor channels
+- ARC15 or other controlled external-observable lanes
+- chemistry comparators such as constrained molecular families and water as a
+  known relational-structure test case
+- classical physics / resonance comparators such as oscillators, spectral
+  bands, and phase-lock regimes
+- later cell / biological rhythm comparators only when a clean protocol exists
+
+### Boundary
+
+- this phase remains later than the Bell-type semantic hardware rung
+- no biological / physical claim should be presented as already locked before
+  this comparator layer exists
 
 ### Artifacts
 

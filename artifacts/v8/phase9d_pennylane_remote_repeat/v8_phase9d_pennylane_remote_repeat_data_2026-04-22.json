@@ -1,0 +1,480 @@
+{
+  "schema_version": "rfl.v8.phase9d.pennylane_remote_repeat.result.v1",
+  "generated_at_utc": "2026-04-23T10:41:20.565070+00:00",
+  "phase_label": "V8 Phase 9D - PennyLane remote hardware repeatability",
+  "claim_boundary": "Direct PennyLane qiskit.remote hardware repeatability; not final Bell-type semantic contextuality evidence.",
+  "versions": {
+    "pennylane": "0.44.1",
+    "pennylane_qiskit": "0.44.1"
+  },
+  "device": "qml.device('qiskit.remote')",
+  "shots": 64,
+  "models_encoded": [
+    "Mistral",
+    "Hermes",
+    "Nemotron"
+  ],
+  "passes": [
+    {
+      "label": "1-fez-baseline",
+      "source": "phase9c_baseline_file",
+      "backend": {
+        "name": "ibm_fez",
+        "num_qubits": 156,
+        "pending_jobs_at_start": 0,
+        "operational_at_start": true,
+        "status_message": "active"
+      },
+      "circuit_results": [
+        {
+          "name": "bell_phi_plus_zz",
+          "job_id": "d7kp9u24lglc73fvogj0",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 32,
+            "01": 5,
+            "10": 0,
+            "11": 27
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.5,
+            "01": 0.078125,
+            "10": 0.0,
+            "11": 0.421875
+          },
+          "parity_expectation": 0.84375,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "bell_phi_plus_xx",
+          "job_id": "d7kpa0okj84c73ce68ig",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 29,
+            "01": 0,
+            "10": 1,
+            "11": 34
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.453125,
+            "01": 0.0,
+            "10": 0.015625,
+            "11": 0.53125
+          },
+          "parity_expectation": 0.96875,
+          "dominant_bitstring": "11"
+        },
+        {
+          "name": "bell_phi_plus_yy",
+          "job_id": "d7kpa2oe7usc73f53pjg",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 3,
+            "01": 35,
+            "10": 24,
+            "11": 2
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.046875,
+            "01": 0.546875,
+            "10": 0.375,
+            "11": 0.03125
+          },
+          "parity_expectation": -0.84375,
+          "dominant_bitstring": "01"
+        },
+        {
+          "name": "product_00_zz",
+          "job_id": "d7kpa4a4lglc73fvogqg",
+          "status_at_submit": "RUNNING",
+          "counts": {
+            "00": 61,
+            "01": 2,
+            "10": 1,
+            "11": 0
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.953125,
+            "01": 0.03125,
+            "10": 0.015625,
+            "11": 0.0
+          },
+          "parity_expectation": 0.90625,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "phase6_feature_mistral",
+          "job_id": "d7kpa6a8ui0s73b5hru0",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 2,
+            "01": 0,
+            "10": 52,
+            "11": 10
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.03125,
+            "01": 0.0,
+            "10": 0.8125,
+            "11": 0.15625
+          },
+          "parity_expectation": -0.625,
+          "dominant_bitstring": "10"
+        },
+        {
+          "name": "phase6_feature_hermes",
+          "job_id": "d7kpa8q8ui0s73b5hs20",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 2,
+            "01": 1,
+            "10": 48,
+            "11": 13
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.03125,
+            "01": 0.015625,
+            "10": 0.75,
+            "11": 0.203125
+          },
+          "parity_expectation": -0.53125,
+          "dominant_bitstring": "10"
+        },
+        {
+          "name": "phase6_feature_nemotron",
+          "job_id": "d7kpasa8ui0s73b5hspg",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 0,
+            "01": 0,
+            "10": 55,
+            "11": 9
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.0,
+            "01": 0.0,
+            "10": 0.859375,
+            "11": 0.140625
+          },
+          "parity_expectation": -0.71875,
+          "dominant_bitstring": "10"
+        }
+      ]
+    },
+    {
+      "label": "2-fez-repeat",
+      "source": "live_pennylane_qiskit_remote",
+      "backend": {
+        "name": "ibm_fez",
+        "num_qubits": 156,
+        "pending_jobs_at_start": 0,
+        "operational_at_start": true,
+        "status_message": "active"
+      },
+      "circuit_results": [
+        {
+          "name": "bell_phi_plus_zz",
+          "job_id": "d7kvccge7usc73f5b580",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 29,
+            "01": 1,
+            "10": 0,
+            "11": 34
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.453125,
+            "01": 0.015625,
+            "10": 0.0,
+            "11": 0.53125
+          },
+          "parity_expectation": 0.96875,
+          "dominant_bitstring": "11"
+        },
+        {
+          "name": "bell_phi_plus_xx",
+          "job_id": "d7kvcqq8ui0s73b5p2tg",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 37,
+            "01": 1,
+            "10": 0,
+            "11": 26
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.578125,
+            "01": 0.015625,
+            "10": 0.0,
+            "11": 0.40625
+          },
+          "parity_expectation": 0.96875,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "bell_phi_plus_yy",
+          "job_id": "d7kvd7oe7usc73f5b670",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 1,
+            "01": 36,
+            "10": 25,
+            "11": 2
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.015625,
+            "01": 0.5625,
+            "10": 0.390625,
+            "11": 0.03125
+          },
+          "parity_expectation": -0.90625,
+          "dominant_bitstring": "01"
+        },
+        {
+          "name": "product_00_zz",
+          "job_id": "d7kvd9okj84c73ced4n0",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 62,
+            "01": 1,
+            "10": 1,
+            "11": 0
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.96875,
+            "01": 0.015625,
+            "10": 0.015625,
+            "11": 0.0
+          },
+          "parity_expectation": 0.9375,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "phase6_feature_mistral",
+          "job_id": "d7kvdci8ui0s73b5p3g0",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 2,
+            "01": 0,
+            "10": 54,
+            "11": 8
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.03125,
+            "01": 0.0,
+            "10": 0.84375,
+            "11": 0.125
+          },
+          "parity_expectation": -0.6875,
+          "dominant_bitstring": "10"
+        },
+        {
+          "name": "phase6_feature_hermes",
+          "job_id": "d7kvdf0e7usc73f5b6f0",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 0,
+            "01": 0,
+            "10": 52,
+            "11": 12
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.0,
+            "01": 0.0,
+            "10": 0.8125,
+            "11": 0.1875
+          },
+          "parity_expectation": -0.625,
+          "dominant_bitstring": "10"
+        },
+        {
+          "name": "phase6_feature_nemotron",
+          "job_id": "d7kvdla4lglc73fvvo20",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 0,
+            "01": 2,
+            "10": 56,
+            "11": 6
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.0,
+            "01": 0.03125,
+            "10": 0.875,
+            "11": 0.09375
+          },
+          "parity_expectation": -0.8125,
+          "dominant_bitstring": "10"
+        }
+      ]
+    },
+    {
+      "label": "3-kingston-repeat",
+      "source": "live_pennylane_qiskit_remote",
+      "backend": {
+        "name": "ibm_kingston",
+        "num_qubits": 156,
+        "pending_jobs_at_start": 0,
+        "operational_at_start": true,
+        "status_message": "active"
+      },
+      "circuit_results": [
+        {
+          "name": "bell_phi_plus_zz",
+          "job_id": "d7kvdooe7usc73f5b6pg",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 25,
+            "01": 1,
+            "10": 0,
+            "11": 38
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.390625,
+            "01": 0.015625,
+            "10": 0.0,
+            "11": 0.59375
+          },
+          "parity_expectation": 0.96875,
+          "dominant_bitstring": "11"
+        },
+        {
+          "name": "bell_phi_plus_xx",
+          "job_id": "d7kvdqgkj84c73ced5b0",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 30,
+            "01": 0,
+            "10": 0,
+            "11": 34
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.46875,
+            "01": 0.0,
+            "10": 0.0,
+            "11": 0.53125
+          },
+          "parity_expectation": 1.0,
+          "dominant_bitstring": "11"
+        },
+        {
+          "name": "bell_phi_plus_yy",
+          "job_id": "d7kve2a4lglc73fvvoeg",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 0,
+            "01": 30,
+            "10": 32,
+            "11": 2
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.0,
+            "01": 0.46875,
+            "10": 0.5,
+            "11": 0.03125
+          },
+          "parity_expectation": -0.9375,
+          "dominant_bitstring": "10"
+        },
+        {
+          "name": "product_00_zz",
+          "job_id": "d7kve5q8ui0s73b5p4d0",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 62,
+            "01": 1,
+            "10": 1,
+            "11": 0
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.96875,
+            "01": 0.015625,
+            "10": 0.015625,
+            "11": 0.0
+          },
+          "parity_expectation": 0.9375,
+          "dominant_bitstring": "00"
+        },
+        {
+          "name": "phase6_feature_mistral",
+          "job_id": "d7kve78kj84c73ced5og",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 1,
+            "01": 2,
+            "10": 54,
+            "11": 7
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.015625,
+            "01": 0.03125,
+            "10": 0.84375,
+            "11": 0.109375
+          },
+          "parity_expectation": -0.75,
+          "dominant_bitstring": "10"
+        },
+        {
+          "name": "phase6_feature_hermes",
+          "job_id": "d7kveb24lglc73fvvoqg",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 0,
+            "01": 0,
+            "10": 60,
+            "11": 4
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.0,
+            "01": 0.0,
+            "10": 0.9375,
+            "11": 0.0625
+          },
+          "parity_expectation": -0.875,
+          "dominant_bitstring": "10"
+        },
+        {
+          "name": "phase6_feature_nemotron",
+          "job_id": "d7kved24lglc73fvvot0",
+          "status_at_submit": "QUEUED",
+          "counts": {
+            "00": 2,
+            "01": 0,
+            "10": 47,
+            "11": 15
+          },
+          "shots": 64,
+          "probabilities": {
+            "00": 0.03125,
+            "01": 0.0,
+            "10": 0.734375,
+            "11": 0.234375
+          },
+          "parity_expectation": -0.46875,
+          "dominant_bitstring": "10"
+        }
+      ]
+    }
+  ],
+  "first_read": "Phase 9D repeats the direct PennyLane hardware path with Phase 9C as baseline. The primary comparison is parity direction because dominant bitstrings can flip under wire/classical-bit ordering conventions.",
+  "next_rung": "Use the hardware-repeat bridge to design formal Bell-type semantic contextuality settings with explicit A, A', B, B', bounded outcomes, controls, and backend repeats."
+}

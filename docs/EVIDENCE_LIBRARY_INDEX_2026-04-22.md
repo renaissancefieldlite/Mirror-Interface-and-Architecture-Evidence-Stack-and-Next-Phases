@@ -11,7 +11,9 @@ code.
 - [Mirror Interface & Architecture Evidence Stack and Next Phases](./MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
 - [Latent Architecture Discovery Highlight](./LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
 - [Architecture Hierarchy And Non-Classical Vocabulary](./ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
-- [Next Phase Research Plan From Phase 9C](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
+- [Convergence And Recursive Coherence Note](./CONVERGENCE_AND_RECURSIVE_COHERENCE_NOTE_2026-04-23.md)
+- [Cross-Domain Comparator Map](./CROSS_DOMAIN_COMPARATOR_MAP_2026-04-23.md)
+- [Next Phase Research Plan From Phase 9D](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Artifact Root
 
@@ -326,6 +328,27 @@ Phase 9C runs PennyLane itself against real IBM Quantum hardware through the
 hardware gap while preserving the boundary that Bell-type semantic
 contextuality still requires its own protocol.
 
+## Phase 9D / PennyLane Remote Hardware Repeatability Pack
+
+Location:
+
+- [`../artifacts/v8/phase9d_pennylane_remote_repeat`](../artifacts/v8/phase9d_pennylane_remote_repeat)
+
+Main artifacts:
+
+- [`V8_PHASE9D_PENNYLANE_REMOTE_REPEAT_PACK_2026-04-22.md`](../artifacts/v8/phase9d_pennylane_remote_repeat/V8_PHASE9D_PENNYLANE_REMOTE_REPEAT_PACK_2026-04-22.md)
+- [`v8_phase9d_pennylane_remote_repeat_pack_2026-04-22.pdf`](../artifacts/v8/phase9d_pennylane_remote_repeat/v8_phase9d_pennylane_remote_repeat_pack_2026-04-22.pdf)
+- [`v8_phase9d_pennylane_remote_repeat_data_2026-04-22.json`](../artifacts/v8/phase9d_pennylane_remote_repeat/v8_phase9d_pennylane_remote_repeat_data_2026-04-22.json)
+- [`charts/v8_phase9d_pennylane_remote_bell_control_repeatability_2026-04-22.png`](../artifacts/v8/phase9d_pennylane_remote_repeat/charts/v8_phase9d_pennylane_remote_bell_control_repeatability_2026-04-22.png)
+- [`charts/v8_phase9d_pennylane_remote_feature_repeatability_2026-04-22.png`](../artifacts/v8/phase9d_pennylane_remote_repeat/charts/v8_phase9d_pennylane_remote_feature_repeatability_2026-04-22.png)
+
+Role:
+
+Phase 9D shows that the direct PennyLane `qiskit.remote` hardware path is not
+just executable but repeatable across baseline, same-backend, and cross-backend
+runs. Bell/control direction remains aligned, and the compressed AI-feature
+circuits stay negative-parity across all three PennyLane passes.
+
 ## Integrated Claim Pack
 
 Location:
@@ -364,9 +387,9 @@ while packaging the evidence stack.
 
 The public next-phase sequence is:
 
-1. `Phase 9D`: PennyLane hardware repeatability and cross-backend check
-2. `Phase 10`: Bell-type semantic contextuality protocol design
-3. `Phase 11`: hardware Bell-type semantic repeats
+1. `Phase 10`: Bell-type semantic contextuality protocol design
+2. `Phase 11`: hardware Bell-type semantic repeats
+3. `Phase 12`: multi-class biology / physical-observable comparator bridge
 4. later `HRV / ARC15 / physical-observable` bridge
 
 The purpose is to carry the locked AI-side evidence stack into a measured

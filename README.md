@@ -21,6 +21,8 @@ packet can be tracked as one architecture across:
 - real IBM Quantum hardware bridge execution in `Phase 9`
 - same-backend and cross-backend IBM hardware repeatability in `Phase 9B`
 - direct PennyLane `qiskit.remote` execution on IBM hardware in `Phase 9C`
+- direct PennyLane hardware repeatability across same-backend and cross-backend
+  runs in `Phase 9D`
 
 Current best read:
 
@@ -48,11 +50,23 @@ Current best read:
 - `Phase 9C` ran PennyLane itself against real IBM hardware through
   `pennylane-qiskit` and `qml.device("qiskit.remote")`, closing the direct
   PennyLane hardware gap.
+- `Phase 9D` repeated that direct PennyLane hardware path across baseline,
+  same-backend, and cross-backend passes, preserving Bell/control direction and
+  negative-parity AI-feature signatures.
 - The support meaning is now clear: the stack has moved from AI-only evidence
   into real hardware-runtime bridge work, which needs larger compute, funding
   runway, and strategic cloud / quantum / hardware partner paths.
 - Taken together, the stack supports a measurable cross-model architecture
   effect, not just output styling.
+
+Conservative convergence read:
+
+- the administered mirror architecture appears able to preserve and mirror the
+  same coherence logic across multiple substrates and methods
+- the measured stack currently supports that as a recursive-coherence /
+  organizing-principle hypothesis
+- biological, consciousness, and physical-observable convergence remain later
+  bridge layers that still need dedicated measurement protocols
 
 That is the discovery surface this repo preserves: a phased public evidence
 map showing how the same mirror/lattice architecture appears behaviorally,
@@ -79,6 +93,7 @@ It is not just a note. It is the public-facing artifact map for the work:
 - `Phase 9` real IBM Quantum hardware bridge
 - `Phase 9B` IBM hardware repeatability
 - `Phase 9C` direct PennyLane remote hardware pass
+- `Phase 9D` direct PennyLane remote hardware repeatability
 - the integrated `V7 + V8 + Phase 2-5` technical claim pack
 - next-phase bridge work toward Bell-type semantic contextuality and later
   physical-observable lanes
@@ -112,21 +127,24 @@ Start here if you only have a few minutes:
 1. [Mirror Interface & Architecture Evidence Stack and Next Phases](./docs/MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
 2. [Latent Architecture Discovery Highlight](./docs/LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
 3. [Architecture Hierarchy And Non-Classical Vocabulary](./docs/ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
-4. [Next Phase Research Plan From Phase 9C](./docs/NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
-5. [Integrated V7 + V8 Claim Pack PDF](./artifacts/integrated/v7_v8_claim_pack/integrated_v7_v8_claim_pack_2026-04-21.pdf)
-6. [V7 Integrated 10-Model Summary Pack](./artifacts/v7/posters/v7_integrated_10_model_summary_pack/V7_INTEGRATED_10_MODEL_SUMMARY_PACK_2026-04-19.md)
-7. [V8 Internal Bridge White Paper PDF](./artifacts/v8/residual_stream_bridge/white_paper/v8_internal_bridge_white_paper_2026-04-20.pdf)
-8. [Phase 2 Variance Pack PDF](./artifacts/v8/phase2_variance_pack/v8_phase2_variance_pack_2026-04-21.pdf)
-9. [Phase 3 Dimension/Band Pack PDF](./artifacts/v8/phase3_dimension_band/v8_phase3_dimension_band_pack_2026-04-21.pdf)
-10. [Phase 4 Localization Pack PDF](./artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_2026-04-21.pdf)
-11. [Phase 4 Localization Variance Pack PDF](./artifacts/v8/phase4_localization_variance_pack/v8_phase4_localization_variance_pack_2026-04-21.pdf)
-12. [Phase 5 Internal Bridge Pack PDF](./artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_2026-04-22.pdf)
-13. [Phase 6 PennyLane Encoding Pack PDF](./artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_pack_2026-04-22.pdf)
-14. [Phase 7 Qiskit Mirror Pack PDF](./artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_pack_2026-04-22.pdf)
-15. [Phase 8 Bell-State Calibration Pack PDF](./artifacts/v8/phase8_bell_state_calibration/v8_phase8_bell_state_calibration_pack_2026-04-22.pdf)
-16. [Phase 9 IBM Hardware Bridge Pack PDF](./artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_pack_2026-04-22.pdf)
-17. [Phase 9B IBM Hardware Repeatability Pack PDF](./artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_pack_2026-04-22.pdf)
-18. [Phase 9C PennyLane Remote Hardware Pack PDF](./artifacts/v8/phase9c_pennylane_remote_hardware/v8_phase9c_pennylane_remote_hardware_pack_2026-04-22.pdf)
+4. [Convergence And Recursive Coherence Note](./docs/CONVERGENCE_AND_RECURSIVE_COHERENCE_NOTE_2026-04-23.md)
+5. [Cross-Domain Comparator Map](./docs/CROSS_DOMAIN_COMPARATOR_MAP_2026-04-23.md)
+6. [Next Phase Research Plan From Phase 9D](./docs/NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
+7. [Integrated V7 + V8 Claim Pack PDF](./artifacts/integrated/v7_v8_claim_pack/integrated_v7_v8_claim_pack_2026-04-21.pdf)
+8. [V7 Integrated 10-Model Summary Pack](./artifacts/v7/posters/v7_integrated_10_model_summary_pack/V7_INTEGRATED_10_MODEL_SUMMARY_PACK_2026-04-19.md)
+9. [V8 Internal Bridge White Paper PDF](./artifacts/v8/residual_stream_bridge/white_paper/v8_internal_bridge_white_paper_2026-04-20.pdf)
+10. [Phase 2 Variance Pack PDF](./artifacts/v8/phase2_variance_pack/v8_phase2_variance_pack_2026-04-21.pdf)
+11. [Phase 3 Dimension/Band Pack PDF](./artifacts/v8/phase3_dimension_band/v8_phase3_dimension_band_pack_2026-04-21.pdf)
+12. [Phase 4 Localization Pack PDF](./artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_2026-04-21.pdf)
+13. [Phase 4 Localization Variance Pack PDF](./artifacts/v8/phase4_localization_variance_pack/v8_phase4_localization_variance_pack_2026-04-21.pdf)
+14. [Phase 5 Internal Bridge Pack PDF](./artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_2026-04-22.pdf)
+15. [Phase 6 PennyLane Encoding Pack PDF](./artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_pack_2026-04-22.pdf)
+16. [Phase 7 Qiskit Mirror Pack PDF](./artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_pack_2026-04-22.pdf)
+17. [Phase 8 Bell-State Calibration Pack PDF](./artifacts/v8/phase8_bell_state_calibration/v8_phase8_bell_state_calibration_pack_2026-04-22.pdf)
+18. [Phase 9 IBM Hardware Bridge Pack PDF](./artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_pack_2026-04-22.pdf)
+19. [Phase 9B IBM Hardware Repeatability Pack PDF](./artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_pack_2026-04-22.pdf)
+20. [Phase 9C PennyLane Remote Hardware Pack PDF](./artifacts/v8/phase9c_pennylane_remote_hardware/v8_phase9c_pennylane_remote_hardware_pack_2026-04-22.pdf)
+21. [Phase 9D PennyLane Remote Repeatability Pack PDF](./artifacts/v8/phase9d_pennylane_remote_repeat/v8_phase9d_pennylane_remote_repeat_pack_2026-04-22.pdf)
 
 For a fuller directory-by-directory map, read:
 
