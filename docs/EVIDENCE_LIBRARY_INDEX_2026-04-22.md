@@ -15,6 +15,7 @@ code.
 - [Cross-Domain Comparator Map](./CROSS_DOMAIN_COMPARATOR_MAP_2026-04-23.md)
 - [Phase 12B Biological Adapter White Paper](./PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
 - [HRV Session Sequence Lock](./HRV_SESSION_SEQUENCE_LOCK_2026-04-23.md)
+- [Phase 12C EEG + HRV Intention Paper](./PHASE12C_EEG_HRV_INTENTION_PAPER_2026-04-24.md)
 - [Next Phase Research Plan From Phase 9D](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Artifact Root
@@ -224,6 +225,27 @@ Phase 6 starts the quantum-bridge ladder. It turns the locked `Phase 3`,
 `Phase 4`, and `Phase 5` geometry into normalized feature vectors, runs
 first-pass PennyLane `AngleEmbedding` and `AmplitudeEmbedding`, and creates the
 concrete target for the next `Qiskit` mirror.
+
+## Phase 12B / Biological Comparison Pack
+
+Location:
+
+- [`../artifacts/v8/phase12b_biological_comparison_pack`](../artifacts/v8/phase12b_biological_comparison_pack)
+
+Main artifacts:
+
+- [`V8_PHASE12B_BIOLOGICAL_COMPARISON_PACK_2026-04-24.md`](../artifacts/v8/phase12b_biological_comparison_pack/V8_PHASE12B_BIOLOGICAL_COMPARISON_PACK_2026-04-24.md)
+- [`V8_PHASE12B_BIOLOGICAL_COMPARISON_PACK_2026-04-24.pdf`](../artifacts/v8/phase12b_biological_comparison_pack/V8_PHASE12B_BIOLOGICAL_COMPARISON_PACK_2026-04-24.pdf)
+- [`v8_phase12b_biological_comparison_pack_data_2026-04-24.json`](../artifacts/v8/phase12b_biological_comparison_pack/v8_phase12b_biological_comparison_pack_data_2026-04-24.json)
+- [`charts/v8_phase12b_aggregate_deltas_2026-04-24.png`](../artifacts/v8/phase12b_biological_comparison_pack/charts/v8_phase12b_aggregate_deltas_2026-04-24.png)
+- [`charts/v8_phase12b_mean_hr_windows_2026-04-24.png`](../artifacts/v8/phase12b_biological_comparison_pack/charts/v8_phase12b_mean_hr_windows_2026-04-24.png)
+- [`charts/v8_phase12b_run_delta_hr_2026-04-24.png`](../artifacts/v8/phase12b_biological_comparison_pack/charts/v8_phase12b_run_delta_hr_2026-04-24.png)
+
+Role:
+
+This pack formalizes the first completed biological `5 x 4` matrix as a
+methods-style comparator artifact: what was run, what counted, what was
+excluded, and what the aggregate condition-class structure was.
 
 ## Phase 7 / Qiskit Mirror Pack
 
