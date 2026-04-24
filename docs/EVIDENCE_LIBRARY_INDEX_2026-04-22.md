@@ -13,6 +13,8 @@ code.
 - [Architecture Hierarchy And Non-Classical Vocabulary](./ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
 - [Convergence And Recursive Coherence Note](./CONVERGENCE_AND_RECURSIVE_COHERENCE_NOTE_2026-04-23.md)
 - [Cross-Domain Comparator Map](./CROSS_DOMAIN_COMPARATOR_MAP_2026-04-23.md)
+- [Phase 12B Biological Adapter White Paper](./PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
+- [HRV Session Sequence Lock](./HRV_SESSION_SEQUENCE_LOCK_2026-04-23.md)
 - [Next Phase Research Plan From Phase 9D](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Artifact Root
