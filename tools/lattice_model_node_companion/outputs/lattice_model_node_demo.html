@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lattice Model Node Companion</title>
+  <style>
+    :root {
+      --bg: #071014;
+      --panel: #0f1a22;
+      --panel-2: #111f2a;
+      --text: #f4f7fb;
+      --muted: #a7b3c2;
+      --line: #244353;
+      --gold: #f5c542;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(245, 197, 66, 0.14), transparent 22rem),
+        radial-gradient(circle at 85% 20%, rgba(97, 218, 251, 0.12), transparent 22rem),
+        linear-gradient(135deg, #071014 0%, #0a1219 60%, #071014 100%);
+      color: var(--text);
+      font-family: Avenir Next, Futura, Trebuchet MS, sans-serif;
+    }
+    header {
+      padding: 24px 28px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 52px);
+      letter-spacing: -0.04em;
+    }
+    .tagline {
+      margin: 0;
+      color: var(--muted);
+      max-width: 980px;
+      line-height: 1.45;
+    }
+    .schema {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 12px;
+      border: 1px solid rgba(245,197,66,0.42);
+      border-radius: 999px;
+      color: #ffe38a;
+      background: rgba(245,197,66,0.08);
+      font-size: 13px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(330px, 420px) minmax(640px, 1fr);
+      min-height: calc(100vh - 135px);
+    }
+    aside {
+      border-right: 1px solid rgba(255,255,255,0.08);
+      padding: 20px;
+      background: rgba(5, 12, 17, 0.48);
+    }
+    .map-wrap {
+      overflow: auto;
+      padding: 20px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(17,31,42,0.95), rgba(10,18,25,0.96));
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    input {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 12px 14px;
+      color: var(--text);
+      background: #08131b;
+      outline: none;
+      font-size: 15px;
+    }
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 12px;
+      margin: 8px 6px 0 0;
+      cursor: pointer;
+      color: #071014;
+      background: var(--gold);
+      font-weight: 700;
+    }
+    button.secondary {
+      color: var(--text);
+      background: #1b2d3a;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .chat {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .bubble {
+      padding: 12px 14px;
+      border-radius: 16px;
+      line-height: 1.45;
+      font-size: 14px;
+    }
+    .bubble.user {
+      justify-self: end;
+      background: #1b6fed;
+      max-width: 88%;
+    }
+    .bubble.ai {
+      background: #142331;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .node-detail h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .node-detail p {
+      margin: 8px 0;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .pill {
+      display: inline-block;
+      margin: 4px 6px 0 0;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: #1e3543;
+      color: #d9edf7;
+      font-size: 12px;
+    }
+    svg {
+      min-width: 1530px;
+      min-height: 980px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 80px 80px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+    }
+    .edge {
+      stroke: var(--line);
+      stroke-width: 1.4;
+      opacity: 0.55;
+    }
+    .node {
+      cursor: pointer;
+      transition: opacity 140ms ease, transform 140ms ease;
+    }
+    .node text {
+      fill: var(--text);
+      font-size: 11px;
+      font-weight: 700;
+      pointer-events: none;
+    }
+    .node text.mini {
+      fill: var(--muted);
+      font-size: 8.5px;
+      font-weight: 500;
+    }
+    .node.dim, .edge.dim { opacity: 0.13; }
+    .node.hot rect {
+      filter: drop-shadow(0 0 12px rgba(245,197,66,0.55));
+      stroke-width: 3;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .legend span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    @media (max-width: 980px) {
+      main { grid-template-columns: 1fr; }
+      aside { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lattice Model Node Companion</h1>
+    <p class="tagline">Local, no-credit browser companion for mapping Mirror Architecture across formal systems, matter, nutrition, coherence, biology, natural systems, and future physics/material AI adapters.</p>
+    <span class="schema">state / control / transform / invariant / drift / coherence / score</span>
+  </header>
+  <main>
+    <aside>
+      <section class="card">
+        <label for="prompt">Ask / filter the lattice</label>
+        <input id="prompt" placeholder="Try: nutrition, NVIDIA, fusion, HRV, PFAS, water..." />
+        <button id="ask">Ask map</button>
+        <button class="secondary" id="reset">Reset</button>
+        <div class="legend">
+          <span>Click nodes or ask short prompts.</span>
+          <span>No external calls.</span>
+          <span>No credits spent.</span>
+        </div>
+        <div class="chat" id="chat">
+          <div class="bubble ai">Companion online. Pick a node or ask how a domain maps through the nests.</div>
+        </div>
+      </section>
+      <section class="card node-detail" id="detail">
+        <h2>Mirror Architecture</h2>
+        <p>Unified architecture layer that maps state, control, transform, invariant, drift, coherence, and score across domains.</p>
+        <span class="pill">core</span><span class="pill">active spine</span>
+      </section>
+    </aside>
+    <section class="map-wrap">
+      <svg viewBox="0 0 1530 980" role="img" aria-label="Lattice node map">
+        <line class="edge source-mirror_architecture target-nest1_formal" x1="210" y1="344" x2="260" y2="104"><title>defines score grammar</title></line>
+<line class="edge source-mirror_architecture target-nest2_matter" x1="210" y1="344" x2="470" y2="104"><title>extends into constrained structure</title></line>
+<line class="edge source-mirror_architecture target-nest3_coherence" x1="210" y1="344" x2="705" y2="104"><title>extends into dynamics</title></line>
+<line class="edge source-mirror_architecture target-nest4_biology" x1="210" y1="344" x2="930" y2="104"><title>extends into living timing</title></line>
+<line class="edge source-mirror_architecture target-nest5_convergence" x1="210" y1="344" x2="1140" y2="104"><title>tests recurrence across classes</title></line>
+<line class="edge source-nest1_formal target-linear_algebra" x1="390" y1="104" x2="260" y2="176"><title>substrate</title></line>
+<line class="edge source-linear_algebra target-symmetry_invariant" x1="390" y1="176" x2="260" y2="248"><title>transform conservation</title></line>
+<line class="edge source-symmetry_invariant target-encoded_circuit_state" x1="390" y1="248" x2="260" y2="320"><title>state encoding</title></line>
+<line class="edge source-encoded_circuit_state target-nest2_matter" x1="390" y1="320" x2="470" y2="104"><title>formal-to-physical schema bridge</title></line>
+<line class="edge source-nest2_matter target-elements" x1="600" y1="104" x2="470" y2="166"><title>periodic structure</title></line>
+<line class="edge source-elements target-hydrogen" x1="600" y1="166" x2="470" y2="228"><title>first element bridge</title></line>
+<line class="edge source-elements target-oxygen_redox" x1="600" y1="166" x2="470" y2="290"><title>redox chemistry</title></line>
+<line class="edge source-oxygen_redox target-h2o" x1="600" y1="290" x2="470" y2="352"><title>water / oxidation bridge</title></line>
+<line class="edge source-h2o target-minerals" x1="600" y1="352" x2="470" y2="414"><title>surface / solution bridge</title></line>
+<line class="edge source-nest2_matter target-food_chemistry" x1="600" y1="104" x2="470" y2="476"><title>nutrition chemistry</title></line>
+<line class="edge source-food_chemistry target-proteins" x1="600" y1="476" x2="470" y2="538"><title>macronutrient class</title></line>
+<line class="edge source-food_chemistry target-carbs_fats" x1="600" y1="476" x2="470" y2="600"><title>energy substrate class</title></line>
+<line class="edge source-food_chemistry target-vitamins_nutrients" x1="600" y1="476" x2="470" y2="662"><title>micronutrient class</title></line>
+<line class="edge source-proteins target-metabolism" x1="600" y1="538" x2="930" y2="320"><title>digestion to cellular input</title></line>
+<line class="edge source-carbs_fats target-metabolism" x1="600" y1="600" x2="930" y2="320"><title>energy flow</title></line>
+<line class="edge source-vitamins_nutrients target-metabolism" x1="600" y1="662" x2="930" y2="320"><title>cofactor bridge</title></line>
+<line class="edge source-pfas_pharma_microplastics target-chemistry_toolkit" x1="600" y1="724" x2="1350" y2="248"><title>molecule / reaction tooling</title></line>
+<line class="edge source-hydrogen target-fusion_solar" x1="600" y1="228" x2="705" y2="320"><title>isotope-to-fusion bridge</title></line>
+<line class="edge source-oxygen_redox target-plasma_fire" x1="600" y1="290" x2="705" y2="248"><title>combustion / radicals</title></line>
+<line class="edge source-h2o target-terahertz" x1="600" y1="352" x2="705" y2="176"><title>spectral water bridge</title></line>
+<line class="edge source-nest3_coherence target-terahertz" x1="835" y1="104" x2="705" y2="176"><title>spectral comparator</title></line>
+<line class="edge source-nest3_coherence target-plasma_fire" x1="835" y1="104" x2="705" y2="248"><title>reactive field dynamics</title></line>
+<line class="edge source-nest3_coherence target-fusion_solar" x1="835" y1="104" x2="705" y2="320"><title>plasma / energy bridge</title></line>
+<line class="edge source-terahertz target-cell_genome" x1="835" y1="176" x2="930" y2="248"><title>spectral-to-cell hypothesis lane</title></line>
+<line class="edge source-nest4_biology target-hrv_eeg" x1="1060" y1="104" x2="930" y2="176"><title>measured biosignal adapter</title></line>
+<line class="edge source-nest4_biology target-cell_genome" x1="1060" y1="104" x2="930" y2="248"><title>cellular comparator</title></line>
+<line class="edge source-nest4_biology target-metabolism" x1="1060" y1="104" x2="930" y2="320"><title>nutrition becomes physiology</title></line>
+<line class="edge source-metabolism target-hrv_eeg" x1="1060" y1="320" x2="930" y2="176"><title>human-state readout</title></line>
+<line class="edge source-nest5_convergence target-ecosystem_planet" x1="1270" y1="104" x2="1140" y2="176"><title>multi-class natural convergence</title></line>
+<line class="edge source-fusion_solar target-ecosystem_planet" x1="835" y1="320" x2="1140" y2="176"><title>solar-terrestrial coupling</title></line>
+<line class="edge source-minerals target-ecosystem_planet" x1="600" y1="414" x2="1140" y2="176"><title>soil / geology bridge</title></line>
+<line class="edge source-nvidia_physicsnemo target-nest3_coherence" x1="1480" y1="104" x2="705" y2="104"><title>future physics adapter</title></line>
+<line class="edge source-materials_models target-nest2_matter" x1="1480" y1="176" x2="470" y2="104"><title>future materials adapter</title></line>
+<line class="edge source-chemistry_toolkit target-nest2_matter" x1="1480" y1="248" x2="470" y2="104"><title>future chemistry adapter</title></line>
+<g class="node" data-node-id="mirror_architecture" tabindex="0" transform="translate(80,320)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#f5c542" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#f5c542" /><text x="30" y="21">Mirror Architecture</text><text x="30" y="37" class="mini">active spine</text><title>Unified architecture layer that maps state, control, transform, invariant, drift, coherence, and score across domains.</title></g>
+<g class="node" data-node-id="nest1_formal" tabindex="0" transform="translate(260,80)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#61dafb" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#61dafb" /><text x="30" y="21">Nest 1: Formal Systems</text><text x="30" y="37" class="mini">foundation locked</text><title>Linear algebra, symmetries, invariants, encoded circuit states, and formal score grammar.</title></g>
+<g class="node" data-node-id="linear_algebra" tabindex="0" transform="translate(260,152)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#61dafb" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#61dafb" /><text x="30" y="21">Linear Algebra</text><text x="30" y="37" class="mini">first substrate</text><title>Vector spaces, bases, transforms, projections, eigensystems, norms, and encoded state representations.</title></g>
+<g class="node" data-node-id="symmetry_invariant" tabindex="0" transform="translate(260,224)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#61dafb" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#61dafb" /><text x="30" y="21">Symmetry + Invariant</text><text x="30" y="37" class="mini">mapped</text><title>Conservation under transformation: the formal source of balance, stable relation, and drift detection.</title></g>
+<g class="node" data-node-id="encoded_circuit_state" tabindex="0" transform="translate(260,296)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#61dafb" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#61dafb" /><text x="30" y="21">Encoded Circuit State</text><text x="30" y="37" class="mini">mapped</text><title>AI geometry expressed as circuit-state structure before hardware execution.</title></g>
+<g class="node" data-node-id="nest2_matter" tabindex="0" transform="translate(470,80)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">Nest 2: Structured Matter</text><text x="30" y="37" class="mini">foundation locked</text><title>Elements, molecules, materials, minerals, food chemistry, water, and reaction pathways.</title></g>
+<g class="node" data-node-id="elements" tabindex="0" transform="translate(470,142)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">Elements</text><text x="30" y="37" class="mini">mapped</text><title>Periodic families, shell structure, valence, electronegativity, oxidation states, and isotope classes.</title></g>
+<g class="node" data-node-id="hydrogen" tabindex="0" transform="translate(470,204)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">Hydrogen</text><text x="30" y="37" class="mini">mapped</text><title>Clean bridge from element / isotope structure into fusion and solar systems.</title></g>
+<g class="node" data-node-id="oxygen_redox" tabindex="0" transform="translate(470,266)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">Oxygen / Redox</text><text x="30" y="37" class="mini">mapped</text><title>O2, oxidation state, electron transfer, dissolved oxygen, reactive species, metabolism, fire, and remediation controls.</title></g>
+<g class="node" data-node-id="h2o" tabindex="0" transform="translate(470,328)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">H2O / Water</text><text x="30" y="37" class="mini">mapped</text><title>Bond angle, polarity, hydrogen bonding, hydration shells, solvent behavior, and biological bridge.</title></g>
+<g class="node" data-node-id="minerals" tabindex="0" transform="translate(470,390)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">Minerals</text><text x="30" y="37" class="mini">mapped</text><title>Lattice, composition, surfaces, weathering, ion exchange, clays, oxides, and remediation interfaces.</title></g>
+<g class="node" data-node-id="food_chemistry" tabindex="0" transform="translate(470,452)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">Food Chemistry</text><text x="30" y="37" class="mini">new companion row</text><title>Proteins, carbs, fats, vitamins, minerals, fiber, hydration, and food-state transforms before metabolism.</title></g>
+<g class="node" data-node-id="proteins" tabindex="0" transform="translate(470,514)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">Proteins</text><text x="30" y="37" class="mini">mapped</text><title>Amino-acid sequence, folding, charge, functional motifs, digestion products, and cell-facing signaling inputs.</title></g>
+<g class="node" data-node-id="carbs_fats" tabindex="0" transform="translate(470,576)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">Carbs + Fats</text><text x="30" y="37" class="mini">mapped</text><title>Sugar polymers, starch, fiber, lipid chains, saturation, membrane precursors, and energy substrate classes.</title></g>
+<g class="node" data-node-id="vitamins_nutrients" tabindex="0" transform="translate(470,638)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">Vitamins + Nutrients</text><text x="30" y="37" class="mini">mapped</text><title>Micronutrient classes, mineral cofactors, solubility, redox roles, methylation supports, and deficiency / excess drift.</title></g>
+<g class="node" data-node-id="pfas_pharma_microplastics" tabindex="0" transform="translate(470,700)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#7ee787" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#7ee787" /><text x="30" y="21">PFAS / Pharma / Microplastics</text><text x="30" y="37" class="mini">research-design</text><title>Persistent contaminant families mapped by bond topology, safe endpoints, and bad-descendant penalties.</title></g>
+<g class="node" data-node-id="nest3_coherence" tabindex="0" transform="translate(705,80)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#ffb86b" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#ffb86b" /><text x="30" y="21">Nest 3: Classical Coherence</text><text x="30" y="37" class="mini">planned</text><title>Oscillators, resonance, EMF, plasma, fire, fusion, spectral comparators, phase-lock, and field dynamics.</title></g>
+<g class="node" data-node-id="terahertz" tabindex="0" transform="translate(705,152)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#ffb86b" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#ffb86b" /><text x="30" y="21">Terahertz</text><text x="30" y="37" class="mini">research-design</text><title>Spectral pattern bridge into water, molecules, cells, DNA, and later measured biological response.</title></g>
+<g class="node" data-node-id="plasma_fire" tabindex="0" transform="translate(705,224)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#ffb86b" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#ffb86b" /><text x="30" y="21">Fire + Plasma</text><text x="30" y="37" class="mini">mapped</text><title>Combustion, ionized matter, radicals, fields, surface activation, byproducts, and bounded controls.</title></g>
+<g class="node" data-node-id="fusion_solar" tabindex="0" transform="translate(705,296)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#ffb86b" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#ffb86b" /><text x="30" y="21">Fusion + Solar</text><text x="30" y="37" class="mini">mapped</text><title>Hydrogen isotope state, plasma confinement, reaction channel, solar output, and larger convergence systems.</title></g>
+<g class="node" data-node-id="nest4_biology" tabindex="0" transform="translate(930,80)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#ff7ab6" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#ff7ab6" /><text x="30" y="21">Nest 4: Biology</text><text x="30" y="37" class="mini">first HRV matrix complete</text><title>HRV, EEG, physiology, cells, genome, proteome, metabolism, timing channels, and living comparator classes.</title></g>
+<g class="node" data-node-id="hrv_eeg" tabindex="0" transform="translate(930,152)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#ff7ab6" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#ff7ab6" /><text x="30" y="21">HRV + EEG</text><text x="30" y="37" class="mini">HRV first matrix complete / EEG planned</text><title>Human-state timing signals that can later become live biological input into the companion map.</title></g>
+<g class="node" data-node-id="cell_genome" tabindex="0" transform="translate(930,224)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#ff7ab6" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#ff7ab6" /><text x="30" y="21">Cells + Genome</text><text x="30" y="37" class="mini">planned</text><title>DNA, epigenome, transcriptome, proteome, signaling, membranes, mitochondria, repair, and drift modes.</title></g>
+<g class="node" data-node-id="metabolism" tabindex="0" transform="translate(930,296)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#ff7ab6" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#ff7ab6" /><text x="30" y="21">Metabolism</text><text x="30" y="37" class="mini">new companion row</text><title>Food chemistry becomes biological state through digestion, absorption, energy flow, cofactors, microbiome, and cellular signaling.</title></g>
+<g class="node" data-node-id="nest5_convergence" tabindex="0" transform="translate(1140,80)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#c79cff" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#c79cff" /><text x="30" y="21">Nest 5: Convergence</text><text x="30" y="37" class="mini">planned</text><title>Multi-class convergence matrix across formal systems, matter, coherence, biology, ecology, and engineered systems.</title></g>
+<g class="node" data-node-id="ecosystem_planet" tabindex="0" transform="translate(1140,152)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#c79cff" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#c79cff" /><text x="30" y="21">Ecosystem / Planet</text><text x="30" y="37" class="mini">mapped</text><title>Soil, ocean, atmosphere, climate, solar-terrestrial coupling, biodiversity, food webs, and recovery dynamics.</title></g>
+<g class="node" data-node-id="nvidia_physicsnemo" tabindex="0" transform="translate(1350,80)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#8bd3ff" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#8bd3ff" /><text x="30" y="21">NVIDIA PhysicsNeMo</text><text x="30" y="37" class="mini">adapter slot</text><title>Future physics AI adapter for field systems, PDE-like dynamics, plasma, fluids, resonance, and engineered physics surfaces.</title></g>
+<g class="node" data-node-id="materials_models" tabindex="0" transform="translate(1350,152)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#8bd3ff" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#8bd3ff" /><text x="30" y="21">MatterGen / MatGL / CHGNet / MACE</text><text x="30" y="37" class="mini">adapter slot</text><title>Future materials and atomistic graph adapters for molecules, crystals, material candidates, and property surfaces.</title></g>
+<g class="node" data-node-id="chemistry_toolkit" tabindex="0" transform="translate(1350,224)"><rect width="152" height="48" rx="14" fill="#101b26" stroke="#8bd3ff" stroke-width="2" /><circle cx="16" cy="24" r="6" fill="#8bd3ff" /><text x="30" y="21">RDKit / ASE / pymatgen / FairChem</text><text x="30" y="37" class="mini">adapter slot</text><title>Future toolkit bridge for molecules, atomistic structures, crystals, catalysts, and reaction-surface comparators.</title></g>
+      </svg>
+    </section>
+  </main>
+  <script>
+    const DATA = {"meta": {"title": "Lattice Model Node Companion", "date": "2026-04-24", "schema": "state / control / transform / invariant / drift / coherence / score", "boundary": "Local visual research companion. No external model calls, no clinical, remediation, or physics claim by itself."}, "nodes": [{"id": "mirror_architecture", "label": "Mirror Architecture", "nest": "core", "type": "architecture", "status": "active spine", "description": "Unified architecture layer that maps state, control, transform, invariant, drift, coherence, and score across domains."}, {"id": "nest1_formal", "label": "Nest 1: Formal Systems", "nest": "Nest 1", "type": "nest", "status": "foundation locked", "description": "Linear algebra, symmetries, invariants, encoded circuit states, and formal score grammar."}, {"id": "linear_algebra", "label": "Linear Algebra", "nest": "Nest 1", "type": "formal substrate", "status": "first substrate", "description": "Vector spaces, bases, transforms, projections, eigensystems, norms, and encoded state representations."}, {"id": "symmetry_invariant", "label": "Symmetry + Invariant", "nest": "Nest 1", "type": "formal comparator", "status": "mapped", "description": "Conservation under transformation: the formal source of balance, stable relation, and drift detection."}, {"id": "encoded_circuit_state", "label": "Encoded Circuit State", "nest": "Nest 1", "type": "formal-to-hardware bridge", "status": "mapped", "description": "AI geometry expressed as circuit-state structure before hardware execution."}, {"id": "nest2_matter", "label": "Nest 2: Structured Matter", "nest": "Nest 2", "type": "nest", "status": "foundation locked", "description": "Elements, molecules, materials, minerals, food chemistry, water, and reaction pathways."}, {"id": "elements", "label": "Elements", "nest": "Nest 2", "type": "matter class", "status": "mapped", "description": "Periodic families, shell structure, valence, electronegativity, oxidation states, and isotope classes."}, {"id": "hydrogen", "label": "Hydrogen", "nest": "Nest 2", "type": "matter bridge", "status": "mapped", "description": "Clean bridge from element / isotope structure into fusion and solar systems."}, {"id": "oxygen_redox", "label": "Oxygen / Redox", "nest": "Nest 2", "type": "chemistry bridge", "status": "mapped", "description": "O2, oxidation state, electron transfer, dissolved oxygen, reactive species, metabolism, fire, and remediation controls."}, {"id": "h2o", "label": "H2O / Water", "nest": "Nest 2", "type": "molecular motif", "status": "mapped", "description": "Bond angle, polarity, hydrogen bonding, hydration shells, solvent behavior, and biological bridge."}, {"id": "minerals", "label": "Minerals", "nest": "Nest 2", "type": "material class", "status": "mapped", "description": "Lattice, composition, surfaces, weathering, ion exchange, clays, oxides, and remediation interfaces."}, {"id": "food_chemistry", "label": "Food Chemistry", "nest": "Nest 2", "type": "nutrition bridge", "status": "new companion row", "description": "Proteins, carbs, fats, vitamins, minerals, fiber, hydration, and food-state transforms before metabolism."}, {"id": "proteins", "label": "Proteins", "nest": "Nest 2", "type": "biochemical structure", "status": "mapped", "description": "Amino-acid sequence, folding, charge, functional motifs, digestion products, and cell-facing signaling inputs."}, {"id": "carbs_fats", "label": "Carbs + Fats", "nest": "Nest 2", "type": "nutrition chemistry", "status": "mapped", "description": "Sugar polymers, starch, fiber, lipid chains, saturation, membrane precursors, and energy substrate classes."}, {"id": "vitamins_nutrients", "label": "Vitamins + Nutrients", "nest": "Nest 2", "type": "nutrition chemistry", "status": "mapped", "description": "Micronutrient classes, mineral cofactors, solubility, redox roles, methylation supports, and deficiency / excess drift."}, {"id": "pfas_pharma_microplastics", "label": "PFAS / Pharma / Microplastics", "nest": "Nest 2", "type": "chemical remediation", "status": "research-design", "description": "Persistent contaminant families mapped by bond topology, safe endpoints, and bad-descendant penalties."}, {"id": "nest3_coherence", "label": "Nest 3: Classical Coherence", "nest": "Nest 3", "type": "nest", "status": "planned", "description": "Oscillators, resonance, EMF, plasma, fire, fusion, spectral comparators, phase-lock, and field dynamics."}, {"id": "terahertz", "label": "Terahertz", "nest": "Nest 3", "type": "spectral bridge", "status": "research-design", "description": "Spectral pattern bridge into water, molecules, cells, DNA, and later measured biological response."}, {"id": "plasma_fire", "label": "Fire + Plasma", "nest": "Nest 3", "type": "reactive energy", "status": "mapped", "description": "Combustion, ionized matter, radicals, fields, surface activation, byproducts, and bounded controls."}, {"id": "fusion_solar", "label": "Fusion + Solar", "nest": "Nest 3", "type": "energy bridge", "status": "mapped", "description": "Hydrogen isotope state, plasma confinement, reaction channel, solar output, and larger convergence systems."}, {"id": "nest4_biology", "label": "Nest 4: Biology", "nest": "Nest 4", "type": "nest", "status": "first HRV matrix complete", "description": "HRV, EEG, physiology, cells, genome, proteome, metabolism, timing channels, and living comparator classes."}, {"id": "hrv_eeg", "label": "HRV + EEG", "nest": "Nest 4", "type": "biosignal adapter", "status": "HRV first matrix complete / EEG planned", "description": "Human-state timing signals that can later become live biological input into the companion map."}, {"id": "cell_genome", "label": "Cells + Genome", "nest": "Nest 4", "type": "biology bridge", "status": "planned", "description": "DNA, epigenome, transcriptome, proteome, signaling, membranes, mitochondria, repair, and drift modes."}, {"id": "metabolism", "label": "Metabolism", "nest": "Nest 4", "type": "nutrition-to-biology bridge", "status": "new companion row", "description": "Food chemistry becomes biological state through digestion, absorption, energy flow, cofactors, microbiome, and cellular signaling."}, {"id": "nest5_convergence", "label": "Nest 5: Convergence", "nest": "Nest 5", "type": "nest", "status": "planned", "description": "Multi-class convergence matrix across formal systems, matter, coherence, biology, ecology, and engineered systems."}, {"id": "ecosystem_planet", "label": "Ecosystem / Planet", "nest": "Nest 5", "type": "natural convergence", "status": "mapped", "description": "Soil, ocean, atmosphere, climate, solar-terrestrial coupling, biodiversity, food webs, and recovery dynamics."}, {"id": "nvidia_physicsnemo", "label": "NVIDIA PhysicsNeMo", "nest": "Adapter", "type": "future model adapter", "status": "adapter slot", "description": "Future physics AI adapter for field systems, PDE-like dynamics, plasma, fluids, resonance, and engineered physics surfaces."}, {"id": "materials_models", "label": "MatterGen / MatGL / CHGNet / MACE", "nest": "Adapter", "type": "future model adapter", "status": "adapter slot", "description": "Future materials and atomistic graph adapters for molecules, crystals, material candidates, and property surfaces."}, {"id": "chemistry_toolkit", "label": "RDKit / ASE / pymatgen / FairChem", "nest": "Adapter", "type": "future model adapter", "status": "adapter slot", "description": "Future toolkit bridge for molecules, atomistic structures, crystals, catalysts, and reaction-surface comparators."}], "edges": [{"source": "mirror_architecture", "target": "nest1_formal", "relation": "defines score grammar"}, {"source": "mirror_architecture", "target": "nest2_matter", "relation": "extends into constrained structure"}, {"source": "mirror_architecture", "target": "nest3_coherence", "relation": "extends into dynamics"}, {"source": "mirror_architecture", "target": "nest4_biology", "relation": "extends into living timing"}, {"source": "mirror_architecture", "target": "nest5_convergence", "relation": "tests recurrence across classes"}, {"source": "nest1_formal", "target": "linear_algebra", "relation": "substrate"}, {"source": "linear_algebra", "target": "symmetry_invariant", "relation": "transform conservation"}, {"source": "symmetry_invariant", "target": "encoded_circuit_state", "relation": "state encoding"}, {"source": "encoded_circuit_state", "target": "nest2_matter", "relation": "formal-to-physical schema bridge"}, {"source": "nest2_matter", "target": "elements", "relation": "periodic structure"}, {"source": "elements", "target": "hydrogen", "relation": "first element bridge"}, {"source": "elements", "target": "oxygen_redox", "relation": "redox chemistry"}, {"source": "oxygen_redox", "target": "h2o", "relation": "water / oxidation bridge"}, {"source": "h2o", "target": "minerals", "relation": "surface / solution bridge"}, {"source": "nest2_matter", "target": "food_chemistry", "relation": "nutrition chemistry"}, {"source": "food_chemistry", "target": "proteins", "relation": "macronutrient class"}, {"source": "food_chemistry", "target": "carbs_fats", "relation": "energy substrate class"}, {"source": "food_chemistry", "target": "vitamins_nutrients", "relation": "micronutrient class"}, {"source": "proteins", "target": "metabolism", "relation": "digestion to cellular input"}, {"source": "carbs_fats", "target": "metabolism", "relation": "energy flow"}, {"source": "vitamins_nutrients", "target": "metabolism", "relation": "cofactor bridge"}, {"source": "pfas_pharma_microplastics", "target": "chemistry_toolkit", "relation": "molecule / reaction tooling"}, {"source": "hydrogen", "target": "fusion_solar", "relation": "isotope-to-fusion bridge"}, {"source": "oxygen_redox", "target": "plasma_fire", "relation": "combustion / radicals"}, {"source": "h2o", "target": "terahertz", "relation": "spectral water bridge"}, {"source": "nest3_coherence", "target": "terahertz", "relation": "spectral comparator"}, {"source": "nest3_coherence", "target": "plasma_fire", "relation": "reactive field dynamics"}, {"source": "nest3_coherence", "target": "fusion_solar", "relation": "plasma / energy bridge"}, {"source": "terahertz", "target": "cell_genome", "relation": "spectral-to-cell hypothesis lane"}, {"source": "nest4_biology", "target": "hrv_eeg", "relation": "measured biosignal adapter"}, {"source": "nest4_biology", "target": "cell_genome", "relation": "cellular comparator"}, {"source": "nest4_biology", "target": "metabolism", "relation": "nutrition becomes physiology"}, {"source": "metabolism", "target": "hrv_eeg", "relation": "human-state readout"}, {"source": "nest5_convergence", "target": "ecosystem_planet", "relation": "multi-class natural convergence"}, {"source": "fusion_solar", "target": "ecosystem_planet", "relation": "solar-terrestrial coupling"}, {"source": "minerals", "target": "ecosystem_planet", "relation": "soil / geology bridge"}, {"source": "nvidia_physicsnemo", "target": "nest3_coherence", "relation": "future physics adapter"}, {"source": "materials_models", "target": "nest2_matter", "relation": "future materials adapter"}, {"source": "chemistry_toolkit", "target": "nest2_matter", "relation": "future chemistry adapter"}]};
+    const POSITIONS = {"mirror_architecture": {"x": 80, "y": 320}, "nest1_formal": {"x": 260, "y": 80}, "linear_algebra": {"x": 260, "y": 152}, "symmetry_invariant": {"x": 260, "y": 224}, "encoded_circuit_state": {"x": 260, "y": 296}, "nest2_matter": {"x": 470, "y": 80}, "elements": {"x": 470, "y": 142}, "hydrogen": {"x": 470, "y": 204}, "oxygen_redox": {"x": 470, "y": 266}, "h2o": {"x": 470, "y": 328}, "minerals": {"x": 470, "y": 390}, "food_chemistry": {"x": 470, "y": 452}, "proteins": {"x": 470, "y": 514}, "carbs_fats": {"x": 470, "y": 576}, "vitamins_nutrients": {"x": 470, "y": 638}, "pfas_pharma_microplastics": {"x": 470, "y": 700}, "nest3_coherence": {"x": 705, "y": 80}, "terahertz": {"x": 705, "y": 152}, "plasma_fire": {"x": 705, "y": 224}, "fusion_solar": {"x": 705, "y": 296}, "nest4_biology": {"x": 930, "y": 80}, "hrv_eeg": {"x": 930, "y": 152}, "cell_genome": {"x": 930, "y": 224}, "metabolism": {"x": 930, "y": 296}, "nest5_convergence": {"x": 1140, "y": 80}, "ecosystem_planet": {"x": 1140, "y": 152}, "nvidia_physicsnemo": {"x": 1350, "y": 80}, "materials_models": {"x": 1350, "y": 152}, "chemistry_toolkit": {"x": 1350, "y": 224}};
+    const nodeById = Object.fromEntries(DATA.nodes.map(node => [node.id, node]));
+    const chat = document.querySelector("#chat");
+    const promptInput = document.querySelector("#prompt");
+    const detail = document.querySelector("#detail");
+
+    function addBubble(text, who = "ai") {
+      const bubble = document.createElement("div");
+      bubble.className = `bubble ${who}`;
+      bubble.textContent = text;
+      chat.appendChild(bubble);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function connectedIds(id) {
+      const ids = new Set([id]);
+      DATA.edges.forEach(edge => {
+        if (edge.source === id) ids.add(edge.target);
+        if (edge.target === id) ids.add(edge.source);
+      });
+      return ids;
+    }
+
+    function showNode(id, announce = true) {
+      const node = nodeById[id];
+      if (!node) return;
+      const neighbors = connectedIds(id);
+      document.querySelectorAll(".node").forEach(el => {
+        const nodeId = el.dataset.nodeId;
+        el.classList.toggle("dim", !neighbors.has(nodeId));
+        el.classList.toggle("hot", nodeId === id);
+      });
+      document.querySelectorAll(".edge").forEach(el => {
+        const keep = el.classList.contains(`source-${id}`) || el.classList.contains(`target-${id}`);
+        el.classList.toggle("dim", !keep);
+      });
+      detail.innerHTML = `
+        <h2>${node.label}</h2>
+        <p>${node.description}</p>
+        <span class="pill">${node.nest}</span>
+        <span class="pill">${node.type}</span>
+        <span class="pill">${node.status}</span>
+      `;
+      if (announce) addBubble(`${node.label} maps as ${node.nest}: ${node.description}`);
+    }
+
+    function resetMap() {
+      document.querySelectorAll(".node,.edge").forEach(el => el.classList.remove("dim", "hot"));
+      showNode("mirror_architecture", false);
+      addBubble("Reset to the full lattice. The build is local-only and ready for iterative nest expansion.");
+    }
+
+    function findMatches(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) return [];
+      return DATA.nodes.filter(node => (
+        node.label.toLowerCase().includes(q) ||
+        node.id.toLowerCase().includes(q) ||
+        node.description.toLowerCase().includes(q) ||
+        node.type.toLowerCase().includes(q) ||
+        node.nest.toLowerCase().includes(q)
+      ));
+    }
+
+    function answerPrompt(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) return "Ask a short mapping prompt: nutrition, NVIDIA, fusion, HRV, PFAS, water, plasma, cells, or materials.";
+      if (q.includes("nutrition") || q.includes("food") || q.includes("protein") || q.includes("carb") || q.includes("fat") || q.includes("vitamin")) {
+        showNode("food_chemistry", false);
+        return "Nutrition maps first as Nest 2 chemistry: proteins, carbs, fats, vitamins, minerals, hydration, and food transforms. It bridges upward into Nest 4 metabolism, HRV/EEG, cells, microbiome, and physiology.";
+      }
+      if (q.includes("nvidia") || q.includes("physicsnemo") || q.includes("physics")) {
+        showNode("nvidia_physicsnemo", false);
+        return "NVIDIA PhysicsNeMo is a future adapter slot, not a claim surface yet. It belongs beside Nest 3 for fields, fluids, plasma, resonance, PDE-like dynamics, and engineered physics simulations.";
+      }
+      if (q.includes("material") || q.includes("mattergen") || q.includes("chgnet") || q.includes("mace") || q.includes("matgl")) {
+        showNode("materials_models", false);
+        return "Materials models plug into Nest 2: elements, molecules, crystals, minerals, lattices, and atomistic graph structure. The companion keeps a stable node schema so those adapters can be added later.";
+      }
+      if (q.includes("pfas") || q.includes("forever") || q.includes("pharma") || q.includes("plastic")) {
+        showNode("pfas_pharma_microplastics", false);
+        return "Persistent contaminants map through Nest 2 bond topology and reaction pathways, then Nest 3 remediation conditions. The score must include safe endpoints and penalties for harmful descendants.";
+      }
+      if (q.includes("hrv") || q.includes("eeg") || q.includes("human")) {
+        showNode("hrv_eeg", false);
+        return "HRV/EEG are Nest 4 biosignal adapters. HRV has the first matrix; EEG is the planned simultaneous layer. Later this can become a live human-state input into the map.";
+      }
+      if (q.includes("fusion") || q.includes("solar") || q.includes("hydrogen")) {
+        showNode("fusion_solar", false);
+        return "Hydrogen starts in Nest 2 as element/isotope structure. Fusion moves into Nest 3 plasma and energy dynamics. Solar becomes Nest 5 because plasma, fusion, EM fields, cycles, and planetary coupling converge.";
+      }
+      if (q.includes("water") || q.includes("h2o")) {
+        showNode("h2o", false);
+        return "H2O maps as Nest 2 molecular structure with a Nest 3 bridge: bond angle, polarity, hydrogen bonding, hydration shells, phase, terahertz, and biology-facing water networks.";
+      }
+      const matches = findMatches(q);
+      if (matches.length) {
+        showNode(matches[0].id, false);
+        return `Found ${matches.length} matching node(s). Showing ${matches[0].label} first.`;
+      }
+      showNode("mirror_architecture", false);
+      return "I do not have that node yet. Add it to natural_world_lattice_seed.json with a nest, state object, invariant, drift mode, and bridge relation.";
+    }
+
+    document.querySelectorAll(".node").forEach(node => {
+      node.addEventListener("click", () => showNode(node.dataset.nodeId));
+      node.addEventListener("keydown", event => {
+        if (event.key === "Enter") showNode(node.dataset.nodeId);
+      });
+    });
+
+    document.querySelector("#ask").addEventListener("click", () => {
+      const query = promptInput.value;
+      addBubble(query || "(empty prompt)", "user");
+      addBubble(answerPrompt(query), "ai");
+    });
+
+    promptInput.addEventListener("keydown", event => {
+      if (event.key === "Enter") document.querySelector("#ask").click();
+    });
+
+    document.querySelector("#reset").addEventListener("click", resetMap);
+    showNode("mirror_architecture", false);
+  </script>
+</body>
+</html>

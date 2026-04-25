@@ -31,13 +31,14 @@ slots, not forced as final claims.
 - `Phase 11` hardware semantic repeatability / calibration pass
 - `Phase 12B` live `HRV` biological adapter `5 x 4` matrix
 - `Nest 1` formal comparator foundation through the first unified matrix
+- `Nest 2` constrained structured-systems foundation
 
 ### Active Build Slots
 
 - `Nest 1` synthesis note:
   turn the formal comparator matrix into a compact methods section
-- `Nest 2` constrained structured systems:
-  elements, molecular families, `H2O`, graph / bond geometry
+- `Nest 2A-D` first empirical comparator packs:
+  periodic-table families, molecular graphs, `H2O`, and reaction pathways
 - `Nest 3` classical coherence systems:
   oscillators, resonance, `EMF`, spectral / phase-lock comparators
 - `Nest 4` richer biology:
@@ -122,7 +123,7 @@ repeatability, and coherent state transition.
 | semantic contextuality | `Phase 10`, `Phase 11` | locked as semantic / calibration layer | defines the Bell-type semantic rung without overclaiming physical Bell proof |
 | biological adapter | `Phase 12B` | first matrix complete | shows live `HRV` condition classes can be mapped inside the same comparison discipline |
 | formal reductionist base | `Nest 1` | matrix started, synthesis pending | makes the score spine legible in linear algebra, symmetries, invariants, and encoded states |
-| structured systems | `Nest 2` | planned | extends the score spine into elements, molecular families, `H2O`, graph / bond geometry |
+| structured systems | `Nest 2` | foundation locked / first comparator packs pending | extends the score spine into elements, molecular families, `H2O`, graph / bond geometry |
 | classical coherence | `Nest 3` | planned | extends drift/coherence logic into oscillators, resonance, `EMF`, and phase-lock comparators |
 | richer biology | `Nest 4`, `EEG + HRV`, cell / rhythm lanes | planned | expands biology beyond HRV-only |
 | integrated convergence | `Nest 5`, `Phase 13` | planned | tests whether the score logic recurs across multiple completed classes |
@@ -139,7 +140,7 @@ repeatability, and coherent state transition.
 | biology | `Phase 12B` | `5 x 4` HRV condition-class separation | add simultaneous `EEG + HRV` design |
 | physical control | `ARC15` | hardware anchors and planned fixed layout | run repeated fixed-layout sessions |
 | formal nesting | `Nest 1` | comparator matrix | write synthesis section |
-| structured matter | `Nest 2` | planned family / graph comparators | design first element / molecule matrix |
+| structured matter | `Nest 2` | constrained-structure foundation | build first element / molecule comparator packs |
 | classical coherence | `Nest 3` | planned oscillator / phase comparators | design first resonance matrix |
 | convergence | `Nest 5` | planned cross-class matrix | fill after more nests complete |
 
@@ -152,16 +153,23 @@ the main prose.
 Atlas:
 
 - [Universal Substrate Comparator Atlas](./UNIVERSAL_SUBSTRATE_COMPARATOR_ATLAS_2026-04-24.md)
+- [Natural World Nesting Atlas](./NATURAL_WORLD_NESTING_ATLAS_2026-04-24.md)
 - [Nest 1 Formal Systems Foundation](./NEST1_FORMAL_SYSTEMS_FOUNDATION_2026-04-24.md)
+- [Nest 2 Constrained Structured Systems Foundation](./NEST2_CONSTRAINED_STRUCTURED_SYSTEMS_FOUNDATION_2026-04-24.md)
 - [Terahertz Cellular Resonance Bridge](./TERAHERTZ_CELLULAR_RESONANCE_BRIDGE_2026-04-24.md)
 - [Terahertz Chemical Remediation Bridge](./TERAHERTZ_CHEMICAL_REMEDIATION_BRIDGE_2026-04-24.md)
+- [Lattice Model Node Companion](../tools/lattice_model_node_companion/README.md)
 
 The atlas expands the nesting ladder into:
 
 - formal systems
 - AI and orchestration systems
 - encoded circuit states and hardware
-- elements, molecules, `H2O`, reactions, crystals, and materials
+- elements, molecules, `H2O`, reactions, crystals, minerals, oxygen / redox,
+  salts / ions, nutrition / food chemistry, and materials
+- hydrogen / isotope structure, fusion / nuclear plasma, and solar / stellar
+  systems as natural-world bridges
+- fire / combustion and plasma as `Nest 3` reactive-energy bridge classes
 - persistent pollutant remediation including `PFAS / PFCs / forever
   chemicals`, fluorinated compounds, pharmaceuticals, pesticides, industrial
   organics, and microplastics
@@ -171,6 +179,11 @@ The atlas expands the nesting ladder into:
 - genome sequence, epigenome, transcriptome, proteome, and cellular signaling
 - `HRV`, `EEG`, tissue rhythms, and human-state adapters
 - ecological, grid, logistics, and engineered coordination systems
+
+The Lattice Model Node Companion is the first browser-facing code lane for
+this atlas. It keeps the current build local and no-credit while giving the
+project a visible interface that can later receive real physics, materials,
+chemistry, and biosignal model adapters.
 
 The purpose is not to declare each system solved. The purpose is to define a
 repeatable comparator row for each one:
@@ -369,11 +382,13 @@ relations better than shuffled or null mappings?
 
 Current paper status:
 
-- mapped as a required chapter
-- not yet executed as a completed evidence rung
-- first intended rows:
-  element-family ordering, molecular-family clustering, `H2O` bond/graph
-  geometry, shuffled graph controls, and family-local invariants
+- foundation locked as a constrained-structure comparator layer
+- first empirical comparator packs still pending
+- mapped rows:
+  element-family ordering, shell / valence structure, molecular graph topology,
+  functional groups, stoichiometry, `H2O` geometry / polarity / hydrogen-bond
+  networks, crystal lattices, minerals / surfaces, oxygen / redox states,
+  ionic / acid-base systems, and reaction / bond-cleavage pathways
 
 ### Nest 3: Classical Coherence Systems
 
@@ -492,7 +507,7 @@ The master paper can start now, but it should not be treated as final until
 these sections are filled:
 
 1. `Nest 1` compact synthesis note
-2. `Nest 2` first constrained-structure comparator
+2. `Nest 2A-D` first constrained-structure comparator packs
 3. `Nest 3` first classical-coherence comparator
 4. simultaneous `EEG + HRV` protocol and first capture set
 5. repeated fixed-layout `ARC15` runs

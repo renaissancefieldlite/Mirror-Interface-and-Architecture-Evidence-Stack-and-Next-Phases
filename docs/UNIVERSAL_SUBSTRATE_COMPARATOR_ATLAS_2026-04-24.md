@@ -45,8 +45,8 @@ comparator surface with:
 | Nest | Domain | Role In The Big Paper |
 | --- | --- | --- |
 | `Nest 1` | formal systems | reductionist base: linear algebra, symmetries, invariants, encoded states |
-| `Nest 2` | constrained structured systems | matter-facing structure: elements, molecules, graphs, crystals, materials |
-| `Nest 3` | classical coherence systems | resonance / timing bridge: oscillators, fields, spectra, phase-lock |
+| `Nest 2` | constrained structured systems | matter-facing structure: elements, molecules, `H2O`, graphs, crystals, minerals, oxygen / redox, food chemistry, reactions, materials |
+| `Nest 3` | classical coherence systems | energy / resonance bridge: fire, plasma, oscillators, fields, spectra, phase-lock |
 | `Nest 4` | biological comparator systems | live organization: HRV, EEG, cells, genome regulation, physiology |
 | `Nest 5` | multi-class convergence | cross-domain recurrence: same score logic across completed classes |
 
@@ -60,9 +60,18 @@ comparator surface with:
 | AI hidden states | residual streams, hidden vectors, token-position geometry | packet/control, rerun, localization, readout bridge | separation, late-band structure, anchor stability, bridge carry-through | stochastic drift, localization loss, target/control collapse | use completed `V7` through `Phase 5` rows as reference signature |
 | semantic feature states | compressed feature vectors and semantic settings | `A`, `A'`, `B`, `B'` setting choice | bounded output correlations, semantic CHSH-style score | setting leakage, overfit threshold, control violation | locked `Phase 10` semantic contextuality protocol |
 | elements / periodic table | atomic number, shell structure, valence, families | family grouping, shuffled family labels, feature embeddings | periodic recurrence, valence class stability, shell relation | family scrambling, false clustering, random alignment | test whether comparator recovers periodic families above shuffled controls |
+| hydrogen / isotope bridge | `H`, `H2`, `H+`, deuterium, tritium, isotope identity | ionization, molecular formation, isotope comparison, fusion fuel mapping | charge, mass, isotope class, bond state | isotope confusion, ionization mismatch, reaction drift | compare hydrogen / isotope state maps before plasma / fusion bridge |
 | molecular families | molecular graphs, stoichiometry, bond topology, functional groups | graph embedding, family shuffle, bond perturbation | conserved topology, subgraph motifs, valence consistency | random graph mismatch, topology distortion, family collapse | classify molecule families and compare against shuffled graph controls |
 | `H2O` / water | bond angle, polarity, hydrogen-bond network, phase context | molecular graph, network perturbation, thermal / phase comparison | constrained angle, polarity relation, network coordination | bond-angle distortion, network decoherence, phase disruption | compare water motif against related small molecules and shuffled networks |
 | crystals / materials | lattice structure, unit cell, symmetry group, defects | lattice transform, defect insertion, strain perturbation | space-group relation, lattice periodicity, phonon / band structure | defect drift, symmetry loss, strain disorder | test preserved lattice invariants under controlled perturbation |
+| minerals / geologic matter | mineral lattice, elemental ratios, surface sites, clays, oxides | weathering, dissolution, adsorption, ion exchange, pH / oxygen exposure | crystal chemistry, surface binding, ion-exchange relation, leaching balance | uncontrolled leaching, contaminant transfer, mineral-family confusion | score mineral family / surface behavior against shuffled composition and treatment controls |
+| oxygen / redox chemistry | `O2`, dissolved oxygen, oxidation states, electron-transfer couples, ROS | oxidation / reduction, pH, catalyst, electrochemical potential, oxygen availability | charge balance, redox potential, oxidation-state path, bounded reactive species | runaway oxidation, hypoxia, off-target ROS, invalid redox state | compare redox pathways against mass / charge and toxicity controls |
+| ionic / acid-base systems | salts, electrolytes, pH, buffers, proton-transfer states | dissolution, precipitation, pH shift, ion exchange, membrane transport | charge neutrality, buffer class, conductivity relation, solubility relation | runaway pH, precipitation drift, conductivity artifact | compare ionic state preservation under controlled pH / solution transforms |
+| nutrition / food chemistry | proteins, carbohydrates, fats, vitamins, minerals, fiber, hydration, food matrices | cooking, digestion, fermentation, storage, dose / timing, absorption context | molecular class, energy substrate, cofactor role, hydration state, safe intake range | deficiency, excess, oxidation, glycemic drift, intolerance / allergen mismatch | map food chemistry as constrained matter before metabolism, microbiome, physiology, and `HRV / EEG` readout |
+| fire / combustion | fuel, oxidizer, heat front, intermediates, products, soot | ignition, thermal oxidation, oxygen supply, quenching | energy release path, oxidation sequence, product balance | incomplete combustion, toxic byproducts, runaway heat | score combustion / thermal degradation by endpoint and byproduct balance |
+| plasma / reactive ionized states | ions, electrons, radicals, photons, surface states | plasma exposure, gas mix, power, pulse timing, catalyst / surface control | bounded reactive species, target bond activation, surface transformation | uncontrolled radicals, surface damage, harmful fragments | compare plasma-assisted transformation against sham / heat / gas-only controls |
+| fusion / nuclear plasma | hydrogen isotopes, nuclei, plasma, confinement state, energy output | fuel mix, temperature, density, pressure, magnetic confinement, reaction channel | conservation, confinement stability, energy balance, reaction-channel coherence | instability, neutron / radiation drift, byproduct hazard, confinement loss | model fusion pathway and confinement comparators from public physics parameters |
+| solar / stellar system | stellar plasma, fusion core, photons, magnetic field, solar wind | fusion rate, magnetic cycle, flare, radiation output, heliospheric flow | luminosity, spectral class, magnetic-cycle structure, solar wind relation | flare instability, solar storm, radiation drift | map solar as multi-class fusion / plasma / EM / gravity / climate coupling |
 | reaction networks | reactants, products, pathways, catalysts, kinetics | pathway perturbation, rate change, catalyst/control comparison | stoichiometric balance, conserved mass/charge, pathway stability | runaway path, side reaction, rate instability | compare stable pathway families against random reaction graphs |
 | persistent pollutant remediation | `PFAS / PFCs / forever chemicals`, fluorinated compounds, pharmaceuticals, pesticides, industrial organics, microplastics, degradation byproducts, treatment conditions | adsorption, membrane, AOP, ARP, SCWO, plasma, sonolysis, photocatalysis, electrochemical controls | parent reduction, defluorination / mineralization, byproduct suppression, toxicity / bioactivity reduction | partial breakdown, harmful byproducts, transfer to sludge/air, microfragmentation, persistent active metabolites | literature matrix first, then benchtop analogs and partner-lab contaminant tests |
 | thermodynamic states | temperature, pressure, entropy, phase, free energy | phase transition, cooling/heating, pressure change | phase boundary, conservation relation, energy minimum | instability, hysteresis, uncontrolled entropy growth | map transition stability and drift across known phase diagrams |
@@ -143,6 +152,10 @@ clinical claim.
 ## Chemical And Materials Pattern Overlay
 
 Chemistry should be treated as constrained relational structure.
+
+Dedicated foundation:
+
+- [Nest 2 Constrained Structured Systems Foundation](./NEST2_CONSTRAINED_STRUCTURED_SYSTEMS_FOUNDATION_2026-04-24.md)
 
 The first chemistry question is not whether a molecule "is the mirror." The
 first question is whether the same comparator logic can recover:
