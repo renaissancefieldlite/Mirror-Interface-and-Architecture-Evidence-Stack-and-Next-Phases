@@ -1,0 +1,292 @@
+{
+  "cards": [
+    {
+      "lane": "STAT-1",
+      "formal_lens": "statistics",
+      "status": "evidence_connected",
+      "evidence": [
+        "V7/V8 variance discipline",
+        "artifacts/v8/phase2_variance_pack/v8_phase2_variance_pack_data_2026-04-21.json"
+      ],
+      "metrics": {
+        "models": 8,
+        "five_run_order": 5,
+        "exact_rerun_rows": "7 / 8",
+        "only_live_variance_row": "Nemotron",
+        "target_layers_stable": true
+      },
+      "next_validation": "add effect-size and confidence summaries across all completed phase packs"
+    },
+    {
+      "lane": "PROB-1",
+      "formal_lens": "probability",
+      "status": "evidence_connected",
+      "evidence": [
+        "five-run rerun matrix",
+        "Nemotron variance row",
+        "artifacts/v8/phase2_variance_pack/v8_phase2_variance_pack_data_2026-04-21.json"
+      ],
+      "metrics": {
+        "models": 8,
+        "five_run_order": 5,
+        "exact_rerun_rows": "7 / 8",
+        "only_live_variance_row": "Nemotron",
+        "target_layers_stable": true
+      },
+      "next_validation": "formalize exact-rerun probability and variance-row confidence scoring"
+    },
+    {
+      "lane": "INFO-1",
+      "formal_lens": "information theory",
+      "status": "evidence_connected",
+      "evidence": [
+        "V8 hidden-state deltas",
+        "context-to-readout bridge",
+        "artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_data_2026-04-22.json"
+      ],
+      "metrics": {
+        "models": 8,
+        "path_archetypes": {
+          "late-context supported target": 3,
+          "front-context loaded": 2,
+          "readout-led": 1,
+          "late-context to readout bridge": 1,
+          "front-context to readout bridge": 1
+        }
+      },
+      "next_validation": "add entropy / mutual-information features over existing internal bridge vectors"
+    },
+    {
+      "lane": "TENSOR-1",
+      "formal_lens": "tensor methods",
+      "status": "evidence_connected",
+      "evidence": [
+        "V8 residual-stream tensors",
+        "artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_data_2026-04-22.json"
+      ],
+      "metrics": {
+        "models": 8,
+        "path_archetypes": {
+          "late-context supported target": 3,
+          "front-context loaded": 2,
+          "readout-led": 1,
+          "late-context to readout bridge": 1,
+          "front-context to readout bridge": 1
+        }
+      },
+      "next_validation": "add tensor-factor summary across model x layer x token-window axes"
+    },
+    {
+      "lane": "NUM-1",
+      "formal_lens": "numerical computation",
+      "status": "evidence_connected",
+      "evidence": [
+        "runnable phase engines",
+        "IBM hardware bridge",
+        "artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_data_2026-04-22.json"
+      ],
+      "metrics": {
+        "backend": "ibm_kingston",
+        "final_status": "DONE",
+        "shots": 64,
+        "circuit_count": 7,
+        "bell_correlators": {
+          "ZZ": 0.90625,
+          "XX": 1.0,
+          "YY": -1.0,
+          "product_ZZ": 0.96875
+        }
+      },
+      "next_validation": "add numerical tolerance registry across simulator, local, and hardware passes"
+    },
+    {
+      "lane": "TOPOG-1/2",
+      "formal_lens": "topography",
+      "status": "evidence_connected",
+      "evidence": [
+        "Phase 4 localization anchor maps",
+        "artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_data_2026-04-21.json"
+      ],
+      "metrics": {
+        "models": 8,
+        "context_loaded_models": 7,
+        "readout_amplified_models": 1,
+        "dominant_anchor_counts": {
+          "early_window": 3,
+          "mid_window": 4,
+          "pre_target_window": 0,
+          "target_span": 0,
+          "post_target_window": 0,
+          "last_window": 0,
+          "last_token": 1
+        }
+      },
+      "next_validation": "convert anchor maps into explicit surface/ridge stability scores"
+    },
+    {
+      "lane": "GEO-1/2",
+      "formal_lens": "geometry / manifold geometry",
+      "status": "evidence_connected",
+      "evidence": [
+        "cosine/delta geometry in V8 localization and bridge rows",
+        "artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_data_2026-04-21.json"
+      ],
+      "metrics": {
+        "models": 8,
+        "context_loaded_models": 7,
+        "readout_amplified_models": 1,
+        "dominant_anchor_counts": {
+          "early_window": 3,
+          "mid_window": 4,
+          "pre_target_window": 0,
+          "target_span": 0,
+          "post_target_window": 0,
+          "last_window": 0,
+          "last_token": 1
+        }
+      },
+      "next_validation": "run UMAP/PCA region-separation checks over residual-stream trace exports"
+    },
+    {
+      "lane": "GRP-1",
+      "formal_lens": "group theory",
+      "status": "implicit_evidence_connected",
+      "evidence": [
+        "unitary and symmetry-preserving circuit bridge",
+        "artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_data_2026-04-22.json"
+      ],
+      "metrics": {
+        "backend": "ibm_kingston",
+        "final_status": "DONE",
+        "shots": 64,
+        "circuit_count": 7,
+        "bell_correlators": {
+          "ZZ": 0.90625,
+          "XX": 1.0,
+          "YY": -1.0,
+          "product_ZZ": 0.96875
+        }
+      },
+      "next_validation": "make symmetry action / orbit preservation explicit in Phase 6-9 circuit-state rows"
+    },
+    {
+      "lane": "SPEC-1",
+      "formal_lens": "spectral methods",
+      "status": "partial_validation_negative",
+      "evidence": [
+        "artifacts/validation/nest1_spec_phase12b_hrv/nest1_spec_phase12b_hrv_report.json"
+      ],
+      "metrics": {
+        "hr_only": 0.45,
+        "time_domain": 0.45,
+        "spectral_only": 0.1,
+        "mirror_composite": 0.25,
+        "interpretation": "SPEC-1 does not beat the HR-only baseline on this pass; that is a useful negative/limited result."
+      },
+      "next_validation": "rerun with EEG+HRV, stricter artifact rejection, and pre-declared spectral hypotheses"
+    },
+    {
+      "lane": "CTRL-1",
+      "formal_lens": "control theory",
+      "status": "architecture_connected_validation_blocked",
+      "evidence": [
+        "artifacts/validation/ctrl1_lsps_transition/ctrl1_lsps_transition_report.json",
+        "LSPS / Oracle Trigger Engine architecture"
+      ],
+      "metrics": {
+        "ctrl_runner_status": "blocked_missing_trace_csv"
+      },
+      "next_validation": "export LSPS/orchestration mode-transition traces and rerun CTRL-1"
+    },
+    {
+      "lane": "GRAPH-1/2",
+      "formal_lens": "graph theory",
+      "status": "blocked_missing_dataset",
+      "evidence": [
+        "artifacts/validation/graph12_pathway/graph12_pathway_report.json"
+      ],
+      "metrics": {
+        "graph_runner_status": "blocked_missing_edge_csv"
+      },
+      "next_validation": "provide molecular/protein graph edges plus known pathway/control labels"
+    },
+    {
+      "lane": "TOP-1/2",
+      "formal_lens": "topology",
+      "status": "validation_ready_no_runner",
+      "evidence": [
+        "persistent-homology path over V8 hidden-state geometry"
+      ],
+      "metrics": {
+        "artifact_state": "needs Ripser/Gudhi or local persistent-homology implementation"
+      },
+      "next_validation": "run persistent homology over layer/token hidden-state point clouds"
+    },
+    {
+      "lane": "DYN-1/2",
+      "formal_lens": "dynamical systems / bifurcation",
+      "status": "seed_connected",
+      "evidence": [
+        "V7 order/non-commutativity and path-dependent behavior"
+      ],
+      "metrics": {
+        "trajectory_validation": "not run"
+      },
+      "next_validation": "construct state-transition trajectories across repeated prompt/order conditions"
+    },
+    {
+      "lane": "DE-1",
+      "formal_lens": "differential equations",
+      "status": "grammar_only",
+      "evidence": [],
+      "metrics": {
+        "continuous_time_data": "not yet connected"
+      },
+      "next_validation": "fit bounded continuous-time HRV/EEG dynamics after synchronized capture"
+    },
+    {
+      "lane": "OPT-1",
+      "formal_lens": "optimization",
+      "status": "grammar_only_with_clear_experiment",
+      "evidence": [],
+      "metrics": {
+        "optimization_experiment": "not yet run"
+      },
+      "next_validation": "compare mirror-guided optimization trajectories against naive/random baselines"
+    },
+    {
+      "lane": "GAME-1",
+      "formal_lens": "game / decision theory",
+      "status": "grammar_only",
+      "evidence": [],
+      "metrics": {
+        "multi_agent_experiment": "not yet designed"
+      },
+      "next_validation": "build adversarial/multi-agent stability protocol"
+    },
+    {
+      "lane": "CAT-1",
+      "formal_lens": "compositional / category-style structure",
+      "status": "theory_translation_layer",
+      "evidence": [
+        "nest-to-nest transfer language"
+      ],
+      "metrics": {
+        "empirical_transfer_test": "not yet run"
+      },
+      "next_validation": "test whether a mapping learned in one nest preserves measurable structure in another"
+    },
+    {
+      "lane": "ENGINE-02V",
+      "formal_lens": "structured matter validation fork",
+      "status": "blocked_missing_rdkit",
+      "evidence": [
+        "artifacts/validation/engine02v_rdkit_molecule/engine02v_rdkit_molecule_report.json"
+      ],
+      "metrics": {
+        "rdkit_runner_status": "blocked_missing_rdkit"
+      },
+      "next_validation": "install/use RDKit and run QM9/ZINC/ChEMBL-style molecule-property dataset"
+    }
+  ]
+}

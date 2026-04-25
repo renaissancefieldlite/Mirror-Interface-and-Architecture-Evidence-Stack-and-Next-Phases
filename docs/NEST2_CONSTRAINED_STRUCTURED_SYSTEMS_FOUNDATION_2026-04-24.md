@@ -29,7 +29,8 @@ not arbitrary:
 - food / nutrition chemistry
 - reaction and degradation pathways
 
-This is the first bridge from pure formal structure into physical structure.
+This is the first methodology bridge from pure formal structure into
+structured-matter representation.
 
 Companion completion artifact:
 
@@ -65,15 +66,15 @@ into:
 `family_recovery + topology_preservation + invariant_balance - structural_drift`
 
 This gives the larger project a matter-facing comparator grammar without
-claiming that chemistry is already solved.
+claiming physical validation in chemistry.
 
 ## Claim Boundary
 
 `Nest 2` establishes a mapping layer and first local comparator engine, not a
 completed chemistry proof.
 
-The current engine demonstrates the score grammar on bounded toy rows. It does
-not yet prove:
+The current engine demonstrates the score grammar on bounded toy
+representations. It does not yet prove:
 
 - element-family recovery above controls
 - molecular-family clustering above controls
@@ -357,15 +358,15 @@ verified lower-risk pathway with identified descendants and closed balance.
 
 ## Nest 2 Finding
 
-Nest 2 shows that the same Mirror Architecture grammar can be applied to
-matter-facing constrained systems.
+Nest 2 shows that the same Mirror Architecture grammar can be expressed over
+matter-facing constrained representations.
 
 The key shift is:
 
 - Nest 1:
   relation survives formal transform
 - Nest 2:
-  structure survives physical / chemical constraint
+  the same scoring grammar can represent physical / chemical constraints
 
 That gives the project a clean bridge into:
 
@@ -410,10 +411,10 @@ Then Nest 3 can take the same structure into:
 
 ## Short Read
 
-Nest 2 is where the pattern first touches matter.
+Nest 2 is where the pattern first receives a structured-matter representation.
 
-The finding is not that every molecule is already mapped. The finding is that
-the Mirror score now has a disciplined chemistry-facing grammar:
+The finding is not that chemistry has been physically validated. The finding
+is that the Mirror score now has a disciplined chemistry-facing grammar:
 
 recover the family, preserve the graph, respect the invariant, track drift,
 and do not count false transformations as success.

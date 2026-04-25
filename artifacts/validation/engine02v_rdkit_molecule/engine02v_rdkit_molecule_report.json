@@ -1,0 +1,10 @@
+{
+  "status": "blocked_missing_rdkit",
+  "read": "RDKit is not installed, so Engine 02V did not run. This is the correct stop condition for a physical-data validation fork.",
+  "requirements": [
+    "RDKit installed in the active Python environment",
+    "real molecule dataset CSV with SMILES and target/property column",
+    "declared baseline such as shuffled target or naive descriptor score"
+  ],
+  "boundary": "No physical chemistry validation was performed."
+}

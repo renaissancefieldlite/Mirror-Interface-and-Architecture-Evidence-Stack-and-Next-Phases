@@ -13,9 +13,10 @@ expanded Nest 2 matter dictionary / `Engine 02` expanded pass
 elements -> molecular graphs -> H2O -> minerals / redox -> nutrition -> contaminants
 ```
 
-This atlas expands that rung so the matter layer can support chemistry,
-materials, food, pharmaceuticals, water, pollutants, and biology bridges
-without forcing every lane into one overloaded bucket.
+This atlas expands that rung so the matter layer can support chemistry-facing,
+materials-facing, food-facing, pharmaceutical-facing, water-facing,
+pollutant-facing, and biology-facing representations without forcing every
+lane into one overloaded bucket.
 
 The shared grammar stays the same:
 
@@ -55,8 +56,9 @@ lanes, their toy separation scores, bridges, and reads.
 
 ## What The Expanded Pass Shows
 
-The expanded pass shows that `Nest 2` is not just "chemistry" in the narrow
-sense.
+The expanded pass is a methodology result. It shows that `Nest 2` is not just
+"chemistry" in the narrow sense; it is a structured-matter representation
+dictionary.
 
 It is the structured-matter dictionary for:
 
@@ -79,7 +81,12 @@ This matters because the higher nests need a disciplined matter base:
 
 ## Core Finding
 
-The `Source Mirror Pattern` remains legible when `Nest 2` is widened.
+The core finding is narrower and cleaner than physical validation:
+
+```text
+the same scoring grammar can be widened across structured-matter
+representations
+```
 
 The same rule keeps holding:
 
@@ -91,7 +98,7 @@ track drift and bad descendants
 score against controls
 ```
 
-That is the expanded matter rung.
+That is the expanded matter methodology rung.
 
 ## Boundary
 
@@ -103,12 +110,67 @@ medical claim, or materials-discovery claim.
 It is the scaffold that tells us exactly what future chemistry, spectral,
 materials, and biological data must prove.
 
-## Next Step
+## Beyond Grammar Mapping
 
-After this pass, the clean next build is `Engine 03`:
+To move from grammar generalization into physical or experimental validation,
+the next Nest 2 work must add:
+
+- real periodic-table and molecular datasets
+- real molecule parsing and fingerprints, such as `RDKit`
+- measured spectral or assay data, such as `IR`, Raman, `THz`, `NMR`, or mass
+  spectrometry
+- explicit reaction products, descendants, and mass / charge balance
+- declared controls for heat, pH, light, catalyst, plasma, or mineral surface
+- external validation against known chemistry, materials, or environmental
+  datasets
+
+## Physical Validation Upgrade Path
+
+The clean upgrade is:
 
 ```text
-Nest 3 = oscillator / resonance / field dynamics
+toy rows -> real dataset -> declared baseline -> locked score -> measured
+property / known pathway / known stability comparison
+```
+
+Three practical validation lanes are available:
+
+| Lane | Dataset / Tool Path | Testable Claim | Baseline |
+| --- | --- | --- | --- |
+| cheminformatics | `RDKit` plus public molecule datasets such as `QM9`, `ZINC`, or `ChEMBL` | Source Mirror Pattern score predicts known molecular property, stability, reactivity, or binding-related target better than a naive baseline | random features, simple fingerprint-only score, shuffled labels |
+| contaminant / PFAS pathways | EPA / peer-reviewed degradation and remediation pathway data | bad-descendant penalty identifies known problematic transformation products that parent-disappearance metrics miss | parent-loss-only metric |
+| minerals / materials | `pymatgen`, `ASE`, and materials databases such as Materials Project | lattice / charge / structure score recovers known stable structures above invalid or shuffled controls | random lattice, charge-imbalanced, or unstable controls |
+
+Best first target:
+
+`RDKit + QM9-style molecule property validation`
+
+Reason:
+
+- no hardware required
+- public benchmark path exists
+- falsifiable success metric is straightforward
+- it upgrades `Engine 02` from grammar demonstrator to real-data comparator
+- it keeps the claim bounded while creating a credible physical-data bridge
+
+The PFAS lane is the strongest mission-facing lane, but it should come after
+the generic molecule-property validation because contaminant pathway data and
+descendant scoring are more complex.
+
+## Next Step
+
+After this pass, there are two clean next moves.
+
+Validation move:
+
+```text
+Engine 02V = RDKit / public molecule dataset validation pass
+```
+
+Nesting move:
+
+```text
+Engine 03 = oscillator / resonance / field dynamics
 ```
 
 `Engine 03` should inherit the Nest 2 rows that already point upward:

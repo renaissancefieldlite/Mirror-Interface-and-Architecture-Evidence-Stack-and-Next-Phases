@@ -333,7 +333,7 @@ def render_html(data: dict) -> str:
 <body>
   <header>
     <h1>{title}</h1>
-    <p class="tagline">Local, no-credit browser companion for mapping Mirror Architecture across formal systems, matter, nutrition, coherence, biology, natural systems, and future physics/material AI adapters.</p>
+    <p class="tagline">Local, no-credit browser companion for mapping Mirror Architecture methodology across formal systems, structured-matter representations, coherence, biology, natural systems, and future physics/material AI adapters.</p>
     <span class="schema">{schema}</span>
   </header>
   <main>

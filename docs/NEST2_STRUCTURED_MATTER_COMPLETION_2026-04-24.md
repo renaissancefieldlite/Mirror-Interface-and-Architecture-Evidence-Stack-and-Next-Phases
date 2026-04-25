@@ -7,8 +7,8 @@ foundation complete / `Engine 02` local demonstrator built
 
 ## Purpose
 
-This closes the first `Nest 2` pass by moving structured matter from a mapped
-foundation into a runnable local comparator.
+This closes the first `Nest 2` pass by moving structured-matter
+representations from a mapped foundation into a runnable local comparator.
 
 The shared grammar remains:
 
@@ -50,7 +50,8 @@ credit spend.
 
 ## Engine 02 Read
 
-`Engine 02` demonstrates the matter-facing score grammar across small toy rows.
+`Engine 02` demonstrates the matter-facing score grammar across small toy
+representations.
 
 It currently reports:
 
@@ -78,8 +79,8 @@ contaminants: bounded mineralization candidate beats parent-only loss control
 
 ## Core Finding
 
-The `Nest 2` finding is that the `Source Mirror Pattern` can be expressed in
-structured matter without changing the evidence grammar.
+The `Nest 2` finding is methodological: the same score grammar can be
+expressed over structured-matter representations without changing its shape.
 
 The formal pattern:
 
@@ -97,12 +98,34 @@ track byproducts
 penalize bad descendants
 ```
 
-That gives the project a concrete bridge from formal mathematics into matter,
-chemistry, nutrition, materials, and remediation design.
+That gives the project a concrete methodology bridge from formal mathematics
+into chemistry-facing, nutrition-facing, materials-facing, and remediation-
+facing representations.
+
+## Claim Precision
+
+This does not show that the Mirror Architecture has been physically validated
+in chemistry.
+
+It shows the narrower but useful result:
+
+```text
+the same scoring grammar can be represented in structured matter domains
+```
+
+Moving beyond that requires real datasets, measured chemistry, declared
+instrumentation, external controls, and independent validation.
+
+The clean first validation lane is `RDKit` plus a public molecule benchmark
+such as `QM9`, `ZINC`, or `ChEMBL`, where the score must predict a known
+property or class better than naive or shuffled baselines. The stronger
+mission-facing validation lane is PFAS / contaminant degradation data, where
+the bad-descendant penalty must identify problematic transformation products
+that parent-disappearance metrics miss.
 
 ## What Is Locked
 
-- `Nest 2` is complete as a first structured-matter map.
+- `Nest 2` is complete as a first structured-matter methodology map.
 - `Engine 02` is complete as the first local structured-matter demonstrator.
 - The companion now has a runnable matter engine alongside the `Nest 1`
   formal engine.
@@ -120,7 +143,7 @@ It does not claim completed chemistry, nutrition, medicine, remediation,
 materials discovery, or lab validation.
 
 It defines the score grammar and shows that the same architecture can be made
-runnable on constrained matter rows.
+runnable on constrained matter representations.
 
 ## Next Expansion
 
@@ -134,6 +157,7 @@ The next `Nest 2` upgrades are:
    balance
 6. carry selected matter rows upward into `Engine 03` resonance / field
    dynamics and `Engine 04` biology
+7. build `Engine 02V` as the first physical-data validation pass
 
 ## Short Read
 

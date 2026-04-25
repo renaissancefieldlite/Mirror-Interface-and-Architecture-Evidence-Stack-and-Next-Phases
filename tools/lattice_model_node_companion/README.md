@@ -59,8 +59,9 @@ This is the demo answer when someone asks what is built:
 
 the browser companion is the chassis, `Engine 01` demonstrates the formal
 invariant grammar, and `Engine 02` demonstrates the first structured-matter
-grammar across elements, molecular graphs, water, minerals, nutrition, redox,
-contaminant-pathway scoring, and the expanded matter lanes without API calls.
+methodology grammar across elements, molecular graphs, water, minerals,
+nutrition, redox, contaminant-pathway scoring, and the expanded matter lanes
+without API calls. `Engine 02` is not physical chemistry validation.
 
 `Engine 02` expanded lanes now include:
 
@@ -72,6 +73,10 @@ contaminant-pathway scoring, and the expanded matter lanes without API calls.
 - spectral signatures
 - environmental fate
 - materials / semiconductors
+
+The next validation fork is `Engine 02V`: `RDKit` plus a public molecule
+benchmark such as `QM9`, `ZINC`, or `ChEMBL`, tested against naive and shuffled
+baselines before moving into PFAS / contaminant degradation data.
 
 ## Future Adapter Slots
 

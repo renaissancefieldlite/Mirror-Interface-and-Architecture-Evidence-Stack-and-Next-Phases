@@ -117,13 +117,58 @@ The next `Nest 1` engine expansion can add:
 
 These can all run locally before `Nest 2` chemistry engines begin.
 
+## Validation Read
+
+`Nest 1` currently establishes formal expressibility.
+
+It does not mean every formal lens has predictive validation. Validation
+requires a concrete target, a real dataset, and a baseline comparison.
+
+First validation artifact:
+
+- [Nest 1 Validation Forks](./NEST1_VALIDATION_FORKS_2026-04-24.md)
+- [Nest 1 Fortress Card Registry](../artifacts/validation/nest1_fortress_cards/nest1_fortress_cards.md)
+
+First run:
+
+```text
+SPEC-1 -> Phase 12B HRV
+```
+
+Result:
+
+```text
+HR-only baseline: 0.45
+time-domain HRV:  0.45
+SPEC-1 spectral:  0.10
+mirror composite: 0.25
+```
+
+Read:
+
+The current HRV-only spectral fork did not beat simpler baselines. This is a
+useful limited / negative result, and it points the next validation step toward
+EEG spectra, better artifact rejection, longer windows, and pre-declared
+spectral hypotheses.
+
+Additional concrete fork state:
+
+- `GRAPH-1/2` runner exists and is blocked until real graph edges plus
+  pathway/control labels are provided.
+- `CTRL-1` runner exists and is blocked until real LSPS / orchestration
+  transition traces are exported.
+- `Engine 02V` runner exists and is blocked until `RDKit` plus a real molecule
+  dataset are present.
+- `Nest 1 Fortress Cards` now mark each formal lane as evidence-connected,
+  partial, blocked, seeded, or grammar-only.
+
 ## Completion Read
 
-`Nest 1` is now complete as a formal foundation.
+`Nest 1` is now complete as a formal foundation, and its first validation fork
+has been run.
 
 There can be more worked examples and engines, but the missing formal
 disciplines are now mapped.
 
 The next build step can move into `Nest 2` while continuing to add local
 `Nest 1` engine examples as needed.
-

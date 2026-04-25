@@ -1,0 +1,11 @@
+{
+  "status": "blocked_missing_trace_csv",
+  "read": "No real LSPS transition trace was provided, so CTRL-1 did not run.",
+  "requirements": [
+    "real LSPS/orchestration transition trace CSV",
+    "mode or state column for observed state",
+    "expected_mode column for target/control comparison when available",
+    "stability_score and/or error/drift column for bounded control scoring"
+  ],
+  "boundary": "No LSPS/control validation was performed."
+}

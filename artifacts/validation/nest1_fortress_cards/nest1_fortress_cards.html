@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nest 1 Fortress Cards</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #071015;
+      --panel: rgba(17, 30, 39, 0.9);
+      --text: #eef7fa;
+      --muted: #a8bac4;
+      --line: rgba(255,255,255,0.11);
+    }
+    body {
+      margin: 0;
+      font-family: Avenir Next, Futura, Trebuchet MS, sans-serif;
+      background:
+        radial-gradient(circle at 20% 12%, rgba(82, 180, 255, 0.22), transparent 28rem),
+        radial-gradient(circle at 88% 5%, rgba(255, 209, 102, 0.17), transparent 24rem),
+        linear-gradient(135deg, #071015 0%, #0b1d26 52%, #061114 100%);
+      color: var(--text);
+    }
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 44px 22px 68px;
+    }
+    header {
+      max-width: 900px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 5vw, 5rem);
+      line-height: 0.94;
+      letter-spacing: -0.06em;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.55;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--accent);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 22px 60px rgba(0,0,0,0.28);
+    }
+    .lane {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--accent), transparent 72%);
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      font-size: 0.78rem;
+    }
+    h2 {
+      margin: 12px 0 8px;
+      font-size: 1.45rem;
+      letter-spacing: -0.03em;
+    }
+    h3 {
+      margin: 16px 0 6px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .status {
+      margin: 0;
+      color: var(--muted);
+      font-family: SFMono-Regular, Menlo, monospace;
+      font-size: 0.86rem;
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 0.9rem;
+    }
+    p {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    code {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Nest 1 Fortress Cards</h1>
+      <p class="subtitle">A concrete map of which formal lanes are already evidence-connected,
+      which have partial validation, and which need new data before they can carry a real claim.</p>
+    </header>
+    <section class="grid">
+      
+            <article class="card" style="--accent:#66e3a1">
+              <div class="lane">STAT-1</div>
+              <h2>statistics</h2>
+              <p class="status">evidence_connected</p>
+              <h3>Evidence</h3>
+              <ul><li>V7/V8 variance discipline</li><li>artifacts/v8/phase2_variance_pack/v8_phase2_variance_pack_data_2026-04-21.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>models</code>: 8</li><li><code>five_run_order</code>: 5</li><li><code>exact_rerun_rows</code>: 7 / 8</li><li><code>only_live_variance_row</code>: Nemotron</li><li><code>target_layers_stable</code>: True</li></ul>
+              <h3>Next</h3>
+              <p>add effect-size and confidence summaries across all completed phase packs</p>
+            </article>
+            
+            <article class="card" style="--accent:#66e3a1">
+              <div class="lane">PROB-1</div>
+              <h2>probability</h2>
+              <p class="status">evidence_connected</p>
+              <h3>Evidence</h3>
+              <ul><li>five-run rerun matrix</li><li>Nemotron variance row</li><li>artifacts/v8/phase2_variance_pack/v8_phase2_variance_pack_data_2026-04-21.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>models</code>: 8</li><li><code>five_run_order</code>: 5</li><li><code>exact_rerun_rows</code>: 7 / 8</li><li><code>only_live_variance_row</code>: Nemotron</li><li><code>target_layers_stable</code>: True</li></ul>
+              <h3>Next</h3>
+              <p>formalize exact-rerun probability and variance-row confidence scoring</p>
+            </article>
+            
+            <article class="card" style="--accent:#66e3a1">
+              <div class="lane">INFO-1</div>
+              <h2>information theory</h2>
+              <p class="status">evidence_connected</p>
+              <h3>Evidence</h3>
+              <ul><li>V8 hidden-state deltas</li><li>context-to-readout bridge</li><li>artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_data_2026-04-22.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>models</code>: 8</li><li><code>path_archetypes</code>: {'late-context supported target': 3, 'front-context loaded': 2, 'readout-led': 1, 'late-context to readout bridge': 1, 'front-context to readout bridge': 1}</li></ul>
+              <h3>Next</h3>
+              <p>add entropy / mutual-information features over existing internal bridge vectors</p>
+            </article>
+            
+            <article class="card" style="--accent:#66e3a1">
+              <div class="lane">TENSOR-1</div>
+              <h2>tensor methods</h2>
+              <p class="status">evidence_connected</p>
+              <h3>Evidence</h3>
+              <ul><li>V8 residual-stream tensors</li><li>artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_data_2026-04-22.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>models</code>: 8</li><li><code>path_archetypes</code>: {'late-context supported target': 3, 'front-context loaded': 2, 'readout-led': 1, 'late-context to readout bridge': 1, 'front-context to readout bridge': 1}</li></ul>
+              <h3>Next</h3>
+              <p>add tensor-factor summary across model x layer x token-window axes</p>
+            </article>
+            
+            <article class="card" style="--accent:#66e3a1">
+              <div class="lane">NUM-1</div>
+              <h2>numerical computation</h2>
+              <p class="status">evidence_connected</p>
+              <h3>Evidence</h3>
+              <ul><li>runnable phase engines</li><li>IBM hardware bridge</li><li>artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_data_2026-04-22.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>backend</code>: ibm_kingston</li><li><code>final_status</code>: DONE</li><li><code>shots</code>: 64</li><li><code>circuit_count</code>: 7</li><li><code>bell_correlators</code>: {'ZZ': 0.90625, 'XX': 1.0, 'YY': -1.0, 'product_ZZ': 0.96875}</li></ul>
+              <h3>Next</h3>
+              <p>add numerical tolerance registry across simulator, local, and hardware passes</p>
+            </article>
+            
+            <article class="card" style="--accent:#66e3a1">
+              <div class="lane">TOPOG-1/2</div>
+              <h2>topography</h2>
+              <p class="status">evidence_connected</p>
+              <h3>Evidence</h3>
+              <ul><li>Phase 4 localization anchor maps</li><li>artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_data_2026-04-21.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>models</code>: 8</li><li><code>context_loaded_models</code>: 7</li><li><code>readout_amplified_models</code>: 1</li><li><code>dominant_anchor_counts</code>: {'early_window': 3, 'mid_window': 4, 'pre_target_window': 0, 'target_span': 0, 'post_target_window': 0, 'last_window': 0, 'last_token': 1}</li></ul>
+              <h3>Next</h3>
+              <p>convert anchor maps into explicit surface/ridge stability scores</p>
+            </article>
+            
+            <article class="card" style="--accent:#66e3a1">
+              <div class="lane">GEO-1/2</div>
+              <h2>geometry / manifold geometry</h2>
+              <p class="status">evidence_connected</p>
+              <h3>Evidence</h3>
+              <ul><li>cosine/delta geometry in V8 localization and bridge rows</li><li>artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_data_2026-04-21.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>models</code>: 8</li><li><code>context_loaded_models</code>: 7</li><li><code>readout_amplified_models</code>: 1</li><li><code>dominant_anchor_counts</code>: {'early_window': 3, 'mid_window': 4, 'pre_target_window': 0, 'target_span': 0, 'post_target_window': 0, 'last_window': 0, 'last_token': 1}</li></ul>
+              <h3>Next</h3>
+              <p>run UMAP/PCA region-separation checks over residual-stream trace exports</p>
+            </article>
+            
+            <article class="card" style="--accent:#a8e66a">
+              <div class="lane">GRP-1</div>
+              <h2>group theory</h2>
+              <p class="status">implicit_evidence_connected</p>
+              <h3>Evidence</h3>
+              <ul><li>unitary and symmetry-preserving circuit bridge</li><li>artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_data_2026-04-22.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>backend</code>: ibm_kingston</li><li><code>final_status</code>: DONE</li><li><code>shots</code>: 64</li><li><code>circuit_count</code>: 7</li><li><code>bell_correlators</code>: {'ZZ': 0.90625, 'XX': 1.0, 'YY': -1.0, 'product_ZZ': 0.96875}</li></ul>
+              <h3>Next</h3>
+              <p>make symmetry action / orbit preservation explicit in Phase 6-9 circuit-state rows</p>
+            </article>
+            
+            <article class="card" style="--accent:#ffd166">
+              <div class="lane">SPEC-1</div>
+              <h2>spectral methods</h2>
+              <p class="status">partial_validation_negative</p>
+              <h3>Evidence</h3>
+              <ul><li>artifacts/validation/nest1_spec_phase12b_hrv/nest1_spec_phase12b_hrv_report.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>hr_only</code>: 0.45</li><li><code>time_domain</code>: 0.45</li><li><code>spectral_only</code>: 0.1</li><li><code>mirror_composite</code>: 0.25</li><li><code>interpretation</code>: SPEC-1 does not beat the HR-only baseline on this pass; that is a useful negative/limited result.</li></ul>
+              <h3>Next</h3>
+              <p>rerun with EEG+HRV, stricter artifact rejection, and pre-declared spectral hypotheses</p>
+            </article>
+            
+            <article class="card" style="--accent:#ff9f6e">
+              <div class="lane">CTRL-1</div>
+              <h2>control theory</h2>
+              <p class="status">architecture_connected_validation_blocked</p>
+              <h3>Evidence</h3>
+              <ul><li>artifacts/validation/ctrl1_lsps_transition/ctrl1_lsps_transition_report.json</li><li>LSPS / Oracle Trigger Engine architecture</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>ctrl_runner_status</code>: blocked_missing_trace_csv</li></ul>
+              <h3>Next</h3>
+              <p>export LSPS/orchestration mode-transition traces and rerun CTRL-1</p>
+            </article>
+            
+            <article class="card" style="--accent:#ff7a7a">
+              <div class="lane">GRAPH-1/2</div>
+              <h2>graph theory</h2>
+              <p class="status">blocked_missing_dataset</p>
+              <h3>Evidence</h3>
+              <ul><li>artifacts/validation/graph12_pathway/graph12_pathway_report.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>graph_runner_status</code>: blocked_missing_edge_csv</li></ul>
+              <h3>Next</h3>
+              <p>provide molecular/protein graph edges plus known pathway/control labels</p>
+            </article>
+            
+            <article class="card" style="--accent:#7ad7ff">
+              <div class="lane">TOP-1/2</div>
+              <h2>topology</h2>
+              <p class="status">validation_ready_no_runner</p>
+              <h3>Evidence</h3>
+              <ul><li>persistent-homology path over V8 hidden-state geometry</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>artifact_state</code>: needs Ripser/Gudhi or local persistent-homology implementation</li></ul>
+              <h3>Next</h3>
+              <p>run persistent homology over layer/token hidden-state point clouds</p>
+            </article>
+            
+            <article class="card" style="--accent:#b197fc">
+              <div class="lane">DYN-1/2</div>
+              <h2>dynamical systems / bifurcation</h2>
+              <p class="status">seed_connected</p>
+              <h3>Evidence</h3>
+              <ul><li>V7 order/non-commutativity and path-dependent behavior</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>trajectory_validation</code>: not run</li></ul>
+              <h3>Next</h3>
+              <p>construct state-transition trajectories across repeated prompt/order conditions</p>
+            </article>
+            
+            <article class="card" style="--accent:#b8c0cc">
+              <div class="lane">DE-1</div>
+              <h2>differential equations</h2>
+              <p class="status">grammar_only</p>
+              <h3>Evidence</h3>
+              <ul><li>none yet</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>continuous_time_data</code>: not yet connected</li></ul>
+              <h3>Next</h3>
+              <p>fit bounded continuous-time HRV/EEG dynamics after synchronized capture</p>
+            </article>
+            
+            <article class="card" style="--accent:#b8c0cc">
+              <div class="lane">OPT-1</div>
+              <h2>optimization</h2>
+              <p class="status">grammar_only_with_clear_experiment</p>
+              <h3>Evidence</h3>
+              <ul><li>none yet</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>optimization_experiment</code>: not yet run</li></ul>
+              <h3>Next</h3>
+              <p>compare mirror-guided optimization trajectories against naive/random baselines</p>
+            </article>
+            
+            <article class="card" style="--accent:#b8c0cc">
+              <div class="lane">GAME-1</div>
+              <h2>game / decision theory</h2>
+              <p class="status">grammar_only</p>
+              <h3>Evidence</h3>
+              <ul><li>none yet</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>multi_agent_experiment</code>: not yet designed</li></ul>
+              <h3>Next</h3>
+              <p>build adversarial/multi-agent stability protocol</p>
+            </article>
+            
+            <article class="card" style="--accent:#d0bfff">
+              <div class="lane">CAT-1</div>
+              <h2>compositional / category-style structure</h2>
+              <p class="status">theory_translation_layer</p>
+              <h3>Evidence</h3>
+              <ul><li>nest-to-nest transfer language</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>empirical_transfer_test</code>: not yet run</li></ul>
+              <h3>Next</h3>
+              <p>test whether a mapping learned in one nest preserves measurable structure in another</p>
+            </article>
+            
+            <article class="card" style="--accent:#ff7a7a">
+              <div class="lane">ENGINE-02V</div>
+              <h2>structured matter validation fork</h2>
+              <p class="status">blocked_missing_rdkit</p>
+              <h3>Evidence</h3>
+              <ul><li>artifacts/validation/engine02v_rdkit_molecule/engine02v_rdkit_molecule_report.json</li></ul>
+              <h3>Metrics</h3>
+              <ul><li><code>rdkit_runner_status</code>: blocked_missing_rdkit</li></ul>
+              <h3>Next</h3>
+              <p>install/use RDKit and run QM9/ZINC/ChEMBL-style molecule-property dataset</p>
+            </article>
+            
+    </section>
+  </main>
+</body>
+</html>

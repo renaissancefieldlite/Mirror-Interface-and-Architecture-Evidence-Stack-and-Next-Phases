@@ -28,6 +28,12 @@ Companion expansion:
 Completion artifact:
 [Nest 1 Expanded Formal Systems Completion](./NEST1_EXPANDED_FORMAL_SYSTEMS_COMPLETION_2026-04-24.md)
 
+Validation artifact:
+[Nest 1 Validation Forks](./NEST1_VALIDATION_FORKS_2026-04-24.md)
+
+Fortress card registry:
+[Nest 1 Fortress Cards](../artifacts/validation/nest1_fortress_cards/nest1_fortress_cards.md)
+
 The minimal base remains linear algebra, symmetries, invariants, and encoded
 circuit states. The expanded mathematical support layer also includes graph
 theory, topology, geometry, probability, information theory, dynamical systems,
@@ -151,7 +157,22 @@ Specific bridges:
 The `Nest 1` foundation is complete through the first unified matrix.
 
 The expanded mathematical support layer is now also mapped. Remaining `Nest 1`
-work is engine expansion and worked examples, not foundation definition.
+work is engine expansion and validation forks, not foundation definition.
+
+The first validation fork has already been run:
+
+```text
+SPEC-1 -> Phase 12B HRV
+```
+
+The HRV-only spectral method did not beat simpler HR / time-domain baselines on
+that first pass, so the result is intentionally recorded as limited / negative
+rather than overclaimed.
+
+The next validation fork layer is now executable rather than just outlined:
+`GRAPH-1/2`, `CTRL-1`, and `Engine 02V` runners are present and correctly block
+until their required real datasets, transition traces, or `RDKit` tooling are
+available.
 
 ## Short Read
 
