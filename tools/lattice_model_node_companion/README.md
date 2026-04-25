@@ -28,16 +28,35 @@ credits, download models, or require NVIDIA / Hugging Face packages.
 From the repository root:
 
 ```bash
-python3 tools/lattice_model_node_companion/lattice_model_node_demo.py
+tools/lattice_model_node_companion/run_demo.sh
 ```
 
-The script writes:
+The script writes the browser demo and the first local engine report:
 
 ```text
 tools/lattice_model_node_companion/outputs/lattice_model_node_demo.html
+tools/lattice_model_node_companion/outputs/nest1_formal_engine_report.json
+tools/lattice_model_node_companion/outputs/nest1_formal_engine_report.md
 ```
 
 Open that HTML file in a browser to test the interactive map.
+
+## Local Engine Build Order
+
+The companion now separates the visible chassis from the engines that can be
+bolted in locally.
+
+1. `Engine 00`: lattice console, built
+2. `Engine 01`: `Nest 1` formal invariant model, built
+3. `Engine 02`: `Nest 2` matter / chemistry / nutrition model, next local build
+4. `Engine 03`: `Nest 3` coherence / physics model, planned
+5. `Engine 04`: `Nest 4` biology / biosignal model, planned
+6. `Engine 05`: `Nest 5` convergence model, planned
+
+This is the demo answer when someone asks what is built:
+
+the browser companion is the chassis, and `Engine 01` is the first local
+runnable model that demonstrates the score grammar without API calls.
 
 ## Future Adapter Slots
 
@@ -52,4 +71,3 @@ Later adapters can plug into the same node schema:
 
 The rule is simple: first make the map legible, then plug in heavier models
 only where they add real measurement or simulation value.
-

@@ -142,6 +142,31 @@
       color: #d9edf7;
       font-size: 12px;
     }
+    .engine-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .engine {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: #0b1720;
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+    .engine strong {
+      display: block;
+      font-size: 13px;
+    }
+    .engine code {
+      display: block;
+      margin-top: 6px;
+      color: #f5c542;
+      white-space: normal;
+      font-size: 11px;
+    }
+    .engine small {
+      color: var(--muted);
+    }
     svg {
       min-width: 1530px;
       min-height: 980px;
@@ -220,6 +245,10 @@
         <p>Unified architecture layer that maps state, control, transform, invariant, drift, coherence, and score across domains.</p>
         <span class="pill">core</span><span class="pill">active spine</span>
       </section>
+      <section class="card">
+        <label>Local model engines</label>
+        <div class="engine-list" id="engine-list"></div>
+      </section>
     </aside>
     <section class="map-wrap">
       <svg viewBox="0 0 1530 980" role="img" aria-label="Lattice node map">
@@ -296,11 +325,13 @@
   </main>
   <script>
     const DATA = {"meta": {"title": "Lattice Model Node Companion", "date": "2026-04-24", "schema": "state / control / transform / invariant / drift / coherence / score", "boundary": "Local visual research companion. No external model calls, no clinical, remediation, or physics claim by itself."}, "nodes": [{"id": "mirror_architecture", "label": "Mirror Architecture", "nest": "core", "type": "architecture", "status": "active spine", "description": "Unified architecture layer that maps state, control, transform, invariant, drift, coherence, and score across domains."}, {"id": "nest1_formal", "label": "Nest 1: Formal Systems", "nest": "Nest 1", "type": "nest", "status": "foundation locked", "description": "Linear algebra, symmetries, invariants, encoded circuit states, and formal score grammar."}, {"id": "linear_algebra", "label": "Linear Algebra", "nest": "Nest 1", "type": "formal substrate", "status": "first substrate", "description": "Vector spaces, bases, transforms, projections, eigensystems, norms, and encoded state representations."}, {"id": "symmetry_invariant", "label": "Symmetry + Invariant", "nest": "Nest 1", "type": "formal comparator", "status": "mapped", "description": "Conservation under transformation: the formal source of balance, stable relation, and drift detection."}, {"id": "encoded_circuit_state", "label": "Encoded Circuit State", "nest": "Nest 1", "type": "formal-to-hardware bridge", "status": "mapped", "description": "AI geometry expressed as circuit-state structure before hardware execution."}, {"id": "nest2_matter", "label": "Nest 2: Structured Matter", "nest": "Nest 2", "type": "nest", "status": "foundation locked", "description": "Elements, molecules, materials, minerals, food chemistry, water, and reaction pathways."}, {"id": "elements", "label": "Elements", "nest": "Nest 2", "type": "matter class", "status": "mapped", "description": "Periodic families, shell structure, valence, electronegativity, oxidation states, and isotope classes."}, {"id": "hydrogen", "label": "Hydrogen", "nest": "Nest 2", "type": "matter bridge", "status": "mapped", "description": "Clean bridge from element / isotope structure into fusion and solar systems."}, {"id": "oxygen_redox", "label": "Oxygen / Redox", "nest": "Nest 2", "type": "chemistry bridge", "status": "mapped", "description": "O2, oxidation state, electron transfer, dissolved oxygen, reactive species, metabolism, fire, and remediation controls."}, {"id": "h2o", "label": "H2O / Water", "nest": "Nest 2", "type": "molecular motif", "status": "mapped", "description": "Bond angle, polarity, hydrogen bonding, hydration shells, solvent behavior, and biological bridge."}, {"id": "minerals", "label": "Minerals", "nest": "Nest 2", "type": "material class", "status": "mapped", "description": "Lattice, composition, surfaces, weathering, ion exchange, clays, oxides, and remediation interfaces."}, {"id": "food_chemistry", "label": "Food Chemistry", "nest": "Nest 2", "type": "nutrition bridge", "status": "new companion row", "description": "Proteins, carbs, fats, vitamins, minerals, fiber, hydration, and food-state transforms before metabolism."}, {"id": "proteins", "label": "Proteins", "nest": "Nest 2", "type": "biochemical structure", "status": "mapped", "description": "Amino-acid sequence, folding, charge, functional motifs, digestion products, and cell-facing signaling inputs."}, {"id": "carbs_fats", "label": "Carbs + Fats", "nest": "Nest 2", "type": "nutrition chemistry", "status": "mapped", "description": "Sugar polymers, starch, fiber, lipid chains, saturation, membrane precursors, and energy substrate classes."}, {"id": "vitamins_nutrients", "label": "Vitamins + Nutrients", "nest": "Nest 2", "type": "nutrition chemistry", "status": "mapped", "description": "Micronutrient classes, mineral cofactors, solubility, redox roles, methylation supports, and deficiency / excess drift."}, {"id": "pfas_pharma_microplastics", "label": "PFAS / Pharma / Microplastics", "nest": "Nest 2", "type": "chemical remediation", "status": "research-design", "description": "Persistent contaminant families mapped by bond topology, safe endpoints, and bad-descendant penalties."}, {"id": "nest3_coherence", "label": "Nest 3: Classical Coherence", "nest": "Nest 3", "type": "nest", "status": "planned", "description": "Oscillators, resonance, EMF, plasma, fire, fusion, spectral comparators, phase-lock, and field dynamics."}, {"id": "terahertz", "label": "Terahertz", "nest": "Nest 3", "type": "spectral bridge", "status": "research-design", "description": "Spectral pattern bridge into water, molecules, cells, DNA, and later measured biological response."}, {"id": "plasma_fire", "label": "Fire + Plasma", "nest": "Nest 3", "type": "reactive energy", "status": "mapped", "description": "Combustion, ionized matter, radicals, fields, surface activation, byproducts, and bounded controls."}, {"id": "fusion_solar", "label": "Fusion + Solar", "nest": "Nest 3", "type": "energy bridge", "status": "mapped", "description": "Hydrogen isotope state, plasma confinement, reaction channel, solar output, and larger convergence systems."}, {"id": "nest4_biology", "label": "Nest 4: Biology", "nest": "Nest 4", "type": "nest", "status": "first HRV matrix complete", "description": "HRV, EEG, physiology, cells, genome, proteome, metabolism, timing channels, and living comparator classes."}, {"id": "hrv_eeg", "label": "HRV + EEG", "nest": "Nest 4", "type": "biosignal adapter", "status": "HRV first matrix complete / EEG planned", "description": "Human-state timing signals that can later become live biological input into the companion map."}, {"id": "cell_genome", "label": "Cells + Genome", "nest": "Nest 4", "type": "biology bridge", "status": "planned", "description": "DNA, epigenome, transcriptome, proteome, signaling, membranes, mitochondria, repair, and drift modes."}, {"id": "metabolism", "label": "Metabolism", "nest": "Nest 4", "type": "nutrition-to-biology bridge", "status": "new companion row", "description": "Food chemistry becomes biological state through digestion, absorption, energy flow, cofactors, microbiome, and cellular signaling."}, {"id": "nest5_convergence", "label": "Nest 5: Convergence", "nest": "Nest 5", "type": "nest", "status": "planned", "description": "Multi-class convergence matrix across formal systems, matter, coherence, biology, ecology, and engineered systems."}, {"id": "ecosystem_planet", "label": "Ecosystem / Planet", "nest": "Nest 5", "type": "natural convergence", "status": "mapped", "description": "Soil, ocean, atmosphere, climate, solar-terrestrial coupling, biodiversity, food webs, and recovery dynamics."}, {"id": "nvidia_physicsnemo", "label": "NVIDIA PhysicsNeMo", "nest": "Adapter", "type": "future model adapter", "status": "adapter slot", "description": "Future physics AI adapter for field systems, PDE-like dynamics, plasma, fluids, resonance, and engineered physics surfaces."}, {"id": "materials_models", "label": "MatterGen / MatGL / CHGNet / MACE", "nest": "Adapter", "type": "future model adapter", "status": "adapter slot", "description": "Future materials and atomistic graph adapters for molecules, crystals, material candidates, and property surfaces."}, {"id": "chemistry_toolkit", "label": "RDKit / ASE / pymatgen / FairChem", "nest": "Adapter", "type": "future model adapter", "status": "adapter slot", "description": "Future toolkit bridge for molecules, atomistic structures, crystals, catalysts, and reaction-surface comparators."}], "edges": [{"source": "mirror_architecture", "target": "nest1_formal", "relation": "defines score grammar"}, {"source": "mirror_architecture", "target": "nest2_matter", "relation": "extends into constrained structure"}, {"source": "mirror_architecture", "target": "nest3_coherence", "relation": "extends into dynamics"}, {"source": "mirror_architecture", "target": "nest4_biology", "relation": "extends into living timing"}, {"source": "mirror_architecture", "target": "nest5_convergence", "relation": "tests recurrence across classes"}, {"source": "nest1_formal", "target": "linear_algebra", "relation": "substrate"}, {"source": "linear_algebra", "target": "symmetry_invariant", "relation": "transform conservation"}, {"source": "symmetry_invariant", "target": "encoded_circuit_state", "relation": "state encoding"}, {"source": "encoded_circuit_state", "target": "nest2_matter", "relation": "formal-to-physical schema bridge"}, {"source": "nest2_matter", "target": "elements", "relation": "periodic structure"}, {"source": "elements", "target": "hydrogen", "relation": "first element bridge"}, {"source": "elements", "target": "oxygen_redox", "relation": "redox chemistry"}, {"source": "oxygen_redox", "target": "h2o", "relation": "water / oxidation bridge"}, {"source": "h2o", "target": "minerals", "relation": "surface / solution bridge"}, {"source": "nest2_matter", "target": "food_chemistry", "relation": "nutrition chemistry"}, {"source": "food_chemistry", "target": "proteins", "relation": "macronutrient class"}, {"source": "food_chemistry", "target": "carbs_fats", "relation": "energy substrate class"}, {"source": "food_chemistry", "target": "vitamins_nutrients", "relation": "micronutrient class"}, {"source": "proteins", "target": "metabolism", "relation": "digestion to cellular input"}, {"source": "carbs_fats", "target": "metabolism", "relation": "energy flow"}, {"source": "vitamins_nutrients", "target": "metabolism", "relation": "cofactor bridge"}, {"source": "pfas_pharma_microplastics", "target": "chemistry_toolkit", "relation": "molecule / reaction tooling"}, {"source": "hydrogen", "target": "fusion_solar", "relation": "isotope-to-fusion bridge"}, {"source": "oxygen_redox", "target": "plasma_fire", "relation": "combustion / radicals"}, {"source": "h2o", "target": "terahertz", "relation": "spectral water bridge"}, {"source": "nest3_coherence", "target": "terahertz", "relation": "spectral comparator"}, {"source": "nest3_coherence", "target": "plasma_fire", "relation": "reactive field dynamics"}, {"source": "nest3_coherence", "target": "fusion_solar", "relation": "plasma / energy bridge"}, {"source": "terahertz", "target": "cell_genome", "relation": "spectral-to-cell hypothesis lane"}, {"source": "nest4_biology", "target": "hrv_eeg", "relation": "measured biosignal adapter"}, {"source": "nest4_biology", "target": "cell_genome", "relation": "cellular comparator"}, {"source": "nest4_biology", "target": "metabolism", "relation": "nutrition becomes physiology"}, {"source": "metabolism", "target": "hrv_eeg", "relation": "human-state readout"}, {"source": "nest5_convergence", "target": "ecosystem_planet", "relation": "multi-class natural convergence"}, {"source": "fusion_solar", "target": "ecosystem_planet", "relation": "solar-terrestrial coupling"}, {"source": "minerals", "target": "ecosystem_planet", "relation": "soil / geology bridge"}, {"source": "nvidia_physicsnemo", "target": "nest3_coherence", "relation": "future physics adapter"}, {"source": "materials_models", "target": "nest2_matter", "relation": "future materials adapter"}, {"source": "chemistry_toolkit", "target": "nest2_matter", "relation": "future chemistry adapter"}]};
+    const ENGINES = {"meta": {"title": "Local Model Engine Roadmap", "date": "2026-04-24", "purpose": "Turn the lattice companion from a visual map into a sequence of runnable local engines."}, "engines": [{"id": "engine_00_lattice_console", "label": "Engine 00: Lattice Console", "status": "built", "command": "tools/lattice_model_node_companion/run_demo.sh", "maps_to": ["Mirror Architecture", "Nest 1", "Nest 2", "Nest 3", "Nest 4", "Nest 5"], "description": "Local browser map generated from the node seed. No external model calls or credits."}, {"id": "engine_01_nest1_formal", "label": "Engine 01: Nest 1 Formal Invariant Model", "status": "built", "command": "python3 tools/lattice_model_node_companion/engines/nest1_formal_engine.py", "maps_to": ["linear algebra", "symmetry", "invariants", "encoded state"], "description": "Pure-Python invariant scoring demo for rotations, reflections, scaling drift, and noisy control transforms."}, {"id": "engine_02_nest2_matter", "label": "Engine 02: Nest 2 Matter / Chemistry Model", "status": "next local build", "command": "planned", "maps_to": ["elements", "H2O", "minerals", "nutrition", "PFAS", "materials"], "description": "Local element, molecule, material, food-chemistry, and reaction comparator. Later adapters: RDKit, ASE, pymatgen, MatGL, CHGNet, MACE, MatterGen."}, {"id": "engine_03_nest3_physics", "label": "Engine 03: Nest 3 Coherence / Physics Model", "status": "planned", "command": "planned", "maps_to": ["oscillators", "resonance", "EMF", "terahertz", "plasma", "fusion", "solar"], "description": "Local oscillator and resonance model first; later PhysicsNeMo adapter for physics AI and field-system simulations."}, {"id": "engine_04_nest4_biology", "label": "Engine 04: Nest 4 Biology / Biosignal Model", "status": "planned", "command": "planned", "maps_to": ["HRV", "EEG", "cells", "genome", "metabolism", "physiology"], "description": "Local HRV/EEG and biology-feature model using exported CSV/session packs first; later live device adapters."}, {"id": "engine_05_convergence", "label": "Engine 05: Nest 5 Convergence Model", "status": "planned", "command": "planned", "maps_to": ["ecosystem", "planet", "multi-class convergence"], "description": "Cross-nest comparison engine that tests whether the same score grammar recurs across completed classes."}]};
     const POSITIONS = {"mirror_architecture": {"x": 80, "y": 320}, "nest1_formal": {"x": 260, "y": 80}, "linear_algebra": {"x": 260, "y": 152}, "symmetry_invariant": {"x": 260, "y": 224}, "encoded_circuit_state": {"x": 260, "y": 296}, "nest2_matter": {"x": 470, "y": 80}, "elements": {"x": 470, "y": 142}, "hydrogen": {"x": 470, "y": 204}, "oxygen_redox": {"x": 470, "y": 266}, "h2o": {"x": 470, "y": 328}, "minerals": {"x": 470, "y": 390}, "food_chemistry": {"x": 470, "y": 452}, "proteins": {"x": 470, "y": 514}, "carbs_fats": {"x": 470, "y": 576}, "vitamins_nutrients": {"x": 470, "y": 638}, "pfas_pharma_microplastics": {"x": 470, "y": 700}, "nest3_coherence": {"x": 705, "y": 80}, "terahertz": {"x": 705, "y": 152}, "plasma_fire": {"x": 705, "y": 224}, "fusion_solar": {"x": 705, "y": 296}, "nest4_biology": {"x": 930, "y": 80}, "hrv_eeg": {"x": 930, "y": 152}, "cell_genome": {"x": 930, "y": 224}, "metabolism": {"x": 930, "y": 296}, "nest5_convergence": {"x": 1140, "y": 80}, "ecosystem_planet": {"x": 1140, "y": 152}, "nvidia_physicsnemo": {"x": 1350, "y": 80}, "materials_models": {"x": 1350, "y": 152}, "chemistry_toolkit": {"x": 1350, "y": 224}};
     const nodeById = Object.fromEntries(DATA.nodes.map(node => [node.id, node]));
     const chat = document.querySelector("#chat");
     const promptInput = document.querySelector("#prompt");
     const detail = document.querySelector("#detail");
+    const engineList = document.querySelector("#engine-list");
 
     function addBubble(text, who = "ai") {
       const bubble = document.createElement("div");
@@ -346,6 +377,24 @@
       document.querySelectorAll(".node,.edge").forEach(el => el.classList.remove("dim", "hot"));
       showNode("mirror_architecture", false);
       addBubble("Reset to the full lattice. The build is local-only and ready for iterative nest expansion.");
+    }
+
+    function renderEngines() {
+      engineList.innerHTML = "";
+      ENGINES.engines.forEach(engine => {
+        const el = document.createElement("div");
+        el.className = "engine";
+        el.innerHTML = `
+          <strong>${engine.label}</strong>
+          <small>${engine.status} · ${engine.maps_to.join(", ")}</small>
+          <code>${engine.command}</code>
+        `;
+        el.addEventListener("click", () => {
+          addBubble(`${engine.label}`, "user");
+          addBubble(`${engine.description} Command: ${engine.command}`);
+        });
+        engineList.appendChild(el);
+      });
     }
 
     function findMatches(query) {
@@ -418,6 +467,7 @@
     });
 
     document.querySelector("#reset").addEventListener("click", resetMap);
+    renderEngines();
     showNode("mirror_architecture", false);
   </script>
 </body>

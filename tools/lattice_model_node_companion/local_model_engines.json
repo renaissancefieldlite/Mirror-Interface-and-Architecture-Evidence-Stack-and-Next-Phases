@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Local Model Engine Roadmap",
+    "date": "2026-04-24",
+    "purpose": "Turn the lattice companion from a visual map into a sequence of runnable local engines."
+  },
+  "engines": [
+    {
+      "id": "engine_00_lattice_console",
+      "label": "Engine 00: Lattice Console",
+      "status": "built",
+      "command": "tools/lattice_model_node_companion/run_demo.sh",
+      "maps_to": ["Mirror Architecture", "Nest 1", "Nest 2", "Nest 3", "Nest 4", "Nest 5"],
+      "description": "Local browser map generated from the node seed. No external model calls or credits."
+    },
+    {
+      "id": "engine_01_nest1_formal",
+      "label": "Engine 01: Nest 1 Formal Invariant Model",
+      "status": "built",
+      "command": "python3 tools/lattice_model_node_companion/engines/nest1_formal_engine.py",
+      "maps_to": ["linear algebra", "symmetry", "invariants", "encoded state"],
+      "description": "Pure-Python invariant scoring demo for rotations, reflections, scaling drift, and noisy control transforms."
+    },
+    {
+      "id": "engine_02_nest2_matter",
+      "label": "Engine 02: Nest 2 Matter / Chemistry Model",
+      "status": "next local build",
+      "command": "planned",
+      "maps_to": ["elements", "H2O", "minerals", "nutrition", "PFAS", "materials"],
+      "description": "Local element, molecule, material, food-chemistry, and reaction comparator. Later adapters: RDKit, ASE, pymatgen, MatGL, CHGNet, MACE, MatterGen."
+    },
+    {
+      "id": "engine_03_nest3_physics",
+      "label": "Engine 03: Nest 3 Coherence / Physics Model",
+      "status": "planned",
+      "command": "planned",
+      "maps_to": ["oscillators", "resonance", "EMF", "terahertz", "plasma", "fusion", "solar"],
+      "description": "Local oscillator and resonance model first; later PhysicsNeMo adapter for physics AI and field-system simulations."
+    },
+    {
+      "id": "engine_04_nest4_biology",
+      "label": "Engine 04: Nest 4 Biology / Biosignal Model",
+      "status": "planned",
+      "command": "planned",
+      "maps_to": ["HRV", "EEG", "cells", "genome", "metabolism", "physiology"],
+      "description": "Local HRV/EEG and biology-feature model using exported CSV/session packs first; later live device adapters."
+    },
+    {
+      "id": "engine_05_convergence",
+      "label": "Engine 05: Nest 5 Convergence Model",
+      "status": "planned",
+      "command": "planned",
+      "maps_to": ["ecosystem", "planet", "multi-class convergence"],
+      "description": "Cross-nest comparison engine that tests whether the same score grammar recurs across completed classes."
+    }
+  ]
+}
+

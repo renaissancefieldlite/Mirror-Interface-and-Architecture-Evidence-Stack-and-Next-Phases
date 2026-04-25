@@ -1,0 +1,186 @@
+{
+  "engine": "Engine 01: Nest 1 Formal Invariant Model",
+  "schema": "state / control / transform / invariant / drift / coherence / score",
+  "state": {
+    "axis_x": [
+      1.0,
+      0.0
+    ],
+    "axis_y": [
+      0.0,
+      1.0
+    ],
+    "diagonal": [
+      1.0,
+      1.0
+    ]
+  },
+  "invariants": [
+    "norm",
+    "pairwise dot product",
+    "relative geometry"
+  ],
+  "rows": [
+    {
+      "transform": "identity",
+      "matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "transformed_vectors": {
+        "axis_x": [
+          1.0,
+          0.0
+        ],
+        "axis_y": [
+          0.0,
+          1.0
+        ],
+        "diagonal": [
+          1.0,
+          1.0
+        ]
+      },
+      "norm_error": 0.0,
+      "dot_error": 0.0,
+      "drift_penalty": 0.0,
+      "coherence_score": 1.0,
+      "read": "invariant-preserving"
+    },
+    {
+      "transform": "rotate_90",
+      "matrix": [
+        [
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "transformed_vectors": {
+        "axis_x": [
+          0.0,
+          1.0
+        ],
+        "axis_y": [
+          -1.0,
+          0.0
+        ],
+        "diagonal": [
+          -1.0,
+          1.0
+        ]
+      },
+      "norm_error": 0.0,
+      "dot_error": 0.0,
+      "drift_penalty": 0.0,
+      "coherence_score": 1.0,
+      "read": "invariant-preserving"
+    },
+    {
+      "transform": "reflect_x",
+      "matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0
+        ]
+      ],
+      "transformed_vectors": {
+        "axis_x": [
+          1.0,
+          0.0
+        ],
+        "axis_y": [
+          0.0,
+          -1.0
+        ],
+        "diagonal": [
+          1.0,
+          -1.0
+        ]
+      },
+      "norm_error": 0.0,
+      "dot_error": 0.0,
+      "drift_penalty": 0.0,
+      "coherence_score": 1.0,
+      "read": "invariant-preserving"
+    },
+    {
+      "transform": "scale_control",
+      "matrix": [
+        [
+          1.35,
+          0.0
+        ],
+        [
+          0.0,
+          0.65
+        ]
+      ],
+      "transformed_vectors": {
+        "axis_x": [
+          1.35,
+          0.0
+        ],
+        "axis_y": [
+          0.0,
+          0.65
+        ],
+        "diagonal": [
+          1.35,
+          0.65
+        ]
+      },
+      "norm_error": 0.784119,
+      "dot_error": 1.4,
+      "drift_penalty": 2.184119,
+      "coherence_score": 0.45397,
+      "read": "control drift"
+    },
+    {
+      "transform": "shear_control",
+      "matrix": [
+        [
+          1.0,
+          0.42
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "transformed_vectors": {
+        "axis_x": [
+          1.0,
+          0.0
+        ],
+        "axis_y": [
+          0.42,
+          1.0
+        ],
+        "diagonal": [
+          1.42,
+          1.0
+        ]
+      },
+      "norm_error": 0.407185,
+      "dot_error": 1.4364,
+      "drift_penalty": 1.843585,
+      "coherence_score": 0.539104,
+      "read": "control drift"
+    }
+  ],
+  "claim_boundary": "Toy local model engine. Demonstrates the comparator grammar; it is not a physics or biology result."
+}

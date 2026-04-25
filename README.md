@@ -179,6 +179,11 @@ Start here if you only have a few minutes:
 28. [Phase 11 To Phase 13 Physical Bell Bridge](./docs/PHASE11_TO_PHASE13_PHYSICAL_BELL_BRIDGE_2026-04-23.md)
 29. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
 30. [Phase 12B Biological Comparison Pack PDF](./artifacts/v8/phase12b_biological_comparison_pack/V8_PHASE12B_BIOLOGICAL_COMPARISON_PACK_2026-04-24.pdf)
+
+Auxiliary build folders:
+
+- [Quantum Insider Five-Track Build Out](./quantum_insider_build_out/README.md)
+- [Lattice Model Node Companion](./tools/lattice_model_node_companion/README.md)
 30. [Phase 12C EEG + HRV Intention Paper](./docs/PHASE12C_EEG_HRV_INTENTION_PAPER_2026-04-24.md)
 31. [Cross-Domain Comparator Map](./docs/CROSS_DOMAIN_COMPARATOR_MAP_2026-04-23.md)
 32. [Convergence And Recursive Coherence Note](./docs/CONVERGENCE_AND_RECURSIVE_COHERENCE_NOTE_2026-04-23.md)

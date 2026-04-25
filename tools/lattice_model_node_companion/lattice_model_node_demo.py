@@ -10,6 +10,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 SEED_PATH = BASE_DIR / "natural_world_lattice_seed.json"
+ENGINES_PATH = BASE_DIR / "local_model_engines.json"
 OUTPUT_DIR = BASE_DIR / "outputs"
 OUTPUT_PATH = OUTPUT_DIR / "lattice_model_node_demo.html"
 
@@ -38,6 +39,12 @@ X_BY_NEST = {
 
 def load_seed() -> dict:
     return json.loads(SEED_PATH.read_text(encoding="utf-8"))
+
+
+def load_engines() -> dict:
+    if not ENGINES_PATH.exists():
+        return {"engines": []}
+    return json.loads(ENGINES_PATH.read_text(encoding="utf-8"))
 
 
 def build_positions(nodes: list[dict]) -> dict[str, dict[str, int]]:
@@ -92,8 +99,10 @@ def svg_markup(data: dict, positions: dict[str, dict[str, int]]) -> str:
 
 
 def render_html(data: dict) -> str:
+    engines = load_engines()
     positions = build_positions(data["nodes"])
     payload = json.dumps(data, ensure_ascii=False)
+    engine_payload = json.dumps(engines, ensure_ascii=False)
     positions_payload = json.dumps(positions)
     svg = svg_markup(data, positions)
     title = html.escape(data["meta"]["title"])
@@ -243,6 +252,31 @@ def render_html(data: dict) -> str:
       color: #d9edf7;
       font-size: 12px;
     }}
+    .engine-list {{
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }}
+    .engine {{
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: #0b1720;
+      border: 1px solid rgba(255,255,255,0.09);
+    }}
+    .engine strong {{
+      display: block;
+      font-size: 13px;
+    }}
+    .engine code {{
+      display: block;
+      margin-top: 6px;
+      color: #f5c542;
+      white-space: normal;
+      font-size: 11px;
+    }}
+    .engine small {{
+      color: var(--muted);
+    }}
     svg {{
       min-width: 1530px;
       min-height: 980px;
@@ -321,6 +355,10 @@ def render_html(data: dict) -> str:
         <p>Unified architecture layer that maps state, control, transform, invariant, drift, coherence, and score across domains.</p>
         <span class="pill">core</span><span class="pill">active spine</span>
       </section>
+      <section class="card">
+        <label>Local model engines</label>
+        <div class="engine-list" id="engine-list"></div>
+      </section>
     </aside>
     <section class="map-wrap">
       <svg viewBox="0 0 1530 980" role="img" aria-label="Lattice node map">
@@ -330,11 +368,13 @@ def render_html(data: dict) -> str:
   </main>
   <script>
     const DATA = {payload};
+    const ENGINES = {engine_payload};
     const POSITIONS = {positions_payload};
     const nodeById = Object.fromEntries(DATA.nodes.map(node => [node.id, node]));
     const chat = document.querySelector("#chat");
     const promptInput = document.querySelector("#prompt");
     const detail = document.querySelector("#detail");
+    const engineList = document.querySelector("#engine-list");
 
     function addBubble(text, who = "ai") {{
       const bubble = document.createElement("div");
@@ -380,6 +420,24 @@ def render_html(data: dict) -> str:
       document.querySelectorAll(".node,.edge").forEach(el => el.classList.remove("dim", "hot"));
       showNode("mirror_architecture", false);
       addBubble("Reset to the full lattice. The build is local-only and ready for iterative nest expansion.");
+    }}
+
+    function renderEngines() {{
+      engineList.innerHTML = "";
+      ENGINES.engines.forEach(engine => {{
+        const el = document.createElement("div");
+        el.className = "engine";
+        el.innerHTML = `
+          <strong>${{engine.label}}</strong>
+          <small>${{engine.status}} · ${{engine.maps_to.join(", ")}}</small>
+          <code>${{engine.command}}</code>
+        `;
+        el.addEventListener("click", () => {{
+          addBubble(`${{engine.label}}`, "user");
+          addBubble(`${{engine.description}} Command: ${{engine.command}}`);
+        }});
+        engineList.appendChild(el);
+      }});
     }}
 
     function findMatches(query) {{
@@ -452,6 +510,7 @@ def render_html(data: dict) -> str:
     }});
 
     document.querySelector("#reset").addEventListener("click", resetMap);
+    renderEngines();
     showNode("mirror_architecture", false);
   </script>
 </body>
@@ -469,4 +528,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
