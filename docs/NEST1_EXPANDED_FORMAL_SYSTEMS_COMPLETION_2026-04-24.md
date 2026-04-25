@@ -127,29 +127,34 @@ requires a concrete target, a real dataset, and a baseline comparison.
 First validation artifact:
 
 - [Nest 1 Validation Forks](./NEST1_VALIDATION_FORKS_2026-04-24.md)
-- [Nest 1 Fortress Card Registry](../artifacts/validation/nest1_fortress_cards/nest1_fortress_cards.md)
+- [Nest 1 Deep Learning Reality Map](./NEST1_DEEP_LEARNING_REALITY_MAP_2026-04-24.md)
 
 First run:
 
 ```text
 SPEC-1 -> Phase 12B HRV
+DE-1 -> Phase 12B HRV
 ```
 
 Result:
 
 ```text
-HR-only baseline: 0.45
-time-domain HRV:  0.45
-SPEC-1 spectral:  0.10
-mirror composite: 0.25
+SPEC-1 HR-only baseline:       0.45
+SPEC-1 time-domain HRV:        0.45
+SPEC-1 spectral:               0.10
+SPEC-1 mirror composite:       0.25
+DE-1 HR-only baseline:         0.50
+DE-1 BPM/RR dynamics:          0.30
+DE-1 dynamics plus means:      0.50
 ```
 
 Read:
 
-The current HRV-only spectral fork did not beat simpler baselines. This is a
-useful limited / negative result, and it points the next validation step toward
-EEG spectra, better artifact rejection, longer windows, and pre-declared
-spectral hypotheses.
+The current HRV-only spectral fork and HRV-only local-dynamics fork did not
+beat simpler baselines. These are useful limited / negative results, and they
+point the next validation step toward real V8 geometry/topology traces, EEG
+spectra, better artifact rejection, longer windows, and pre-declared spectral
+or dynamics hypotheses.
 
 Additional concrete fork state:
 
@@ -159,8 +164,9 @@ Additional concrete fork state:
   transition traces are exported.
 - `Engine 02V` runner exists and is blocked until `RDKit` plus a real molecule
   dataset are present.
-- `Nest 1 Fortress Cards` now mark each formal lane as evidence-connected,
-  partial, blocked, seeded, or grammar-only.
+- card/ontology views are parked as optional visualization; the active chain is
+  real traces, real measurements, real hardware, real datasets, and declared
+  benchmarks.
 
 ## Completion Read
 

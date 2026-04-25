@@ -89,7 +89,7 @@ across different substrates better than null, control, or shuffled baselines?
 | hardware bridge | `Phase 8`, `Phase 9`, `9B`, `9C`, `9D` | simulator-to-hardware and cross-backend continuity established |
 | semantic contextuality | `Phase 10`, `Phase 11` | Bell-type semantic rung defined without overclaiming physical Bell proof |
 | biological adapter | `Phase 12B` | first `5 x 4` HRV biological matrix complete |
-| formal base | `Nest 1`, validation forks, fortress cards | formal expressibility locked; `SPEC-1` HRV-only fork run and recorded as limited / negative; fortress card registry separates evidence-connected, blocked, seed, and grammar-only lanes |
+| formal base | `Nest 1`, deep-learning reality map, validation forks | formal expressibility locked against the actual mathematical substrate of ML; `SPEC-1` and `DE-1` HRV-only forks run on real Phase 12B data and recorded as limited / negative; active standard is real trace / real dataset / real benchmark |
 | auxiliary mathematics | Auxiliary Mathematics Atlas | graph theory, topology, geometry, dynamics, probability, information, optimization, statistics, control mapped |
 | structured matter | `Nest 2`, `Engine 02` | methodology / representation rung for elements, molecules, water, minerals, redox, nutrition, contaminants, reactions, functional groups, biomolecular primitives, polymers, electrochemistry, catalysis, spectral readouts, environmental fate, and materials |
 | cosmic dynamics | `Nest 3` | fields, motion, phases, waves, plasma, fusion, orbit, rotation mapped |
@@ -127,8 +127,9 @@ Completed enough to show:
 - the biological adapter has a first measured matrix
 - the formal nest is mapped, has a local engine, and has its first validation
   fork result
-- the `Nest 1` fortress cards now identify which formal lanes are already tied
-  to artifacts and which require new data before stronger claims
+- the `Nest 1` reality map now identifies which formal lanes are already tied
+  to artifacts, which can run on existing traces, and which require new data
+  before stronger claims
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are now mapped
@@ -141,8 +142,8 @@ Completed enough to show:
 Immediate next work:
 
 1. run the next concrete validation forks rather than adding only prose:
-   `TOP-1/2` persistent homology, `GEO-1/2` region separation, and `OPT-1`
-   optimization trajectory scoring
+   `TOP-1/2` persistent homology, `GEO-1/2` region separation, and `DYN`
+   trajectory analysis over existing V8/V7 traces
 2. move `Engine 02` beyond grammar mapping by adding curated element,
    molecule, crystal, spectral, environmental fate, and reaction datasets
 3. run `Engine 02V` with `RDKit` and a public molecule benchmark such as

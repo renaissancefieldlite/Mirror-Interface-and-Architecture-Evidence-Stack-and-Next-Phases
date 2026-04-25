@@ -3,7 +3,7 @@
 Date: `2026-04-24`
 
 Status:
-first concrete validation fork run
+first concrete validation forks run
 
 ## Purpose
 
@@ -16,36 +16,40 @@ The validation move is:
 formal lens -> concrete prediction -> real data -> baseline comparison
 ```
 
-Fortress registry:
+Reality map:
 
 ```text
-artifacts/validation/nest1_fortress_cards/nest1_fortress_cards.md
+docs/NEST1_DEEP_LEARNING_REALITY_MAP_2026-04-24.md
 ```
 
-That registry is generated from local artifacts and classifies each formal lane
-as evidence-connected, partial, blocked, seeded, or grammar-only.
+That map keeps the active standard clear: every lane must touch a real AI
+object, real trace, real measurement, real hardware result, real public
+dataset, or declared benchmark before it is treated as more than scaffold.
 
 ## Forks
 
 | Fork | Formal Lens | Real Target | Status |
 | --- | --- | --- | --- |
 | `SPEC-1 -> Phase 12B HRV` | spectral methods | existing HRV RR windows from the 5 x 4 biological matrix | run complete |
+| `DE-1 -> Phase 12B HRV` | differential equations / local dynamics | existing HRV RR/BPM time series from the 5 x 4 biological matrix | run complete |
 | `GRAPH-1/2 -> allostery / molecular paths` | graph theory | known protein or molecular graph pathways | runner complete / blocked without real graph labels |
 | `CTRL-1 -> LSPS transitions` | control theory | logged mode transitions / feedback stability | runner complete / blocked without transition traces |
 | `Engine 02V -> molecule property` | structured matter / cheminformatics | public molecule property dataset | runner complete / blocked without `RDKit` and dataset |
 
-## Fortress Card Read
+## Real Vs Scaffold Read
 
-The current card registry separates the lanes like this:
+The current validation posture separates the lanes like this:
 
-| Lane Group | Cards | Current Read |
+| Lane Group | Lanes | Current Read |
 | --- | --- | --- |
-| evidence-connected | `STAT-1`, `PROB-1`, `INFO-1`, `TENSOR-1`, `NUM-1`, `TOPOG-1/2`, `GEO-1/2` | directly tied to existing phase artifacts |
+| evidence-connected | `STAT-1`, `PROB-1`, `INFO-1`, `TENSOR-1`, `NUM-1`, `TOPOG-1/2`, `GEO-1/2` | directly tied to existing phase artifacts or real trace geometry |
 | implicit evidence-connected | `GRP-1` | present through circuit/unitary structure but needs explicit symmetry scoring |
-| partial / negative validation | `SPEC-1` | HRV-only spectral fork ran and did not beat simpler baselines |
+| partial / negative validation | `SPEC-1`, `DE-1` | HRV-only spectral and local-dynamics forks ran on real Phase 12B data and did not beat simpler baselines |
 | architecture-connected but blocked | `CTRL-1` | runner exists; needs real LSPS transition trace export |
 | dataset-blocked | `GRAPH-1/2`, `Engine 02V` | runners exist; need graph/pathway data or `RDKit` molecule data |
-| seed / roadmap | `TOP-1/2`, `DYN-1/2`, `DE-1`, `OPT-1`, `GAME-1`, `CAT-1` | clear validation routes, but not yet tested |
+| existing-data next | `TOP-1/2`, `DYN-1/2` | clear routes using V8 hidden-state traces, but not yet run |
+| new-design needed | `OPT-1`, `GAME-1` | needs declared benchmark or adversarial/multi-agent protocol |
+| scaffold / parked | card ontology, toy rows, visual-only demos | useful for navigation or UI, not evidence without real data |
 
 ## SPEC-1 Result
 
@@ -77,6 +81,49 @@ The current HRV-only `SPEC-1` spectral pass does not beat the HR-only baseline.
 That is a useful limited / negative validation result. It means the current
 RR-derived spectral feature set should not be overclaimed.
 
+## DE-1 Result
+
+Runnable script:
+
+```text
+tools/validation_forks/de1_hrv_dynamics_validation.py
+```
+
+Generated report:
+
+```text
+artifacts/validation/de1_hrv_dynamics/de1_hrv_dynamics_report.md
+```
+
+Result:
+
+```text
+HR-only baseline:        10 / 20 = 0.50
+DE-1 BPM dynamics:        6 / 20 = 0.30
+DE-1 RR dynamics:         6 / 20 = 0.30
+DE-1 composite dynamics:  6 / 20 = 0.30
+DE-1 dynamics + means:   10 / 20 = 0.50
+```
+
+Read:
+
+The current HRV-only `DE-1` local-dynamics pass does not beat the simple
+mean-HR baseline. When the mean signal is added back, it ties the HR-only
+baseline rather than improving on it. That makes this a real but limited /
+negative validation result.
+
+Useful condition-level signal still exists in the measured data:
+
+```text
+mirror_coherence mean delta BPM: -8.488162
+mirror_coherence mean delta RR:  101.72485
+dancing_activation mean delta BPM: 5.75692
+drift_control mean delta BPM: 4.751585
+```
+
+So the biological adapter remains real, but the specific DE-1 dynamics feature
+set is not yet stronger than the simpler HR delta comparator.
+
 ## Dataset-Blocked Runner Results
 
 Generated reports:
@@ -102,8 +149,10 @@ the required real data/tooling is not present yet.
 per lens.
 
 The fastest real next step is not to declare victory. It is to improve the
-`SPEC-1` bridge with:
+existing-data bridge with:
 
+- `GEO/TOP` geometry and topology over real V8 residual/localization traces
+- `DYN` trajectory analysis over V7/V8 order and rerun traces
 - EEG spectra when the EEG device is available
 - stricter artifact rejection
 - longer windows where possible

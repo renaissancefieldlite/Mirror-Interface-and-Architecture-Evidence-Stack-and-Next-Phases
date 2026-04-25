@@ -31,8 +31,8 @@ Completion artifact:
 Validation artifact:
 [Nest 1 Validation Forks](./NEST1_VALIDATION_FORKS_2026-04-24.md)
 
-Fortress card registry:
-[Nest 1 Fortress Cards](../artifacts/validation/nest1_fortress_cards/nest1_fortress_cards.md)
+Grounded reality map:
+[Nest 1 Deep Learning Reality Map](./NEST1_DEEP_LEARNING_REALITY_MAP_2026-04-24.md)
 
 The minimal base remains linear algebra, symmetries, invariants, and encoded
 circuit states. The expanded mathematical support layer also includes graph
@@ -163,16 +163,24 @@ The first validation fork has already been run:
 
 ```text
 SPEC-1 -> Phase 12B HRV
+DE-1 -> Phase 12B HRV
 ```
 
 The HRV-only spectral method did not beat simpler HR / time-domain baselines on
-that first pass, so the result is intentionally recorded as limited / negative
-rather than overclaimed.
+that first pass. The HRV-only local-dynamics `DE-1` pass also did not beat the
+mean-HR baseline, although the measured condition-level biological adapter
+signal remains visible. Both results are intentionally recorded as real but
+limited / negative rather than overclaimed.
 
 The next validation fork layer is now executable rather than just outlined:
 `GRAPH-1/2`, `CTRL-1`, and `Engine 02V` runners are present and correctly block
 until their required real datasets, transition traces, or `RDKit` tooling are
 available.
+
+The active standard is now real-data first: visual scaffolds, toy rows, and
+registry-style summaries are not claim surfaces unless they plug into real
+traces, real measurements, real hardware, real datasets, or declared
+benchmarks.
 
 ## Short Read
 
