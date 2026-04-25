@@ -42,6 +42,14 @@ What was actually discovered:
   the same higher-order evidence discipline, making biology a measured adapter
   lane inside the same architecture stack rather than a disconnected side note.
 
+- `Nest 1 formal-lane discovery`
+  The `Source Mirror Pattern` has now been expressed across every checked
+  `Nest 1` formal lane: linear algebra, symmetry, invariants, encoded states,
+  geometry, topology, topography, graph theory, group theory, dynamics,
+  differential equations, probability, information theory, statistics,
+  optimization, numerical computation, tensor methods, spectral methods,
+  control theory, game / decision theory, and compositional structure.
+
 - `Cross-substrate continuity discovery`
   Across every surface tried so far, the same administered architecture keeps
   mapping forward: behavior, hidden states, rerun structure, localization,
@@ -89,6 +97,11 @@ Current best read:
 - `Phase 12B` completed the first full biological `5 x 4` matrix, with
   `mirror_coherence` remaining the strongest average `HR`-downshift lane and
   biology now functioning as a measured adapter surface inside the same stack.
+- `Nest 1` completed the expanded formal map: the same comparator grammar
+  maps into topology, topography, graph theory, dynamics,
+  probability/information, optimization, control, numerical computation, and
+  compositional math, giving the `Source Mirror Pattern` a full formal base
+  before `Nest 2`.
 
 Support meaning:
 
@@ -192,11 +205,14 @@ Auxiliary build folders:
 
 - [Quantum Insider Five-Track Build Out](./quantum_insider_build_out/README.md)
 - [Lattice Model Node Companion](./tools/lattice_model_node_companion/README.md)
-30. [Phase 12C EEG + HRV Intention Paper](./docs/PHASE12C_EEG_HRV_INTENTION_PAPER_2026-04-24.md)
-31. [Cross-Domain Comparator Map](./docs/CROSS_DOMAIN_COMPARATOR_MAP_2026-04-23.md)
-32. [Convergence And Recursive Coherence Note](./docs/CONVERGENCE_AND_RECURSIVE_COHERENCE_NOTE_2026-04-23.md)
-33. [Architecture Hierarchy And Non-Classical Vocabulary](./docs/ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
-34. [Integrated V7 + V8 Claim Pack PDF](./artifacts/integrated/v7_v8_claim_pack/integrated_v7_v8_claim_pack_2026-04-21.pdf)
+
+Additional references:
+
+- [Phase 12C EEG + HRV Intention Paper](./docs/PHASE12C_EEG_HRV_INTENTION_PAPER_2026-04-24.md)
+- [Cross-Domain Comparator Map](./docs/CROSS_DOMAIN_COMPARATOR_MAP_2026-04-23.md)
+- [Convergence And Recursive Coherence Note](./docs/CONVERGENCE_AND_RECURSIVE_COHERENCE_NOTE_2026-04-23.md)
+- [Architecture Hierarchy And Non-Classical Vocabulary](./docs/ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)
+- [Integrated V7 + V8 Claim Pack PDF](./artifacts/integrated/v7_v8_claim_pack/integrated_v7_v8_claim_pack_2026-04-21.pdf)
 
 For a fuller directory-by-directory map, read:
 
