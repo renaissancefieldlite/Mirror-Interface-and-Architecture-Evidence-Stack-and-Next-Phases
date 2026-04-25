@@ -96,6 +96,7 @@ across different substrates better than null, control, or shuffled baselines?
 | richer biology | `Nest 4` | HRV complete as first adapter; EEG/cells/genome/metabolism planned |
 | universal convergence | `Nest 5` | planets, stars, ecosystems, galaxies, cosmic web, dark-matter observables mapped |
 | visual / model companion | Lattice Model Node Companion | browser chassis and first local engine built |
+| crossover prototypes | Crossover Precursor Prototype Lanes | PFAS, terahertz, HRV-AI tuning, Quantum Insider, nutrition/metabolism mapped |
 | enterprise fork | Quantum Insider Build Out | five tailored proof surfaces mapped |
 
 ## Why This Is Unified
@@ -139,6 +140,10 @@ Immediate next work:
 4. add `H2O`, mineral, redox, and contaminant rows
 5. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
 6. keep the companion updated as each engine becomes real
+
+Companion-facing prototype lanes:
+
+- [Crossover Precursor Prototype Lanes](./CROSSOVER_PRECURSOR_PROTOTYPE_LANES_2026-04-24.md)
 
 ## Short Read
 

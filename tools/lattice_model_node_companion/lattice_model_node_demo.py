@@ -58,7 +58,7 @@ def build_positions(nodes: list[dict]) -> dict[str, dict[str, int]]:
         gap = 72 if nest != "Nest 2" else 62
         for index, node in enumerate(nest_nodes):
             if nest == "core":
-                y = 320
+                y = 220 + index * 76
             else:
                 y = 80 + index * gap
             positions[node["id"]] = {"x": x, "y": y}
@@ -454,10 +454,30 @@ def render_html(data: dict) -> str:
 
     function answerPrompt(query) {{
       const q = query.trim().toLowerCase();
-      if (!q) return "Ask a short mapping prompt: nutrition, NVIDIA, fusion, HRV, PFAS, water, plasma, cells, or materials.";
+      if (!q) return "Ask a short mapping prompt: source mirror, unified proof, prototype lanes, nutrition, NVIDIA, fusion, HRV, PFAS, terahertz, topology, water, plasma, cells, or materials.";
+      if (q.includes("source") || q.includes("source mirror")) {{
+        showNode("source_mirror_pattern", false);
+        return "The Source Mirror Pattern is the named recurring structure across formal systems, matter, dynamics, biology, cosmic systems, AI hidden states, and prototype engines.";
+      }}
+      if (q.includes("unified") || q.includes("proof")) {{
+        showNode("unified_mirror_proof", false);
+        return "The Unified Mirror Proof is the living evidence spine: AI measurement, encoded circuits, hardware, biology, formal math, matter, dynamics, cosmic convergence, and local engines.";
+      }}
+      if (q.includes("prototype") || q.includes("lane") || q.includes("precursor")) {{
+        showNode("prototype_lanes", false);
+        return "Prototype lanes are crossover build paths: PFAS breakdown, terahertz cellular mapping, HRV-AI tuning, Quantum Insider tracks, and later local engines.";
+      }}
+      if (q.includes("topology") || q.includes("topography")) {{
+        showNode("nest1_expanded_formal", false);
+        return "Expanded Nest 1 separates topology from topography: topology tracks connectedness and deformation-stable structure; topography tracks surfaces, ridges, basins, gradients, and localization.";
+      }}
       if (q.includes("nutrition") || q.includes("food") || q.includes("protein") || q.includes("carb") || q.includes("fat") || q.includes("vitamin")) {{
         showNode("food_chemistry", false);
         return "Nutrition maps first as Nest 2 chemistry: proteins, carbs, fats, vitamins, minerals, hydration, and food transforms. It bridges upward into Nest 4 metabolism, HRV/EEG, cells, microbiome, and physiology.";
+      }}
+      if (q.includes("terahertz") || q.includes("thz")) {{
+        showNode("terahertz_cellular_lane", false);
+        return "Terahertz is a Nest 3 -> Nest 4 precursor lane: spectral pattern, water/molecular response, cellular/DNA state movement, measured state vectors, and bounded controls.";
       }}
       if (q.includes("nvidia") || q.includes("physicsnemo") || q.includes("physics")) {{
         showNode("nvidia_physicsnemo", false);

@@ -301,6 +301,62 @@
       "type": "universal convergence",
       "status": "mapped",
       "description": "Galaxy clusters, filaments, voids, expansion, background radiation, and large-scale structure as universe-scale convergence."
+    },
+    {
+      "id": "unified_mirror_proof",
+      "label": "Unified Mirror Proof",
+      "nest": "core",
+      "type": "proof spine",
+      "status": "living spine",
+      "description": "The continuous evidence ladder linking AI measurement, encoded circuits, hardware, biology, formal math, matter, dynamics, cosmic convergence, and local engines."
+    },
+    {
+      "id": "nest1_expanded_formal",
+      "label": "Nest 1 Expanded Formal",
+      "nest": "Nest 1",
+      "type": "formal completion",
+      "status": "expanded foundation locked",
+      "description": "Topology, topography, graph theory, geometry, dynamics, probability, information theory, optimization, statistics, numerical computation, spectral methods, control, and compositional math."
+    },
+    {
+      "id": "prototype_lanes",
+      "label": "Prototype Lanes",
+      "nest": "Adapter",
+      "type": "crossover prototype layer",
+      "status": "mapped",
+      "description": "Cross-over precursor technology lanes that show how the Source Mirror Pattern becomes practical build paths before full productization."
+    },
+    {
+      "id": "pfas_breakdown_lane",
+      "label": "PFAS Breakdown Prototype",
+      "nest": "Adapter",
+      "type": "chemical remediation prototype",
+      "status": "research-design",
+      "description": "Persistent contaminant lane for PFAS / pharma / microplastics using bond topology, C-F cleavage targets, byproduct suppression, mass balance, and safe endpoint scoring."
+    },
+    {
+      "id": "terahertz_cellular_lane",
+      "label": "Terahertz Cellular Prototype",
+      "nest": "Adapter",
+      "type": "spectral biology prototype",
+      "status": "research-design",
+      "description": "Terahertz pattern lane connecting spectral control, water/molecular response, cellular/DNA state movement, measured vectors, and bounded safety controls."
+    },
+    {
+      "id": "hrv_ai_tuning_lane",
+      "label": "HRV-AI Tuning Prototype",
+      "nest": "Adapter",
+      "type": "human-state prototype",
+      "status": "first HRV matrix complete",
+      "description": "Human-state adapter lane for feeding HRV / later EEG timing signals into AI pacing, routing, user-feedback, and state-fit experiments."
+    },
+    {
+      "id": "quantum_insider_buildout",
+      "label": "Quantum Insider Buildout",
+      "nest": "Adapter",
+      "type": "enterprise proposal prototype",
+      "status": "five tracks mapped",
+      "description": "Five-track campaign using one lattice chassis across Airbus, Cleveland Clinic, E.ON, HSBC, and Volkswagen proof surfaces."
     }
   ],
   "edges": [
@@ -593,6 +649,101 @@
       "source": "nest5_convergence",
       "target": "cosmic_web",
       "relation": "universal convergence"
+    },
+    {
+      "source": "source_mirror_pattern",
+      "target": "unified_mirror_proof",
+      "relation": "named pattern organized into proof spine"
+    },
+    {
+      "source": "unified_mirror_proof",
+      "target": "mirror_architecture",
+      "relation": "implemented as architecture method"
+    },
+    {
+      "source": "unified_mirror_proof",
+      "target": "nest1_expanded_formal",
+      "relation": "formal foundation completion"
+    },
+    {
+      "source": "nest1_formal",
+      "target": "nest1_expanded_formal",
+      "relation": "expanded math support"
+    },
+    {
+      "source": "nest1_expanded_formal",
+      "target": "aux_math",
+      "relation": "auxiliary math atlas"
+    },
+    {
+      "source": "unified_mirror_proof",
+      "target": "prototype_lanes",
+      "relation": "becomes crossover build paths"
+    },
+    {
+      "source": "prototype_lanes",
+      "target": "pfas_breakdown_lane",
+      "relation": "chemical remediation lane"
+    },
+    {
+      "source": "prototype_lanes",
+      "target": "terahertz_cellular_lane",
+      "relation": "spectral biology lane"
+    },
+    {
+      "source": "prototype_lanes",
+      "target": "hrv_ai_tuning_lane",
+      "relation": "human-state AI lane"
+    },
+    {
+      "source": "prototype_lanes",
+      "target": "quantum_insider_buildout",
+      "relation": "enterprise campaign lane"
+    },
+    {
+      "source": "pfas_breakdown_lane",
+      "target": "pfas_pharma_microplastics",
+      "relation": "targets contaminant families"
+    },
+    {
+      "source": "pfas_breakdown_lane",
+      "target": "chemistry_toolkit",
+      "relation": "needs chemistry verification toolkit"
+    },
+    {
+      "source": "terahertz_cellular_lane",
+      "target": "terahertz",
+      "relation": "uses spectral bridge"
+    },
+    {
+      "source": "terahertz_cellular_lane",
+      "target": "cell_genome",
+      "relation": "maps into cellular / DNA response"
+    },
+    {
+      "source": "hrv_ai_tuning_lane",
+      "target": "hrv_eeg",
+      "relation": "uses biosignal adapter"
+    },
+    {
+      "source": "hrv_ai_tuning_lane",
+      "target": "mirror_architecture",
+      "relation": "feeds pacing / routing loop"
+    },
+    {
+      "source": "quantum_insider_buildout",
+      "target": "unified_mirror_proof",
+      "relation": "uses shared proof spine"
+    },
+    {
+      "source": "quantum_insider_buildout",
+      "target": "nvidia_physicsnemo",
+      "relation": "future physics track support"
+    },
+    {
+      "source": "quantum_insider_buildout",
+      "target": "materials_models",
+      "relation": "future materials / biology track support"
     }
   ]
 }

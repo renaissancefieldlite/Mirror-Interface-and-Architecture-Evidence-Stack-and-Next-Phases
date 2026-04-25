@@ -3,7 +3,7 @@
 Date: `2026-04-24`
 
 Status:
-foundation complete / compact synthesis still active
+foundation complete / expanded formal completion added
 
 ## Purpose
 
@@ -24,6 +24,9 @@ place it should become legible in reductionist language is here.
 
 Companion expansion:
 [Auxiliary Mathematics Atlas](./AUXILIARY_MATHEMATICS_ATLAS_2026-04-24.md)
+
+Completion artifact:
+[Nest 1 Expanded Formal Systems Completion](./NEST1_EXPANDED_FORMAL_SYSTEMS_COMPLETION_2026-04-24.md)
 
 The minimal base remains linear algebra, symmetries, invariants, and encoded
 circuit states. The expanded mathematical support layer also includes graph
@@ -147,8 +150,8 @@ Specific bridges:
 
 The `Nest 1` foundation is complete through the first unified matrix.
 
-The remaining `Nest 1` work is the compact synthesis note and worked examples.
-That is the final public-writing pass, not the foundation itself.
+The expanded mathematical support layer is now also mapped. Remaining `Nest 1`
+work is engine expansion and worked examples, not foundation definition.
 
 ## Short Read
 

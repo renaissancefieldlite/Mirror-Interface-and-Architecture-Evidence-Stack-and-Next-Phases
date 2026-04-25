@@ -27,6 +27,7 @@ enterprise systems, and cosmic-scale structure.
 | linear algebra | vectors, matrices, subspaces, projections, spectra | state representation and hidden geometry | ML, circuits, HRV / EEG vectors |
 | geometry | distance, curvature, manifold relation, coordinate invariance | shape / distance preservation under transform | molecules, spacetime, fields, robotics |
 | topology | continuity, holes, connectedness, persistent structure | structure preserved under deformation | molecules, neural manifolds, materials, cosmic web |
+| topography | surfaces, gradients, ridges, basins, peaks, spatial maps | localization and surface / field organization | loss landscapes, terrain, EEG maps, climate fields |
 | graph theory | nodes, edges, paths, motifs, centrality | relational state and pathway scoring | molecules, grids, fraud, proteins, ecosystems |
 | group theory | symmetry actions, orbits, representations | lawful transformation / invariant relation | physics, chemistry, crystals, quantum states |
 | dynamical systems | trajectories, attractors, stability, bifurcation | time-evolving coherence and drift | oscillators, climate, cells, robotics |
@@ -68,7 +69,7 @@ representation
 The higher nests will need different mathematical lenses:
 
 - `Nest 2` matter needs graph theory, geometry, group theory, topology,
-  spectral methods, and numerical computation
+  topography, spectral methods, and numerical computation
 - `Nest 3` dynamics needs differential equations, dynamical systems, control
   theory, spectral analysis, probability, and numerical stability
 - `Nest 4` biology needs statistics, information theory, network theory,
@@ -84,4 +85,3 @@ Every auxiliary discipline must still reduce back into the shared schema:
 
 If a math lens cannot define those fields, it is not ready to become a build
 engine.
-
