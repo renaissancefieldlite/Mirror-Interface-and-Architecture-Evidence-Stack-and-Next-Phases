@@ -16,6 +16,11 @@ contains formal structure, matter, energy, life, ecology, and planetary
 systems. Each layer can be assigned to a nest and later converted into a
 comparator row.
 
+Companion maps:
+
+- [Cosmic / Universal Nesting Atlas](./COSMIC_UNIVERSAL_NESTING_ATLAS_2026-04-24.md)
+- [Auxiliary Mathematics Atlas](./AUXILIARY_MATHEMATICS_ATLAS_2026-04-24.md)
+
 Shared schema:
 
 `state / control / transform / invariant / drift / coherence / score`

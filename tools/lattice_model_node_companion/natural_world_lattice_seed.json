@@ -237,48 +237,324 @@
       "type": "future model adapter",
       "status": "adapter slot",
       "description": "Future toolkit bridge for molecules, atomistic structures, crystals, catalysts, and reaction-surface comparators."
+    },
+    {
+      "id": "aux_math",
+      "label": "Auxiliary Math",
+      "nest": "Nest 1",
+      "type": "expanded formal layer",
+      "status": "mapped",
+      "description": "Graph theory, topology, geometry, probability, information theory, dynamical systems, optimization, statistics, numerical computation, spectral methods, and control theory."
+    },
+    {
+      "id": "space_time_cycles",
+      "label": "Space / Time / Cycles",
+      "nest": "Nest 3",
+      "type": "cosmic dynamics",
+      "status": "mapped",
+      "description": "Geometry and periodicity become motion, phase, rotation, orbit, rhythm, and time-evolution comparators."
+    },
+    {
+      "id": "gases_liquids_phases",
+      "label": "Gases / Liquids / Phases",
+      "nest": "Nest 3",
+      "type": "matter-to-dynamics bridge",
+      "status": "mapped",
+      "description": "Matter state becomes thermodynamics, fluid dynamics, pressure, temperature, viscosity, phase transition, and flow coherence."
+    },
+    {
+      "id": "gravity_orbits",
+      "label": "Gravity / Orbits",
+      "nest": "Nest 3",
+      "type": "cosmic dynamics",
+      "status": "mapped",
+      "description": "Mass distribution, acceleration, orbit, resonance, rotation, and gravitational coherence under perturbation."
+    },
+    {
+      "id": "stars_planets",
+      "label": "Stars / Planets",
+      "nest": "Nest 5",
+      "type": "cosmic convergence",
+      "status": "mapped",
+      "description": "Stars and planets combine matter, gravity, plasma, radiation, orbit, atmosphere, geology, water, and cycles into convergence systems."
+    },
+    {
+      "id": "dark_matter_observables",
+      "label": "Dark-Matter Observables",
+      "nest": "Nest 5",
+      "type": "cosmic observable",
+      "status": "mapped boundary",
+      "description": "Safe comparator lane for rotation curves, lensing, mass discrepancy, and structure formation observables without overclaiming direct substance measurement."
+    },
+    {
+      "id": "cosmic_web",
+      "label": "Cosmic Web / Universe",
+      "nest": "Nest 5",
+      "type": "universal convergence",
+      "status": "mapped",
+      "description": "Galaxy clusters, filaments, voids, expansion, background radiation, and large-scale structure as universe-scale convergence."
     }
   ],
   "edges": [
-    { "source": "mirror_architecture", "target": "nest1_formal", "relation": "defines score grammar" },
-    { "source": "mirror_architecture", "target": "nest2_matter", "relation": "extends into constrained structure" },
-    { "source": "mirror_architecture", "target": "nest3_coherence", "relation": "extends into dynamics" },
-    { "source": "mirror_architecture", "target": "nest4_biology", "relation": "extends into living timing" },
-    { "source": "mirror_architecture", "target": "nest5_convergence", "relation": "tests recurrence across classes" },
-    { "source": "nest1_formal", "target": "linear_algebra", "relation": "substrate" },
-    { "source": "linear_algebra", "target": "symmetry_invariant", "relation": "transform conservation" },
-    { "source": "symmetry_invariant", "target": "encoded_circuit_state", "relation": "state encoding" },
-    { "source": "encoded_circuit_state", "target": "nest2_matter", "relation": "formal-to-physical schema bridge" },
-    { "source": "nest2_matter", "target": "elements", "relation": "periodic structure" },
-    { "source": "elements", "target": "hydrogen", "relation": "first element bridge" },
-    { "source": "elements", "target": "oxygen_redox", "relation": "redox chemistry" },
-    { "source": "oxygen_redox", "target": "h2o", "relation": "water / oxidation bridge" },
-    { "source": "h2o", "target": "minerals", "relation": "surface / solution bridge" },
-    { "source": "nest2_matter", "target": "food_chemistry", "relation": "nutrition chemistry" },
-    { "source": "food_chemistry", "target": "proteins", "relation": "macronutrient class" },
-    { "source": "food_chemistry", "target": "carbs_fats", "relation": "energy substrate class" },
-    { "source": "food_chemistry", "target": "vitamins_nutrients", "relation": "micronutrient class" },
-    { "source": "proteins", "target": "metabolism", "relation": "digestion to cellular input" },
-    { "source": "carbs_fats", "target": "metabolism", "relation": "energy flow" },
-    { "source": "vitamins_nutrients", "target": "metabolism", "relation": "cofactor bridge" },
-    { "source": "pfas_pharma_microplastics", "target": "chemistry_toolkit", "relation": "molecule / reaction tooling" },
-    { "source": "hydrogen", "target": "fusion_solar", "relation": "isotope-to-fusion bridge" },
-    { "source": "oxygen_redox", "target": "plasma_fire", "relation": "combustion / radicals" },
-    { "source": "h2o", "target": "terahertz", "relation": "spectral water bridge" },
-    { "source": "nest3_coherence", "target": "terahertz", "relation": "spectral comparator" },
-    { "source": "nest3_coherence", "target": "plasma_fire", "relation": "reactive field dynamics" },
-    { "source": "nest3_coherence", "target": "fusion_solar", "relation": "plasma / energy bridge" },
-    { "source": "terahertz", "target": "cell_genome", "relation": "spectral-to-cell hypothesis lane" },
-    { "source": "nest4_biology", "target": "hrv_eeg", "relation": "measured biosignal adapter" },
-    { "source": "nest4_biology", "target": "cell_genome", "relation": "cellular comparator" },
-    { "source": "nest4_biology", "target": "metabolism", "relation": "nutrition becomes physiology" },
-    { "source": "metabolism", "target": "hrv_eeg", "relation": "human-state readout" },
-    { "source": "nest5_convergence", "target": "ecosystem_planet", "relation": "multi-class natural convergence" },
-    { "source": "fusion_solar", "target": "ecosystem_planet", "relation": "solar-terrestrial coupling" },
-    { "source": "minerals", "target": "ecosystem_planet", "relation": "soil / geology bridge" },
-    { "source": "nvidia_physicsnemo", "target": "nest3_coherence", "relation": "future physics adapter" },
-    { "source": "materials_models", "target": "nest2_matter", "relation": "future materials adapter" },
-    { "source": "chemistry_toolkit", "target": "nest2_matter", "relation": "future chemistry adapter" }
+    {
+      "source": "mirror_architecture",
+      "target": "nest1_formal",
+      "relation": "defines score grammar"
+    },
+    {
+      "source": "mirror_architecture",
+      "target": "nest2_matter",
+      "relation": "extends into constrained structure"
+    },
+    {
+      "source": "mirror_architecture",
+      "target": "nest3_coherence",
+      "relation": "extends into dynamics"
+    },
+    {
+      "source": "mirror_architecture",
+      "target": "nest4_biology",
+      "relation": "extends into living timing"
+    },
+    {
+      "source": "mirror_architecture",
+      "target": "nest5_convergence",
+      "relation": "tests recurrence across classes"
+    },
+    {
+      "source": "nest1_formal",
+      "target": "linear_algebra",
+      "relation": "substrate"
+    },
+    {
+      "source": "linear_algebra",
+      "target": "symmetry_invariant",
+      "relation": "transform conservation"
+    },
+    {
+      "source": "symmetry_invariant",
+      "target": "encoded_circuit_state",
+      "relation": "state encoding"
+    },
+    {
+      "source": "encoded_circuit_state",
+      "target": "nest2_matter",
+      "relation": "formal-to-physical schema bridge"
+    },
+    {
+      "source": "nest2_matter",
+      "target": "elements",
+      "relation": "periodic structure"
+    },
+    {
+      "source": "elements",
+      "target": "hydrogen",
+      "relation": "first element bridge"
+    },
+    {
+      "source": "elements",
+      "target": "oxygen_redox",
+      "relation": "redox chemistry"
+    },
+    {
+      "source": "oxygen_redox",
+      "target": "h2o",
+      "relation": "water / oxidation bridge"
+    },
+    {
+      "source": "h2o",
+      "target": "minerals",
+      "relation": "surface / solution bridge"
+    },
+    {
+      "source": "nest2_matter",
+      "target": "food_chemistry",
+      "relation": "nutrition chemistry"
+    },
+    {
+      "source": "food_chemistry",
+      "target": "proteins",
+      "relation": "macronutrient class"
+    },
+    {
+      "source": "food_chemistry",
+      "target": "carbs_fats",
+      "relation": "energy substrate class"
+    },
+    {
+      "source": "food_chemistry",
+      "target": "vitamins_nutrients",
+      "relation": "micronutrient class"
+    },
+    {
+      "source": "proteins",
+      "target": "metabolism",
+      "relation": "digestion to cellular input"
+    },
+    {
+      "source": "carbs_fats",
+      "target": "metabolism",
+      "relation": "energy flow"
+    },
+    {
+      "source": "vitamins_nutrients",
+      "target": "metabolism",
+      "relation": "cofactor bridge"
+    },
+    {
+      "source": "pfas_pharma_microplastics",
+      "target": "chemistry_toolkit",
+      "relation": "molecule / reaction tooling"
+    },
+    {
+      "source": "hydrogen",
+      "target": "fusion_solar",
+      "relation": "isotope-to-fusion bridge"
+    },
+    {
+      "source": "oxygen_redox",
+      "target": "plasma_fire",
+      "relation": "combustion / radicals"
+    },
+    {
+      "source": "h2o",
+      "target": "terahertz",
+      "relation": "spectral water bridge"
+    },
+    {
+      "source": "nest3_coherence",
+      "target": "terahertz",
+      "relation": "spectral comparator"
+    },
+    {
+      "source": "nest3_coherence",
+      "target": "plasma_fire",
+      "relation": "reactive field dynamics"
+    },
+    {
+      "source": "nest3_coherence",
+      "target": "fusion_solar",
+      "relation": "plasma / energy bridge"
+    },
+    {
+      "source": "terahertz",
+      "target": "cell_genome",
+      "relation": "spectral-to-cell hypothesis lane"
+    },
+    {
+      "source": "nest4_biology",
+      "target": "hrv_eeg",
+      "relation": "measured biosignal adapter"
+    },
+    {
+      "source": "nest4_biology",
+      "target": "cell_genome",
+      "relation": "cellular comparator"
+    },
+    {
+      "source": "nest4_biology",
+      "target": "metabolism",
+      "relation": "nutrition becomes physiology"
+    },
+    {
+      "source": "metabolism",
+      "target": "hrv_eeg",
+      "relation": "human-state readout"
+    },
+    {
+      "source": "nest5_convergence",
+      "target": "ecosystem_planet",
+      "relation": "multi-class natural convergence"
+    },
+    {
+      "source": "fusion_solar",
+      "target": "ecosystem_planet",
+      "relation": "solar-terrestrial coupling"
+    },
+    {
+      "source": "minerals",
+      "target": "ecosystem_planet",
+      "relation": "soil / geology bridge"
+    },
+    {
+      "source": "nvidia_physicsnemo",
+      "target": "nest3_coherence",
+      "relation": "future physics adapter"
+    },
+    {
+      "source": "materials_models",
+      "target": "nest2_matter",
+      "relation": "future materials adapter"
+    },
+    {
+      "source": "chemistry_toolkit",
+      "target": "nest2_matter",
+      "relation": "future chemistry adapter"
+    },
+    {
+      "source": "nest1_formal",
+      "target": "aux_math",
+      "relation": "expanded math support"
+    },
+    {
+      "source": "aux_math",
+      "target": "space_time_cycles",
+      "relation": "geometry / dynamics bridge"
+    },
+    {
+      "source": "aux_math",
+      "target": "gravity_orbits",
+      "relation": "equations / symmetry bridge"
+    },
+    {
+      "source": "nest3_coherence",
+      "target": "space_time_cycles",
+      "relation": "cycle / phase dynamics"
+    },
+    {
+      "source": "nest3_coherence",
+      "target": "gases_liquids_phases",
+      "relation": "thermodynamics / flow bridge"
+    },
+    {
+      "source": "nest3_coherence",
+      "target": "gravity_orbits",
+      "relation": "orbital dynamics"
+    },
+    {
+      "source": "fusion_solar",
+      "target": "stars_planets",
+      "relation": "stellar convergence"
+    },
+    {
+      "source": "ecosystem_planet",
+      "target": "stars_planets",
+      "relation": "planetary convergence"
+    },
+    {
+      "source": "gravity_orbits",
+      "target": "stars_planets",
+      "relation": "orbit / rotation bridge"
+    },
+    {
+      "source": "stars_planets",
+      "target": "dark_matter_observables",
+      "relation": "galaxy-scale gravity question"
+    },
+    {
+      "source": "dark_matter_observables",
+      "target": "cosmic_web",
+      "relation": "large-scale structure observable"
+    },
+    {
+      "source": "nest5_convergence",
+      "target": "stars_planets",
+      "relation": "cosmic convergence"
+    },
+    {
+      "source": "nest5_convergence",
+      "target": "cosmic_web",
+      "relation": "universal convergence"
+    }
   ]
 }
-

@@ -22,6 +22,15 @@ It is the first substrate machine learning is built on. If Mirror Architecture
 is real as a cross-domain mapping and stabilization architecture, the first
 place it should become legible in reductionist language is here.
 
+Companion expansion:
+[Auxiliary Mathematics Atlas](./AUXILIARY_MATHEMATICS_ATLAS_2026-04-24.md)
+
+The minimal base remains linear algebra, symmetries, invariants, and encoded
+circuit states. The expanded mathematical support layer also includes graph
+theory, topology, geometry, probability, information theory, dynamical systems,
+differential equations, optimization, statistics, numerical computation,
+spectral methods, control theory, and compositional / category-style structure.
+
 ## Shared Comparator Schema
 
 The locked `Nest 1` schema is:
@@ -147,4 +156,3 @@ That is the final public-writing pass, not the foundation itself.
 
 preserve structure, measure drift, compare against controls, and score whether
 the target relation survives transformation.
-

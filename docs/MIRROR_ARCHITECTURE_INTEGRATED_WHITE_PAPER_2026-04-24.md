@@ -152,8 +152,11 @@ the main prose.
 
 Atlas:
 
+- [Unified Mirror Proof Spine](./UNIFIED_MIRROR_PROOF_SPINE_2026-04-24.md)
 - [Universal Substrate Comparator Atlas](./UNIVERSAL_SUBSTRATE_COMPARATOR_ATLAS_2026-04-24.md)
 - [Natural World Nesting Atlas](./NATURAL_WORLD_NESTING_ATLAS_2026-04-24.md)
+- [Cosmic / Universal Nesting Atlas](./COSMIC_UNIVERSAL_NESTING_ATLAS_2026-04-24.md)
+- [Auxiliary Mathematics Atlas](./AUXILIARY_MATHEMATICS_ATLAS_2026-04-24.md)
 - [Nest 1 Formal Systems Foundation](./NEST1_FORMAL_SYSTEMS_FOUNDATION_2026-04-24.md)
 - [Nest 2 Constrained Structured Systems Foundation](./NEST2_CONSTRAINED_STRUCTURED_SYSTEMS_FOUNDATION_2026-04-24.md)
 - [Terahertz Cellular Resonance Bridge](./TERAHERTZ_CELLULAR_RESONANCE_BRIDGE_2026-04-24.md)

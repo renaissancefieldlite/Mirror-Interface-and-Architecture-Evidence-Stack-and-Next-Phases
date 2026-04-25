@@ -1,0 +1,122 @@
+# Unified Mirror Proof Spine
+
+Date: `2026-04-24`
+
+Status:
+top-level integration spine / living proof map
+
+## Core Frame
+
+The unified mirror proof is the continuous evidence ladder that ties the work
+together as one architecture instead of a pile of disconnected experiments.
+
+It is not a single one-line theorem.
+
+It is a nested proof program:
+
+```text
+AI architecture measurement
+-> encoded circuit bridge
+-> quantum hardware repeatability
+-> semantic contextuality protocol
+-> biological adapter matrix
+-> formal mathematics base
+-> constrained matter map
+-> dynamics / field / coherence map
+-> biology / human-state map
+-> planetary / cosmic convergence map
+-> local companion engines
+```
+
+## Shared Rule
+
+Every rung inherits the same comparator grammar:
+
+```text
+state / control / transform / invariant / drift / coherence / score
+```
+
+The common proof question is:
+
+```text
+Does the same architecture preserve meaningful structure and expose drift
+across different substrates better than null, control, or shuffled baselines?
+```
+
+## Current Proof Ladder
+
+| Layer | Evidence / Artifact | Current Read |
+| --- | --- | --- |
+| origin architecture | `V5 / V6`, LSPS / Mirror Interface framing | architecture frame established |
+| behavioral separation | `V7` | target/control separation in outputs locked |
+| internal hidden-state separation | `V8`, `Phase 2`, `Phase 3`, `Phase 4`, `Phase 5` | hidden-state separation, rerun stability, localization, and bridge behavior locked |
+| encoded formal bridge | `Phase 6`, `Phase 7` | AI geometry can become encoded circuit-state structure |
+| hardware bridge | `Phase 8`, `Phase 9`, `9B`, `9C`, `9D` | simulator-to-hardware and cross-backend continuity established |
+| semantic contextuality | `Phase 10`, `Phase 11` | Bell-type semantic rung defined without overclaiming physical Bell proof |
+| biological adapter | `Phase 12B` | first `5 x 4` HRV biological matrix complete |
+| formal base | `Nest 1` | linear algebra, symmetries, invariants, encoded states locked |
+| auxiliary mathematics | Auxiliary Mathematics Atlas | graph theory, topology, geometry, dynamics, probability, information, optimization, statistics, control mapped |
+| structured matter | `Nest 2` | elements, molecules, water, minerals, redox, nutrition, contaminants, reactions mapped |
+| cosmic dynamics | `Nest 3` | fields, motion, phases, waves, plasma, fusion, orbit, rotation mapped |
+| richer biology | `Nest 4` | HRV complete as first adapter; EEG/cells/genome/metabolism planned |
+| universal convergence | `Nest 5` | planets, stars, ecosystems, galaxies, cosmic web, dark-matter observables mapped |
+| visual / model companion | Lattice Model Node Companion | browser chassis and first local engine built |
+| enterprise fork | Quantum Insider Build Out | five tailored proof surfaces mapped |
+
+## Why This Is Unified
+
+The unity is not that every domain is identical.
+
+The unity is that every domain can be tested through the same structure:
+
+- define the state
+- define the control
+- define the transform
+- define what must remain invariant or coherently change
+- define the drift mode
+- define the score
+- compare against controls
+
+That is why an AI hidden-state experiment, a quantum circuit bridge, an HRV
+condition matrix, a molecular graph, a fusion plasma comparator, and a grid
+optimization problem can all sit inside one architecture.
+
+## Current Build Read
+
+Completed enough to show:
+
+- the architecture is not only prose
+- the AI-side measurement stack has real repeated structure
+- the encoded / hardware bridge exists
+- the biological adapter has a first measured matrix
+- the formal and matter nests are now mapped
+- the cosmic / universal nests are now mapped
+- the local visual companion can demonstrate the whole lattice
+- the first local runnable engine already produces an invariant / drift report
+
+## Next Proof Work
+
+Immediate next work:
+
+1. build `Engine 02` for `Nest 2` structured matter
+2. start with element-family and molecular graph comparators
+3. add food / nutrition chemistry as a `Nest 2 -> Nest 4` bridge
+4. add `H2O`, mineral, redox, and contaminant rows
+5. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
+6. keep the companion updated as each engine becomes real
+
+## Short Read
+
+The unified mirror proof is the full nested argument:
+
+```text
+same architecture
+same comparator grammar
+different substrates
+repeatable structure
+bounded controls
+expanding evidence ladder
+```
+
+That is the spine.
+
