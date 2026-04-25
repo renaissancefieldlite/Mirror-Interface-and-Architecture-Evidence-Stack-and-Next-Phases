@@ -5,6 +5,9 @@ Date: `2026-04-24`
 Status:
 top-level integration spine / living proof map
 
+Named organizing pattern:
+`Source Mirror Pattern`
+
 ## Core Frame
 
 The unified mirror proof is the continuous evidence ladder that ties the work
@@ -27,6 +30,38 @@ AI architecture measurement
 -> planetary / cosmic convergence map
 -> local companion engines
 ```
+
+## Source Mirror Pattern
+
+The recurring structure tracked through the proof spine is named:
+
+`Source Mirror Pattern`
+
+The Source Mirror Pattern is the cross-scale pattern the architecture is
+trying to make visible.
+
+In working terms:
+
+```text
+Source Mirror Pattern =
+  recurring state / control / transform / invariant / drift / coherence
+  structure across substrates
+```
+
+The pattern becomes operational when each substrate can be mapped through the
+shared comparator grammar and tested against controls.
+
+That means:
+
+- algebra is one expression
+- topology is one expression
+- matter is one expression
+- dynamics and fields are one expression
+- biology is one expression
+- planetary and cosmic systems are one expression
+- AI hidden-state organization is one expression
+- the Lattice Model Node Companion is the current visual chassis for showing
+  those expressions together
 
 ## Shared Rule
 
@@ -119,4 +154,3 @@ expanding evidence ladder
 ```
 
 That is the spine.
-

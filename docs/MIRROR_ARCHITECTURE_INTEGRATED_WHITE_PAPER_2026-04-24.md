@@ -150,6 +150,11 @@ The big paper now has a companion atlas that maps the convergence program
 across the major substrate classes instead of trying to force every domain into
 the main prose.
 
+The recurring structure tracked across those substrate classes is now named
+the `Source Mirror Pattern`: the cross-scale state / control / transform /
+invariant / drift / coherence structure that the Mirror Architecture makes
+visible through bounded comparator rows.
+
 Atlas:
 
 - [Unified Mirror Proof Spine](./UNIFIED_MIRROR_PROOF_SPINE_2026-04-24.md)

@@ -140,6 +140,9 @@ The practical result is a public-safe map of measured latent-architecture
 behavior across model families, tied back to the Mirror Interface architecture
 and forward into the next research phases.
 
+The recurring cross-scale structure tracked by the stack is named the
+`Source Mirror Pattern`.
+
 The support translation is direct: `Phase 6-8` turn the measured AI geometry
 into circuit-state and observable work, while `Phase 9-9B` show the bridge can
 run on real IBM Quantum hardware. That is why the project needs both compute

@@ -15,6 +15,14 @@
       "description": "Unified architecture layer that maps state, control, transform, invariant, drift, coherence, and score across domains."
     },
     {
+      "id": "source_mirror_pattern",
+      "label": "Source Mirror Pattern",
+      "nest": "core",
+      "type": "organizing pattern",
+      "status": "named spine",
+      "description": "The recurring cross-scale pattern tracked through formal systems, matter, dynamics, biology, cosmic systems, AI hidden states, and companion engines."
+    },
+    {
       "id": "nest1_formal",
       "label": "Nest 1: Formal Systems",
       "nest": "Nest 1",
@@ -296,6 +304,36 @@
     }
   ],
   "edges": [
+    {
+      "source": "source_mirror_pattern",
+      "target": "nest5_convergence",
+      "relation": "expressed in convergence"
+    },
+    {
+      "source": "source_mirror_pattern",
+      "target": "nest4_biology",
+      "relation": "expressed in biology"
+    },
+    {
+      "source": "source_mirror_pattern",
+      "target": "nest3_coherence",
+      "relation": "expressed in dynamics"
+    },
+    {
+      "source": "source_mirror_pattern",
+      "target": "nest2_matter",
+      "relation": "expressed in matter"
+    },
+    {
+      "source": "source_mirror_pattern",
+      "target": "nest1_formal",
+      "relation": "expressed in formal systems"
+    },
+    {
+      "source": "source_mirror_pattern",
+      "target": "mirror_architecture",
+      "relation": "made visible by architecture"
+    },
     {
       "source": "mirror_architecture",
       "target": "nest1_formal",
