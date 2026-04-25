@@ -45,11 +45,14 @@ The current validation posture separates the lanes like this:
 | evidence-connected | `STAT-1`, `PROB-1`, `INFO-1`, `TENSOR-1`, `NUM-1`, `TOPOG-1/2`, `GEO-1/2` | directly tied to existing phase artifacts or real trace geometry |
 | implicit evidence-connected | `GRP-1` | present through circuit/unitary structure but needs explicit symmetry scoring |
 | partial / negative validation | `SPEC-1`, `DE-1` | HRV-only spectral and local-dynamics forks ran on real Phase 12B data and did not beat simpler baselines |
+| coarse biological adapter | `Phase 12B HRV` | supports pattern-class separation and AI-user sync/tuning, not high-resolution spectral/dynamics validation |
+| EEG-upgrade path | `SPEC-1`, `TOPOG-1/2` | `SPEC-1` moves to a stronger existing-data design once EEG alpha/theta/band-power/phase-lock data exists; `TOPOG` needs electrode-site maps |
+| richer-design path | `DE-1` | remains a dynamics-design lane until synchronized EEG/HRV or longer multi-channel biological time series are available |
 | architecture-connected but blocked | `CTRL-1` | runner exists; needs real LSPS transition trace export |
 | dataset-blocked | `GRAPH-1/2`, `Engine 02V` | runners exist; need graph/pathway data or `RDKit` molecule data |
 | existing-data next | `TOP-1/2`, `DYN-1/2` | clear routes using V8 hidden-state traces, but not yet run |
 | new-design needed | `OPT-1`, `GAME-1` | needs declared benchmark or adversarial/multi-agent protocol |
-| scaffold / parked | card ontology, toy rows, visual-only demos | useful for navigation or UI, not evidence without real data |
+| scaffold / parked | toy rows, visual-only demos, old visual registry branch | useful for navigation or UI, not evidence without real data |
 
 ## SPEC-1 Result
 
@@ -124,6 +127,38 @@ drift_control mean delta BPM: 4.751585
 So the biological adapter remains real, but the specific DE-1 dynamics feature
 set is not yet stronger than the simpler HR delta comparator.
 
+## HRV Adapter Read
+
+The corrected biological read is:
+
+```text
+HRV validates Phase 12B as a coarse biological adapter and condition-class
+separation surface.
+```
+
+It does not validate the formal biological versions of `SPEC-1` or `DE-1` by
+itself.
+
+That means the biological lane splits cleanly:
+
+- `HRV` stays valuable for autonomic trend, recovery, arousal, and AI-user sync
+  tuning.
+- `SPEC-1` should be rerun on `EEG + HRV`, with EEG alpha/theta/band-power and
+  phase-lock features doing the high-resolution spectral work.
+- `DE-1` needs richer oscillatory time series, longer windows, or synchronized
+  EEG/HRV before it can become more than a limited HRV-only result.
+- `TOPOG-1/2` should wait for EEG electrode-site spatial maps or another real
+  spatial biological measurement.
+
+The AI-side insertion point for `HRV` is therefore not the raw token stream.
+It is the sync/control layer:
+
+```text
+HRV + user feedback + task outcome
+-> user-state / sync-state dataset
+-> Mirror / LSPS routing, pacing, context-pressure, and verification tuning
+```
+
 ## Dataset-Blocked Runner Results
 
 Generated reports:
@@ -153,7 +188,8 @@ existing-data bridge with:
 
 - `GEO/TOP` geometry and topology over real V8 residual/localization traces
 - `DYN` trajectory analysis over V7/V8 order and rerun traces
-- EEG spectra when the EEG device is available
+- `EEG + HRV` spectra when the EEG device is available
+- HRV-user-feedback datasets for AI sync-layer tuning
 - stricter artifact rejection
 - longer windows where possible
 - condition-specific spectral hypotheses declared before scoring

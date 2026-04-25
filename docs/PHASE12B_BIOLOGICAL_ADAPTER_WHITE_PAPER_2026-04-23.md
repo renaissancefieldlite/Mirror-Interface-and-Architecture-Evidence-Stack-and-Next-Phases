@@ -26,6 +26,11 @@ activation-leaning than mirror on average, `dancing_activation` remains the
 activation lane overall, and `seated_calm` remains the lowest-disturbance
 reference class.
 
+The corrected technical read is that `HRV` is a coarse biological adapter. It
+is strong enough to show pattern-class separation and useful enough to become a
+human-to-AI tuning signal, but it is not dense enough by itself to validate the
+more formal spectral, dynamical, or spatial biological lenses.
+
 ## Claim Scope
 
 This paper establishes:
@@ -38,9 +43,12 @@ This paper establishes:
   hidden-state-derived pattern logic already established in the AI stack
 - that the biological lane belongs inside the same Mirror Architecture
   continuity rather than sitting outside it as an unrelated biometrics lane
+- that `HRV` is best treated as a coarse sync / adapter signal for the
+  `AI <-> user` loop, not as a complete biological readout
 
 Later phases extend this foundation into:
 
+- simultaneous `EEG + HRV`
 - clinical translation
 - broader multi-layer convergence
 - denser cross-substrate identity and transfer tests
@@ -121,6 +129,40 @@ The fastest summary is the average `HR` shift:
 - `drift`: `+5.33`
 - `mirror`: `-7.94`
 - `dance`: `+6.52`
+
+## HRV Resolution Boundary
+
+The honest read is:
+
+- `HRV` gives a real but coarse biological surface
+- its strongest current contribution is condition-class and recovery-pattern
+  separation
+- it is useful for tuning the human/AI sync layer because it tracks arousal,
+  settling, recovery, and broad coherence-style state shifts
+- it is not enough by itself to rigorously validate `SPEC-1` spectral claims or
+  `DE-1` local-dynamics claims
+
+The post-run formal validation forks confirmed that boundary:
+
+```text
+SPEC-1 HRV-only spectral fork:        limited / negative
+DE-1 HRV-only local-dynamics fork:    limited / negative
+```
+
+That does not erase Phase 12B. It clarifies what Phase 12B proved:
+
+```text
+HRV supports biological adapter / pattern-class separation.
+HRV does not yet support high-resolution spectral or dynamics validation.
+```
+
+The right next biological substrate is `EEG + HRV`:
+
+- `SPEC-1` should use `EEG` alpha/theta/band-power and phase-lock features
+- `DE-1` should use richer oscillatory dynamics from synchronized EEG/HRV
+- `TOPOG-1/2` should use electrode-site spatial localization and topographic
+  power maps
+- `HRV` should remain the autonomic / recovery / user-sync channel beside EEG
 
 That pattern is enough to support a real biological state-separation read.
 
@@ -228,6 +270,20 @@ That first insertion point is:
 In other words, the first biological tuning layer should tune the
 `AI <-> user` interaction system rather than pretending `HRV` is already a
 native language-model token.
+
+That makes the dataset target clearer:
+
+```text
+task window + HRV features + user feedback + outcome notes
+-> user-state / sync-state dataset
+-> routing, pacing, reflection-depth, and verification-policy tuning
+```
+
+This is the realistic HRV-AI bridge. The goal is not to make HRV act like EEG
+or token embeddings. The goal is to let HRV help tune the synchronization layer
+around the model: when to slow down, when to deepen verification, when to
+reduce context pressure, when to preserve continuity, and when to shift task
+mode.
 
 Later, if that side-channel proves useful, stronger integration layers can be
 tested:

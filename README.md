@@ -41,6 +41,10 @@ What was actually discovered:
   `Phase 12B` showed that live `HRV` condition classes remain separable under
   the same higher-order evidence discipline, making biology a measured adapter
   lane inside the same architecture stack rather than a disconnected side note.
+  The tightened read is that `HRV` is a coarse but useful adapter: it supports
+  condition-class separation and AI-user sync/tuning datasets, but it does not
+  by itself validate high-resolution spectral, dynamical, or spatial biology
+  lenses.
 
 - `Nest 1 formal-lane discovery`
   The `Source Mirror Pattern` has now been expressed across every checked
@@ -115,6 +119,10 @@ Current best read:
 - `Phase 12B` completed the first full biological `5 x 4` matrix, with
   `mirror_coherence` remaining the strongest average `HR`-downshift lane and
   biology now functioning as a measured adapter surface inside the same stack.
+  The correct biological role for `HRV` is coarse sync / recovery / autonomic
+  state, especially as a side-channel for tuning the `AI <-> user` interaction
+  layer. `EEG + HRV` is the next required biological substrate for stronger
+  `SPEC`, `DE`, and `TOPOG` validation.
 - `Nest 1` completed the expanded formal map: the same comparator grammar
   maps into topology, topography, graph theory, dynamics,
   probability/information, optimization, control, numerical computation, and
@@ -124,9 +132,12 @@ Current best read:
   probability / statistics, information theory, numerical computation,
   optimization, graph structure, geometry / topology, dynamics, control, and
   composition. `SPEC-1` and `DE-1` have now both run on real Phase 12B HRV data
-  and both landed as limited / negative against simpler baselines. `GEO`,
-  `TOP`, and `DYN` are the next real-data forks because existing V8/V7 traces
-  can feed them. `OPT-1` and `GAME-1` still need new benchmark designs.
+  and both landed as limited / negative against simpler baselines. That does
+  not erase the HRV adapter; it clarifies that `HRV` belongs to coarse
+  pattern-class and sync-layer tuning, while `EEG + HRV` is needed for stronger
+  biological `SPEC/DE/TOPOG` claims. `GEO`, `TOP`, and `DYN` are the next
+  real-data forks because existing V8/V7 traces can feed them. `OPT-1` and
+  `GAME-1` still need new benchmark designs.
 - `Nest 2` now has its first local structured-matter methodology engine: the
   same comparator grammar maps into elements, molecular graphs, water,
   minerals, redox rows, nutrition chemistry, persistent-contaminant pathway
@@ -243,6 +254,17 @@ Start here if you only have a few minutes:
 42. [Phase 11 To Phase 13 Physical Bell Bridge](./docs/PHASE11_TO_PHASE13_PHYSICAL_BELL_BRIDGE_2026-04-23.md)
 43. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
 44. [Phase 12B Biological Comparison Pack PDF](./artifacts/v8/phase12b_biological_comparison_pack/V8_PHASE12B_BIOLOGICAL_COMPARISON_PACK_2026-04-24.pdf)
+45. [Nest 1 Real-Trace Foundation Report](./artifacts/validation/nest1_real_trace_foundation/nest1_real_trace_foundation_report.md)
+46. [Nest 1 Real-Trace Foundation Pack PDF](./artifacts/validation/nest1_real_trace_foundation/nest1_real_trace_foundation_pack_2026-04-25.pdf)
+
+## Current Validation Notes
+
+These notes keep the claim ladder grounded: grammar maps route the work,
+real traces and datasets decide what graduates.
+
+1. [Draft Grammar-To-Real-Data Validation Ladder](./docs/DRAFT_GRAMMAR_TO_REAL_DATA_VALIDATION_LADDER_2026-04-25.md)
+2. [Draft Nest 1 / Nest 2 Foundation Real Mapping Plan](./docs/DRAFT_NEST1_NEST2_FOUNDATION_REAL_MAPPING_PLAN_2026-04-25.md)
+3. [Nest 1 Real-Trace Foundation Report](./artifacts/validation/nest1_real_trace_foundation/nest1_real_trace_foundation_report.md)
 
 Auxiliary build folders:
 

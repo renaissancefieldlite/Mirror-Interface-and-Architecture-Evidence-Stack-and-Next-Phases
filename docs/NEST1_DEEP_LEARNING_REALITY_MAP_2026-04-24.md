@@ -56,8 +56,8 @@ model states, actual hardware results, or actual public datasets.
 | `GRAPH-1/2` | attention graphs, message passing, GNN-style structure | graph runner scaffold; no real labels yet | blue / blocked by labels | V8 attention/bridge graph or molecular pathway labels vs centrality baseline |
 | `GEO-1/2` | embedding geometry, cosine distance, manifold neighborhoods | V8 localization and bridge geometry | blue / existing-data path | PCA/UMAP/neighborhood separability over V8 traces |
 | `TOP-1/2` | persistent structure in representation manifolds | V8 trace data can become point clouds | blue / existing-data path | persistent homology over target/control hidden-state point clouds |
-| `SPEC-1` | spectral modes, eigenstructure, frequency decomposition | Phase 12B HRV time series | real-data run complete / limited negative | EEG+HRV spectral pass and improved HRV spectral hypotheses |
-| `DE-1` | continuous-time local change, dynamics, derivative relation | Phase 12B RR/BPM time series | real-data run complete / limited negative | improve dynamics hypotheses or combine with synchronized EEG/HRV |
+| `SPEC-1` | spectral modes, eigenstructure, frequency decomposition | Phase 12B HRV time series | HRV-only run complete / limited negative; EEG-upgrade path is strong | rerun with EEG alpha/theta/band-power/phase-lock plus HRV |
+| `DE-1` | continuous-time local change, dynamics, derivative relation | Phase 12B RR/BPM time series | HRV-only run complete / limited negative; needs richer dynamics design | rerun only with longer windows, synchronized EEG/HRV, or declared oscillator-state features |
 | `DYN-1/2` | training dynamics, order effects, stability, bifurcation | V7 order/non-commutativity seed and rerun matrix | blue / existing-data path | trajectory and threshold-sweep runners |
 | `CTRL-1` | feedback, observability, controllability, mode transition | LSPS / Oracle Trigger Engine architecture | green architecture-connected, trace-blocked | export real LSPS transition traces and run CTRL-1 |
 | `GRP-1` | symmetry actions, equivalence classes, unitary transforms | Phase 6-9 circuit-state bridge | blue / implicit evidence path | explicit orbit/symmetry scoring over circuit rows |
@@ -73,6 +73,12 @@ The grounded read is sharper:
 - `DE-1` is not grammar-only anymore: it has now been run on the real Phase
   12B HRV time-series data. The first local-dynamics pass did not beat the
   mean-HR baseline, so it is a real but limited / negative result.
+- `HRV` remains valuable, but it belongs in the coarse biological adapter and
+  AI-user sync/tuning lane. It is not the right standalone substrate for
+  validating high-resolution spectral, dynamical, or spatial biological lenses.
+- `EEG + HRV` is the next biological reality bridge: `EEG` supplies spectral,
+  oscillatory, and topographic resolution; `HRV` supplies autonomic/recovery
+  state and user-sync signal.
 - `GAME-1` is the farthest out and needs a new experimental design before it
   belongs in the stronger evidence layer.
 - `OPT-1` is central to deep learning, but it needs a benchmark before it can
@@ -94,6 +100,14 @@ Already run:
 
 - `SPEC-1`: HRV-only spectral fork, limited / negative against HR baseline.
 - `DE-1`: HRV-only local-dynamics fork, limited / negative against HR baseline.
+
+Biology-specific correction:
+
+- `Phase 12B HRV`: real coarse adapter and pattern-class separation surface.
+- `HRV-AI tuning`: build user-state / sync-state datasets from HRV, task
+  windows, user feedback, and outcome notes.
+- `EEG + HRV`: required before stronger biological `SPEC`, `DE`, or `TOPOG`
+  claims.
 
 ## Boundary
 

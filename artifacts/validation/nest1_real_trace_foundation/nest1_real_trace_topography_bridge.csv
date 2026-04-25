@@ -1,0 +1,9 @@
+model,dominant_anchor,dominant_layer,dominant_delta,path_archetype,top3_sequence,anchor_layer_span,target_to_context,target_to_surround,last_to_target,overlap_count,overlap_jaccard,early_delta,mid_delta,pre_delta,target_delta,post_delta,last_delta
+Mistral,mid_window,31,303.582184,late-context supported target,mid > pre > target,0,0.816609,0.914064,0.579389,3,0.230769,211.46344,303.582184,271.21521,247.907959,230.401215,143.635162
+Qwen,early_window,34,165.87529,front-context loaded,early > pre > mid,0,0.766394,0.783508,0.705465,0,0.0,165.87529,154.143585,162.252136,127.125885,95.120499,89.682899
+Gemma,last_token,41,113.612076,readout-led,last > mid > target,0,0.886583,1.005393,1.474392,0,0.0,72.47113,86.914543,76.6436,77.056923,71.83271,113.612076
+DeepSeek,early_window,25,602.411987,front-context loaded,early > pre > mid,1,0.539476,0.704434,0.673711,1,0.066667,602.411987,430.60849,461.34491,324.986969,231.586258,218.947357
+Hermes,mid_window,31,303.928741,late-context supported target,mid > pre > target,0,0.816148,0.884156,0.666345,4,0.333333,243.950867,303.928741,280.551147,248.050934,223.68251,165.287491
+GLM,mid_window,38,601.968079,late-context to readout bridge,mid > pre > early,0,0.79618,0.852697,1.014338,2,0.142857,492.669708,601.968079,562.06897,479.27478,449.048553,486.146454
+Nemotron,early_window,39,944.597412,front-context to readout bridge,early > mid > last,1,0.214217,0.754216,1.69858,0,0.0,944.597412,358.312347,268.29007,202.348648,204.378571,343.705292
+SmolLM3,mid_window,35,24.294479,late-context supported target,mid > early > pre,1,0.857402,0.868924,0.556058,0,0.0,24.031996,24.294479,23.972353,20.830145,16.219103,11.582764
