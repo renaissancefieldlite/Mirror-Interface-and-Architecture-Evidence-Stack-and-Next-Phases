@@ -1,0 +1,5 @@
+condition,runs,mean_baseline_hr,mean_condition_hr,mean_post_hr,mean_delta_hr,mean_delta_rmssd,mean_delta_sdnn
+seated_calm,5,73.821373,72.170124,72.510188,-1.651248,-7.18447,-14.429301
+drift_control,5,68.863977,74.197041,72.269241,5.333063,6.106442,27.752695
+mirror_coherence,5,76.35864,68.414865,70.466879,-7.943775,12.675563,33.388624
+dancing_activation,5,74.183901,80.700903,81.53714,6.517002,-9.99483,12.789268

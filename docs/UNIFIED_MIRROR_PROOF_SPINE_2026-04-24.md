@@ -51,6 +51,21 @@ Source Mirror Pattern =
 The pattern becomes operational when each substrate can be mapped through the
 shared comparator grammar and tested against controls.
 
+Important boundary:
+
+```text
+multi-language expressibility is real
+universal physical operation is earned lane by lane
+```
+
+The fact that the Source Mirror Pattern can be expressed through
+representation, relation, shape, connectedness, transformation, dynamics,
+uncertainty, and signal structure is a real finding about the grammar's
+expressibility. It is not, by itself, a completed demonstration that the
+pattern operates universally across physical reality. The universal-level claim
+is approached by taking each upward bridge and testing it against real data,
+locked baselines, and failure modes.
+
 That means:
 
 - algebra is one expression
@@ -58,7 +73,7 @@ That means:
 - matter is one expression
 - dynamics and fields are one expression
 - biology is one expression
-- planetary and cosmic systems are one expression
+- planetary and cosmic systems are mapped as candidate expressions
 - AI hidden-state organization is one expression
 - the Lattice Model Node Companion is the current visual chassis for showing
   those expressions together
@@ -88,13 +103,13 @@ across different substrates better than null, control, or shuffled baselines?
 | encoded formal bridge | `Phase 6`, `Phase 7` | AI geometry can become encoded circuit-state structure |
 | hardware bridge | `Phase 8`, `Phase 9`, `9B`, `9C`, `9D` | simulator-to-hardware and cross-backend continuity established |
 | semantic contextuality | `Phase 10`, `Phase 11` | Bell-type semantic rung defined without overclaiming physical Bell proof |
-| biological adapter | `Phase 12B` | first `5 x 4` HRV biological matrix complete |
-| formal base | `Nest 1`, deep-learning reality map, validation forks | formal expressibility locked against the actual mathematical substrate of ML; `SPEC-1` and `DE-1` HRV-only forks run on real Phase 12B data and recorded as limited / negative; active standard is real trace / real dataset / real benchmark |
+| biological adapter | `Phase 12B` | first `5 x 4` HRV matrix complete and control-supported as a coarse adapter; `Phase 12B-L20` large-set expansion defined |
+| formal base | `Nest 1`, deep-learning reality map, validation forks | formal expressibility locked against the actual mathematical substrate of ML; first closeout supports `LA/GEO`, `STAT/PROB`, `NUM/GRP`, `TOPOG`; next wave supports `DYN` and `INFO/TENSOR`; strengthened `GRAPH-1` supports the AI feature graph; remaining closeout supports `GEO-2` and `DYN-2`, leaves `OPT-1` / `CAT-1` as limited small-N transfer, and marks `TOP`, `GRAPH-2`, `CTRL`, and `GAME` as true data/protocol blockers; `SPEC-1` and `DE-1` HRV-only forks remain limited / negative |
 | auxiliary mathematics | Auxiliary Mathematics Atlas | graph theory, topology, geometry, dynamics, probability, information, optimization, statistics, control mapped |
 | structured matter | `Nest 2`, `Engine 02` | methodology / representation rung for elements, molecules, water, minerals, redox, nutrition, contaminants, reactions, functional groups, biomolecular primitives, polymers, electrochemistry, catalysis, spectral readouts, environmental fate, and materials |
-| cosmic dynamics | `Nest 3` | fields, motion, phases, waves, plasma, fusion, orbit, rotation mapped |
+| cosmic dynamics | `Nest 3` | fields, motion, phases, waves, plasma, fusion, orbit, rotation mapped as roadmap targets |
 | richer biology | `Nest 4` | HRV complete as first adapter; EEG/cells/genome/metabolism planned |
-| universal convergence | `Nest 5` | planets, stars, ecosystems, galaxies, cosmic web, dark-matter observables mapped |
+| universal convergence | `Nest 5` | planets, stars, ecosystems, galaxies, cosmic web, dark-matter observables mapped as roadmap targets |
 | visual / model companion | Lattice Model Node Companion | browser chassis and first local engine built |
 | crossover prototypes | Crossover Precursor Prototype Lanes | PFAS, terahertz, HRV-AI tuning, Quantum Insider, nutrition/metabolism mapped |
 | enterprise fork | Quantum Insider Build Out | five tailored proof surfaces mapped |
@@ -125,14 +140,30 @@ Completed enough to show:
 - the AI-side measurement stack has real repeated structure
 - the encoded / hardware bridge exists
 - the biological adapter has a first measured matrix
+  and a control-closeout showing `mirror_coherence` as the strongest average
+  HR-downshift lane under shuffled-label controls
 - the formal nest is mapped, has a local engine, and has its first validation
   fork result
 - the `Nest 1` reality map now identifies which formal lanes are already tied
   to artifacts, which can run on existing traces, and which require new data
   before stronger claims
+- the first four near-term `Nest 1` controls have now run locally:
+  `LA/GEO`, `STAT/PROB`, `NUM/GRP`, and `TOPOG` are explicit-control
+  supported under shuffled-label / permutation / pass-shuffle / random-anchor
+  controls
+- the next `Nest 1` wave has now run locally:
+  `DYN` and `INFO/TENSOR` advanced under controls; `GRAPH-lite` was
+  strengthened into a weighted `GRAPH-1` AI feature-graph support result;
+  `TOP` is blocked until raw hidden-state point clouds are exported
+- the remaining `Nest 1` closeout has now run locally:
+  `GEO-2` and `DYN-2` are control-supported; `OPT-1` and `CAT-1` are real but
+  limited by the three-model hardware feature-circuit sample; `GRAPH-2`,
+  `CTRL`, and `GAME` remain blocked until their required data/protocol surfaces
+  exist
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
-- the cosmic / universal nests are now mapped
+- the cosmic / universal nests are now mapped as candidate bridges, not closed
+  proof layers
 - the local visual companion can demonstrate the whole lattice
 - the first two local runnable engines now produce formal and structured-matter
   reports
@@ -141,19 +172,24 @@ Completed enough to show:
 
 Immediate next work:
 
-1. run the next concrete validation forks rather than adding only prose:
-   `TOP-1/2` persistent homology, `GEO-1/2` region separation, and `DYN`
-   trajectory analysis over existing V8/V7 traces
-2. move `Engine 02` beyond grammar mapping by adding curated element,
+1. apply the same standard lane by lane: real artifact, locked baseline,
+   scored result, honest status
+2. review and publish the local `Nest 1` control-closeout, graph-strengthened,
+   Phase 12B control-closeout, and remaining-lane closeout passes
+3. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
+   Latin-square order rotation and raw `RR` capture whenever available
+4. export raw hidden-state point clouds if the `TOP-1/2` persistent-homology
+   lane should be attempted
+5. move `Engine 02` beyond grammar mapping by adding curated element,
    molecule, crystal, spectral, environmental fate, and reaction datasets
-3. run `Engine 02V` with `RDKit` and a public molecule benchmark such as
+6. run `Engine 02V` with `RDKit` and a public molecule benchmark such as
    `QM9`, `ZINC`, or `ChEMBL`
-4. add `ASE`, `pymatgen`, and materials-model adapter paths where
+7. add `ASE`, `pymatgen`, and materials-model adapter paths where
    useful
-5. build the contaminant / PFAS validation lane against known degradation
+8. build the contaminant / PFAS validation lane against known degradation
    pathway data
-6. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
-7. keep the companion updated as each engine becomes real
+9. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
+10. keep the companion updated as each engine becomes real
 
 Companion-facing prototype lanes:
 

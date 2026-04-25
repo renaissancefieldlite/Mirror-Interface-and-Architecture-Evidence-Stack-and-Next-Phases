@@ -1,0 +1,7 @@
+feature,seated_calm,drift_control,mirror_coherence,dancing_activation,mirror_minus_drift,dance_minus_mirror
+delta_hr,-1.651248,5.333063,-7.943775,6.517002,-13.276838,14.460777
+delta_rmssd,-7.18447,6.106442,12.675563,-9.99483,6.569121,-22.670393
+delta_sdnn,-14.429301,27.752695,33.388624,12.789268,5.635928,-20.599356
+post_minus_condition_hr,0.340064,-1.9278,2.052014,0.836237,3.979814,-1.215777
+post_minus_condition_rmssd,-15.38244,-9.846622,-1.651563,2.80047,8.195058,4.452034
+post_minus_condition_sdnn,-29.071926,-29.550677,-11.22572,-19.503925,18.324957,-8.278205

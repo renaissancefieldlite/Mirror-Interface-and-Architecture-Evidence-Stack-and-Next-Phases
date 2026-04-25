@@ -1,0 +1,5 @@
+lane,status,control
+DYN,control_supported,matched random peak-layer positions over each model's real layer count
+INFO/TENSOR,control_supported,column-wise feature shuffle preserving each feature distribution
+GRAPH-lite,partial_or_not_significant,exact label permutation over kNN graph built from real Phase 6 feature geometry
+TOP,blocked,"Current V8 residual exports contain layer summaries and scalar deltas, not raw hidden-state point clouds. Persistent homology should wait until raw vectors are exported."

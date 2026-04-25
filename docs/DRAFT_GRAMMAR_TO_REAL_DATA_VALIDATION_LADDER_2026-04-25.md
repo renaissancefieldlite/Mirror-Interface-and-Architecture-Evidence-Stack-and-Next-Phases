@@ -171,6 +171,237 @@ schema/scaffold only
 
 The grammar map earns its keep by making that classification possible.
 
+## Lane-By-Lane Execution Standard
+
+The universal-level hypothesis is not tested as one giant leap. It is tested
+lane by lane.
+
+Each lane must pass through the same sequence:
+
+1. name the lane
+2. define the Source Mirror Pattern prediction for that lane
+3. use real artifacts, real traces, real hardware, real measurements, real
+   datasets, or a declared benchmark
+4. lock the baseline/control before running
+5. run the score
+6. accept positive, weak, negative, or blocked results
+7. mark the lane honestly
+8. move to the next lane
+
+This is the same discipline that made the `V7` and `V8` evidence credible.
+The larger claim gets stronger only as individual lanes close under that
+standard.
+
+## Near-Term Lane Queue
+
+| Lane | Current Read | Real Surface | Control To Add | Status |
+| --- | --- | --- | --- | --- |
+| `linear algebra / geometry` | most immediately executable | V8 residual/localization traces, Phase 6 feature matrix | shuffled-label controls, mean-delta baseline | real-data fork ready now |
+| `statistics / probability` | substantially closed by Phase 2 and Phase 4 | rerun matrices and exact/variance rows | permutation test against rerun labels / chance baseline | closeable now |
+| `numerical / hardware` | largely closed by Phase 9/9D | IBM backend repeats, parity signs, feature circuits | backend-shuffled or pass-shuffled controls | closeable now |
+| `topography` | already evidence-connected | Phase 4/5 anchors and bridge locations | random-anchor / shuffled-anchor controls | closeable now |
+| `topology` | technically demanding but tractable | raw hidden-state point clouds from HF checkpoints/traces | shuffled point clouds / label permutation | heavier existing-infrastructure fork |
+| `dynamics` | evidence-connected but needs sharper runner | V7 order effects, V8 layer trajectories | flat trajectory, randomized order, threshold sweep | real-data fork ready |
+| `optimization` | not closed | declared search or solver benchmark | random, naive, and standard heuristic baselines | new benchmark required |
+| `control theory` | architecture-connected, trace-blocked | LSPS / Oracle transition traces | uncontrolled routing baseline | trace export required |
+| `composition` | design lane | two completed real-data lanes | non-preserving mapping baseline | later cross-nest fork |
+
+The first three should be treated as the next fast close-out targets:
+
+```text
+GEO/linear algebra controls
+STAT/PROB permutation controls
+NUM/GRP backend-shuffled controls
+```
+
+Then run:
+
+```text
+TOP persistent homology if raw hidden-state point clouds are available
+```
+
+## First Four Lane Control-Closeout Result
+
+Status:
+completed local control-closeout
+
+Report:
+
+```text
+artifacts/validation/nest1_control_closeout/nest1_control_closeout_report.md
+```
+
+The first four near-term lanes were executed against explicit null controls:
+
+| Lane | Control | Result |
+| --- | --- | --- |
+| `LA/GEO` | exact shuffled-label null over Phase 6 geometry | `2/3` mutual hits; p `0.014286`; pair-distance p `0.009524`; top-2 p `0.052381` |
+| `STAT/PROB` | run-label permutation over Phase 2 / Phase 4 reruns | Phase 2 and Phase 4 exactness p values `5e-05` |
+| `NUM/GRP` | pass/circuit shuffle over Phase 9D signs | `7/7` sign-stable circuits; p `0.001` |
+| `TOPOG` | random-anchor / random-layer controls over Phase 4 | anchor p `5e-05`; layer p `5e-05` |
+
+Read:
+
+```text
+The first four lanes are now explicit-control supported.
+```
+
+This does not close `TOP`, `OPT`, `CTRL`, or `COMP/CAT`; those remain separate
+lane requirements.
+
+## Next-Wave Lane Result
+
+Status:
+completed local next-wave pass
+
+Report:
+
+```text
+artifacts/validation/nest1_next_wave/nest1_next_wave_report.md
+```
+
+Execution map:
+
+```text
+docs/NEST1_REMAINING_LANE_EXECUTION_MAP_2026-04-25.md
+```
+
+Results:
+
+| Lane | Control | Result |
+| --- | --- | --- |
+| `DYN` | matched random peak-layer positions over each model's layer count | control-supported; observed mean peak fraction `0.981974`, late peak count `8/8`, p values `2e-05` |
+| `INFO/TENSOR` | column-wise feature shuffle preserving feature distributions | control-supported by effective-rank compression p `0.00268`; top-2 variance alone p `0.086638` |
+| `GRAPH-lite` | exact label permutation over Phase 6 kNN graph | partial / not significant; expected pair edges `2/3`, p `0.380952` |
+| `TOP` | raw point-cloud availability check | blocked; current exports do not contain raw hidden-state point clouds |
+
+Read:
+
+```text
+DYN and INFO/TENSOR advance.
+GRAPH-lite stays partial.
+TOP waits for raw vector export.
+```
+
+## GRAPH Strengthened Result
+
+Status:
+completed local strengthened graph pass
+
+Report:
+
+```text
+artifacts/validation/nest1_graph_strengthened/nest1_graph_strengthened_report.md
+```
+
+The first `GRAPH-lite` result was not wrong. It was blunt: binary kNN edge
+recovery over only eight model nodes recovered `2/3` expected bridge pairs, but
+that edge-count statistic did not beat shuffled labels strongly enough.
+
+The strengthened graph pass keeps the same real Phase 6 artifact and switches
+to weighted / ranked relation recovery:
+
+| View | Result |
+| --- | --- |
+| `feature_similarity` | expected bridge-pair score above shuffled labels p `0.007143`; expected-rank average p `0.038095` |
+| `angle_fidelity` | `Mistral/Hermes` rank `1`, full three-pair lane not closed |
+| `amplitude_fidelity` | `Mistral/Hermes` rank `1`, full three-pair lane not closed |
+
+Clean read:
+
+```text
+GRAPH-1 is now strengthened / supported for the AI feature graph.
+GRAPH-2 still needs real pathway, attention-flow, allostery, grid, or other
+domain-correct graph labels.
+```
+
+## Phase 12B Biological Control-Closeout
+
+Status:
+completed local Phase 12B control-closeout
+
+Report:
+
+```text
+artifacts/validation/phase12b_biological_control_closeout/phase12b_biological_control_closeout_report.md
+```
+
+This pass applies the same discipline back to the completed `5 x 4` HRV matrix:
+
+- balanced label shuffles preserving `5` sessions per condition
+- within-run block shuffles preserving one label per condition block
+- HR-only leave-one-run-out classification
+- multi-feature HRV leave-one-run-out classification
+- mirror / drift / calm / dance feature contribution read
+
+Results:
+
+| Test | Result |
+| --- | --- |
+| `mirror_coherence` Delta HR | strongest average HR downshift: `-7.943775`; shuffled-label p `0.002` |
+| `dancing_activation - mirror_coherence` Delta HR gap | `14.460777`; shuffled-label p `0.0012` |
+| HR-only leave-one-run-out | accuracy `0.5`; balanced-label p `0.022649`; within-run block p `0.033148` |
+| multi-feature leave-one-run-out | accuracy `0.45`; balanced-label p `0.047598`; within-run block p `0.072346` |
+| mirror-vs-calm multi-feature distance | p `0.041248` |
+| mirror-vs-drift multi-feature distance | partial / not significant, p `0.630568` |
+
+Clean read:
+
+```text
+Phase 12B is control-supported as a coarse HRV biological adapter and
+condition-class separation lane. It is not a high-resolution EEG / spectral /
+dynamical biology proof.
+```
+
+Large-set upgrade:
+
+```text
+docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md
+```
+
+The next HRV-only expansion is `Phase 12B-L20`:
+
+```text
+20 blocks x 4 conditions = 80 sessions
+Latin-square order rotation
+raw RR capture whenever available
+```
+
+The purpose is to stabilize the multi-feature HRV read instead of relying only
+on the clean low-dimensional `Delta HR` signal.
+
+## Remaining Nest 1 Lane Closeout
+
+Status:
+completed local remaining-lane closeout
+
+Report:
+
+```text
+artifacts/validation/nest1_remaining_lane_closeout/nest1_remaining_lane_closeout_report.md
+```
+
+Results:
+
+| Lane | Result |
+| --- | --- |
+| `GEO-2` | control-supported subspace preservation across full, Phase 3, and Phase 5 feature groups |
+| `DYN-2` | control-supported threshold / regime-crossing; late 75% crossing `8/8`, p `5e-05` |
+| `OPT-1` | limited small-N partial; Phase 6 and hardware select the same best pair across three feature circuits |
+| `CAT-1` | limited small-N transfer partial; Phase6-to-hardware similarity correlation `0.893921`, but only three feature circuits |
+| `TOP` | blocked until raw hidden-state point clouds exist |
+| `GRAPH-2` | blocked until real pathway / attention-flow / domain graph labels exist |
+| `CTRL` | blocked until LSPS transition traces exist |
+| `GAME` | blocked until an adversarial / multi-agent protocol exists |
+
+Clean read:
+
+```text
+Nest 1 is no longer a loose grammar map. Every current lane is now either
+control-supported, limited by small-N transfer, or blocked by a named missing
+data/protocol surface.
+```
+
 ## Working Read
 
 The grammar mapping is valuable if it becomes a disciplined routing map from
@@ -181,5 +412,5 @@ It becomes weak if it is treated as proof before the real data pass.
 The next serious build therefore starts with foundation data:
 
 ```text
-Nest 1 traces -> Nest 2 real datasets -> return to HRV/EEG when ready
+Nest 1 traces -> Nest 2 real datasets -> Phase 12B-L20 -> EEG/HRV
 ```

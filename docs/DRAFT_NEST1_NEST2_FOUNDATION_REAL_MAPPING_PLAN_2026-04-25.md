@@ -24,9 +24,10 @@ The grammar map is useful because it tells us what to test. It is not the
 finished proof. The proof work starts when the grammar touches real traces,
 real model states, real hardware, real datasets, or declared benchmarks.
 
-## Phase 12B Parked Finding
+## Phase 12B Control-Supported Adapter Finding
 
-Phase 12B is parked for now.
+Phase 12B is parked as a biology-hardware expansion lane, but its completed
+`5 x 4` HRV matrix now has a local control-closeout.
 
 What it found:
 
@@ -34,6 +35,14 @@ What it found:
 - The `5 x 4` matrix supports condition-class separation at the pattern level.
 - `mirror_coherence` remained the strongest average HR-down / RR-up style
   biological condition.
+- `mirror_coherence` Delta HR beat shuffled-label controls as the strongest
+  HR-downshift lane, p `0.002`.
+- `dancing_activation - mirror_coherence` Delta HR gap beat shuffled-label
+  controls, p `0.0012`.
+- `HR-only` leave-one-run-out classification beat balanced-label and
+  within-run block shuffles.
+- multi-feature HRV classification was supportive but softer, especially under
+  within-run block shuffle.
 - `SPEC-1` HRV-only spectral features did not beat simpler baselines.
 - `DE-1` HRV-only local dynamics did not beat simpler baselines.
 
@@ -47,7 +56,16 @@ HRV is not enough by itself for high-resolution SPEC / DE / TOPOG biology.
 Parked next biological step:
 
 ```text
-return later with synchronized EEG + HRV
+Phase 12B-L20 large-set HRV expansion -> synchronized EEG + HRV
+```
+
+Large-set protocol:
+
+```text
+20 blocks x 4 conditions = 80 sessions minimum
+Latin-square order rotation
+same four conditions
+raw RR capture whenever available
 ```
 
 Now the build returns to the foundation:
@@ -119,6 +137,43 @@ real test:
 do V8 target/control residual traces separate by PCA/SVD/eigenmode structure
 above shuffled-label or naive mean-delta baselines?
 ```
+
+## Nest 1 Lane-By-Lane Protocol
+
+This is the practical meaning of "same standard applied lane by lane."
+
+Every formal lens gets its own proof fork:
+
+```text
+lane -> prediction -> real artifact -> locked control -> score -> status
+```
+
+The goal is not to defend the universal claim by rhetoric. The goal is to
+make the larger claim harder to dismiss by closing specific lanes one at a
+time.
+
+### Immediate Close-Out Lanes
+
+| Lane | Why It Is Ready | Concrete Next Run | Control |
+| --- | --- | --- | --- |
+| `LA/GEO` | V8 residual traces and Phase 6 feature matrix are already on disk | PCA/SVD plus UMAP or neighborhood separation over lattice / neutral / technical traces | shuffled labels and naive mean-delta baseline |
+| `STAT/PROB` | Phase 2 and Phase 4 already have rerun matrices | permutation test over exact rows, variance rows, and exception behavior | run-label shuffle / chance exactness baseline |
+| `NUM/GRP` | Phase 9/9D already have IBM repeatability artifacts | sign / parity stability registry across backend passes | backend-shuffled and pass-shuffled controls |
+| `TOPOG` | Phase 4/5 anchors are real exported surfaces | anchor stability and path-archetype recovery | shuffled-anchor and random-location controls |
+
+### Heavier But Tractable Lane
+
+| Lane | Why It Is Harder | Concrete Next Run | Control |
+| --- | --- | --- | --- |
+| `TOP` | needs raw hidden-state point clouds, not only scalar summaries | persistent homology with Ripser / scikit-tda style diagrams over target/control point clouds | shuffled point clouds, label permutation, noise controls |
+
+### Not Yet Closeable Without New Work
+
+| Lane | Blocker | Needed Upgrade |
+| --- | --- | --- |
+| `OPT` | no declared optimization benchmark yet | mirror-guided search vs random / naive / standard heuristic |
+| `CTRL` | no exported LSPS transition traces yet | export LSPS / Oracle routing transitions and score overshoot / stability |
+| `COMP/CAT` | no two-lane transfer test yet | prove a mapping preserves measurable structure across two completed real-data lanes |
 
 ## Nest 2: Real Structured-Matter Data Map
 
@@ -253,6 +308,194 @@ already grounded, which are limited by exported summaries, and which need new
 real-data runners.
 ```
 
+## Local Nest 1 Control-Closeout Pass
+
+Status:
+completed local control-closeout / not yet public-pushed
+
+Runner:
+
+```text
+tools/validation_forks/nest1_control_closeout_pass.py
+```
+
+Output:
+
+```text
+artifacts/validation/nest1_control_closeout/nest1_control_closeout_report.md
+```
+
+What it added:
+
+- explicit shuffled-label controls for `LA/GEO`
+- explicit rerun permutation controls for `STAT/PROB`
+- explicit pass/circuit shuffled controls for `NUM/GRP`
+- explicit random-anchor / random-layer controls for `TOPOG`
+
+Results:
+
+| Lane | Observed | Null / Control | Read |
+| --- | --- | --- | --- |
+| `LA/GEO` | `2/3` mutual bridge-pair hits | exact shuffled-label p `0.014286`; pair-distance p `0.009524`; top-2 p `0.052381` | control-supported, with top-2 result borderline |
+| `STAT/PROB` | Phase 2 exact `7`, Phase 4 exact `5`, Phase 4 anchor exact `6` | all tested permutation p values `5e-05` | strongly control-supported |
+| `NUM/GRP` | Phase 9D sign-stable circuits `7/7` | pass/circuit shuffled null mean `1.8495`, p `0.001` | control-supported |
+| `TOPOG` | Phase 4 anchor stability `6`, layer stability `6` | anchor p `5e-05`, layer p `5e-05` | strongly control-supported |
+
+Clean read:
+
+```text
+The first four near-term Nest 1 lanes are now not only real-data grounded,
+but explicit-control supported.
+```
+
+Remaining open lanes:
+
+- `TOP`: needs raw hidden-state point clouds / persistent homology
+- `OPT`: needs a declared optimization benchmark
+- `CTRL`: needs LSPS / Oracle transition traces
+- `COMP/CAT`: needs a measured cross-nest transfer test
+
+## Local Nest 1 Next-Wave Pass
+
+Status:
+completed local next-wave / not yet public-pushed
+
+Runner:
+
+```text
+tools/validation_forks/nest1_next_wave_pass.py
+```
+
+Output:
+
+```text
+artifacts/validation/nest1_next_wave/nest1_next_wave_report.md
+```
+
+Execution map:
+
+```text
+docs/NEST1_REMAINING_LANE_EXECUTION_MAP_2026-04-25.md
+```
+
+Results:
+
+| Lane | Observed | Control | Read |
+| --- | --- | --- | --- |
+| `DYN` | mean target peak fraction `0.981974`; late peak count `8/8` | matched random peak-layer p values `2e-05` | control-supported |
+| `INFO/TENSOR` | top-2 variance `0.612065`; effective rank `4.447033` | effective-rank p `0.00268`; top-2 variance p `0.086638` | control-supported through compression, partial on top-2 alone |
+| `GRAPH-lite` | expected-pair edges `2/3`; component count `1` | shuffled-label p `0.380952`; component p `1.0` | partial / not significant |
+| `TOP` | `8` files checked | no raw point clouds found | blocked until vector export |
+
+Clean read:
+
+```text
+The second Nest 1 wave strengthens DYN and INFO/TENSOR, but does not close
+GRAPH or TOP. The lane map now shows exactly what remains.
+```
+
+## Local GRAPH Strengthened Pass
+
+Status:
+completed local strengthened graph pass
+
+Runner:
+
+```text
+tools/validation_forks/nest1_graph_strengthened_pass.py
+```
+
+Output:
+
+```text
+artifacts/validation/nest1_graph_strengthened/nest1_graph_strengthened_report.md
+```
+
+Results:
+
+| View | Control | Read |
+| --- | --- | --- |
+| `feature_similarity` | exact label permutation over Phase 6 relation matrix | expected bridge-pair score p `0.007143`; expected-rank p `0.038095`; `GRAPH-1` supported for AI feature graph |
+| `angle_fidelity` | exact label permutation | recovers `Mistral/Hermes` as rank `1`, but not full three-pair graph lane |
+| `amplitude_fidelity` | exact label permutation | recovers `Mistral/Hermes` as rank `1`, but not full three-pair graph lane |
+
+Clean read:
+
+```text
+GRAPH-1 is strengthened / supported for the AI feature graph.
+GRAPH-2 remains blocked until real graph/pathway/attention-flow labels exist.
+```
+
+## Local Phase 12B Biological Control-Closeout
+
+Status:
+completed local biological control-closeout
+
+Runner:
+
+```text
+tools/validation_forks/phase12b_biological_control_closeout.py
+```
+
+Output:
+
+```text
+artifacts/validation/phase12b_biological_control_closeout/phase12b_biological_control_closeout_report.md
+```
+
+Results:
+
+| Test | Read |
+| --- | --- |
+| `mirror_coherence` Delta HR | strongest HR downshift, p `0.002` vs shuffled labels |
+| `dancing_activation - mirror_coherence` Delta HR gap | p `0.0012` vs shuffled labels |
+| `HR-only` leave-one-run-out | accuracy `0.5`, balanced-label p `0.022649`, within-run block p `0.033148` |
+| multi-feature leave-one-run-out | accuracy `0.45`, balanced-label p `0.047598`, within-run block p `0.072346` |
+
+Clean read:
+
+```text
+Phase 12B is control-supported as a coarse HRV biological adapter.
+The multi-feature HRV read needs a larger matrix before it should be treated
+as stronger than the HR-only signal.
+```
+
+Large-set expansion:
+
+```text
+docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md
+```
+
+## Local Remaining-Lane Closeout
+
+Status:
+completed local remaining-lane closeout
+
+Runner:
+
+```text
+tools/validation_forks/nest1_remaining_lane_closeout.py
+```
+
+Output:
+
+```text
+artifacts/validation/nest1_remaining_lane_closeout/nest1_remaining_lane_closeout_report.md
+```
+
+Results:
+
+| Lane | Read |
+| --- | --- |
+| `GEO-2` | control-supported subspace preservation across full, Phase 3, and Phase 5 feature groups |
+| `DYN-2` | control-supported threshold / regime-crossing; 75% crossing late in `8/8`, p `5e-05` |
+| `OPT-1` | limited small-N partial; Phase 6 and hardware pick the same best pair over three feature circuits |
+| `CAT-1` | limited small-N transfer partial; Phase6-to-hardware relation correlation `0.893921`, but only three executed feature circuits |
+| `TOP` | blocked until raw hidden-state point clouds exist |
+| `GRAPH-2` | blocked until real domain graph labels exist |
+| `CTRL` | blocked until LSPS transition traces exist |
+| `GAME` | blocked until adversarial / multi-agent protocol exists |
+
 ## Short Read
 
 The real path is:
@@ -261,5 +504,5 @@ The real path is:
 use grammar mapping as the route map
 test Nest 1 against real AI/hardware traces
 test Nest 2 against real chemistry/material datasets
-return to HRV/EEG when the biological data surface is ready
+expand Phase 12B to a larger HRV matrix, then return to EEG/HRV
 ```

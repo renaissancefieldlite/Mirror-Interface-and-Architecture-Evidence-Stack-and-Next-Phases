@@ -1,0 +1,422 @@
+{
+  "status": "completed_remaining_lane_closeout",
+  "generated_from": {
+    "phase6": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_data_2026-04-22.json",
+    "residual_root": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/probe_results",
+    "phase9d": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/phase9d_pennylane_remote_repeat/v8_phase9d_pennylane_remote_repeat_data_2026-04-22.json"
+  },
+  "runnable_lanes": [
+    {
+      "lane": "GEO-2",
+      "status": "control_supported",
+      "input": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_data_2026-04-22.json",
+      "control": "exact label permutation over Phase 6 feature subspace relation matrices",
+      "rows": [
+        {
+          "group": "all",
+          "feature_count": 12,
+          "status": "control_supported",
+          "mean_expected_score": 0.271292,
+          "mean_all_score": 0.173198,
+          "expected_rank_average": 7.333333,
+          "p_mean_expected_score_ge_observed": 0.007143,
+          "p_expected_rank_average_le_observed": 0.038095,
+          "expected_ranks": {
+            "DeepSeek/Qwen": 2,
+            "GLM/Nemotron": 19,
+            "Hermes/Mistral": 1
+          },
+          "top_pairs": [
+            {
+              "pair": "Hermes/Mistral",
+              "score": 0.428333
+            },
+            {
+              "pair": "DeepSeek/Qwen",
+              "score": 0.22897
+            },
+            {
+              "pair": "Qwen/SmolLM3",
+              "score": 0.214497
+            },
+            {
+              "pair": "Mistral/Qwen",
+              "score": 0.204803
+            },
+            {
+              "pair": "DeepSeek/Nemotron",
+              "score": 0.184961
+            },
+            {
+              "pair": "Hermes/Qwen",
+              "score": 0.180059
+            },
+            {
+              "pair": "DeepSeek/SmolLM3",
+              "score": 0.178209
+            },
+            {
+              "pair": "GLM/Hermes",
+              "score": 0.177953
+            }
+          ]
+        },
+        {
+          "group": "phase3",
+          "feature_count": 5,
+          "status": "control_supported",
+          "mean_expected_score": 0.404831,
+          "mean_all_score": 0.254588,
+          "expected_rank_average": 7.333333,
+          "p_mean_expected_score_ge_observed": 0.007143,
+          "p_expected_rank_average_le_observed": 0.019048,
+          "expected_ranks": {
+            "DeepSeek/Qwen": 4,
+            "GLM/Nemotron": 17,
+            "Hermes/Mistral": 1
+          },
+          "top_pairs": [
+            {
+              "pair": "Hermes/Mistral",
+              "score": 0.668397
+            },
+            {
+              "pair": "Hermes/Qwen",
+              "score": 0.338002
+            },
+            {
+              "pair": "Mistral/Qwen",
+              "score": 0.330478
+            },
+            {
+              "pair": "DeepSeek/Qwen",
+              "score": 0.324434
+            },
+            {
+              "pair": "Gemma/Hermes",
+              "score": 0.304389
+            },
+            {
+              "pair": "Qwen/SmolLM3",
+              "score": 0.27526
+            },
+            {
+              "pair": "Gemma/Mistral",
+              "score": 0.274001
+            },
+            {
+              "pair": "Gemma/Qwen",
+              "score": 0.271562
+            }
+          ]
+        },
+        {
+          "group": "phase5",
+          "feature_count": 7,
+          "status": "control_supported",
+          "mean_expected_score": 0.305842,
+          "mean_all_score": 0.219553,
+          "expected_rank_average": 7.666667,
+          "p_mean_expected_score_ge_observed": 0.030952,
+          "p_expected_rank_average_le_observed": 0.05,
+          "expected_ranks": {
+            "DeepSeek/Qwen": 6,
+            "GLM/Nemotron": 16,
+            "Hermes/Mistral": 1
+          },
+          "top_pairs": [
+            {
+              "pair": "Hermes/Mistral",
+              "score": 0.446629
+            },
+            {
+              "pair": "Qwen/SmolLM3",
+              "score": 0.282066
+            },
+            {
+              "pair": "DeepSeek/Nemotron",
+              "score": 0.279529
+            },
+            {
+              "pair": "GLM/Mistral",
+              "score": 0.276757
+            },
+            {
+              "pair": "GLM/Qwen",
+              "score": 0.275306
+            },
+            {
+              "pair": "DeepSeek/Qwen",
+              "score": 0.274244
+            },
+            {
+              "pair": "DeepSeek/SmolLM3",
+              "score": 0.27014
+            },
+            {
+              "pair": "GLM/Hermes",
+              "score": 0.262883
+            }
+          ]
+        },
+        {
+          "group": "context_ratio",
+          "feature_count": 3,
+          "status": "partial",
+          "mean_expected_score": 0.43324,
+          "mean_all_score": 0.328861,
+          "expected_rank_average": 9.666667,
+          "p_mean_expected_score_ge_observed": 0.054762,
+          "p_expected_rank_average_le_observed": 0.104762,
+          "expected_ranks": {
+            "DeepSeek/Qwen": 6,
+            "GLM/Nemotron": 21,
+            "Hermes/Mistral": 2
+          },
+          "top_pairs": [
+            {
+              "pair": "Mistral/SmolLM3",
+              "score": 0.641199
+            },
+            {
+              "pair": "Hermes/Mistral",
+              "score": 0.63086
+            },
+            {
+              "pair": "Hermes/SmolLM3",
+              "score": 0.602688
+            },
+            {
+              "pair": "Hermes/Qwen",
+              "score": 0.458686
+            },
+            {
+              "pair": "Qwen/SmolLM3",
+              "score": 0.427877
+            },
+            {
+              "pair": "DeepSeek/Qwen",
+              "score": 0.416123
+            },
+            {
+              "pair": "Mistral/Qwen",
+              "score": 0.377933
+            },
+            {
+              "pair": "GLM/Gemma",
+              "score": 0.368064
+            }
+          ]
+        },
+        {
+          "group": "overlap_anchor",
+          "feature_count": 4,
+          "status": "partial",
+          "mean_expected_score": 0.349374,
+          "mean_all_score": 0.295641,
+          "expected_rank_average": 9.333333,
+          "p_mean_expected_score_ge_observed": 0.207143,
+          "p_expected_rank_average_le_observed": 0.12381,
+          "expected_ranks": {
+            "DeepSeek/Qwen": 10,
+            "GLM/Nemotron": 13,
+            "Hermes/Mistral": 5
+          },
+          "top_pairs": [
+            {
+              "pair": "Nemotron/SmolLM3",
+              "score": 0.605682
+            },
+            {
+              "pair": "DeepSeek/Nemotron",
+              "score": 0.532959
+            },
+            {
+              "pair": "GLM/Mistral",
+              "score": 0.500304
+            },
+            {
+              "pair": "DeepSeek/SmolLM3",
+              "score": 0.478084
+            },
+            {
+              "pair": "Hermes/Mistral",
+              "score": 0.477984
+            },
+            {
+              "pair": "GLM/Qwen",
+              "score": 0.342677
+            },
+            {
+              "pair": "Nemotron/Qwen",
+              "score": 0.326201
+            },
+            {
+              "pair": "GLM/Hermes",
+              "score": 0.323688
+            }
+          ]
+        }
+      ],
+      "read": "Expected bridge-pair relation is preserved above controls in the full, Phase 3, and Phase 5 subspaces; narrower context/overlap subspaces are weaker."
+    },
+    {
+      "lane": "DYN-2",
+      "status": "control_supported",
+      "input": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/probe_results",
+      "control": "within-model random layer-order permutation preserving each real trajectory's values",
+      "observed": {
+        "model_count": 8,
+        "mean_target_center_of_mass_fraction": 0.785372,
+        "mean_cross_75_fraction": 0.951439,
+        "late_cross_75_count": "8/8"
+      },
+      "null": {
+        "trials": 20000,
+        "mean_center_of_mass_fraction": 0.499912,
+        "mean_cross_75_fraction": 0.343287,
+        "mean_late_cross_75_count": 0.8904,
+        "p_center_of_mass_ge_observed": 5e-05,
+        "p_cross_75_ge_observed": 5e-05,
+        "p_late_cross_75_ge_observed": 5e-05
+      },
+      "rows": [
+        {
+          "model": "DeepSeek",
+          "layer_count": 28,
+          "target_center_of_mass_fraction": 0.735027,
+          "cross_50_fraction": 0.851852,
+          "cross_75_fraction": 0.925926,
+          "cross_90_fraction": 0.962963
+        },
+        {
+          "model": "Gemma",
+          "layer_count": 42,
+          "target_center_of_mass_fraction": 0.585482,
+          "cross_50_fraction": 0.560976,
+          "cross_75_fraction": 1.0,
+          "cross_90_fraction": 1.0
+        },
+        {
+          "model": "GLM",
+          "layer_count": 40,
+          "target_center_of_mass_fraction": 0.809602,
+          "cross_50_fraction": 0.794872,
+          "cross_75_fraction": 0.897436,
+          "cross_90_fraction": 0.974359
+        },
+        {
+          "model": "Hermes",
+          "layer_count": 32,
+          "target_center_of_mass_fraction": 0.917572,
+          "cross_50_fraction": 1.0,
+          "cross_75_fraction": 1.0,
+          "cross_90_fraction": 1.0
+        },
+        {
+          "model": "Mistral",
+          "layer_count": 32,
+          "target_center_of_mass_fraction": 0.911413,
+          "cross_50_fraction": 1.0,
+          "cross_75_fraction": 1.0,
+          "cross_90_fraction": 1.0
+        },
+        {
+          "model": "Nemotron",
+          "layer_count": 42,
+          "target_center_of_mass_fraction": 0.819037,
+          "cross_50_fraction": 0.780488,
+          "cross_75_fraction": 0.902439,
+          "cross_90_fraction": 0.95122
+        },
+        {
+          "model": "Qwen",
+          "layer_count": 36,
+          "target_center_of_mass_fraction": 0.748885,
+          "cross_50_fraction": 0.885714,
+          "cross_75_fraction": 0.942857,
+          "cross_90_fraction": 0.971429
+        },
+        {
+          "model": "SmolLM3",
+          "layer_count": 36,
+          "target_center_of_mass_fraction": 0.75596,
+          "cross_50_fraction": 0.857143,
+          "cross_75_fraction": 0.942857,
+          "cross_90_fraction": 0.971429
+        }
+      ],
+      "read": "The target/control trajectory does not merely peak late; its threshold crossing and center-of-mass are late relative to within-model random layer-order controls."
+    },
+    {
+      "lane": "OPT-1",
+      "status": "limited_small_n_partial",
+      "input": [
+        "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_data_2026-04-22.json",
+        "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/phase9d_pennylane_remote_repeat/v8_phase9d_pennylane_remote_repeat_data_2026-04-22.json"
+      ],
+      "observed": {
+        "phase6_best_pair": "Hermes/Mistral",
+        "hardware_best_pair": "Hermes/Mistral",
+        "best_pair_agreement": 1,
+        "random_pair_baseline_probability": 0.333333
+      },
+      "read": "A real artifact selection objective can be evaluated over the three hardware-executed Phase 6 feature circuits, and Phase 6 selects the same best pair as hardware parity similarity. The sample is only three models, so this is a limited benchmark, not a closed optimization lane."
+    },
+    {
+      "lane": "CAT-1",
+      "status": "limited_small_n_transfer_partial",
+      "input": [
+        "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_data_2026-04-22.json",
+        "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/phase9d_pennylane_remote_repeat/v8_phase9d_pennylane_remote_repeat_data_2026-04-22.json"
+      ],
+      "observed": {
+        "pair_rows": [
+          {
+            "pair": "Hermes/Mistral",
+            "phase6_feature_similarity": 0.428333,
+            "hardware_parity_similarity": 0.855954
+          },
+          {
+            "pair": "Mistral/Nemotron",
+            "phase6_feature_similarity": 0.134061,
+            "hardware_parity_similarity": 0.756579
+          },
+          {
+            "pair": "Hermes/Nemotron",
+            "phase6_feature_similarity": 0.131384,
+            "hardware_parity_similarity": 0.673342
+          }
+        ],
+        "pearson_phase6_to_hardware_similarity": 0.893921,
+        "best_pair_transfer": 1
+      },
+      "read": "The Phase 6 feature relation transfers directionally into the Phase 9D hardware parity-vector relation for the three executed feature circuits, but the sample is too small to close CAT-1."
+    }
+  ],
+  "blocked_lanes": [
+    {
+      "lane": "TOP-1/2",
+      "status": "blocked_raw_point_clouds_required",
+      "input_checked": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/probe_results",
+      "files_checked": 8,
+      "next_requirement": "export raw hidden-state vectors / point clouds, not only layer summaries and scalar deltas"
+    },
+    {
+      "lane": "GRAPH-2",
+      "status": "blocked_domain_graph_labels_required",
+      "next_requirement": "provide real pathway, attention-flow, allostery, grid, molecular, or other domain graph labels"
+    },
+    {
+      "lane": "CTRL-1",
+      "status": "blocked_lsps_transition_trace_required",
+      "next_requirement": "export LSPS / Oracle transition trace CSV with observed mode, expected mode, stability score, and drift/error columns"
+    },
+    {
+      "lane": "GAME-1",
+      "status": "blocked_adversarial_protocol_required",
+      "next_requirement": "define a real multi-agent, adversarial, or decision-theory benchmark artifact before scoring"
+    }
+  ],
+  "clean_read": "Remaining Nest 1 lanes are now separated into real support, small-N partial transfer, and true data blockers. No remaining lane is left as vague grammar-only language."
+}

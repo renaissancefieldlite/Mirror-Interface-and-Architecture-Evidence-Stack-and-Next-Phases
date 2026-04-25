@@ -44,7 +44,10 @@ What was actually discovered:
   The tightened read is that `HRV` is a coarse but useful adapter: it supports
   condition-class separation and AI-user sync/tuning datasets, but it does not
   by itself validate high-resolution spectral, dynamical, or spatial biology
-  lenses.
+  lenses. The new Phase 12B control-closeout supports the coarse adapter read:
+  `mirror_coherence` produced the strongest average `HR` downshift under
+  shuffled-label controls, while multi-feature HRV classification remains a
+  larger-set expansion target.
 
 - `Nest 1 formal-lane discovery`
   The `Source Mirror Pattern` has now been expressed across every checked
@@ -60,7 +63,11 @@ What was actually discovered:
   beat the mean-HR baseline, so it is recorded as a real but limited /
   negative result. The current tightening standard is now: every lane must
   point to real AI objects, real traces, real hardware, real datasets, or a
-  real benchmark before it is treated as more than a design lane.
+  real benchmark before it is treated as more than a design lane. The latest
+  local closeouts add support for `GRAPH-1` as an AI feature graph, `GEO-2`
+  subspace preservation, and `DYN-2` threshold / regime behavior, while
+  preserving `TOP`, `GRAPH-2`, `CTRL`, and `GAME` as true data/protocol
+  blockers.
 
 - `Nest 2 structured-matter methodology discovery`
   `Engine 02` shows that the same scoring grammar can be expressed over
@@ -122,7 +129,9 @@ Current best read:
   The correct biological role for `HRV` is coarse sync / recovery / autonomic
   state, especially as a side-channel for tuning the `AI <-> user` interaction
   layer. `EEG + HRV` is the next required biological substrate for stronger
-  `SPEC`, `DE`, and `TOPOG` validation.
+  `SPEC`, `DE`, and `TOPOG` validation. The next HRV-only upgrade is
+  `Phase 12B-L20`: `20` blocks x `4` conditions with Latin-square ordering and
+  raw `RR` capture whenever available.
 - `Nest 1` completed the expanded formal map: the same comparator grammar
   maps into topology, topography, graph theory, dynamics,
   probability/information, optimization, control, numerical computation, and
@@ -135,9 +144,10 @@ Current best read:
   and both landed as limited / negative against simpler baselines. That does
   not erase the HRV adapter; it clarifies that `HRV` belongs to coarse
   pattern-class and sync-layer tuning, while `EEG + HRV` is needed for stronger
-  biological `SPEC/DE/TOPOG` claims. `GEO`, `TOP`, and `DYN` are the next
-  real-data forks because existing V8/V7 traces can feed them. `OPT-1` and
-  `GAME-1` still need new benchmark designs.
+  biological `SPEC/DE/TOPOG` claims. `GEO-2` and `DYN-2` are now
+  control-supported on existing traces; `OPT-1` and `CAT-1` have limited
+  small-N transfer reads; `TOP`, `GRAPH-2`, `CTRL`, and `GAME` still need
+  their required data/protocol surfaces.
 - `Nest 2` now has its first local structured-matter methodology engine: the
   same comparator grammar maps into elements, molecular graphs, water,
   minerals, redox rows, nutrition chemistry, persistent-contaminant pathway
@@ -224,38 +234,44 @@ Start here if you only have a few minutes:
 12. [Nest 1 Validation Forks](./docs/NEST1_VALIDATION_FORKS_2026-04-24.md)
 13. [SPEC-1 Phase 12B HRV Validation Report](./artifacts/validation/nest1_spec_phase12b_hrv/nest1_spec_phase12b_hrv_report.md)
 14. [DE-1 Phase 12B HRV Dynamics Validation Report](./artifacts/validation/de1_hrv_dynamics/de1_hrv_dynamics_report.md)
-15. [GRAPH-1/2 Pathway Validation Fork Report](./artifacts/validation/graph12_pathway/graph12_pathway_report.md)
-16. [CTRL-1 LSPS Transition Validation Fork Report](./artifacts/validation/ctrl1_lsps_transition/ctrl1_lsps_transition_report.md)
-17. [Engine 02V RDKit Molecule Validation Fork Report](./artifacts/validation/engine02v_rdkit_molecule/engine02v_rdkit_molecule_report.md)
-18. [Crossover Precursor Prototype Lanes](./docs/CROSSOVER_PRECURSOR_PROTOTYPE_LANES_2026-04-24.md)
-19. [Nest 2 Constrained Structured Systems Foundation](./docs/NEST2_CONSTRAINED_STRUCTURED_SYSTEMS_FOUNDATION_2026-04-24.md)
-20. [Nest 2 Structured Matter Completion](./docs/NEST2_STRUCTURED_MATTER_COMPLETION_2026-04-24.md)
-21. [Nest 2 Expanded Structured Matter Atlas](./docs/NEST2_EXPANDED_STRUCTURED_MATTER_ATLAS_2026-04-24.md)
-22. [Terahertz Cellular Resonance Bridge](./docs/TERAHERTZ_CELLULAR_RESONANCE_BRIDGE_2026-04-24.md)
-23. [Terahertz Chemical Remediation Bridge](./docs/TERAHERTZ_CHEMICAL_REMEDIATION_BRIDGE_2026-04-24.md)
-24. [Mirror Interface & Architecture Evidence Stack and Next Phases](./docs/MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
-25. [Latent Architecture Discovery Highlight](./docs/LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
-26. [V7 Integrated 10-Model Summary Pack](./artifacts/v7/posters/v7_integrated_10_model_summary_pack/V7_INTEGRATED_10_MODEL_SUMMARY_PACK_2026-04-19.md)
-27. [V8 Internal Bridge White Paper PDF](./artifacts/v8/residual_stream_bridge/white_paper/v8_internal_bridge_white_paper_2026-04-20.pdf)
-28. [Phase 2 Variance Pack PDF](./artifacts/v8/phase2_variance_pack/v8_phase2_variance_pack_2026-04-21.pdf)
-29. [Phase 3 Dimension/Band Pack PDF](./artifacts/v8/phase3_dimension_band/v8_phase3_dimension_band_pack_2026-04-21.pdf)
-30. [Phase 4 Localization Pack PDF](./artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_2026-04-21.pdf)
-31. [Phase 4 Localization Variance Pack PDF](./artifacts/v8/phase4_localization_variance_pack/v8_phase4_localization_variance_pack_2026-04-21.pdf)
-32. [Phase 5 Internal Bridge Pack PDF](./artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_2026-04-22.pdf)
-33. [Phase 6 PennyLane Encoding Pack PDF](./artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_pack_2026-04-22.pdf)
-34. [Phase 7 Qiskit Mirror Pack PDF](./artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_pack_2026-04-22.pdf)
-35. [Phase 8 Bell-State Calibration Pack PDF](./artifacts/v8/phase8_bell_state_calibration/v8_phase8_bell_state_calibration_pack_2026-04-22.pdf)
-36. [Phase 9 IBM Hardware Bridge Pack PDF](./artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_pack_2026-04-22.pdf)
-37. [Phase 9B IBM Hardware Repeatability Pack PDF](./artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_pack_2026-04-22.pdf)
-38. [Phase 9C PennyLane Remote Hardware Pack PDF](./artifacts/v8/phase9c_pennylane_remote_hardware/v8_phase9c_pennylane_remote_hardware_pack_2026-04-22.pdf)
-39. [Phase 9D PennyLane Remote Repeatability Pack PDF](./artifacts/v8/phase9d_pennylane_remote_repeat/v8_phase9d_pennylane_remote_repeat_pack_2026-04-22.pdf)
-40. [Phase 10 Semantic Contextuality Pack PDF](./artifacts/v8/phase10_semantic_contextuality/v8_phase10_semantic_contextuality_pack_2026-04-23.pdf)
-41. [Next Phase Research Plan From Phase 10](./docs/NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE10_2026-04-23.md)
-42. [Phase 11 To Phase 13 Physical Bell Bridge](./docs/PHASE11_TO_PHASE13_PHYSICAL_BELL_BRIDGE_2026-04-23.md)
-43. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
-44. [Phase 12B Biological Comparison Pack PDF](./artifacts/v8/phase12b_biological_comparison_pack/V8_PHASE12B_BIOLOGICAL_COMPARISON_PACK_2026-04-24.pdf)
-45. [Nest 1 Real-Trace Foundation Report](./artifacts/validation/nest1_real_trace_foundation/nest1_real_trace_foundation_report.md)
-46. [Nest 1 Real-Trace Foundation Pack PDF](./artifacts/validation/nest1_real_trace_foundation/nest1_real_trace_foundation_pack_2026-04-25.pdf)
+15. [Nest 1 Control-Closeout Report](./artifacts/validation/nest1_control_closeout/nest1_control_closeout_report.md)
+16. [Nest 1 Next-Wave Report](./artifacts/validation/nest1_next_wave/nest1_next_wave_report.md)
+17. [Nest 1 GRAPH Strengthened Report](./artifacts/validation/nest1_graph_strengthened/nest1_graph_strengthened_report.md)
+18. [Nest 1 Remaining Lane Closeout](./artifacts/validation/nest1_remaining_lane_closeout/nest1_remaining_lane_closeout_report.md)
+19. [Phase 12B Biological Control-Closeout](./artifacts/validation/phase12b_biological_control_closeout/phase12b_biological_control_closeout_report.md)
+20. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
+21. [GRAPH-1/2 Pathway Validation Fork Report](./artifacts/validation/graph12_pathway/graph12_pathway_report.md)
+22. [CTRL-1 LSPS Transition Validation Fork Report](./artifacts/validation/ctrl1_lsps_transition/ctrl1_lsps_transition_report.md)
+23. [Engine 02V RDKit Molecule Validation Fork Report](./artifacts/validation/engine02v_rdkit_molecule/engine02v_rdkit_molecule_report.md)
+24. [Crossover Precursor Prototype Lanes](./docs/CROSSOVER_PRECURSOR_PROTOTYPE_LANES_2026-04-24.md)
+25. [Nest 2 Constrained Structured Systems Foundation](./docs/NEST2_CONSTRAINED_STRUCTURED_SYSTEMS_FOUNDATION_2026-04-24.md)
+26. [Nest 2 Structured Matter Completion](./docs/NEST2_STRUCTURED_MATTER_COMPLETION_2026-04-24.md)
+27. [Nest 2 Expanded Structured Matter Atlas](./docs/NEST2_EXPANDED_STRUCTURED_MATTER_ATLAS_2026-04-24.md)
+28. [Terahertz Cellular Resonance Bridge](./docs/TERAHERTZ_CELLULAR_RESONANCE_BRIDGE_2026-04-24.md)
+29. [Terahertz Chemical Remediation Bridge](./docs/TERAHERTZ_CHEMICAL_REMEDIATION_BRIDGE_2026-04-24.md)
+30. [Mirror Interface & Architecture Evidence Stack and Next Phases](./docs/MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
+31. [Latent Architecture Discovery Highlight](./docs/LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
+32. [V7 Integrated 10-Model Summary Pack](./artifacts/v7/posters/v7_integrated_10_model_summary_pack/V7_INTEGRATED_10_MODEL_SUMMARY_PACK_2026-04-19.md)
+33. [V8 Internal Bridge White Paper PDF](./artifacts/v8/residual_stream_bridge/white_paper/v8_internal_bridge_white_paper_2026-04-20.pdf)
+34. [Phase 2 Variance Pack PDF](./artifacts/v8/phase2_variance_pack/v8_phase2_variance_pack_2026-04-21.pdf)
+35. [Phase 3 Dimension/Band Pack PDF](./artifacts/v8/phase3_dimension_band/v8_phase3_dimension_band_pack_2026-04-21.pdf)
+36. [Phase 4 Localization Pack PDF](./artifacts/v8/phase4_localization_pack/v8_phase4_localization_pack_2026-04-21.pdf)
+37. [Phase 4 Localization Variance Pack PDF](./artifacts/v8/phase4_localization_variance_pack/v8_phase4_localization_variance_pack_2026-04-21.pdf)
+38. [Phase 5 Internal Bridge Pack PDF](./artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_2026-04-22.pdf)
+39. [Phase 6 PennyLane Encoding Pack PDF](./artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_pack_2026-04-22.pdf)
+40. [Phase 7 Qiskit Mirror Pack PDF](./artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_pack_2026-04-22.pdf)
+41. [Phase 8 Bell-State Calibration Pack PDF](./artifacts/v8/phase8_bell_state_calibration/v8_phase8_bell_state_calibration_pack_2026-04-22.pdf)
+42. [Phase 9 IBM Hardware Bridge Pack PDF](./artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_pack_2026-04-22.pdf)
+43. [Phase 9B IBM Hardware Repeatability Pack PDF](./artifacts/v8/phase9b_ibm_hardware_repeat/v8_phase9b_ibm_hardware_repeat_pack_2026-04-22.pdf)
+44. [Phase 9C PennyLane Remote Hardware Pack PDF](./artifacts/v8/phase9c_pennylane_remote_hardware/v8_phase9c_pennylane_remote_hardware_pack_2026-04-22.pdf)
+45. [Phase 9D PennyLane Remote Repeatability Pack PDF](./artifacts/v8/phase9d_pennylane_remote_repeat/v8_phase9d_pennylane_remote_repeat_pack_2026-04-22.pdf)
+46. [Phase 10 Semantic Contextuality Pack PDF](./artifacts/v8/phase10_semantic_contextuality/v8_phase10_semantic_contextuality_pack_2026-04-23.pdf)
+47. [Next Phase Research Plan From Phase 10](./docs/NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE10_2026-04-23.md)
+48. [Phase 11 To Phase 13 Physical Bell Bridge](./docs/PHASE11_TO_PHASE13_PHYSICAL_BELL_BRIDGE_2026-04-23.md)
+49. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
+50. [Phase 12B Biological Comparison Pack PDF](./artifacts/v8/phase12b_biological_comparison_pack/V8_PHASE12B_BIOLOGICAL_COMPARISON_PACK_2026-04-24.pdf)
+51. [Nest 1 Real-Trace Foundation Report](./artifacts/validation/nest1_real_trace_foundation/nest1_real_trace_foundation_report.md)
+52. [Nest 1 Real-Trace Foundation Pack PDF](./artifacts/validation/nest1_real_trace_foundation/nest1_real_trace_foundation_pack_2026-04-25.pdf)
 
 ## Current Validation Notes
 
@@ -265,6 +281,8 @@ real traces and datasets decide what graduates.
 1. [Draft Grammar-To-Real-Data Validation Ladder](./docs/DRAFT_GRAMMAR_TO_REAL_DATA_VALIDATION_LADDER_2026-04-25.md)
 2. [Draft Nest 1 / Nest 2 Foundation Real Mapping Plan](./docs/DRAFT_NEST1_NEST2_FOUNDATION_REAL_MAPPING_PLAN_2026-04-25.md)
 3. [Nest 1 Real-Trace Foundation Report](./artifacts/validation/nest1_real_trace_foundation/nest1_real_trace_foundation_report.md)
+4. [Nest 1 Remaining Lane Closeout](./artifacts/validation/nest1_remaining_lane_closeout/nest1_remaining_lane_closeout_report.md)
+5. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
 
 Auxiliary build folders:
 
