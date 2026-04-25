@@ -37,6 +37,8 @@ The script writes the browser demo and the first local engine report:
 tools/lattice_model_node_companion/outputs/lattice_model_node_demo.html
 tools/lattice_model_node_companion/outputs/nest1_formal_engine_report.json
 tools/lattice_model_node_companion/outputs/nest1_formal_engine_report.md
+tools/lattice_model_node_companion/outputs/nest2_matter_engine_report.json
+tools/lattice_model_node_companion/outputs/nest2_matter_engine_report.md
 ```
 
 Open that HTML file in a browser to test the interactive map.
@@ -48,15 +50,17 @@ bolted in locally.
 
 1. `Engine 00`: lattice console, built
 2. `Engine 01`: `Nest 1` formal invariant model, built
-3. `Engine 02`: `Nest 2` matter / chemistry / nutrition model, next local build
+3. `Engine 02`: `Nest 2` matter / chemistry / nutrition model, built
 4. `Engine 03`: `Nest 3` coherence / physics model, planned
 5. `Engine 04`: `Nest 4` biology / biosignal model, planned
 6. `Engine 05`: `Nest 5` convergence model, planned
 
 This is the demo answer when someone asks what is built:
 
-the browser companion is the chassis, and `Engine 01` is the first local
-runnable model that demonstrates the score grammar without API calls.
+the browser companion is the chassis, `Engine 01` demonstrates the formal
+invariant grammar, and `Engine 02` demonstrates the first structured-matter
+grammar across elements, molecular graphs, water, minerals, nutrition, redox,
+and contaminant-pathway scoring without API calls.
 
 ## Future Adapter Slots
 

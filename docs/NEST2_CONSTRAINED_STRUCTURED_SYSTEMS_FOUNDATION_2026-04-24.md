@@ -3,7 +3,7 @@
 Date: `2026-04-24`
 
 Status:
-foundation complete / first empirical comparator packs pending
+foundation complete / `Engine 02` local demonstrator built
 
 ## Purpose
 
@@ -30,6 +30,10 @@ not arbitrary:
 - reaction and degradation pathways
 
 This is the first bridge from pure formal structure into physical structure.
+
+Companion completion artifact:
+
+- [Nest 2 Structured Matter Completion](./NEST2_STRUCTURED_MATTER_COMPLETION_2026-04-24.md)
 
 ## Core Finding
 
@@ -64,9 +68,11 @@ claiming that chemistry is already solved.
 
 ## Claim Boundary
 
-`Nest 2` establishes a mapping layer, not a completed chemistry proof.
+`Nest 2` establishes a mapping layer and first local comparator engine, not a
+completed chemistry proof.
 
-It does not yet prove:
+The current engine demonstrates the score grammar on bounded toy rows. It does
+not yet prove:
 
 - element-family recovery above controls
 - molecular-family clustering above controls
@@ -372,7 +378,7 @@ That gives the project a clean bridge into:
 
 ## What Comes Next
 
-Immediate next Nest 2 artifacts:
+The first local `Engine 02` artifact now covers:
 
 1. `Nest 2A`: periodic-table family recovery table
 2. `Nest 2B`: molecular graph / functional-group comparator
@@ -380,6 +386,15 @@ Immediate next Nest 2 artifacts:
 4. `Nest 2D`: reaction / bond-cleavage pathway comparator
 5. `Nest 2E`: minerals / surfaces / ion-exchange comparator
 6. `Nest 2F`: oxygen / redox / ionic solution comparator
+
+Immediate next Nest 2 upgrades:
+
+1. add real periodic-table and molecule datasets
+2. add `RDKit` molecule parsing / fingerprints
+3. add `ASE` / `pymatgen` crystal and atomistic rows
+4. add explicit mass / charge balance for reaction descendants
+5. add materials-model adapter slots for `MatGL`, `CHGNet`, `MACE`, and
+   `MatterGen`
 
 Then Nest 3 can take the same structure into:
 

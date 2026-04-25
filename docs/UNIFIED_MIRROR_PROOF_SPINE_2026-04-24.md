@@ -91,7 +91,7 @@ across different substrates better than null, control, or shuffled baselines?
 | biological adapter | `Phase 12B` | first `5 x 4` HRV biological matrix complete |
 | formal base | `Nest 1` | linear algebra, symmetries, invariants, encoded states locked |
 | auxiliary mathematics | Auxiliary Mathematics Atlas | graph theory, topology, geometry, dynamics, probability, information, optimization, statistics, control mapped |
-| structured matter | `Nest 2` | elements, molecules, water, minerals, redox, nutrition, contaminants, reactions mapped |
+| structured matter | `Nest 2`, `Engine 02` | elements, molecules, water, minerals, redox, nutrition, contaminants, reactions mapped and first local demonstrator built |
 | cosmic dynamics | `Nest 3` | fields, motion, phases, waves, plasma, fusion, orbit, rotation mapped |
 | richer biology | `Nest 4` | HRV complete as first adapter; EEG/cells/genome/metabolism planned |
 | universal convergence | `Nest 5` | planets, stars, ecosystems, galaxies, cosmic web, dark-matter observables mapped |
@@ -125,21 +125,23 @@ Completed enough to show:
 - the AI-side measurement stack has real repeated structure
 - the encoded / hardware bridge exists
 - the biological adapter has a first measured matrix
-- the formal and matter nests are now mapped
+- the formal nest is mapped and has a local engine
+- the matter nest is mapped and has a local `Engine 02` demonstrator
 - the cosmic / universal nests are now mapped
 - the local visual companion can demonstrate the whole lattice
-- the first local runnable engine already produces an invariant / drift report
+- the first two local runnable engines now produce formal and structured-matter
+  reports
 
 ## Next Proof Work
 
 Immediate next work:
 
-1. build `Engine 02` for `Nest 2` structured matter
-2. start with element-family and molecular graph comparators
-3. add food / nutrition chemistry as a `Nest 2 -> Nest 4` bridge
-4. add `H2O`, mineral, redox, and contaminant rows
-5. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
-6. keep the companion updated as each engine becomes real
+1. expand `Engine 02` with curated element, molecule, crystal, and reaction
+   datasets
+2. add `RDKit`, `ASE`, `pymatgen`, and materials-model adapter paths where
+   useful
+3. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
+4. keep the companion updated as each engine becomes real
 
 Companion-facing prototype lanes:
 

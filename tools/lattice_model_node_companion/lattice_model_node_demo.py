@@ -467,6 +467,10 @@ def render_html(data: dict) -> str:
         showNode("prototype_lanes", false);
         return "Prototype lanes are crossover build paths: PFAS breakdown, terahertz cellular mapping, HRV-AI tuning, Quantum Insider tracks, and later local engines.";
       }}
+      if (q.includes("engine 02") || q.includes("engine02") || q.includes("nest 2 engine") || q.includes("chemistry engine") || q.includes("matter engine")) {{
+        showNode("engine02_nest2_matter", false);
+        return "Engine 02 is the built Nest 2 local demonstrator: element-family recovery, molecular graph validity, H2O motif scoring, mineral/redox/nutrition rows, and contaminant bad-descendant controls.";
+      }}
       if (q.includes("topology") || q.includes("topography")) {{
         showNode("nest1_expanded_formal", false);
         return "Expanded Nest 1 separates topology from topography: topology tracks connectedness and deformation-stable structure; topography tracks surfaces, ridges, basins, gradients, and localization.";

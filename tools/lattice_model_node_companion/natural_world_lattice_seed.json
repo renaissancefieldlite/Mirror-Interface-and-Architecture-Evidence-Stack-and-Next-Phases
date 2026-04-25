@@ -247,6 +247,14 @@
       "description": "Future toolkit bridge for molecules, atomistic structures, crystals, catalysts, and reaction-surface comparators."
     },
     {
+      "id": "engine02_nest2_matter",
+      "label": "Engine 02: Nest 2 Matter",
+      "nest": "Adapter",
+      "type": "local model engine",
+      "status": "built",
+      "description": "Pure-Python structured-matter engine scoring element-family recovery, molecular graph validity, H2O motif structure, minerals, redox rows, nutrition chemistry, and contaminant bad-descendant behavior."
+    },
+    {
       "id": "aux_math",
       "label": "Auxiliary Math",
       "nest": "Nest 1",
@@ -584,6 +592,46 @@
       "source": "chemistry_toolkit",
       "target": "nest2_matter",
       "relation": "future chemistry adapter"
+    },
+    {
+      "source": "source_mirror_pattern",
+      "target": "engine02_nest2_matter",
+      "relation": "made runnable in matter rows"
+    },
+    {
+      "source": "unified_mirror_proof",
+      "target": "engine02_nest2_matter",
+      "relation": "second local engine"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "nest2_matter",
+      "relation": "runs structured-matter score grammar"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "elements",
+      "relation": "scores element-family recovery"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "h2o",
+      "relation": "scores water motif"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "minerals",
+      "relation": "scores mineral structure"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "food_chemistry",
+      "relation": "scores nutrition chemistry"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "pfas_breakdown_lane",
+      "relation": "scores bad-descendant controls"
     },
     {
       "source": "nest1_formal",

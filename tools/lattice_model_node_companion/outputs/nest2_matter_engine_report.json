@@ -1,0 +1,260 @@
+{
+  "engine": "Engine 02: Nest 2 Matter / Chemistry Model",
+  "schema": "state / control / transform / invariant / drift / coherence / score",
+  "status": "local no-dependency structured-matter demonstrator",
+  "element_family": {
+    "target_group_family_recovery": 0.909,
+    "period_control_recovery": 0.273,
+    "shuffled_control_recovery": 0.455,
+    "valence_consistency": 0.727,
+    "element_score": 0.364,
+    "read": "periodic family structure is recovered above shuffled control"
+  },
+  "molecular_graphs": {
+    "target_average": 1.0,
+    "broken_control_average": 0.48,
+    "separation": 0.52,
+    "rows": [
+      {
+        "name": "water",
+        "formula": "H2O",
+        "family": "water",
+        "valence_score": 1.0,
+        "connected_score": 1.0,
+        "polarity_score": 1.0,
+        "molecular_score": 1.0
+      },
+      {
+        "name": "carbon_dioxide",
+        "formula": "CO2",
+        "family": "oxide",
+        "valence_score": 1.0,
+        "connected_score": 1.0,
+        "polarity_score": 1.0,
+        "molecular_score": 1.0
+      },
+      {
+        "name": "methane",
+        "formula": "CH4",
+        "family": "hydrocarbon",
+        "valence_score": 1.0,
+        "connected_score": 1.0,
+        "polarity_score": 1.0,
+        "molecular_score": 1.0
+      },
+      {
+        "name": "ammonia",
+        "formula": "NH3",
+        "family": "amine",
+        "valence_score": 1.0,
+        "connected_score": 1.0,
+        "polarity_score": 1.0,
+        "molecular_score": 1.0
+      },
+      {
+        "name": "sodium_chloride_pair",
+        "formula": "NaCl",
+        "family": "ionic_salt",
+        "valence_score": 1.0,
+        "connected_score": 1.0,
+        "polarity_score": 1.0,
+        "molecular_score": 1.0
+      }
+    ],
+    "controls": [
+      {
+        "name": "water_broken_control",
+        "formula": "H2O",
+        "family": "water",
+        "valence_score": 0.333,
+        "connected_score": 0.0,
+        "polarity_score": 1.0,
+        "molecular_score": 0.444
+      },
+      {
+        "name": "carbon_dioxide_broken_control",
+        "formula": "CO2",
+        "family": "oxide",
+        "valence_score": 0.333,
+        "connected_score": 0.0,
+        "polarity_score": 1.0,
+        "molecular_score": 0.444
+      },
+      {
+        "name": "methane_broken_control",
+        "formula": "CH4",
+        "family": "hydrocarbon",
+        "valence_score": 0.6,
+        "connected_score": 0.0,
+        "polarity_score": 1.0,
+        "molecular_score": 0.533
+      },
+      {
+        "name": "ammonia_broken_control",
+        "formula": "NH3",
+        "family": "amine",
+        "valence_score": 0.5,
+        "connected_score": 0.0,
+        "polarity_score": 1.0,
+        "molecular_score": 0.5
+      }
+    ],
+    "read": "valid molecular graphs preserve valence/connectivity above broken controls"
+  },
+  "h2o": {
+    "geometry": "bent",
+    "angle": 104.5,
+    "polarity": true,
+    "coordination_bonds": 2,
+    "h2o_score": 1.0,
+    "read": "water motif preserves bent geometry, polarity, and coordination"
+  },
+  "minerals": {
+    "rows": [
+      {
+        "name": "quartz",
+        "formula": "SiO2",
+        "lattice": true,
+        "charge_balance": true,
+        "surface": "silicate",
+        "mineral_score": 1.0
+      },
+      {
+        "name": "calcite",
+        "formula": "CaCO3",
+        "lattice": true,
+        "charge_balance": true,
+        "surface": "carbonate",
+        "mineral_score": 1.0
+      },
+      {
+        "name": "magnetite",
+        "formula": "Fe3O4",
+        "lattice": true,
+        "charge_balance": true,
+        "surface": "redox_active_oxide",
+        "mineral_score": 1.0
+      },
+      {
+        "name": "clay_surface",
+        "formula": "aluminosilicate",
+        "lattice": true,
+        "charge_balance": true,
+        "surface": "ion_exchange",
+        "mineral_score": 1.0
+      }
+    ],
+    "average": 1.0,
+    "read": "mineral rows preserve lattice, charge balance, and surface role"
+  },
+  "oxygen_redox": {
+    "rows": [
+      {
+        "name": "oxygen_to_water",
+        "electron_balance": true,
+        "charge_balance": true,
+        "runaway_penalty": 0.0,
+        "redox_score": 1.0
+      },
+      {
+        "name": "peroxide_control",
+        "electron_balance": true,
+        "charge_balance": true,
+        "runaway_penalty": 0.25,
+        "redox_score": 0.75
+      },
+      {
+        "name": "unbounded_radical_control",
+        "electron_balance": false,
+        "charge_balance": false,
+        "runaway_penalty": 0.7,
+        "redox_score": 0.0
+      }
+    ],
+    "read": "bounded redox rows separate from unbounded radical control"
+  },
+  "nutrition": {
+    "rows": [
+      {
+        "name": "protein",
+        "class": "macronutrient",
+        "structure": "amino_acid_sequence",
+        "bridge": "cell_signaling"
+      },
+      {
+        "name": "carbohydrate",
+        "class": "macronutrient",
+        "structure": "sugar_topology",
+        "bridge": "energy_timing"
+      },
+      {
+        "name": "fat",
+        "class": "macronutrient",
+        "structure": "lipid_chain",
+        "bridge": "membrane_energy"
+      },
+      {
+        "name": "vitamin",
+        "class": "micronutrient",
+        "structure": "cofactor_role",
+        "bridge": "repair_redox"
+      },
+      {
+        "name": "mineral",
+        "class": "micronutrient",
+        "structure": "ion_cofactor",
+        "bridge": "electrolyte_enzyme"
+      },
+      {
+        "name": "water",
+        "class": "hydration",
+        "structure": "solvent_network",
+        "bridge": "metabolism_hrv"
+      }
+    ],
+    "classes": {
+      "macronutrient": 3,
+      "micronutrient": 2,
+      "hydration": 1
+    },
+    "nutrition_bridge_score": 1.0,
+    "read": "nutrition maps as constrained chemistry before metabolism and biosignal readout"
+  },
+  "persistent_contaminants": {
+    "rows": [
+      {
+        "name": "parent_only_loss_control",
+        "parent_reduction": 0.9,
+        "defluorination": 0.05,
+        "safe_endpoint": 0.1,
+        "mass_balance": 0.2,
+        "bad_descendant_penalty": 0.75,
+        "transfer_penalty": 0.35,
+        "remediation_score": 0.0
+      },
+      {
+        "name": "partial_breakdown_control",
+        "parent_reduction": 0.7,
+        "defluorination": 0.35,
+        "safe_endpoint": 0.35,
+        "mass_balance": 0.45,
+        "bad_descendant_penalty": 0.35,
+        "transfer_penalty": 0.2,
+        "remediation_score": 0.187
+      },
+      {
+        "name": "bounded_mineralization_candidate",
+        "parent_reduction": 0.85,
+        "defluorination": 0.75,
+        "safe_endpoint": 0.8,
+        "mass_balance": 0.8,
+        "bad_descendant_penalty": 0.1,
+        "transfer_penalty": 0.05,
+        "remediation_score": 0.725
+      }
+    ],
+    "best_candidate": "bounded_mineralization_candidate",
+    "read": "parent-only disappearance is rejected when bad descendants and transfer risk remain"
+  },
+  "claim_boundary": "Toy local comparator. Demonstrates matter-facing score grammar; it is not a chemistry, nutrition, medical, or remediation proof."
+}
