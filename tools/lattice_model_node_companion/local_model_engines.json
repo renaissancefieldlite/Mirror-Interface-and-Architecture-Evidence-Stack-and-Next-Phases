@@ -26,8 +26,8 @@
       "label": "Engine 02: Nest 2 Matter / Chemistry Model",
       "status": "built",
       "command": "python3 tools/lattice_model_node_companion/engines/nest2_matter_engine.py",
-      "maps_to": ["elements", "H2O", "minerals", "nutrition", "PFAS", "materials"],
-      "description": "Pure-Python structured-matter comparator for element-family recovery, molecular graph validity, H2O motif structure, minerals, redox rows, nutrition chemistry, and contaminant bad-descendant scoring. Later adapters: RDKit, ASE, pymatgen, MatGL, CHGNet, MACE, MatterGen."
+      "maps_to": ["elements", "H2O", "minerals", "nutrition", "PFAS", "functional groups", "biomolecular primitives", "polymers", "electrochemistry", "spectral signatures", "materials"],
+      "description": "Pure-Python structured-matter comparator for element-family recovery, molecular graph validity, H2O motif structure, minerals, redox rows, nutrition chemistry, contaminant bad-descendant scoring, and expanded matter lanes. Later adapters: RDKit, ASE, pymatgen, MatGL, CHGNet, MACE, MatterGen."
     },
     {
       "id": "engine_03_nest3_physics",

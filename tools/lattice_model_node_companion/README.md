@@ -60,7 +60,18 @@ This is the demo answer when someone asks what is built:
 the browser companion is the chassis, `Engine 01` demonstrates the formal
 invariant grammar, and `Engine 02` demonstrates the first structured-matter
 grammar across elements, molecular graphs, water, minerals, nutrition, redox,
-and contaminant-pathway scoring without API calls.
+contaminant-pathway scoring, and the expanded matter lanes without API calls.
+
+`Engine 02` expanded lanes now include:
+
+- organic functional groups
+- biomolecular primitives
+- polymers / plastics
+- electrochemistry
+- catalysis / declared conditions
+- spectral signatures
+- environmental fate
+- materials / semiconductors
 
 ## Future Adapter Slots
 

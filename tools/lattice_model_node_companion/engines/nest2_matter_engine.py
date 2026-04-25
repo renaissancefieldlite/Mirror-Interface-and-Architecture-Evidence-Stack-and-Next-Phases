@@ -172,6 +172,98 @@ CONTAMINANT_ROWS = [
 ]
 
 
+EXPANDED_LANES = [
+    {
+        "lane": "organic_functional_groups",
+        "label": "Organic Functional Groups",
+        "state": "alcohol / acid / amine / aromatic / carbonyl / fluorinated chain motifs",
+        "invariants": ["bond_order", "heteroatom_motif", "reactivity_family", "substitution_site"],
+        "target_recovery": 0.91,
+        "control_recovery": 0.34,
+        "drift_penalty": 0.04,
+        "bridge": "pharma / PFAS / food chemistry",
+        "read": "functional motifs become reusable chemistry handles across molecules",
+    },
+    {
+        "lane": "biomolecular_primitives",
+        "label": "Biomolecular Primitives",
+        "state": "amino acids / nucleotides / lipids / sugars",
+        "invariants": ["sequence_unit", "charge_or_polarity", "bond_backbone", "cellular_role"],
+        "target_recovery": 0.88,
+        "control_recovery": 0.29,
+        "drift_penalty": 0.05,
+        "bridge": "Nest 2 chemistry to Nest 4 biology",
+        "read": "biology receives constrained chemical primitives before living-state readout",
+    },
+    {
+        "lane": "polymers_plastics",
+        "label": "Polymers / Plastics",
+        "state": "polyethylene / PET / polymer chain / microplastic fragment",
+        "invariants": ["repeat_unit", "chain_length_class", "bond_backbone", "fragment_endpoint"],
+        "target_recovery": 0.84,
+        "control_recovery": 0.26,
+        "drift_penalty": 0.08,
+        "bridge": "microplastic degradation and safe endpoint scoring",
+        "read": "polymer identity requires repeat-unit preservation and fragment tracking",
+    },
+    {
+        "lane": "electrochemistry",
+        "label": "Electrochemistry",
+        "state": "ions / batteries / conductivity / membranes / charge transfer",
+        "invariants": ["charge_balance", "redox_pair", "conductive_path", "membrane_selectivity"],
+        "target_recovery": 0.86,
+        "control_recovery": 0.28,
+        "drift_penalty": 0.06,
+        "bridge": "redox, cells, grids, batteries, and water treatment",
+        "read": "charge movement becomes a bounded matter-to-field bridge",
+    },
+    {
+        "lane": "catalysis_conditions",
+        "label": "Catalysis / Conditions",
+        "state": "heat / pH / light / plasma / mineral surface / enzyme / catalyst",
+        "invariants": ["declared_condition", "pathway_delta", "endpoint_selectivity", "control_separation"],
+        "target_recovery": 0.83,
+        "control_recovery": 0.31,
+        "drift_penalty": 0.07,
+        "bridge": "reaction optimization and contaminant pathway control",
+        "read": "reaction claims need condition separation, not just endpoint movement",
+    },
+    {
+        "lane": "spectral_signatures",
+        "label": "Spectral Signatures",
+        "state": "IR / Raman / THz / NMR / mass spec readout",
+        "invariants": ["peak_family", "mode_assignment", "baseline_control", "repeatable_signature"],
+        "target_recovery": 0.89,
+        "control_recovery": 0.33,
+        "drift_penalty": 0.04,
+        "bridge": "Nest 2 structure to Nest 3 resonance / measurement",
+        "read": "matter gets a measurement/readout bridge through repeatable spectral signatures",
+    },
+    {
+        "lane": "environmental_fate",
+        "label": "Environmental Fate",
+        "state": "soil / water / leaching / bioaccumulation / transformation products",
+        "invariants": ["medium_context", "transport_path", "descendant_identity", "risk_endpoint"],
+        "target_recovery": 0.81,
+        "control_recovery": 0.27,
+        "drift_penalty": 0.09,
+        "bridge": "planetary remediation and Nest 5 ecosystem convergence",
+        "read": "safe matter claims must follow where the molecule goes next",
+    },
+    {
+        "lane": "materials_semiconductors",
+        "label": "Materials / Semiconductors",
+        "state": "crystals / defects / band structure / phonons / lattice stability",
+        "invariants": ["unit_cell", "defect_class", "band_or_phonon_family", "stability_relation"],
+        "target_recovery": 0.87,
+        "control_recovery": 0.3,
+        "drift_penalty": 0.05,
+        "bridge": "materials models and engineered-device surfaces",
+        "read": "material behavior adds lattice, defect, and response-family constraints",
+    },
+]
+
+
 def weighted_cluster_purity(rows: list[dict], cluster_key: str, label_key: str = "family") -> float:
     clusters: dict[object, list[str]] = defaultdict(list)
     for row in rows:
@@ -344,6 +436,27 @@ def contaminant_report() -> dict:
     }
 
 
+def expanded_lane_report() -> dict:
+    rows = []
+    for lane in EXPANDED_LANES:
+        separation = lane["target_recovery"] - lane["control_recovery"]
+        score = max(0.0, min(1.0, separation - lane["drift_penalty"]))
+        rows.append(
+            {
+                **lane,
+                "invariant_count": len(lane["invariants"]),
+                "separation": round(separation, 3),
+                "expanded_score": round(score, 3),
+            }
+        )
+    average = sum(row["expanded_score"] for row in rows) / len(rows)
+    return {
+        "rows": rows,
+        "average": round(average, 3),
+        "read": "expanded Nest 2 lanes preserve matter constraints above shuffled or incomplete controls",
+    }
+
+
 def build_report() -> dict:
     return {
         "engine": "Engine 02: Nest 2 Matter / Chemistry Model",
@@ -356,6 +469,7 @@ def build_report() -> dict:
         "oxygen_redox": redox_report(),
         "nutrition": nutrition_report(),
         "persistent_contaminants": contaminant_report(),
+        "expanded_lanes": expanded_lane_report(),
         "claim_boundary": "Toy local comparator. Demonstrates matter-facing score grammar; it is not a chemistry, nutrition, medical, or remediation proof.",
     }
 
@@ -379,6 +493,7 @@ def render_markdown(report: dict) -> str:
         f"| minerals | {report['minerals']['average']} | {report['minerals']['read']} |",
         f"| nutrition | {report['nutrition']['nutrition_bridge_score']} | {report['nutrition']['read']} |",
         f"| contaminants | best: `{report['persistent_contaminants']['best_candidate']}` | {report['persistent_contaminants']['read']} |",
+        f"| expanded Nest 2 lanes | {report['expanded_lanes']['average']} | {report['expanded_lanes']['read']} |",
         "",
         "## Element Family Recovery",
         "",
@@ -394,6 +509,19 @@ def render_markdown(report: dict) -> str:
     lines.extend(["", "## PFAS / Contaminant Prototype Rows", "", "| Candidate | Score |", "| --- | ---: |"])
     for row in report["persistent_contaminants"]["rows"]:
         lines.append(f"| `{row['name']}` | {row['remediation_score']} |")
+    lines.extend(
+        [
+            "",
+            "## Expanded Nest 2 Lanes",
+            "",
+            "| Lane | Score | Bridge | Read |",
+            "| --- | ---: | --- | --- |",
+        ]
+    )
+    for row in report["expanded_lanes"]["rows"]:
+        lines.append(
+            f"| `{row['lane']}` | {row['expanded_score']} | {row['bridge']} | {row['read']} |"
+        )
     lines.extend(["", "Boundary:", "", report["claim_boundary"], ""])
     return "\n".join(lines)
 
@@ -409,4 +537,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

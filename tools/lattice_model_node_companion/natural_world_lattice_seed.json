@@ -143,6 +143,70 @@
       "description": "Persistent contaminant families mapped by bond topology, safe endpoints, and bad-descendant penalties."
     },
     {
+      "id": "organic_functional_groups",
+      "label": "Organic Functional Groups",
+      "nest": "Nest 2",
+      "type": "expanded matter lane",
+      "status": "mapped / engine scored",
+      "description": "Alcohols, acids, amines, aromatics, carbonyls, fluorinated chains, bond order, heteroatom motifs, and reactivity families."
+    },
+    {
+      "id": "biomolecular_primitives",
+      "label": "Biomolecular Primitives",
+      "nest": "Nest 2",
+      "type": "expanded matter lane",
+      "status": "mapped / engine scored",
+      "description": "Amino acids, nucleotides, lipids, sugars, backbone constraints, charge / polarity, and chemistry-to-biology bridge rows."
+    },
+    {
+      "id": "polymers_plastics",
+      "label": "Polymers / Plastics",
+      "nest": "Nest 2",
+      "type": "expanded matter lane",
+      "status": "mapped / engine scored",
+      "description": "Polymer repeat units, chain classes, PET, polyethylene, microplastic fragments, degradation paths, and safe endpoint scoring."
+    },
+    {
+      "id": "electrochemistry",
+      "label": "Electrochemistry",
+      "nest": "Nest 2",
+      "type": "matter-to-field bridge",
+      "status": "mapped / engine scored",
+      "description": "Ions, batteries, conductivity, membranes, charge transfer, redox pairs, and bounded current / solution behavior."
+    },
+    {
+      "id": "catalysis_conditions",
+      "label": "Catalysis / Conditions",
+      "nest": "Nest 2",
+      "type": "reaction control lane",
+      "status": "mapped / engine scored",
+      "description": "Heat, pH, light, plasma, mineral surfaces, enzymes, catalysts, endpoint selectivity, and declared-condition controls."
+    },
+    {
+      "id": "spectral_signatures",
+      "label": "Spectral Signatures",
+      "nest": "Nest 2",
+      "type": "measurement bridge",
+      "status": "mapped / engine scored",
+      "description": "IR, Raman, THz, NMR, mass spec, peak families, mode assignment, baseline controls, and repeatable matter readouts."
+    },
+    {
+      "id": "environmental_fate",
+      "label": "Environmental Fate",
+      "nest": "Nest 2",
+      "type": "ecology bridge",
+      "status": "mapped / engine scored",
+      "description": "Soil, water, leaching, bioaccumulation, transport paths, transformation products, and risk endpoint tracking."
+    },
+    {
+      "id": "materials_semiconductors",
+      "label": "Materials / Semiconductors",
+      "nest": "Nest 2",
+      "type": "material response lane",
+      "status": "mapped / engine scored",
+      "description": "Crystals, defects, band structure, phonons, lattice stability, unit cells, and engineered device surfaces."
+    },
+    {
       "id": "nest3_coherence",
       "label": "Nest 3: Classical Coherence",
       "nest": "Nest 3",
@@ -509,6 +573,96 @@
       "relation": "molecule / reaction tooling"
     },
     {
+      "source": "nest2_matter",
+      "target": "organic_functional_groups",
+      "relation": "functional motif expansion"
+    },
+    {
+      "source": "nest2_matter",
+      "target": "biomolecular_primitives",
+      "relation": "biology-facing primitives"
+    },
+    {
+      "source": "nest2_matter",
+      "target": "polymers_plastics",
+      "relation": "polymer / microplastic lane"
+    },
+    {
+      "source": "nest2_matter",
+      "target": "electrochemistry",
+      "relation": "charge-transfer lane"
+    },
+    {
+      "source": "nest2_matter",
+      "target": "catalysis_conditions",
+      "relation": "reaction condition lane"
+    },
+    {
+      "source": "nest2_matter",
+      "target": "spectral_signatures",
+      "relation": "measurement readout lane"
+    },
+    {
+      "source": "nest2_matter",
+      "target": "environmental_fate",
+      "relation": "environmental transport lane"
+    },
+    {
+      "source": "nest2_matter",
+      "target": "materials_semiconductors",
+      "relation": "materials response lane"
+    },
+    {
+      "source": "organic_functional_groups",
+      "target": "pfas_pharma_microplastics",
+      "relation": "functional motif to contaminant class"
+    },
+    {
+      "source": "biomolecular_primitives",
+      "target": "nest4_biology",
+      "relation": "chemistry-to-biology bridge"
+    },
+    {
+      "source": "polymers_plastics",
+      "target": "pfas_breakdown_lane",
+      "relation": "persistent material breakdown"
+    },
+    {
+      "source": "electrochemistry",
+      "target": "oxygen_redox",
+      "relation": "charge / redox bridge"
+    },
+    {
+      "source": "electrochemistry",
+      "target": "nest3_coherence",
+      "relation": "matter-to-field bridge"
+    },
+    {
+      "source": "catalysis_conditions",
+      "target": "pfas_breakdown_lane",
+      "relation": "declared treatment pathway"
+    },
+    {
+      "source": "catalysis_conditions",
+      "target": "plasma_fire",
+      "relation": "reactive condition bridge"
+    },
+    {
+      "source": "spectral_signatures",
+      "target": "terahertz",
+      "relation": "spectral measurement bridge"
+    },
+    {
+      "source": "environmental_fate",
+      "target": "ecosystem_planet",
+      "relation": "matter transport to ecology"
+    },
+    {
+      "source": "materials_semiconductors",
+      "target": "materials_models",
+      "relation": "future materials adapter"
+    },
+    {
       "source": "hydrogen",
       "target": "fusion_solar",
       "relation": "isotope-to-fusion bridge"
@@ -632,6 +786,46 @@
       "source": "engine02_nest2_matter",
       "target": "pfas_breakdown_lane",
       "relation": "scores bad-descendant controls"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "organic_functional_groups",
+      "relation": "scores functional groups"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "biomolecular_primitives",
+      "relation": "scores biomolecular primitives"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "polymers_plastics",
+      "relation": "scores polymer rows"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "electrochemistry",
+      "relation": "scores electrochemical rows"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "catalysis_conditions",
+      "relation": "scores condition controls"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "spectral_signatures",
+      "relation": "scores spectral readouts"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "environmental_fate",
+      "relation": "scores fate rows"
+    },
+    {
+      "source": "engine02_nest2_matter",
+      "target": "materials_semiconductors",
+      "relation": "scores material response rows"
     },
     {
       "source": "nest1_formal",

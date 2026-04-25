@@ -34,6 +34,7 @@ This is the first bridge from pure formal structure into physical structure.
 Companion completion artifact:
 
 - [Nest 2 Structured Matter Completion](./NEST2_STRUCTURED_MATTER_COMPLETION_2026-04-24.md)
+- [Nest 2 Expanded Structured Matter Atlas](./NEST2_EXPANDED_STRUCTURED_MATTER_ATLAS_2026-04-24.md)
 
 ## Core Finding
 

@@ -41,6 +41,10 @@ tools/lattice_model_node_companion/outputs/nest2_matter_engine_report.md
 tools/lattice_model_node_companion/outputs/nest2_matter_engine_report.json
 ```
 
+Expanded atlas:
+
+- [Nest 2 Expanded Structured Matter Atlas](./NEST2_EXPANDED_STRUCTURED_MATTER_ATLAS_2026-04-24.md)
+
 The engine is pure Python and has no external downloads, no API calls, and no
 credit spend.
 
@@ -57,6 +61,9 @@ It currently reports:
 - nutrition rows as constrained chemistry before metabolism / biosignal readout
 - contaminant rows where parent-only disappearance is rejected if bad
   descendants or transfer risk remain
+- expanded matter lanes covering functional groups, biomolecular primitives,
+  polymers / plastics, electrochemistry, catalysis / conditions, spectral
+  signatures, environmental fate, and materials / semiconductors
 
 Current generated summary:
 
@@ -99,6 +106,8 @@ chemistry, nutrition, materials, and remediation design.
 - `Engine 02` is complete as the first local structured-matter demonstrator.
 - The companion now has a runnable matter engine alongside the `Nest 1`
   formal engine.
+- The expanded `Nest 2` dictionary now has the rows needed to bridge into
+  `Nest 3`, `Nest 4`, and `Nest 5`.
 - The contaminant / PFAS-style pathway now has the correct success rule:
   do not count parent disappearance as success unless descendants, transfer,
   and balance are bounded.

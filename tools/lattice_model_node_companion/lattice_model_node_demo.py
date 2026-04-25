@@ -101,6 +101,8 @@ def svg_markup(data: dict, positions: dict[str, dict[str, int]]) -> str:
 def render_html(data: dict) -> str:
     engines = load_engines()
     positions = build_positions(data["nodes"])
+    svg_height = max(pos["y"] for pos in positions.values()) + 120
+    svg_width = 1530
     payload = json.dumps(data, ensure_ascii=False)
     engine_payload = json.dumps(engines, ensure_ascii=False)
     positions_payload = json.dumps(positions)
@@ -279,7 +281,7 @@ def render_html(data: dict) -> str:
     }}
     svg {{
       min-width: 1530px;
-      min-height: 980px;
+      min-height: {svg_height}px;
       background:
         linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
         linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
@@ -361,7 +363,7 @@ def render_html(data: dict) -> str:
       </section>
     </aside>
     <section class="map-wrap">
-      <svg viewBox="0 0 1530 980" role="img" aria-label="Lattice node map">
+      <svg viewBox="0 0 {svg_width} {svg_height}" role="img" aria-label="Lattice node map">
         {svg}
       </svg>
     </section>
@@ -469,7 +471,35 @@ def render_html(data: dict) -> str:
       }}
       if (q.includes("engine 02") || q.includes("engine02") || q.includes("nest 2 engine") || q.includes("chemistry engine") || q.includes("matter engine")) {{
         showNode("engine02_nest2_matter", false);
-        return "Engine 02 is the built Nest 2 local demonstrator: element-family recovery, molecular graph validity, H2O motif scoring, mineral/redox/nutrition rows, and contaminant bad-descendant controls.";
+        return "Engine 02 is the built Nest 2 local demonstrator: element-family recovery, molecular graph validity, H2O motif scoring, mineral/redox/nutrition rows, contaminant bad-descendant controls, and the expanded matter lanes.";
+      }}
+      if (q.includes("functional") || q.includes("organic") || q.includes("amine") || q.includes("carbonyl") || q.includes("aromatic")) {{
+        showNode("organic_functional_groups", false);
+        return "Organic functional groups are an expanded Nest 2 lane: bond order, heteroatom motifs, reactivity family, substitution sites, and bridge rows for pharma, PFAS, and food chemistry.";
+      }}
+      if (q.includes("biomolecular") || q.includes("amino") || q.includes("nucleotide") || q.includes("lipid") || q.includes("sugar")) {{
+        showNode("biomolecular_primitives", false);
+        return "Biomolecular primitives are the Nest 2 -> Nest 4 bridge: amino acids, nucleotides, lipids, sugars, charge/polarity, backbone constraints, and cellular role.";
+      }}
+      if (q.includes("polymer") || q.includes("plastic") || q.includes("microplastic") || q.includes("pet")) {{
+        showNode("polymers_plastics", false);
+        return "Polymers and plastics expand Nest 2 into repeat units, chain classes, fragment endpoints, microplastic degradation, and safe descendant scoring.";
+      }}
+      if (q.includes("electrochem") || q.includes("battery") || q.includes("conductivity") || q.includes("membrane") || q.includes("charge transfer")) {{
+        showNode("electrochemistry", false);
+        return "Electrochemistry is a Nest 2 matter-to-field bridge: ions, redox pairs, conductivity, membranes, batteries, and bounded charge movement.";
+      }}
+      if (q.includes("catalyst") || q.includes("catalysis") || q.includes("ph") || q.includes("condition") || q.includes("enzyme")) {{
+        showNode("catalysis_conditions", false);
+        return "Catalysis and conditions track declared treatment settings: heat, pH, light, plasma, minerals, enzymes, catalysts, endpoint selectivity, and control separation.";
+      }}
+      if (q.includes("spectral") || q.includes("raman") || q.includes("nmr") || q.includes("mass spec") || q.includes("ir")) {{
+        showNode("spectral_signatures", false);
+        return "Spectral signatures give Nest 2 a measurement bridge: IR, Raman, THz, NMR, mass spec, peak families, mode assignment, and repeatable readouts.";
+      }}
+      if (q.includes("environment") || q.includes("fate") || q.includes("soil") || q.includes("leaching") || q.includes("bioaccumulation")) {{
+        showNode("environmental_fate", false);
+        return "Environmental fate expands Nest 2 into soil, water, leaching, bioaccumulation, transformation products, transport paths, and risk endpoints.";
       }}
       if (q.includes("topology") || q.includes("topography")) {{
         showNode("nest1_expanded_formal", false);
@@ -487,9 +517,13 @@ def render_html(data: dict) -> str:
         showNode("nvidia_physicsnemo", false);
         return "NVIDIA PhysicsNeMo is a future adapter slot, not a claim surface yet. It belongs beside Nest 3 for fields, fluids, plasma, resonance, PDE-like dynamics, and engineered physics simulations.";
       }}
+      if (q.includes("semiconductor") || q.includes("phonon") || q.includes("band structure")) {{
+        showNode("materials_semiconductors", false);
+        return "Materials and semiconductors expand Nest 2 into crystals, defects, bands, phonons, unit cells, lattice stability, and engineered response surfaces.";
+      }}
       if (q.includes("material") || q.includes("mattergen") || q.includes("chgnet") || q.includes("mace") || q.includes("matgl")) {{
-        showNode("materials_models", false);
-        return "Materials models plug into Nest 2: elements, molecules, crystals, minerals, lattices, and atomistic graph structure. The companion keeps a stable node schema so those adapters can be added later.";
+        showNode("materials_semiconductors", false);
+        return "Materials plug into Nest 2 through crystals, defects, bands, phonons, and lattice stability. The future adapter slot is MatterGen / MatGL / CHGNet / MACE.";
       }}
       if (q.includes("pfas") || q.includes("forever") || q.includes("pharma") || q.includes("plastic")) {{
         showNode("pfas_pharma_microplastics", false);

@@ -91,7 +91,7 @@ across different substrates better than null, control, or shuffled baselines?
 | biological adapter | `Phase 12B` | first `5 x 4` HRV biological matrix complete |
 | formal base | `Nest 1` | linear algebra, symmetries, invariants, encoded states locked |
 | auxiliary mathematics | Auxiliary Mathematics Atlas | graph theory, topology, geometry, dynamics, probability, information, optimization, statistics, control mapped |
-| structured matter | `Nest 2`, `Engine 02` | elements, molecules, water, minerals, redox, nutrition, contaminants, reactions mapped and first local demonstrator built |
+| structured matter | `Nest 2`, `Engine 02` | elements, molecules, water, minerals, redox, nutrition, contaminants, reactions, functional groups, biomolecular primitives, polymers, electrochemistry, catalysis, spectral readouts, environmental fate, and materials mapped with expanded local demonstrator |
 | cosmic dynamics | `Nest 3` | fields, motion, phases, waves, plasma, fusion, orbit, rotation mapped |
 | richer biology | `Nest 4` | HRV complete as first adapter; EEG/cells/genome/metabolism planned |
 | universal convergence | `Nest 5` | planets, stars, ecosystems, galaxies, cosmic web, dark-matter observables mapped |
@@ -136,8 +136,8 @@ Completed enough to show:
 
 Immediate next work:
 
-1. expand `Engine 02` with curated element, molecule, crystal, and reaction
-   datasets
+1. expand `Engine 02` from toy rows into curated element, molecule, crystal,
+   spectral, environmental fate, and reaction datasets
 2. add `RDKit`, `ASE`, `pymatgen`, and materials-model adapter paths where
    useful
 3. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
