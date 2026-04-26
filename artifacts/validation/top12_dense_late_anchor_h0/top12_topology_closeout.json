@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-04-26T19:13:03.191426+00:00",
+  "point_cloud_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory",
+  "output_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/top12_dense_late_anchor_h0",
+  "role": "dense_prompt_token",
+  "feature_family": "dense_trajectory",
+  "layer_depth": "late",
+  "token_region": "anchor_phrase",
+  "tda_mode": "h0_mst",
+  "labels": [
+    "lattice",
+    "neutral",
+    "technical"
+  ],
+  "max_points_per_label": 0,
+  "pca_dim": 8,
+  "tda_backend": "ripser_available",
+  "models": [
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory/glm_v8_hidden_point_cloud.npz",
+      "status": "topology_invariance_supported",
+      "tda_mode": "h0_mst",
+      "role": "dense_prompt_token",
+      "feature_family": "dense_trajectory",
+      "layer_depth": "late",
+      "token_region": "anchor_phrase",
+      "labels": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "max_points_per_label": 0,
+      "points_scored": 378,
+      "pca_dim": 8,
+      "permutations": 500,
+      "separation_p_value": 1.0,
+      "invariance_p_value": 0.001996007984031936,
+      "real": {
+        "score": 0.6506058067744295,
+        "pair_distances": {
+          "lattice__neutral": 1.1400462902873587,
+          "lattice__technical": 1.3071823434713656,
+          "neutral__technical": 0.6506058067744295
+        },
+        "counts": {
+          "lattice": 126,
+          "neutral": 126,
+          "technical": 126
+        },
+        "profile_metadata": {}
+      },
+      "null_mean": 4.6536637250448525,
+      "null_std": 1.977496691338084,
+      "null_p95": 8.58553851215428
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory/hermes_v8_hidden_point_cloud.npz",
+      "status": "topology_invariance_supported",
+      "tda_mode": "h0_mst",
+      "role": "dense_prompt_token",
+      "feature_family": "dense_trajectory",
+      "layer_depth": "late",
+      "token_region": "anchor_phrase",
+      "labels": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "max_points_per_label": 0,
+      "points_scored": 297,
+      "pca_dim": 8,
+      "permutations": 500,
+      "separation_p_value": 0.9700598802395209,
+      "invariance_p_value": 0.031936127744510975,
+      "real": {
+        "score": 3.025801787066807,
+        "pair_distances": {
+          "lattice__neutral": 15.878833429719812,
+          "lattice__technical": 15.563813702773219,
+          "neutral__technical": 3.025801787066807
+        },
+        "counts": {
+          "lattice": 99,
+          "neutral": 99,
+          "technical": 99
+        },
+        "profile_metadata": {}
+      },
+      "null_mean": 19.74686226211736,
+      "null_std": 11.296304320136457,
+      "null_p95": 39.8045110189901
+    }
+  ],
+  "supported_models": 2,
+  "tested_models": 2,
+  "status": "control_supported"
+}

@@ -525,15 +525,15 @@ def render_html(data: dict) -> str:
       }}
       if (q.includes("topology") || q.includes("topography")) {{
         showNode("topology_invariance", false);
-        return "TOP-1/2 currently shows topology preservation/invariance over real V8 point clouds, not context-topology separation. That is a real lane result: Mirror effects are separating in geometry, magnitude, trajectory, topography, and graph structure while connected topology stays stable.";
+        return "TOP-1/2 now has a dense GLM/Hermes pilot. Late-anchor dense H0 supports topology invariance in 2/2 models, while dense H1 still does not support context-topology separation. That localizes the Mirror effect in geometry, magnitude, trajectory, topography, and graph structure while connected topology stays stable.";
       }}
       if (q.includes("dense") || q.includes("h1") || q.includes("ripser")) {{
         showNode("dense_topology_next", false);
-        return "Dense TOP is the preregistered next pass: GLM and Hermes first, full prompt tokens across all layers, early/middle/late layer labels, token-region labels, and H0/H1 controls before any topology-separation claim.";
+        return "Dense TOP pilot is complete for GLM and Hermes. It preserved full prompt tokens across all layers with layer-depth and token-region labels. H0 connectedness supports invariance; H1 loop/persistence does not support context separation yet. Next TOP upgrade needs reruns or broader prompt density.";
       }}
       if (q.includes("nest 1") || q.includes("formal lanes") || q.includes("math lanes")) {{
         showNode("nest1_real_closeout", false);
-        return "Nest 1 is no longer just grammar. Multiple formal lanes are supported by real traces or controls; OPT/CAT are limited, TOP is partial/invariance, and GRAPH-2/CTRL/GAME still need new data or protocol.";
+        return "Nest 1 is no longer just grammar. Multiple formal lanes are supported by real traces or controls; OPT/CAT are limited, TOP is preservation-supported but not separation-supported, and GRAPH-2/CTRL/GAME still need new real data or protocol.";
       }}
       if (q.includes("phase 12") || q.includes("phase12") || q.includes("biology matrix")) {{
         showNode("phase12b_biology_matrix", false);

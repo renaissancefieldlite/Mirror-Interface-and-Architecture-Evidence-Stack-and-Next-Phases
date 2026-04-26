@@ -403,16 +403,16 @@
       "label": "TOP-1/2 Invariance",
       "nest": "Nest 1",
       "type": "topology finding",
-      "status": "partial real-data support",
-      "description": "H0 and Ripser H1 over real V8 point clouds currently show topology preservation under context transform, not context-topology separation; separation remains visible in geometry, magnitude, trajectory, topography, and graph structure."
+      "status": "topology-preservation supported",
+      "description": "Real V8 point clouds and dense GLM/Hermes late-anchor vectors show topology preservation under context transform. Dense H0 supports invariance in 2/2 models; dense H1 does not support context-topology separation."
     },
     {
       "id": "dense_topology_next",
       "label": "Dense TOP Next",
       "nest": "Nest 1",
       "type": "preregistered next run",
-      "status": "protocol locked",
-      "description": "Dense trajectory mode tests whether topology separation appears after preserving full prompt tokens across all layers for GLM and Hermes, with early/middle/late and token-region labels."
+      "status": "pilot complete",
+      "description": "Dense trajectory pilot preserved full prompt tokens across all layers for GLM and Hermes. The result supports connectedness invariance, not persistent-loop separation; revisit with reruns or broader prompt density."
     },
     {
       "id": "phase12b_biology_matrix",

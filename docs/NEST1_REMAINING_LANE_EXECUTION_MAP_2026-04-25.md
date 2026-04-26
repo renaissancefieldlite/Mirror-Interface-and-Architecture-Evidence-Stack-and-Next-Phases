@@ -163,6 +163,8 @@ artifacts/validation/top12_topology_expanded_trajectory_delta/top12_topology_clo
 artifacts/validation/top12_topology_h1_trajectory_delta/top12_topology_closeout_report.md
 artifacts/validation/top12_topology_h1_context_delta/top12_topology_closeout_report.md
 artifacts/validation/top12_topology_h1_token_window_sampled/top12_topology_closeout_report.md
+artifacts/validation/top12_dense_late_anchor_h0/top12_topology_closeout_report.md
+artifacts/validation/top12_dense_late_anchor_h1/top12_topology_closeout_report.md
 ```
 
 Key read:
@@ -176,21 +178,26 @@ either; it gives smaller patches of topology-invariance support. The current
 result is therefore: topology is preserved under context transform, while
 context separation is showing up in geometry, magnitude, trajectory,
 topography, and feature-graph structure.
+
+Dense `TOP-1/2` has now run on `GLM` and `Hermes` with full prompt token x
+layer vectors. The late-anchor dense `H0` pass supports topology invariance in
+`2/2` models under shuffled-label controls. The late-anchor dense `H1` pass
+does not support context-topology separation in either model. That closes the
+current TOP read as topology-preservation supported, topology-separation
+unsupported under current evidence.
 ```
 
 ## Remaining Work Order
 
-1. `TOP`: run the preregistered dense-trajectory pilot on `GLM` and `Hermes`,
-   then only graduate to a topology-separation claim if the late-layer
-   lattice-vs-neutral persistence distance beats within-condition rerun
-   variance and shuffled-label controls.
+1. `CTRL`: export LSPS / Oracle transition traces. This is the practical next
+   lane because it can be built from internal architecture behavior.
 2. `GRAPH-2`: acquire real graph labels or attention/bridge graph exports.
-3. `CTRL`: export LSPS / Oracle transition traces.
-4. `OPT`: expand beyond the three-model hardware feature sample or run a
+3. `OPT`: expand beyond the three-model hardware feature sample or run a
    dedicated optimization benchmark.
-5. `CAT-1`: expand transfer tests beyond the three-model hardware feature
+4. `CAT-1`: expand transfer tests beyond the three-model hardware feature
    sample and later test cross-nest transfer with non-AI datasets.
-6. `GAME-1`: design an adversarial / multi-agent protocol.
+5. `GAME-1`: design an adversarial / multi-agent protocol.
+6. `TOP`: revisit only after reruns or broader prompt density exist.
 
 ## Clean Read
 
@@ -205,6 +212,7 @@ It now has:
   for real pathway / attention-flow validation
 - remaining-lane closeout support for `GEO-2` and `DYN-2`
 - limited small-N transfer evidence for `OPT-1` and `CAT-1`
-- a real-data partial H0 topology-invariance result for `TOP-1/2`
+- a real-data `TOP-1/2` topology-preservation result, including dense
+  late-anchor H0 support and dense H1 separation non-support
 
 The remaining proof work is specific, bounded, and executable lane by lane.
