@@ -1,0 +1,9 @@
+{
+  "source_json": "artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_data_2026-04-22.json",
+  "edge_rule": "union k-nearest-neighbor graph over z-scored Phase 5 numeric bridge features, k=3",
+  "label_rule": "locked Phase 5 bridge pairs: Mistral/Hermes, Qwen/DeepSeek, GLM/Nemotron",
+  "boundary": "internal AI bridge-graph pilot; not external molecular, allostery, grid, or chemistry validation",
+  "edge_count": 16,
+  "label_count": 28,
+  "positive_label_count": 3
+}

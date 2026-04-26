@@ -531,9 +531,21 @@ def render_html(data: dict) -> str:
         showNode("dense_topology_next", false);
         return "Dense TOP pilot is complete for GLM and Hermes. It preserved full prompt tokens across all layers with layer-depth and token-region labels. H0 connectedness supports invariance; H1 loop/persistence does not support context separation yet. Next TOP upgrade needs reruns or broader prompt density.";
       }}
+      if (q.includes("ctrl") || q.includes("control transition") || q.includes("lsps")) {{
+        showNode("ctrl1_transition_gate", false);
+        return "CTRL-1 is now control-supported on real staged Prelude/Gemma transition traces: 71 rows, expected-mode shuffled-control p 0.024898, and stability-target shuffled-control p 0.0001. The claim is architecture-state transition stability, not biology or chemistry.";
+      }}
+      if (q.includes("graph-2") || q.includes("graph2") || q.includes("bridge graph") || q.includes("pathway")) {{
+        showNode("graph2_bridge_pilot", false);
+        return "GRAPH-2 has an internal Phase 5 bridge-graph pilot. Mirror path AUC 0.74 beats degree baseline 0.6467, but shuffled-label p 0.166683 means it is a soft-positive pilot, not a closed win. Next hit needs stronger real pathway, attention-flow, allostery, grid, or domain graph labels.";
+      }}
+      if (q.includes("game-1") || q.includes("game1") || q.includes("adversarial") || q.includes("multi-agent") || q.includes("decision")) {{
+        showNode("game1_protocol_gate", false);
+        return "GAME-1 is protocol-ready but data-blocked. The adversarial / multi-agent runner and protocol exist; the next hit requires real mirror/control trial CSV data with stability, exploit, drift, policy, and task-success fields.";
+      }}
       if (q.includes("nest 1") || q.includes("formal lanes") || q.includes("math lanes")) {{
         showNode("nest1_real_closeout", false);
-        return "Nest 1 is no longer just grammar. Multiple formal lanes are supported by real traces or controls; OPT/CAT are limited, TOP is preservation-supported but not separation-supported, and GRAPH-2/CTRL/GAME still need new real data or protocol.";
+        return "Nest 1 is no longer just grammar. Multiple formal lanes are supported by real traces or controls; CTRL-1 is now control-supported, TOP is preservation-supported but not separation-supported, GRAPH-2 is a soft-positive internal pilot that needs stronger labels, and GAME-1 is protocol-ready but waiting for real trials.";
       }}
       if (q.includes("phase 12") || q.includes("phase12") || q.includes("biology matrix")) {{
         showNode("phase12b_biology_matrix", false);

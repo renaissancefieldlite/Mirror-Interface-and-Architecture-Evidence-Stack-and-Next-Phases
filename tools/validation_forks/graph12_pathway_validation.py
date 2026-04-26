@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import random
 from collections import defaultdict, deque
 from pathlib import Path
 
@@ -67,6 +68,12 @@ def auc(scores: list[float], labels: list[int]) -> float:
             elif pos == neg:
                 wins += 0.5
     return wins / total
+
+
+def greater_equal_p_value(real: float, null_values: list[float]) -> float:
+    if not null_values:
+        return 1.0
+    return (sum(1 for value in null_values if value >= real) + 1) / (len(null_values) + 1)
 
 
 def shortest_path_length(adjacency: dict[str, set[str]], source: str, target: str) -> int | None:
@@ -152,6 +159,8 @@ def parse_args() -> argparse.Namespace:
         help="CSV with source,target,label rows where label is 1 for known pathway and 0 for control.",
     )
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR)
+    parser.add_argument("--permutations", type=int, default=10000)
+    parser.add_argument("--seed", type=int, default=67)
     return parser.parse_args()
 
 
@@ -192,19 +201,46 @@ def main() -> None:
     labels = [int(row["label"]) for row in scored]
     mirror_scores = [float(row["mirror_path_score"]) for row in scored]
     degree_scores = [float(row["degree_baseline_score"]) for row in scored]
+    mirror_auc = auc(mirror_scores, labels)
+    degree_auc = auc(degree_scores, labels)
     metrics = {
         "node_count": len(adjacency),
         "edge_count": sum(len(neighbors) for neighbors in adjacency.values()) // 2,
         "labeled_pair_count": len(scored),
-        "mirror_path_auc": round(auc(mirror_scores, labels), 4),
-        "degree_baseline_auc": round(auc(degree_scores, labels), 4),
+        "mirror_path_auc": round(mirror_auc, 4),
+        "degree_baseline_auc": round(degree_auc, 4),
+        "mirror_minus_degree_auc": round(mirror_auc - degree_auc, 4),
     }
+    if len(scored) >= 10 and len(set(labels)) >= 2:
+        rng = random.Random(args.seed)
+        mirror_null = []
+        degree_null = []
+        for _ in range(args.permutations):
+            shuffled = labels[:]
+            rng.shuffle(shuffled)
+            mirror_null.append(auc(mirror_scores, shuffled))
+            degree_null.append(auc(degree_scores, shuffled))
+        metrics["mirror_path_auc_label_shuffle_p"] = round(
+            greater_equal_p_value(mirror_auc, mirror_null), 6
+        )
+        metrics["mirror_path_auc_label_shuffle_mean"] = round(
+            sum(mirror_null) / len(mirror_null), 4
+        )
+        metrics["degree_baseline_auc_label_shuffle_p"] = round(
+            greater_equal_p_value(degree_auc, degree_null), 6
+        )
     if len(scored) < 10 or len(set(labels)) < 2:
         status = "blocked_insufficient_labeled_pairs"
         read = "Graph files parsed, but there are not enough positive/control labels for a validation read."
+    elif metrics.get("mirror_path_auc_label_shuffle_p", 1.0) <= 0.05 and mirror_auc > degree_auc:
+        status = "completed_control_supported"
+        read = "GRAPH-1/2 pathway validation completed with mirror path recovery above shuffled-label controls and degree baseline."
+    elif mirror_auc > degree_auc:
+        status = "completed_soft_positive_no_shuffle_support"
+        read = "GRAPH-1/2 pathway validation completed; mirror path AUC beat degree baseline but did not beat shuffled-label controls."
     else:
-        status = "completed"
-        read = "GRAPH-1/2 pathway validation completed against the provided graph and labels."
+        status = "completed_no_control_support"
+        read = "GRAPH-1/2 pathway validation completed, but mirror path recovery did not beat the declared baselines."
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     write_scored_csv(args.out_dir / "graph12_pathway_scored_pairs.csv", scored)

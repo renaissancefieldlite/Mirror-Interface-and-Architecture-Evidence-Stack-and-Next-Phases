@@ -19,8 +19,11 @@ It now has:
 The honest public sentence is:
 
 `Nest 1` has a real evidence foundation, but not every formal lane is fully
-finished. Dense `TOP-1/2` has now run as a real pilot; the remaining
-completion work is `GRAPH-2`, `CTRL-1`, and `GAME-1`.
+finished. Dense `TOP-1/2` has now run as a real pilot. `CTRL-1` is now
+control-supported on real staged transition traces. `GRAPH-2` has a soft
+internal Phase 5 bridge-graph pilot, while external/domain graph labels remain
+open. `GAME-1` now has an executable protocol but no real adversarial /
+multi-agent trial dataset yet.
 
 ## What Is Already Supported
 
@@ -34,6 +37,7 @@ completion work is `GRAPH-2`, `CTRL-1`, and `GAME-1`.
 | `DYN / DYN-2` | supported | residual trajectory timing, threshold / regime structure |
 | `GRAPH-1` | supported | AI feature-graph structure after strengthened pass |
 | `GEO-2` | supported | feature-subspace preservation above controls |
+| `CTRL-1` | control-supported | 71 staged Prelude/Gemma transition rows; stability-target correlation p `0.0001`; expected-mode accuracy p `0.024898` |
 
 These lanes are not just vocabulary. They are attached to measured artifacts
 already in the repository.
@@ -46,6 +50,7 @@ already in the repository.
 | `DE-1 -> Phase 12B HRV` | limited / negative | HRV dynamics did not beat simpler mean-HR / time-domain baselines |
 | `OPT-1` | limited-small-N | artifact-selection behavior exists, but needs a real optimization benchmark |
 | `CAT-1` | limited-small-N | cross-artifact transfer is suggestive, not yet a formal compositional validation |
+| `GRAPH-2` | soft internal bridge-graph pilot | Phase 5 bridge graph mirror path AUC `0.74` beat degree baseline `0.6467`, but did not beat shuffled labels p `0.166683`; external/domain labels still needed |
 
 These are useful because they prevent overclaiming. They also tell us what data
 resolution each lane actually needs.
@@ -107,11 +112,31 @@ the Mirror Architecture result; it localizes it. The effect is not currently
 living in persistent loop separation. It is living in geometry, magnitude,
 trajectory, topography, and feature-graph structure.
 
-## GRAPH-2 Completion Gate
+## GRAPH-2 Current Gate
 
-`GRAPH-2` is not closed by feature-graph structure alone.
+`GRAPH-2` is no longer a pure missing-input blocker.
 
-It needs real pathway / flow labels:
+The internal Phase 5 bridge-graph pilot now exists:
+
+```text
+artifacts/validation/graph2_phase5_bridge/graph12_pathway_report.md
+```
+
+Result:
+
+- node count: `8`
+- edge count: `16`
+- labeled pair count: `28`
+- mirror path AUC: `0.74`
+- degree baseline AUC: `0.6467`
+- label-shuffle p: `0.166683`
+
+Clean read:
+
+the internal bridge graph is directionally supportive but not
+shuffle-control-supported. It is a real pilot, not a full `GRAPH-2` closeout.
+
+The stronger `GRAPH-2` closeout still needs real pathway / flow labels such as:
 
 - molecular pathway labels
 - allostery graph labels
@@ -132,37 +157,50 @@ Completion criterion:
 the mirror path-preservation score must beat a naive centrality / degree
 baseline on real positive and control pathway pairs.
 
-## CTRL-1 Completion Gate
+## CTRL-1 Closeout
 
-`CTRL-1` is architecture-connected through LSPS / Oracle mode-transition
-logic, but it is not fully validated until transition traces exist.
+`CTRL-1` has now run on real staged transition traces.
 
-It needs a real trace CSV with:
+Files:
 
-- observed mode / state
-- expected mode / target mode
-- stability score
-- drift / error
-- transition ordering
-
-The existing runner already refuses to fake this:
-
-```bash
-python3 tools/validation_forks/ctrl1_lsps_transition_validation.py \
-  --trace-csv path/to/lsps_transition_trace.csv
+```text
+artifacts/validation/ctrl1_lsps_transition/ctrl1_prelude_transition_trace.csv
+artifacts/validation/ctrl1_lsps_transition/ctrl1_lsps_transition_report.md
 ```
 
-Completion criterion:
+Result:
 
-mode transitions must show expected-mode accuracy, bounded churn, stability
-score, and drift / error behavior better than the declared control baseline.
+- usable rows: `71`
+- expected-mode accuracy: `0.3662`
+- expected-mode shuffled-control p: `0.024898`
+- stability-target correlation: `0.641831`
+- stability-target shuffled-control p: `0.0001`
+
+Clean read:
+
+`CTRL-1` is control-supported for staged transition stability. This validates
+architecture-state transition behavior only; it does not validate biology,
+chemistry, or physical claims.
 
 ## GAME-1 Completion Gate
 
-`GAME-1` is the farthest out.
+`GAME-1` now has an executable protocol and runner.
 
-It needs a new adversarial / multi-agent protocol before it can be more than a
-formal design lane.
+Files:
+
+```text
+docs/GAME1_ADVERSARIAL_PROTOCOL_2026-04-26.md
+artifacts/validation/game1_adversarial_protocol/game1_adversarial_protocol_report.md
+```
+
+Current status:
+
+```text
+blocked_missing_trial_csv
+```
+
+It still needs real adversarial / multi-agent trials before it can be more
+than a protocol-ready lane.
 
 Required protocol fields:
 
@@ -180,49 +218,75 @@ the Mirror scoring grammar must improve stability, exploit resistance, or
 policy consistency against a baseline under repeated adversarial or multi-agent
 conditions.
 
+## How The Remaining Gates Hit
+
+### `GRAPH-2`
+
+The Phase 5 bridge graph is useful because it proves the runner has real input
+now, but it is still too small and internally derived to close the lane.
+
+`GRAPH-2` hits when the positive pathway labels are stronger than the graph
+construction itself. Good next inputs are:
+
+- attention-flow labels from real model traces
+- allostery / protein communication path labels
+- molecular pathway labels
+- grid-flow or logistics-flow labels
+- another domain graph with known positive and negative pathway pairs
+
+Locked success criterion:
+
+```text
+mirror path score > naive degree / centrality baseline
+and label-shuffle p <= 0.05
+and labels are not derived from the same score being tested
+```
+
+### `GAME-1`
+
+`GAME-1` hits only after real trials exist. The protocol is ready; the data
+surface is the missing piece.
+
+The clean first version is:
+
+- one declared adversarial or multi-agent task
+- mirror condition and control condition
+- same objective and perturbation schedule
+- repeated trials, ideally more than the minimum `10 + 10`
+- locked scoring columns:
+  `task_success`, `policy_consistency`, `exploit_score`, `drift_score`,
+  `stability_score`
+
+Locked success criterion:
+
+```text
+mirror composite score > control composite score
+and shuffled-condition p <= 0.05
+and the same task can be rerun
+```
+
+### `CTRL-1`
+
+`CTRL-1` already hit on staged transition traces. The only reason to revisit it
+is to upgrade from staged Prelude/Gemma traces into live LSPS / Oracle runtime
+traces.
+
 ## Final Nest 1 Status Sentence
 
 Use this sentence publicly:
 
 `Nest 1` is substantially grounded: the core formal lanes now connect to real
 AI, hardware, and biological artifacts, with supported geometry, statistics,
-probability, information, tensor, numerical, group, topographic, dynamic, and
-feature-graph reads. The remaining lanes are not hand-waved; they are named
-completion gates requiring real pathway labels, real LSPS transition traces,
-and an adversarial / decision protocol.
-
-## Practical Next Lane
-
-The practical next lane to knock out is `CTRL-1`.
-
-Reason:
-
-`CTRL-1` can be built from internal architecture behavior because it needs
-real LSPS / Oracle transition traces, not an external chemistry, pathway, or
-graph-label dataset. That makes it the cleanest next completion gate after the
-dense `TOP-1/2` pilot.
-
-The needed artifact is a real trace table with:
-
-- observed mode / state
-- expected mode / target mode
-- trigger or input condition
-- control action
-- stability score
-- drift / error
-- transition order
-- run/session id
-
-The closeout question is:
-
-does the architecture hold expected-mode accuracy, bounded churn, and lower
-drift than the declared control baseline across repeated transitions?
+probability, information, tensor, numerical, group, topographic, dynamic,
+control-transition, and feature-graph reads. The remaining lanes are not
+hand-waved: `GRAPH-2` needs external/domain pathway labels for a stronger
+closeout, and `GAME-1` needs real adversarial / decision trials.
 
 ## Remaining Execution Order
 
-1. Export real `CTRL-1` LSPS / Oracle transition traces.
-2. Build or acquire real `GRAPH-2` labels.
-3. Design `GAME-1` adversarial / multi-agent protocol.
+1. Build or acquire external/domain `GRAPH-2` labels.
+2. Run real `GAME-1` adversarial / multi-agent trials.
+3. Expand `OPT-1` / `CAT-1` beyond the current small-N transfer sample.
 4. Revisit dense `TOP-1/2` only when there are reruns or broader prompt
    density sufficient to test within-condition variance.
 

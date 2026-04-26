@@ -395,8 +395,8 @@
       "label": "Nest 1 Real Closeout",
       "nest": "Nest 1",
       "type": "validation status",
-      "status": "mostly supported / named blockers",
-      "description": "Nest 1 is no longer only grammar: LA/GEO, STAT/PROB, NUM/GRP, TOPOG, DYN, INFO/TENSOR, GRAPH-1, GEO-2, and DYN-2 have real support; OPT/CAT are limited; GRAPH-2, CTRL, and GAME need new data or protocol."
+      "status": "mostly supported / named gates",
+      "description": "Nest 1 is no longer only grammar: LA/GEO, STAT/PROB, NUM/GRP, TOPOG, DYN, INFO/TENSOR, GRAPH-1, GEO-2, DYN-2, and CTRL-1 have real support; OPT/CAT are limited; GRAPH-2 has a soft internal bridge-graph pilot; GAME-1 is protocol-ready but data-blocked."
     },
     {
       "id": "topology_invariance",
@@ -413,6 +413,30 @@
       "type": "preregistered next run",
       "status": "pilot complete",
       "description": "Dense trajectory pilot preserved full prompt tokens across all layers for GLM and Hermes. The result supports connectedness invariance, not persistent-loop separation; revisit with reruns or broader prompt density."
+    },
+    {
+      "id": "ctrl1_transition_gate",
+      "label": "CTRL-1 Transition Gate",
+      "nest": "Nest 1",
+      "type": "control validation",
+      "status": "control-supported",
+      "description": "Real staged Prelude/Gemma transition trace: 71 rows, expected-mode shuffled-control p 0.024898, stability-target shuffled-control p 0.0001. This supports architecture-state transition stability, not biology or chemistry claims."
+    },
+    {
+      "id": "graph2_bridge_pilot",
+      "label": "GRAPH-2 Bridge Pilot",
+      "nest": "Nest 1",
+      "type": "graph validation gate",
+      "status": "soft-positive / external labels open",
+      "description": "Internal Phase 5 bridge graph pilot: mirror path AUC 0.74 beats degree baseline 0.6467, but label-shuffle p 0.166683 keeps the full control-supported GRAPH-2 closeout open."
+    },
+    {
+      "id": "game1_protocol_gate",
+      "label": "GAME-1 Protocol Gate",
+      "nest": "Nest 1",
+      "type": "decision validation gate",
+      "status": "protocol-ready / data-blocked",
+      "description": "Executable adversarial / multi-agent validation runner and protocol exist. The lane remains blocked until real mirror/control trial CSV data exists."
     },
     {
       "id": "phase12b_biology_matrix",
@@ -953,6 +977,21 @@
       "source": "topology_invariance",
       "target": "dense_topology_next",
       "relation": "dense trajectory preregistration"
+    },
+    {
+      "source": "nest1_real_closeout",
+      "target": "ctrl1_transition_gate",
+      "relation": "control-transition support"
+    },
+    {
+      "source": "nest1_real_closeout",
+      "target": "graph2_bridge_pilot",
+      "relation": "bridge-graph pilot"
+    },
+    {
+      "source": "nest1_real_closeout",
+      "target": "game1_protocol_gate",
+      "relation": "adversarial protocol gate"
     },
     {
       "source": "phase12b_biology_matrix",
