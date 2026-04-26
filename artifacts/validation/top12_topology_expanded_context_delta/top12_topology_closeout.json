@@ -1,0 +1,267 @@
+{
+  "generated_at": "2026-04-26T17:32:26.923179+00:00",
+  "point_cloud_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded",
+  "output_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/top12_topology_expanded_context_delta",
+  "role": "target_mean_context_delta",
+  "feature_family": "context_delta",
+  "labels": [
+    "lattice_minus_neutral",
+    "lattice_minus_technical",
+    "technical_minus_neutral"
+  ],
+  "pca_dim": 8,
+  "tda_backend": "h0_mst_only",
+  "models": [
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/deepseek_v8_hidden_point_cloud.npz",
+      "status": "topology_invariance_supported",
+      "role": "target_mean_context_delta",
+      "feature_family": "context_delta",
+      "labels": [
+        "lattice_minus_neutral",
+        "lattice_minus_technical",
+        "technical_minus_neutral"
+      ],
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 1.0,
+      "invariance_p_value": 0.000999000999000999,
+      "real": {
+        "score": 3.2510156622404613,
+        "pair_distances": {
+          "lattice_minus_neutral__lattice_minus_technical": 3.2510156622404613,
+          "lattice_minus_neutral__technical_minus_neutral": 53.01329848711098,
+          "lattice_minus_technical__technical_minus_neutral": 49.93061058366932
+        },
+        "counts": {
+          "lattice_minus_neutral": 28,
+          "lattice_minus_technical": 28,
+          "technical_minus_neutral": 28
+        }
+      },
+      "null_mean": 33.8028326687993,
+      "null_std": 14.250613387854122,
+      "null_p95": 58.960852693427825
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/gemma_v8_hidden_point_cloud.npz",
+      "status": "topology_invariance_supported",
+      "role": "target_mean_context_delta",
+      "feature_family": "context_delta",
+      "labels": [
+        "lattice_minus_neutral",
+        "lattice_minus_technical",
+        "technical_minus_neutral"
+      ],
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.98001998001998,
+      "invariance_p_value": 0.02097902097902098,
+      "real": {
+        "score": 3.5864679119967424,
+        "pair_distances": {
+          "lattice_minus_neutral__lattice_minus_technical": 3.5864679119967424,
+          "lattice_minus_neutral__technical_minus_neutral": 26.339736917522398,
+          "lattice_minus_technical__technical_minus_neutral": 25.427444732185226
+        },
+        "counts": {
+          "lattice_minus_neutral": 42,
+          "lattice_minus_technical": 42,
+          "technical_minus_neutral": 42
+        }
+      },
+      "null_mean": 12.828061998329229,
+      "null_std": 7.909068545115093,
+      "null_p95": 28.674984851187713
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/glm_v8_hidden_point_cloud.npz",
+      "status": "topology_invariance_supported",
+      "role": "target_mean_context_delta",
+      "feature_family": "context_delta",
+      "labels": [
+        "lattice_minus_neutral",
+        "lattice_minus_technical",
+        "technical_minus_neutral"
+      ],
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.962037962037962,
+      "invariance_p_value": 0.03896103896103896,
+      "real": {
+        "score": 8.774593781269536,
+        "pair_distances": {
+          "lattice_minus_neutral__lattice_minus_technical": 8.774593781269536,
+          "lattice_minus_neutral__technical_minus_neutral": 29.77627264561941,
+          "lattice_minus_technical__technical_minus_neutral": 21.505826179818882
+        },
+        "counts": {
+          "lattice_minus_neutral": 40,
+          "lattice_minus_technical": 40,
+          "technical_minus_neutral": 40
+        }
+      },
+      "null_mean": 22.872228873301204,
+      "null_std": 9.244658875880361,
+      "null_p95": 39.8274856291499
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/hermes_v8_hidden_point_cloud.npz",
+      "status": "not_control_supported",
+      "role": "target_mean_context_delta",
+      "feature_family": "context_delta",
+      "labels": [
+        "lattice_minus_neutral",
+        "lattice_minus_technical",
+        "technical_minus_neutral"
+      ],
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.7892107892107892,
+      "invariance_p_value": 0.21178821178821178,
+      "real": {
+        "score": 14.906320400650845,
+        "pair_distances": {
+          "lattice_minus_neutral__lattice_minus_technical": 14.906320400650845,
+          "lattice_minus_neutral__technical_minus_neutral": 66.61761882093789,
+          "lattice_minus_technical__technical_minus_neutral": 51.77920519834696
+        },
+        "counts": {
+          "lattice_minus_neutral": 32,
+          "lattice_minus_technical": 32,
+          "technical_minus_neutral": 32
+        }
+      },
+      "null_mean": 29.408172806505323,
+      "null_std": 18.648660989097287,
+      "null_p95": 65.98345517915014
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/mistral_v8_hidden_point_cloud.npz",
+      "status": "not_control_supported",
+      "role": "target_mean_context_delta",
+      "feature_family": "context_delta",
+      "labels": [
+        "lattice_minus_neutral",
+        "lattice_minus_technical",
+        "technical_minus_neutral"
+      ],
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.7612387612387612,
+      "invariance_p_value": 0.23976023976023977,
+      "real": {
+        "score": 23.451001937666163,
+        "pair_distances": {
+          "lattice_minus_neutral__lattice_minus_technical": 23.451001937666163,
+          "lattice_minus_neutral__technical_minus_neutral": 58.60589336114108,
+          "lattice_minus_technical__technical_minus_neutral": 35.1991604150788
+        },
+        "counts": {
+          "lattice_minus_neutral": 32,
+          "lattice_minus_technical": 32,
+          "technical_minus_neutral": 32
+        }
+      },
+      "null_mean": 30.254067892218448,
+      "null_std": 12.899570706904804,
+      "null_p95": 51.63929129124358
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/nemotron_v8_hidden_point_cloud.npz",
+      "status": "topology_invariance_supported",
+      "role": "target_mean_context_delta",
+      "feature_family": "context_delta",
+      "labels": [
+        "lattice_minus_neutral",
+        "lattice_minus_technical",
+        "technical_minus_neutral"
+      ],
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.955044955044955,
+      "invariance_p_value": 0.04595404595404595,
+      "real": {
+        "score": 5.9743687258698355,
+        "pair_distances": {
+          "lattice_minus_neutral__lattice_minus_technical": 5.9743687258698355,
+          "lattice_minus_neutral__technical_minus_neutral": 10.853518725284854,
+          "lattice_minus_technical__technical_minus_neutral": 15.38185947591266
+        },
+        "counts": {
+          "lattice_minus_neutral": 42,
+          "lattice_minus_technical": 42,
+          "technical_minus_neutral": 42
+        }
+      },
+      "null_mean": 16.430500332093477,
+      "null_std": 8.198536511903159,
+      "null_p95": 31.94056416260083
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/qwen_v8_hidden_point_cloud.npz",
+      "status": "topology_invariance_supported",
+      "role": "target_mean_context_delta",
+      "feature_family": "context_delta",
+      "labels": [
+        "lattice_minus_neutral",
+        "lattice_minus_technical",
+        "technical_minus_neutral"
+      ],
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.999000999000999,
+      "invariance_p_value": 0.001998001998001998,
+      "real": {
+        "score": 3.106546191590773,
+        "pair_distances": {
+          "lattice_minus_neutral__lattice_minus_technical": 3.106546191590773,
+          "lattice_minus_neutral__technical_minus_neutral": 9.475700234511587,
+          "lattice_minus_technical__technical_minus_neutral": 6.958353484449285
+        },
+        "counts": {
+          "lattice_minus_neutral": 36,
+          "lattice_minus_technical": 36,
+          "technical_minus_neutral": 36
+        }
+      },
+      "null_mean": 21.878022349213037,
+      "null_std": 9.621852699717337,
+      "null_p95": 38.798427986043116
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/smollm3_v8_hidden_point_cloud.npz",
+      "status": "not_control_supported",
+      "role": "target_mean_context_delta",
+      "feature_family": "context_delta",
+      "labels": [
+        "lattice_minus_neutral",
+        "lattice_minus_technical",
+        "technical_minus_neutral"
+      ],
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.5934065934065934,
+      "invariance_p_value": 0.4075924075924076,
+      "real": {
+        "score": 18.11079113956072,
+        "pair_distances": {
+          "lattice_minus_neutral__lattice_minus_technical": 21.861380016811506,
+          "lattice_minus_neutral__technical_minus_neutral": 39.87597815895331,
+          "lattice_minus_technical__technical_minus_neutral": 18.11079113956072
+        },
+        "counts": {
+          "lattice_minus_neutral": 36,
+          "lattice_minus_technical": 36,
+          "technical_minus_neutral": 36
+        }
+      },
+      "null_mean": 21.19012776723276,
+      "null_std": 9.045316487130581,
+      "null_p95": 37.16533796333345
+    }
+  ],
+  "supported_models": 5,
+  "tested_models": 8,
+  "status": "mixed_partial_support"
+}

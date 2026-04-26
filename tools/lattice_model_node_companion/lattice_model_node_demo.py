@@ -16,13 +16,13 @@ OUTPUT_PATH = OUTPUT_DIR / "lattice_model_node_demo.html"
 
 
 COLORS = {
-    "core": "#f5c542",
-    "Nest 1": "#61dafb",
-    "Nest 2": "#7ee787",
-    "Nest 3": "#ffb86b",
-    "Nest 4": "#ff7ab6",
-    "Nest 5": "#c79cff",
-    "Adapter": "#8bd3ff",
+    "core": "#f4f3ef",
+    "Nest 1": "#d8d8d4",
+    "Nest 2": "#c5c5be",
+    "Nest 3": "#aeadA6",
+    "Nest 4": "#e6e3da",
+    "Nest 5": "#bab8b0",
+    "Adapter": "#f4f3ef",
 }
 
 
@@ -86,7 +86,7 @@ def svg_markup(data: dict, positions: dict[str, dict[str, int]]) -> str:
         node_parts.append(
             f'<g class="node" data-node-id="{node["id"]}" tabindex="0" '
             f'transform="translate({pos["x"]},{pos["y"]})">'
-            f'<rect width="152" height="48" rx="14" fill="#101b26" '
+            f'<rect width="152" height="48" rx="14" fill="#101010" '
             f'stroke="{color}" stroke-width="2" />'
             f'<circle cx="16" cy="24" r="6" fill="{color}" />'
             f'<text x="30" y="21">{label}</text>'
@@ -118,26 +118,27 @@ def render_html(data: dict) -> str:
   <title>{title}</title>
   <style>
     :root {{
-      --bg: #071014;
-      --panel: #0f1a22;
-      --panel-2: #111f2a;
-      --text: #f4f7fb;
-      --muted: #a7b3c2;
-      --line: #244353;
-      --gold: #f5c542;
+      --bg: #040404;
+      --panel: rgba(10, 10, 10, 0.86);
+      --panel-2: rgba(18, 18, 18, 0.92);
+      --text: #f4f3ef;
+      --muted: #c8c6bf;
+      --soft: #9e9c96;
+      --line: rgba(255, 255, 255, 0.16);
+      --gold: #f4f3ef;
     }}
     * {{ box-sizing: border-box; }}
     body {{
       margin: 0;
       background:
-        radial-gradient(circle at 12% 8%, rgba(245, 197, 66, 0.14), transparent 22rem),
-        radial-gradient(circle at 85% 20%, rgba(97, 218, 251, 0.12), transparent 22rem),
-        linear-gradient(135deg, #071014 0%, #0a1219 60%, #071014 100%);
+        radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.10), transparent 22rem),
+        radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.07), transparent 22rem),
+        linear-gradient(135deg, #040404 0%, #101010 58%, #040404 100%);
       color: var(--text);
-      font-family: Avenir Next, Futura, Trebuchet MS, sans-serif;
+      font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }}
     header {{
-      padding: 24px 28px 12px;
+      padding: 24px 28px 18px;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }}
     h1 {{
@@ -155,10 +156,25 @@ def render_html(data: dict) -> str:
       display: inline-block;
       margin-top: 12px;
       padding: 8px 12px;
-      border: 1px solid rgba(245,197,66,0.42);
+      border: 1px solid rgba(255,255,255,0.28);
       border-radius: 999px;
-      color: #ffe38a;
-      background: rgba(245,197,66,0.08);
+      color: var(--text);
+      background: rgba(255,255,255,0.05);
+      font-size: 13px;
+    }}
+    .site-nav {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }}
+    .site-nav a {{
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.04);
       font-size: 13px;
     }}
     main {{
@@ -169,14 +185,14 @@ def render_html(data: dict) -> str:
     aside {{
       border-right: 1px solid rgba(255,255,255,0.08);
       padding: 20px;
-      background: rgba(5, 12, 17, 0.48);
+      background: rgba(5, 5, 5, 0.54);
     }}
     .map-wrap {{
       overflow: auto;
       padding: 20px;
     }}
     .card {{
-      background: linear-gradient(180deg, rgba(17,31,42,0.95), rgba(10,18,25,0.96));
+      background: linear-gradient(180deg, rgba(18,18,18,0.95), rgba(8,8,8,0.96));
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 18px;
       padding: 16px;
@@ -197,7 +213,7 @@ def render_html(data: dict) -> str:
       border-radius: 14px;
       padding: 12px 14px;
       color: var(--text);
-      background: #08131b;
+      background: #080808;
       outline: none;
       font-size: 15px;
     }}
@@ -213,7 +229,7 @@ def render_html(data: dict) -> str:
     }}
     button.secondary {{
       color: var(--text);
-      background: #1b2d3a;
+      background: #181818;
       border: 1px solid rgba(255,255,255,0.1);
     }}
     .chat {{
@@ -229,11 +245,12 @@ def render_html(data: dict) -> str:
     }}
     .bubble.user {{
       justify-self: end;
-      background: #1b6fed;
+      background: #f4f3ef;
+      color: #070707;
       max-width: 88%;
     }}
     .bubble.ai {{
-      background: #142331;
+      background: #151515;
       border: 1px solid rgba(255,255,255,0.08);
     }}
     .node-detail h2 {{
@@ -250,8 +267,8 @@ def render_html(data: dict) -> str:
       margin: 4px 6px 0 0;
       padding: 5px 8px;
       border-radius: 999px;
-      background: #1e3543;
-      color: #d9edf7;
+      background: #1d1d1d;
+      color: #f0eee8;
       font-size: 12px;
     }}
     .engine-list {{
@@ -262,7 +279,7 @@ def render_html(data: dict) -> str:
     .engine {{
       padding: 10px 12px;
       border-radius: 14px;
-      background: #0b1720;
+      background: #0b0b0b;
       border: 1px solid rgba(255,255,255,0.09);
     }}
     .engine strong {{
@@ -272,7 +289,7 @@ def render_html(data: dict) -> str:
     .engine code {{
       display: block;
       margin-top: 6px;
-      color: #f5c542;
+      color: #f4f3ef;
       white-space: normal;
       font-size: 11px;
     }}
@@ -283,14 +300,14 @@ def render_html(data: dict) -> str:
       min-width: 1530px;
       min-height: {svg_height}px;
       background:
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
       background-size: 80px 80px;
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 22px;
     }}
     .edge {{
-      stroke: var(--line);
+      stroke: rgba(255,255,255,0.18);
       stroke-width: 1.4;
       opacity: 0.55;
     }}
@@ -311,7 +328,7 @@ def render_html(data: dict) -> str:
     }}
     .node.dim, .edge.dim {{ opacity: 0.13; }}
     .node.hot rect {{
-      filter: drop-shadow(0 0 12px rgba(245,197,66,0.55));
+      filter: drop-shadow(0 0 12px rgba(255,255,255,0.44));
       stroke-width: 3;
     }}
     .legend {{
@@ -335,6 +352,11 @@ def render_html(data: dict) -> str:
     <h1>{title}</h1>
     <p class="tagline">Local, no-credit browser companion for mapping Mirror Architecture methodology across formal systems, structured-matter representations, coherence, biology, natural systems, and future physics/material AI adapters.</p>
     <span class="schema">{schema}</span>
+    <nav class="site-nav" aria-label="Renaissance Field Lite pages">
+      <a href="index.html">Renaissance Field Lite</a>
+      <a href="mirror-architecture.html">Mirror Architecture Evidence</a>
+      <a href="https://github.com/renaissancefieldlite/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases" target="_blank" rel="noreferrer">Evidence Repository</a>
+    </nav>
   </header>
   <main>
     <aside>
@@ -502,8 +524,20 @@ def render_html(data: dict) -> str:
         return "Environmental fate expands Nest 2 into soil, water, leaching, bioaccumulation, transformation products, transport paths, and risk endpoints.";
       }}
       if (q.includes("topology") || q.includes("topography")) {{
-        showNode("nest1_expanded_formal", false);
-        return "Expanded Nest 1 separates topology from topography: topology tracks connectedness and deformation-stable structure; topography tracks surfaces, ridges, basins, gradients, and localization.";
+        showNode("topology_invariance", false);
+        return "TOP-1/2 currently shows topology preservation/invariance over real V8 point clouds, not context-topology separation. That is a real lane result: Mirror effects are separating in geometry, magnitude, trajectory, topography, and graph structure while connected topology stays stable.";
+      }}
+      if (q.includes("dense") || q.includes("h1") || q.includes("ripser")) {{
+        showNode("dense_topology_next", false);
+        return "Dense TOP is the preregistered next pass: GLM and Hermes first, full prompt tokens across all layers, early/middle/late layer labels, token-region labels, and H0/H1 controls before any topology-separation claim.";
+      }}
+      if (q.includes("nest 1") || q.includes("formal lanes") || q.includes("math lanes")) {{
+        showNode("nest1_real_closeout", false);
+        return "Nest 1 is no longer just grammar. Multiple formal lanes are supported by real traces or controls; OPT/CAT are limited, TOP is partial/invariance, and GRAPH-2/CTRL/GAME still need new data or protocol.";
+      }}
+      if (q.includes("phase 12") || q.includes("phase12") || q.includes("biology matrix")) {{
+        showNode("phase12b_biology_matrix", false);
+        return "Phase 12B has the first 5 x 4 HRV biological adapter matrix. The supported claim is coarse condition-class separation and a real biosignal lane, not clinical biology.";
       }}
       if (q.includes("nutrition") || q.includes("food") || q.includes("protein") || q.includes("carb") || q.includes("fat") || q.includes("vitamin")) {{
         showNode("food_chemistry", false);

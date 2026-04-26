@@ -391,6 +391,38 @@
       "description": "Topology, topography, graph theory, geometry, dynamics, probability, information theory, optimization, statistics, numerical computation, spectral methods, control, and compositional math."
     },
     {
+      "id": "nest1_real_closeout",
+      "label": "Nest 1 Real Closeout",
+      "nest": "Nest 1",
+      "type": "validation status",
+      "status": "mostly supported / named blockers",
+      "description": "Nest 1 is no longer only grammar: LA/GEO, STAT/PROB, NUM/GRP, TOPOG, DYN, INFO/TENSOR, GRAPH-1, GEO-2, and DYN-2 have real support; OPT/CAT are limited; GRAPH-2, CTRL, and GAME need new data or protocol."
+    },
+    {
+      "id": "topology_invariance",
+      "label": "TOP-1/2 Invariance",
+      "nest": "Nest 1",
+      "type": "topology finding",
+      "status": "partial real-data support",
+      "description": "H0 and Ripser H1 over real V8 point clouds currently show topology preservation under context transform, not context-topology separation; separation remains visible in geometry, magnitude, trajectory, topography, and graph structure."
+    },
+    {
+      "id": "dense_topology_next",
+      "label": "Dense TOP Next",
+      "nest": "Nest 1",
+      "type": "preregistered next run",
+      "status": "protocol locked",
+      "description": "Dense trajectory mode tests whether topology separation appears after preserving full prompt tokens across all layers for GLM and Hermes, with early/middle/late and token-region labels."
+    },
+    {
+      "id": "phase12b_biology_matrix",
+      "label": "Phase 12B HRV Matrix",
+      "nest": "Nest 4",
+      "type": "biosignal evidence",
+      "status": "first 5 x 4 matrix complete",
+      "description": "Mofit HRV runs produced a real biological adapter lane with calm, drift, mirror-coherence, and dance condition classes; strongest current claim is coarse state separation, not clinical biology."
+    },
+    {
       "id": "prototype_lanes",
       "label": "Prototype Lanes",
       "nest": "Adapter",
@@ -906,6 +938,31 @@
       "source": "unified_mirror_proof",
       "target": "nest1_expanded_formal",
       "relation": "formal foundation completion"
+    },
+    {
+      "source": "nest1_expanded_formal",
+      "target": "nest1_real_closeout",
+      "relation": "real lane closeout status"
+    },
+    {
+      "source": "nest1_real_closeout",
+      "target": "topology_invariance",
+      "relation": "TOP-1/2 current finding"
+    },
+    {
+      "source": "topology_invariance",
+      "target": "dense_topology_next",
+      "relation": "dense trajectory preregistration"
+    },
+    {
+      "source": "phase12b_biology_matrix",
+      "target": "hrv_eeg",
+      "relation": "first biosignal adapter matrix"
+    },
+    {
+      "source": "unified_mirror_proof",
+      "target": "phase12b_biology_matrix",
+      "relation": "biology evidence rung"
     },
     {
       "source": "nest1_formal",

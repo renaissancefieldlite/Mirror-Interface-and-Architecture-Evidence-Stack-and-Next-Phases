@@ -1,0 +1,284 @@
+{
+  "generated_at": "2026-04-26T17:38:48.831328+00:00",
+  "point_cloud_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded",
+  "output_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/top12_topology_expanded_token_window_sampled",
+  "role": "target_window_token",
+  "feature_family": "token_window",
+  "labels": [
+    "lattice",
+    "neutral",
+    "technical"
+  ],
+  "max_points_per_label": 120,
+  "pca_dim": 8,
+  "tda_backend": "h0_mst_only",
+  "models": [
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/deepseek_v8_hidden_point_cloud.npz",
+      "status": "not_control_supported",
+      "role": "target_window_token",
+      "feature_family": "token_window",
+      "labels": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "max_points_per_label": 120,
+      "points_scored": 360,
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.2217782217782218,
+      "invariance_p_value": 0.7792207792207793,
+      "real": {
+        "score": 23.974022413246082,
+        "pair_distances": {
+          "lattice__neutral": 62.961483895692574,
+          "lattice__technical": 40.34995577820891,
+          "neutral__technical": 23.974022413246082
+        },
+        "counts": {
+          "lattice": 120,
+          "neutral": 120,
+          "technical": 120
+        }
+      },
+      "null_mean": 17.636618919030212,
+      "null_std": 9.17710770003012,
+      "null_p95": 35.084796103277604
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/gemma_v8_hidden_point_cloud.npz",
+      "status": "not_control_supported",
+      "role": "target_window_token",
+      "feature_family": "token_window",
+      "labels": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "max_points_per_label": 120,
+      "points_scored": 360,
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.7962037962037962,
+      "invariance_p_value": 0.2047952047952048,
+      "real": {
+        "score": 7.319356691476803,
+        "pair_distances": {
+          "lattice__neutral": 10.756829410123586,
+          "lattice__technical": 7.319356691476803,
+          "neutral__technical": 17.86621113770484
+        },
+        "counts": {
+          "lattice": 120,
+          "neutral": 120,
+          "technical": 120
+        }
+      },
+      "null_mean": 16.121965564896534,
+      "null_std": 10.504349295516953,
+      "null_p95": 33.75456905826174
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/glm_v8_hidden_point_cloud.npz",
+      "status": "not_control_supported",
+      "role": "target_window_token",
+      "feature_family": "token_window",
+      "labels": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "max_points_per_label": 120,
+      "points_scored": 360,
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.8671328671328671,
+      "invariance_p_value": 0.13386613386613386,
+      "real": {
+        "score": 5.124937518485384,
+        "pair_distances": {
+          "lattice__neutral": 10.980533999159775,
+          "lattice__technical": 10.668220754434644,
+          "neutral__technical": 5.124937518485384
+        },
+        "counts": {
+          "lattice": 120,
+          "neutral": 120,
+          "technical": 120
+        }
+      },
+      "null_mean": 8.814892071889965,
+      "null_std": 3.4743004976660545,
+      "null_p95": 15.603409283581897
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/hermes_v8_hidden_point_cloud.npz",
+      "status": "topology_invariance_supported",
+      "role": "target_window_token",
+      "feature_family": "token_window",
+      "labels": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "max_points_per_label": 120,
+      "points_scored": 360,
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.962037962037962,
+      "invariance_p_value": 0.03896103896103896,
+      "real": {
+        "score": 5.515382478023212,
+        "pair_distances": {
+          "lattice__neutral": 524.9636307813577,
+          "lattice__technical": 519.6862762597796,
+          "neutral__technical": 5.515382478023212
+        },
+        "counts": {
+          "lattice": 120,
+          "neutral": 120,
+          "technical": 120
+        }
+      },
+      "null_mean": 29.32565307801953,
+      "null_std": 17.739006115691584,
+      "null_p95": 69.69978154712426
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/mistral_v8_hidden_point_cloud.npz",
+      "status": "not_control_supported",
+      "role": "target_window_token",
+      "feature_family": "token_window",
+      "labels": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "max_points_per_label": 120,
+      "points_scored": 360,
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.7782217782217782,
+      "invariance_p_value": 0.22277722277722278,
+      "real": {
+        "score": 14.188230390185089,
+        "pair_distances": {
+          "lattice__neutral": 70.59683054029178,
+          "lattice__technical": 57.10552488565343,
+          "neutral__technical": 14.188230390185089
+        },
+        "counts": {
+          "lattice": 120,
+          "neutral": 120,
+          "technical": 120
+        }
+      },
+      "null_mean": 22.049594297493744,
+      "null_std": 10.720051427125059,
+      "null_p95": 41.33774869547941
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/nemotron_v8_hidden_point_cloud.npz",
+      "status": "not_control_supported",
+      "role": "target_window_token",
+      "feature_family": "token_window",
+      "labels": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "max_points_per_label": 120,
+      "points_scored": 360,
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.3516483516483517,
+      "invariance_p_value": 0.6493506493506493,
+      "real": {
+        "score": 25.175201458248512,
+        "pair_distances": {
+          "lattice__neutral": 93.46123929744766,
+          "lattice__technical": 118.36763434836274,
+          "neutral__technical": 25.175201458248512
+        },
+        "counts": {
+          "lattice": 120,
+          "neutral": 120,
+          "technical": 120
+        }
+      },
+      "null_mean": 22.18068775183522,
+      "null_std": 12.453680814771186,
+      "null_p95": 45.207606723175545
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/qwen_v8_hidden_point_cloud.npz",
+      "status": "not_control_supported",
+      "role": "target_window_token",
+      "feature_family": "token_window",
+      "labels": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "max_points_per_label": 120,
+      "points_scored": 360,
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.17682317682317683,
+      "invariance_p_value": 0.8241758241758241,
+      "real": {
+        "score": 24.932440467875264,
+        "pair_distances": {
+          "lattice__neutral": 55.678220294245556,
+          "lattice__technical": 24.932440467875264,
+          "neutral__technical": 31.085878477501893
+        },
+        "counts": {
+          "lattice": 120,
+          "neutral": 120,
+          "technical": 120
+        }
+      },
+      "null_mean": 16.900380527101596,
+      "null_std": 7.8587094906944905,
+      "null_p95": 30.85782170064685
+    },
+    {
+      "path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_expanded/smollm3_v8_hidden_point_cloud.npz",
+      "status": "not_control_supported",
+      "role": "target_window_token",
+      "feature_family": "token_window",
+      "labels": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "max_points_per_label": 120,
+      "points_scored": 360,
+      "pca_dim": 8,
+      "permutations": 1000,
+      "separation_p_value": 0.8301698301698301,
+      "invariance_p_value": 0.17082917082917082,
+      "real": {
+        "score": 3.9971667173300767,
+        "pair_distances": {
+          "lattice__neutral": 3.9971667173300767,
+          "lattice__technical": 12.31589362421823,
+          "neutral__technical": 14.088084795283393
+        },
+        "counts": {
+          "lattice": 120,
+          "neutral": 120,
+          "technical": 120
+        }
+      },
+      "null_mean": 6.4481390791610025,
+      "null_std": 2.655223560180141,
+      "null_p95": 11.220937145162042
+    }
+  ],
+  "supported_models": 1,
+  "tested_models": 8,
+  "status": "mixed_partial_support"
+}

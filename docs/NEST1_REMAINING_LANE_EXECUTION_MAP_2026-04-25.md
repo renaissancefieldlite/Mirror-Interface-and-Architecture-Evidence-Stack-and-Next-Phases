@@ -26,8 +26,8 @@ Rick has been calling the `21`-lane Nest 1 map.
 | --- | --- | --- | --- |
 | `GEO-1` | control-supported | Phase 6 geometry closeout: `2/3` mutual bridge-pair hits, shuffled-label p `0.014286`; pair-distance p `0.009524` | optional deeper UMAP / subspace runner |
 | `GEO-2` | control-supported | Phase 6 subspace preservation recovered expected bridge-pair relation above controls in full, Phase 3, and Phase 5 subspaces; full-subspace p `0.007143` / rank p `0.038095` | optional deeper UMAP / raw-vector manifold runner |
-| `TOP-1` | blocked | no raw hidden-state point clouds in current exports | export raw hidden-state point clouds |
-| `TOP-2` | blocked | persistent homology cannot be run honestly on scalar summaries | run Ripser / scikit-tda after point-cloud export |
+| `TOP-1` | real-data partial support | 8/8 V8 hidden-state point clouds exported; `target_span_mean` H0 topology-invariance support in `5/8` models under shuffled-label controls | export richer token-level point clouds |
+| `TOP-2` | H0 topology-lite partial support / full PH pending | first closeout supports topology invariance, not topology separation; `last_token` support `3/8`, all-role support `4/8`; no H1 backend yet | add Ripser / scikit-tda or GUDHI and test H1 / richer filtrations |
 | `TOPOG-1` | control-supported | Phase 4 anchor/layer stability controls p `5e-05` | optional gradient/surface runner if richer maps exist |
 | `TOPOG-2` | control-supported | Phase 4/5 anchor and path-archetype surfaces are real and controlled | later EEG topography when device exists |
 | `GRAPH-1` | strengthened AI feature-graph support / domain graph still open | binary Phase 6 kNN recovered `2/3` expected edges with weak p `0.380952`; strengthened weighted feature-similarity graph recovered expected-pair score above shuffled labels p `0.007143` and expected-rank average p `0.038095` | run against real attention graph, bridge graph, or external graph labels |
@@ -131,9 +131,59 @@ OPT-1 and CAT-1 are real but limited by the three-model hardware feature-circuit
 TOP, GRAPH-2, CTRL, and GAME are true data/protocol blockers, not grammar claims.
 ```
 
+### TOP-1/2 Point-Cloud Closeout
+
+Completed:
+
+- private V8 runner export hook for real hidden-state point clouds
+- public `TOP-1/2` closeout runner with no synthetic fallback
+- public protocol defining what counts as a valid topology artifact
+- 8/8 compact V8 hidden-state point clouds exported
+- first H0 connectedness closeout run across `target_span_mean`, `last_token`,
+  and `all` role views
+- expanded point-cloud export across token-window, layer-delta,
+  layer-curvature, and context-delta surfaces
+- first Ripser H1 persistent-homology pass across the expanded point-cloud
+  surfaces
+- dense-trajectory export mode added to the private V8 runner for the next
+  pass: full prompt tokens x all layers, with `layer_depth` and `token_region`
+  labels
+- dense TOP preregistration written before execution
+
+Files:
+
+```text
+docs/TOP12_RAW_HIDDEN_VECTOR_EXPORT_PROTOCOL_2026-04-25.md
+docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md
+tools/validation_forks/top12_topology_closeout.py
+artifacts/validation/top12_topology_closeout/top12_topology_closeout_report.md
+artifacts/validation/top12_topology_closeout_last_token/top12_topology_closeout_report.md
+artifacts/validation/top12_topology_closeout_all_roles/top12_topology_closeout_report.md
+artifacts/validation/top12_topology_expanded_trajectory_delta/top12_topology_closeout_report.md
+artifacts/validation/top12_topology_h1_trajectory_delta/top12_topology_closeout_report.md
+artifacts/validation/top12_topology_h1_context_delta/top12_topology_closeout_report.md
+artifacts/validation/top12_topology_h1_token_window_sampled/top12_topology_closeout_report.md
+```
+
+Key read:
+
+```text
+TOP-1/2 is no longer blocked. The compact V8 point clouds show partial
+topology-invariance support, strongest in target-span mean vectors. The
+expanded H0 pass strengthens the invariance read on trajectory-delta surfaces.
+The first H1 persistent-homology pass does not produce topology separation
+either; it gives smaller patches of topology-invariance support. The current
+result is therefore: topology is preserved under context transform, while
+context separation is showing up in geometry, magnitude, trajectory,
+topography, and feature-graph structure.
+```
+
 ## Remaining Work Order
 
-1. `TOP`: export raw hidden-state point clouds, then run persistent homology.
+1. `TOP`: run the preregistered dense-trajectory pilot on `GLM` and `Hermes`,
+   then only graduate to a topology-separation claim if the late-layer
+   lattice-vs-neutral persistence distance beats within-condition rerun
+   variance and shuffled-label controls.
 2. `GRAPH-2`: acquire real graph labels or attention/bridge graph exports.
 3. `CTRL`: export LSPS / Oracle transition traces.
 4. `OPT`: expand beyond the three-model hardware feature sample or run a
@@ -155,6 +205,6 @@ It now has:
   for real pathway / attention-flow validation
 - remaining-lane closeout support for `GEO-2` and `DYN-2`
 - limited small-N transfer evidence for `OPT-1` and `CAT-1`
-- an honest blocked result for `TOP`
+- a real-data partial H0 topology-invariance result for `TOP-1/2`
 
 The remaining proof work is specific, bounded, and executable lane by lane.
