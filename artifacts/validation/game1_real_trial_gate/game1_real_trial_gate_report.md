@@ -1,0 +1,17 @@
+# GAME-1 Real Trial Gate
+
+Status: `blocked_missing_trial_csv`
+
+GAME-1 real-trial gate did not run because no real trial CSV was provided. Templates were written for the next collection pass.
+
+## Requirements
+
+- real mirror/control trial rows, not synthetic examples
+- at least 10 mirror and 10 control rows
+- declared adversarial or multi-agent perturbation schedule
+- transcript_uri or evidence pointer for every row
+- locked 0..1 scores for task_success, policy_consistency, exploit_score, drift_score, and stability_score
+
+## Boundary
+
+No GAME-1 validation was performed.

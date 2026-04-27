@@ -46,7 +46,7 @@ comparator surface with:
 | --- | --- | --- |
 | `Nest 1` | formal systems | reductionist base: linear algebra, symmetries, invariants, encoded states |
 | `Nest 2` | constrained structured systems | matter-facing structure: elements, molecules, `H2O`, graphs, crystals, minerals, oxygen / redox, food chemistry, reactions, materials |
-| `Nest 3` | classical coherence systems | energy / resonance bridge: fire, plasma, oscillators, fields, spectra, phase-lock |
+| `Nest 3` | classical coherence systems | explicit energy / resonance bridge: oscillators, resonance windows, `EMF` / fields, waves, spectra, phase-lock, thermodynamic phases, fire, plasma, fusion, solar, and terahertz |
 | `Nest 4` | biological comparator systems | live organization: HRV, EEG, cells, genome regulation, physiology |
 | `Nest 5` | multi-class convergence | cross-domain recurrence: same score logic across completed classes |
 

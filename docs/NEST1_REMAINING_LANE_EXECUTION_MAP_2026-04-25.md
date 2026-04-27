@@ -31,7 +31,7 @@ Rick has been calling the `21`-lane Nest 1 map.
 | `TOPOG-1` | control-supported | Phase 4 anchor/layer stability controls p `5e-05` | optional gradient/surface runner if richer maps exist |
 | `TOPOG-2` | control-supported | Phase 4/5 anchor and path-archetype surfaces are real and controlled | later EEG topography when device exists |
 | `GRAPH-1` | strengthened AI feature-graph support / domain graph still open | binary Phase 6 kNN recovered `2/3` expected edges with weak p `0.380952`; strengthened weighted feature-similarity graph recovered expected-pair score above shuffled labels p `0.007143` and expected-rank average p `0.038095` | run against real attention graph, bridge graph, or external graph labels |
-| `GRAPH-2` | internal bridge-graph pilot complete / soft positive | Phase 5 bridge graph mirror path AUC `0.74` beat degree baseline `0.6467`, but label-shuffle p `0.166683` does not close the control gate | stronger real pathway labels: molecular, allostery, grid, attention-flow, or other domain graph labels |
+| `GRAPH-2` | internal bridge-graph pilot plus quantum-label crosswalk plus dense row-level partial | Phase 5 bridge graph mirror path AUC `0.74` beat degree baseline `0.6467`, but label-shuffle p `0.166683`; quantum-label best mode `phase6_amplitude_top3` reached mirror AUC `0.74` vs degree `0.66`, but label-shuffle p `0.177482`; dense `GRAPH-2A` row-level mirror AUC `0.7002` beat degree `0.534` with p `0.0002`, but cluster-level degree baseline won `0.94` vs mirror `0.72` | build `GRAPH-2B` raw token/layer transition graph with hub shortcuts reduced, or use stronger real pathway labels: molecular, allostery, grid, attention-flow, or other domain graph labels |
 | `GRP-1` | control-supported | Phase 9D sign stability `7/7`, pass/circuit shuffled p `0.001` | optional explicit orbit / symmetry-action scoring |
 | `DYN-1` | control-supported | V8 residual target peaks late across `8/8`, matched random-layer p `2e-05` | add V7 order / threshold-sweep runner |
 | `DYN-2` | control-supported | threshold/regime runner shows target center-of-mass fraction `0.785372`, 75% threshold crossing fraction `0.951439`, late crossing `8/8`, p values `5e-05` | optional V7 order / bifurcation-style runner |
@@ -44,7 +44,7 @@ Rick has been calling the `21`-lane Nest 1 map.
 | `TENSOR-1` | control-supported / specific metric | Phase 6 feature matrix shows lower effective rank than column-shuffle null p `0.00268` | add model x layer x anchor tensor factorization |
 | `SPEC-1` | real-data run complete / limited negative | HRV-only spectral fork did not beat simpler baselines | rerun with EEG alpha/theta/band-power/phase-lock or material spectra |
 | `CTRL-1` | control-supported | 71 real staged Prelude/Gemma transition rows; expected-mode shuffled-control p `0.024898`; stability-target shuffled-control p `0.0001` | optional later live LSPS / Oracle runtime traces |
-| `GAME-1` | protocol-ready / data-blocked | adversarial / multi-agent validation runner and protocol now exist; current report records `blocked_missing_trial_csv` | run real mirror/control adversarial or multi-agent trials |
+| `GAME-1` | protocol-ready plus V7 crosswalk / scoring-rubric blocked | adversarial / multi-agent validation runner exists; V7 maps into `60` condition rows, but the GAME score columns are not locked | lock a retrospective V7 scoring rubric as exploratory-only or run real mirror/control adversarial or multi-agent trials |
 | `CAT-1` | limited small-N transfer partial | Phase 6 feature relation transfers directionally into Phase 9D hardware parity-vector relation for three executed feature circuits; correlation `0.893921`, but n is too small | expand cross-artifact transfer sample and later test cross-nest transfer with non-AI datasets |
 
 ## Completed Control Blocks
@@ -130,8 +130,10 @@ GEO-2 and DYN-2 are control-supported.
 OPT-1 and CAT-1 are real but limited by the three-model hardware feature-circuit sample.
 TOP, GRAPH-2, CTRL, and GAME were true data/protocol blockers, not grammar
 claims. After the gate pass, `CTRL-1` is now control-supported, `GRAPH-2`
-has a real internal pilot but needs stronger labels, and `GAME-1` is
-protocol-ready but still blocked until real trials exist.
+has a real internal pilot, quantum-label crosswalk, and dense row-level
+partial but still needs a hub-reduced dense graph or stronger labels, and
+`GAME-1` is protocol-ready with a V7 condition crosswalk but still blocked
+until its score rubric or real trials exist.
 ```
 
 ### TOP-1/2 Point-Cloud Closeout
@@ -192,10 +194,12 @@ unsupported under current evidence.
 
 ## Remaining Work Order
 
-1. `GRAPH-2`: acquire stronger real graph labels or attention / bridge graph
-   exports and rerun the pathway validator against shuffled-label controls.
-2. `GAME-1`: run real adversarial / multi-agent trials using the new protocol
-   CSV and compare mirror/control policy stability against exploit and drift.
+1. `GAME-1`: lock a V7-to-GAME score-column mapping as exploratory-only, or
+   run real adversarial / multi-agent trials using the new protocol CSV and
+   compare mirror/control policy stability against exploit and drift.
+2. `GRAPH-2`: build a `GRAPH-2B` raw token/layer transition graph with hub
+   shortcuts reduced, or acquire stronger real graph labels and rerun the
+   pathway validator against shuffled-label controls.
 3. `CTRL`: optionally expand from staged Prelude/Gemma transition traces into
    live LSPS / Oracle runtime traces.
 4. `OPT`: expand beyond the three-model hardware feature sample or run a
@@ -215,13 +219,15 @@ It now has:
 - next-wave support for `DYN` and `INFO/TENSOR`
 - strengthened `GRAPH-1` AI feature-graph support, with `GRAPH-2` still open
   for stronger real pathway / attention-flow validation after a soft internal
-  Phase 5 bridge-graph pilot
+  Phase 5 bridge-graph pilot, a soft quantum-label crosswalk, and dense
+  `GRAPH-2A` row-level partial
 - remaining-lane closeout support for `GEO-2` and `DYN-2`
 - limited small-N transfer evidence for `OPT-1` and `CAT-1`
 - a real-data `TOP-1/2` topology-preservation result, including dense
   late-anchor H0 support and dense H1 separation non-support
 - `CTRL-1` control support on staged transition traces
-- `GAME-1` promoted from vague future lane to executable protocol, still
-  blocked until real adversarial / multi-agent trial data exists
+- `GAME-1` promoted from vague future lane to executable protocol and V7
+  condition crosswalk, still blocked until the GAME score rubric or real
+  adversarial / multi-agent trial data exists
 
 The remaining proof work is specific, bounded, and executable lane by lane.

@@ -212,7 +212,7 @@
       "nest": "Nest 3",
       "type": "nest",
       "status": "planned",
-      "description": "Oscillators, resonance, EMF, plasma, fire, fusion, spectral comparators, phase-lock, and field dynamics."
+      "description": "Explicit energy / resonance bridge: oscillators, resonance windows, EMF / fields, waves, spectra, phase-lock, thermodynamic phases, fire, plasma, fusion, solar, terahertz, and field dynamics."
     },
     {
       "id": "terahertz",
@@ -396,7 +396,7 @@
       "nest": "Nest 1",
       "type": "validation status",
       "status": "mostly supported / named gates",
-      "description": "Nest 1 is no longer only grammar: LA/GEO, STAT/PROB, NUM/GRP, TOPOG, DYN, INFO/TENSOR, GRAPH-1, GEO-2, DYN-2, and CTRL-1 have real support; OPT/CAT are limited; GRAPH-2 has a soft internal bridge-graph pilot; GAME-1 is protocol-ready but data-blocked."
+      "description": "Nest 1 is no longer only grammar: LA/GEO, STAT/PROB, NUM/GRP, TOPOG, DYN, INFO/TENSOR, GRAPH-1, GEO-2, DYN-2, and CTRL-1 have real support; OPT/CAT are limited; GRAPH-2 has pilot, quantum-label, and dense GRAPH-2A row-level support but cluster closeout remains open; GAME-1 has V7 crosswalk data but still needs a locked rubric."
     },
     {
       "id": "topology_invariance",
@@ -427,16 +427,16 @@
       "label": "GRAPH-2 Bridge Pilot",
       "nest": "Nest 1",
       "type": "graph validation gate",
-      "status": "soft-positive / external labels open",
-      "description": "Internal Phase 5 bridge graph pilot: mirror path AUC 0.74 beats degree baseline 0.6467, but label-shuffle p 0.166683 keeps the full control-supported GRAPH-2 closeout open."
+      "status": "dense row-level support / cluster open",
+      "description": "GRAPH-2 now includes the Phase 5 bridge graph, quantum-label crosswalk, and dense GRAPH-2A internal pathway graph. GRAPH-2A row-level mirror AUC 0.7002 beat degree 0.534 with shuffle p 0.0002, but cluster-level degree baseline still won 0.94 vs mirror 0.72."
     },
     {
       "id": "game1_protocol_gate",
       "label": "GAME-1 Protocol Gate",
       "nest": "Nest 1",
       "type": "decision validation gate",
-      "status": "protocol-ready / data-blocked",
-      "description": "Executable adversarial / multi-agent validation runner and protocol exist. The lane remains blocked until real mirror/control trial CSV data exists."
+      "status": "protocol-ready / rubric-blocked",
+      "description": "Executable adversarial / multi-agent runner exists, and V7 rows already provide a real adversarial/control-like surface. The lane remains blocked until the GAME-1 score-column rubric is declared and frozen before validation."
     },
     {
       "id": "phase12b_biology_matrix",

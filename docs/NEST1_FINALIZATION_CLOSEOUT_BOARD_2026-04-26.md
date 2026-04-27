@@ -21,9 +21,11 @@ The honest public sentence is:
 `Nest 1` has a real evidence foundation, but not every formal lane is fully
 finished. Dense `TOP-1/2` has now run as a real pilot. `CTRL-1` is now
 control-supported on real staged transition traces. `GRAPH-2` has a soft
-internal Phase 5 bridge-graph pilot, while external/domain graph labels remain
-open. `GAME-1` now has an executable protocol but no real adversarial /
-multi-agent trial dataset yet.
+internal Phase 5 bridge-graph pilot, a quantum-label crosswalk, and a dense
+`GRAPH-2A` row-level partial, while external/domain graph labels remain open.
+`GAME-1` now has an executable
+protocol plus a V7 condition crosswalk, but no locked GAME score rubric or
+prospective adversarial / multi-agent trial dataset yet.
 
 ## What Is Already Supported
 
@@ -50,7 +52,8 @@ already in the repository.
 | `DE-1 -> Phase 12B HRV` | limited / negative | HRV dynamics did not beat simpler mean-HR / time-domain baselines |
 | `OPT-1` | limited-small-N | artifact-selection behavior exists, but needs a real optimization benchmark |
 | `CAT-1` | limited-small-N | cross-artifact transfer is suggestive, not yet a formal compositional validation |
-| `GRAPH-2` | soft internal bridge-graph pilot | Phase 5 bridge graph mirror path AUC `0.74` beat degree baseline `0.6467`, but did not beat shuffled labels p `0.166683`; external/domain labels still needed |
+| `GRAPH-2` | soft internal bridge-graph pilot plus quantum-label crosswalk plus dense row-level partial | Phase 5 bridge graph mirror path AUC `0.74` beat degree baseline `0.6467`, but did not beat shuffled labels p `0.166683`; quantum-label best mode `phase6_amplitude_top3` also reached mirror AUC `0.74` vs degree `0.66`, but shuffle p `0.177482`; dense `GRAPH-2A` row-level p `0.0002` but cluster-level failed against degree baseline; external/domain labels still needed |
+| `GAME-1` | real-data crosswalk / scoring blocked | V7 maps into `60` condition rows with `10` mirror candidates and `50` control/perturbation rows, but GAME score columns are not locked yet |
 
 These are useful because they prevent overclaiming. They also tell us what data
 resolution each lane actually needs.
@@ -136,7 +139,52 @@ Clean read:
 the internal bridge graph is directionally supportive but not
 shuffle-control-supported. It is a real pilot, not a full `GRAPH-2` closeout.
 
-The stronger `GRAPH-2` closeout still needs real pathway / flow labels such as:
+The quantum-label crosswalk also exists:
+
+```text
+artifacts/validation/graph2_quantum_label_crosswalk/graph2_quantum_label_crosswalk_report.md
+```
+
+Result:
+
+- best mode: `phase6_amplitude_top3`
+- mirror path AUC: `0.74`
+- degree baseline AUC: `0.66`
+- label-shuffle p: `0.177482`
+
+Clean read:
+
+the quantum labels improve the independence of the label source relative to
+the Phase 5 graph taxonomy, but the crosswalk still does not close `GRAPH-2`
+because it does not beat shuffled-label controls.
+
+The dense `GRAPH-2A` internal pathway graph now exists:
+
+```text
+artifacts/validation/graph2a_dense_internal_pathway/graph2a_dense_internal_pathway_report.md
+```
+
+Result:
+
+- node count: `78`
+- edge count: `211`
+- label rows: `280`
+- positive label rows: `30`
+- row-level mirror AUC: `0.7002`
+- row-level degree baseline AUC: `0.534`
+- row-level label-shuffle p: `0.0002`
+- cluster-level mirror AUC: `0.72`
+- cluster-level degree baseline AUC: `0.94`
+- cluster-level label-shuffle p: `0.205179`
+
+Clean read:
+
+the denser graph produces real row-level signal, but it still does not close
+`GRAPH-2` because model-pair cluster controls fail and degree / hub structure
+dominates at cluster level.
+
+The stronger `GRAPH-2` closeout still needs either a raw token/layer pathway
+graph with hub shortcuts reduced or real pathway / flow labels such as:
 
 - molecular pathway labels
 - allostery graph labels
@@ -184,7 +232,7 @@ chemistry, or physical claims.
 
 ## GAME-1 Completion Gate
 
-`GAME-1` now has an executable protocol and runner.
+`GAME-1` now has an executable protocol, runner, and V7 condition crosswalk.
 
 Files:
 
@@ -199,8 +247,30 @@ Current status:
 blocked_missing_trial_csv
 ```
 
-It still needs real adversarial / multi-agent trials before it can be more
-than a protocol-ready lane.
+The V7 condition crosswalk status is:
+
+```text
+crosswalk_ready_scoring_rubric_required
+```
+
+Files:
+
+```text
+artifacts/validation/game1_v7_condition_crosswalk/game1_v7_condition_crosswalk_report.md
+```
+
+Key V7 crosswalk metrics:
+
+- source rows: `10`
+- crosswalk condition rows: `60`
+- mirror candidate rows: `10`
+- control / perturbation rows: `50`
+- lattice beats null rows: `8`
+- lattice beats semantic rows: `7`
+- lattice beats random rows: `7`
+
+It still needs a locked GAME-1 score rubric or new real adversarial /
+multi-agent trials before it can become more than a crosswalk-ready lane.
 
 Required protocol fields:
 
@@ -244,8 +314,9 @@ and labels are not derived from the same score being tested
 
 ### `GAME-1`
 
-`GAME-1` hits only after real trials exist. The protocol is ready; the data
-surface is the missing piece.
+`GAME-1` hits only after either a locked retrospective V7 score rubric is
+declared as exploratory, or new real trials exist. The protocol is ready; the
+score-column mapping is the missing piece.
 
 The clean first version is:
 
@@ -280,12 +351,15 @@ AI, hardware, and biological artifacts, with supported geometry, statistics,
 probability, information, tensor, numerical, group, topographic, dynamic,
 control-transition, and feature-graph reads. The remaining lanes are not
 hand-waved: `GRAPH-2` needs external/domain pathway labels for a stronger
-closeout, and `GAME-1` needs real adversarial / decision trials.
+closeout, and `GAME-1` needs a locked V7 score-column mapping or real
+adversarial / decision trials.
 
 ## Remaining Execution Order
 
-1. Build or acquire external/domain `GRAPH-2` labels.
-2. Run real `GAME-1` adversarial / multi-agent trials.
+1. Lock the `GAME-1` V7 score-column mapping or run real adversarial /
+   multi-agent trials.
+2. Build `GRAPH-2B` with raw token/layer transition edges and reduced hub
+   shortcuts, or acquire external/domain `GRAPH-2` labels.
 3. Expand `OPT-1` / `CAT-1` beyond the current small-N transfer sample.
 4. Revisit dense `TOP-1/2` only when there are reruns or broader prompt
    density sufficient to test within-condition variance.

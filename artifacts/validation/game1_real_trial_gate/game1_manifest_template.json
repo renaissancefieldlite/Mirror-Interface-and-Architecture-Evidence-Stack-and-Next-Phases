@@ -1,0 +1,10 @@
+{
+  "status": "template_only",
+  "task_family": "prompt_injection | routing_conflict | multi_agent_negotiation | fraud_like_decision | other",
+  "mirror_condition_definition": "What changes under the mirror condition.",
+  "control_condition_definition": "What stays baseline under the control condition.",
+  "perturbation_schedule": "How adversarial or multi-agent pressure is assigned.",
+  "scoring_lock": "Scoring rubric must be locked before scoring transcripts.",
+  "minimum_rows": "At least 10 mirror rows and 10 control rows; larger is better.",
+  "real_transcript_required": true
+}

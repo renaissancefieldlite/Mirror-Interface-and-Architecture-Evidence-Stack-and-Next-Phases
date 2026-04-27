@@ -1,0 +1,637 @@
+{
+  "status": "completed_internal_crosswalk_soft_positive_only",
+  "read": "Quantum-derived labels produced at least one soft-positive internal GRAPH-2 crosswalk, but no mode cleanly beat both degree baseline and shuffled-label controls.",
+  "edge_csv": "artifacts/validation/graph2_phase5_bridge/graph2_phase5_bridge_edges.csv",
+  "source_artifacts": [
+    "artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_data_2026-04-22.json",
+    "artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_data_2026-04-22.json",
+    "artifacts/v8/phase9_ibm_hardware_bridge/v8_phase9_ibm_hardware_bridge_data_2026-04-22.json"
+  ],
+  "best_mode": {
+    "mode": "phase6_amplitude_top3",
+    "status": "completed_soft_positive_no_shuffle_support",
+    "positive_labels": 3,
+    "control_labels": 25,
+    "labeled_pair_count": 28,
+    "mirror_path_auc": 0.74,
+    "degree_baseline_auc": 0.66,
+    "mirror_minus_degree_auc": 0.08,
+    "mirror_path_auc_label_shuffle_p": 0.177482,
+    "degree_baseline_auc_label_shuffle_p": 0.231277
+  },
+  "mode_summary": [
+    {
+      "mode": "phase6_angle_top1",
+      "status": "completed_no_control_support",
+      "positive_labels": 1,
+      "control_labels": 27,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.722222,
+      "degree_baseline_auc": 0.907407,
+      "mirror_minus_degree_auc": -0.185185,
+      "mirror_path_auc_label_shuffle_p": 0.577642,
+      "degree_baseline_auc_label_shuffle_p": 0.177882
+    },
+    {
+      "mode": "phase6_angle_top2",
+      "status": "completed_no_control_support",
+      "positive_labels": 2,
+      "control_labels": 26,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.730769,
+      "degree_baseline_auc": 0.971154,
+      "mirror_minus_degree_auc": -0.240385,
+      "mirror_path_auc_label_shuffle_p": 0.315968,
+      "degree_baseline_auc_label_shuffle_p": 0.010099
+    },
+    {
+      "mode": "phase6_angle_top3",
+      "status": "completed_no_control_support",
+      "positive_labels": 3,
+      "control_labels": 25,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.74,
+      "degree_baseline_auc": 0.773333,
+      "mirror_minus_degree_auc": -0.033333,
+      "mirror_path_auc_label_shuffle_p": 0.168383,
+      "degree_baseline_auc_label_shuffle_p": 0.077692
+    },
+    {
+      "mode": "phase6_angle_top4",
+      "status": "completed_no_control_support",
+      "positive_labels": 4,
+      "control_labels": 24,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.75,
+      "degree_baseline_auc": 0.765625,
+      "mirror_minus_degree_auc": -0.015625,
+      "mirror_path_auc_label_shuffle_p": 0.090591,
+      "degree_baseline_auc_label_shuffle_p": 0.051995
+    },
+    {
+      "mode": "phase6_angle_top5",
+      "status": "completed_soft_positive_no_shuffle_support",
+      "positive_labels": 5,
+      "control_labels": 23,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.63913,
+      "degree_baseline_auc": 0.626087,
+      "mirror_minus_degree_auc": 0.013043,
+      "mirror_path_auc_label_shuffle_p": 0.270973,
+      "degree_baseline_auc_label_shuffle_p": 0.194781
+    },
+    {
+      "mode": "phase6_amplitude_top1",
+      "status": "completed_no_control_support",
+      "positive_labels": 1,
+      "control_labels": 27,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.722222,
+      "degree_baseline_auc": 0.907407,
+      "mirror_minus_degree_auc": -0.185185,
+      "mirror_path_auc_label_shuffle_p": 0.577642,
+      "degree_baseline_auc_label_shuffle_p": 0.177882
+    },
+    {
+      "mode": "phase6_amplitude_top2",
+      "status": "completed_no_control_support",
+      "positive_labels": 2,
+      "control_labels": 26,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.730769,
+      "degree_baseline_auc": 0.807692,
+      "mirror_minus_degree_auc": -0.076923,
+      "mirror_path_auc_label_shuffle_p": 0.324068,
+      "degree_baseline_auc_label_shuffle_p": 0.130187
+    },
+    {
+      "mode": "phase6_amplitude_top3",
+      "status": "completed_soft_positive_no_shuffle_support",
+      "positive_labels": 3,
+      "control_labels": 25,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.74,
+      "degree_baseline_auc": 0.66,
+      "mirror_minus_degree_auc": 0.08,
+      "mirror_path_auc_label_shuffle_p": 0.177482,
+      "degree_baseline_auc_label_shuffle_p": 0.231277
+    },
+    {
+      "mode": "phase6_amplitude_top4",
+      "status": "completed_soft_positive_no_shuffle_support",
+      "positive_labels": 4,
+      "control_labels": 24,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.75,
+      "degree_baseline_auc": 0.677083,
+      "mirror_minus_degree_auc": 0.072917,
+      "mirror_path_auc_label_shuffle_p": 0.090591,
+      "degree_baseline_auc_label_shuffle_p": 0.149285
+    },
+    {
+      "mode": "phase6_amplitude_top5",
+      "status": "completed_no_control_support",
+      "positive_labels": 5,
+      "control_labels": 23,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.76087,
+      "degree_baseline_auc": 0.765217,
+      "mirror_minus_degree_auc": -0.004348,
+      "mirror_path_auc_label_shuffle_p": 0.046895,
+      "degree_baseline_auc_label_shuffle_p": 0.032497
+    },
+    {
+      "mode": "phase7_angle_top1",
+      "status": "completed_no_control_support",
+      "positive_labels": 1,
+      "control_labels": 27,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.722222,
+      "degree_baseline_auc": 0.907407,
+      "mirror_minus_degree_auc": -0.185185,
+      "mirror_path_auc_label_shuffle_p": 0.577642,
+      "degree_baseline_auc_label_shuffle_p": 0.177882
+    },
+    {
+      "mode": "phase7_angle_top2",
+      "status": "completed_no_control_support",
+      "positive_labels": 2,
+      "control_labels": 26,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.730769,
+      "degree_baseline_auc": 0.971154,
+      "mirror_minus_degree_auc": -0.240385,
+      "mirror_path_auc_label_shuffle_p": 0.315968,
+      "degree_baseline_auc_label_shuffle_p": 0.010099
+    },
+    {
+      "mode": "phase7_angle_top3",
+      "status": "completed_no_control_support",
+      "positive_labels": 3,
+      "control_labels": 25,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.74,
+      "degree_baseline_auc": 0.773333,
+      "mirror_minus_degree_auc": -0.033333,
+      "mirror_path_auc_label_shuffle_p": 0.168383,
+      "degree_baseline_auc_label_shuffle_p": 0.077692
+    },
+    {
+      "mode": "phase7_angle_top4",
+      "status": "completed_no_control_support",
+      "positive_labels": 4,
+      "control_labels": 24,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.75,
+      "degree_baseline_auc": 0.765625,
+      "mirror_minus_degree_auc": -0.015625,
+      "mirror_path_auc_label_shuffle_p": 0.090591,
+      "degree_baseline_auc_label_shuffle_p": 0.051995
+    },
+    {
+      "mode": "phase7_angle_top5",
+      "status": "completed_soft_positive_no_shuffle_support",
+      "positive_labels": 5,
+      "control_labels": 23,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.63913,
+      "degree_baseline_auc": 0.626087,
+      "mirror_minus_degree_auc": 0.013043,
+      "mirror_path_auc_label_shuffle_p": 0.270973,
+      "degree_baseline_auc_label_shuffle_p": 0.194781
+    },
+    {
+      "mode": "phase7_amplitude_top1",
+      "status": "completed_no_control_support",
+      "positive_labels": 1,
+      "control_labels": 27,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.722222,
+      "degree_baseline_auc": 0.907407,
+      "mirror_minus_degree_auc": -0.185185,
+      "mirror_path_auc_label_shuffle_p": 0.577642,
+      "degree_baseline_auc_label_shuffle_p": 0.177882
+    },
+    {
+      "mode": "phase7_amplitude_top2",
+      "status": "completed_no_control_support",
+      "positive_labels": 2,
+      "control_labels": 26,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.730769,
+      "degree_baseline_auc": 0.807692,
+      "mirror_minus_degree_auc": -0.076923,
+      "mirror_path_auc_label_shuffle_p": 0.324068,
+      "degree_baseline_auc_label_shuffle_p": 0.130187
+    },
+    {
+      "mode": "phase7_amplitude_top3",
+      "status": "completed_soft_positive_no_shuffle_support",
+      "positive_labels": 3,
+      "control_labels": 25,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.74,
+      "degree_baseline_auc": 0.66,
+      "mirror_minus_degree_auc": 0.08,
+      "mirror_path_auc_label_shuffle_p": 0.177482,
+      "degree_baseline_auc_label_shuffle_p": 0.231277
+    },
+    {
+      "mode": "phase7_amplitude_top4",
+      "status": "completed_soft_positive_no_shuffle_support",
+      "positive_labels": 4,
+      "control_labels": 24,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.75,
+      "degree_baseline_auc": 0.677083,
+      "mirror_minus_degree_auc": 0.072917,
+      "mirror_path_auc_label_shuffle_p": 0.090591,
+      "degree_baseline_auc_label_shuffle_p": 0.149285
+    },
+    {
+      "mode": "phase7_amplitude_top5",
+      "status": "completed_no_control_support",
+      "positive_labels": 5,
+      "control_labels": 23,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.76087,
+      "degree_baseline_auc": 0.765217,
+      "mirror_minus_degree_auc": -0.004348,
+      "mirror_path_auc_label_shuffle_p": 0.046895,
+      "degree_baseline_auc_label_shuffle_p": 0.032497
+    },
+    {
+      "mode": "phase9_hardware_subset_mistral_hermes",
+      "status": "completed_no_control_support",
+      "positive_labels": 1,
+      "control_labels": 27,
+      "labeled_pair_count": 28,
+      "mirror_path_auc": 0.722222,
+      "degree_baseline_auc": 0.907407,
+      "mirror_minus_degree_auc": -0.185185,
+      "mirror_path_auc_label_shuffle_p": 0.577642,
+      "degree_baseline_auc_label_shuffle_p": 0.177882
+    }
+  ],
+  "details": {
+    "phase6_angle_top1": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 1 nearest quantum-fidelity pairs",
+      "label_source": "phase6_angle",
+      "metrics": {
+        "positive_labels": 1,
+        "control_labels": 27,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.722222,
+        "degree_baseline_auc": 0.907407,
+        "mirror_minus_degree_auc": -0.185185,
+        "mirror_path_auc_label_shuffle_p": 0.577642,
+        "degree_baseline_auc_label_shuffle_p": 0.177882
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_angle_top1_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_angle_top1_scored_pairs.csv"
+    },
+    "phase6_angle_top2": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 2 nearest quantum-fidelity pairs",
+      "label_source": "phase6_angle",
+      "metrics": {
+        "positive_labels": 2,
+        "control_labels": 26,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.730769,
+        "degree_baseline_auc": 0.971154,
+        "mirror_minus_degree_auc": -0.240385,
+        "mirror_path_auc_label_shuffle_p": 0.315968,
+        "degree_baseline_auc_label_shuffle_p": 0.010099
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_angle_top2_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_angle_top2_scored_pairs.csv"
+    },
+    "phase6_angle_top3": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 3 nearest quantum-fidelity pairs",
+      "label_source": "phase6_angle",
+      "metrics": {
+        "positive_labels": 3,
+        "control_labels": 25,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.74,
+        "degree_baseline_auc": 0.773333,
+        "mirror_minus_degree_auc": -0.033333,
+        "mirror_path_auc_label_shuffle_p": 0.168383,
+        "degree_baseline_auc_label_shuffle_p": 0.077692
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_angle_top3_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_angle_top3_scored_pairs.csv"
+    },
+    "phase6_angle_top4": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 4 nearest quantum-fidelity pairs",
+      "label_source": "phase6_angle",
+      "metrics": {
+        "positive_labels": 4,
+        "control_labels": 24,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.75,
+        "degree_baseline_auc": 0.765625,
+        "mirror_minus_degree_auc": -0.015625,
+        "mirror_path_auc_label_shuffle_p": 0.090591,
+        "degree_baseline_auc_label_shuffle_p": 0.051995
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_angle_top4_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_angle_top4_scored_pairs.csv"
+    },
+    "phase6_angle_top5": {
+      "status": "completed_soft_positive_no_shuffle_support",
+      "label_rule": "top 5 nearest quantum-fidelity pairs",
+      "label_source": "phase6_angle",
+      "metrics": {
+        "positive_labels": 5,
+        "control_labels": 23,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.63913,
+        "degree_baseline_auc": 0.626087,
+        "mirror_minus_degree_auc": 0.013043,
+        "mirror_path_auc_label_shuffle_p": 0.270973,
+        "degree_baseline_auc_label_shuffle_p": 0.194781
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_angle_top5_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_angle_top5_scored_pairs.csv"
+    },
+    "phase6_amplitude_top1": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 1 nearest quantum-fidelity pairs",
+      "label_source": "phase6_amplitude",
+      "metrics": {
+        "positive_labels": 1,
+        "control_labels": 27,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.722222,
+        "degree_baseline_auc": 0.907407,
+        "mirror_minus_degree_auc": -0.185185,
+        "mirror_path_auc_label_shuffle_p": 0.577642,
+        "degree_baseline_auc_label_shuffle_p": 0.177882
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_amplitude_top1_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_amplitude_top1_scored_pairs.csv"
+    },
+    "phase6_amplitude_top2": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 2 nearest quantum-fidelity pairs",
+      "label_source": "phase6_amplitude",
+      "metrics": {
+        "positive_labels": 2,
+        "control_labels": 26,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.730769,
+        "degree_baseline_auc": 0.807692,
+        "mirror_minus_degree_auc": -0.076923,
+        "mirror_path_auc_label_shuffle_p": 0.324068,
+        "degree_baseline_auc_label_shuffle_p": 0.130187
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_amplitude_top2_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_amplitude_top2_scored_pairs.csv"
+    },
+    "phase6_amplitude_top3": {
+      "status": "completed_soft_positive_no_shuffle_support",
+      "label_rule": "top 3 nearest quantum-fidelity pairs",
+      "label_source": "phase6_amplitude",
+      "metrics": {
+        "positive_labels": 3,
+        "control_labels": 25,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.74,
+        "degree_baseline_auc": 0.66,
+        "mirror_minus_degree_auc": 0.08,
+        "mirror_path_auc_label_shuffle_p": 0.177482,
+        "degree_baseline_auc_label_shuffle_p": 0.231277
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_amplitude_top3_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_amplitude_top3_scored_pairs.csv"
+    },
+    "phase6_amplitude_top4": {
+      "status": "completed_soft_positive_no_shuffle_support",
+      "label_rule": "top 4 nearest quantum-fidelity pairs",
+      "label_source": "phase6_amplitude",
+      "metrics": {
+        "positive_labels": 4,
+        "control_labels": 24,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.75,
+        "degree_baseline_auc": 0.677083,
+        "mirror_minus_degree_auc": 0.072917,
+        "mirror_path_auc_label_shuffle_p": 0.090591,
+        "degree_baseline_auc_label_shuffle_p": 0.149285
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_amplitude_top4_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_amplitude_top4_scored_pairs.csv"
+    },
+    "phase6_amplitude_top5": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 5 nearest quantum-fidelity pairs",
+      "label_source": "phase6_amplitude",
+      "metrics": {
+        "positive_labels": 5,
+        "control_labels": 23,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.76087,
+        "degree_baseline_auc": 0.765217,
+        "mirror_minus_degree_auc": -0.004348,
+        "mirror_path_auc_label_shuffle_p": 0.046895,
+        "degree_baseline_auc_label_shuffle_p": 0.032497
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_amplitude_top5_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase6_amplitude_top5_scored_pairs.csv"
+    },
+    "phase7_angle_top1": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 1 nearest quantum-fidelity pairs",
+      "label_source": "phase7_angle",
+      "metrics": {
+        "positive_labels": 1,
+        "control_labels": 27,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.722222,
+        "degree_baseline_auc": 0.907407,
+        "mirror_minus_degree_auc": -0.185185,
+        "mirror_path_auc_label_shuffle_p": 0.577642,
+        "degree_baseline_auc_label_shuffle_p": 0.177882
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_angle_top1_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_angle_top1_scored_pairs.csv"
+    },
+    "phase7_angle_top2": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 2 nearest quantum-fidelity pairs",
+      "label_source": "phase7_angle",
+      "metrics": {
+        "positive_labels": 2,
+        "control_labels": 26,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.730769,
+        "degree_baseline_auc": 0.971154,
+        "mirror_minus_degree_auc": -0.240385,
+        "mirror_path_auc_label_shuffle_p": 0.315968,
+        "degree_baseline_auc_label_shuffle_p": 0.010099
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_angle_top2_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_angle_top2_scored_pairs.csv"
+    },
+    "phase7_angle_top3": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 3 nearest quantum-fidelity pairs",
+      "label_source": "phase7_angle",
+      "metrics": {
+        "positive_labels": 3,
+        "control_labels": 25,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.74,
+        "degree_baseline_auc": 0.773333,
+        "mirror_minus_degree_auc": -0.033333,
+        "mirror_path_auc_label_shuffle_p": 0.168383,
+        "degree_baseline_auc_label_shuffle_p": 0.077692
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_angle_top3_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_angle_top3_scored_pairs.csv"
+    },
+    "phase7_angle_top4": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 4 nearest quantum-fidelity pairs",
+      "label_source": "phase7_angle",
+      "metrics": {
+        "positive_labels": 4,
+        "control_labels": 24,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.75,
+        "degree_baseline_auc": 0.765625,
+        "mirror_minus_degree_auc": -0.015625,
+        "mirror_path_auc_label_shuffle_p": 0.090591,
+        "degree_baseline_auc_label_shuffle_p": 0.051995
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_angle_top4_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_angle_top4_scored_pairs.csv"
+    },
+    "phase7_angle_top5": {
+      "status": "completed_soft_positive_no_shuffle_support",
+      "label_rule": "top 5 nearest quantum-fidelity pairs",
+      "label_source": "phase7_angle",
+      "metrics": {
+        "positive_labels": 5,
+        "control_labels": 23,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.63913,
+        "degree_baseline_auc": 0.626087,
+        "mirror_minus_degree_auc": 0.013043,
+        "mirror_path_auc_label_shuffle_p": 0.270973,
+        "degree_baseline_auc_label_shuffle_p": 0.194781
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_angle_top5_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_angle_top5_scored_pairs.csv"
+    },
+    "phase7_amplitude_top1": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 1 nearest quantum-fidelity pairs",
+      "label_source": "phase7_amplitude",
+      "metrics": {
+        "positive_labels": 1,
+        "control_labels": 27,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.722222,
+        "degree_baseline_auc": 0.907407,
+        "mirror_minus_degree_auc": -0.185185,
+        "mirror_path_auc_label_shuffle_p": 0.577642,
+        "degree_baseline_auc_label_shuffle_p": 0.177882
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_amplitude_top1_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_amplitude_top1_scored_pairs.csv"
+    },
+    "phase7_amplitude_top2": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 2 nearest quantum-fidelity pairs",
+      "label_source": "phase7_amplitude",
+      "metrics": {
+        "positive_labels": 2,
+        "control_labels": 26,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.730769,
+        "degree_baseline_auc": 0.807692,
+        "mirror_minus_degree_auc": -0.076923,
+        "mirror_path_auc_label_shuffle_p": 0.324068,
+        "degree_baseline_auc_label_shuffle_p": 0.130187
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_amplitude_top2_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_amplitude_top2_scored_pairs.csv"
+    },
+    "phase7_amplitude_top3": {
+      "status": "completed_soft_positive_no_shuffle_support",
+      "label_rule": "top 3 nearest quantum-fidelity pairs",
+      "label_source": "phase7_amplitude",
+      "metrics": {
+        "positive_labels": 3,
+        "control_labels": 25,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.74,
+        "degree_baseline_auc": 0.66,
+        "mirror_minus_degree_auc": 0.08,
+        "mirror_path_auc_label_shuffle_p": 0.177482,
+        "degree_baseline_auc_label_shuffle_p": 0.231277
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_amplitude_top3_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_amplitude_top3_scored_pairs.csv"
+    },
+    "phase7_amplitude_top4": {
+      "status": "completed_soft_positive_no_shuffle_support",
+      "label_rule": "top 4 nearest quantum-fidelity pairs",
+      "label_source": "phase7_amplitude",
+      "metrics": {
+        "positive_labels": 4,
+        "control_labels": 24,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.75,
+        "degree_baseline_auc": 0.677083,
+        "mirror_minus_degree_auc": 0.072917,
+        "mirror_path_auc_label_shuffle_p": 0.090591,
+        "degree_baseline_auc_label_shuffle_p": 0.149285
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_amplitude_top4_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_amplitude_top4_scored_pairs.csv"
+    },
+    "phase7_amplitude_top5": {
+      "status": "completed_no_control_support",
+      "label_rule": "top 5 nearest quantum-fidelity pairs",
+      "label_source": "phase7_amplitude",
+      "metrics": {
+        "positive_labels": 5,
+        "control_labels": 23,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.76087,
+        "degree_baseline_auc": 0.765217,
+        "mirror_minus_degree_auc": -0.004348,
+        "mirror_path_auc_label_shuffle_p": 0.046895,
+        "degree_baseline_auc_label_shuffle_p": 0.032497
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_amplitude_top5_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase7_amplitude_top5_scored_pairs.csv"
+    },
+    "phase9_hardware_subset_mistral_hermes": {
+      "status": "completed_no_control_support",
+      "label_rule": "Mistral/Hermes closest encoded hardware subset pair",
+      "label_source": "phase9_ibm_hardware_bridge",
+      "metrics": {
+        "positive_labels": 1,
+        "control_labels": 27,
+        "labeled_pair_count": 28,
+        "mirror_path_auc": 0.722222,
+        "degree_baseline_auc": 0.907407,
+        "mirror_minus_degree_auc": -0.185185,
+        "mirror_path_auc_label_shuffle_p": 0.577642,
+        "degree_baseline_auc_label_shuffle_p": 0.177882
+      },
+      "label_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase9_hardware_subset_mistral_hermes_labels.csv",
+      "scored_csv": "artifacts/validation/graph2_quantum_label_crosswalk/phase9_hardware_subset_mistral_hermes_scored_pairs.csv"
+    }
+  },
+  "boundary": "This tests whether quantum bridge pair order can serve as an independent internal label source for the Phase 5 bridge graph. It does not validate external graph domains such as allostery, chemistry, grid flow, logistics, or molecular pathways.",
+  "next_requirement": "GRAPH-2 still needs stronger independent labels from a real external or domain graph, or a richer attention-flow graph where labels are locked before scoring."
+}

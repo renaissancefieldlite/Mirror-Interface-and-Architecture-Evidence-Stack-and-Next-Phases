@@ -1,0 +1,39 @@
+{
+  "status": "completed_soft_positive_internal_graph2a",
+  "read": "GRAPH-2A dense internal pathway graph produced a directional / partial signal, but did not close both row-level and cluster-level controls.",
+  "primary_label_mode": "phase6_amplitude_top3",
+  "source_artifacts": {
+    "graph_source": "artifacts/v8/phase5_internal_bridge/v8_phase5_internal_bridge_pack_data_2026-04-22.json",
+    "label_source": "artifacts/v8/phase6_pennylane_encoding/v8_phase6_pennylane_encoding_data_2026-04-22.json",
+    "secondary_crosscheck_label_source": "artifacts/v8/phase7_qiskit_mirror/v8_phase7_qiskit_mirror_data_2026-04-22.json"
+  },
+  "graph": {
+    "node_count": 78,
+    "edge_count": 211,
+    "label_rows": 280,
+    "positive_label_rows": 30,
+    "control_label_rows": 250,
+    "positive_model_pairs": [
+      "GLM|Hermes",
+      "GLM|Mistral",
+      "Hermes|Mistral"
+    ],
+    "cluster_rows": 28
+  },
+  "row_level_metrics": {
+    "mirror_path_auc": 0.7002,
+    "degree_baseline_auc": 0.534,
+    "mirror_minus_degree_auc": 0.1662,
+    "mirror_path_auc_label_shuffle_p": 0.0002,
+    "degree_baseline_auc_label_shuffle_p": 0.260974
+  },
+  "cluster_level_metrics": {
+    "mirror_path_auc": 0.72,
+    "degree_baseline_auc": 0.94,
+    "mirror_minus_degree_auc": -0.22,
+    "mirror_path_auc_label_shuffle_p": 0.205179,
+    "degree_baseline_auc_label_shuffle_p": 0.0048
+  },
+  "boundary": "This is an internal GRAPH-2A pathway validation over Phase 4/5 graph structure and Phase 6 quantum labels. It does not validate external allostery, chemistry, grid flow, logistics, molecular pathways, or universal graph structure.",
+  "next_step": "If supported, rerun with Phase 7 labels and leave-one-model-family controls. If soft or unsupported, build a still denser token/layer graph from raw V8 point-cloud exports before moving to external domain graphs."
+}
