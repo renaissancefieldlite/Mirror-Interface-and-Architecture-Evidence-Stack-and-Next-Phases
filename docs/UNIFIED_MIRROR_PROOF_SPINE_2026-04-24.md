@@ -172,6 +172,11 @@ Completed enough to show:
   `TOP-1/TOP-2`, and `TOPOG-1/TOPOG-2`, with `CAT-1` kept beside the map as
   the compositional transfer rule; this prevents the simplified visual from
   hiding the full formal substrate
+- the attention / MLP missing-link gate is now executable:
+  `tools/validation_forks/v8_attention_mlp_export.py` exists, and the
+  `GLM` / `Hermes` checkpoint readiness pass is `check_only_ready`; full
+  attention top-k edge and MLP delta CSV exports are still pending before any
+  validation claim
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are now mapped as candidate bridges, not closed
@@ -184,29 +189,32 @@ Completed enough to show:
 
 Immediate next work:
 
-1. keep the `Nest 1` full lane inventory as the public index for the formal
+1. run the full `GLM` / `Hermes` attention top-k and MLP delta export when
+   local compute is available, then feed the CSVs into `GRAPH-2C` and MLP
+   validation controls
+2. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
-2. apply the same standard lane by lane: real artifact, locked baseline,
+3. apply the same standard lane by lane: real artifact, locked baseline,
    scored result, honest status
-3. review and publish the local `Nest 1` control-closeout, graph-strengthened,
+4. review and publish the local `Nest 1` control-closeout, graph-strengthened,
    Phase 12B control-closeout, and remaining-lane closeout passes
-4. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
+5. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
    Latin-square order rotation and raw `RR` capture whenever available
-5. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
+6. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
    rerun density, local-neighborhood topology, layer-transition branch
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-6. move `Engine 02` beyond grammar mapping by adding curated element,
+7. move `Engine 02` beyond grammar mapping by adding curated element,
    molecule, crystal, spectral, environmental fate, and reaction datasets
-7. run `Engine 02V` with `RDKit` and a public molecule benchmark such as
+8. run `Engine 02V` with `RDKit` and a public molecule benchmark such as
    `QM9`, `ZINC`, or `ChEMBL`
-8. add `ASE`, `pymatgen`, and materials-model adapter paths where
+9. add `ASE`, `pymatgen`, and materials-model adapter paths where
    useful
-9. build the contaminant / PFAS validation lane against known degradation
+10. build the contaminant / PFAS validation lane against known degradation
    pathway data
-10. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
-11. keep the companion updated as each engine becomes real
+11. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
+12. keep the companion updated as each engine becomes real
 
 Companion-facing prototype lanes:
 

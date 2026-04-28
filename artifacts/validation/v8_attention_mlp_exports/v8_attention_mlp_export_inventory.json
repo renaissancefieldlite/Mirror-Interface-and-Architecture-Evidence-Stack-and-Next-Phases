@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-04-28T22:47:05.694598+00:00",
+  "status": "check_only_ready",
+  "manifest": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/v8_residual_stream_manifest_2026-04-19.json",
+  "selected_models": [
+    "GLM",
+    "Hermes"
+  ],
+  "selected_contexts": [],
+  "device": "cpu",
+  "dtype": "auto",
+  "max_length": 512,
+  "layer_scope": "early,middle,late",
+  "inventory": [
+    {
+      "display_name": "Hermes",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/teknium_OpenHermes-2.5-Mistral-7B",
+      "checkpoint_status": "ready",
+      "contexts": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "context_count": 3
+    },
+    {
+      "display_name": "GLM",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/THUDM_GLM-4-9B-0414",
+      "checkpoint_status": "ready",
+      "contexts": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "context_count": 3
+    }
+  ],
+  "exports": {}
+}

@@ -7,6 +7,7 @@ Status: `protocol_locked_missing_exports`
 Companion gate:
 
 - [V8 Attention / MLP Nest 1 Bridge Gate Report](../artifacts/validation/v8_attention_mlp_bridge_gate/v8_attention_mlp_bridge_gate_report.md)
+- [V8 Attention / MLP Export Inventory](../artifacts/validation/v8_attention_mlp_exports/v8_attention_mlp_export_inventory.md)
 
 ## Purpose
 
@@ -55,6 +56,15 @@ Current missing exports:
 - top-k token-to-token attention-flow edges
 - head entropy and anchor-flow summaries
 - MLP/feed-forward block intermediate activations or block-delta summaries
+
+Current execution readiness:
+
+- exporter script exists:
+  `tools/validation_forks/v8_attention_mlp_export.py`
+- `GLM` and `Hermes` checkpoint readiness check passed on `2026-04-28`
+- device currently resolves to `cpu`, so the next full export is real but may
+  be slow on local hardware
+- no attention/MLP validation claim is made until CSV exports and controls run
 
 ## GRAPH-2 Connection
 

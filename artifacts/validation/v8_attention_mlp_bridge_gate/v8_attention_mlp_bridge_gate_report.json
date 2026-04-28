@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-28T15:09:51.213118+00:00",
-  "status": "protocol_ready_missing_attention_or_mlp_exports",
+  "generated_at": "2026-04-28T22:49:24.263705+00:00",
+  "status": "exporter_ready_missing_full_export",
   "nest1_placement": {
     "attention_heads": [
       "GRAPH-2 measured routing edges",
@@ -20,14 +20,18 @@
     "attention_artifact_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/attention_heads",
     "attention_artifact_files": 0,
     "mlp_artifact_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/mlp_blocks",
-    "mlp_artifact_files": 0
+    "mlp_artifact_files": 0,
+    "exporter_script_exists": true,
+    "export_inventory_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports/v8_attention_mlp_export_inventory.json",
+    "export_inventory_status": "check_only_ready",
+    "export_attention_csv_files": 0,
+    "export_mlp_csv_files": 0
   },
   "locked_missing_inputs": [
-    "per-layer / per-head attention matrices or top-k attention-flow edges",
-    "token labels including anchor, pre-anchor, post-anchor, bridge, padding, and control tokens",
-    "context labels for lattice, neutral, technical, and any rerun classes",
-    "MLP/feed-forward intermediate activations or block-level delta summaries",
-    "shuffled context, token-window, layer-order, and head-label controls"
+    "full per-layer / per-head attention matrices or top-k attention-flow edge export",
+    "full MLP/feed-forward intermediate activation or block-level delta export",
+    "shuffled context, token-window, layer-order, and head-label controls",
+    "GRAPH-2C / MLP validation after real CSV exports exist"
   ],
   "acceptance_rule": {
     "attention_flow": "mirror/lattice attention-flow graph must beat degree/centrality and shuffled-label controls",

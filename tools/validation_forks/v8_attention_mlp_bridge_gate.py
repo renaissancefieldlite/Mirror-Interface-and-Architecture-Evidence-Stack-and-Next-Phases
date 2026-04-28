@@ -28,6 +28,14 @@ def count_files(path: Path, patterns: tuple[str, ...]) -> int:
 
 def artifact_state() -> dict[str, object]:
     residual_root = ROOT / "artifacts" / "v8" / "residual_stream_bridge"
+    export_root = ROOT / "artifacts" / "validation" / "v8_attention_mlp_exports"
+    export_inventory = export_root / "v8_attention_mlp_export_inventory.json"
+    export_inventory_status = None
+    if export_inventory.exists():
+        try:
+            export_inventory_status = json.loads(export_inventory.read_text(encoding="utf-8")).get("status")
+        except json.JSONDecodeError:
+            export_inventory_status = "invalid_json"
     return {
         "residual_stream_bridge_exists": residual_root.exists(),
         "dense_point_cloud_files": count_files(
@@ -44,16 +52,23 @@ def artifact_state() -> dict[str, object]:
             residual_root / "mlp_blocks",
             ("*.json", "*.jsonl", "*.csv", "*.parquet"),
         ),
+        "exporter_script_exists": (ROOT / "tools" / "validation_forks" / "v8_attention_mlp_export.py").exists(),
+        "export_inventory_path": str(export_inventory),
+        "export_inventory_status": export_inventory_status,
+        "export_attention_csv_files": count_files(export_root, ("*attention*.csv",)),
+        "export_mlp_csv_files": count_files(export_root, ("*mlp*.csv",)),
     }
 
 
 def build_report() -> dict[str, object]:
     state = artifact_state()
-    attention_ready = int(state["attention_artifact_files"]) > 0
-    mlp_ready = int(state["mlp_artifact_files"]) > 0
+    attention_ready = int(state["attention_artifact_files"]) > 0 or int(state["export_attention_csv_files"]) > 0
+    mlp_ready = int(state["mlp_artifact_files"]) > 0 or int(state["export_mlp_csv_files"]) > 0
     status = (
         "ready_for_validation"
         if attention_ready and mlp_ready
+        else "exporter_ready_missing_full_export"
+        if state["export_inventory_status"] == "check_only_ready"
         else "protocol_ready_missing_attention_or_mlp_exports"
     )
     return {
@@ -74,11 +89,10 @@ def build_report() -> dict[str, object]:
         },
         "artifact_state": state,
         "locked_missing_inputs": [
-            "per-layer / per-head attention matrices or top-k attention-flow edges",
-            "token labels including anchor, pre-anchor, post-anchor, bridge, padding, and control tokens",
-            "context labels for lattice, neutral, technical, and any rerun classes",
-            "MLP/feed-forward intermediate activations or block-level delta summaries",
+            "full per-layer / per-head attention matrices or top-k attention-flow edge export",
+            "full MLP/feed-forward intermediate activation or block-level delta export",
             "shuffled context, token-window, layer-order, and head-label controls",
+            "GRAPH-2C / MLP validation after real CSV exports exist",
         ],
         "acceptance_rule": {
             "attention_flow": "mirror/lattice attention-flow graph must beat degree/centrality and shuffled-label controls",
@@ -124,6 +138,10 @@ def write_markdown(report: dict[str, object], path: Path) -> None:
         f"- dense point-cloud files detected: `{state['dense_point_cloud_files']}`",
         f"- attention artifact files detected: `{state['attention_artifact_files']}`",
         f"- MLP artifact files detected: `{state['mlp_artifact_files']}`",
+        f"- exporter script exists: `{state['exporter_script_exists']}`",
+        f"- exporter inventory status: `{state['export_inventory_status']}`",
+        f"- exported attention CSV files detected: `{state['export_attention_csv_files']}`",
+        f"- exported MLP CSV files detected: `{state['export_mlp_csv_files']}`",
         "",
         "## Nest 1 Placement",
         "",

@@ -1,6 +1,6 @@
 # V8 Attention / MLP Nest 1 Bridge Gate
 
-Status: `protocol_ready_missing_attention_or_mlp_exports`
+Status: `exporter_ready_missing_full_export`
 
 ## Clean Read
 
@@ -24,6 +24,10 @@ version of the formal lanes.
 - dense point-cloud files detected: `0`
 - attention artifact files detected: `0`
 - MLP artifact files detected: `0`
+- exporter script exists: `True`
+- exporter inventory status: `check_only_ready`
+- exported attention CSV files detected: `0`
+- exported MLP CSV files detected: `0`
 
 ## Nest 1 Placement
 
@@ -34,11 +38,10 @@ version of the formal lanes.
 
 ## Locked Missing Inputs
 
-- per-layer / per-head attention matrices or top-k attention-flow edges
-- token labels including anchor, pre-anchor, post-anchor, bridge, padding, and control tokens
-- context labels for lattice, neutral, technical, and any rerun classes
-- MLP/feed-forward intermediate activations or block-level delta summaries
+- full per-layer / per-head attention matrices or top-k attention-flow edge export
+- full MLP/feed-forward intermediate activation or block-level delta export
 - shuffled context, token-window, layer-order, and head-label controls
+- GRAPH-2C / MLP validation after real CSV exports exist
 
 ## Acceptance Rule
 
