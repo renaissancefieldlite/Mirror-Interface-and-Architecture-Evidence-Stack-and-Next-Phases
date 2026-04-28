@@ -275,6 +275,9 @@ and funding, not one or the other.
 
 Latest gate reports:
 
+- [Nest 1 And Nest 2 Visual Explainer](./docs/NEST1_NEST2_VISUAL_EXPLAINER_2026-04-28.md)
+- [Nest 1 Formal / Transformer Substrate Visual](./visuals/nest1_formal_transformer_substrate.svg)
+- [Nest 2 Structured Matter Real-Data Visual](./visuals/nest2_structured_matter_real_data_gates.svg)
 - [GRAPH-2B Raw Token / Layer Pathway Report](./artifacts/validation/graph2b_raw_token_layer_pathway/graph2b_raw_token_layer_pathway_report.md)
 - [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
 - [V8 Attention / MLP Nest 1 Bridge Gate Report](./artifacts/validation/v8_attention_mlp_bridge_gate/v8_attention_mlp_bridge_gate_report.md)
