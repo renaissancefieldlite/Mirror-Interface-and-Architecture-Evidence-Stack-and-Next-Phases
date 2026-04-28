@@ -13,6 +13,7 @@ import csv
 import importlib.util
 import json
 import math
+import random
 from pathlib import Path
 
 import numpy as np
@@ -20,6 +21,8 @@ import numpy as np
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUT_DIR = REPO_ROOT / "artifacts" / "validation" / "engine02v_rdkit_molecule"
+PERMUTATIONS = 5000
+SEED = 67
 
 
 def write_report(out_dir: Path, report: dict) -> None:
@@ -58,6 +61,19 @@ def pearson(left: np.ndarray, right: np.ndarray) -> float:
     if len(left) < 3 or np.std(left) == 0 or np.std(right) == 0:
         return 0.0
     return float(np.corrcoef(left, right)[0, 1])
+
+
+def abs_corr_shuffle_p(scores: np.ndarray, targets: np.ndarray) -> tuple[float, float]:
+    observed = abs(pearson(scores, targets))
+    rng = random.Random(SEED)
+    null_values = []
+    target_list = [float(value) for value in targets]
+    for _ in range(PERMUTATIONS):
+        shuffled = target_list[:]
+        rng.shuffle(shuffled)
+        null_values.append(abs(pearson(scores, np.array(shuffled, dtype=float))))
+    p_value = (sum(value >= observed for value in null_values) + 1) / (len(null_values) + 1)
+    return p_value, float(np.mean(null_values))
 
 
 def parse_args() -> argparse.Namespace:
@@ -133,13 +149,29 @@ def main() -> None:
         targets = np.array([row["target"] for row in scored], dtype=float)
         scores = np.array([row["descriptor_score"] for row in scored], dtype=float)
         shuffled = np.array(list(reversed(targets)), dtype=float)
-        status = "completed"
+        observed_corr = pearson(scores, targets)
+        p_value, null_mean_abs_corr = abs_corr_shuffle_p(scores, targets)
+        status = (
+            "completed_real_molecule_signal_supported"
+            if p_value <= 0.05
+            else "completed_no_control_support"
+        )
         metrics = {
             "valid_rows": len(scored),
-            "descriptor_target_pearson": round(pearson(scores, targets), 4),
+            "descriptor_target_pearson": round(observed_corr, 4),
+            "descriptor_target_abs_pearson": round(abs(observed_corr), 4),
             "shuffled_baseline_pearson": round(pearson(scores, shuffled), 4),
+            "permutation_null_mean_abs_pearson": round(null_mean_abs_corr, 4),
+            "abs_pearson_shuffle_p": round(p_value, 6),
+            "permutations": PERMUTATIONS,
+            "seed": SEED,
         }
-        read = "RDKit molecule-property validation completed against the provided dataset."
+        read = (
+            "RDKit molecule-property validation completed with descriptor signal "
+            "above shuffled-target controls."
+            if status == "completed_real_molecule_signal_supported"
+            else "RDKit molecule-property validation completed, but descriptor signal did not beat controls."
+        )
 
     write_report(
         args.out_dir,

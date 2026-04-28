@@ -1,0 +1,4 @@
+pair,phase6_feature_similarity,hardware_parity_similarity
+Hermes/Mistral,0.432328,0.855954
+Hermes/Nemotron,0.121684,0.673342
+Mistral/Nemotron,0.119611,0.756579

@@ -1,0 +1,72 @@
+{
+  "status": "completed_v7_rubric_control_supported",
+  "read": "GAME-1 V7 locked-rubric pass supports the declared lattice/mirror condition above shuffled condition-label controls.",
+  "source_artifact": "artifacts/v7/posters/v7_integrated_10_model_summary_pack/v7_integrated_10_model_summary_pack_data_2026-04-19.json",
+  "rubric": [
+    "task_success = 1 if candidate activation delta is positive, else 0",
+    "policy_consistency = fraction of the other four candidate conditions beaten",
+    "exploit_score = fraction of the other four candidate conditions that beat the candidate",
+    "drift_score = fraction of semantic/random/nonclassical drift controls that beat the candidate",
+    "stability_score = 1 - normalized absolute V7 order pressure",
+    "composite = task_success + policy_consistency + stability_score - exploit_score - drift_score"
+  ],
+  "metrics": {
+    "source_rows": 10,
+    "declared_mirror_condition": "lattice",
+    "observed_lattice_mean_composite": 1.6758,
+    "shuffle_mean_composite": 0.7754,
+    "shuffle_max_composite": 2.442467,
+    "shuffle_p_ge_observed": 0.02178,
+    "permutations": 50000,
+    "seed": 67
+  },
+  "condition_summary": [
+    {
+      "candidate_condition": "lattice",
+      "mean_composite": 1.6758,
+      "mean_task_success": 1.0,
+      "mean_policy_consistency": 0.7,
+      "mean_exploit_score": 0.3,
+      "mean_drift_score": 0.333333,
+      "mean_stability_score": 0.609133
+    },
+    {
+      "candidate_condition": "null",
+      "mean_composite": 0.5258,
+      "mean_task_success": 0.4,
+      "mean_policy_consistency": 0.475,
+      "mean_exploit_score": 0.525,
+      "mean_drift_score": 0.433333,
+      "mean_stability_score": 0.609133
+    },
+    {
+      "candidate_condition": "nonclassical",
+      "mean_composite": 0.959133,
+      "mean_task_success": 0.7,
+      "mean_policy_consistency": 0.525,
+      "mean_exploit_score": 0.475,
+      "mean_drift_score": 0.4,
+      "mean_stability_score": 0.609133
+    },
+    {
+      "candidate_condition": "random_floor",
+      "mean_composite": 0.359133,
+      "mean_task_success": 0.5,
+      "mean_policy_consistency": 0.4,
+      "mean_exploit_score": 0.6,
+      "mean_drift_score": 0.55,
+      "mean_stability_score": 0.609133
+    },
+    {
+      "candidate_condition": "semantic_counter",
+      "mean_composite": 0.359133,
+      "mean_task_success": 0.5,
+      "mean_policy_consistency": 0.4,
+      "mean_exploit_score": 0.6,
+      "mean_drift_score": 0.55,
+      "mean_stability_score": 0.609133
+    }
+  ],
+  "boundary": "This is retrospective V7 rubric support only. It does not replace a prospective adversarial / multi-agent benchmark and does not validate biology, chemistry, physical systems, or deployment behavior.",
+  "next_step": "Treat this as retrospective V7 support, then later run prospective adversarial / multi-agent trial CSVs for stronger GAME-1 validation."
+}

@@ -75,12 +75,16 @@ What was actually discovered:
   still does not support context-topology separation. The next gate update
   moved `CTRL-1` from blocked to control-supported on `71` real staged
   prelude transition rows. `GRAPH-2` now has an internal Phase 5 bridge-graph
-  pilot, a quantum-label crosswalk, and a denser `GRAPH-2A` internal pathway
-  graph. `GRAPH-2A` produced row-level control support but failed the
-  model-pair-cluster closeout because degree / hub structure still dominates
-  at cluster level. `GAME-1` now has an executable protocol, runner, and V7
-  condition crosswalk; it remains unvalidated until the score-column rubric is
-  locked or new mirror/control adversarial trials are run.
+  pilot, a quantum-label crosswalk, a denser `GRAPH-2A` internal pathway graph,
+  and a patched `GRAPH-2B` raw token/layer graph. `GRAPH-2A` produced
+  row-level control support but failed the model-pair-cluster closeout, and
+  patched `GRAPH-2B` also did not beat controls; internal `GRAPH-2` is parked
+  until attention-flow or external pathway labels exist. `GAME-1` now has a
+  locked retrospective V7 rubric and is control-supported on existing V7
+  stress/control rows. `OPT-1` is supported as a real condition-optimization
+  benchmark with a small-N hardware pair-selection partial, and `CAT-1` is
+  supported for PennyLane -> Qiskit implementation transfer with a small-N
+  hardware-subset partial.
 
 - `Nest 2 structured-matter methodology discovery`
   `Engine 02` shows that the same scoring grammar can be expressed over
@@ -90,7 +94,12 @@ What was actually discovered:
   biomolecular primitives, polymers / plastics, electrochemistry, catalysis,
   spectral signatures, environmental fate, and materials / semiconductor rows.
   This is a methodology and representation-level result, not physical
-  validation in chemistry.
+  validation in chemistry. `Engine 02V` now adds the first real molecule-data
+  validation fork using `RDKit` and the public Delaney / ESOL molecule-property
+  dataset: `1128` real SMILES rows, descriptor / measured-solubility absolute
+  Pearson `0.5587`, shuffled-target null mean `0.0243`, p `0.0002`. This
+  validates a first cheminformatics property lane, not allostery, PFAS
+  degradation, materials stability, or all of chemistry.
 
 - `Nest 3 classical-coherence map`
   The mirror map does not stop at `HRV` or chemistry. `Nest 3` is the explicit
@@ -177,16 +186,19 @@ Current best read:
   pattern-class and sync-layer tuning, while `EEG + HRV` is needed for stronger
   biological `SPEC/DE/TOPOG` claims. `GEO-2` and `DYN-2` are now
   control-supported on existing traces; `CTRL-1` is now control-supported on
-  staged transition traces; `OPT-1` and `CAT-1` have limited small-N transfer
-  reads; `GRAPH-2` has a soft internal bridge-graph pilot plus quantum-label
-  crosswalk but still needs external/domain graph labels for a stronger
-  closeout; `GAME-1` has a protocol, runner, and V7 condition crosswalk but
-  still needs a locked score rubric or real adversarial / multi-agent trials.
+  staged transition traces; patched `GRAPH-2B` did not close, so internal
+  `GRAPH-2` is parked until stronger independent pathway labels exist;
+  `GAME-1` is now retrospectively control-supported on V7 under a locked
+  rubric; `OPT-1` has a supported condition-optimization benchmark plus
+  small-N hardware-pair partial; and `CAT-1` has PennyLane -> Qiskit
+  composition support plus small-N hardware-subset partial.
 - `Nest 2` now has its first local structured-matter methodology engine: the
   same comparator grammar maps into elements, molecular graphs, water,
   minerals, redox rows, nutrition chemistry, persistent-contaminant pathway
   scoring, and the expanded structured-matter lanes needed for higher nests.
-  It does not physically validate chemistry yet.
+  `Engine 02V` now runs against a real molecule-property dataset with RDKit and
+  supports a first cheminformatics validation lane; broader chemistry, PFAS,
+  allostery, and materials claims remain future dataset-specific validations.
 - The clean physical-data upgrade path is `Engine 02V`: `RDKit` plus a public
   molecule benchmark such as `QM9`, `ZINC`, or `ChEMBL`, followed by a PFAS /
   contaminant degradation-pathway validation lane and a materials stability
@@ -251,6 +263,17 @@ run on real IBM Quantum hardware. That is why the project needs both compute
 and funding, not one or the other.
 
 ## Fast Read Path
+
+Latest gate reports:
+
+- [GRAPH-2B Raw Token / Layer Pathway Report](./artifacts/validation/graph2b_raw_token_layer_pathway/graph2b_raw_token_layer_pathway_report.md)
+- [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
+- [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
+- [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)
+- [OPT-1 Perspective-Nest Benchmark Report](./artifacts/validation/opt1_perspective_nest_benchmark/opt1_perspective_nest_benchmark_report.md)
+- [CAT-1 Composition / Transfer Benchmark](./docs/CAT1_COMPOSITION_TRANSFER_BENCHMARK_2026-04-27.md)
+- [CAT-1 Composition / Transfer Benchmark Report](./artifacts/validation/cat1_composition_transfer_benchmark/cat1_composition_transfer_benchmark_report.md)
+- [Engine 02V RDKit Molecule Validation Fork Report](./artifacts/validation/engine02v_rdkit_molecule/engine02v_rdkit_molecule_report.md)
 
 Start here if you only have a few minutes:
 
