@@ -104,7 +104,7 @@ across different substrates better than null, control, or shuffled baselines?
 | hardware bridge | `Phase 8`, `Phase 9`, `9B`, `9C`, `9D` | simulator-to-hardware and cross-backend continuity established |
 | semantic contextuality | `Phase 10`, `Phase 11` | Bell-type semantic rung defined without overclaiming physical Bell proof |
 | biological adapter | `Phase 12B` | first `5 x 4` HRV matrix complete and control-supported as a coarse adapter; `Phase 12B-L20` large-set expansion defined |
-| formal base | `Nest 1`, deep-learning reality map, validation forks | formal expressibility locked against the actual mathematical substrate of ML; first closeout supports `LA/GEO`, `STAT/PROB`, `NUM/GRP`, `TOPOG`; next wave supports `DYN` and `INFO/TENSOR`; strengthened `GRAPH-1` supports the AI feature graph; remaining closeout supports `GEO-2` and `DYN-2`, leaves `OPT-1` / `CAT-1` as limited small-N transfer, moves `TOP-1/2` from blocked to partial H0 topology-invariance support on 8/8 raw V8 point clouds, and marks `GRAPH-2`, `CTRL`, and `GAME` as true data/protocol blockers; `SPEC-1` and `DE-1` HRV-only forks remain limited / negative |
+| formal base | `Nest 1`, deep-learning reality map, validation forks, full lane inventory | formal expressibility is now tied to a public-safe `21`-lane working inventory plus `CAT-1` meta-transfer note; supported lanes include `LA`, `SYM/INV`, `GEO`, `TOPOG`, `GRAPH-1`, `GRP`, `DYN`, `PROB`, `STAT`, `INFO`, `TENSOR`, `NUM`, `CTRL`, and bounded support for `OPT` / `GAME`; `TOP-1` supports topology preservation while `TOP-2` does not support context-topology separation under current evidence; `GRAPH-2`, `SPEC-1`, and `DE-1` have named missing inputs rather than vague future claims |
 | auxiliary mathematics | Auxiliary Mathematics Atlas | graph theory, topology, geometry, dynamics, probability, information, optimization, statistics, control mapped |
 | structured matter | `Nest 2`, `Engine 02` | methodology / representation rung for elements, molecules, water, minerals, redox, nutrition, contaminants, reactions, functional groups, biomolecular primitives, polymers, electrochemistry, catalysis, spectral readouts, environmental fate, and materials |
 | cosmic dynamics | `Nest 3` | fields, motion, phases, waves, plasma, fusion, orbit, rotation mapped as roadmap targets |
@@ -154,7 +154,8 @@ Completed enough to show:
 - the next `Nest 1` wave has now run locally:
   `DYN` and `INFO/TENSOR` advanced under controls; `GRAPH-lite` was
   strengthened into a weighted `GRAPH-1` AI feature-graph support result;
-  `TOP` is blocked until raw hidden-state point clouds are exported
+  `TOP-1/2` has since moved from blocker to measured topology-preservation
+  read with H1 separation not supported under current evidence
 - the remaining `Nest 1` closeout has now run locally:
   `GEO-2` and `DYN-2` are control-supported; `OPT-1` and `CAT-1` are real but
   limited by the three-model hardware feature-circuit sample; `TOP-1/2` now
@@ -162,8 +163,15 @@ Completed enough to show:
   strongest in target-span vectors at `5/8` supported models; the expanded H0
   trajectory-delta pass reached `7/8` topology-invariance support, while the
   first Ripser H1 pass produced smaller invariance patches and no topology
-  separation; `GRAPH-2`, `CTRL`, and `GAME` remain blocked until their
-  required data/protocol surfaces exist
+  separation; `CTRL-1` is now control-supported, `GAME-1` has a
+  rubric-supported retrospective V7 lane with prospective trials still open,
+  and `GRAPH-2` remains the main formal pathway gate pending attention-flow or
+  external pathway labels
+- the `Nest 1` full lane inventory is now explicit:
+  Rick's working `21`-lane map groups paired rows such as `GEO-1/GEO-2`,
+  `TOP-1/TOP-2`, and `TOPOG-1/TOPOG-2`, with `CAT-1` kept beside the map as
+  the compositional transfer rule; this prevents the simplified visual from
+  hiding the full formal substrate
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are now mapped as candidate bridges, not closed
@@ -176,27 +184,29 @@ Completed enough to show:
 
 Immediate next work:
 
-1. apply the same standard lane by lane: real artifact, locked baseline,
+1. keep the `Nest 1` full lane inventory as the public index for the formal
+   substrate and update it only when lane status changes
+2. apply the same standard lane by lane: real artifact, locked baseline,
    scored result, honest status
-2. review and publish the local `Nest 1` control-closeout, graph-strengthened,
+3. review and publish the local `Nest 1` control-closeout, graph-strengthened,
    Phase 12B control-closeout, and remaining-lane closeout passes
-3. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
+4. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
    Latin-square order rotation and raw `RR` capture whenever available
-4. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
+5. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
    rerun density, local-neighborhood topology, layer-transition branch
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-5. move `Engine 02` beyond grammar mapping by adding curated element,
+6. move `Engine 02` beyond grammar mapping by adding curated element,
    molecule, crystal, spectral, environmental fate, and reaction datasets
-6. run `Engine 02V` with `RDKit` and a public molecule benchmark such as
+7. run `Engine 02V` with `RDKit` and a public molecule benchmark such as
    `QM9`, `ZINC`, or `ChEMBL`
-7. add `ASE`, `pymatgen`, and materials-model adapter paths where
+8. add `ASE`, `pymatgen`, and materials-model adapter paths where
    useful
-8. build the contaminant / PFAS validation lane against known degradation
+9. build the contaminant / PFAS validation lane against known degradation
    pathway data
-9. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
-10. keep the companion updated as each engine becomes real
+10. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
+11. keep the companion updated as each engine becomes real
 
 Companion-facing prototype lanes:
 

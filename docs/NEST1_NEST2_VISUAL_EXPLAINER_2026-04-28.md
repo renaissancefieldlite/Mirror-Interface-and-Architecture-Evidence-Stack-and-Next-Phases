@@ -51,6 +51,11 @@ biological artifacts, while unresolved lanes have named missing inputs
 instead of vague future language
 ```
 
+Full inventory:
+
+- [Nest 1 Full Lane Inventory](./NEST1_FULL_LANE_INVENTORY_2026-04-28.md)
+- [Nest 1 Full Lane Inventory PDF](../artifacts/validation/nest1_full_lane_inventory/nest1_full_lane_inventory_2026-04-28.pdf)
+
 ### What Nest 1 Shows So Far
 
 | Lane | Current read |
