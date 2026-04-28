@@ -63,12 +63,12 @@ def pearson(left: np.ndarray, right: np.ndarray) -> float:
     return float(np.corrcoef(left, right)[0, 1])
 
 
-def abs_corr_shuffle_p(scores: np.ndarray, targets: np.ndarray) -> tuple[float, float]:
+def abs_corr_shuffle_p(scores: np.ndarray, targets: np.ndarray, permutations: int, seed: int) -> tuple[float, float]:
     observed = abs(pearson(scores, targets))
-    rng = random.Random(SEED)
+    rng = random.Random(seed)
     null_values = []
     target_list = [float(value) for value in targets]
-    for _ in range(PERMUTATIONS):
+    for _ in range(permutations):
         shuffled = target_list[:]
         rng.shuffle(shuffled)
         null_values.append(abs(pearson(scores, np.array(shuffled, dtype=float))))
@@ -82,6 +82,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--smiles-column", default="smiles")
     parser.add_argument("--target-column", default="target")
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR)
+    parser.add_argument("--permutations", type=int, default=PERMUTATIONS)
+    parser.add_argument("--seed", type=int, default=SEED)
     return parser.parse_args()
 
 
@@ -150,7 +152,9 @@ def main() -> None:
         scores = np.array([row["descriptor_score"] for row in scored], dtype=float)
         shuffled = np.array(list(reversed(targets)), dtype=float)
         observed_corr = pearson(scores, targets)
-        p_value, null_mean_abs_corr = abs_corr_shuffle_p(scores, targets)
+        p_value, null_mean_abs_corr = abs_corr_shuffle_p(
+            scores, targets, args.permutations, args.seed
+        )
         status = (
             "completed_real_molecule_signal_supported"
             if p_value <= 0.05
@@ -163,8 +167,8 @@ def main() -> None:
             "shuffled_baseline_pearson": round(pearson(scores, shuffled), 4),
             "permutation_null_mean_abs_pearson": round(null_mean_abs_corr, 4),
             "abs_pearson_shuffle_p": round(p_value, 6),
-            "permutations": PERMUTATIONS,
-            "seed": SEED,
+            "permutations": args.permutations,
+            "seed": args.seed,
         }
         read = (
             "RDKit molecule-property validation completed with descriptor signal "

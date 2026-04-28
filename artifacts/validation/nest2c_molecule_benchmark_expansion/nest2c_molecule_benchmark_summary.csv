@@ -1,0 +1,9 @@
+dataset,run,status,valid_rows,target,pearson,abs_pearson,null_mean_abs,p_value,permutations,seed
+ESOL,1,completed_real_molecule_signal_supported,1128,measured_log_solubility,-0.5587,0.5587,0.0243,0.0002,5000,67
+ESOL,2,completed_real_molecule_signal_supported,1128,measured_log_solubility,-0.5587,0.5587,0.0237,0.0002,5000,68
+Lipophilicity,1,completed_real_molecule_signal_supported,4200,exp,0.2042,0.2042,0.0122,0.0002,5000,67
+Lipophilicity,2,completed_real_molecule_signal_supported,4200,exp,0.2042,0.2042,0.0125,0.0002,5000,68
+FreeSolv,1,completed_real_molecule_signal_supported,642,expt,-0.3951,0.3951,0.0323,0.0002,5000,67
+FreeSolv,2,completed_real_molecule_signal_supported,642,expt,-0.3951,0.3951,0.0313,0.0002,5000,68
+QM9 alpha,1,completed_real_molecule_signal_supported,133885,alpha,-0.0898,0.0898,0.0022,0.0002,5000,67
+QM9 alpha,2,completed_real_molecule_signal_supported,133885,alpha,-0.0898,0.0898,0.0022,0.0002,5000,68
