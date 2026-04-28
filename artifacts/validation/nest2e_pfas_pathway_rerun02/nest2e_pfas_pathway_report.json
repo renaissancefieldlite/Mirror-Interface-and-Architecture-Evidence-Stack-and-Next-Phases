@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-04-28T16:13:08.415881+00:00",
+  "status": "completed_real_pfas_pathway_coherence_supported",
+  "valid_parent_product_pairs": 184,
+  "true_mean_pathway_coherence": 0.6246820574146167,
+  "shuffle_mean_pathway_coherence": 0.2914037903224097,
+  "shuffle_std_pathway_coherence": 0.010533508241356468,
+  "permutation_p": 0.0001999600079984003,
+  "permutations": 5000,
+  "seed": 68,
+  "fraction_rows_with_any_defluorination_or_cf_reduction": 0.33695652173913043,
+  "fraction_rows_retaining_high_fluorination_or_cf_bonds": 0.842391304347826,
+  "rxn_type_count": 13
+}

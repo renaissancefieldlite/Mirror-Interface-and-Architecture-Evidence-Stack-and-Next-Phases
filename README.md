@@ -79,7 +79,11 @@ What was actually discovered:
   and a patched `GRAPH-2B` raw token/layer graph. `GRAPH-2A` produced
   row-level control support but failed the model-pair-cluster closeout, and
   patched `GRAPH-2B` also did not beat controls; internal `GRAPH-2` is parked
-  until attention-flow or external pathway labels exist. `GAME-1` now has a
+  until attention-flow or external pathway labels exist. The attention / MLP
+  bridge is now protocol-locked as the next transformer-internal Nest 1 test:
+  hidden states show where the representation lands, attention heads expose
+  token-routing flow, and feed-forward / MLP blocks expose representation
+  updates between routing steps. `GAME-1` now has a
   locked retrospective V7 rubric and is control-supported on existing V7
   stress/control rows. `OPT-1` is supported as a real condition-optimization
   benchmark with a small-N hardware pair-selection partial, and `CAT-1` is
@@ -98,9 +102,12 @@ What was actually discovered:
   validation fork using `RDKit`; `Nest 2C` expands it across `ESOL`,
   `Lipophilicity`, `FreeSolv`, and `QM9 alpha`, with two shuffled-control
   seeds per dataset and `5000` permutations per run. All four datasets are
-  control-supported at p `0.0002`. This validates a multi-benchmark
-  cheminformatics property lane, not allostery, PFAS degradation, materials
-  stability, or all of chemistry.
+  control-supported at p `0.0002`. `Nest 2D -> 2G` now adds real allostery
+  benchmark extraction, PFAS pathway-coherence validation, Matbench / Materials
+  Project formation-energy validation, and stronger RDKit descriptor baselines.
+  This validates multiple structured-matter data lanes, while keeping
+  allostery mapper scoring, PFAS remediation, completed crystal design, and all
+  of chemistry outside the claim boundary.
 
 - `Nest 3 classical-coherence map`
   The mirror map does not stop at `HRV` or chemistry. `Nest 3` is the explicit
@@ -269,6 +276,8 @@ and funding, not one or the other.
 Latest gate reports:
 
 - [GRAPH-2B Raw Token / Layer Pathway Report](./artifacts/validation/graph2b_raw_token_layer_pathway/graph2b_raw_token_layer_pathway_report.md)
+- [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
+- [V8 Attention / MLP Nest 1 Bridge Gate Report](./artifacts/validation/v8_attention_mlp_bridge_gate/v8_attention_mlp_bridge_gate_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)
@@ -278,6 +287,10 @@ Latest gate reports:
 - [Engine 02V RDKit Molecule Validation Fork Report](./artifacts/validation/engine02v_rdkit_molecule/engine02v_rdkit_molecule_report.md)
 - [Nest 2C Molecule Benchmark Expansion](./docs/NEST2C_MOLECULE_BENCHMARK_EXPANSION_2026-04-28.md)
 - [Nest 2C Molecule Benchmark Expansion Report](./artifacts/validation/nest2c_molecule_benchmark_expansion/nest2c_molecule_benchmark_expansion_report.md)
+- [Nest 2D To 2G Real-Data Gates](./docs/NEST2D_TO_2G_REAL_DATA_GATES_2026-04-28.md)
+- [Nest 2E PFAS Pathway Validation Report](./artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
+- [Nest 2F Materials Stability Report](./artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
+- [Nest 2G RDKit Stronger Baseline Report](./artifacts/validation/nest2g_rdkit_baseline_comparison/nest2g_rdkit_baseline_comparison_report.md)
 
 Start here if you only have a few minutes:
 
@@ -323,10 +336,15 @@ Start here if you only have a few minutes:
 40. [Engine 02V RDKit Molecule Validation Fork Report](./artifacts/validation/engine02v_rdkit_molecule/engine02v_rdkit_molecule_report.md)
 41. [Nest 2C Molecule Benchmark Expansion](./docs/NEST2C_MOLECULE_BENCHMARK_EXPANSION_2026-04-28.md)
 42. [Nest 2C Molecule Benchmark Expansion Report](./artifacts/validation/nest2c_molecule_benchmark_expansion/nest2c_molecule_benchmark_expansion_report.md)
-43. [Crossover Precursor Prototype Lanes](./docs/CROSSOVER_PRECURSOR_PROTOTYPE_LANES_2026-04-24.md)
-44. [Nest 2 Constrained Structured Systems Foundation](./docs/NEST2_CONSTRAINED_STRUCTURED_SYSTEMS_FOUNDATION_2026-04-24.md)
-45. [Nest 2 Structured Matter Completion](./docs/NEST2_STRUCTURED_MATTER_COMPLETION_2026-04-24.md)
-46. [Nest 2 Expanded Structured Matter Atlas](./docs/NEST2_EXPANDED_STRUCTURED_MATTER_ATLAS_2026-04-24.md)
+43. [Nest 2D To 2G Real-Data Gates](./docs/NEST2D_TO_2G_REAL_DATA_GATES_2026-04-28.md)
+44. [Nest 2D Allostery Benchmark Report](./artifacts/validation/nest2d_allostery_benchmark/nest2d_allostery_benchmark_report.md)
+45. [Nest 2E PFAS Pathway Report](./artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
+46. [Nest 2F Materials Stability Report](./artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
+47. [Nest 2G RDKit Stronger Baseline Report](./artifacts/validation/nest2g_rdkit_baseline_comparison/nest2g_rdkit_baseline_comparison_report.md)
+48. [Crossover Precursor Prototype Lanes](./docs/CROSSOVER_PRECURSOR_PROTOTYPE_LANES_2026-04-24.md)
+49. [Nest 2 Constrained Structured Systems Foundation](./docs/NEST2_CONSTRAINED_STRUCTURED_SYSTEMS_FOUNDATION_2026-04-24.md)
+50. [Nest 2 Structured Matter Completion](./docs/NEST2_STRUCTURED_MATTER_COMPLETION_2026-04-24.md)
+51. [Nest 2 Expanded Structured Matter Atlas](./docs/NEST2_EXPANDED_STRUCTURED_MATTER_ATLAS_2026-04-24.md)
 47. [Terahertz Cellular Resonance Bridge](./docs/TERAHERTZ_CELLULAR_RESONANCE_BRIDGE_2026-04-24.md)
 48. [Terahertz Chemical Remediation Bridge](./docs/TERAHERTZ_CHEMICAL_REMEDIATION_BRIDGE_2026-04-24.md)
 49. [Mirror Interface & Architecture Evidence Stack and Next Phases](./docs/MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)

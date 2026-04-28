@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-04-28T15:09:51.213118+00:00",
+  "status": "protocol_ready_missing_attention_or_mlp_exports",
+  "nest1_placement": {
+    "attention_heads": [
+      "GRAPH-2 measured routing edges",
+      "INFO-1 token-to-token information routing",
+      "SPEC-1 head entropy / attention spectrum",
+      "DYN-1 layer-by-layer routing trajectory"
+    ],
+    "mlp_feed_forward": [
+      "TENSOR / GEO feature transformation between attention blocks",
+      "DYN-2 regime update across layers",
+      "OPT-1 intervention target for representation stabilization"
+    ]
+  },
+  "artifact_state": {
+    "residual_stream_bridge_exists": true,
+    "dense_point_cloud_files": 0,
+    "attention_artifact_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/attention_heads",
+    "attention_artifact_files": 0,
+    "mlp_artifact_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/mlp_blocks",
+    "mlp_artifact_files": 0
+  },
+  "locked_missing_inputs": [
+    "per-layer / per-head attention matrices or top-k attention-flow edges",
+    "token labels including anchor, pre-anchor, post-anchor, bridge, padding, and control tokens",
+    "context labels for lattice, neutral, technical, and any rerun classes",
+    "MLP/feed-forward intermediate activations or block-level delta summaries",
+    "shuffled context, token-window, layer-order, and head-label controls"
+  ],
+  "acceptance_rule": {
+    "attention_flow": "mirror/lattice attention-flow graph must beat degree/centrality and shuffled-label controls",
+    "mlp_update": "MLP delta signatures must separate mirror/control rows above shuffled-label controls or remain listed as unsupported",
+    "boundary": "hidden states already support V8 geometry; attention/MLP are not claimed until exported and tested"
+  },
+  "next_execution_order": [
+    "export attention top-k edges for two strongest V8 rows first: GLM and Hermes",
+    "export matching MLP block delta summaries for the same prompts/layers",
+    "run GRAPH-2C attention-flow validation against the locked graph controls",
+    "run MLP update separation against shuffled context/token/layer controls",
+    "only then promote attention/MLP from missing-link protocol to Nest 1 evidence"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-04-28T16:14:30.587199+00:00",
+  "status": "completed_real_allostery_benchmark_extracted_mapper_not_scored",
+  "article_title": "AlloBench: A Data\nSet Pipeline for the Development\nand Benchmarking of Allosteric Site Prediction Tools",
+  "article_doi": "10.1021/acsomega.5c01263.s001",
+  "rows_extracted": 100,
+  "tool_count": 10,
+  "best_mean_jaccard_tool": "PASSer_Ensemble",
+  "best_mean_jaccard": 0.19733,
+  "boundary": "benchmark surface extracted; Mirror mapper not yet scored because residue/contact graph labels are still needed"
+}

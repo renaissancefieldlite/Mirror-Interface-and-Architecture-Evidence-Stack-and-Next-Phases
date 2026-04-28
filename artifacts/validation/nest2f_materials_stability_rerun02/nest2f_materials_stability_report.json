@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-04-28T16:08:58.272393+00:00",
+  "status": "completed_real_materials_stability_supported",
+  "dataset": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/datasets/matbench_mp_e_form_co_0.parquet",
+  "rows_used_after_cleaning": 50000,
+  "sample_size_requested": 50000,
+  "seed": 68,
+  "test_pearson": 0.5688949209317815,
+  "test_abs_pearson": 0.5688949209317815,
+  "test_rmse": 0.9626654707295099,
+  "baseline_mean_rmse": 1.1703536667603471,
+  "rmse_improvement_fraction": 0.17745763689170843,
+  "shuffle_abs_pearson_mean": 0.007894239554933999,
+  "shuffle_abs_pearson_std": 0.006022710208207459,
+  "shuffle_rmse_improvement_mean": -9.6709588035232e-05,
+  "shuffle_rmse_improvement_std": 0.00014175040807344296,
+  "pearson_permutation_p": 0.000999000999000999,
+  "rmse_improvement_permutation_p": 0.000999000999000999,
+  "permutations": 1000
+}
