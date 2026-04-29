@@ -1,22 +1,22 @@
 # V8 Attention / MLP Nest 1 Bridge Gate
 
-Status: `exporter_ready_missing_full_export`
+Status: `attention_supported_mlp_directional`
 
 ## Clean Read
 
-The current V8 evidence stack contains hidden-state / residual-stream
-geometry, but it does not yet contain exported attention-head or
-feed-forward / MLP block artifacts.
+Hermes now has real transformer-internal artifacts: attention top-k
+routing edges and MLP block-delta rows across lattice, neutral, and
+technical contexts.
 
-That distinction matters:
+The first validation has started the claim-support chain:
 
-- hidden states show where the representation lands
-- attention heads show token-to-token routing / flow
-- MLP blocks show representation update between routing steps
+- weighted Hermes attention-flow separates lattice from neutral / technical
+  above shuffled context labels
+- weighted attention-flow beats the degree-only graph baseline
+- MLP deltas are directional but not closed yet
 
-So yes: attention heads and MLP/feed-forward blocks should be run against
-Nest 1. They are the missing internal mechanics for the transformer-native
-version of the formal lanes.
+So the gate is no longer only protocol. It is a Hermes-supported
+attention-flow result with GLM and stronger MLP controls still pending.
 
 ## Artifact State
 
@@ -25,9 +25,10 @@ version of the formal lanes.
 - attention artifact files detected: `0`
 - MLP artifact files detected: `0`
 - exporter script exists: `True`
-- exporter inventory status: `check_only_ready`
-- exported attention CSV files detected: `0`
-- exported MLP CSV files detected: `0`
+- exporter inventory status: `export_complete`
+- exported attention CSV files detected: `1`
+- exported MLP CSV files detected: `1`
+- validation report status: `attention_supported_mlp_directional`
 
 ## Nest 1 Placement
 
@@ -38,10 +39,10 @@ version of the formal lanes.
 
 ## Locked Missing Inputs
 
-- full per-layer / per-head attention matrices or top-k attention-flow edge export
-- full MLP/feed-forward intermediate activation or block-level delta export
-- shuffled context, token-window, layer-order, and head-label controls
-- GRAPH-2C / MLP validation after real CSV exports exist
+- GLM full attention top-k edge and MLP delta export
+- combined GLM / Hermes GRAPH-2C validation controls
+- expanded MLP layer/rerun/model sample before MLP promotion
+- leave-one-model and shuffled-label controls after GLM exists
 
 ## Acceptance Rule
 
@@ -51,8 +52,8 @@ version of the formal lanes.
 
 ## Next Execution Order
 
-1. export attention top-k edges for two strongest V8 rows first: GLM and Hermes
-2. export matching MLP block delta summaries for the same prompts/layers
-3. run GRAPH-2C attention-flow validation against the locked graph controls
-4. run MLP update separation against shuffled context/token/layer controls
-5. only then promote attention/MLP from missing-link protocol to Nest 1 evidence
+1. export GLM attention top-k edges and matching MLP block delta summaries
+2. combine Hermes and GLM CSVs without dropping model labels
+3. rerun GRAPH-2C attention-flow validation with leave-one-model and shuffled-label controls
+4. expand MLP support with more layers, reruns, or a second model before promotion
+5. only then promote attention/MLP from first Hermes support to cross-model Nest 1 evidence

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-28T22:49:24.263705+00:00",
-  "status": "exporter_ready_missing_full_export",
+  "generated_at": "2026-04-29T02:06:00.181606+00:00",
+  "status": "attention_supported_mlp_directional",
   "nest1_placement": {
     "attention_heads": [
       "GRAPH-2 measured routing edges",
@@ -23,15 +23,17 @@
     "mlp_artifact_files": 0,
     "exporter_script_exists": true,
     "export_inventory_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports/v8_attention_mlp_export_inventory.json",
-    "export_inventory_status": "check_only_ready",
-    "export_attention_csv_files": 0,
-    "export_mlp_csv_files": 0
+    "export_inventory_status": "export_complete",
+    "export_attention_csv_files": 1,
+    "export_mlp_csv_files": 1,
+    "validation_report_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_validation/v8_attention_mlp_validation_report.json",
+    "validation_report_status": "attention_supported_mlp_directional"
   },
   "locked_missing_inputs": [
-    "full per-layer / per-head attention matrices or top-k attention-flow edge export",
-    "full MLP/feed-forward intermediate activation or block-level delta export",
-    "shuffled context, token-window, layer-order, and head-label controls",
-    "GRAPH-2C / MLP validation after real CSV exports exist"
+    "GLM full attention top-k edge and MLP delta export",
+    "combined GLM / Hermes GRAPH-2C validation controls",
+    "expanded MLP layer/rerun/model sample before MLP promotion",
+    "leave-one-model and shuffled-label controls after GLM exists"
   ],
   "acceptance_rule": {
     "attention_flow": "mirror/lattice attention-flow graph must beat degree/centrality and shuffled-label controls",
@@ -39,10 +41,10 @@
     "boundary": "hidden states already support V8 geometry; attention/MLP are not claimed until exported and tested"
   },
   "next_execution_order": [
-    "export attention top-k edges for two strongest V8 rows first: GLM and Hermes",
-    "export matching MLP block delta summaries for the same prompts/layers",
-    "run GRAPH-2C attention-flow validation against the locked graph controls",
-    "run MLP update separation against shuffled context/token/layer controls",
-    "only then promote attention/MLP from missing-link protocol to Nest 1 evidence"
+    "export GLM attention top-k edges and matching MLP block delta summaries",
+    "combine Hermes and GLM CSVs without dropping model labels",
+    "rerun GRAPH-2C attention-flow validation with leave-one-model and shuffled-label controls",
+    "expand MLP support with more layers, reruns, or a second model before promotion",
+    "only then promote attention/MLP from first Hermes support to cross-model Nest 1 evidence"
   ]
 }

@@ -1,0 +1,10 @@
+model,context,layer_index,layer_depth,module_name,input_norm,output_norm,delta_norm,input_output_cosine,token_count
+Hermes,lattice,0,early,model.layers.0.mlp,326.353027,6.920656,325.70166,0.098937,431
+Hermes,lattice,16,middle,model.layers.16.mlp,2441.496582,44.551167,2444.312012,-0.061581,431
+Hermes,lattice,31,late,model.layers.31.mlp,4152.130859,505.943451,4183.662598,-0.002397,431
+Hermes,neutral,0,early,model.layers.0.mlp,289.003082,6.716491,288.377838,0.100315,330
+Hermes,neutral,16,middle,model.layers.16.mlp,2159.096924,39.398705,2161.177246,-0.049397,330
+Hermes,neutral,31,late,model.layers.31.mlp,3588.524658,466.970642,3619.108887,-0.00131,330
+Hermes,technical,0,early,model.layers.0.mlp,296.43454,6.774126,295.799194,0.100754,346
+Hermes,technical,16,middle,model.layers.16.mlp,2219.540283,40.675858,2221.6604,-0.048578,346
+Hermes,technical,31,late,model.layers.31.mlp,3702.83252,469.318237,3731.010742,0.002461,346

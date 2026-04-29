@@ -7,7 +7,8 @@ Status: `protocol_locked_missing_exports`
 Companion gate:
 
 - [V8 Attention / MLP Nest 1 Bridge Gate Report](../artifacts/validation/v8_attention_mlp_bridge_gate/v8_attention_mlp_bridge_gate_report.md)
-- [V8 Attention / MLP Export Inventory](../artifacts/validation/v8_attention_mlp_exports/v8_attention_mlp_export_inventory.md)
+- [V8 Attention / MLP Export Gate](../artifacts/validation/v8_attention_mlp_exports/v8_attention_mlp_export_inventory.md)
+- [V8 Attention / MLP Validation Report](../artifacts/validation/v8_attention_mlp_validation/v8_attention_mlp_validation_report.md)
 
 ## Purpose
 
@@ -61,10 +62,13 @@ Current execution readiness:
 
 - exporter script exists:
   `tools/validation_forks/v8_attention_mlp_export.py`
-- `GLM` and `Hermes` checkpoint readiness check passed on `2026-04-28`
-- device currently resolves to `cpu`, so the next full export is real but may
-  be slow on local hardware
-- no attention/MLP validation claim is made until CSV exports and controls run
+- `Hermes` full-length export completed on `2026-04-28`
+- exported rows:
+  `4608` attention top-k edge rows and `9` MLP block-delta rows
+- first validation:
+  weighted Hermes attention-flow is supported against shuffled context labels
+  and beats degree-only baseline; MLP deltas are directional but not closed
+- `GLM` remains the next full export needed for cross-model closeout
 
 ## GRAPH-2 Connection
 

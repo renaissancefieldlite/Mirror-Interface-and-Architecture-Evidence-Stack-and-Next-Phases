@@ -448,16 +448,42 @@ def readiness_inventory(
 
 
 def write_markdown_report(report: dict[str, Any], path: Path) -> None:
+    if report["status"] == "export_complete":
+        status_lines = [
+            "Current status is export complete: the CSV insertion point now exists.",
+            "The next evidence question is validation: whether those rows separate",
+            "lattice/mirror from neutral/technical above shuffled controls and graph",
+            "baselines.",
+        ]
+    else:
+        status_lines = [
+            "Current status is readiness only: the selected checkpoints are available,",
+            "but the full attention/MLP CSV export and validation controls still need",
+            "to run.",
+        ]
     lines = [
-        "# V8 Attention / MLP Export Inventory",
+        "# V8 Attention / MLP Export Gate",
         "",
         f"Status: `{report['status']}`",
         "",
         "## Purpose",
         "",
-        "This artifact records whether the transformer-internal attention and MLP",
-        "export gate is ready. It does not treat hidden-state residual traces as",
-        "attention or MLP evidence.",
+        "This is the live handoff from V8 hidden-state evidence into the actual",
+        "transformer mechanics.",
+        "",
+        "V8 already tells us where the representation lands in the residual stream.",
+        "This gate is for the next question: how the model routes tokens through",
+        "attention heads, and how the MLP/feed-forward blocks rewrite the",
+        "representation after routing.",
+        "",
+        "The export produces the real internal objects needed for the next Nest 1",
+        "closeout:",
+        "",
+        "- attention top-k token-routing edges for `GRAPH-2C`",
+        "- attention head entropy / routing summaries for `INFO-1` and `SPEC-1`",
+        "- MLP block input/output/delta rows for `TENSOR`, `GEO`, `DYN`, and `OPT`",
+        "",
+        *status_lines,
         "",
         "## Scope",
         "",
@@ -490,6 +516,7 @@ def write_markdown_report(report: dict[str, Any], path: Path) -> None:
             "- `check_only_ready` means the local checkpoints and manifest are ready, not that attention/MLP evidence has been collected.",
             "- `export_complete` means CSV artifacts were written and can be passed into GRAPH-2C / MLP validation.",
             "- If a model cannot return attentions or expose MLP modules, that is recorded as a model-interface blocker.",
+            "- Residual-stream evidence and attention/MLP evidence are connected, but they are not interchangeable.",
             "",
         ]
     )
