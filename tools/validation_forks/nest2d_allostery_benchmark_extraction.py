@@ -126,7 +126,7 @@ def write_report(df: pd.DataFrame, article_path: Path, out_dir: Path) -> None:
         "",
         "## Clean Read",
         "",
-        "This is a real allostery benchmark surface, not a toy table.",
+        "This is a real allostery benchmark surface, not a synthetic table.",
         "",
         "It does not yet validate the Mirror mapper because the current extracted",
         "table reports existing tool Jaccard scores. To score our own pathway",

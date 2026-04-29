@@ -6,7 +6,7 @@ Status: active closeout board
 
 ## Clean Read
 
-`Nest 1` is no longer only grammar.
+`Nest 1` is now tied to real evidence.
 
 It now has:
 
@@ -284,7 +284,7 @@ Required protocol fields:
 
 Completion criterion:
 
-the Mirror scoring grammar must improve stability, exploit resistance, or
+the Mirror scoring schema must improve stability, exploit resistance, or
 policy consistency against a baseline under repeated adversarial or multi-agent
 conditions.
 

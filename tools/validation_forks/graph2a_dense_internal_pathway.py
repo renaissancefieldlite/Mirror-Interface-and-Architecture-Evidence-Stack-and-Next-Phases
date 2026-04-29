@@ -6,7 +6,7 @@ structure, then tests whether independently sourced Phase 6/7 quantum-pair
 labels are recoverable by graph path score above degree and shuffled-label
 controls.
 
-No toy graph. No label derived from the path score itself.
+No synthetic graph. No label derived from the path score itself.
 """
 
 from __future__ import annotations

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """SPEC-1 -> Phase 12B HRV validation fork.
 
-This is the first concrete Nest 1 validation fork. It moves beyond grammar
+This is the first concrete Nest 1 validation fork. It moves beyond score schema
 mapping by testing whether a formal spectral-method lens can recover measured
 Phase 12B HRV condition classes from existing strap sessions.
 
@@ -323,7 +323,7 @@ def render_markdown(report: dict) -> str:
         "",
         f"Status: `{report['status']}`",
         "",
-        "This is a real-data validation fork, not just a grammar note.",
+        "This is a real-data validation fork, not just a validation note.",
         "It tests whether spectral-method features computed from existing HRV RR",
         "windows recover the Phase 12B condition labels better than simpler baselines.",
         "",

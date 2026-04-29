@@ -3,7 +3,7 @@
 Date: `2026-04-25`
 
 Status:
-local draft / not public-locked / do not publish until approved
+public-safe working plan / active real-data mapping discipline
 
 ## Purpose
 
@@ -16,12 +16,12 @@ Can we map the foundational layers for real, instead of only naming them?
 The answer is yes, but the sequence has to be disciplined:
 
 ```text
-formal grammar -> real mathematical object -> real artifact/dataset ->
+formal validation schema -> real mathematical object -> real artifact/dataset ->
 baseline/control -> scored validation
 ```
 
-The grammar map is useful because it tells us what to test. It is not the
-finished proof. The proof work starts when the grammar touches real traces,
+The validation map is useful because it tells us what to test. It is not the
+finished proof. The proof work starts when the score schema touches real traces,
 real model states, real hardware, real datasets, or declared benchmarks.
 
 ## Phase 12B Control-Supported Adapter Finding
@@ -130,7 +130,7 @@ A branch graduates only if it has:
 Example:
 
 ```text
-linear algebra grammar:
+linear algebra score schema:
 vectors / subspaces / eigenmodes
 
 real test:
@@ -217,13 +217,13 @@ baseline comparison
 
 Do not use:
 
-- toy rows as proof
+- synthetic rows as proof
 - visual maps as proof
 - synthetic examples as proof
 - broad "this maps everywhere" language as proof
 - HRV-only limitations as a reason to abandon the stack
 
-Use toy rows only as:
+Use synthetic rows only as:
 
 - smoke tests
 - adapter tests
@@ -501,7 +501,7 @@ Results:
 The real path is:
 
 ```text
-use grammar mapping as the route map
+use real-data mapping as the route map
 test Nest 1 against real AI/hardware traces
 test Nest 2 against real chemistry/material datasets
 expand Phase 12B to a larger HRV matrix, then return to EEG/HRV

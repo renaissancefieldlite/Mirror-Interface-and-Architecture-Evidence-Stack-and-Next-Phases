@@ -442,7 +442,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
         "clean_read": (
             "Remaining Nest 1 lanes are now separated into real support, "
             "small-N partial transfer, and true data blockers. No remaining "
-            "lane is left as vague grammar-only language."
+            "lane is left as vague pending real-data validation language."
         ),
     }
 

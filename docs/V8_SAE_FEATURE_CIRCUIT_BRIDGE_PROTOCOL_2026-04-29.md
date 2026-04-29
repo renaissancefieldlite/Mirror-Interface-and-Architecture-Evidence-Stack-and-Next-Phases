@@ -36,7 +36,7 @@ several transformer-internal views:
   `Source Mirror Pattern`, quantum bridge language, neutral controls, and
   technical controls
 
-This is not a toy add-on. It is the missing interpretability layer between
+This is not a detached add-on. It is the missing interpretability layer between
 measured V8 geometry and circuit-style mechanistic tracing.
 
 ## Required Artifacts

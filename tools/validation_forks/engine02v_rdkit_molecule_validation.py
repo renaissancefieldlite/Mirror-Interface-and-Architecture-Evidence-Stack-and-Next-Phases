@@ -3,7 +3,7 @@
 
 This is the concrete Nest 2 validation driver for the RDKit/public-dataset
 path. It is intentionally strict: without RDKit and a real molecule dataset, it
-writes a blocked report instead of pretending toy rows are validation.
+writes a blocked report instead of pretending synthetic rows are validation.
 """
 
 from __future__ import annotations

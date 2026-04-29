@@ -79,7 +79,7 @@ Nest 2 is where the work moves from formal substrate into structured matter.
 The important correction is:
 
 ```text
-grammar mapping alone is not physical validation
+real-data mapping alone is not physical validation
 ```
 
 So Nest 2 now uses real datasets:
@@ -225,5 +225,5 @@ The first real-data lanes should be:
 Goal:
 
 ```text
-start classical coherence with measured signals and controls, not toy rows
+start classical coherence with measured signals and controls, not synthetic rows
 ```

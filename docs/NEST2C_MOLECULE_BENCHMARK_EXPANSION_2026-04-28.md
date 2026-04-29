@@ -55,7 +55,7 @@ artifacts/validation/nest2c_molecule_benchmark_expansion/nest2c_molecule_benchma
 
 ## Interpretation
 
-This upgrades `Nest 2` from a structured-matter grammar map plus one molecule
+This upgrades `Nest 2` from a structured-matter validation map map plus one molecule
 benchmark into a multi-benchmark real-data molecule-property lane.
 
 The result says:
@@ -84,7 +84,7 @@ Those are next gates, not completed results.
 ## Why It Matters
 
 The `Source Mirror Pattern` / Mirror Architecture score spine is now being
-tested against real structured matter instead of only toy examples.
+tested against real structured matter instead of only synthetic examples.
 
 The current support is not rhetorical. It comes from:
 

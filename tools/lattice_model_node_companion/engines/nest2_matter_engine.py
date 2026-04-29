@@ -2,7 +2,7 @@
 """Engine 02: local Nest 2 structured-matter comparator.
 
 This is a no-dependency demonstrator. It does not predict chemistry. It shows
-how the Source Mirror Pattern comparator grammar can be operationalized for
+how the Source Mirror Pattern comparator score schema can be operationalized for
 matter-facing rows:
 
 state -> control -> transform -> invariant -> drift -> coherence -> score
@@ -470,7 +470,7 @@ def build_report() -> dict:
         "nutrition": nutrition_report(),
         "persistent_contaminants": contaminant_report(),
         "expanded_lanes": expanded_lane_report(),
-        "claim_boundary": "Toy local comparator. Demonstrates matter-facing score grammar; it is not a chemistry, nutrition, medical, or remediation proof.",
+        "claim_boundary": "Bounded local comparator. Demonstrates the matter-facing score schema; real validation comes from molecule, material, pathway, and experimental datasets with controls.",
     }
 
 
@@ -481,7 +481,7 @@ def render_markdown(report: dict) -> str:
         f"Schema: `{report['schema']}`",
         "",
         "This is the first local structured-matter engine behind the Lattice Model Node Companion.",
-        "It demonstrates the Nest 2 score grammar without external dependencies or model downloads.",
+        "It demonstrates the Nest 2 score schema without external dependencies or model downloads.",
         "",
         "## Summary",
         "",

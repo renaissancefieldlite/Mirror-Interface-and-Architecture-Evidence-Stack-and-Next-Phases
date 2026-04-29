@@ -2,7 +2,7 @@
 
 Status: `generated from local evidence artifacts`
 
-This registry separates formal grammar from evidence-connected lanes and
+This registry separates formal validation schema from evidence-connected lanes and
 dataset-blocked validation forks.
 
 | Lane | Formal Lens | Status | Concrete Next Validation |
@@ -20,9 +20,9 @@ dataset-blocked validation forks.
 | `GRAPH-1/2` | graph theory | `blocked_missing_dataset` | provide molecular/protein graph edges plus known pathway/control labels |
 | `TOP-1/2` | topology | `validation_ready_no_runner` | run persistent homology over layer/token hidden-state point clouds |
 | `DYN-1/2` | dynamical systems / bifurcation | `seed_connected` | construct state-transition trajectories across repeated prompt/order conditions |
-| `DE-1` | differential equations | `grammar_only` | fit bounded continuous-time HRV/EEG dynamics after synchronized capture |
-| `OPT-1` | optimization | `grammar_only_with_clear_experiment` | compare mirror-guided optimization trajectories against naive/random baselines |
-| `GAME-1` | game / decision theory | `grammar_only` | build adversarial/multi-agent stability protocol |
+| `DE-1` | differential equations | `pending_real_data` | fit bounded continuous-time HRV/EEG dynamics after synchronized capture |
+| `OPT-1` | optimization | `pending_real_data_with_clear_experiment` | compare mirror-guided optimization trajectories against naive/random baselines |
+| `GAME-1` | game / decision theory | `pending_real_data` | build adversarial/multi-agent stability protocol |
 | `CAT-1` | compositional / category-style structure | `theory_translation_layer` | test whether a mapping learned in one nest preserves measurable structure in another |
 | `ENGINE-02V` | structured matter validation fork | `blocked_missing_rdkit` | install/use RDKit and run QM9/ZINC/ChEMBL-style molecule-property dataset |
 
@@ -239,7 +239,7 @@ Next validation: construct state-transition trajectories across repeated prompt/
 
 ### DE-1 - differential equations
 
-Status: `grammar_only`
+Status: `pending_real_data`
 
 Evidence:
 - none yet
@@ -252,7 +252,7 @@ Next validation: fit bounded continuous-time HRV/EEG dynamics after synchronized
 
 ### OPT-1 - optimization
 
-Status: `grammar_only_with_clear_experiment`
+Status: `pending_real_data_with_clear_experiment`
 
 Evidence:
 - none yet
@@ -265,7 +265,7 @@ Next validation: compare mirror-guided optimization trajectories against naive/r
 
 ### GAME-1 - game / decision theory
 
-Status: `grammar_only`
+Status: `pending_real_data`
 
 Evidence:
 - none yet

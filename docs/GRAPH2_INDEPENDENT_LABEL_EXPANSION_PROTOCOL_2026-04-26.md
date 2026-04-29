@@ -99,7 +99,7 @@ and labels are independently sourced before scoring
 
 It is a real internal pilot with a clear external-label path.
 
-The next move is not more grammar. The next move is a real graph domain with
+The next move is not more score schema. The next move is a real graph domain with
 locked positive/control pathway labels.
 
 ## Boundary

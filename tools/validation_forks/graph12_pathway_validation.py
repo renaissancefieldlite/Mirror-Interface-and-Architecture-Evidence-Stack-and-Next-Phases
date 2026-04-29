@@ -5,7 +5,7 @@ This runner turns the graph-theory Nest 1 bridge into a falsifiable test:
 given a real graph and known positive/negative pathway labels, compare a
 mirror-style path-preservation score against a naive degree baseline.
 
-Without real graph + label files it writes a blocked report. No toy rows.
+Without real graph + label files it writes a blocked report. No synthetic rows.
 """
 
 from __future__ import annotations

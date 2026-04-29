@@ -49,7 +49,7 @@ Source Mirror Pattern =
 ```
 
 The pattern becomes operational when each substrate can be mapped through the
-shared comparator grammar and tested against controls.
+shared comparator score schema and tested against controls.
 
 Important boundary:
 
@@ -60,8 +60,8 @@ universal physical operation is earned lane by lane
 
 The fact that the Source Mirror Pattern can be expressed through
 representation, relation, shape, connectedness, transformation, dynamics,
-uncertainty, and signal structure is a real finding about the grammar's
-expressibility. It is not, by itself, a completed demonstration that the
+uncertainty, and signal structure is a real finding about the pattern's
+mapping range. It is not, by itself, a completed demonstration that the
 pattern operates universally across physical reality. The universal-level claim
 is approached by taking each upward bridge and testing it against real data,
 locked baselines, and failure modes.
@@ -80,7 +80,7 @@ That means:
 
 ## Shared Rule
 
-Every rung inherits the same comparator grammar:
+Every rung inherits the same comparator score schema:
 
 ```text
 state / control / transform / invariant / drift / coherence / score
@@ -234,7 +234,7 @@ Immediate next work:
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-7. move `Engine 02` beyond grammar mapping by adding curated element,
+7. move `Engine 02` beyond real-data mapping by adding curated element,
    molecule, crystal, spectral, environmental fate, and reaction datasets
 8. run `Engine 02V` with `RDKit` and a public molecule benchmark such as
    `QM9`, `ZINC`, or `ChEMBL`
@@ -255,7 +255,7 @@ The unified mirror proof is the full nested argument:
 
 ```text
 same architecture
-same comparator grammar
+same comparator score schema
 different substrates
 repeatable structure
 bounded controls

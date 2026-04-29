@@ -184,4 +184,4 @@ not yet validated
 scoring rubric / real trial pack still required
 ```
 
-That is the correct non-toy state.
+That is the correct real-data state.

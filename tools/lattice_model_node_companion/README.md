@@ -57,11 +57,13 @@ bolted in locally.
 
 This is the demo answer when someone asks what is built:
 
-the browser companion is the chassis, `Engine 01` demonstrates the formal
-invariant grammar, and `Engine 02` demonstrates the first structured-matter
-methodology grammar across elements, molecular graphs, water, minerals,
-nutrition, redox, contaminant-pathway scoring, and the expanded matter lanes
-without API calls. `Engine 02` is not physical chemistry validation.
+the browser companion is the chassis, `Engine 01` runs the first local formal
+invariant score model, and `Engine 02` runs the first structured-matter
+mapping engine across elements, molecular graphs, water, minerals, nutrition,
+redox, contaminant-pathway scoring, and the expanded matter lanes without API
+calls. `Engine 02` is the local matter-facing engine; `Engine 02V` and later
+dataset gates are where physical chemistry / materials validation is tested
+against real datasets and controls.
 
 `Engine 02` expanded lanes now include:
 

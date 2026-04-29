@@ -128,7 +128,7 @@ Key read:
 ```text
 GEO-2 and DYN-2 are control-supported.
 OPT-1 and CAT-1 are real but limited by the three-model hardware feature-circuit sample.
-TOP, GRAPH-2, CTRL, and GAME were true data/protocol blockers, not grammar
+TOP, GRAPH-2, CTRL, and GAME were true data/protocol blockers, not score schema
 claims. After the gate pass, `CTRL-1` is now control-supported, `GRAPH-2`
 has a real internal pilot, quantum-label crosswalk, and dense row-level
 partial but still needs a hub-reduced dense graph or stronger labels, and
@@ -210,7 +210,7 @@ unsupported under current evidence.
 
 ## Clean Read
 
-Nest 1 is no longer only a grammar map.
+Nest 1 is no longer only a validation map.
 
 It now has:
 

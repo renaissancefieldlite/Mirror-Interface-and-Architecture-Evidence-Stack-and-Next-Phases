@@ -2,7 +2,7 @@
 
 Status: `completed`
 
-This is a real-data validation fork, not a grammar note.
+This is a real-data validation fork, not a validation note.
 It fits a bounded first-order local dynamics model to actual Phase 12B
 BPM and RR windows, then compares condition recovery against a simple
 mean-HR delta baseline.

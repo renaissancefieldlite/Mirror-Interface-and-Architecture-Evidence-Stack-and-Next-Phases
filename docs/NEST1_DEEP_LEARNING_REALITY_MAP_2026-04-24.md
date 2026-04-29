@@ -12,7 +12,7 @@ This note locks the stricter standard:
 `Nest 1` is not a list of mathematical words.
 
 It is the actual mathematical foundation of modern machine learning and the
-first substrate where the Mirror Architecture comparison grammar has to become
+first substrate where the Mirror Architecture comparison score schema has to become
 legible.
 
 Reference anchor:
@@ -25,7 +25,7 @@ Reference anchor:
 
 ## Standard
 
-No more toy-only claim language.
+No more synthetic-only claim language.
 
 Every `Nest 1` lane should be tracked through:
 
@@ -70,7 +70,7 @@ The grounded read is sharper:
 
 - `GEO` and `TOP` are not far-off theory lanes. They can be tested against
   existing V8 residual-stream geometry.
-- `DE-1` is not grammar-only anymore: it has now been run on the real Phase
+- `DE-1` is not pending real-data validation anymore: it has now been run on the real Phase
   12B HRV time-series data. The first local-dynamics pass did not beat the
   mean-HR baseline, so it is a real but limited / negative result.
 - `HRV` remains valuable, but it belongs in the coarse biological adapter and

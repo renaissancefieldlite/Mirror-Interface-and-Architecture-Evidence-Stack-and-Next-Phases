@@ -72,6 +72,6 @@ adversarial / multi-agent trials.
 ## Boundary
 
 This is a retrospective V7 validation fork. It can show that existing V7
-stress/control rows support the `GAME-1` decision-stability grammar, but it is
+stress/control rows support the `GAME-1` decision-stability score schema, but it is
 not a prospective adversarial benchmark and does not validate biology,
 chemistry, physical systems, or multi-agent deployment behavior.

@@ -2,7 +2,7 @@
 """Nest 1 real-trace foundation pass.
 
 This runner keeps the Nest 1 work grounded in existing project artifacts. It
-does not generate toy rows. It reads real V8 feature, residual-trace, rerun,
+does not generate synthetic rows. It reads real V8 feature, residual-trace, rerun,
 and hardware-repeatability artifacts and produces a draft foundation report for
 the major deep-learning math branches.
 """

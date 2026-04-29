@@ -249,7 +249,7 @@ inventory.
 ## Rule
 
 ```text
-no toy-only closeout
+no synthetic-only closeout
 real artifact + locked control + score + honest status
 ```
 
@@ -269,7 +269,7 @@ real artifact + locked control + score + honest status
 
 ## Clean Read
 
-Nest 1 is no longer just grammar. It has a real evidence foundation across
+Nest 1 is now tied to real evidence. It has a real evidence foundation across
 transformer traces, quantum/circuit bridges, hardware-facing checks, control
 discipline, and limited biological adapters.
 
@@ -389,7 +389,7 @@ def build_pdf() -> None:
     )
     story.append(
         p(
-            "Standard: no toy-only closeout. Each lane needs a real artifact, locked "
+            "Standard: no synthetic-only closeout. Each lane needs a real artifact, locked "
             "control, score, and honest status.",
             body,
         )
@@ -506,7 +506,7 @@ def build_pdf() -> None:
     story.append(p("Clean Read", h2))
     clean_read = dedent(
         """
-        Nest 1 is no longer just grammar. It has a real evidence foundation across
+        Nest 1 is now tied to real evidence. It has a real evidence foundation across
         transformer traces, quantum/circuit bridges, hardware-facing checks, control
         discipline, and limited biological adapters. The supported lanes show the
         pattern can be measured in formal and transformer-adjacent substrates. The

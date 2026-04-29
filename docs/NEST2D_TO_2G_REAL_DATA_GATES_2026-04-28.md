@@ -18,7 +18,7 @@ Companion reports:
 This pass continues the Nest 2 rule:
 
 ```text
-no toy-only chemistry claims
+no synthetic-only chemistry claims
 ```
 
 Each gate must touch a real public dataset, a real measurement surface, or a
@@ -138,7 +138,7 @@ held-out prediction controls
 
 ## Overall Read
 
-`Nest 2` is no longer only a structured-matter grammar map.
+`Nest 2` is no longer only a structured-matter validation map map.
 
 It now has:
 

@@ -71,7 +71,7 @@ what did you build?
 Answer:
 
 we built a local architecture demonstrator that shows how the same
-state-control-transform-invariant-drift-score grammar can be mapped across
+state-control-transform-invariant-drift-score schema can be mapped across
 formal systems, matter, physics, biology, and enterprise-scale networks, then
 forked into track-specific engines.
 
@@ -91,7 +91,7 @@ forked into track-specific engines.
 
 Best local predecessor:
 
-- build `Nest 3` oscillator / field / flow toy model first
+- build `Nest 3` oscillator / field / flow bounded model first
 - add simple aerodynamic-state language:
   pressure, velocity, boundary, vortex, turbulence, lift / drag proxy
 - show how preserved structure and drift penalties behave under perturbation
@@ -116,7 +116,7 @@ Best local predecessor:
 
 Best local predecessor:
 
-- build graph planning engine from the existing lattice grammar
+- build graph planning engine from the existing lattice score schema
 - state object:
   grid nodes, loads, constraints, capacity, reliability windows
 - invariant:

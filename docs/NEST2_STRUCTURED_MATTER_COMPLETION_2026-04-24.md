@@ -10,13 +10,13 @@ foundation complete / `Engine 02` local demonstrator built
 This closes the first `Nest 2` pass by moving structured-matter
 representations from a mapped foundation into a runnable local comparator.
 
-The shared grammar remains:
+The shared score schema remains:
 
 ```text
 state / control / transform / invariant / drift / coherence / score
 ```
 
-`Nest 2` applies that grammar to constrained matter:
+`Nest 2` applies that score schema to constrained matter:
 
 - elements and periodic families
 - molecular graphs and bond validity
@@ -50,7 +50,7 @@ credit spend.
 
 ## Engine 02 Read
 
-`Engine 02` demonstrates the matter-facing score grammar across small toy
+`Engine 02` demonstrates the matter-facing score schema across small synthetic
 representations.
 
 It currently reports:
@@ -79,7 +79,7 @@ contaminants: bounded mineralization candidate beats parent-only loss control
 
 ## Core Finding
 
-The `Nest 2` finding is methodological: the same score grammar can be
+The `Nest 2` finding is methodological: the same score schema can be
 expressed over structured-matter representations without changing its shape.
 
 The formal pattern:
@@ -110,7 +110,7 @@ in chemistry.
 It shows the narrower but useful result:
 
 ```text
-the same scoring grammar can be represented in structured matter domains
+the same scoring schema can be represented in structured matter domains
 ```
 
 Moving beyond that requires real datasets, measured chemistry, declared
@@ -142,14 +142,14 @@ This is a local comparator and methodology artifact.
 It does not claim completed chemistry, nutrition, medicine, remediation,
 materials discovery, or lab validation.
 
-It defines the score grammar and shows that the same architecture can be made
+It defines the score schema and shows that the same architecture can be made
 runnable on constrained matter representations.
 
 ## Next Expansion
 
 The next `Nest 2` upgrades are:
 
-1. replace toy rows with curated periodic-table and molecule datasets
+1. replace synthetic rows with curated periodic-table and molecule datasets
 2. add `RDKit` for real molecule parsing and fingerprints
 3. add `ASE` / `pymatgen` for atomistic and crystal structure rows
 4. add materials adapters such as `MatGL`, `CHGNet`, `MACE`, or `MatterGen`
@@ -166,7 +166,7 @@ The next `Nest 2` upgrades are:
 It has its first engine:
 
 ```text
-formal grammar -> structured matter -> local scoring report
+formal validation schema -> structured matter -> local scoring report
 ```
 
 That is the finished first matter rung.

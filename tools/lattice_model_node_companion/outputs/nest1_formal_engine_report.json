@@ -182,5 +182,5 @@
       "read": "control drift"
     }
   ],
-  "claim_boundary": "Toy local model engine. Demonstrates the comparator grammar; it is not a physics or biology result."
+  "claim_boundary": "Bounded local model engine. Demonstrates the comparator score schema; real validation comes from measured traces, datasets, and controls."
 }

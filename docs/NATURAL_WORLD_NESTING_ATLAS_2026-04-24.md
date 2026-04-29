@@ -166,4 +166,4 @@ The natural world can be mapped without flattening it.
 
 Hydrogen, oxygen, minerals, water, fire, plasma, fusion, solar systems, cells,
 oceans, soil, and ecosystems all sit in different nests because they express
-the same score grammar through different substrates.
+the same score schema through different substrates.

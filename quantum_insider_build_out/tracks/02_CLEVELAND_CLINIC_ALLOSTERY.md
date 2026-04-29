@@ -66,7 +66,7 @@ Candidate methods:
 - quantum simulation of small constrained conformational fragments
 - hybrid quantum-classical pathway scoring
 - quantum kernel over residue-path states
-- Braket / Classiq toy benchmark before larger biological claim
+- Braket / Classiq bounded benchmark before larger biological claim
 
 ## PoC Demonstrator
 

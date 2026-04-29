@@ -237,7 +237,7 @@
     {
       "lane": "DE-1",
       "formal_lens": "differential equations",
-      "status": "grammar_only",
+      "status": "pending_real_data",
       "evidence": [],
       "metrics": {
         "continuous_time_data": "not yet connected"
@@ -247,7 +247,7 @@
     {
       "lane": "OPT-1",
       "formal_lens": "optimization",
-      "status": "grammar_only_with_clear_experiment",
+      "status": "pending_real_data_with_clear_experiment",
       "evidence": [],
       "metrics": {
         "optimization_experiment": "not yet run"
@@ -257,7 +257,7 @@
     {
       "lane": "GAME-1",
       "formal_lens": "game / decision theory",
-      "status": "grammar_only",
+      "status": "pending_real_data",
       "evidence": [],
       "metrics": {
         "multi_agent_experiment": "not yet designed"

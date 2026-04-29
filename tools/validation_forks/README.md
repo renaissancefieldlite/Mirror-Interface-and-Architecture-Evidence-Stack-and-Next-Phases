@@ -1,6 +1,6 @@
 # Validation Forks
 
-These scripts are the concrete bridge from nest grammar into falsifiable tests.
+These scripts are the concrete bridge from nest score schema into falsifiable tests.
 
 ## Current Runnable Forks
 
@@ -53,7 +53,7 @@ python3 tools/validation_forks/ctrl1_lsps_transition_validation.py --trace-csv p
 
 This is the `Engine 02V` molecule-property validation fork. It requires RDKit
 and a real molecule dataset. If those are missing, it writes a blocked report
-instead of pretending toy rows are validation.
+instead of pretending synthetic rows are validation.
 
 `GRAPH-1/2` and `CTRL-1` behave the same way: they require real graph/pathway
 labels or real LSPS transition traces, and otherwise write blocked reports.

@@ -15,4 +15,4 @@ It scores whether simple linear transforms preserve formal invariants.
 
 Boundary:
 
-Toy local model engine. Demonstrates the comparator grammar; it is not a physics or biology result.
+Bounded local model engine. Demonstrates the comparator score schema; real validation comes from measured traces, datasets, and controls.

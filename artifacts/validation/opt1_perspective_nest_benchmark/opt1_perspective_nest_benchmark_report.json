@@ -1,6 +1,6 @@
 {
   "status": "completed_condition_optimization_supported_hardware_partial",
-  "read": "OPT-1 is no longer grammar-only: the V7 perspective condition-selection objective is control-supported, while the Phase 6 -> Phase 9D hardware pair-selection objective agrees but remains small-N partial.",
+  "read": "OPT-1 is no longer pending real-data validation: the V7 perspective condition-selection objective is control-supported, while the Phase 6 -> Phase 9D hardware pair-selection objective agrees but remains small-N partial.",
   "condition_optimization": {
     "source": "artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.json",
     "declared_selector": "lattice",

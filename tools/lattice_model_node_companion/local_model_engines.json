@@ -51,7 +51,7 @@
       "status": "planned",
       "command": "planned",
       "maps_to": ["ecosystem", "planet", "multi-class convergence"],
-      "description": "Cross-nest comparison engine that tests whether the same score grammar recurs across completed classes."
+      "description": "Cross-nest comparison engine that tests whether the same score schema recurs across completed classes."
     }
   ]
 }

@@ -28,7 +28,7 @@
       "nest": "Nest 1",
       "type": "nest",
       "status": "foundation locked",
-      "description": "Linear algebra, symmetries, invariants, encoded circuit states, and formal score grammar."
+      "description": "Linear algebra, symmetries, invariants, encoded circuit states, and formal score schema."
     },
     {
       "id": "linear_algebra",
@@ -396,7 +396,7 @@
       "nest": "Nest 1",
       "type": "validation status",
       "status": "mostly supported / named gates",
-      "description": "Nest 1 is no longer only grammar: LA/GEO, STAT/PROB, NUM/GRP, TOPOG, DYN, INFO/TENSOR, GRAPH-1, GEO-2, DYN-2, and CTRL-1 have real support; OPT/CAT are limited; GRAPH-2 has pilot, quantum-label, and dense GRAPH-2A row-level support but cluster closeout remains open; GAME-1 has V7 crosswalk data but still needs a locked rubric."
+      "description": "Nest 1 is now tied to real evidence: LA/GEO, STAT/PROB, NUM/GRP, TOPOG, DYN, INFO/TENSOR, GRAPH-1, GEO-2, DYN-2, and CTRL-1 have real support; OPT/CAT are limited; GRAPH-2 has pilot, quantum-label, and dense GRAPH-2A row-level support but cluster closeout remains open; GAME-1 has V7 crosswalk data but still needs a locked rubric."
     },
     {
       "id": "topology_invariance",
@@ -521,7 +521,7 @@
     {
       "source": "mirror_architecture",
       "target": "nest1_formal",
-      "relation": "defines score grammar"
+      "relation": "defines score schema"
     },
     {
       "source": "mirror_architecture",
@@ -816,7 +816,7 @@
     {
       "source": "engine02_nest2_matter",
       "target": "nest2_matter",
-      "relation": "runs structured-matter score grammar"
+      "relation": "runs structured-matter score schema"
     },
     {
       "source": "engine02_nest2_matter",

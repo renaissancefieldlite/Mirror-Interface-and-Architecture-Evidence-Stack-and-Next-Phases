@@ -10,11 +10,11 @@ foundation complete / `Engine 02` local demonstrator built
 `Nest 2` moves the Mirror Architecture score spine from smallest formal
 systems into constrained matter-facing structure.
 
-`Nest 1` established the formal grammar:
+`Nest 1` established the formal validation schema:
 
 `state / control / transform / invariant / drift / coherence / score`
 
-`Nest 2` asks whether that grammar can be applied to systems whose structure is
+`Nest 2` asks whether that score schema can be applied to systems whose structure is
 not arbitrary:
 
 - elements
@@ -65,7 +65,7 @@ into:
 
 `family_recovery + topology_preservation + invariant_balance - structural_drift`
 
-This gives the larger project a matter-facing comparator grammar without
+This gives the larger project a matter-facing comparator score schema without
 claiming physical validation in chemistry.
 
 ## Claim Boundary
@@ -73,7 +73,7 @@ claiming physical validation in chemistry.
 `Nest 2` establishes a mapping layer and first local comparator engine, not a
 completed chemistry proof.
 
-The current engine demonstrates the score grammar on bounded toy
+The current engine demonstrates the score schema on bounded synthetic
 representations. It does not yet prove:
 
 - element-family recovery above controls
@@ -358,7 +358,7 @@ verified lower-risk pathway with identified descendants and closed balance.
 
 ## Nest 2 Finding
 
-Nest 2 shows that the same Mirror Architecture grammar can be expressed over
+Nest 2 shows that the same Mirror Architecture score schema can be expressed over
 matter-facing constrained representations.
 
 The key shift is:
@@ -366,7 +366,7 @@ The key shift is:
 - Nest 1:
   relation survives formal transform
 - Nest 2:
-  the same scoring grammar can represent physical / chemical constraints
+  the same scoring schema can represent physical / chemical constraints
 
 That gives the project a clean bridge into:
 
@@ -414,7 +414,7 @@ Then Nest 3 can take the same structure into:
 Nest 2 is where the pattern first receives a structured-matter representation.
 
 The finding is not that chemistry has been physically validated. The finding
-is that the Mirror score now has a disciplined chemistry-facing grammar:
+is that the Mirror score now has a disciplined chemistry-facing score schema:
 
 recover the family, preserve the graph, respect the invariant, track drift,
 and do not count false transformations as success.

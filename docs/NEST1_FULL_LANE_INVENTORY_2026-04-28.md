@@ -26,7 +26,7 @@ inventory.
 ## Rule
 
 ```text
-no toy-only closeout
+no synthetic-only closeout
 real artifact + locked control + score + honest status
 ```
 
@@ -66,7 +66,7 @@ real artifact + locked control + score + honest status
 
 ## Clean Read
 
-Nest 1 is no longer just grammar. It has a real evidence foundation across
+Nest 1 is now tied to real evidence. It has a real evidence foundation across
 transformer traces, quantum/circuit bridges, hardware-facing checks, control
 discipline, and limited biological adapters.
 

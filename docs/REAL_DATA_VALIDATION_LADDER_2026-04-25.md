@@ -1,32 +1,32 @@
-# Draft Grammar-To-Real-Data Validation Ladder
+# Real-Data Validation Ladder
 
 Date: `2026-04-25`
 
 Status:
-local draft / not public-locked / do not publish until approved
+public-safe framing note / active claim-discipline layer
 
 Companion draft:
 [Draft Nest 1 / Nest 2 Foundation Real Mapping Plan](./DRAFT_NEST1_NEST2_FOUNDATION_REAL_MAPPING_PLAN_2026-04-25.md)
 
 ## Purpose
 
-This note separates the value of grammar mapping from the stronger burden of
-real-data validation.
+This note keeps the evidence ladder centered on real artifacts, real datasets,
+and real controls.
 
 The corrected read is:
 
 ```text
-grammar mapping is useful as schema discovery
-real data decides whether a lane graduates
+real-data mapping defines the route
+real traces, datasets, controls, and baselines decide whether a lane graduates
 ```
 
-The grammar is not proof by itself, but it is not worthless. Its value is that
-it defines what to measure, what to compare against, what should remain stable,
-what drift looks like, and what would falsify a stronger claim.
+The shared score schema is only useful when it points into real measurement. Its
+value is that it defines what to measure, what to compare against, what should
+remain stable, what drift looks like, and what would falsify a stronger claim.
 
-## What Grammar Mapping Is Good For
+## What Real-Data Mapping Is Good For
 
-Grammar mapping can legitimately do five things:
+Real-data mapping can legitimately do five things:
 
 1. define the shared comparator fields:
    `state / control / transform / invariant / drift / coherence / score`
@@ -37,13 +37,14 @@ Grammar mapping can legitimately do five things:
    data pass
 5. turn broad intuition into falsifiable runners
 
-That is a real methodological contribution.
+That is a real methodological contribution only because it routes the work
+toward measurable evidence.
 
 It is not the same thing as empirical validation.
 
-## What Grammar Mapping Is Not
+## What Real-Data Mapping Is Not
 
-Grammar mapping does not by itself establish:
+Real-data mapping does not by itself establish:
 
 - chemistry validation
 - biology validation
@@ -86,12 +87,17 @@ coarse signal. It is currently strongest as:
 It is not yet strong enough by itself to validate high-resolution biological
 `SPEC-1`, `DE-1`, or `TOPOG` claims.
 
-### Tier 3: grammar mapped, needs real data
+### Tier 3: validation mapped, needs stronger real-data closeout
 
-`Nest 2` currently belongs here until the real datasets are plugged in.
+Early `Nest 2` belonged here before the real molecule/material/pathway runners
+were added. The current Nest 2 stack has moved into real-data testing through
+`RDKit`, public molecule benchmarks, PFAS pathway records, and materials
+stability descriptors, while allostery and richer physical chemistry closeout
+remain open.
 
-The structured-matter grammar has value as a methodology map, but the next
-step must use real chemistry/material data:
+The structured-matter validation map is now valuable as a route into real
+chemistry/material data, not as a substitute for that data. The next upgrades
+should keep expanding:
 
 - `RDKit` plus `QM9`, `ZINC`, or `ChEMBL`
 - PFAS / contaminant degradation-pathway data
@@ -103,7 +109,7 @@ step must use real chemistry/material data:
 These are useful for explanation, adapter design, or smoke tests, but not as
 claim evidence:
 
-- toy rows
+- synthetic rows
 - synthetic examples
 - visual-only demos
 - card/ontology displays
@@ -133,7 +139,7 @@ This tests the formal layer against the actual AI/hardware evidence base.
 
 ### Step 2: Nest 2 real-dataset passes
 
-Do not rely on toy chemistry rows.
+Do not rely on bounded chemistry rows.
 
 Candidate runners:
 
@@ -143,7 +149,7 @@ Candidate runners:
 - materials stability recovery with `pymatgen` / `ASE`
 - spectral-signature comparison against public spectra where practical
 
-This tests whether the structured-matter grammar predicts or recovers real
+This tests whether the structured-matter validation map predicts or recovers real
 properties above simple baselines.
 
 ### Step 3: Return to HRV / EEG later
@@ -169,7 +175,7 @@ blocked by missing data/tool/device
 schema/scaffold only
 ```
 
-The grammar map earns its keep by making that classification possible.
+The validation map earns its keep by making that classification possible.
 
 ## Lane-By-Lane Execution Standard
 
@@ -397,14 +403,14 @@ Results:
 Clean read:
 
 ```text
-Nest 1 is no longer a loose grammar map. Every current lane is now either
+Nest 1 is no longer a loose validation map. Every current lane is now either
 control-supported, limited by small-N transfer, or blocked by a named missing
 data/protocol surface.
 ```
 
 ## Working Read
 
-The grammar mapping is valuable if it becomes a disciplined routing map from
+The real-data mapping is valuable if it becomes a disciplined routing map from
 intuition into real tests.
 
 It becomes weak if it is treated as proof before the real data pass.

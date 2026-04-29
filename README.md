@@ -87,6 +87,13 @@ does not overwrite the V7/V8/Phase ladder; it gives the ladder a structured
 map for testing the same architecture across formal systems, matter,
 coherence, biology, and convergence.
 
+This is a real-data validation stack, not an abstract claim layer. From the
+earliest phases onward, the work is organized around measured model outputs,
+reruns, hidden-state traces, transformer internals, circuit encodings,
+hardware-facing runs, biosignal captures, public molecule / materials
+datasets, controls, baselines, and p-values. The nesting layer is the map for
+where those real-data tests expand next.
+
 - `Nest 1`
   The `Source Mirror Pattern` has now been expressed across every checked
   formal lane: linear algebra, symmetry, invariants, encoded states, geometry,
@@ -119,14 +126,14 @@ coherence, biology, and convergence.
   circuit edges, and controls exist.
 
 - `Nest 2`
-  `Engine 02` shows that the same scoring grammar can be expressed over
-  structured-matter representations: element-family recovery, molecular graph
-  validity, `H2O` motif structure, mineral / redox / nutrition rows, and
-  contaminant bad-descendant scoring. `Engine 02V` adds real molecule-data
-  validation using `RDKit`; `Nest 2C` expands across `ESOL`, `Lipophilicity`,
-  `FreeSolv`, and `QM9 alpha`, with two shuffled-control seeds per dataset and
-  `5000` permutations per run. `Nest 2D -> 2G` adds allostery benchmark
-  extraction, PFAS pathway-coherence validation, Matbench / Materials Project
+  `Engine 02` made the structured-matter mapping runnable across bounded
+  matter rows: element-family recovery, molecular graph validity, `H2O` motif
+  structure, mineral / redox / nutrition rows, and contaminant
+  bad-descendant scoring. `Engine 02V` adds real molecule-data validation using
+  `RDKit`; `Nest 2C` expands across `ESOL`, `Lipophilicity`, `FreeSolv`, and
+  `QM9 alpha`, with two shuffled-control seeds per dataset and `5000`
+  permutations per run. `Nest 2D -> 2G` adds allostery benchmark extraction,
+  PFAS pathway-coherence validation, Matbench / Materials Project
   formation-energy validation, and stronger RDKit descriptor baselines.
 
 - `Nest 3`
@@ -177,8 +184,9 @@ Current best read:
   `SPEC`, `DE`, and `TOPOG` validation. The next HRV-only upgrade is
   `Phase 12B-L20`: `20` blocks x `4` conditions with Latin-square ordering and
   raw `RR` capture whenever available.
-- `Nest 1` completed the expanded formal map: the same comparator grammar
-  maps into topology, topography, graph theory, dynamics,
+- `Nest 1` completed the expanded formal map: the same measured
+  state/control/transform/invariant/drift/coherence/score structure maps into
+  topology, topography, graph theory, dynamics,
   probability/information, optimization, control, numerical computation, and
   compositional math, giving the `Source Mirror Pattern` a full formal base
   before `Nest 2`. The grounded read now ties `Nest 1` to the real
@@ -197,8 +205,9 @@ Current best read:
   rubric; `OPT-1` has a supported condition-optimization benchmark plus
   small-N hardware-pair partial; and `CAT-1` has PennyLane -> Qiskit
   composition support plus small-N hardware-subset partial.
-- `Nest 2` now has its first local structured-matter methodology engine: the
-  same comparator grammar maps into elements, molecular graphs, water,
+- `Nest 2` now has its first local structured-matter engine and real molecule
+  validation lane: the same measured score schema maps into elements,
+  molecular graphs, water,
   minerals, redox rows, nutrition chemistry, persistent-contaminant pathway
   scoring, and the expanded structured-matter lanes needed for higher nests.
   `Engine 02V` now runs against multiple real molecule-property datasets with
@@ -391,10 +400,10 @@ Start here if you only have a few minutes:
 
 ## Current Validation Notes
 
-These notes keep the claim ladder grounded: grammar maps route the work,
-real traces and datasets decide what graduates.
+These notes keep the claim ladder grounded: real-data mapping routes the work,
+and real traces, controls, baselines, and datasets decide what graduates.
 
-1. [Draft Grammar-To-Real-Data Validation Ladder](./docs/DRAFT_GRAMMAR_TO_REAL_DATA_VALIDATION_LADDER_2026-04-25.md)
+1. [Real-Data Validation Ladder](./docs/REAL_DATA_VALIDATION_LADDER_2026-04-25.md)
 2. [Draft Nest 1 / Nest 2 Foundation Real Mapping Plan](./docs/DRAFT_NEST1_NEST2_FOUNDATION_REAL_MAPPING_PLAN_2026-04-25.md)
 3. [Nest 1 Real-Trace Foundation Report](./artifacts/validation/nest1_real_trace_foundation/nest1_real_trace_foundation_report.md)
 4. [Nest 1 Remaining Lane Closeout](./artifacts/validation/nest1_remaining_lane_closeout/nest1_remaining_lane_closeout_report.md)

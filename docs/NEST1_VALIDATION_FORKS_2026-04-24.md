@@ -52,7 +52,7 @@ The current validation posture separates the lanes like this:
 | dataset-blocked | `GRAPH-1/2`, `Engine 02V` | runners exist; need graph/pathway data or `RDKit` molecule data |
 | existing-data next | `TOP-1/2`, `DYN-1/2` | clear routes using V8 hidden-state traces, but not yet run |
 | new-design needed | `OPT-1`, `GAME-1` | needs declared benchmark or adversarial/multi-agent protocol |
-| scaffold / parked | toy rows, visual-only demos, old visual registry branch | useful for navigation or UI, not evidence without real data |
+| scaffold / parked | synthetic rows, visual-only demos, old visual registry branch | useful for navigation or UI, not evidence without real data |
 
 ## SPEC-1 Result
 

@@ -2,7 +2,7 @@
 """First local model engine for the Lattice Model Node Companion.
 
 This engine is intentionally small and dependency-free. It demonstrates the
-Nest 1 score grammar with linear algebra transforms:
+Nest 1 score schema with linear algebra transforms:
 
 state -> control -> transform -> invariant -> drift -> coherence -> score
 """
@@ -97,7 +97,7 @@ def build_report() -> dict:
         "state": VECTORS,
         "invariants": ["norm", "pairwise dot product", "relative geometry"],
         "rows": rows,
-        "claim_boundary": "Toy local model engine. Demonstrates the comparator grammar; it is not a physics or biology result.",
+        "claim_boundary": "Bounded local model engine. Demonstrates the comparator score schema; real validation comes from measured traces, datasets, and controls.",
     }
 
 

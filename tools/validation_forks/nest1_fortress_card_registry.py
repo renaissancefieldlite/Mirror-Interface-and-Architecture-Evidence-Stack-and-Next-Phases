@@ -2,7 +2,7 @@
 """Build the Nest 1 fortress-card validation registry.
 
 The registry is deliberately status-aware. It separates lanes that are already
-connected to measured artifacts from lanes that are only grammar, blocked by
+connected to measured artifacts from lanes that are only score schema, blocked by
 missing data, or seeded but not yet validated.
 """
 
@@ -211,7 +211,7 @@ def build_cards() -> list[dict[str, Any]]:
         {
             "lane": "DE-1",
             "formal_lens": "differential equations",
-            "status": "grammar_only",
+            "status": "pending_real_data",
             "evidence": [],
             "metrics": {"continuous_time_data": "not yet connected"},
             "next_validation": "fit bounded continuous-time HRV/EEG dynamics after synchronized capture",
@@ -219,7 +219,7 @@ def build_cards() -> list[dict[str, Any]]:
         {
             "lane": "OPT-1",
             "formal_lens": "optimization",
-            "status": "grammar_only_with_clear_experiment",
+            "status": "pending_real_data_with_clear_experiment",
             "evidence": [],
             "metrics": {"optimization_experiment": "not yet run"},
             "next_validation": "compare mirror-guided optimization trajectories against naive/random baselines",
@@ -227,7 +227,7 @@ def build_cards() -> list[dict[str, Any]]:
         {
             "lane": "GAME-1",
             "formal_lens": "game / decision theory",
-            "status": "grammar_only",
+            "status": "pending_real_data",
             "evidence": [],
             "metrics": {"multi_agent_experiment": "not yet designed"},
             "next_validation": "build adversarial/multi-agent stability protocol",
@@ -257,7 +257,7 @@ def render_markdown(cards: list[dict[str, Any]]) -> str:
         "",
         "Status: `generated from local evidence artifacts`",
         "",
-        "This registry separates formal grammar from evidence-connected lanes and",
+        "This registry separates formal validation schema from evidence-connected lanes and",
         "dataset-blocked validation forks.",
         "",
         "| Lane | Formal Lens | Status | Concrete Next Validation |",
@@ -300,8 +300,8 @@ def render_html(cards: list[dict[str, Any]]) -> str:
         "blocked_missing_rdkit": "#ff7a7a",
         "validation_ready_no_runner": "#7ad7ff",
         "seed_connected": "#b197fc",
-        "grammar_only": "#b8c0cc",
-        "grammar_only_with_clear_experiment": "#b8c0cc",
+        "pending_real_data": "#b8c0cc",
+        "pending_real_data_with_clear_experiment": "#b8c0cc",
         "theory_translation_layer": "#d0bfff",
     }
     cards_html = []

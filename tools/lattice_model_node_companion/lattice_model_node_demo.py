@@ -545,7 +545,7 @@ def render_html(data: dict) -> str:
       }}
       if (q.includes("nest 1") || q.includes("formal lanes") || q.includes("math lanes")) {{
         showNode("nest1_real_closeout", false);
-        return "Nest 1 is no longer just grammar. Multiple formal lanes are supported by real traces or controls; CTRL-1 is now control-supported, TOP is preservation-supported but not separation-supported, GRAPH-2 is a soft-positive internal pilot that needs stronger labels, and GAME-1 is protocol-ready but waiting for real trials.";
+        return "Nest 1 is a real-data formal validation layer now. Multiple formal lanes are supported by real traces or controls; CTRL-1 is control-supported, TOP is preservation-supported but not separation-supported, GRAPH-2 is a soft-positive internal pilot that needs stronger labels, and GAME-1 is protocol-ready but waiting for real trials.";
       }}
       if (q.includes("phase 12") || q.includes("phase12") || q.includes("biology matrix")) {{
         showNode("phase12b_biology_matrix", false);

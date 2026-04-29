@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """GRAPH-2B raw token/layer pathway graph.
 
-This runner avoids toy data. It builds a hub-reduced graph from real V8
+This runner avoids synthetic data. It builds a hub-reduced graph from real V8
 point-cloud exports, then tests whether independently sourced Phase 6
 quantum-encoding pairs are recoverable above degree and shuffled-label
 controls.

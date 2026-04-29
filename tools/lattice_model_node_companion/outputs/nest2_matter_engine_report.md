@@ -3,7 +3,7 @@
 Schema: `state / control / transform / invariant / drift / coherence / score`
 
 This is the first local structured-matter engine behind the Lattice Model Node Companion.
-It demonstrates the Nest 2 score grammar without external dependencies or model downloads.
+It demonstrates the Nest 2 score schema without external dependencies or model downloads.
 
 ## Summary
 
@@ -60,4 +60,4 @@ It demonstrates the Nest 2 score grammar without external dependencies or model 
 
 Boundary:
 
-Toy local comparator. Demonstrates matter-facing score grammar; it is not a chemistry, nutrition, medical, or remediation proof.
+Bounded local comparator. Demonstrates the matter-facing score schema; real validation comes from molecule, material, pathway, and experimental datasets with controls.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """TOP-1/2 closeout for real V8 hidden-state point clouds.
 
-This runner intentionally refuses toy data. If no NPZ point-cloud export is
+This runner intentionally refuses synthetic data. If no NPZ point-cloud export is
 present, it writes a blocked report instead of generating synthetic topology.
 """
 

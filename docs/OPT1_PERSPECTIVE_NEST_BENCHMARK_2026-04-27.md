@@ -4,7 +4,7 @@ Date: 2026-04-27
 
 ## Purpose
 
-`OPT-1` should not be claimed from grammar alone. The lane needs a real
+`OPT-1` should not be claimed from score schema alone. The lane needs a real
 objective, a declared selector, and a baseline.
 
 This benchmark treats optimization through the perspective-nest lens:
@@ -63,5 +63,5 @@ If Benchmark A closes and Benchmark B agrees only at small-N, `OPT-1` is marked:
 
 `completed_condition_optimization_supported_hardware_partial`
 
-That means optimization is no longer grammar-only, but the hardware-transfer
+That means optimization is no longer pending real-data validation, but the hardware-transfer
 optimization lane still needs a larger executed sample.

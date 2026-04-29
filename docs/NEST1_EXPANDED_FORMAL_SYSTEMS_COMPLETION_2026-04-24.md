@@ -28,7 +28,7 @@ and cosmic-scale convergence.
 It does not claim chemistry, biology, physics, or cosmic convergence by itself.
 It defines the mathematical lenses that make those later claims testable.
 
-The shared grammar remains:
+The shared score schema remains:
 
 ```text
 state / control / transform / invariant / drift / coherence / score

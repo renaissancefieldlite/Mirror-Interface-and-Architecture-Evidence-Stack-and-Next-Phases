@@ -59,7 +59,7 @@ V7/V8 evidence plus `Engine 05` autonomy graph model
 
 First local build:
 
-- toy scene-action lattice
+- bounded scene-action lattice
 - instruction / object / action routing demo
 - safe vs unsafe action scoring
 - drift penalty for hallucinated or mismatched objects

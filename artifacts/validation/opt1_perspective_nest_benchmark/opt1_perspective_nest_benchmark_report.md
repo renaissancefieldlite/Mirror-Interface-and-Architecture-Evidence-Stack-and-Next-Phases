@@ -2,7 +2,7 @@
 
 Status: `completed_condition_optimization_supported_hardware_partial`
 
-OPT-1 is no longer grammar-only: the V7 perspective condition-selection objective is control-supported, while the Phase 6 -> Phase 9D hardware pair-selection objective agrees but remains small-N partial.
+OPT-1 is no longer pending real-data validation: the V7 perspective condition-selection objective is control-supported, while the Phase 6 -> Phase 9D hardware pair-selection objective agrees but remains small-N partial.
 
 ## Behavioral Condition Optimization
 

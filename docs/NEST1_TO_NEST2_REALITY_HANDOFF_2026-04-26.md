@@ -9,11 +9,11 @@ Status: spine handoff / active next-step board
 The current standard is:
 
 ```text
-grammar can open a lane
+a score schema can open a lane
 real artifacts decide whether the lane graduates
 ```
 
-No more toy rows posing as validation.
+No more synthetic rows posing as validation.
 
 Each lane must now be tagged as one of:
 
@@ -27,7 +27,7 @@ Each lane must now be tagged as one of:
 ## Nest 1 Current Read
 
 `Nest 1` is substantially grounded. It is not finished in the sense that every
-formal lane is fully closed, but it is no longer merely a grammar map.
+formal lane is fully closed, but it is no longer merely a validation map.
 
 Supported or strongly grounded:
 
@@ -297,7 +297,7 @@ Already mapped:
 Next Nest 2 reality gates:
 
 1. `RDKit / QM9 or ZINC molecule benchmark`
-   Replace toy molecular rows with real molecule records and known properties.
+   Replace synthetic molecular rows with real molecule records and known properties.
 
 2. `PFAS / contaminant degradation pathway`
    Test parent-disappearance vs bad-descendant penalty using known degradation

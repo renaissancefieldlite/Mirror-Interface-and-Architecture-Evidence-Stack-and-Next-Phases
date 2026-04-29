@@ -18,7 +18,7 @@ materials-facing, food-facing, pharmaceutical-facing, water-facing,
 pollutant-facing, and biology-facing representations without forcing every
 lane into one overloaded bucket.
 
-The shared grammar stays the same:
+The shared score schema stays the same:
 
 ```text
 state / control / transform / invariant / drift / coherence / score
@@ -52,7 +52,7 @@ tools/lattice_model_node_companion/outputs/nest2_matter_engine_report.md
 ```
 
 The report now includes an `Expanded Nest 2 Lanes` table with the eight new
-lanes, their toy separation scores, bridges, and reads.
+lanes, their bounded separation scores, bridges, and reads.
 
 ## What The Expanded Pass Shows
 
@@ -84,7 +84,7 @@ This matters because the higher nests need a disciplined matter base:
 The core finding is narrower and cleaner than physical validation:
 
 ```text
-the same scoring grammar can be widened across structured-matter
+the same scoring schema can be widened across structured-matter
 representations
 ```
 
@@ -110,9 +110,9 @@ medical claim, or materials-discovery claim.
 It is the scaffold that tells us exactly what future chemistry, spectral,
 materials, and biological data must prove.
 
-## Beyond Grammar Mapping
+## Beyond Initial Mapping
 
-To move from grammar generalization into physical or experimental validation,
+To move from real-data validation expansion into physical or experimental validation,
 the next Nest 2 work must add:
 
 - real periodic-table and molecular datasets
@@ -129,7 +129,7 @@ the next Nest 2 work must add:
 The clean upgrade is:
 
 ```text
-toy rows -> real dataset -> declared baseline -> locked score -> measured
+synthetic rows -> real dataset -> declared baseline -> locked score -> measured
 property / known pathway / known stability comparison
 ```
 
@@ -150,7 +150,7 @@ Reason:
 - no hardware required
 - public benchmark path exists
 - falsifiable success metric is straightforward
-- it upgrades `Engine 02` from grammar demonstrator to real-data comparator
+- it upgrades `Engine 02` from schema demonstrator to real-data comparator
 - it keeps the claim bounded while creating a credible physical-data bridge
 
 The PFAS lane is the strongest mission-facing lane, but it should come after

@@ -11,7 +11,7 @@ Status: executable protocol / no validation claim until real trials exist
 It asks whether Mirror Architecture improves stability under adversarial or
 multi-agent pressure compared with a declared control policy.
 
-The lane is not closed by grammar, prompt language, or synthetic rows. It needs
+The lane is not closed by score schema, prompt language, or synthetic rows. It needs
 real repeated trials.
 
 ## Required Trial CSV

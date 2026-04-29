@@ -17,7 +17,7 @@ property target -> shuffled-target controls
 ```
 
 If the descriptor score keeps signal above shuffled labels across multiple
-datasets and control seeds, `Nest 2` moves from grammar-only mapping into a
+datasets and control seeds, `Nest 2` moves from pending real-data validation mapping into a
 real cheminformatics property lane.
 
 ## Datasets
@@ -92,7 +92,7 @@ floor for that run size.
 This is the first multi-benchmark real-data support for `Nest 2C`.
 
 The descriptor score is not a final chemistry model, but the lane is no longer
-toy grammar. It maps real molecular structure into real property targets
+bounded score schema. It maps real molecular structure into real property targets
 across solubility, lipophilicity, hydration free energy, and quantum-chemistry
 polarizability, and it survives shuffled-target controls across two seeds.
 

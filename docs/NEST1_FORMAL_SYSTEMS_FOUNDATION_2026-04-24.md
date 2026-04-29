@@ -53,7 +53,7 @@ score = preserved_structure - drift_penalty
 ```
 
 This is intentionally substrate-neutral. Each later nest can specialize the
-fields, but the comparison grammar stays stable.
+fields, but the comparison score schema stays stable.
 
 ## Linear Algebra Rows
 
@@ -134,7 +134,7 @@ That makes it the reductionist footing for the higher nesting layers.
 - environmental remediation
 - universal cross-domain convergence
 
-It provides the formal comparator grammar those later claims must inherit.
+It provides the formal comparator score schema those later claims must inherit.
 
 ## How It Plugs Upward
 
@@ -177,7 +177,7 @@ The next validation fork layer is now executable rather than just outlined:
 until their required real datasets, transition traces, or `RDKit` tooling are
 available.
 
-The active standard is now real-data first: visual scaffolds, toy rows, and
+The active standard is now real-data first: visual scaffolds, synthetic rows, and
 registry-style summaries are not claim surfaces unless they plug into real
 traces, real measurements, real hardware, real datasets, or declared
 benchmarks.

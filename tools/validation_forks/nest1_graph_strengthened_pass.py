@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Nest 1 GRAPH strengthened pass.
 
-This runner strengthens the earlier GRAPH-lite read without adding toy data.
+This runner strengthens the earlier GRAPH-lite read without adding synthetic data.
 It uses the real Phase 6 feature artifact and tests graph recovery in two
 ways:
 

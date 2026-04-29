@@ -2,7 +2,7 @@
 
 Status: `completed`
 
-This is a real-data validation fork, not just a grammar note.
+This is a real-data validation fork, not just a validation note.
 It tests whether spectral-method features computed from existing HRV RR
 windows recover the Phase 12B condition labels better than simpler baselines.
 

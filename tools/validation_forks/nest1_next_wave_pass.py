@@ -8,7 +8,7 @@ Runs the next immediately available Nest 1 lanes on real artifacts:
 - GRAPH-lite: kNN edge recovery controls over the Phase 6 feature graph.
 - TOP: honest blocked status if raw hidden-state point clouds are unavailable.
 
-No toy data is generated. Nulls shuffle existing real artifacts or sample
+No synthetic data is generated. Nulls shuffle existing real artifacts or sample
 matched random layer positions.
 """
 

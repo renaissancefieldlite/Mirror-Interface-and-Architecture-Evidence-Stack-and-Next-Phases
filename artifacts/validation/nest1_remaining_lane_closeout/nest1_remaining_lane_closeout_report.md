@@ -2,7 +2,7 @@
 
 Status: `completed_remaining_lane_closeout`
 
-Remaining Nest 1 lanes are now separated into real support, small-N partial transfer, and true data blockers. No remaining lane is left as vague grammar-only language.
+Remaining Nest 1 lanes are now separated into real support, small-N partial transfer, and true data blockers. No remaining lane is left as vague pending real-data validation language.
 
 ## Lane Summary
 

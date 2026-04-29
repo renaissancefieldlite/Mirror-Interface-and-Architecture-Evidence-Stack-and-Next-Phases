@@ -3,7 +3,7 @@
 
 This script is intentionally downstream of `nest1_real_trace_foundation.py`.
 It reads the generated real-data CSV/JSON outputs and renders charts plus a
-compact PDF evidence pack. No toy rows are generated here.
+compact PDF evidence pack. No synthetic rows are generated here.
 """
 
 from __future__ import annotations
@@ -192,7 +192,7 @@ def build_pdf(report: dict[str, Any], chart_paths: list[Path]) -> None:
     )
     story: list[Any] = []
     story.append(Paragraph("Nest 1 Real-Trace Foundation Evidence Pack", styles["TitleCenter"]))
-    story.append(Paragraph("Generated from real exported AI and hardware artifacts. No toy rows are used in this pack.", styles["BodyText"]))
+    story.append(Paragraph("Generated from real exported AI and hardware artifacts. No synthetic rows are used in this pack.", styles["BodyText"]))
     story.append(Spacer(1, 0.14 * inch))
 
     branch_table = [["Branch", "Status", "Key read"]]

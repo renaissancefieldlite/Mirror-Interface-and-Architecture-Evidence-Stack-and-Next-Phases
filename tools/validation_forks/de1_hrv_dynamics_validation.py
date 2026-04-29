@@ -6,7 +6,7 @@ the actual Phase 12B MoFit RR/BPM session exports and tests whether a bounded
 differential-equation style lens can separate condition classes above a simple
 heart-rate delta baseline.
 
-No toy rows are generated here. Missing real files produce a blocked report.
+No synthetic rows are generated here. Missing real files produce a blocked report.
 """
 
 from __future__ import annotations
@@ -336,7 +336,7 @@ def blocked_report(phase12b_path: Path, hrv_root: Path, out_dir: Path, reasons: 
         "validation_fork": "Nest 1 DE-1 -> Phase 12B HRV dynamics",
         "inputs": {"phase12b_path": str(phase12b_path), "hrv_root": str(hrv_root)},
         "blocked_reasons": reasons,
-        "boundary": "No toy data generated. This fork requires real HRV session files.",
+        "boundary": "No synthetic data generated. This fork requires real HRV session files.",
     }
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "de1_hrv_dynamics_report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
@@ -426,7 +426,7 @@ def render_markdown(report: dict) -> str:
     if report["status"] == "blocked":
         lines.extend(
             [
-                "This fork did not generate toy data.",
+                "This fork did not generate synthetic data.",
                 "",
                 "## Blocked Reasons",
                 "",
@@ -438,7 +438,7 @@ def render_markdown(report: dict) -> str:
 
     lines.extend(
         [
-            "This is a real-data validation fork, not a grammar note.",
+            "This is a real-data validation fork, not a validation note.",
             "It fits a bounded first-order local dynamics model to actual Phase 12B",
             "BPM and RR windows, then compares condition recovery against a simple",
             "mean-HR delta baseline.",
