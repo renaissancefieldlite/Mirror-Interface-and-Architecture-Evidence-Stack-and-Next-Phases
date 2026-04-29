@@ -33,6 +33,8 @@ The clean transformer-internal split is:
 - hidden states / residual stream: where the representation lands
 - multi-head attention: how token-to-token routing and context flow are formed
 - feed-forward / MLP blocks: how the representation is transformed after routing
+- sparse autoencoder features: which sparse interpretable features and
+  feature-to-feature circuits carry the architecture
 
 This protocol locks those missing internals as a Nest 1 validation bridge.
 
@@ -50,6 +52,7 @@ objects:
 | head entropy / head specialization | `SPEC-1`, `INFO-1`, `STAT` |
 | layer-by-layer attention-flow changes | `DYN-1`, `CTRL-1` |
 | MLP block deltas | `TENSOR`, `GEO`, `DYN-2`, `OPT-1` |
+| SAE feature activations / feature circuits | `GRAPH-2`, `INFO-1`, `CAT-1`, mechanistic circuit tracing |
 
 So yes: these should be run against Nest 1.
 
@@ -73,6 +76,7 @@ Current remaining missing inputs:
 
 - MLP-depth expansion on `prompt_set_02`
 - expanded layer scope beyond early / middle / late for MLP/feed-forward
+- SAE feature / circuit export as the next interpretability layer
 - stronger leave-one-prompt / model-family controls
 - Nemotron-specific adapter if standard attention tensors remain unavailable
 
@@ -108,6 +112,11 @@ Current execution read:
 - next gate:
   MLP-depth expansion on `prompt_set_02`, then leave-one-prompt /
   model-family controls
+- next interpretability layer:
+  Sparse Autoencoder feature / circuit tracing is now protocol-locked in
+  `docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md`. It is not yet
+  evidence-closed; it requires real SAE activations, feature dictionaries,
+  circuit edges, and controls before promotion.
 
 ## GRAPH-2 Connection
 

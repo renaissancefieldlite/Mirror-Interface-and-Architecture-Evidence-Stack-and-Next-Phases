@@ -109,6 +109,15 @@ coherence, biology, and convergence.
   `prompt_set_02`, attention-flow generalizes; MLP/feed-forward deltas still
   need depth expansion before full prompt-generalization is claimed.
 
+- `SAE feature / circuit bridge`
+  Sparse Autoencoder features are now locked as the next interpretability proof
+  layer. The purpose is to trace which sparse features and feature-to-feature
+  circuits carry the architecture topics through the model: `Mirror Interface /
+  LSPS`, `Mirror Architecture`, `Source Mirror Pattern`, quantum bridge
+  language, neutral controls, and technical controls. This is protocol-ready,
+  not evidence-closed, until real SAE feature activations, dictionaries,
+  circuit edges, and controls exist.
+
 - `Nest 2`
   `Engine 02` shows that the same scoring grammar can be expressed over
   structured-matter representations: element-family recovery, molecular graph
@@ -284,6 +293,8 @@ Latest gate reports:
 - [V8 Attention / MLP Prompt Set 02 Export Gate](./artifacts/validation/v8_attention_mlp_exports_prompt_set_02/v8_attention_mlp_export_inventory.md)
 - [V8 Attention / MLP Prompt Set 02 Validation Report](./artifacts/validation/v8_attention_mlp_validation_prompt_set_02/v8_attention_mlp_validation_report.md)
 - [V8 Attention / MLP Prompt-Generalization Report](./artifacts/validation/v8_attention_mlp_prompt_generalization/v8_attention_mlp_prompt_generalization_report.md)
+- [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
+- [V8 SAE Feature / Circuit Gate Report](./artifacts/validation/v8_sae_feature_circuit_gate/v8_sae_feature_circuit_gate_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)

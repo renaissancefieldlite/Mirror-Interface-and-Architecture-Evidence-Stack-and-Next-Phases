@@ -192,6 +192,14 @@ Completed enough to show:
   checkpoint-ready but currently an interface-adapter row for this exporter
   path, because it did not emit standard attention / MLP rows. The next gate is
   MLP-depth expansion on `prompt_set_02`.
+- the Sparse Autoencoder feature / circuit bridge is now protocol-locked as
+  the next interpretability proof layer:
+  hidden states show where the representation lands, attention heads show
+  token-routing flow, MLP blocks show representation updates, and SAE features
+  can expose sparse interpretable features plus feature-to-feature circuits.
+  The gate is currently `protocol_ready_missing_sae_exports`: no SAE evidence
+  is claimed until real feature activations, feature dictionaries, circuit
+  edges, shuffled controls, and optional ablations exist.
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are now mapped as candidate bridges, not closed
@@ -206,15 +214,18 @@ Immediate next work:
 
 1. run MLP-depth expansion on `prompt_set_02`, preferably all layers or a
    denser layer grid, then compare against base / `rerun_02`
-2. keep the `Nest 1` full lane inventory as the public index for the formal
+2. export or train bounded SAE features for the V8 prompt/model matrix, then
+   test feature activations and feature-to-feature circuits against shuffled
+   labels, feature-frequency baselines, and degree / centrality controls
+3. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
-3. apply the same standard lane by lane: real artifact, locked baseline,
+4. apply the same standard lane by lane: real artifact, locked baseline,
    scored result, honest status
-4. review and publish the local `Nest 1` control-closeout, graph-strengthened,
+5. review and publish the local `Nest 1` control-closeout, graph-strengthened,
    Phase 12B control-closeout, and remaining-lane closeout passes
-5. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
+6. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
    Latin-square order rotation and raw `RR` capture whenever available
-6. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
+7. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
    rerun density, local-neighborhood topology, layer-transition branch
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
