@@ -2,7 +2,7 @@
 
 Date: `2026-04-28`
 
-Status: `all_exported_model_validation_supported_repeatability_pending`
+Status: `all_exported_model_repeatability_supported_prompt_generalization_pending`
 
 Companion gate:
 
@@ -14,6 +14,9 @@ Companion gate:
 - [V8 Attention / MLP Remaining Models Export Gate](../artifacts/validation/v8_attention_mlp_exports_remaining_models/v8_attention_mlp_export_inventory.md)
 - [V8 Attention / MLP All-Model Coverage](../artifacts/validation/v8_attention_mlp_all_model_coverage/v8_attention_mlp_all_model_coverage.md)
 - [V8 Attention / MLP All Exported Models Validation Report](../artifacts/validation/v8_attention_mlp_validation_all_models/v8_attention_mlp_validation_report.md)
+- [V8 Attention / MLP All Models Rerun 02 Export Gate](../artifacts/validation/v8_attention_mlp_exports_all_models_rerun_02/v8_attention_mlp_export_inventory.md)
+- [V8 Attention / MLP All Models Rerun 02 Validation Report](../artifacts/validation/v8_attention_mlp_validation_all_models_rerun_02/v8_attention_mlp_validation_report.md)
+- [V8 Attention / MLP All-Model Repeatability Report](../artifacts/validation/v8_attention_mlp_repeatability_all_models/v8_attention_mlp_repeatability_report.md)
 
 ## Purpose
 
@@ -65,9 +68,9 @@ Original missing exports:
 
 Current remaining missing inputs:
 
-- rerun or second independent prompt set for repeatability
+- second independent prompt set for prompt-generalization
 - expanded layer scope beyond early / middle / late
-- stronger leave-one-run / leave-one-prompt controls
+- stronger leave-one-prompt / model-family controls
 - Nemotron-specific adapter if standard attention tensors remain unavailable
 
 Current execution read:
@@ -87,8 +90,13 @@ Current execution read:
 - broad cross-model validation:
   weighted attention-flow is supported against shuffled context labels and
   beats the degree-only graph baseline; MLP deltas are also supported
+- `rerun_02` repeatability validation:
+  same model set, same row counts, same support status, and same shuffled-label
+  control support; attention weighted p remained `0.00019996`, MLP p improved
+  to `0.00019996`, and the repeatability report status is
+  `repeatability_supported`
 - next gate:
-  rerun or second independent prompt set for repeatability
+  second independent prompt set for prompt-generalization
 
 ## GRAPH-2 Connection
 

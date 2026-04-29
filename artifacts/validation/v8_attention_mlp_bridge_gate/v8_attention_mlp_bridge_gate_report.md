@@ -1,26 +1,28 @@
 # V8 Attention / MLP Nest 1 Bridge Gate
 
-Status: `attention_and_mlp_supported_cross_model`
+Status: `repeatability_supported`
 
 ## Clean Read
 
-The exported model set now has real transformer-internal artifacts:
-attention top-k routing edges and MLP block-delta rows across
-lattice, neutral, and technical contexts.
+The exported model set now has repeatability-supported
+transformer-internal artifacts: attention top-k routing edges and
+MLP block-delta rows across lattice, neutral, and technical
+contexts.
 
-The first broad cross-model validation has started the stronger
-claim-support chain across every standard-export model in the
-current matrix:
+The first broad all-exported-model run and `rerun_02` preserve
+the same model set, same row counts, same support status, and
+same shuffled-label control support:
 
 - weighted attention-flow separates lattice from neutral / technical
-  above shuffled context labels
-- weighted attention-flow beats the degree-only graph baseline
-- MLP deltas are supported in the combined export
+  above shuffled context labels in both passes
+- weighted attention-flow beats the degree-only graph baseline in both
+  passes
+- MLP deltas are supported in both passes
 
-So the gate is no longer only protocol and no longer only GLM /
-Hermes. It is first broad transformer-internal support, with
-Nemotron listed as an interface-adapter row for this exporter and
-rerun / second-prompt repeatability still pending.
+So the gate has moved from first broad support to same-prompt
+repeatability support. The next gate is prompt-generalization using a
+second independent prompt set. Nemotron remains an interface-adapter
+row for this exporter path.
 
 ## Artifact State
 
@@ -33,6 +35,7 @@ rerun / second-prompt repeatability still pending.
 - exported attention CSV files detected: `5`
 - exported MLP CSV files detected: `5`
 - validation report status: `attention_and_mlp_supported_cross_model`
+- repeatability report status: `repeatability_supported`
 
 ## Nest 1 Placement
 
@@ -43,11 +46,11 @@ rerun / second-prompt repeatability still pending.
 
 ## Locked Missing Inputs
 
-- rerun or second independent prompt set for repeatability
+- second independent prompt set for prompt-generalization
 - expanded attention export beyond early/middle/late layers
 - expanded MLP layer/rerun sample for stronger MLP power
 - Nemotron-specific interface adapter if standard attention tensors remain unavailable
-- leave-one-run / leave-one-prompt controls after rerun data exists
+- leave-one-prompt and model-family controls after prompt-set expansion
 
 ## Acceptance Rule
 
@@ -57,8 +60,8 @@ rerun / second-prompt repeatability still pending.
 
 ## Next Execution Order
 
-1. add a rerun or second independent prompt set
-2. rerun combined attention-flow and MLP validation with repeatability controls
-3. expand layer scope beyond early/middle/late if local compute allows
-4. add Nemotron-specific adapter only if needed after repeatability gate
-5. then promote from first cross-model support to repeatability-supported Nest 1 evidence
+1. create second independent prompt set
+2. export all standard models against prompt_set_02
+3. validate prompt_set_02 and compare against base / rerun_02
+4. expand layer scope beyond early/middle/late if local compute allows
+5. add Nemotron-specific adapter only if needed after prompt-generalization gate

@@ -172,17 +172,21 @@ Completed enough to show:
   `TOP-1/TOP-2`, and `TOPOG-1/TOPOG-2`, with `CAT-1` kept beside the map as
   the compositional transfer rule; this prevents the simplified visual from
   hiding the full formal substrate
-- the attention / MLP missing-link gate now has first cross-model support:
+- the attention / MLP missing-link gate now has same-prompt repeatability
+  support:
   `tools/validation_forks/v8_attention_mlp_export.py` now exports real
   transformer-internal rows across every standard-export model in the current
   matrix: `DeepSeek`, `GLM`, `Gemma`, `Hermes`, `Mistral`, `Qwen`, and
   `SmolLM3`. The all-exported-model validation uses `23616` attention top-k
   edge rows and `63` MLP delta rows. Weighted attention-flow is supported
   against shuffled context labels and beats a degree-only graph baseline;
-  MLP deltas are also supported. `Nemotron` is checkpoint-ready but currently
-  an interface-adapter row for this exporter path, because it did not emit
-  standard attention / MLP rows. The next gate is repeatability through reruns
-  or a second independent prompt set.
+  MLP deltas are also supported. `rerun_02` repeated the same model set, row
+  counts, support status, and shuffled-label control support; attention
+  weighted p stayed at `0.00019996`, MLP p improved to `0.00019996`, and the
+  repeatability report status is `repeatability_supported`. `Nemotron` is
+  checkpoint-ready but currently an interface-adapter row for this exporter
+  path, because it did not emit standard attention / MLP rows. The next gate is
+  prompt-generalization through a second independent prompt set.
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are now mapped as candidate bridges, not closed
@@ -195,9 +199,9 @@ Completed enough to show:
 
 Immediate next work:
 
-1. rerun the all-exported-model attention / MLP matrix or add a second
-   independent prompt set, then test repeatability with shuffled-label,
-   leave-one-run / leave-one-prompt, and model-family controls
+1. create a second independent prompt set for the all-exported-model attention
+   / MLP matrix, then test prompt-generalization with shuffled-label,
+   leave-one-prompt, and model-family controls
 2. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
 3. apply the same standard lane by lane: real artifact, locked baseline,

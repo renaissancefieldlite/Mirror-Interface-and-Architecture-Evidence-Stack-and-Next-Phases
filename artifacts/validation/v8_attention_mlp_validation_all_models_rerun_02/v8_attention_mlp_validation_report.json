@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-04-29T04:06:35.492392+00:00",
+  "status": "attention_and_mlp_supported_cross_model",
+  "attention_csv": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports_all_models_rerun_02/v8_attention_topk_edges.csv",
+  "mlp_csv": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports_all_models_rerun_02/v8_mlp_block_deltas.csv",
+  "attention_rows": 23616,
+  "mlp_rows": 63,
+  "models": [
+    "DeepSeek",
+    "GLM",
+    "Gemma",
+    "Hermes",
+    "Mistral",
+    "Qwen",
+    "SmolLM3"
+  ],
+  "model_count": 7,
+  "attention_flow": {
+    "status": "attention_flow_supported_cross_model",
+    "models": [
+      "DeepSeek",
+      "GLM",
+      "Gemma",
+      "Hermes",
+      "Mistral",
+      "Qwen",
+      "SmolLM3"
+    ],
+    "model_count": 7,
+    "matched_units": 984,
+    "weighted_attention_flow": {
+      "true_score": 0.108196075,
+      "positive_units": 707,
+      "unit_count": 984,
+      "permutations": 5000,
+      "seed": 67,
+      "null_mean": 1.5179e-05,
+      "null_std": 0.006290366,
+      "p_value_one_sided": 0.00019996
+    },
+    "degree_only_baseline": {
+      "true_score": 0.046837462,
+      "positive_units": 341,
+      "unit_count": 984,
+      "permutations": 5000,
+      "seed": 68,
+      "null_mean": -7.9117e-05,
+      "null_std": 0.004958437,
+      "p_value_one_sided": 0.00019996
+    },
+    "weighted_minus_degree_score": 0.061358613,
+    "boundary": "Cross-model attention-flow support across the exported model set."
+  },
+  "mlp_delta": {
+    "status": "mlp_supported_cross_model",
+    "models": [
+      "DeepSeek",
+      "GLM",
+      "Gemma",
+      "Hermes",
+      "Mistral",
+      "Qwen",
+      "SmolLM3"
+    ],
+    "model_count": 7,
+    "matched_units": 21,
+    "true_score": 6.796464998,
+    "positive_units": 18,
+    "unit_count": 21,
+    "permutations": 5000,
+    "seed": 167,
+    "null_mean": 0.028810578,
+    "null_std": 2.788505019,
+    "p_value_one_sided": 0.00019996,
+    "boundary": "Cross-model MLP delta support across the exported model set; stronger future work can expand layers and reruns."
+  }
+}

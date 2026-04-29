@@ -55,8 +55,16 @@ def artifact_state() -> dict[str, object]:
         / "v8_attention_mlp_validation_report.json",
     ]
     validation_report = validation_candidates[0]
+    repeatability_report = (
+        ROOT
+        / "artifacts"
+        / "validation"
+        / "v8_attention_mlp_repeatability_all_models"
+        / "v8_attention_mlp_repeatability_report.json"
+    )
     export_inventory_status = None
     validation_report_status = None
+    repeatability_report_status = None
     if export_inventory.exists():
         try:
             export_inventory_status = json.loads(export_inventory.read_text(encoding="utf-8")).get("status")
@@ -70,6 +78,11 @@ def artifact_state() -> dict[str, object]:
             except json.JSONDecodeError:
                 validation_report_status = "invalid_json"
             break
+    if repeatability_report.exists():
+        try:
+            repeatability_report_status = json.loads(repeatability_report.read_text(encoding="utf-8")).get("status")
+        except json.JSONDecodeError:
+            repeatability_report_status = "invalid_json"
     return {
         "residual_stream_bridge_exists": residual_root.exists(),
         "dense_point_cloud_files": count_files(
@@ -93,6 +106,8 @@ def artifact_state() -> dict[str, object]:
         "export_mlp_csv_files": sum(count_files(path, ("*mlp*.csv",)) for path in export_roots),
         "validation_report_path": str(validation_report),
         "validation_report_status": validation_report_status,
+        "repeatability_report_path": str(repeatability_report),
+        "repeatability_report_status": repeatability_report_status,
     }
 
 
@@ -101,7 +116,9 @@ def build_report() -> dict[str, object]:
     attention_ready = int(state["residual_attention_artifact_files"]) > 0 or int(state["export_attention_csv_files"]) > 0
     mlp_ready = int(state["residual_mlp_artifact_files"]) > 0 or int(state["export_mlp_csv_files"]) > 0
     status = (
-        str(state["validation_report_status"])
+        str(state["repeatability_report_status"])
+        if state["repeatability_report_status"]
+        else str(state["validation_report_status"])
         if state["validation_report_status"]
         else "ready_for_validation"
         if attention_ready and mlp_ready
@@ -110,6 +127,15 @@ def build_report() -> dict[str, object]:
         else "protocol_ready_missing_attention_or_mlp_exports"
     )
     missing_inputs = (
+        [
+            "second independent prompt set for prompt-generalization",
+            "expanded attention export beyond early/middle/late layers",
+            "expanded MLP layer/rerun sample for stronger MLP power",
+            "Nemotron-specific interface adapter if standard attention tensors remain unavailable",
+            "leave-one-prompt and model-family controls after prompt-set expansion",
+        ]
+        if state["repeatability_report_status"] == "repeatability_supported"
+        else
         [
             "rerun or second independent prompt set for repeatability",
             "expanded attention export beyond early/middle/late layers",
@@ -133,6 +159,15 @@ def build_report() -> dict[str, object]:
         ]
     )
     next_execution_order = (
+        [
+            "create second independent prompt set",
+            "export all standard models against prompt_set_02",
+            "validate prompt_set_02 and compare against base / rerun_02",
+            "expand layer scope beyond early/middle/late if local compute allows",
+            "add Nemotron-specific adapter only if needed after prompt-generalization gate",
+        ]
+        if state["repeatability_report_status"] == "repeatability_supported"
+        else
         [
             "add a rerun or second independent prompt set",
             "rerun combined attention-flow and MLP validation with repeatability controls",
@@ -186,7 +221,29 @@ def build_report() -> dict[str, object]:
 
 def write_markdown(report: dict[str, object], path: Path) -> None:
     state = report["artifact_state"]
-    if report["status"] == "attention_and_mlp_supported_cross_model":
+    if report["status"] == "repeatability_supported":
+        clean_read = [
+            "The exported model set now has repeatability-supported",
+            "transformer-internal artifacts: attention top-k routing edges and",
+            "MLP block-delta rows across lattice, neutral, and technical",
+            "contexts.",
+            "",
+            "The first broad all-exported-model run and `rerun_02` preserve",
+            "the same model set, same row counts, same support status, and",
+            "same shuffled-label control support:",
+            "",
+            "- weighted attention-flow separates lattice from neutral / technical",
+            "  above shuffled context labels in both passes",
+            "- weighted attention-flow beats the degree-only graph baseline in both",
+            "  passes",
+            "- MLP deltas are supported in both passes",
+            "",
+            "So the gate has moved from first broad support to same-prompt",
+            "repeatability support. The next gate is prompt-generalization using a",
+            "second independent prompt set. Nemotron remains an interface-adapter",
+            "row for this exporter path.",
+        ]
+    elif report["status"] == "attention_and_mlp_supported_cross_model":
         clean_read = [
             "The exported model set now has real transformer-internal artifacts:",
             "attention top-k routing edges and MLP block-delta rows across",
@@ -258,6 +315,7 @@ def write_markdown(report: dict[str, object], path: Path) -> None:
         f"- exported attention CSV files detected: `{state['export_attention_csv_files']}`",
         f"- exported MLP CSV files detected: `{state['export_mlp_csv_files']}`",
         f"- validation report status: `{state['validation_report_status']}`",
+        f"- repeatability report status: `{state['repeatability_report_status']}`",
         "",
         "## Nest 1 Placement",
         "",

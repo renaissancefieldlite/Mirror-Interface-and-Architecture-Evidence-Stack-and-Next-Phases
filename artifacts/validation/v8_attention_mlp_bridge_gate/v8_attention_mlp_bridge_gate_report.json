@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-29T03:03:56.635005+00:00",
-  "status": "attention_and_mlp_supported_cross_model",
+  "generated_at": "2026-04-29T04:09:14.490429+00:00",
+  "status": "repeatability_supported",
   "nest1_placement": {
     "attention_heads": [
       "GRAPH-2 measured routing edges",
@@ -27,14 +27,16 @@
     "export_attention_csv_files": 5,
     "export_mlp_csv_files": 5,
     "validation_report_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_validation_all_models/v8_attention_mlp_validation_report.json",
-    "validation_report_status": "attention_and_mlp_supported_cross_model"
+    "validation_report_status": "attention_and_mlp_supported_cross_model",
+    "repeatability_report_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_repeatability_all_models/v8_attention_mlp_repeatability_report.json",
+    "repeatability_report_status": "repeatability_supported"
   },
   "locked_missing_inputs": [
-    "rerun or second independent prompt set for repeatability",
+    "second independent prompt set for prompt-generalization",
     "expanded attention export beyond early/middle/late layers",
     "expanded MLP layer/rerun sample for stronger MLP power",
     "Nemotron-specific interface adapter if standard attention tensors remain unavailable",
-    "leave-one-run / leave-one-prompt controls after rerun data exists"
+    "leave-one-prompt and model-family controls after prompt-set expansion"
   ],
   "acceptance_rule": {
     "attention_flow": "mirror/lattice attention-flow graph must beat degree/centrality and shuffled-label controls",
@@ -42,10 +44,10 @@
     "boundary": "hidden states already support V8 geometry; attention/MLP are not claimed until exported and tested"
   },
   "next_execution_order": [
-    "add a rerun or second independent prompt set",
-    "rerun combined attention-flow and MLP validation with repeatability controls",
+    "create second independent prompt set",
+    "export all standard models against prompt_set_02",
+    "validate prompt_set_02 and compare against base / rerun_02",
     "expand layer scope beyond early/middle/late if local compute allows",
-    "add Nemotron-specific adapter only if needed after repeatability gate",
-    "then promote from first cross-model support to repeatability-supported Nest 1 evidence"
+    "add Nemotron-specific adapter only if needed after prompt-generalization gate"
   ]
 }
