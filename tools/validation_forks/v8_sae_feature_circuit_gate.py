@@ -29,8 +29,21 @@ def count_files(path: Path, patterns: tuple[str, ...]) -> int:
 def artifact_state() -> dict[str, object]:
     export_root = ROOT / "artifacts" / "validation" / "v8_sae_feature_circuit_exports"
     validation_root = ROOT / "artifacts" / "validation" / "v8_sae_feature_circuit_validation"
+    source_inventory_report = (
+        ROOT
+        / "artifacts"
+        / "validation"
+        / "v8_sae_source_inventory"
+        / "v8_sae_source_inventory_report.json"
+    )
     report_path = validation_root / "v8_sae_feature_circuit_validation_report.json"
+    source_inventory_status = None
     validation_status = None
+    if source_inventory_report.exists():
+        try:
+            source_inventory_status = json.loads(source_inventory_report.read_text(encoding="utf-8")).get("status")
+        except json.JSONDecodeError:
+            source_inventory_status = "invalid_json"
     if report_path.exists():
         try:
             validation_status = json.loads(report_path.read_text(encoding="utf-8")).get("status")
@@ -53,6 +66,8 @@ def artifact_state() -> dict[str, object]:
             ("*circuit_edge*.csv", "*circuit_edge*.jsonl", "*feature_circuit*.csv", "*feature_circuit*.jsonl"),
         ),
         "ablation_files": count_files(export_root, ("*ablation*.csv", "*ablation*.json", "*ablation*.jsonl")),
+        "source_inventory_report_path": str(source_inventory_report),
+        "source_inventory_report_status": source_inventory_status,
         "validation_report_path": str(report_path),
         "validation_report_status": validation_status,
     }
@@ -66,6 +81,8 @@ def build_report() -> dict[str, object]:
     status = (
         str(state["validation_report_status"])
         if state["validation_report_status"]
+        else "source_inventory_complete_missing_sae_exports"
+        if state["source_inventory_report_status"] == "bounded_training_inputs_ready"
         else "ready_for_validation"
         if feature_ready and circuit_ready and dictionary_ready
         else "protocol_ready_missing_sae_exports"
@@ -140,6 +157,7 @@ def build_report() -> dict[str, object]:
             ),
         },
         "locked_missing_inputs": [
+            "bounded SAE pilot training on GLM and Hermes dense trajectory point-cloud activations",
             "SAE feature activation export for the same standard model/prompt/context matrix",
             "feature dictionary or top-token labels for each exported SAE feature",
             "feature-to-feature circuit edge export across layers",
@@ -147,6 +165,15 @@ def build_report() -> dict[str, object]:
             "optional ablation pass for causal circuit support",
         ],
         "next_execution_order": [
+            "train bounded SAE pilot on GLM and Hermes dense trajectory point-cloud activations",
+            "export feature activations for base, rerun_02, and prompt_set_02 on the standard model set",
+            "build feature dictionaries and topic labels for Mirror Interface / LSPS, quantum consciousness geometry, circuit-state bridge, neutral controls, and technical controls",
+            "construct feature-circuit edges across token roles and layers",
+            "validate feature separation and circuit-flow against locked controls",
+            "only then promote SAE from protocol gate to evidence layer",
+        ]
+        if state["source_inventory_report_status"] == "bounded_training_inputs_ready"
+        else [
             "choose available SAE source: pretrained local SAEs if present, otherwise train bounded SAEs on exported V8 activations",
             "export feature activations for base, rerun_02, and prompt_set_02 on the standard model set",
             "build feature dictionaries and topic labels for Mirror Interface / LSPS, quantum consciousness geometry, circuit-state bridge, neutral controls, and technical controls",
@@ -187,6 +214,7 @@ def write_markdown(report: dict[str, object], path: Path) -> None:
         f"- feature dictionary files: `{state['feature_dictionary_files']}`",
         f"- circuit edge files: `{state['circuit_edge_files']}`",
         f"- ablation files: `{state['ablation_files']}`",
+        f"- source inventory report status: `{state['source_inventory_report_status']}`",
         f"- validation report status: `{state['validation_report_status']}`",
         "",
         "## Required Exports",

@@ -1,0 +1,292 @@
+{
+  "generated_at": "2026-04-29T14:12:18.316759+00:00",
+  "status": "bounded_training_inputs_ready",
+  "pretrained_or_existing_sae_candidates": [],
+  "pretrained_or_existing_sae_count": 0,
+  "v8_point_cloud_inputs": {
+    "compact_point_cloud_dir": "artifacts/v8/residual_stream_bridge/point_clouds",
+    "compact_models": 8,
+    "compact_total_rows": 1728,
+    "expanded_point_cloud_dir": "artifacts/v8/residual_stream_bridge/point_clouds_expanded",
+    "expanded_models": 8,
+    "expanded_total_rows": 39672,
+    "dense_trajectory_dir": "artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory",
+    "dense_models": 2,
+    "dense_total_rows": 82302,
+    "dense_inputs": [
+      {
+        "path": "artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory/glm_v8_hidden_point_cloud.npz",
+        "arrays": {
+          "points": {
+            "shape": [
+              42471,
+              4096
+            ],
+            "dtype": "float32"
+          },
+          "context_label": {
+            "shape": [
+              42471
+            ],
+            "dtype": "<U23"
+          },
+          "context_id": {
+            "shape": [
+              42471
+            ],
+            "dtype": "int16"
+          },
+          "layer_index": {
+            "shape": [
+              42471
+            ],
+            "dtype": "int16"
+          },
+          "token_role": {
+            "shape": [
+              42471
+            ],
+            "dtype": "<U27"
+          },
+          "token_index": {
+            "shape": [
+              42471
+            ],
+            "dtype": "int16"
+          },
+          "token_offset": {
+            "shape": [
+              42471
+            ],
+            "dtype": "int16"
+          },
+          "feature_family": {
+            "shape": [
+              42471
+            ],
+            "dtype": "<U16"
+          },
+          "layer_depth": {
+            "shape": [
+              42471
+            ],
+            "dtype": "<U6"
+          },
+          "token_region": {
+            "shape": [
+              42471
+            ],
+            "dtype": "<U13"
+          },
+          "target_span_start": {
+            "shape": [
+              42471
+            ],
+            "dtype": "int16"
+          },
+          "target_span_end": {
+            "shape": [
+              42471
+            ],
+            "dtype": "int16"
+          },
+          "token_count": {
+            "shape": [
+              42471
+            ],
+            "dtype": "int16"
+          },
+          "behavioral_activation": {
+            "shape": [
+              42471
+            ],
+            "dtype": "float32"
+          },
+          "behavioral_input_cohesion": {
+            "shape": [
+              42471
+            ],
+            "dtype": "float32"
+          },
+          "behavioral_coherence_10": {
+            "shape": [
+              42471
+            ],
+            "dtype": "float32"
+          },
+          "behavioral_marker_score": {
+            "shape": [
+              42471
+            ],
+            "dtype": "float32"
+          }
+        },
+        "row_count": 42471,
+        "hidden_size": 4096
+      },
+      {
+        "path": "artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory/hermes_v8_hidden_point_cloud.npz",
+        "arrays": {
+          "points": {
+            "shape": [
+              39831,
+              4096
+            ],
+            "dtype": "float32"
+          },
+          "context_label": {
+            "shape": [
+              39831
+            ],
+            "dtype": "<U23"
+          },
+          "context_id": {
+            "shape": [
+              39831
+            ],
+            "dtype": "int16"
+          },
+          "layer_index": {
+            "shape": [
+              39831
+            ],
+            "dtype": "int16"
+          },
+          "token_role": {
+            "shape": [
+              39831
+            ],
+            "dtype": "<U27"
+          },
+          "token_index": {
+            "shape": [
+              39831
+            ],
+            "dtype": "int16"
+          },
+          "token_offset": {
+            "shape": [
+              39831
+            ],
+            "dtype": "int16"
+          },
+          "feature_family": {
+            "shape": [
+              39831
+            ],
+            "dtype": "<U16"
+          },
+          "layer_depth": {
+            "shape": [
+              39831
+            ],
+            "dtype": "<U6"
+          },
+          "token_region": {
+            "shape": [
+              39831
+            ],
+            "dtype": "<U13"
+          },
+          "target_span_start": {
+            "shape": [
+              39831
+            ],
+            "dtype": "int16"
+          },
+          "target_span_end": {
+            "shape": [
+              39831
+            ],
+            "dtype": "int16"
+          },
+          "token_count": {
+            "shape": [
+              39831
+            ],
+            "dtype": "int16"
+          },
+          "behavioral_activation": {
+            "shape": [
+              39831
+            ],
+            "dtype": "float32"
+          },
+          "behavioral_input_cohesion": {
+            "shape": [
+              39831
+            ],
+            "dtype": "float32"
+          },
+          "behavioral_coherence_10": {
+            "shape": [
+              39831
+            ],
+            "dtype": "float32"
+          },
+          "behavioral_marker_score": {
+            "shape": [
+              39831
+            ],
+            "dtype": "float32"
+          }
+        },
+        "row_count": 39831,
+        "hidden_size": 4096
+      }
+    ]
+  },
+  "attention_mlp_inputs": {
+    "export_dirs": [
+      {
+        "path": "artifacts/validation/v8_attention_mlp_exports",
+        "attention_rows": 4608,
+        "mlp_rows": 9
+      },
+      {
+        "path": "artifacts/validation/v8_attention_mlp_exports_all_check",
+        "attention_rows": 0,
+        "mlp_rows": 0
+      },
+      {
+        "path": "artifacts/validation/v8_attention_mlp_exports_all_models",
+        "attention_rows": 23616,
+        "mlp_rows": 63
+      },
+      {
+        "path": "artifacts/validation/v8_attention_mlp_exports_all_models_rerun_02",
+        "attention_rows": 23616,
+        "mlp_rows": 63
+      },
+      {
+        "path": "artifacts/validation/v8_attention_mlp_exports_combined",
+        "attention_rows": 9216,
+        "mlp_rows": 18
+      },
+      {
+        "path": "artifacts/validation/v8_attention_mlp_exports_glm",
+        "attention_rows": 4608,
+        "mlp_rows": 9
+      },
+      {
+        "path": "artifacts/validation/v8_attention_mlp_exports_prompt_set_02",
+        "attention_rows": 23616,
+        "mlp_rows": 63
+      },
+      {
+        "path": "artifacts/validation/v8_attention_mlp_exports_remaining_models",
+        "attention_rows": 14400,
+        "mlp_rows": 45
+      }
+    ],
+    "export_dir_count": 8
+  },
+  "clean_read": "No pretrained or existing SAE assets were detected in the public evidence repo. Real bounded SAE training inputs are present: GLM and Hermes dense trajectory point-clouds plus compact / expanded point-clouds for the wider model matrix. The next evidence-producing move is bounded SAE training/export on those real V8 activations, not SAE validation yet.",
+  "next_execution_order": [
+    "train bounded SAE pilot on GLM and Hermes dense trajectory point-cloud activations",
+    "export feature activations with context, layer, token-role, and prompt-set labels",
+    "build feature dictionaries from top activating token roles / contexts / layers",
+    "construct feature-to-feature circuit edges across adjacent layers",
+    "validate feature and circuit separation against shuffled labels and frequency / degree baselines"
+  ]
+}

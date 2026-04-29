@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-29T13:38:49.016984+00:00",
-  "status": "protocol_ready_missing_sae_exports",
+  "generated_at": "2026-04-29T14:16:43.199056+00:00",
+  "status": "source_inventory_complete_missing_sae_exports",
   "artifact_state": {
     "export_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_sae_feature_circuit_exports",
     "validation_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_sae_feature_circuit_validation",
@@ -9,6 +9,8 @@
     "feature_dictionary_files": 0,
     "circuit_edge_files": 0,
     "ablation_files": 0,
+    "source_inventory_report_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_sae_source_inventory/v8_sae_source_inventory_report.json",
+    "source_inventory_report_status": "bounded_training_inputs_ready",
     "validation_report_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_sae_feature_circuit_validation/v8_sae_feature_circuit_validation_report.json",
     "validation_report_status": null
   },
@@ -66,6 +68,7 @@
     "ablation": "optional stronger closeout: ablating top SAE features or circuit edges should move readout/hidden-state signatures more than matched control ablations"
   },
   "locked_missing_inputs": [
+    "bounded SAE pilot training on GLM and Hermes dense trajectory point-cloud activations",
     "SAE feature activation export for the same standard model/prompt/context matrix",
     "feature dictionary or top-token labels for each exported SAE feature",
     "feature-to-feature circuit edge export across layers",
@@ -73,7 +76,7 @@
     "optional ablation pass for causal circuit support"
   ],
   "next_execution_order": [
-    "choose available SAE source: pretrained local SAEs if present, otherwise train bounded SAEs on exported V8 activations",
+    "train bounded SAE pilot on GLM and Hermes dense trajectory point-cloud activations",
     "export feature activations for base, rerun_02, and prompt_set_02 on the standard model set",
     "build feature dictionaries and topic labels for Mirror Interface / LSPS, quantum consciousness geometry, circuit-state bridge, neutral controls, and technical controls",
     "construct feature-circuit edges across token roles and layers",

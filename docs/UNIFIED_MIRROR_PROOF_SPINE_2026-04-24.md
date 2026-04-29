@@ -197,9 +197,13 @@ Completed enough to show:
   hidden states show where the representation lands, attention heads show
   token-routing flow, MLP blocks show representation updates, and SAE features
   can expose sparse interpretable features plus feature-to-feature circuits.
-  The gate is currently `protocol_ready_missing_sae_exports`: no SAE evidence
-  is claimed until real feature activations, feature dictionaries, circuit
-  edges, shuffled controls, and optional ablations exist.
+  The SAE source inventory has now run: no pretrained/local SAE assets were
+  detected, but bounded training inputs are ready through `GLM` and `Hermes`
+  dense V8 trajectory point-clouds (`82302` total dense rows, hidden size
+  `4096`). The gate is currently
+  `source_inventory_complete_missing_sae_exports`: no SAE evidence is claimed
+  until real feature activations, feature dictionaries, circuit edges, shuffled
+  controls, and optional ablations exist.
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are now mapped as candidate bridges, not closed

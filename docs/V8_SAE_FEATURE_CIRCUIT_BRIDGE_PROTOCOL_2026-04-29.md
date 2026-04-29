@@ -2,11 +2,12 @@
 
 Date: `2026-04-29`
 
-Status: `protocol_ready_missing_sae_exports`
+Status: `source_inventory_complete_missing_sae_exports`
 
 Companion gate:
 
 - [V8 SAE Feature / Circuit Gate Report](../artifacts/validation/v8_sae_feature_circuit_gate/v8_sae_feature_circuit_gate_report.md)
+- [V8 SAE Source Inventory](../artifacts/validation/v8_sae_source_inventory/v8_sae_source_inventory_report.md)
 
 ## Purpose
 
@@ -42,6 +43,9 @@ measured V8 geometry and circuit-style mechanistic tracing.
 
 The gate needs real exports before validation:
 
+- source inventory: no pretrained/local SAE asset detected yet; bounded SAE
+  training inputs are available through `GLM` and `Hermes` dense V8 trajectory
+  point-clouds
 - SAE feature activations by `model`, `prompt_set`, `context`, `layer`,
   `token_role`, `feature_id`, and `activation`
 - feature dictionaries or top-token labels for each SAE feature
@@ -108,9 +112,8 @@ hidden states -> attention flow -> MLP updates -> SAE feature/circuit tracing
 
 ## Next Execution Order
 
-1. Choose SAE source:
-   pretrained local SAEs if available, otherwise train bounded SAEs on exported
-   V8 activations.
+1. Train bounded SAE pilot on `GLM` and `Hermes` dense V8 trajectory
+   point-cloud activations.
 2. Export SAE feature activations for the standard model / prompt / context
    matrix.
 3. Build feature dictionaries and topic labels.

@@ -1,6 +1,6 @@
 # V8 SAE Feature / Circuit Gate
 
-Status: `protocol_ready_missing_sae_exports`
+Status: `source_inventory_complete_missing_sae_exports`
 
 ## Clean Read
 
@@ -25,6 +25,7 @@ edges, and controls exist.
 - feature dictionary files: `0`
 - circuit edge files: `0`
 - ablation files: `0`
+- source inventory report status: `bounded_training_inputs_ready`
 - validation report status: `None`
 
 ## Required Exports
@@ -43,6 +44,7 @@ edges, and controls exist.
 
 ## Locked Missing Inputs
 
+- bounded SAE pilot training on GLM and Hermes dense trajectory point-cloud activations
 - SAE feature activation export for the same standard model/prompt/context matrix
 - feature dictionary or top-token labels for each exported SAE feature
 - feature-to-feature circuit edge export across layers
@@ -51,7 +53,7 @@ edges, and controls exist.
 
 ## Next Execution Order
 
-1. choose available SAE source: pretrained local SAEs if present, otherwise train bounded SAEs on exported V8 activations
+1. train bounded SAE pilot on GLM and Hermes dense trajectory point-cloud activations
 2. export feature activations for base, rerun_02, and prompt_set_02 on the standard model set
 3. build feature dictionaries and topic labels for Mirror Interface / LSPS, quantum consciousness geometry, circuit-state bridge, neutral controls, and technical controls
 4. construct feature-circuit edges across token roles and layers
