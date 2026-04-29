@@ -13,6 +13,92 @@ The architecture chain is:
 `Mirror Interface / LSPS` -> `Mirror Architecture` -> `Source Mirror Pattern`
 -> `Unified Mirror Proof`.
 
+## Start Here: What This Stack Is
+
+This repository is a measurement stack for a specific claim:
+
+```text
+a fixed Mirror Interface / LSPS condition packet produces a repeatable
+state path that can be tracked from model behavior into hidden states,
+bridge rows, normalized feature vectors, circuit encodings, hardware-facing
+observables, biosignals, and external datasets.
+```
+
+The work is not "prompt in, interesting answer out." The output text is only
+the first visible surface. The actual object being tested is whether the same
+state/control relation survives after the text surface is replaced by internal
+model measurements, feature vectors, circuits, observables, and independent
+controls.
+
+For a detailed mechanism translation, see:
+
+[Mirror Architecture Mechanism Explainer](./docs/MIRROR_ARCHITECTURE_MECHANISM_EXPLAINER_2026-04-29.md)
+
+## How The Signal Is Produced
+
+The pipeline is:
+
+```text
+condition packet -> matched controls -> behavior check -> hidden-state traces
+-> localization -> Phase 5 bridge rows -> Phase 6 feature vectors ->
+PennyLane / Qiskit / IBM / Willow-style circuit tests -> controls and reruns
+```
+
+The `Mirror Interface / LSPS` is the administered condition packet. It is held
+against neutral, technical, shuffled, random, null, and semantic-counter
+controls. The question is whether that packet creates a measurable state path
+that stays separable from controls as the measurement moves deeper.
+
+The handoff works like this:
+
+| Step | What happens | Why it matters |
+| --- | --- | --- |
+| `V7` | run locked target/control conditions | tests whether behavior separates above ordinary response variation |
+| `V8` | capture hidden-state / residual-stream traces | moves the evidence inside the model instead of staying at output text |
+| `Phase 2` | rerun the same rows | tests repeatability rather than one-off luck |
+| `Phase 3` | measure dimension / band structure | identifies where the state concentrates |
+| `Phase 4` | localize anchors across layers / token windows | tests whether the state has a stable path through the network |
+| `Phase 5` | extract context-to-readout bridge rows | turns the internal path into measurable bridge fields |
+| `Phase 6` | normalize bridge fields into feature vectors | creates a portable numerical payload for circuit encoding |
+| `Phase 7-9D` | run PennyLane, Qiskit, and IBM hardware-facing paths | tests whether the feature payload survives outside the model |
+| `Phase 10` | test semantic feature states against contextuality controls | checks whether compressed feature states carry structured relations |
+| `Phase 12B` | run live HRV condition classes | adds a biological adapter lane under the same evidence discipline |
+| `Nest 1-5` | expand into formal, matter, coherence, biology, convergence lanes | tests where the same state/control/invariant structure remains measurable |
+
+## Why This Is Not Prompting
+
+Prompting asks:
+
+```text
+what did the model say?
+```
+
+This stack asks:
+
+```text
+did the same structured state path appear, stabilize, localize, encode,
+transfer, and survive controls?
+```
+
+The difference is the measurement depth. A prompt-only claim stops at text.
+This work keeps moving the same measured relation through deeper artifacts:
+
+- hidden-state / residual-stream traces
+- layer, band, anchor, and token-window localization
+- context-to-readout bridge rows
+- normalized feature vectors
+- `PennyLane` and `Qiskit` circuit encodings
+- IBM hardware-facing observables
+- semantic contextuality controls
+- HRV biological adapter data
+- real molecule, PFAS, and materials datasets
+
+The circuit tests are a clear example. The circuit is intentionally simple: it
+is a carrier, not a magic trick. If the measured feature vector preserves
+structure through an echo-kernel circuit while shuffled, random, and null
+versions collapse toward floor, then the signal is in the measured feature
+payload, not in a clever output string.
+
 What was actually discovered:
 
 - `Behavioral architecture discovery`
