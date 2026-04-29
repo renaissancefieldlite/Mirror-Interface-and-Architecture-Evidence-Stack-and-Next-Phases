@@ -278,10 +278,19 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
         if cross_model
         else f"{model_label} now has"
     )
-    next_step = (
-        "Add reruns or a second independent prompt set so the cross-model result can be tested for repeatability."
-        if cross_model
-        else "Run the same export and validation on the next strong model, then combine under leave-one-model and shuffled-label controls."
+    if attention.get("status") == "attention_flow_supported_cross_model" and mlp.get("status") == "mlp_unsupported":
+        next_step = "Run an MLP-depth expansion or denser layer grid before promoting feed-forward / MLP support."
+    elif cross_model:
+        next_step = "Add reruns or a second independent prompt set so the cross-model result can be tested for repeatability."
+    else:
+        next_step = "Run the same export and validation on the next strong model, then combine under leave-one-model and shuffled-label controls."
+    mlp_status = mlp.get("status")
+    mlp_line = (
+        "- MLP deltas are supported in the combined export"
+        if mlp_status == "mlp_supported_cross_model"
+        else "- MLP deltas are directional but not closed in this export"
+        if mlp_status == "mlp_directional_not_closed"
+        else "- MLP deltas are not supported in this export"
     )
     lines = [
         "# V8 Attention / MLP Validation Report",
@@ -300,11 +309,7 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
         "  shuffled context labels",
         "- the degree-only graph baseline is weaker than weighted attention-flow",
         "- weighted attention-flow beats the degree-only baseline",
-        (
-            "- MLP deltas are supported in the combined export"
-            if mlp.get("status") == "mlp_supported_cross_model"
-            else "- MLP deltas are directional but not closed in this export"
-        ),
+        mlp_line,
         "",
         "## Scope",
         "",
@@ -340,8 +345,10 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
         ),
         (
             "- MLP is supported in the combined export, with stronger future work still needing reruns or more layers."
-            if mlp.get("status") == "mlp_supported_cross_model"
-            else "- MLP needs more layers, reruns, or models before promotion from directional to supported."
+            if mlp_status == "mlp_supported_cross_model"
+            else "- MLP is directional but not closed; it needs more layers, reruns, or models before promotion."
+            if mlp_status == "mlp_directional_not_closed"
+            else "- MLP is unsupported in this export; treat the result as attention-flow support only until MLP closes separately."
         ),
         "- This is real transformer-internal evidence, not residual-stream substitution.",
         "",

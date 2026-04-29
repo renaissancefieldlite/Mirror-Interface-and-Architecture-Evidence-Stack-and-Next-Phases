@@ -172,8 +172,8 @@ Completed enough to show:
   `TOP-1/TOP-2`, and `TOPOG-1/TOPOG-2`, with `CAT-1` kept beside the map as
   the compositional transfer rule; this prevents the simplified visual from
   hiding the full formal substrate
-- the attention / MLP missing-link gate now has same-prompt repeatability
-  support:
+- the attention / MLP missing-link gate now has same-prompt repeatability and
+  attention prompt-generalization support:
   `tools/validation_forks/v8_attention_mlp_export.py` now exports real
   transformer-internal rows across every standard-export model in the current
   matrix: `DeepSeek`, `GLM`, `Gemma`, `Hermes`, `Mistral`, `Qwen`, and
@@ -183,10 +183,15 @@ Completed enough to show:
   MLP deltas are also supported. `rerun_02` repeated the same model set, row
   counts, support status, and shuffled-label control support; attention
   weighted p stayed at `0.00019996`, MLP p improved to `0.00019996`, and the
-  repeatability report status is `repeatability_supported`. `Nemotron` is
+  repeatability report status is `repeatability_supported`. `prompt_set_02`
+  preserved the same model set and row counts under a second independent
+  prompt surface. Attention-flow stayed supported at p `0.00079984` and beat
+  the degree-only baseline, so token-routing prompt-generalization is
+  supported. MLP/feed-forward deltas did not close on `prompt_set_02`, so full
+  attention + MLP prompt-generalization is not claimed. `Nemotron` is
   checkpoint-ready but currently an interface-adapter row for this exporter
   path, because it did not emit standard attention / MLP rows. The next gate is
-  prompt-generalization through a second independent prompt set.
+  MLP-depth expansion on `prompt_set_02`.
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are now mapped as candidate bridges, not closed
@@ -199,9 +204,8 @@ Completed enough to show:
 
 Immediate next work:
 
-1. create a second independent prompt set for the all-exported-model attention
-   / MLP matrix, then test prompt-generalization with shuffled-label,
-   leave-one-prompt, and model-family controls
+1. run MLP-depth expansion on `prompt_set_02`, preferably all layers or a
+   denser layer grid, then compare against base / `rerun_02`
 2. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
 3. apply the same standard lane by lane: real artifact, locked baseline,

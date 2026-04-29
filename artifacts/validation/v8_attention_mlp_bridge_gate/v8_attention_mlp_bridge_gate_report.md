@@ -1,28 +1,26 @@
 # V8 Attention / MLP Nest 1 Bridge Gate
 
-Status: `repeatability_supported`
+Status: `attention_prompt_generalization_supported_mlp_not_supported`
 
 ## Clean Read
 
-The exported model set now has repeatability-supported
-transformer-internal artifacts: attention top-k routing edges and
-MLP block-delta rows across lattice, neutral, and technical
-contexts.
+The all-exported-model attention / MLP gate now has same-prompt
+repeatability plus a second independent prompt-set test.
 
-The first broad all-exported-model run and `rerun_02` preserve
-the same model set, same row counts, same support status, and
-same shuffled-label control support:
+Prompt_set_02 preserved the same seven standard-export models and
+the same row counts: `23616` attention rows and `63` MLP rows.
 
-- weighted attention-flow separates lattice from neutral / technical
-  above shuffled context labels in both passes
-- weighted attention-flow beats the degree-only graph baseline in both
-  passes
-- MLP deltas are supported in both passes
+The prompt-generalization result is split but meaningful:
 
-So the gate has moved from first broad support to same-prompt
-repeatability support. The next gate is prompt-generalization using a
-second independent prompt set. Nemotron remains an interface-adapter
-row for this exporter path.
+- attention-flow / token-routing remains supported above shuffled
+  context labels
+- weighted attention-flow beats the degree-only graph baseline
+- MLP / feed-forward block deltas do not close on prompt_set_02
+
+So the current closed claim is attention prompt-generalization, not
+full attention + MLP prompt-generalization. The next gate is an
+MLP-depth expansion before deciding whether feed-forward deltas are
+underpowered here or genuinely more prompt-sensitive.
 
 ## Artifact State
 
@@ -36,6 +34,7 @@ row for this exporter path.
 - exported MLP CSV files detected: `5`
 - validation report status: `attention_and_mlp_supported_cross_model`
 - repeatability report status: `repeatability_supported`
+- prompt-generalization report status: `attention_prompt_generalization_supported_mlp_not_supported`
 
 ## Nest 1 Placement
 
@@ -46,11 +45,10 @@ row for this exporter path.
 
 ## Locked Missing Inputs
 
-- second independent prompt set for prompt-generalization
-- expanded attention export beyond early/middle/late layers
-- expanded MLP layer/rerun sample for stronger MLP power
+- MLP-depth expansion on prompt_set_02 using all layers or a denser layer grid
+- third prompt or paraphrase-family stress test after MLP-depth result
+- leave-one-prompt and model-family controls after multiple prompt sets exist
 - Nemotron-specific interface adapter if standard attention tensors remain unavailable
-- leave-one-prompt and model-family controls after prompt-set expansion
 
 ## Acceptance Rule
 
@@ -60,8 +58,8 @@ row for this exporter path.
 
 ## Next Execution Order
 
-1. create second independent prompt set
-2. export all standard models against prompt_set_02
-3. validate prompt_set_02 and compare against base / rerun_02
-4. expand layer scope beyond early/middle/late if local compute allows
-5. add Nemotron-specific adapter only if needed after prompt-generalization gate
+1. run MLP-depth expansion on prompt_set_02
+2. compare prompt_set_02 MLP-depth result against base / rerun_02
+3. if MLP remains unsupported, record the split: attention routing generalizes more strongly than MLP deltas under prompt change
+4. then add leave-one-prompt / model-family controls
+5. add Nemotron-specific adapter only after the standard prompt-generalization path is stable

@@ -62,9 +62,17 @@ def artifact_state() -> dict[str, object]:
         / "v8_attention_mlp_repeatability_all_models"
         / "v8_attention_mlp_repeatability_report.json"
     )
+    prompt_generalization_report = (
+        ROOT
+        / "artifacts"
+        / "validation"
+        / "v8_attention_mlp_prompt_generalization"
+        / "v8_attention_mlp_prompt_generalization_report.json"
+    )
     export_inventory_status = None
     validation_report_status = None
     repeatability_report_status = None
+    prompt_generalization_report_status = None
     if export_inventory.exists():
         try:
             export_inventory_status = json.loads(export_inventory.read_text(encoding="utf-8")).get("status")
@@ -83,6 +91,11 @@ def artifact_state() -> dict[str, object]:
             repeatability_report_status = json.loads(repeatability_report.read_text(encoding="utf-8")).get("status")
         except json.JSONDecodeError:
             repeatability_report_status = "invalid_json"
+    if prompt_generalization_report.exists():
+        try:
+            prompt_generalization_report_status = json.loads(prompt_generalization_report.read_text(encoding="utf-8")).get("status")
+        except json.JSONDecodeError:
+            prompt_generalization_report_status = "invalid_json"
     return {
         "residual_stream_bridge_exists": residual_root.exists(),
         "dense_point_cloud_files": count_files(
@@ -108,6 +121,8 @@ def artifact_state() -> dict[str, object]:
         "validation_report_status": validation_report_status,
         "repeatability_report_path": str(repeatability_report),
         "repeatability_report_status": repeatability_report_status,
+        "prompt_generalization_report_path": str(prompt_generalization_report),
+        "prompt_generalization_report_status": prompt_generalization_report_status,
     }
 
 
@@ -116,6 +131,9 @@ def build_report() -> dict[str, object]:
     attention_ready = int(state["residual_attention_artifact_files"]) > 0 or int(state["export_attention_csv_files"]) > 0
     mlp_ready = int(state["residual_mlp_artifact_files"]) > 0 or int(state["export_mlp_csv_files"]) > 0
     status = (
+        str(state["prompt_generalization_report_status"])
+        if state["prompt_generalization_report_status"]
+        else
         str(state["repeatability_report_status"])
         if state["repeatability_report_status"]
         else str(state["validation_report_status"])
@@ -127,6 +145,20 @@ def build_report() -> dict[str, object]:
         else "protocol_ready_missing_attention_or_mlp_exports"
     )
     missing_inputs = (
+        [
+            "MLP-depth expansion on prompt_set_02 using all layers or a denser layer grid",
+            "third prompt or paraphrase-family stress test after MLP-depth result",
+            "leave-one-prompt and model-family controls after multiple prompt sets exist",
+            "Nemotron-specific interface adapter if standard attention tensors remain unavailable",
+        ]
+        if state["prompt_generalization_report_status"] == "attention_prompt_generalization_supported_mlp_not_supported"
+        else [
+            "expanded attention export beyond early/middle/late layers",
+            "leave-one-prompt and model-family controls after prompt-set expansion",
+            "Nemotron-specific interface adapter if standard attention tensors remain unavailable",
+        ]
+        if state["prompt_generalization_report_status"] == "attention_and_mlp_prompt_generalization_supported"
+        else
         [
             "second independent prompt set for prompt-generalization",
             "expanded attention export beyond early/middle/late layers",
@@ -159,6 +191,21 @@ def build_report() -> dict[str, object]:
         ]
     )
     next_execution_order = (
+        [
+            "run MLP-depth expansion on prompt_set_02",
+            "compare prompt_set_02 MLP-depth result against base / rerun_02",
+            "if MLP remains unsupported, record the split: attention routing generalizes more strongly than MLP deltas under prompt change",
+            "then add leave-one-prompt / model-family controls",
+            "add Nemotron-specific adapter only after the standard prompt-generalization path is stable",
+        ]
+        if state["prompt_generalization_report_status"] == "attention_prompt_generalization_supported_mlp_not_supported"
+        else [
+            "add leave-one-prompt and model-family controls",
+            "expand layer scope beyond early/middle/late if local compute allows",
+            "add Nemotron-specific adapter only after prompt-generalization controls are stable",
+        ]
+        if state["prompt_generalization_report_status"] == "attention_and_mlp_prompt_generalization_supported"
+        else
         [
             "create second independent prompt set",
             "export all standard models against prompt_set_02",
@@ -243,6 +290,34 @@ def write_markdown(report: dict[str, object], path: Path) -> None:
             "second independent prompt set. Nemotron remains an interface-adapter",
             "row for this exporter path.",
         ]
+    elif report["status"] == "attention_prompt_generalization_supported_mlp_not_supported":
+        clean_read = [
+            "The all-exported-model attention / MLP gate now has same-prompt",
+            "repeatability plus a second independent prompt-set test.",
+            "",
+            "Prompt_set_02 preserved the same seven standard-export models and",
+            "the same row counts: `23616` attention rows and `63` MLP rows.",
+            "",
+            "The prompt-generalization result is split but meaningful:",
+            "",
+            "- attention-flow / token-routing remains supported above shuffled",
+            "  context labels",
+            "- weighted attention-flow beats the degree-only graph baseline",
+            "- MLP / feed-forward block deltas do not close on prompt_set_02",
+            "",
+            "So the current closed claim is attention prompt-generalization, not",
+            "full attention + MLP prompt-generalization. The next gate is an",
+            "MLP-depth expansion before deciding whether feed-forward deltas are",
+            "underpowered here or genuinely more prompt-sensitive.",
+        ]
+    elif report["status"] == "attention_and_mlp_prompt_generalization_supported":
+        clean_read = [
+            "The all-exported-model attention / MLP gate now has same-prompt",
+            "repeatability and second-prompt generalization support.",
+            "",
+            "Attention-flow and MLP block deltas both remain supported under",
+            "prompt_set_02 with the same standard-export model set.",
+        ]
     elif report["status"] == "attention_and_mlp_supported_cross_model":
         clean_read = [
             "The exported model set now has real transformer-internal artifacts:",
@@ -316,6 +391,7 @@ def write_markdown(report: dict[str, object], path: Path) -> None:
         f"- exported MLP CSV files detected: `{state['export_mlp_csv_files']}`",
         f"- validation report status: `{state['validation_report_status']}`",
         f"- repeatability report status: `{state['repeatability_report_status']}`",
+        f"- prompt-generalization report status: `{state['prompt_generalization_report_status']}`",
         "",
         "## Nest 1 Placement",
         "",

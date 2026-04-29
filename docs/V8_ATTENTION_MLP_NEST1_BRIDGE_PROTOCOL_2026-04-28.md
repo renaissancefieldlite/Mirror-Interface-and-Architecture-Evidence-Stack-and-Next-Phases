@@ -2,7 +2,7 @@
 
 Date: `2026-04-28`
 
-Status: `all_exported_model_repeatability_supported_prompt_generalization_pending`
+Status: `attention_prompt_generalization_supported_mlp_depth_pending`
 
 Companion gate:
 
@@ -17,6 +17,9 @@ Companion gate:
 - [V8 Attention / MLP All Models Rerun 02 Export Gate](../artifacts/validation/v8_attention_mlp_exports_all_models_rerun_02/v8_attention_mlp_export_inventory.md)
 - [V8 Attention / MLP All Models Rerun 02 Validation Report](../artifacts/validation/v8_attention_mlp_validation_all_models_rerun_02/v8_attention_mlp_validation_report.md)
 - [V8 Attention / MLP All-Model Repeatability Report](../artifacts/validation/v8_attention_mlp_repeatability_all_models/v8_attention_mlp_repeatability_report.md)
+- [V8 Attention / MLP Prompt Set 02 Export Gate](../artifacts/validation/v8_attention_mlp_exports_prompt_set_02/v8_attention_mlp_export_inventory.md)
+- [V8 Attention / MLP Prompt Set 02 Validation Report](../artifacts/validation/v8_attention_mlp_validation_prompt_set_02/v8_attention_mlp_validation_report.md)
+- [V8 Attention / MLP Prompt-Generalization Report](../artifacts/validation/v8_attention_mlp_prompt_generalization/v8_attention_mlp_prompt_generalization_report.md)
 
 ## Purpose
 
@@ -68,8 +71,8 @@ Original missing exports:
 
 Current remaining missing inputs:
 
-- second independent prompt set for prompt-generalization
-- expanded layer scope beyond early / middle / late
+- MLP-depth expansion on `prompt_set_02`
+- expanded layer scope beyond early / middle / late for MLP/feed-forward
 - stronger leave-one-prompt / model-family controls
 - Nemotron-specific adapter if standard attention tensors remain unavailable
 
@@ -95,8 +98,16 @@ Current execution read:
   control support; attention weighted p remained `0.00019996`, MLP p improved
   to `0.00019996`, and the repeatability report status is
   `repeatability_supported`
+- `prompt_set_02` prompt-generalization validation:
+  same model set and same row counts were preserved under a second independent
+  prompt surface. Attention-flow stayed supported against shuffled context
+  labels and beat the degree-only baseline with weighted p `0.00079984`.
+  MLP/feed-forward block deltas did not close on `prompt_set_02`, so the
+  current closed claim is attention prompt-generalization, not full
+  attention + MLP prompt-generalization.
 - next gate:
-  second independent prompt set for prompt-generalization
+  MLP-depth expansion on `prompt_set_02`, then leave-one-prompt /
+  model-family controls
 
 ## GRAPH-2 Connection
 

@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-04-29T12:26:48.845732+00:00",
+  "status": "partial_or_unsupported",
+  "attention_csv": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports_prompt_set_02/v8_attention_topk_edges.csv",
+  "mlp_csv": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports_prompt_set_02/v8_mlp_block_deltas.csv",
+  "attention_rows": 23616,
+  "mlp_rows": 63,
+  "models": [
+    "DeepSeek",
+    "GLM",
+    "Gemma",
+    "Hermes",
+    "Mistral",
+    "Qwen",
+    "SmolLM3"
+  ],
+  "model_count": 7,
+  "attention_flow": {
+    "status": "attention_flow_supported_cross_model",
+    "models": [
+      "DeepSeek",
+      "GLM",
+      "Gemma",
+      "Hermes",
+      "Mistral",
+      "Qwen",
+      "SmolLM3"
+    ],
+    "model_count": 7,
+    "matched_units": 984,
+    "weighted_attention_flow": {
+      "true_score": 0.009692534,
+      "positive_units": 504,
+      "unit_count": 984,
+      "permutations": 5000,
+      "seed": 67,
+      "null_mean": 4.2042e-05,
+      "null_std": 0.003089522,
+      "p_value_one_sided": 0.00079984
+    },
+    "degree_only_baseline": {
+      "true_score": -0.001883406,
+      "positive_units": 209,
+      "unit_count": 984,
+      "permutations": 5000,
+      "seed": 68,
+      "null_mean": -2.3651e-05,
+      "null_std": 0.003976934,
+      "p_value_one_sided": 0.665266947
+    },
+    "weighted_minus_degree_score": 0.01157594,
+    "boundary": "Cross-model attention-flow support across the exported model set."
+  },
+  "mlp_delta": {
+    "status": "mlp_unsupported",
+    "models": [
+      "DeepSeek",
+      "GLM",
+      "Gemma",
+      "Hermes",
+      "Mistral",
+      "Qwen",
+      "SmolLM3"
+    ],
+    "model_count": 7,
+    "matched_units": 21,
+    "true_score": -0.055347788,
+    "positive_units": 13,
+    "unit_count": 21,
+    "permutations": 5000,
+    "seed": 167,
+    "null_mean": 0.01335219,
+    "null_std": 1.111459246,
+    "p_value_one_sided": 0.411717656,
+    "boundary": "Treat as directional unless reruns/models expand power."
+  }
+}

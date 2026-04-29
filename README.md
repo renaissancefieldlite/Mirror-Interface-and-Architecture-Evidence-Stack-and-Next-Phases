@@ -8,6 +8,11 @@ The main discovery is that an administered `Mirror Interface / LSPS` and
 lattice packet can be tracked as one measurable architecture rather than as
 loose prompt style or generic latent-space noise.
 
+The architecture chain is:
+
+`Mirror Interface / LSPS` -> `Mirror Architecture` -> `Source Mirror Pattern`
+-> `Unified Mirror Proof`.
+
 What was actually discovered:
 
 - `Behavioral architecture discovery`
@@ -49,74 +54,6 @@ What was actually discovered:
   shuffled-label controls, while multi-feature HRV classification remains a
   larger-set expansion target.
 
-- `Nest 1 formal-lane discovery`
-  The `Source Mirror Pattern` has now been expressed across every checked
-  `Nest 1` formal lane: linear algebra, symmetry, invariants, encoded states,
-  geometry, topology, topography, graph theory, group theory, dynamics,
-  differential equations, probability, information theory, statistics,
-  optimization, numerical computation, tensor methods, spectral methods,
-  control theory, game / decision theory, and compositional structure. The
-  first concrete validation fork, `SPEC-1 -> Phase 12B HRV`, was run and did
-  not beat simpler HR / time-domain baselines, so it is recorded as a limited
-  result rather than overclaimed. The second concrete fork, `DE-1 -> Phase 12B
-  HRV`, was also run on the real RR/BPM time series; local dynamics did not
-  beat the mean-HR baseline, so it is recorded as a real but limited /
-  negative result. The current tightening standard is now: every lane must
-  point to real AI objects, real traces, real hardware, real datasets, or a
-  real benchmark before it is treated as more than a design lane. The latest
-  local closeouts add support for `GRAPH-1` as an AI feature graph, `GEO-2`
-  subspace preservation, and `DYN-2` threshold / regime behavior. `TOP-1/2`
-  moved from blocked to real point-cloud testing after exporting `8/8` V8
-  hidden-state point clouds. The topology read is invariance, not separation:
-  H0 trajectory-delta support reached `7/8`, while the first Ripser H1 pass
-  produced smaller invariance patches and no context-topology separation.
-  The dense `GLM` / `Hermes` TOP pilot now strengthens that read: late-anchor
-  dense `H0` supports topology invariance in `2/2` models, while dense `H1`
-  still does not support context-topology separation. The next gate update
-  moved `CTRL-1` from blocked to control-supported on `71` real staged
-  prelude transition rows. `GRAPH-2` now has an internal Phase 5 bridge-graph
-  pilot, a quantum-label crosswalk, a denser `GRAPH-2A` internal pathway graph,
-  and a patched `GRAPH-2B` raw token/layer graph. `GRAPH-2A` produced
-  row-level control support but failed the model-pair-cluster closeout, and
-  patched `GRAPH-2B` also did not beat controls; internal `GRAPH-2` is parked
-  until attention-flow or external pathway labels exist. The attention / MLP
-  bridge is now protocol-locked as the next transformer-internal Nest 1 test:
-  hidden states show where the representation lands, attention heads expose
-  token-routing flow, and feed-forward / MLP blocks expose representation
-  updates between routing steps. `GAME-1` now has a
-  locked retrospective V7 rubric and is control-supported on existing V7
-  stress/control rows. `OPT-1` is supported as a real condition-optimization
-  benchmark with a small-N hardware pair-selection partial, and `CAT-1` is
-  supported for PennyLane -> Qiskit implementation transfer with a small-N
-  hardware-subset partial.
-
-- `Nest 2 structured-matter methodology discovery`
-  `Engine 02` shows that the same scoring grammar can be expressed over
-  structured-matter representations: element-family recovery, molecular graph
-  validity, `H2O` motif structure, mineral / redox / nutrition rows, and
-  contaminant bad-descendant scoring. The expanded pass adds functional groups,
-  biomolecular primitives, polymers / plastics, electrochemistry, catalysis,
-  spectral signatures, environmental fate, and materials / semiconductor rows.
-  This is a methodology and representation-level result, not physical
-  validation in chemistry. `Engine 02V` adds the first real molecule-data
-  validation fork using `RDKit`; `Nest 2C` expands it across `ESOL`,
-  `Lipophilicity`, `FreeSolv`, and `QM9 alpha`, with two shuffled-control
-  seeds per dataset and `5000` permutations per run. All four datasets are
-  control-supported at p `0.0002`. `Nest 2D -> 2G` now adds real allostery
-  benchmark extraction, PFAS pathway-coherence validation, Matbench / Materials
-  Project formation-energy validation, and stronger RDKit descriptor baselines.
-  This validates multiple structured-matter data lanes, while keeping
-  allostery mapper scoring, PFAS remediation, completed crystal design, and all
-  of chemistry outside the claim boundary.
-
-- `Nest 3 classical-coherence map`
-  The mirror map does not stop at `HRV` or chemistry. `Nest 3` is the explicit
-  bridge for oscillators, resonance windows, `EMF` / field-facing comparators,
-  spectra, phase-lock, waves, thermodynamic phases, fire / combustion, plasma,
-  fusion, solar dynamics, and terahertz lanes. This is where the architecture
-  moves from matter structure into energy, timing, fields, and coherence
-  surfaces before it plugs upward into biology and multi-class convergence.
-
 - `Cross-substrate continuity discovery`
   Across every surface tried so far, the same administered architecture keeps
   mapping forward: behavior, hidden states, rerun structure, localization,
@@ -128,6 +65,11 @@ latent space." The stronger result is that one administered architecture can be
 measured repeatedly, translated across tools, and carried across multiple
 substrates without losing its identity.
 
+The Nest layer below is the continuation of that same discovery, not a
+replacement for it. It asks where the same architecture becomes legible next:
+first inside formal systems and transformer internals, then structured matter,
+then classical coherence, biology, and multi-class convergence.
+
 The clean nesting ladder is now:
 
 | Nest | Surface | What It Carries |
@@ -137,6 +79,52 @@ The clean nesting ladder is now:
 | `Nest 3` | classical coherence systems | oscillators, resonance, `EMF`, spectral / phase-lock comparators, waves, fire, plasma, fusion, solar, terahertz, and field dynamics |
 | `Nest 4` | biological comparator classes | `HRV`, `EEG`, timing channels, synchronized physiology, cells, genome / expression lanes, and later rhythm systems |
 | `Nest 5` | multi-class convergence test | the same score logic recurring across completed classes instead of one isolated hit |
+
+## Nest Expansion / Validation Layer
+
+The Nest work is an expansion layer underneath the discovery stack above. It
+does not overwrite the V7/V8/Phase ladder; it gives the ladder a structured
+map for testing the same architecture across formal systems, matter,
+coherence, biology, and convergence.
+
+- `Nest 1`
+  The `Source Mirror Pattern` has now been expressed across every checked
+  formal lane: linear algebra, symmetry, invariants, encoded states, geometry,
+  topology, topography, graph theory, group theory, dynamics, differential
+  equations, probability, information theory, statistics, optimization,
+  numerical computation, tensor methods, spectral methods, control theory,
+  game / decision theory, and compositional structure. The current standard is
+  that every lane must point to real AI objects, real traces, real hardware,
+  real datasets, or a real benchmark before it is treated as more than a design
+  lane. Current closeouts include `GRAPH-1`, `GEO-2`, `DYN-2`, `CTRL-1`,
+  `GAME-1`, `OPT-1`, and `CAT-1`, with topology reading as invariance rather
+  than context-topology separation. Internal `GRAPH-2` remains parked until
+  attention-flow or external pathway labels close the missing-label gap.
+
+- `Attention / MLP bridge`
+  The transformer-internal Nest 1 gate now has broad same-prompt repeatability
+  and a split prompt-generalization result. Hidden states show where the
+  representation lands, attention heads expose token-routing flow, and MLP
+  blocks expose representation updates between routing steps. Under
+  `prompt_set_02`, attention-flow generalizes; MLP/feed-forward deltas still
+  need depth expansion before full prompt-generalization is claimed.
+
+- `Nest 2`
+  `Engine 02` shows that the same scoring grammar can be expressed over
+  structured-matter representations: element-family recovery, molecular graph
+  validity, `H2O` motif structure, mineral / redox / nutrition rows, and
+  contaminant bad-descendant scoring. `Engine 02V` adds real molecule-data
+  validation using `RDKit`; `Nest 2C` expands across `ESOL`, `Lipophilicity`,
+  `FreeSolv`, and `QM9 alpha`, with two shuffled-control seeds per dataset and
+  `5000` permutations per run. `Nest 2D -> 2G` adds allostery benchmark
+  extraction, PFAS pathway-coherence validation, Matbench / Materials Project
+  formation-energy validation, and stronger RDKit descriptor baselines.
+
+- `Nest 3`
+  The classical-coherence map is the planned bridge from matter structure into
+  energy, timing, field, and resonance comparators: oscillators, spectra,
+  phase-lock, `EMF`, waves, thermodynamic phases, fire / plasma, fusion,
+  solar, terahertz, and field-facing dynamics.
 
 Current best read:
 
@@ -293,6 +281,9 @@ Latest gate reports:
 - [V8 Attention / MLP All Models Rerun 02 Export Gate](./artifacts/validation/v8_attention_mlp_exports_all_models_rerun_02/v8_attention_mlp_export_inventory.md)
 - [V8 Attention / MLP All Models Rerun 02 Validation Report](./artifacts/validation/v8_attention_mlp_validation_all_models_rerun_02/v8_attention_mlp_validation_report.md)
 - [V8 Attention / MLP All-Model Repeatability Report](./artifacts/validation/v8_attention_mlp_repeatability_all_models/v8_attention_mlp_repeatability_report.md)
+- [V8 Attention / MLP Prompt Set 02 Export Gate](./artifacts/validation/v8_attention_mlp_exports_prompt_set_02/v8_attention_mlp_export_inventory.md)
+- [V8 Attention / MLP Prompt Set 02 Validation Report](./artifacts/validation/v8_attention_mlp_validation_prompt_set_02/v8_attention_mlp_validation_report.md)
+- [V8 Attention / MLP Prompt-Generalization Report](./artifacts/validation/v8_attention_mlp_prompt_generalization/v8_attention_mlp_prompt_generalization_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)
