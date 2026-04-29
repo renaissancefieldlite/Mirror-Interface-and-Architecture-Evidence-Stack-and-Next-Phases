@@ -33,9 +33,16 @@ def artifact_state() -> dict[str, object]:
         export_root,
         ROOT / "artifacts" / "validation" / "v8_attention_mlp_exports_glm",
         ROOT / "artifacts" / "validation" / "v8_attention_mlp_exports_combined",
+        ROOT / "artifacts" / "validation" / "v8_attention_mlp_exports_remaining_models",
+        ROOT / "artifacts" / "validation" / "v8_attention_mlp_exports_all_models",
     ]
     export_inventory = export_root / "v8_attention_mlp_export_inventory.json"
     validation_candidates = [
+        ROOT
+        / "artifacts"
+        / "validation"
+        / "v8_attention_mlp_validation_all_models"
+        / "v8_attention_mlp_validation_report.json",
         ROOT
         / "artifacts"
         / "validation"
@@ -107,6 +114,7 @@ def build_report() -> dict[str, object]:
             "rerun or second independent prompt set for repeatability",
             "expanded attention export beyond early/middle/late layers",
             "expanded MLP layer/rerun sample for stronger MLP power",
+            "Nemotron-specific interface adapter if standard attention tensors remain unavailable",
             "leave-one-run / leave-one-prompt controls after rerun data exists",
         ]
         if state["validation_report_status"] == "attention_and_mlp_supported_cross_model"
@@ -129,6 +137,7 @@ def build_report() -> dict[str, object]:
             "add a rerun or second independent prompt set",
             "rerun combined attention-flow and MLP validation with repeatability controls",
             "expand layer scope beyond early/middle/late if local compute allows",
+            "add Nemotron-specific adapter only if needed after repeatability gate",
             "then promote from first cross-model support to repeatability-supported Nest 1 evidence",
         ]
         if state["validation_report_status"] == "attention_and_mlp_supported_cross_model"
@@ -179,21 +188,23 @@ def write_markdown(report: dict[str, object], path: Path) -> None:
     state = report["artifact_state"]
     if report["status"] == "attention_and_mlp_supported_cross_model":
         clean_read = [
-            "GLM and Hermes now have real transformer-internal artifacts:",
+            "The exported model set now has real transformer-internal artifacts:",
             "attention top-k routing edges and MLP block-delta rows across",
             "lattice, neutral, and technical contexts.",
             "",
-            "The first cross-model validation has started the stronger",
-            "claim-support chain:",
+            "The first broad cross-model validation has started the stronger",
+            "claim-support chain across every standard-export model in the",
+            "current matrix:",
             "",
             "- weighted attention-flow separates lattice from neutral / technical",
             "  above shuffled context labels",
             "- weighted attention-flow beats the degree-only graph baseline",
             "- MLP deltas are supported in the combined export",
             "",
-            "So the gate is no longer only protocol and no longer only Hermes.",
-            "It is first cross-model transformer-internal support, with rerun /",
-            "second-prompt repeatability still pending.",
+            "So the gate is no longer only protocol and no longer only GLM /",
+            "Hermes. It is first broad transformer-internal support, with",
+            "Nemotron listed as an interface-adapter row for this exporter and",
+            "rerun / second-prompt repeatability still pending.",
         ]
     elif report["status"] == "attention_supported_mlp_directional":
         clean_read = [

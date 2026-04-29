@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T02:27:28.104938+00:00",
+  "generated_at": "2026-04-29T03:03:56.635005+00:00",
   "status": "attention_and_mlp_supported_cross_model",
   "nest1_placement": {
     "attention_heads": [
@@ -24,15 +24,16 @@
     "exporter_script_exists": true,
     "export_inventory_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports/v8_attention_mlp_export_inventory.json",
     "export_inventory_status": "export_complete",
-    "export_attention_csv_files": 3,
-    "export_mlp_csv_files": 3,
-    "validation_report_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_validation_combined/v8_attention_mlp_validation_report.json",
+    "export_attention_csv_files": 5,
+    "export_mlp_csv_files": 5,
+    "validation_report_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_validation_all_models/v8_attention_mlp_validation_report.json",
     "validation_report_status": "attention_and_mlp_supported_cross_model"
   },
   "locked_missing_inputs": [
     "rerun or second independent prompt set for repeatability",
     "expanded attention export beyond early/middle/late layers",
     "expanded MLP layer/rerun sample for stronger MLP power",
+    "Nemotron-specific interface adapter if standard attention tensors remain unavailable",
     "leave-one-run / leave-one-prompt controls after rerun data exists"
   ],
   "acceptance_rule": {
@@ -44,6 +45,7 @@
     "add a rerun or second independent prompt set",
     "rerun combined attention-flow and MLP validation with repeatability controls",
     "expand layer scope beyond early/middle/late if local compute allows",
+    "add Nemotron-specific adapter only if needed after repeatability gate",
     "then promote from first cross-model support to repeatability-supported Nest 1 evidence"
   ]
 }

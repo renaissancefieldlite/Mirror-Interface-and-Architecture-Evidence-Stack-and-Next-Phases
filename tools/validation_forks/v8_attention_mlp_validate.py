@@ -273,7 +273,11 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
     model_label = ", ".join(model_names) if model_names else "exported models"
     cross_model = len(model_names) > 1
     read_scope = "cross-model" if cross_model else "single-model"
-    clean_subject = f"{' and '.join(model_names)} now have" if cross_model else f"{model_label} now has"
+    clean_subject = (
+        f"The exported model set (`{model_label}`) now has"
+        if cross_model
+        else f"{model_label} now has"
+    )
     next_step = (
         "Add reruns or a second independent prompt set so the cross-model result can be tested for repeatability."
         if cross_model

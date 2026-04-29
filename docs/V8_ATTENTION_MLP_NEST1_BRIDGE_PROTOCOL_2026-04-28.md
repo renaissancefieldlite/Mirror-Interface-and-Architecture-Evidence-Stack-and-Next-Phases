@@ -2,7 +2,7 @@
 
 Date: `2026-04-28`
 
-Status: `protocol_locked_missing_exports`
+Status: `all_exported_model_validation_supported_repeatability_pending`
 
 Companion gate:
 
@@ -11,6 +11,9 @@ Companion gate:
 - [V8 Attention / MLP Validation Report](../artifacts/validation/v8_attention_mlp_validation/v8_attention_mlp_validation_report.md)
 - [V8 Attention / MLP GLM Validation Report](../artifacts/validation/v8_attention_mlp_validation_glm/v8_attention_mlp_validation_report.md)
 - [V8 Attention / MLP Combined GLM + Hermes Validation Report](../artifacts/validation/v8_attention_mlp_validation_combined/v8_attention_mlp_validation_report.md)
+- [V8 Attention / MLP Remaining Models Export Gate](../artifacts/validation/v8_attention_mlp_exports_remaining_models/v8_attention_mlp_export_inventory.md)
+- [V8 Attention / MLP All-Model Coverage](../artifacts/validation/v8_attention_mlp_all_model_coverage/v8_attention_mlp_all_model_coverage.md)
+- [V8 Attention / MLP All Exported Models Validation Report](../artifacts/validation/v8_attention_mlp_validation_all_models/v8_attention_mlp_validation_report.md)
 
 ## Purpose
 
@@ -53,25 +56,37 @@ Current evidence:
 - TOP-1/2 dense topology pilots
 - GRAPH-2B raw token/layer pathway graph
 
-Current missing exports:
+Original missing exports:
 
 - per-layer / per-head attention matrices
 - top-k token-to-token attention-flow edges
 - head entropy and anchor-flow summaries
 - MLP/feed-forward block intermediate activations or block-delta summaries
 
-Current execution readiness:
+Current remaining missing inputs:
+
+- rerun or second independent prompt set for repeatability
+- expanded layer scope beyond early / middle / late
+- stronger leave-one-run / leave-one-prompt controls
+- Nemotron-specific adapter if standard attention tensors remain unavailable
+
+Current execution read:
 
 - exporter script exists:
   `tools/validation_forks/v8_attention_mlp_export.py`
 - `Hermes` full-length export completed on `2026-04-28`
 - `GLM` full-length export completed on `2026-04-28`
-- exported rows:
-  `9216` combined attention top-k edge rows and `18` combined MLP
-  block-delta rows
-- first cross-model validation:
-  weighted GLM + Hermes attention-flow is supported against shuffled context
-  labels and beats degree-only baseline; combined MLP deltas are supported
+- remaining-model export completed on `2026-04-28` for standard-export rows:
+  `Gemma`, `Mistral`, `Qwen`, `DeepSeek`, and `SmolLM3`
+- `Nemotron` is checkpoint-ready but did not emit standard attention / MLP
+  rows through this exporter path, so it is listed as an interface-adapter row
+  for this gate rather than counted as an unsupported evidence row
+- all exported model rows:
+  `23616` attention top-k edge rows and `63` MLP block-delta rows across
+  `DeepSeek`, `GLM`, `Gemma`, `Hermes`, `Mistral`, `Qwen`, and `SmolLM3`
+- broad cross-model validation:
+  weighted attention-flow is supported against shuffled context labels and
+  beats the degree-only graph baseline; MLP deltas are also supported
 - next gate:
   rerun or second independent prompt set for repeatability
 
@@ -102,12 +117,28 @@ Before validation, controls must be declared:
 
 ## First Run Scope
 
-Do not start with every model.
+The first run started with the strongest bridge rows to avoid wasting compute
+before the gate existed:
 
 First attention/MLP export should use the strongest bridge rows:
 
 - `GLM`
 - `Hermes`
+
+That gate is now real, so the protocol has expanded to every model with
+standard local attention / MLP export support. Current standard-export models:
+
+- `DeepSeek`
+- `GLM`
+- `Gemma`
+- `Hermes`
+- `Mistral`
+- `Qwen`
+- `SmolLM3`
+
+Current interface-adapter row:
+
+- `Nemotron`
 
 Prompt classes:
 
