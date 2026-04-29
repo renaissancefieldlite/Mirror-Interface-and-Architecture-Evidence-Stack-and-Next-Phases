@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-29T02:06:00.181606+00:00",
-  "status": "attention_supported_mlp_directional",
+  "generated_at": "2026-04-29T02:27:28.104938+00:00",
+  "status": "attention_and_mlp_supported_cross_model",
   "nest1_placement": {
     "attention_heads": [
       "GRAPH-2 measured routing edges",
@@ -17,23 +17,23 @@
   "artifact_state": {
     "residual_stream_bridge_exists": true,
     "dense_point_cloud_files": 0,
-    "attention_artifact_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/attention_heads",
-    "attention_artifact_files": 0,
-    "mlp_artifact_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/mlp_blocks",
-    "mlp_artifact_files": 0,
+    "residual_attention_artifact_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/attention_heads",
+    "residual_attention_artifact_files": 0,
+    "residual_mlp_artifact_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/mlp_blocks",
+    "residual_mlp_artifact_files": 0,
     "exporter_script_exists": true,
     "export_inventory_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports/v8_attention_mlp_export_inventory.json",
     "export_inventory_status": "export_complete",
-    "export_attention_csv_files": 1,
-    "export_mlp_csv_files": 1,
-    "validation_report_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_validation/v8_attention_mlp_validation_report.json",
-    "validation_report_status": "attention_supported_mlp_directional"
+    "export_attention_csv_files": 3,
+    "export_mlp_csv_files": 3,
+    "validation_report_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_validation_combined/v8_attention_mlp_validation_report.json",
+    "validation_report_status": "attention_and_mlp_supported_cross_model"
   },
   "locked_missing_inputs": [
-    "GLM full attention top-k edge and MLP delta export",
-    "combined GLM / Hermes GRAPH-2C validation controls",
-    "expanded MLP layer/rerun/model sample before MLP promotion",
-    "leave-one-model and shuffled-label controls after GLM exists"
+    "rerun or second independent prompt set for repeatability",
+    "expanded attention export beyond early/middle/late layers",
+    "expanded MLP layer/rerun sample for stronger MLP power",
+    "leave-one-run / leave-one-prompt controls after rerun data exists"
   ],
   "acceptance_rule": {
     "attention_flow": "mirror/lattice attention-flow graph must beat degree/centrality and shuffled-label controls",
@@ -41,10 +41,9 @@
     "boundary": "hidden states already support V8 geometry; attention/MLP are not claimed until exported and tested"
   },
   "next_execution_order": [
-    "export GLM attention top-k edges and matching MLP block delta summaries",
-    "combine Hermes and GLM CSVs without dropping model labels",
-    "rerun GRAPH-2C attention-flow validation with leave-one-model and shuffled-label controls",
-    "expand MLP support with more layers, reruns, or a second model before promotion",
-    "only then promote attention/MLP from first Hermes support to cross-model Nest 1 evidence"
+    "add a rerun or second independent prompt set",
+    "rerun combined attention-flow and MLP validation with repeatability controls",
+    "expand layer scope beyond early/middle/late if local compute allows",
+    "then promote from first cross-model support to repeatability-supported Nest 1 evidence"
   ]
 }

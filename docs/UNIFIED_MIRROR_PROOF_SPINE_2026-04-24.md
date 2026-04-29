@@ -172,13 +172,13 @@ Completed enough to show:
   `TOP-1/TOP-2`, and `TOPOG-1/TOPOG-2`, with `CAT-1` kept beside the map as
   the compositional transfer rule; this prevents the simplified visual from
   hiding the full formal substrate
-- the attention / MLP missing-link gate is now partly supported:
-  `tools/validation_forks/v8_attention_mlp_export.py` exported real Hermes
-  transformer-internal rows (`4608` attention top-k edge rows and `9` MLP
-  delta rows). The first validation supports weighted Hermes attention-flow
-  against shuffled context labels and against a degree-only graph baseline;
-  MLP deltas are directional but not closed. `GLM` export remains the next
-  cross-model closeout step.
+- the attention / MLP missing-link gate now has first cross-model support:
+  `tools/validation_forks/v8_attention_mlp_export.py` exported real Hermes and
+  `GLM` transformer-internal rows (`9216` combined attention top-k edge rows
+  and `18` combined MLP delta rows). The combined validation supports weighted
+  attention-flow against shuffled context labels and against a weaker
+  degree-only graph baseline; combined MLP deltas are also supported. The next
+  gate is repeatability through reruns or a second independent prompt set.
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are now mapped as candidate bridges, not closed
@@ -191,9 +191,9 @@ Completed enough to show:
 
 Immediate next work:
 
-1. run the full `GLM` attention top-k and MLP delta export when local compute
-   is available, then combine it with Hermes under `GRAPH-2C`, MLP,
-   leave-one-model, and shuffled-label controls
+1. rerun the `GLM` + `Hermes` attention / MLP export or add a second
+   independent prompt set, then test repeatability with shuffled-label and
+   leave-one-run / leave-one-prompt controls
 2. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
 3. apply the same standard lane by lane: real artifact, locked baseline,

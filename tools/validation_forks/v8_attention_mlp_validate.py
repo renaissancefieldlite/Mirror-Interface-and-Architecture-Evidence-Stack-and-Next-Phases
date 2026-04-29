@@ -146,6 +146,8 @@ def build_attention_vectors(attention: pd.DataFrame, weighted: bool) -> tuple[li
 
 
 def validate_attention(attention: pd.DataFrame, permutations: int, seed: int) -> dict[str, Any]:
+    model_names = sorted(str(value) for value in attention["model"].dropna().unique())
+    model_count = len(model_names)
     weighted_vectors, weighted_unit_scores = build_attention_vectors(attention, weighted=True)
     degree_vectors, degree_unit_scores = build_attention_vectors(attention, weighted=False)
     if not weighted_vectors:
@@ -155,13 +157,18 @@ def validate_attention(attention: pd.DataFrame, permutations: int, seed: int) ->
     degree_true = float(np.mean(degree_unit_scores)) if degree_unit_scores else float("nan")
     weighted_perm = permutation_summary(weighted_vectors, weighted_true, permutations, seed)
     degree_perm = permutation_summary(degree_vectors, degree_true, permutations, seed + 1)
+    supported = weighted_true > degree_true and weighted_perm["p_value_one_sided"] <= 0.01
     status = (
-        "attention_flow_supported_single_model"
-        if weighted_true > degree_true and weighted_perm["p_value_one_sided"] <= 0.01
+        "attention_flow_supported_cross_model"
+        if supported and model_count > 1
+        else "attention_flow_supported_single_model"
+        if supported
         else "attention_flow_partial_or_unsupported"
     )
     return {
         "status": status,
+        "models": model_names,
+        "model_count": model_count,
         "matched_units": len(weighted_vectors),
         "weighted_attention_flow": {
             "true_score": round(weighted_true, 9),
@@ -176,7 +183,11 @@ def validate_attention(attention: pd.DataFrame, permutations: int, seed: int) ->
             **degree_perm,
         },
         "weighted_minus_degree_score": round(float(weighted_true - degree_true), 9),
-        "boundary": "Hermes-only first export; needs GLM or reruns for cross-model closeout.",
+        "boundary": (
+            "Cross-model attention-flow support across the exported model set."
+            if model_count > 1 and supported
+            else "Single-model first export; needs another model or reruns for cross-model closeout."
+        ),
     }
 
 
@@ -220,6 +231,8 @@ def build_mlp_vectors(mlp: pd.DataFrame) -> tuple[list[dict[str, np.ndarray]], l
 
 
 def validate_mlp(mlp: pd.DataFrame, permutations: int, seed: int) -> dict[str, Any]:
+    model_names = sorted(str(value) for value in mlp["model"].dropna().unique())
+    model_count = len(model_names)
     vectors, unit_scores = build_mlp_vectors(mlp)
     if not vectors:
         return {"status": "blocked_no_matched_mlp_units"}
@@ -228,18 +241,26 @@ def validate_mlp(mlp: pd.DataFrame, permutations: int, seed: int) -> dict[str, A
     status = (
         "mlp_directional_not_closed"
         if true_score > 0.0 and perm["p_value_one_sided"] > 0.01
+        else "mlp_supported_cross_model"
+        if true_score > 0.0 and perm["p_value_one_sided"] <= 0.01 and model_count > 1
         else "mlp_supported_single_model"
         if true_score > 0.0 and perm["p_value_one_sided"] <= 0.01
         else "mlp_unsupported"
     )
     return {
         "status": status,
+        "models": model_names,
+        "model_count": model_count,
         "matched_units": len(vectors),
         "true_score": round(true_score, 9),
         "positive_units": int(np.sum(np.array(unit_scores) > 0.0)),
         "unit_count": len(unit_scores),
         **perm,
-        "boundary": "Only three layer-depth MLP units in this first export; treat as directional unless reruns/models expand power.",
+        "boundary": (
+            "Cross-model MLP delta support across the exported model set; stronger future work can expand layers and reruns."
+            if status == "mlp_supported_cross_model"
+            else "Treat as directional unless reruns/models expand power."
+        ),
     }
 
 
@@ -248,6 +269,16 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
     mlp = report["mlp_delta"]
     weighted = attention.get("weighted_attention_flow", {})
     degree = attention.get("degree_only_baseline", {})
+    model_names = report.get("models", [])
+    model_label = ", ".join(model_names) if model_names else "exported models"
+    cross_model = len(model_names) > 1
+    read_scope = "cross-model" if cross_model else "single-model"
+    clean_subject = f"{' and '.join(model_names)} now have" if cross_model else f"{model_label} now has"
+    next_step = (
+        "Add reruns or a second independent prompt set so the cross-model result can be tested for repeatability."
+        if cross_model
+        else "Run the same export and validation on the next strong model, then combine under leave-one-model and shuffled-label controls."
+    )
     lines = [
         "# V8 Attention / MLP Validation Report",
         "",
@@ -255,18 +286,27 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
         "",
         "## Clean Read",
         "",
-        "Hermes now has a real transformer-internal export: attention top-k",
+        f"{clean_subject} real transformer-internal exports: attention top-k",
         "routing edges and MLP block-delta rows across lattice, neutral, and",
         "technical contexts.",
         "",
-        "The first validation result is bounded but meaningful:",
+        f"The {read_scope} validation result is bounded but meaningful:",
         "",
         "- weighted attention-flow separates lattice from neutral/technical above",
         "  shuffled context labels",
-        "- the degree-only graph baseline does not close",
+        "- the degree-only graph baseline is weaker than weighted attention-flow",
         "- weighted attention-flow beats the degree-only baseline",
-        "- MLP deltas are directional but underpowered in this first three-layer",
-        "  export",
+        (
+            "- MLP deltas are supported in the combined export"
+            if mlp.get("status") == "mlp_supported_cross_model"
+            else "- MLP deltas are directional but not closed in this export"
+        ),
+        "",
+        "## Scope",
+        "",
+        f"- models: `{model_label}`",
+        f"- attention rows: `{report.get('attention_rows')}`",
+        f"- MLP rows: `{report.get('mlp_rows')}`",
         "",
         "## Attention Flow",
         "",
@@ -289,15 +329,21 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
         "",
         "## Boundary",
         "",
-        "- This supports a Hermes-only first attention-flow result, not a full GLM/Hermes closeout.",
-        "- The next stronger closeout needs GLM export, reruns, or a second independent prompt set.",
-        "- MLP needs more layers, reruns, or models before promotion from directional to supported.",
+        (
+            "- This supports a first cross-model attention-flow result across the exported model set."
+            if cross_model
+            else "- This supports a first single-model attention-flow result, not a cross-model closeout."
+        ),
+        (
+            "- MLP is supported in the combined export, with stronger future work still needing reruns or more layers."
+            if mlp.get("status") == "mlp_supported_cross_model"
+            else "- MLP needs more layers, reruns, or models before promotion from directional to supported."
+        ),
         "- This is real transformer-internal evidence, not residual-stream substitution.",
         "",
         "## Next Step",
         "",
-        "Run the same export and validation on `GLM`, then combine Hermes and GLM",
-        "under leave-one-model and shuffled-label controls.",
+        next_step,
         "",
     ]
     path.write_text("\n".join(lines), encoding="utf-8")
@@ -312,15 +358,23 @@ def main() -> int:
 
     attention = pd.read_csv(attention_path)
     mlp = pd.read_csv(mlp_path)
+    model_names = sorted(set(str(value) for value in attention["model"].dropna().unique()) | set(str(value) for value in mlp["model"].dropna().unique()))
     attention_report = validate_attention(attention, args.permutations, args.seed)
     mlp_report = validate_mlp(mlp, args.permutations, args.seed + 100)
     status = (
-        "attention_supported_mlp_directional"
-        if attention_report.get("status") == "attention_flow_supported_single_model"
+        "attention_and_mlp_supported_cross_model"
+        if attention_report.get("status") == "attention_flow_supported_cross_model"
+        and mlp_report.get("status") == "mlp_supported_cross_model"
+        else "attention_supported_mlp_directional_cross_model"
+        if attention_report.get("status") == "attention_flow_supported_cross_model"
         and mlp_report.get("status") == "mlp_directional_not_closed"
         else "attention_and_mlp_supported_single_model"
         if attention_report.get("status") == "attention_flow_supported_single_model"
         and mlp_report.get("status") == "mlp_supported_single_model"
+        else
+        "attention_supported_mlp_directional"
+        if attention_report.get("status") == "attention_flow_supported_single_model"
+        and mlp_report.get("status") == "mlp_directional_not_closed"
         else "partial_or_unsupported"
     )
     report = {
@@ -330,6 +384,8 @@ def main() -> int:
         "mlp_csv": str(mlp_path),
         "attention_rows": int(len(attention)),
         "mlp_rows": int(len(mlp)),
+        "models": model_names,
+        "model_count": len(model_names),
         "attention_flow": attention_report,
         "mlp_delta": mlp_report,
     }

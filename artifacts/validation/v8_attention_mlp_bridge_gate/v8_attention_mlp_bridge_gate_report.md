@@ -1,34 +1,36 @@
 # V8 Attention / MLP Nest 1 Bridge Gate
 
-Status: `attention_supported_mlp_directional`
+Status: `attention_and_mlp_supported_cross_model`
 
 ## Clean Read
 
-Hermes now has real transformer-internal artifacts: attention top-k
-routing edges and MLP block-delta rows across lattice, neutral, and
-technical contexts.
+GLM and Hermes now have real transformer-internal artifacts:
+attention top-k routing edges and MLP block-delta rows across
+lattice, neutral, and technical contexts.
 
-The first validation has started the claim-support chain:
+The first cross-model validation has started the stronger
+claim-support chain:
 
-- weighted Hermes attention-flow separates lattice from neutral / technical
+- weighted attention-flow separates lattice from neutral / technical
   above shuffled context labels
 - weighted attention-flow beats the degree-only graph baseline
-- MLP deltas are directional but not closed yet
+- MLP deltas are supported in the combined export
 
-So the gate is no longer only protocol. It is a Hermes-supported
-attention-flow result with GLM and stronger MLP controls still pending.
+So the gate is no longer only protocol and no longer only Hermes.
+It is first cross-model transformer-internal support, with rerun /
+second-prompt repeatability still pending.
 
 ## Artifact State
 
 - residual stream bridge exists: `True`
 - dense point-cloud files detected: `0`
-- attention artifact files detected: `0`
-- MLP artifact files detected: `0`
+- residual attention subdir files detected: `0`
+- residual MLP subdir files detected: `0`
 - exporter script exists: `True`
 - exporter inventory status: `export_complete`
-- exported attention CSV files detected: `1`
-- exported MLP CSV files detected: `1`
-- validation report status: `attention_supported_mlp_directional`
+- exported attention CSV files detected: `3`
+- exported MLP CSV files detected: `3`
+- validation report status: `attention_and_mlp_supported_cross_model`
 
 ## Nest 1 Placement
 
@@ -39,10 +41,10 @@ attention-flow result with GLM and stronger MLP controls still pending.
 
 ## Locked Missing Inputs
 
-- GLM full attention top-k edge and MLP delta export
-- combined GLM / Hermes GRAPH-2C validation controls
-- expanded MLP layer/rerun/model sample before MLP promotion
-- leave-one-model and shuffled-label controls after GLM exists
+- rerun or second independent prompt set for repeatability
+- expanded attention export beyond early/middle/late layers
+- expanded MLP layer/rerun sample for stronger MLP power
+- leave-one-run / leave-one-prompt controls after rerun data exists
 
 ## Acceptance Rule
 
@@ -52,8 +54,7 @@ attention-flow result with GLM and stronger MLP controls still pending.
 
 ## Next Execution Order
 
-1. export GLM attention top-k edges and matching MLP block delta summaries
-2. combine Hermes and GLM CSVs without dropping model labels
-3. rerun GRAPH-2C attention-flow validation with leave-one-model and shuffled-label controls
-4. expand MLP support with more layers, reruns, or a second model before promotion
-5. only then promote attention/MLP from first Hermes support to cross-model Nest 1 evidence
+1. add a rerun or second independent prompt set
+2. rerun combined attention-flow and MLP validation with repeatability controls
+3. expand layer scope beyond early/middle/late if local compute allows
+4. then promote from first cross-model support to repeatability-supported Nest 1 evidence

@@ -29,8 +29,25 @@ def count_files(path: Path, patterns: tuple[str, ...]) -> int:
 def artifact_state() -> dict[str, object]:
     residual_root = ROOT / "artifacts" / "v8" / "residual_stream_bridge"
     export_root = ROOT / "artifacts" / "validation" / "v8_attention_mlp_exports"
+    export_roots = [
+        export_root,
+        ROOT / "artifacts" / "validation" / "v8_attention_mlp_exports_glm",
+        ROOT / "artifacts" / "validation" / "v8_attention_mlp_exports_combined",
+    ]
     export_inventory = export_root / "v8_attention_mlp_export_inventory.json"
-    validation_report = ROOT / "artifacts" / "validation" / "v8_attention_mlp_validation" / "v8_attention_mlp_validation_report.json"
+    validation_candidates = [
+        ROOT
+        / "artifacts"
+        / "validation"
+        / "v8_attention_mlp_validation_combined"
+        / "v8_attention_mlp_validation_report.json",
+        ROOT
+        / "artifacts"
+        / "validation"
+        / "v8_attention_mlp_validation"
+        / "v8_attention_mlp_validation_report.json",
+    ]
+    validation_report = validation_candidates[0]
     export_inventory_status = None
     validation_report_status = None
     if export_inventory.exists():
@@ -38,32 +55,35 @@ def artifact_state() -> dict[str, object]:
             export_inventory_status = json.loads(export_inventory.read_text(encoding="utf-8")).get("status")
         except json.JSONDecodeError:
             export_inventory_status = "invalid_json"
-    if validation_report.exists():
-        try:
-            validation_report_status = json.loads(validation_report.read_text(encoding="utf-8")).get("status")
-        except json.JSONDecodeError:
-            validation_report_status = "invalid_json"
+    for candidate in validation_candidates:
+        if candidate.exists():
+            validation_report = candidate
+            try:
+                validation_report_status = json.loads(candidate.read_text(encoding="utf-8")).get("status")
+            except json.JSONDecodeError:
+                validation_report_status = "invalid_json"
+            break
     return {
         "residual_stream_bridge_exists": residual_root.exists(),
         "dense_point_cloud_files": count_files(
             residual_root,
             ("*point_cloud*.jsonl", "*point_cloud*.csv", "*.parquet"),
         ),
-        "attention_artifact_dir": str(residual_root / "attention_heads"),
-        "attention_artifact_files": count_files(
+        "residual_attention_artifact_dir": str(residual_root / "attention_heads"),
+        "residual_attention_artifact_files": count_files(
             residual_root / "attention_heads",
             ("*.json", "*.jsonl", "*.csv", "*.parquet"),
         ),
-        "mlp_artifact_dir": str(residual_root / "mlp_blocks"),
-        "mlp_artifact_files": count_files(
+        "residual_mlp_artifact_dir": str(residual_root / "mlp_blocks"),
+        "residual_mlp_artifact_files": count_files(
             residual_root / "mlp_blocks",
             ("*.json", "*.jsonl", "*.csv", "*.parquet"),
         ),
         "exporter_script_exists": (ROOT / "tools" / "validation_forks" / "v8_attention_mlp_export.py").exists(),
         "export_inventory_path": str(export_inventory),
         "export_inventory_status": export_inventory_status,
-        "export_attention_csv_files": count_files(export_root, ("*attention*.csv",)),
-        "export_mlp_csv_files": count_files(export_root, ("*mlp*.csv",)),
+        "export_attention_csv_files": sum(count_files(path, ("*attention*.csv",)) for path in export_roots),
+        "export_mlp_csv_files": sum(count_files(path, ("*mlp*.csv",)) for path in export_roots),
         "validation_report_path": str(validation_report),
         "validation_report_status": validation_report_status,
     }
@@ -71,8 +91,8 @@ def artifact_state() -> dict[str, object]:
 
 def build_report() -> dict[str, object]:
     state = artifact_state()
-    attention_ready = int(state["attention_artifact_files"]) > 0 or int(state["export_attention_csv_files"]) > 0
-    mlp_ready = int(state["mlp_artifact_files"]) > 0 or int(state["export_mlp_csv_files"]) > 0
+    attention_ready = int(state["residual_attention_artifact_files"]) > 0 or int(state["export_attention_csv_files"]) > 0
+    mlp_ready = int(state["residual_mlp_artifact_files"]) > 0 or int(state["export_mlp_csv_files"]) > 0
     status = (
         str(state["validation_report_status"])
         if state["validation_report_status"]
@@ -84,6 +104,13 @@ def build_report() -> dict[str, object]:
     )
     missing_inputs = (
         [
+            "rerun or second independent prompt set for repeatability",
+            "expanded attention export beyond early/middle/late layers",
+            "expanded MLP layer/rerun sample for stronger MLP power",
+            "leave-one-run / leave-one-prompt controls after rerun data exists",
+        ]
+        if state["validation_report_status"] == "attention_and_mlp_supported_cross_model"
+        else [
             "GLM full attention top-k edge and MLP delta export",
             "combined GLM / Hermes GRAPH-2C validation controls",
             "expanded MLP layer/rerun/model sample before MLP promotion",
@@ -99,6 +126,13 @@ def build_report() -> dict[str, object]:
     )
     next_execution_order = (
         [
+            "add a rerun or second independent prompt set",
+            "rerun combined attention-flow and MLP validation with repeatability controls",
+            "expand layer scope beyond early/middle/late if local compute allows",
+            "then promote from first cross-model support to repeatability-supported Nest 1 evidence",
+        ]
+        if state["validation_report_status"] == "attention_and_mlp_supported_cross_model"
+        else [
             "export GLM attention top-k edges and matching MLP block delta summaries",
             "combine Hermes and GLM CSVs without dropping model labels",
             "rerun GRAPH-2C attention-flow validation with leave-one-model and shuffled-label controls",
@@ -143,7 +177,25 @@ def build_report() -> dict[str, object]:
 
 def write_markdown(report: dict[str, object], path: Path) -> None:
     state = report["artifact_state"]
-    if report["status"] == "attention_supported_mlp_directional":
+    if report["status"] == "attention_and_mlp_supported_cross_model":
+        clean_read = [
+            "GLM and Hermes now have real transformer-internal artifacts:",
+            "attention top-k routing edges and MLP block-delta rows across",
+            "lattice, neutral, and technical contexts.",
+            "",
+            "The first cross-model validation has started the stronger",
+            "claim-support chain:",
+            "",
+            "- weighted attention-flow separates lattice from neutral / technical",
+            "  above shuffled context labels",
+            "- weighted attention-flow beats the degree-only graph baseline",
+            "- MLP deltas are supported in the combined export",
+            "",
+            "So the gate is no longer only protocol and no longer only Hermes.",
+            "It is first cross-model transformer-internal support, with rerun /",
+            "second-prompt repeatability still pending.",
+        ]
+    elif report["status"] == "attention_supported_mlp_directional":
         clean_read = [
             "Hermes now has real transformer-internal artifacts: attention top-k",
             "routing edges and MLP block-delta rows across lattice, neutral, and",
@@ -188,8 +240,8 @@ def write_markdown(report: dict[str, object], path: Path) -> None:
         "",
         f"- residual stream bridge exists: `{state['residual_stream_bridge_exists']}`",
         f"- dense point-cloud files detected: `{state['dense_point_cloud_files']}`",
-        f"- attention artifact files detected: `{state['attention_artifact_files']}`",
-        f"- MLP artifact files detected: `{state['mlp_artifact_files']}`",
+        f"- residual attention subdir files detected: `{state['residual_attention_artifact_files']}`",
+        f"- residual MLP subdir files detected: `{state['residual_mlp_artifact_files']}`",
         f"- exporter script exists: `{state['exporter_script_exists']}`",
         f"- exporter inventory status: `{state['export_inventory_status']}`",
         f"- exported attention CSV files detected: `{state['export_attention_csv_files']}`",

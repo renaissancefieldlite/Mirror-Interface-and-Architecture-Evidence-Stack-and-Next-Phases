@@ -9,6 +9,8 @@ Companion gate:
 - [V8 Attention / MLP Nest 1 Bridge Gate Report](../artifacts/validation/v8_attention_mlp_bridge_gate/v8_attention_mlp_bridge_gate_report.md)
 - [V8 Attention / MLP Export Gate](../artifacts/validation/v8_attention_mlp_exports/v8_attention_mlp_export_inventory.md)
 - [V8 Attention / MLP Validation Report](../artifacts/validation/v8_attention_mlp_validation/v8_attention_mlp_validation_report.md)
+- [V8 Attention / MLP GLM Validation Report](../artifacts/validation/v8_attention_mlp_validation_glm/v8_attention_mlp_validation_report.md)
+- [V8 Attention / MLP Combined GLM + Hermes Validation Report](../artifacts/validation/v8_attention_mlp_validation_combined/v8_attention_mlp_validation_report.md)
 
 ## Purpose
 
@@ -63,12 +65,15 @@ Current execution readiness:
 - exporter script exists:
   `tools/validation_forks/v8_attention_mlp_export.py`
 - `Hermes` full-length export completed on `2026-04-28`
+- `GLM` full-length export completed on `2026-04-28`
 - exported rows:
-  `4608` attention top-k edge rows and `9` MLP block-delta rows
-- first validation:
-  weighted Hermes attention-flow is supported against shuffled context labels
-  and beats degree-only baseline; MLP deltas are directional but not closed
-- `GLM` remains the next full export needed for cross-model closeout
+  `9216` combined attention top-k edge rows and `18` combined MLP
+  block-delta rows
+- first cross-model validation:
+  weighted GLM + Hermes attention-flow is supported against shuffled context
+  labels and beats degree-only baseline; combined MLP deltas are supported
+- next gate:
+  rerun or second independent prompt set for repeatability
 
 ## GRAPH-2 Connection
 

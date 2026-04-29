@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-04-29T02:22:43.702186+00:00",
+  "status": "attention_supported_mlp_directional",
+  "attention_csv": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports_glm/v8_attention_topk_edges.csv",
+  "mlp_csv": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports_glm/v8_mlp_block_deltas.csv",
+  "attention_rows": 4608,
+  "mlp_rows": 9,
+  "models": [
+    "GLM"
+  ],
+  "model_count": 1,
+  "attention_flow": {
+    "status": "attention_flow_supported_single_model",
+    "models": [
+      "GLM"
+    ],
+    "model_count": 1,
+    "matched_units": 192,
+    "weighted_attention_flow": {
+      "true_score": 0.028400157,
+      "positive_units": 111,
+      "unit_count": 192,
+      "permutations": 5000,
+      "seed": 67,
+      "null_mean": -0.000108953,
+      "null_std": 0.011105717,
+      "p_value_one_sided": 0.00559888
+    },
+    "degree_only_baseline": {
+      "true_score": 0.020691935,
+      "positive_units": 56,
+      "unit_count": 192,
+      "permutations": 5000,
+      "seed": 68,
+      "null_mean": 8.717e-06,
+      "null_std": 0.011723688,
+      "p_value_one_sided": 0.042791442
+    },
+    "weighted_minus_degree_score": 0.007708222,
+    "boundary": "Single-model first export; needs another model or reruns for cross-model closeout."
+  },
+  "mlp_delta": {
+    "status": "mlp_directional_not_closed",
+    "models": [
+      "GLM"
+    ],
+    "model_count": 1,
+    "matched_units": 3,
+    "true_score": 6.532217574,
+    "positive_units": 3,
+    "unit_count": 3,
+    "permutations": 5000,
+    "seed": 167,
+    "null_mean": -0.038236574,
+    "null_std": 3.901830607,
+    "p_value_one_sided": 0.037992402,
+    "boundary": "Treat as directional unless reruns/models expand power."
+  }
+}

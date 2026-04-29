@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-04-29T02:18:46.065105+00:00",
+  "status": "export_complete",
+  "manifest": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/v8_residual_stream_manifest_2026-04-19.json",
+  "selected_models": [
+    "GLM"
+  ],
+  "selected_contexts": [],
+  "device": "cpu",
+  "dtype": "auto",
+  "max_length": 384,
+  "layer_scope": "early,middle,late",
+  "inventory": [
+    {
+      "display_name": "GLM",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/THUDM_GLM-4-9B-0414",
+      "checkpoint_status": "ready",
+      "contexts": [
+        "lattice",
+        "neutral",
+        "technical"
+      ],
+      "context_count": 3
+    }
+  ],
+  "exports": {
+    "attention_edges_csv": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports_glm/v8_attention_topk_edges.csv",
+    "mlp_deltas_csv": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/validation/v8_attention_mlp_exports_glm/v8_mlp_block_deltas.csv",
+    "attention_rows": "4608",
+    "mlp_rows": "9"
+  }
+}

@@ -285,6 +285,8 @@ Latest gate reports:
 - [V8 Attention / MLP Nest 1 Bridge Gate Report](./artifacts/validation/v8_attention_mlp_bridge_gate/v8_attention_mlp_bridge_gate_report.md)
 - [V8 Attention / MLP Export Gate](./artifacts/validation/v8_attention_mlp_exports/v8_attention_mlp_export_inventory.md)
 - [V8 Attention / MLP Validation Report](./artifacts/validation/v8_attention_mlp_validation/v8_attention_mlp_validation_report.md)
+- [V8 Attention / MLP GLM Validation Report](./artifacts/validation/v8_attention_mlp_validation_glm/v8_attention_mlp_validation_report.md)
+- [V8 Attention / MLP Combined GLM + Hermes Validation Report](./artifacts/validation/v8_attention_mlp_validation_combined/v8_attention_mlp_validation_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)
