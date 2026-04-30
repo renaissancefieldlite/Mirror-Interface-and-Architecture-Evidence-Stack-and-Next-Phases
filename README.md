@@ -230,6 +230,17 @@ next.
   shuffled controls: base `0.479140512`, rerun_02 `0.493431208`,
   prompt_set_02 `0.418165016`, base -> rerun_02 `0.510737628`, and
   base -> prompt_set_02 `0.389542484`, all p `0.00990099`.
+  Feature-edge recurrence has now run across both branches. GLM/Hermes closes
+  cleanly at the edge level: within-set edge separation is supported for base
+  (`0.455882927`), rerun_02 (`0.464051642`), and prompt_set_02
+  (`0.376823065`), and base-trained edge transfer is supported into rerun_02
+  (`0.52387397`) and prompt_set_02 (`0.395827668`), all p `0.00990099`.
+  Gemma edge recurrence is split but useful: within-set Gemma edge separation
+  remains open, while base-trained Gemma edge transfer is supported into
+  rerun_02 (`0.438121048`) and prompt_set_02 (`0.367434508`), both p
+  `0.00990099`, with weighted edge-signature recurrence strongest on rerun_02
+  (cosine `0.803169721`) and present on prompt_set_02 (cosine
+  `0.528171679`).
 
 - `Nest 2`
   `Engine 02` made the structured-matter mapping runnable across bounded
@@ -419,6 +430,7 @@ Latest gate reports:
 - [V8 SAE Ablation Controls Report](./artifacts/validation/v8_sae_ablation_controls/v8_sae_ablation_controls_report.md)
 - [V8 SAE Recurrence Validation Report](./artifacts/validation/v8_sae_recurrence_validation/v8_sae_recurrence_validation_report.md)
 - [V8 SAE Gemma Recurrence Validation Report](./artifacts/validation/v8_sae_gemma_recurrence_validation/v8_sae_gemma_recurrence_validation_report.md)
+- [V8 SAE Feature-Edge Recurrence Report](./artifacts/validation/v8_sae_feature_edge_recurrence/v8_sae_feature_edge_recurrence_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)

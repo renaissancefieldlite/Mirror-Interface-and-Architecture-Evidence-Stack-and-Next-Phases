@@ -230,7 +230,17 @@ Completed enough to show:
   into rerun_02 and prompt_set_02. Gemma within-set recurrence is supported on
   base (`0.479140512`), rerun_02 (`0.493431208`), and prompt_set_02
   (`0.418165016`), with base-trained transfer into rerun_02 (`0.510737628`)
-  and prompt_set_02 (`0.389542484`), all p `0.00990099`.
+  and prompt_set_02 (`0.389542484`), all p `0.00990099`. SAE feature-edge
+  recurrence now has a split but useful read. The GLM/Hermes branch closes at
+  the edge level: within-set edge separation is supported for base
+  (`0.455882927`), rerun_02 (`0.464051642`), and prompt_set_02
+  (`0.376823065`), and base-trained edge transfer is supported into rerun_02
+  (`0.52387397`) and prompt_set_02 (`0.395827668`), all p `0.00990099`.
+  Gemma edge recurrence keeps within-set separation open, while base-trained
+  Gemma edge transfer is supported into rerun_02 (`0.438121048`) and
+  prompt_set_02 (`0.367434508`), both p `0.00990099`; weighted edge-signature
+  recurrence is strong for Gemma rerun_02 (cosine `0.803169721`) and present
+  for Gemma prompt_set_02 (cosine `0.528171679`).
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are mapped as candidate bridge layers for later
@@ -243,10 +253,9 @@ Completed enough to show:
 
 Immediate next work:
 
-1. build matched SAE feature-edge recurrence across GLM / Hermes plus the
-   Gemma-native branch over base, `rerun_02`, and `prompt_set_02`
-2. run direct SAE feature/circuit ablations across recurrent branches
-3. run MLP depth recurrence after the SAE recurrence branch is logged
+1. run direct SAE feature/circuit ablations across recurrent branches
+2. run MLP depth recurrence after the SAE feature-edge recurrence read is
+   logged
 4. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
 5. apply the same standard lane by lane: real artifact, locked baseline,

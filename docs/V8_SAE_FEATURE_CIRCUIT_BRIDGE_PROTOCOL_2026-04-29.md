@@ -14,6 +14,7 @@ Companion gate:
 - [V8 SAE Ablation Controls Report](../artifacts/validation/v8_sae_ablation_controls/v8_sae_ablation_controls_report.md)
 - [V8 SAE Recurrence Validation Report](../artifacts/validation/v8_sae_recurrence_validation/v8_sae_recurrence_validation_report.md)
 - [V8 SAE Gemma Recurrence Validation Report](../artifacts/validation/v8_sae_gemma_recurrence_validation/v8_sae_gemma_recurrence_validation_report.md)
+- [V8 SAE Feature-Edge Recurrence Report](../artifacts/validation/v8_sae_feature_edge_recurrence/v8_sae_feature_edge_recurrence_report.md)
 
 ## Purpose
 
@@ -69,6 +70,8 @@ The first bounded pilot has now produced real exports:
 - Gemma is now carried as a model-native third SAE branch: Gemma dense vectors
   use hidden size `2560`, so the branch trains a Gemma-native SAE on Gemma base
   and applies that locked encoder to Gemma `rerun_02` and `prompt_set_02`
+- feature-edge recurrence now regenerates adjacent-layer feature-to-feature
+  edges across base, `rerun_02`, and `prompt_set_02` for both branches
 
 ## Topic / Circuit Labels
 
@@ -174,6 +177,24 @@ Gemma-native recurrence status:
   top-feature Jaccard `0.538461538`) and remains present under prompt_set_02
   (cosine `0.392933488`, top-feature Jaccard `0.176470588`)
 
+Feature-edge recurrence status:
+
+- GLM/Hermes edge recurrence closes cleanly:
+  within-set edge separation is supported for base (`0.455882927`), rerun_02
+  (`0.464051642`), and prompt_set_02 (`0.376823065`), each with p
+  `0.00990099`
+- GLM/Hermes base-trained edge transfer is supported into rerun_02
+  (`0.52387397`) and prompt_set_02 (`0.395827668`), each with p
+  `0.00990099`
+- Gemma edge recurrence is split:
+  within-set Gemma edge separation remains open, while base-trained Gemma edge
+  transfer is supported into rerun_02 (`0.438121048`) and prompt_set_02
+  (`0.367434508`), each with p `0.00990099`
+- weighted edge-signature recurrence is strong on rerun_02 for both branches:
+  GLM/Hermes cosine `0.768127447`, Gemma cosine `0.803169721`; prompt_set_02
+  remains present but lower: GLM/Hermes cosine `0.391837556`, Gemma cosine
+  `0.528171679`
+
 The current bridge is:
 
 ```text
@@ -182,9 +203,7 @@ hidden states -> attention flow -> MLP updates -> SAE feature/circuit tracing
 
 ## Next Execution Order
 
-1. Build matched SAE feature-edge recurrence over base, `rerun_02`, and
-   `prompt_set_02` with the GLM / Hermes branch plus the Gemma-native branch.
-2. Extend direct SAE feature/circuit ablations across recurrent branches.
-3. Run MLP depth recurrence after SAE recurrence is logged.
-4. Move into `Nest 2D` allostery, then `Nest 2E` PFAS safety, `Nest 2F`
+1. Extend direct SAE feature/circuit ablations across recurrent branches.
+2. Run MLP depth recurrence after SAE feature-edge recurrence is logged.
+3. Move into `Nest 2D` allostery, then `Nest 2E` PFAS safety, `Nest 2F`
    materials, and `Nest 2G` descriptor/model controls.

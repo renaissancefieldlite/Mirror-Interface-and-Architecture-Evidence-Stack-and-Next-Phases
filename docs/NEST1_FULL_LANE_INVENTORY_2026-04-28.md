@@ -85,11 +85,10 @@ The strongest current read is:
 
 ## Immediate Next Gates
 
-1. Run SAE feature-edge recurrence across GLM / Hermes plus the Gemma-native
-   branch over base, `rerun_02`, and `prompt_set_02`.
-2. Run direct SAE feature/circuit ablations across recurrent branches.
-3. Run MLP depth recurrence after the SAE recurrence branch is logged.
-4. Use attention-flow labels to revisit `GRAPH-2` when the graph path has
+1. Run direct SAE feature/circuit ablations across recurrent branches.
+2. Run MLP depth recurrence after the SAE feature-edge recurrence read is
+   logged.
+3. Use attention-flow labels to revisit `GRAPH-2` when the graph path has
    stronger independent labels.
-5. Carry the lane-by-lane discipline into Nest 2D allostery, Nest 2E PFAS
+4. Carry the lane-by-lane discipline into Nest 2D allostery, Nest 2E PFAS
    safety, Nest 2F materials, and Nest 2G descriptor/model controls.
