@@ -12,6 +12,7 @@ Companion gate:
 - [V8 SAE Edge Controls Report](../artifacts/validation/v8_sae_edge_controls/v8_sae_edge_controls_report.md)
 - [V8 SAE Recurrence Gate Report](../artifacts/validation/v8_sae_recurrence_gate/v8_sae_recurrence_gate_report.md)
 - [V8 SAE Ablation Controls Report](../artifacts/validation/v8_sae_ablation_controls/v8_sae_ablation_controls_report.md)
+- [V8 SAE Recurrence Validation Report](../artifacts/validation/v8_sae_recurrence_validation/v8_sae_recurrence_validation_report.md)
 
 ## Purpose
 
@@ -62,8 +63,8 @@ The first bounded pilot has now produced real exports:
   degree-only baselines, and hub-only baselines
 - ablation controls now test top architecture features at both activation and
   feature-to-feature edge levels
-- recurrence gate confirms base dense vectors are present and identifies the
-  next needed input: matching `prompt_set_02` / `rerun_02` dense V8 exports
+- recurrence validation now applies the locked bounded SAE encoder across
+  base, `rerun_02`, and `prompt_set_02` dense V8 exports
 
 ## Topic / Circuit Labels
 
@@ -144,9 +145,15 @@ Ablation controls give a split read:
 
 Recurrence status:
 
-- base `GLM` / `Hermes` dense V8 vectors exist
-- matching `prompt_set_02` and `rerun_02` dense V8 activation exports are the
-  next inputs for SAE recurrence
+- base, `rerun_02`, and `prompt_set_02` `GLM` / `Hermes` dense V8 vectors exist
+- within-set feature separation is supported across all three dense exports:
+  base `0.619617213`, rerun_02 `0.641035294`, prompt_set_02 `0.495413961`,
+  each with p `0.00990099`
+- base-trained SAE transfer is supported into rerun_02 (`0.629265629`) and
+  prompt_set_02 (`0.45959596`), each with p `0.00990099`
+- feature-lift recurrence is strongest on rerun_02 (cosine `0.9963938`,
+  top-feature Jaccard `0.818181818`) and remains present under prompt_set_02
+  (cosine `0.779671907`, top-feature Jaccard `0.333333333`)
 
 The current bridge is:
 
@@ -156,10 +163,10 @@ hidden states -> attention flow -> MLP updates -> SAE feature/circuit tracing
 
 ## Next Execution Order
 
-1. Export matching `prompt_set_02` and `rerun_02` dense V8 activations for
-   `GLM` / `Hermes`.
-2. Run SAE recurrence against those matching dense vectors for prompt-generalized
-   feature support.
-3. Build topic labels over the exported feature dictionary.
-4. Extend ablations from top-k features into direct feature/circuit readout
+1. Build matched feature-edge recurrence over base, `rerun_02`, and
+   `prompt_set_02`.
+2. Build topic labels over the exported feature dictionary.
+3. Extend ablations from top-k features into direct feature/circuit readout
    movement and matched controls.
+4. Move into `Nest 2D` allostery after the SAE recurrence / ablation read is
+   logged.

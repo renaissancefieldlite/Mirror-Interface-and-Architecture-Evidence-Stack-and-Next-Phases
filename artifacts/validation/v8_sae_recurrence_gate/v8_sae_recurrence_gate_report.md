@@ -1,22 +1,20 @@
 # V8 SAE Recurrence Gate
 
-Status: `sae_recurrence_input_pending_prompt_rerun_dense_vectors`
+Status: `sae_recurrence_inputs_ready`
 
 ## Clean Read
 
-SAE recurrence can run once base, rerun_02, and prompt_set_02 dense hidden-vector point clouds exist for the same model/context structure. Base GLM/Hermes dense vectors exist; matching rerun_02 and prompt_set_02 dense vectors are the required next inputs.
+Base, rerun_02, and prompt_set_02 dense hidden-vector point clouds are present for SAE recurrence.
 
 ## Input State
 
 | Input | Exists | NPZ Count |
 | --- | ---: | ---: |
 | `base_dense` | `True` | `2` |
-| `rerun_02_dense` | `False` | `0` |
-| `prompt_set_02_dense` | `False` | `0` |
+| `rerun_02_dense` | `True` | `2` |
+| `prompt_set_02_dense` | `True` | `2` |
 
 ## Next Gates
 
-- export rerun_02 dense trajectory point clouds for GLM / Hermes
-- export prompt_set_02 dense trajectory point clouds for GLM / Hermes
-- apply the bounded SAE encoder to those matched dense vectors
-- compare feature recurrence across base, rerun_02, and prompt_set_02
+- run SAE recurrence export with the existing bounded SAE encoder
+- validate feature recurrence across base, rerun_02, and prompt_set_02

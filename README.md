@@ -218,9 +218,11 @@ next.
   (`balanced_accuracy=0.451334`, p `0.004975`, degree baseline
   `0.304671`). Feature-to-feature edge ablation is supported
   (`drop=0.098423`, p `0.009901`), while top-feature activation ablation
-  remains open (`drop=0.033124`, p `0.128713`). The recurrence gate has the
-  base dense vectors and is waiting on matching `prompt_set_02` / `rerun_02`
-  dense V8 activation exports.
+  remains open (`drop=0.033124`, p `0.128713`). SAE recurrence is now
+  supported across base, `rerun_02`, and `prompt_set_02`: within-set
+  feature separation beats shuffled controls for all three dense exports, and
+  base-trained transfer holds for rerun (`0.629265629`) and prompt_set_02
+  (`0.45959596`) with p `0.00990099`.
 
 - `Nest 2`
   `Engine 02` made the structured-matter mapping runnable across bounded
@@ -408,6 +410,7 @@ Latest gate reports:
 - [V8 SAE Edge Controls Report](./artifacts/validation/v8_sae_edge_controls/v8_sae_edge_controls_report.md)
 - [V8 SAE Recurrence Gate Report](./artifacts/validation/v8_sae_recurrence_gate/v8_sae_recurrence_gate_report.md)
 - [V8 SAE Ablation Controls Report](./artifacts/validation/v8_sae_ablation_controls/v8_sae_ablation_controls_report.md)
+- [V8 SAE Recurrence Validation Report](./artifacts/validation/v8_sae_recurrence_validation/v8_sae_recurrence_validation_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)

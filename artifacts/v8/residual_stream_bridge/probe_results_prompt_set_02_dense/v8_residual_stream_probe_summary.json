@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-04-30T17:29:17.518651+00:00",
+  "manifest": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/v8_residual_stream_manifest_prompt_set_02_2026-04-29.json",
+  "results_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/probe_results_prompt_set_02_dense",
+  "models": [
+    {
+      "display_name": "Hermes",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/teknium_OpenHermes-2.5-Mistral-7B",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/probe_results_prompt_set_02_dense/hermes_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 31,
+          "strongest_target_delta_norm": 170.257263,
+          "strongest_target_cosine": 0.83515,
+          "strongest_last_layer": 31,
+          "strongest_last_delta_norm": 109.321663,
+          "strongest_last_cosine": 0.961228
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 31,
+          "strongest_target_delta_norm": 161.875397,
+          "strongest_target_cosine": 0.853336,
+          "strongest_last_layer": 31,
+          "strongest_last_delta_norm": 121.49868,
+          "strongest_last_cosine": 0.95235
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 31,
+          "strongest_target_delta_norm": 155.712906,
+          "strongest_target_cosine": 0.868617,
+          "strongest_last_layer": 31,
+          "strongest_last_delta_norm": 110.797287,
+          "strongest_last_cosine": 0.959217
+        }
+      },
+      "point_cloud_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory_prompt_set_02/hermes_v8_hidden_point_cloud.npz"
+    },
+    {
+      "display_name": "GLM",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/THUDM_GLM-4-9B-0414",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/probe_results_prompt_set_02_dense/glm_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 38,
+          "strongest_target_delta_norm": 335.766846,
+          "strongest_target_cosine": 0.866746,
+          "strongest_last_layer": 38,
+          "strongest_last_delta_norm": 229.25293,
+          "strongest_last_cosine": 0.955372
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 38,
+          "strongest_target_delta_norm": 293.226715,
+          "strongest_target_cosine": 0.903521,
+          "strongest_last_layer": 38,
+          "strongest_last_delta_norm": 430.295074,
+          "strongest_last_cosine": 0.840919
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 38,
+          "strongest_target_delta_norm": 325.020844,
+          "strongest_target_cosine": 0.877155,
+          "strongest_last_layer": 38,
+          "strongest_last_delta_norm": 419.164246,
+          "strongest_last_cosine": 0.848512
+        }
+      },
+      "point_cloud_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory_prompt_set_02/glm_v8_hidden_point_cloud.npz"
+    }
+  ]
+}

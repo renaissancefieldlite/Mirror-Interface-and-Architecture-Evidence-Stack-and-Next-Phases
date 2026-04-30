@@ -216,9 +216,15 @@ Completed enough to show:
   degree-only / hub-only baselines (`0.451334` vs `0.304671` / `0.332689`).
   SAE ablation is split: feature-to-feature edge ablation is supported
   (`drop=0.098423`, `p=0.009901`), while top-feature activation ablation
-  remains open (`drop=0.033124`, `p=0.128713`). SAE recurrence is input-ready
-  for the base vectors and waiting on matching `prompt_set_02` / `rerun_02`
-  dense V8 activation exports.
+  remains open (`drop=0.033124`, `p=0.128713`). SAE recurrence is now
+  supported across base, `rerun_02`, and `prompt_set_02` dense V8 exports:
+  within-set feature separation is supported on base (`0.619617213`),
+  rerun_02 (`0.641035294`), and prompt_set_02 (`0.495413961`), all with
+  p `0.00990099`. Base-trained transfer is supported into rerun_02
+  (`0.629265629`) and prompt_set_02 (`0.45959596`), also with p
+  `0.00990099`. Feature-lift recurrence is strongest on rerun_02
+  (cosine `0.9963938`) and remains present under prompt_set_02
+  (cosine `0.779671907`).
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are now mapped as candidate bridges, not closed
@@ -231,10 +237,10 @@ Completed enough to show:
 
 Immediate next work:
 
-1. export matching `prompt_set_02` / `rerun_02` dense V8 activation vectors for
-   SAE recurrence
-2. run SAE recurrence and direct feature/circuit ablations against those
-   matching dense vectors
+1. build matched SAE feature-edge recurrence over base, `rerun_02`, and
+   `prompt_set_02`
+2. run direct feature/circuit ablations against recurrent SAE features and
+   matched controls
 3. treat MLP prompt_set_02 as directional/open until recurrence or a stronger
    layer-grid/control pass closes it
 4. keep the `Nest 1` full lane inventory as the public index for the formal

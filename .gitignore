@@ -8,4 +8,6 @@ artifacts/validation/engine02v_qm9_alpha_rerun02/
 artifacts/validation/nest2e_pfas_pathway_rerun03/
 artifacts/v8/residual_stream_bridge/point_clouds/
 artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory/
+artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory_rerun_02/
+artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory_prompt_set_02/
 artifacts/v8/residual_stream_bridge/point_clouds_expanded/
