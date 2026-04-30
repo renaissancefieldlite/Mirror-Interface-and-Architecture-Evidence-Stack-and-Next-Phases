@@ -74,8 +74,10 @@ The strongest current read is:
 
 - supported lanes show that the pattern can be measured in formal and
   transformer-adjacent substrates
-- partial lanes are not failures; they identify the exact missing input
-- topology currently supports preservation, not context-topology separation
+- partial lanes identify the exact missing input for the next validation pass
+- topology currently supports preservation while geometry, magnitude,
+  trajectory, topography, and feature/circuit structure carry the stronger
+  separation signal
 - GRAPH-2 is the main open formal-pathway gate and should move through
   attention-flow or external pathway labels
 - HRV is useful as a biological adapter but too coarse to close spectral or
@@ -83,10 +85,11 @@ The strongest current read is:
 
 ## Immediate Next Gates
 
-1. Export attention heads and MLP/feed-forward deltas.
-2. Use attention-flow labels to revisit `GRAPH-2`.
-3. Use EEG or real spectral datasets before reopening `SPEC-1`.
-4. Use EEG+HRV or other continuous signals before reopening `DE-1`.
-5. Expand `OPT-1` and `CAT-1` with larger real benchmarks.
-6. Carry this lane-by-lane discipline into Nest 2 molecular, allostery, PFAS,
-   and materials validation.
+1. Run SAE feature-edge recurrence across GLM / Hermes plus the Gemma-native
+   branch over base, `rerun_02`, and `prompt_set_02`.
+2. Run direct SAE feature/circuit ablations across recurrent branches.
+3. Run MLP depth recurrence after the SAE recurrence branch is logged.
+4. Use attention-flow labels to revisit `GRAPH-2` when the graph path has
+   stronger independent labels.
+5. Carry the lane-by-lane discipline into Nest 2D allostery, Nest 2E PFAS
+   safety, Nest 2F materials, and Nest 2G descriptor/model controls.

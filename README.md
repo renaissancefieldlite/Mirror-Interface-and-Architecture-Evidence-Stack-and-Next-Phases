@@ -222,7 +222,14 @@ next.
   supported across base, `rerun_02`, and `prompt_set_02`: within-set
   feature separation beats shuffled controls for all three dense exports, and
   base-trained transfer holds for rerun (`0.629265629`) and prompt_set_02
-  (`0.45959596`) with p `0.00990099`.
+  (`0.45959596`) with p `0.00990099`. Gemma is now integrated as a
+  model-native third SAE branch: Gemma dense V8 vectors use hidden size
+  `2560`, so a Gemma-native SAE was trained on real Gemma base activations
+  and carried into Gemma `rerun_02` and `prompt_set_02`. The Gemma branch is
+  supported across within-set separation and base-to-set transfer against
+  shuffled controls: base `0.479140512`, rerun_02 `0.493431208`,
+  prompt_set_02 `0.418165016`, base -> rerun_02 `0.510737628`, and
+  base -> prompt_set_02 `0.389542484`, all p `0.00990099`.
 
 - `Nest 2`
   `Engine 02` made the structured-matter mapping runnable across bounded
@@ -411,6 +418,7 @@ Latest gate reports:
 - [V8 SAE Recurrence Gate Report](./artifacts/validation/v8_sae_recurrence_gate/v8_sae_recurrence_gate_report.md)
 - [V8 SAE Ablation Controls Report](./artifacts/validation/v8_sae_ablation_controls/v8_sae_ablation_controls_report.md)
 - [V8 SAE Recurrence Validation Report](./artifacts/validation/v8_sae_recurrence_validation/v8_sae_recurrence_validation_report.md)
+- [V8 SAE Gemma Recurrence Validation Report](./artifacts/validation/v8_sae_gemma_recurrence_validation/v8_sae_gemma_recurrence_validation_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)

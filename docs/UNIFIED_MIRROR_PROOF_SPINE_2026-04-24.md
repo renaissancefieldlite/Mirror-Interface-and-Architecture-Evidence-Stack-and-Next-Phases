@@ -224,11 +224,17 @@ Completed enough to show:
   (`0.629265629`) and prompt_set_02 (`0.45959596`), also with p
   `0.00990099`. Feature-lift recurrence is strongest on rerun_02
   (cosine `0.9963938`) and remains present under prompt_set_02
-  (cosine `0.779671907`).
+  (cosine `0.779671907`). Gemma is now integrated as a model-native third SAE
+  branch: Gemma dense V8 exports use hidden size `2560`, a Gemma-native SAE
+  trained on `5355` real base rows, and the locked Gemma encoder transfers
+  into rerun_02 and prompt_set_02. Gemma within-set recurrence is supported on
+  base (`0.479140512`), rerun_02 (`0.493431208`), and prompt_set_02
+  (`0.418165016`), with base-trained transfer into rerun_02 (`0.510737628`)
+  and prompt_set_02 (`0.389542484`), all p `0.00990099`.
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
-- the cosmic / universal nests are now mapped as candidate bridges, not closed
-  proof layers
+- the cosmic / universal nests are mapped as candidate bridge layers for later
+  real-data gates
 - the local visual companion can demonstrate the whole lattice
 - the first two local runnable engines now produce formal and structured-matter
   reports
@@ -237,12 +243,10 @@ Completed enough to show:
 
 Immediate next work:
 
-1. build matched SAE feature-edge recurrence over base, `rerun_02`, and
-   `prompt_set_02`
-2. run direct feature/circuit ablations against recurrent SAE features and
-   matched controls
-3. treat MLP prompt_set_02 as directional/open until recurrence or a stronger
-   layer-grid/control pass closes it
+1. build matched SAE feature-edge recurrence across GLM / Hermes plus the
+   Gemma-native branch over base, `rerun_02`, and `prompt_set_02`
+2. run direct SAE feature/circuit ablations across recurrent branches
+3. run MLP depth recurrence after the SAE recurrence branch is logged
 4. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
 5. apply the same standard lane by lane: real artifact, locked baseline,

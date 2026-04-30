@@ -128,7 +128,7 @@ repeatability, localization, or baseline lift.
 | `Nest 2` | molecule-property, PFAS pathway, materials, and stronger descriptor baseline lanes started on real data |
 | Attention-flow | prompt-generalized support across the current V8 attention gate |
 | MLP/feed-forward | same-prompt repeatability supported; `prompt_set_02` all-layer depth grid is directional, strongest in early layers, with closeout open under shuffled controls |
-| SAE feature layer | bounded `GLM` / `Hermes` SAE pilot trained on real dense V8 activations, with feature separation above shuffled-label controls, edge-specific controls supported, feature-to-feature edge ablation supported, and recurrence supported across base / `rerun_02` / `prompt_set_02` |
+| SAE feature layer | bounded `GLM` / `Hermes` SAE pilot trained on real dense V8 activations, with feature separation above shuffled-label controls, edge-specific controls supported, feature-to-feature edge ablation supported, and recurrence supported across base / `rerun_02` / `prompt_set_02`; Gemma is integrated as a model-native third SAE recurrence branch with hidden size `2560` and supported within-set plus base-transfer controls |
 
 ## What Is Still Open?
 
@@ -137,9 +137,9 @@ the same claim:
 
 | Gate | Next Required Move |
 | --- | --- |
-| SAE feature-edge recurrence | build matched feature-edge recurrence over base, `rerun_02`, and `prompt_set_02` |
-| SAE direct ablation | extend from edge ablation into direct feature/circuit readout movement with matched controls |
-| MLP prompt-generalization | rerun or second-export recurrence for the all-layer `prompt_set_02` grid |
+| SAE feature-edge recurrence | build matched feature-edge recurrence across GLM / Hermes plus the Gemma-native branch over base, `rerun_02`, and `prompt_set_02` |
+| SAE direct ablation | extend direct feature/circuit readout movement across recurrent SAE branches with matched controls |
+| MLP prompt-generalization | run MLP depth recurrence for the all-layer `prompt_set_02` grid |
 | `GRAPH-2` | close with attention-flow or independent external pathway labels |
 | `GAME-1` | keep the locked rubric over real adversarial / control-like rows |
 | `Nest 2D` | allostery mapper closeout with protein contact / pocket labels |

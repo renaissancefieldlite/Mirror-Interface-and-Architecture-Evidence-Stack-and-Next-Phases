@@ -13,6 +13,7 @@ Companion gate:
 - [V8 SAE Recurrence Gate Report](../artifacts/validation/v8_sae_recurrence_gate/v8_sae_recurrence_gate_report.md)
 - [V8 SAE Ablation Controls Report](../artifacts/validation/v8_sae_ablation_controls/v8_sae_ablation_controls_report.md)
 - [V8 SAE Recurrence Validation Report](../artifacts/validation/v8_sae_recurrence_validation/v8_sae_recurrence_validation_report.md)
+- [V8 SAE Gemma Recurrence Validation Report](../artifacts/validation/v8_sae_gemma_recurrence_validation/v8_sae_gemma_recurrence_validation_report.md)
 
 ## Purpose
 
@@ -65,6 +66,9 @@ The first bounded pilot has now produced real exports:
   feature-to-feature edge levels
 - recurrence validation now applies the locked bounded SAE encoder across
   base, `rerun_02`, and `prompt_set_02` dense V8 exports
+- Gemma is now carried as a model-native third SAE branch: Gemma dense vectors
+  use hidden size `2560`, so the branch trains a Gemma-native SAE on Gemma base
+  and applies that locked encoder to Gemma `rerun_02` and `prompt_set_02`
 
 ## Topic / Circuit Labels
 
@@ -155,6 +159,21 @@ Recurrence status:
   top-feature Jaccard `0.818181818`) and remains present under prompt_set_02
   (cosine `0.779671907`, top-feature Jaccard `0.333333333`)
 
+Gemma-native recurrence status:
+
+- Gemma base, `rerun_02`, and `prompt_set_02` dense V8 vectors now exist with
+  hidden size `2560`
+- a Gemma-native SAE trained on `5355` real Gemma base dense rows and `64`
+  sparse features
+- within-set feature separation is supported across all three Gemma dense
+  exports: base `0.479140512`, rerun_02 `0.493431208`, prompt_set_02
+  `0.418165016`, each with p `0.00990099`
+- base-trained Gemma SAE transfer is supported into rerun_02 (`0.510737628`)
+  and prompt_set_02 (`0.389542484`), each with p `0.00990099`
+- feature-lift recurrence is very strong on rerun_02 (cosine `0.967395663`,
+  top-feature Jaccard `0.538461538`) and remains present under prompt_set_02
+  (cosine `0.392933488`, top-feature Jaccard `0.176470588`)
+
 The current bridge is:
 
 ```text
@@ -163,10 +182,9 @@ hidden states -> attention flow -> MLP updates -> SAE feature/circuit tracing
 
 ## Next Execution Order
 
-1. Build matched feature-edge recurrence over base, `rerun_02`, and
-   `prompt_set_02`.
-2. Build topic labels over the exported feature dictionary.
-3. Extend ablations from top-k features into direct feature/circuit readout
-   movement and matched controls.
-4. Move into `Nest 2D` allostery after the SAE recurrence / ablation read is
-   logged.
+1. Build matched SAE feature-edge recurrence over base, `rerun_02`, and
+   `prompt_set_02` with the GLM / Hermes branch plus the Gemma-native branch.
+2. Extend direct SAE feature/circuit ablations across recurrent branches.
+3. Run MLP depth recurrence after SAE recurrence is logged.
+4. Move into `Nest 2D` allostery, then `Nest 2E` PFAS safety, `Nest 2F`
+   materials, and `Nest 2G` descriptor/model controls.

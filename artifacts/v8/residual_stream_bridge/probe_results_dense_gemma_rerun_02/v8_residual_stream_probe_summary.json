@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-04-30T18:18:31.716920+00:00",
+  "manifest": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/v8_residual_stream_manifest_2026-04-19.json",
+  "results_dir": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/probe_results_dense_gemma_rerun_02",
+  "models": [
+    {
+      "display_name": "Gemma",
+      "status": "valid",
+      "checkpoint": "/Volumes/Renaissance Hd/hf_checkpoints/google_gemma-4-E4B-it",
+      "output_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/probe_results_dense_gemma_rerun_02/gemma_v8_residual_trace.json",
+      "summary": {
+        "lattice_vs_neutral": {
+          "strongest_target_layer": 41,
+          "strongest_target_delta_norm": 77.056923,
+          "strongest_target_cosine": 0.632405,
+          "strongest_last_layer": 41,
+          "strongest_last_delta_norm": 113.612076,
+          "strongest_last_cosine": 0.779876
+        },
+        "lattice_vs_technical": {
+          "strongest_target_layer": 41,
+          "strongest_target_delta_norm": 74.956238,
+          "strongest_target_cosine": 0.676786,
+          "strongest_last_layer": 41,
+          "strongest_last_delta_norm": 103.665237,
+          "strongest_last_cosine": 0.861168
+        },
+        "technical_vs_neutral": {
+          "strongest_target_layer": 41,
+          "strongest_target_delta_norm": 60.629566,
+          "strongest_target_cosine": 0.735425,
+          "strongest_last_layer": 41,
+          "strongest_last_delta_norm": 99.71225,
+          "strongest_last_cosine": 0.872517
+        }
+      },
+      "point_cloud_path": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory_gemma_rerun_02/gemma_v8_hidden_point_cloud.npz"
+    }
+  ]
+}
