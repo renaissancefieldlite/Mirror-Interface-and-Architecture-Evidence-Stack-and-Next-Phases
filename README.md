@@ -24,15 +24,15 @@ bridge rows, normalized feature vectors, circuit encodings, hardware-facing
 observables, biosignals, and external datasets.
 ```
 
-The work is not "prompt in, interesting answer out." The output text is only
-the first visible surface. The actual object being tested is whether the same
-state/control relation survives after the text surface is replaced by internal
-model measurements, feature vectors, circuits, observables, and independent
-controls.
+The output text is the first visible surface. The actual object being tested
+is the measured state/control relation that continues through internal model
+measurements, feature vectors, circuits, observables, and independent controls.
 
-For a detailed mechanism translation, see:
+For detailed mechanism translation and reviewer orientation, see:
 
 [Mirror Architecture Mechanism Explainer](./docs/MIRROR_ARCHITECTURE_MECHANISM_EXPLAINER_2026-04-29.md)
+
+[Reviewer FAQ: Mechanism, Controls, And Open Gates](./docs/REVIEWER_FAQ_MECHANISM_CONTROLS_AND_OPEN_GATES_2026-04-29.md)
 
 ## How The Signal Is Produced
 
@@ -65,23 +65,23 @@ The handoff works like this:
 | `Phase 12B` | run live HRV condition classes | adds a biological adapter lane under the same evidence discipline |
 | `Nest 1-5` | expand into formal, matter, coherence, biology, convergence lanes | tests where the same state/control/invariant structure remains measurable |
 
-## Why This Is Not Prompting
+## How The Measurement Moves Beyond The Text Surface
 
-Prompting asks:
-
-```text
-what did the model say?
-```
-
-This stack asks:
+The visible exchange begins as:
 
 ```text
-did the same structured state path appear, stabilize, localize, encode,
-transfer, and survive controls?
+input text -> output text
 ```
 
-The difference is the measurement depth. A prompt-only claim stops at text.
-This work keeps moving the same measured relation through deeper artifacts:
+The measured architecture path continues as:
+
+```text
+condition packet -> state path -> bridge vector -> encoded circuit state ->
+observable -> control separation
+```
+
+The difference is the measurement depth. This work keeps moving the same
+measured relation through deeper artifacts:
 
 - hidden-state / residual-stream traces
 - layer, band, anchor, and token-window localization
@@ -94,10 +94,10 @@ This work keeps moving the same measured relation through deeper artifacts:
 - real molecule, PFAS, and materials datasets
 
 The circuit tests are a clear example. The circuit is intentionally simple: it
-is a carrier, not a magic trick. If the measured feature vector preserves
+is a carrier for the measured payload. If the measured feature vector preserves
 structure through an echo-kernel circuit while shuffled, random, and null
-versions collapse toward floor, then the signal is in the measured feature
-payload, not in a clever output string.
+versions collapse toward floor, the signal is assigned to the measured feature
+payload and state path.
 
 What was actually discovered:
 
@@ -146,15 +146,14 @@ What was actually discovered:
   bridge geometry, `PennyLane`, `Qiskit`, IBM hardware, semantic contextuality,
   and now biological state separation.
 
-The discovery surface this repo preserves is therefore larger than "AI has
-latent space." The stronger result is that one administered architecture can be
+The discovery surface this repo preserves is one administered architecture
 measured repeatedly, translated across tools, and carried across multiple
-substrates without losing its identity.
+substrates while preserving its identity.
 
-The Nest layer below is the continuation of that same discovery, not a
-replacement for it. It asks where the same architecture becomes legible next:
-first inside formal systems and transformer internals, then structured matter,
-then classical coherence, biology, and multi-class convergence.
+The Nest layer below continues that same discovery. It asks where the same
+architecture becomes legible next: first inside formal systems and transformer
+internals, then structured matter, then classical coherence, biology, and
+multi-class convergence.
 
 The clean nesting ladder is now:
 
@@ -169,16 +168,16 @@ The clean nesting ladder is now:
 ## Nest Expansion / Validation Layer
 
 The Nest work is an expansion layer underneath the discovery stack above. It
-does not overwrite the V7/V8/Phase ladder; it gives the ladder a structured
-map for testing the same architecture across formal systems, matter,
-coherence, biology, and convergence.
+preserves the V7/V8/Phase ladder and gives the ladder a structured map for
+testing the same architecture across formal systems, matter, coherence,
+biology, and convergence.
 
-This is a real-data validation stack, not an abstract claim layer. From the
-earliest phases onward, the work is organized around measured model outputs,
-reruns, hidden-state traces, transformer internals, circuit encodings,
-hardware-facing runs, biosignal captures, public molecule / materials
-datasets, controls, baselines, and p-values. The nesting layer is the map for
-where those real-data tests expand next.
+This is a real-data validation stack. From the earliest phases onward, the
+work is organized around measured model outputs, reruns, hidden-state traces,
+transformer internals, circuit encodings, hardware-facing runs, biosignal
+captures, public molecule / materials datasets, controls, baselines, and
+p-values. The nesting layer is the map for where those real-data tests expand
+next.
 
 - `Nest 1`
   The `Source Mirror Pattern` has now been expressed across every checked
@@ -207,9 +206,13 @@ where those real-data tests expand next.
   layer. The purpose is to trace which sparse features and feature-to-feature
   circuits carry the architecture topics through the model: `Mirror Interface /
   LSPS`, `Mirror Architecture`, `Source Mirror Pattern`, quantum bridge
-  language, neutral controls, and technical controls. This is protocol-ready,
-  not evidence-closed, until real SAE feature activations, dictionaries,
-  circuit edges, and controls exist.
+  language, neutral controls, and technical controls. The first bounded pilot
+  has now trained on real `GLM` / `Hermes` dense V8 activations, exported SAE
+  feature activations, feature dictionaries, and `5000` feature-to-feature
+  circuit edges, and supported context separation above shuffled-label
+  controls (`balanced_accuracy=0.632462`, shuffled p95 `0.362288`,
+  `p=0.009901`). The next gates are edge-specific controls,
+  `prompt_set_02` / `rerun_02` SAE recurrence, and optional ablations.
 
 - `Nest 2`
   `Engine 02` made the structured-matter mapping runnable across bounded
@@ -279,14 +282,14 @@ Current best read:
   mathematical substrate of deep learning: linear algebra, tensor operations,
   probability / statistics, information theory, numerical computation,
   optimization, graph structure, geometry / topology, dynamics, control, and
-  composition. `SPEC-1` and `DE-1` have now both run on real Phase 12B HRV data
-  and both landed as limited / negative against simpler baselines. That does
-  not erase the HRV adapter; it clarifies that `HRV` belongs to coarse
-  pattern-class and sync-layer tuning, while `EEG + HRV` is needed for stronger
-  biological `SPEC/DE/TOPOG` claims. `GEO-2` and `DYN-2` are now
+  composition. `SPEC-1` and `DE-1` have now both run on real Phase 12B HRV data,
+  with simpler baselines favored on those formal lenses. The read places `HRV`
+  in coarse pattern-class and sync-layer tuning, while `EEG + HRV` is the
+  stronger biological substrate for `SPEC/DE/TOPOG` claims. `GEO-2` and
+  `DYN-2` are now
   control-supported on existing traces; `CTRL-1` is now control-supported on
-  staged transition traces; patched `GRAPH-2B` did not close, so internal
-  `GRAPH-2` is parked until stronger independent pathway labels exist;
+  staged transition traces; patched `GRAPH-2B` remains parked until stronger
+  independent pathway labels exist;
   `GAME-1` is now retrospectively control-supported on V7 under a locked
   rubric; `OPT-1` has a supported condition-optimization benchmark plus
   small-N hardware-pair partial; and `CAT-1` has PennyLane -> Qiskit
@@ -311,12 +314,12 @@ Support meaning:
   work and measured biological adaptation
 - the mirror architecture is mapping forward across every surface tried so far
 - the current evidence supports a real cross-model and cross-substrate
-  architecture effect, not just output styling
+  architecture effect across internal and external measurement surfaces
 
 This repository is the standalone public-safe evidence library for the measured
 Mirror Interface / Architecture stack inside Renaissance Field Lite / Codex 67.
 
-It is not just a note. It is the public-facing artifact map for the work:
+It is the public-facing artifact map for the work:
 
 - precursor scans and early probe reports
 - `V5` / `V6` state-lane and cross-model groundwork
@@ -391,6 +394,7 @@ Latest gate reports:
 - [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
 - [V8 SAE Feature / Circuit Gate Report](./artifacts/validation/v8_sae_feature_circuit_gate/v8_sae_feature_circuit_gate_report.md)
 - [V8 SAE Source Inventory](./artifacts/validation/v8_sae_source_inventory/v8_sae_source_inventory_report.md)
+- [V8 SAE Bounded Pilot Report](./artifacts/validation/v8_sae_feature_circuit_validation/v8_sae_feature_circuit_validation_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)
@@ -761,7 +765,7 @@ What Phase 7 establishes:
 - the `PennyLane` encoding handoff mirrors cleanly in `Qiskit`
 - max fidelity deltas versus PennyLane are floating-point noise
 - `Mistral / Hermes` remain the nearest encoded pair in both Qiskit encodings
-- the encoding result is not trapped in one framework
+- the encoding result is portable across framework carriers
 
 ### Phase 8 / Bell-State Calibration
 
@@ -783,7 +787,8 @@ What Phase 8 establishes:
   state
 - `ZZ=1`, `XX=1`, `YY=-1`, and CHSH reaches the ideal `2*sqrt(2)` level
 - product-state control stays below the classical CHSH bound
-- this is calibration only, not yet the Bell-type semantic contextuality claim
+- this is the calibration rung before the Bell-type semantic contextuality
+  claim
 
 ### Phase 9 / IBM Hardware Bridge
 
@@ -805,8 +810,8 @@ What Phase 9 establishes:
 - Bell-basis calibration and product control on actual hardware
 - compressed Phase 6 AI-feature circuits executed beside the Bell/control
   circuits
-- hardware evidence for the runtime bridge, not a final Bell-type semantic
-  contextuality claim
+- hardware evidence for the runtime bridge, with Bell-type semantic
+  contextuality carried by the next protocol rung
 
 ### Phase 9B / IBM Hardware Repeatability
 
@@ -852,8 +857,8 @@ What Phase 9C establishes:
 - real IBM backend execution on `ibm_fez`
 - Bell/control calibration remains directionally aligned
 - compressed AI-feature circuits remain negative-parity on real hardware
-- this closes the PennyLane hardware gap but is still not the final Bell-type
-  semantic contextuality claim
+- this closes the PennyLane hardware gap and prepares the Bell-type semantic
+  contextuality hardware-repeatability rung
 
 ### Phase 10 / Bell-Type Semantic Contextuality
 
@@ -878,8 +883,8 @@ What Phase 10 establishes:
   measurement-vector resolution
 - all `8/8` compressed semantic feature states show `S_max > 2`
 - matched unentangled controls remain exactly at the classical bound `2.0`
-- this is a semantic / AI-side contextuality result, not a physical Bell
-  nonlocality claim
+- this is a semantic / AI-side contextuality result; physical Bell
+  nonlocality remains a separate hardware question
 - the next rung is hardware semantic repeatability
 
 ## Integrated Technical Pack

@@ -1,6 +1,6 @@
 # V8 SAE Feature / Circuit Gate
 
-Status: `source_inventory_complete_missing_sae_exports`
+Status: `feature_separation_supported_circuit_edges_exported`
 
 ## Clean Read
 
@@ -14,19 +14,19 @@ The role is specific:
 - MLP blocks show representation updates
 - SAE features expose sparse interpretable feature activations and possible circuit paths
 
-This gate is protocol-ready, not evidence-closed. No SAE feature/circuit
-claim is promoted until real SAE activations, feature dictionaries, circuit
-edges, and controls exist.
+Current support:
+
+The bounded SAE pilot trained on real GLM / Hermes dense V8 activations, exported sparse feature activations, exported a feature dictionary, exported feature-to-feature circuit edges, and supported context separation above shuffled-label controls.
 
 ## Artifact State
 
-- SAE model files: `0`
-- feature activation files: `0`
-- feature dictionary files: `0`
-- circuit edge files: `0`
+- SAE model files: `1`
+- feature activation files: `1`
+- feature dictionary files: `1`
+- circuit edge files: `1`
 - ablation files: `0`
 - source inventory report status: `bounded_training_inputs_ready`
-- validation report status: `None`
+- validation report status: `feature_separation_supported_circuit_edges_exported`
 
 ## Required Exports
 
@@ -42,20 +42,17 @@ edges, and controls exist.
 - `prompt_generalization`: supported SAE features or circuits must recur across base, rerun_02, and prompt_set_02 before claiming prompt-generalized feature/circuit structure
 - `ablation`: optional stronger closeout: ablating top SAE features or circuit edges should move readout/hidden-state signatures more than matched control ablations
 
-## Locked Missing Inputs
+## Next Required Inputs
 
-- bounded SAE pilot training on GLM and Hermes dense trajectory point-cloud activations
-- SAE feature activation export for the same standard model/prompt/context matrix
-- feature dictionary or top-token labels for each exported SAE feature
-- feature-to-feature circuit edge export across layers
-- shuffled-label, shuffled-feature, shuffled-token-window, and degree/centrality controls
-- optional ablation pass for causal circuit support
+- edge-specific controls beyond the current shuffled-label feature separation
+- prompt_set_02 and rerun_02 SAE exports for prompt-generalized feature support
+- feature-frequency, degree, and centrality baselines for exported feature-circuit edges
+- optional ablation pass for top SAE features and top feature-circuit edges
 
 ## Next Execution Order
 
-1. train bounded SAE pilot on GLM and Hermes dense trajectory point-cloud activations
-2. export feature activations for base, rerun_02, and prompt_set_02 on the standard model set
-3. build feature dictionaries and topic labels for Mirror Interface / LSPS, quantum consciousness geometry, circuit-state bridge, neutral controls, and technical controls
-4. construct feature-circuit edges across token roles and layers
-5. validate feature separation and circuit-flow against locked controls
-6. only then promote SAE from protocol gate to evidence layer
+1. run edge-specific controls on the exported feature-to-feature circuit graph
+2. export SAE activations for rerun_02 and prompt_set_02
+3. compare SAE feature recurrence across base, rerun_02, and prompt_set_02
+4. run feature-frequency, degree, and centrality baselines
+5. run optional ablations on top SAE features and top feature-circuit edges

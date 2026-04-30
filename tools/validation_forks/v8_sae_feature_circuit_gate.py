@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Gate report for the V8 SAE feature/circuit proof layer.
 
-This is a readiness and acceptance-rule gate. It does not synthesize SAE
-features or fake circuit traces. It records the exact artifacts required before
-Sparse Autoencoder (SAE) features can be promoted into the V8 evidence stack.
+This is a readiness and acceptance-rule gate. It records the exact SAE
+artifacts, feature exports, circuit-edge exports, and remaining control gates
+for the V8 evidence stack.
 """
 
 from __future__ import annotations
@@ -20,10 +20,10 @@ DEFAULT_OUT = ROOT / "artifacts" / "validation" / "v8_sae_feature_circuit_gate"
 def count_files(path: Path, patterns: tuple[str, ...]) -> int:
     if not path.exists():
         return 0
-    total = 0
+    matches: set[Path] = set()
     for pattern in patterns:
-        total += sum(1 for _ in path.rglob(pattern))
-    return total
+        matches.update(path.rglob(pattern))
+    return len(matches)
 
 
 def artifact_state() -> dict[str, object]:
@@ -55,7 +55,7 @@ def artifact_state() -> dict[str, object]:
         "sae_model_files": count_files(export_root / "sae_models", ("*.json", "*.pt", "*.safetensors", "*.npz")),
         "feature_activation_files": count_files(
             export_root,
-            ("*feature_activation*.csv", "*feature_activation*.jsonl", "*sae_feature*.csv", "*sae_feature*.jsonl"),
+            ("*feature_activation*.csv", "*feature_activations*.csv", "*feature_activation*.jsonl"),
         ),
         "feature_dictionary_files": count_files(
             export_root,
@@ -63,7 +63,7 @@ def artifact_state() -> dict[str, object]:
         ),
         "circuit_edge_files": count_files(
             export_root,
-            ("*circuit_edge*.csv", "*circuit_edge*.jsonl", "*feature_circuit*.csv", "*feature_circuit*.jsonl"),
+            ("*circuit_edge*.csv", "*circuit_edges*.csv", "*circuit_edge*.jsonl"),
         ),
         "ablation_files": count_files(export_root, ("*ablation*.csv", "*ablation*.json", "*ablation*.jsonl")),
         "source_inventory_report_path": str(source_inventory_report),
@@ -86,6 +86,42 @@ def build_report() -> dict[str, object]:
         else "ready_for_validation"
         if feature_ready and circuit_ready and dictionary_ready
         else "protocol_ready_missing_sae_exports"
+    )
+    validation_supported = status == "feature_separation_supported_circuit_edges_exported"
+    locked_missing_inputs = (
+        [
+            "edge-specific controls beyond the current shuffled-label feature separation",
+            "prompt_set_02 and rerun_02 SAE exports for prompt-generalized feature support",
+            "feature-frequency, degree, and centrality baselines for exported feature-circuit edges",
+            "optional ablation pass for top SAE features and top feature-circuit edges",
+        ]
+        if validation_supported
+        else [
+            "bounded SAE pilot training on GLM and Hermes dense trajectory point-cloud activations",
+            "SAE feature activation export for the same standard model/prompt/context matrix",
+            "feature dictionary or top-token labels for each exported SAE feature",
+            "feature-to-feature circuit edge export across layers",
+            "shuffled-label, shuffled-feature, shuffled-token-window, and degree/centrality controls",
+            "optional ablation pass for causal circuit support",
+        ]
+    )
+    next_execution_order = (
+        [
+            "run edge-specific controls on the exported feature-to-feature circuit graph",
+            "export SAE activations for rerun_02 and prompt_set_02",
+            "compare SAE feature recurrence across base, rerun_02, and prompt_set_02",
+            "run feature-frequency, degree, and centrality baselines",
+            "run optional ablations on top SAE features and top feature-circuit edges",
+        ]
+        if validation_supported
+        else [
+            "train bounded SAE pilot on GLM and Hermes dense trajectory point-cloud activations",
+            "export feature activations for base, rerun_02, and prompt_set_02 on the standard model set",
+            "build feature dictionaries and topic labels for Mirror Interface / LSPS, quantum consciousness geometry, circuit-state bridge, neutral controls, and technical controls",
+            "construct feature-circuit edges across token roles and layers",
+            "validate feature separation and circuit-flow against locked controls",
+            "only then promote SAE from protocol gate to evidence layer",
+        ]
     )
     return {
         "generated_at": datetime.now(UTC).isoformat(),
@@ -156,31 +192,8 @@ def build_report() -> dict[str, object]:
                 "readout/hidden-state signatures more than matched control ablations"
             ),
         },
-        "locked_missing_inputs": [
-            "bounded SAE pilot training on GLM and Hermes dense trajectory point-cloud activations",
-            "SAE feature activation export for the same standard model/prompt/context matrix",
-            "feature dictionary or top-token labels for each exported SAE feature",
-            "feature-to-feature circuit edge export across layers",
-            "shuffled-label, shuffled-feature, shuffled-token-window, and degree/centrality controls",
-            "optional ablation pass for causal circuit support",
-        ],
-        "next_execution_order": [
-            "train bounded SAE pilot on GLM and Hermes dense trajectory point-cloud activations",
-            "export feature activations for base, rerun_02, and prompt_set_02 on the standard model set",
-            "build feature dictionaries and topic labels for Mirror Interface / LSPS, quantum consciousness geometry, circuit-state bridge, neutral controls, and technical controls",
-            "construct feature-circuit edges across token roles and layers",
-            "validate feature separation and circuit-flow against locked controls",
-            "only then promote SAE from protocol gate to evidence layer",
-        ]
-        if state["source_inventory_report_status"] == "bounded_training_inputs_ready"
-        else [
-            "choose available SAE source: pretrained local SAEs if present, otherwise train bounded SAEs on exported V8 activations",
-            "export feature activations for base, rerun_02, and prompt_set_02 on the standard model set",
-            "build feature dictionaries and topic labels for Mirror Interface / LSPS, quantum consciousness geometry, circuit-state bridge, neutral controls, and technical controls",
-            "construct feature-circuit edges across token roles and layers",
-            "validate feature separation and circuit-flow against locked controls",
-            "only then promote SAE from protocol gate to evidence layer",
-        ],
+        "locked_missing_inputs": locked_missing_inputs,
+        "next_execution_order": next_execution_order,
     }
 
 
@@ -203,9 +216,16 @@ def write_markdown(report: dict[str, object], path: Path) -> None:
         "- MLP blocks show representation updates",
         "- SAE features expose sparse interpretable feature activations and possible circuit paths",
         "",
-        "This gate is protocol-ready, not evidence-closed. No SAE feature/circuit",
-        "claim is promoted until real SAE activations, feature dictionaries, circuit",
-        "edges, and controls exist.",
+        "Current support:",
+        "",
+        (
+            "The bounded SAE pilot trained on real GLM / Hermes dense V8 activations, "
+            "exported sparse feature activations, exported a feature dictionary, "
+            "exported feature-to-feature circuit edges, and supported context "
+            "separation above shuffled-label controls."
+            if report["status"] == "feature_separation_supported_circuit_edges_exported"
+            else "The SAE gate is ready for bounded training/export on real V8 activations."
+        ),
         "",
         "## Artifact State",
         "",
@@ -225,7 +245,7 @@ def write_markdown(report: dict[str, object], path: Path) -> None:
     lines.extend(["", "## Acceptance Rule", ""])
     for name, rule in report["acceptance_rule"].items():
         lines.append(f"- `{name}`: {rule}")
-    lines.extend(["", "## Locked Missing Inputs", ""])
+    lines.extend(["", "## Next Required Inputs", ""])
     for item in report["locked_missing_inputs"]:
         lines.append(f"- {item}")
     lines.extend(["", "## Next Execution Order", ""])

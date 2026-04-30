@@ -2,12 +2,13 @@
 
 Date: `2026-04-29`
 
-Status: `source_inventory_complete_missing_sae_exports`
+Status: `feature_separation_supported_circuit_edges_exported`
 
 Companion gate:
 
 - [V8 SAE Feature / Circuit Gate Report](../artifacts/validation/v8_sae_feature_circuit_gate/v8_sae_feature_circuit_gate_report.md)
 - [V8 SAE Source Inventory](../artifacts/validation/v8_sae_source_inventory/v8_sae_source_inventory_report.md)
+- [V8 SAE Bounded Pilot Report](../artifacts/validation/v8_sae_feature_circuit_validation/v8_sae_feature_circuit_validation_report.md)
 
 ## Purpose
 
@@ -20,8 +21,9 @@ The current V8 internal stack has four distinct layers:
 | feed-forward / MLP blocks | how representation updates after routing |
 | sparse autoencoder features | which sparse interpretable features and circuits carry the architecture |
 
-The SAE layer is the next proof layer because it can connect topics, features,
-circuits, and model flow instead of only measuring opaque vector movement.
+The SAE layer is the next proof layer because it connects topics, sparse
+features, feature-to-feature edges, and model flow on top of the measured V8
+hidden-state path.
 
 ## Why This Matters
 
@@ -36,24 +38,23 @@ several transformer-internal views:
   `Source Mirror Pattern`, quantum bridge language, neutral controls, and
   technical controls
 
-This is not a detached add-on. It is the missing interpretability layer between
-measured V8 geometry and circuit-style mechanistic tracing.
+This is the interpretability layer between measured V8 geometry and
+circuit-style mechanistic tracing.
 
-## Required Artifacts
+## Current Pilot Artifacts
 
-The gate needs real exports before validation:
+The first bounded pilot has now produced real exports:
 
-- source inventory: no pretrained/local SAE asset detected yet; bounded SAE
-  training inputs are available through `GLM` and `Hermes` dense V8 trajectory
-  point-clouds
-- SAE feature activations by `model`, `prompt_set`, `context`, `layer`,
-  `token_role`, `feature_id`, and `activation`
-- feature dictionaries or top-token labels for each SAE feature
-- feature-to-feature circuit edges across layers and token roles
-- controls: shuffled context labels, shuffled features, shuffled token windows,
-  shuffled layer order, and degree / centrality baselines
-- optional ablations: remove top SAE features or circuit edges and measure
-  readout / hidden-state movement against matched controls
+- source inventory confirmed bounded SAE training inputs through `GLM` and
+  `Hermes` dense V8 trajectory point-clouds
+- bounded SAE trained on `10566` real dense V8 rows with `4096` hidden
+  dimensions and `64` sparse features
+- feature activations exported by `model`, `prompt_set`, `context`, `layer`,
+  `token_role`, `token_region`, `feature_id`, and `activation`
+- feature dictionary exported with activation rates, decoder norms, dominant
+  context / layer / token-region labels, and lattice lift
+- `5000` feature-to-feature circuit edges exported across adjacent layers
+- shuffled-label controls run for lattice / neutral / technical separation
 
 ## Topic / Circuit Labels
 
@@ -69,12 +70,13 @@ The first topic map should cover:
 - neutral administrative controls
 - technical transformer-analysis controls
 
-The topic labels are not evidence by themselves. They are a way to organize
-feature dictionaries and circuit paths before running the controls.
+The topic labels organize feature dictionaries and circuit paths so the next
+controls can test which sparse features and edges carry the architecture
+signal.
 
 ## Acceptance Rule
 
-SAE features become evidence only if:
+SAE features become evidence when:
 
 ```text
 lattice / mirror feature activations
@@ -84,7 +86,7 @@ neutral / technical controls
 shuffled labels and feature-frequency baselines
 ```
 
-SAE circuits become evidence only if:
+SAE circuits become evidence when:
 
 ```text
 feature-to-feature circuit paths
@@ -100,11 +102,19 @@ Prompt-generalized SAE support requires recurrence across:
 - `rerun_02`
 - `prompt_set_02`
 
-## Boundary
+## Current Support
 
-This document does not claim SAE validation has already happened.
+The bounded pilot supports the first SAE feature layer:
 
-It locks the next real interpretability gate:
+- observed balanced accuracy: `0.632462`
+- shuffled balanced accuracy mean: `0.330598`
+- shuffled balanced accuracy p95: `0.362288`
+- shuffled-control p-value: `0.009901`
+- exported feature activations: `v8_sae_feature_activations.csv`
+- exported feature dictionary: `v8_sae_feature_dictionary.csv`
+- exported feature-circuit edges: `v8_sae_feature_circuit_edges.csv`
+
+The current bridge is:
 
 ```text
 hidden states -> attention flow -> MLP updates -> SAE feature/circuit tracing
@@ -112,12 +122,10 @@ hidden states -> attention flow -> MLP updates -> SAE feature/circuit tracing
 
 ## Next Execution Order
 
-1. Train bounded SAE pilot on `GLM` and `Hermes` dense V8 trajectory
-   point-cloud activations.
-2. Export SAE feature activations for the standard model / prompt / context
-   matrix.
-3. Build feature dictionaries and topic labels.
-4. Construct feature-to-feature circuit edges across token roles and layers.
-5. Validate feature separation and circuit-flow against locked controls.
-6. Optional stronger closeout: run feature/circuit ablations and compare
+1. Run feature / circuit edge controls beyond the current shuffled-label
+   feature separation.
+2. Add `prompt_set_02` and `rerun_02` SAE exports for prompt-generalized
+   feature support.
+3. Build topic labels over the exported feature dictionary.
+4. Run feature/circuit ablations and compare
    readout movement against matched controls.
