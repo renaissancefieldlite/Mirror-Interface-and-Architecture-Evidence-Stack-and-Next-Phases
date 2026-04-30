@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-04-30T04:09:20.241071+00:00",
+  "status": "sae_recurrence_input_pending_prompt_rerun_dense_vectors",
+  "input_state": {
+    "base_dense": {
+      "path": "artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory",
+      "exists": true,
+      "npz_count": 2,
+      "files": [
+        "artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory/glm_v8_hidden_point_cloud.npz",
+        "artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory/hermes_v8_hidden_point_cloud.npz"
+      ]
+    },
+    "rerun_02_dense": {
+      "path": "artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory_rerun_02",
+      "exists": false,
+      "npz_count": 0,
+      "files": []
+    },
+    "prompt_set_02_dense": {
+      "path": "artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory_prompt_set_02",
+      "exists": false,
+      "npz_count": 0,
+      "files": []
+    }
+  },
+  "clean_read": "SAE recurrence can run once base, rerun_02, and prompt_set_02 dense hidden-vector point clouds exist for the same model/context structure. Base GLM/Hermes dense vectors exist; matching rerun_02 and prompt_set_02 dense vectors are the required next inputs.",
+  "next_gates": [
+    "export rerun_02 dense trajectory point clouds for GLM / Hermes",
+    "export prompt_set_02 dense trajectory point clouds for GLM / Hermes",
+    "apply the bounded SAE encoder to those matched dense vectors",
+    "compare feature recurrence across base, rerun_02, and prompt_set_02"
+  ]
+}

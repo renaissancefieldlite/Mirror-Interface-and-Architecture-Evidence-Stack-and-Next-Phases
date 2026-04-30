@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-04-30T04:07:35.805322+00:00",
+  "status": "sae_edge_ablation_supported_feature_ablation_open",
+  "clean_read": "The ablation gate produced a split result. The supported side is recorded, and the open side needs denser feature exports, edge controls, or direct readout/hidden-state ablations.",
+  "feature_ablation": {
+    "metadata": {
+      "sample_rows": 10565,
+      "feature_count": 64,
+      "context_counts": {
+        "lattice": 3521,
+        "neutral": 3522,
+        "technical": 3522
+      },
+      "model_counts": {
+        "glm": 5330,
+        "hermes": 5235
+      }
+    },
+    "top_features": [
+      52,
+      35,
+      40,
+      49,
+      46,
+      41,
+      34,
+      19
+    ],
+    "full_balanced_accuracy": 0.5230238166910351,
+    "top_removed_balanced_accuracy": 0.48989988580220367,
+    "top_feature_drop": 0.033123930888831477,
+    "random_drop_mean": 0.016626730287740133,
+    "random_drop_p95": 0.03905212245444023,
+    "random_trials": 100,
+    "drop_p_value": 0.12871287128712872,
+    "feature_ablation_supported": false
+  },
+  "edge_ablation": {
+    "edge_rows": 5000,
+    "top_removed_edge_rows": 4170,
+    "random_rows_remaining_mean": 3800.84,
+    "full_balanced_accuracy": 0.4519997786657813,
+    "top_removed_balanced_accuracy": 0.3535766096232857,
+    "top_edge_feature_drop": 0.0984231690424956,
+    "random_drop_mean": 0.0016917742584295443,
+    "random_drop_p95": 0.0572657576483718,
+    "random_trials": 100,
+    "drop_p_value": 0.009900990099009901,
+    "edge_ablation_supported": true
+  },
+  "next_gates": [
+    "run direct readout / hidden-state ablations when the activation exporter can replay model internals",
+    "repeat ablation after rerun_02 and prompt_set_02 SAE exports exist",
+    "compare ablation effects against feature-frequency and token-window controls"
+  ]
+}

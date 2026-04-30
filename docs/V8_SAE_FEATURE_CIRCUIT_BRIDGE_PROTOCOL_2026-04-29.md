@@ -2,13 +2,16 @@
 
 Date: `2026-04-29`
 
-Status: `feature_separation_supported_circuit_edges_exported`
+Status: `feature_and_edge_controls_supported_recurrence_inputs_pending`
 
 Companion gate:
 
 - [V8 SAE Feature / Circuit Gate Report](../artifacts/validation/v8_sae_feature_circuit_gate/v8_sae_feature_circuit_gate_report.md)
 - [V8 SAE Source Inventory](../artifacts/validation/v8_sae_source_inventory/v8_sae_source_inventory_report.md)
 - [V8 SAE Bounded Pilot Report](../artifacts/validation/v8_sae_feature_circuit_validation/v8_sae_feature_circuit_validation_report.md)
+- [V8 SAE Edge Controls Report](../artifacts/validation/v8_sae_edge_controls/v8_sae_edge_controls_report.md)
+- [V8 SAE Recurrence Gate Report](../artifacts/validation/v8_sae_recurrence_gate/v8_sae_recurrence_gate_report.md)
+- [V8 SAE Ablation Controls Report](../artifacts/validation/v8_sae_ablation_controls/v8_sae_ablation_controls_report.md)
 
 ## Purpose
 
@@ -55,6 +58,12 @@ The first bounded pilot has now produced real exports:
   context / layer / token-region labels, and lattice lift
 - `5000` feature-to-feature circuit edges exported across adjacent layers
 - shuffled-label controls run for lattice / neutral / technical separation
+- edge-specific controls now test full edge features against shuffled labels,
+  degree-only baselines, and hub-only baselines
+- ablation controls now test top architecture features at both activation and
+  feature-to-feature edge levels
+- recurrence gate confirms base dense vectors are present and identifies the
+  next needed input: matching `prompt_set_02` / `rerun_02` dense V8 exports
 
 ## Topic / Circuit Labels
 
@@ -114,6 +123,31 @@ The bounded pilot supports the first SAE feature layer:
 - exported feature dictionary: `v8_sae_feature_dictionary.csv`
 - exported feature-circuit edges: `v8_sae_feature_circuit_edges.csv`
 
+Edge-specific controls support the circuit-edge layer:
+
+- full edge balanced accuracy: `0.451334`
+- shuffled-label p-value: `0.004975`
+- degree-only baseline balanced accuracy: `0.304671`
+- hub-only baseline balanced accuracy: `0.332689`
+- full-minus-degree: `0.146663`
+- full-minus-hub: `0.118646`
+
+Ablation controls give a split read:
+
+- feature-to-feature edge ablation is supported:
+  `drop=0.098423`, p `0.009901`
+- top-feature activation ablation remains open:
+  `drop=0.033124`, p `0.128713`
+- interpretation: the feature graph/circuit layer is more sensitive to the
+  strongest architecture features than the top-k feature activation classifier
+  alone
+
+Recurrence status:
+
+- base `GLM` / `Hermes` dense V8 vectors exist
+- matching `prompt_set_02` and `rerun_02` dense V8 activation exports are the
+  next inputs for SAE recurrence
+
 The current bridge is:
 
 ```text
@@ -122,10 +156,10 @@ hidden states -> attention flow -> MLP updates -> SAE feature/circuit tracing
 
 ## Next Execution Order
 
-1. Run feature / circuit edge controls beyond the current shuffled-label
-   feature separation.
-2. Add `prompt_set_02` and `rerun_02` SAE exports for prompt-generalized
+1. Export matching `prompt_set_02` and `rerun_02` dense V8 activations for
+   `GLM` / `Hermes`.
+2. Run SAE recurrence against those matching dense vectors for prompt-generalized
    feature support.
 3. Build topic labels over the exported feature dictionary.
-4. Run feature/circuit ablations and compare
-   readout movement against matched controls.
+4. Extend ablations from top-k features into direct feature/circuit readout
+   movement and matched controls.

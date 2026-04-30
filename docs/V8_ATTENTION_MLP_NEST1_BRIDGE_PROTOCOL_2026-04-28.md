@@ -2,7 +2,7 @@
 
 Date: `2026-04-28`
 
-Status: `attention_prompt_generalization_supported_mlp_depth_pending`
+Status: `attention_prompt_generalization_supported_mlp_depth_directional`
 
 Companion gate:
 
@@ -20,6 +20,8 @@ Companion gate:
 - [V8 Attention / MLP Prompt Set 02 Export Gate](../artifacts/validation/v8_attention_mlp_exports_prompt_set_02/v8_attention_mlp_export_inventory.md)
 - [V8 Attention / MLP Prompt Set 02 Validation Report](../artifacts/validation/v8_attention_mlp_validation_prompt_set_02/v8_attention_mlp_validation_report.md)
 - [V8 Attention / MLP Prompt-Generalization Report](../artifacts/validation/v8_attention_mlp_prompt_generalization/v8_attention_mlp_prompt_generalization_report.md)
+- [V8 MLP Depth Prompt Set 02 Export Gate](../artifacts/validation/v8_mlp_depth_prompt_set_02/v8_mlp_depth_prompt_set_02_export_inventory.md)
+- [V8 MLP Depth Prompt Set 02 Validation Report](../artifacts/validation/v8_mlp_depth_prompt_set_02_validation/v8_mlp_depth_prompt_set_02_validation_report.md)
 
 ## Purpose
 
@@ -72,10 +74,8 @@ Original missing exports:
 - head entropy and anchor-flow summaries
 - MLP/feed-forward block intermediate activations or block-delta summaries
 
-Current remaining missing inputs:
+Current strengthening inputs:
 
-- MLP-depth expansion on `prompt_set_02`
-- expanded layer scope beyond early / middle / late for MLP/feed-forward
 - SAE feature / circuit export as the next interpretability layer
 - stronger leave-one-prompt / model-family controls
 - Nemotron-specific adapter if standard attention tensors remain unavailable
@@ -106,11 +106,19 @@ Current execution read:
   same model set and same row counts were preserved under a second independent
   prompt surface. Attention-flow stayed supported against shuffled context
   labels and beat the degree-only baseline with weighted p `0.00079984`.
-  MLP/feed-forward block deltas did not close on `prompt_set_02`, so the
-  current closed claim is attention prompt-generalization, not full
-  attention + MLP prompt-generalization.
+  The current closed claim is attention-flow prompt-generalization. MLP /
+  feed-forward prompt-generalization remains an open strengthening lane.
+- MLP-depth expansion on `prompt_set_02`:
+  the all-layer export produced `738` MLP rows and `246` matched
+  model/layer/context units across `7` standard-export models. The denser
+  grid moved MLP from the earlier three-layer prompt_set_02 score
+  `-0.055347788` to a directional overall score `0.092328608`, with the
+  strongest signal in early layers (`0.369469331`). Shuffled-label controls
+  remain above the observed score (`p=0.318936213` overall), so MLP
+  prompt-generalization stays open while the result records a real
+  early-layer directional signal.
 - next gate:
-  MLP-depth expansion on `prompt_set_02`, then leave-one-prompt /
+  recurrence / second export for MLP depth, then leave-one-prompt /
   model-family controls
 - next interpretability layer:
   Sparse Autoencoder feature / circuit tracing is now protocol-locked in

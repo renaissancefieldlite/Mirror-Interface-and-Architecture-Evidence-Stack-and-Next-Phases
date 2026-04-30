@@ -187,11 +187,18 @@ Completed enough to show:
   preserved the same model set and row counts under a second independent
   prompt surface. Attention-flow stayed supported at p `0.00079984` and beat
   the degree-only baseline, so token-routing prompt-generalization is
-  supported. MLP/feed-forward deltas did not close on `prompt_set_02`, so full
-  attention + MLP prompt-generalization is not claimed. `Nemotron` is
+  supported. The closed prompt-generalization claim is attention-flow;
+  MLP/feed-forward prompt-generalization remains an open strengthening lane.
+  `Nemotron` is
   checkpoint-ready but currently an interface-adapter row for this exporter
-  path, because it did not emit standard attention / MLP rows. The next gate is
-  MLP-depth expansion on `prompt_set_02`.
+  path, because it did not emit standard attention / MLP rows. The MLP-depth
+  expansion on `prompt_set_02` has now run: `738` all-layer MLP rows,
+  `246` matched model/layer/context units, `7` standard-export models,
+  directional overall score `0.092328608`, early-layer score `0.369469331`,
+  and overall shuffled-label p `0.318936213`. Clean read: depth expansion
+  strengthened the MLP lane from the earlier three-layer negative score into
+  a directional early-layer signal, while MLP prompt-generalization remains an
+  open recurrence gate.
 - the Sparse Autoencoder feature / circuit bridge is now protocol-locked as
   the next interpretability proof layer:
   hidden states show where the representation lands, attention heads show
@@ -204,8 +211,14 @@ Completed enough to show:
   feature dictionary, exported `5000` feature-to-feature circuit edges, and
   supported lattice / neutral / technical feature separation above
   shuffled-label controls (`balanced_accuracy=0.632462`, shuffled p95
-  `0.362288`, `p=0.009901`). The next SAE gates are edge-specific controls,
-  `prompt_set_02` / `rerun_02` recurrence, and optional ablations.
+  `0.362288`, `p=0.009901`). Edge-specific SAE controls are now supported:
+  full edge features beat shuffled-label controls (`p=0.004975`) and beat
+  degree-only / hub-only baselines (`0.451334` vs `0.304671` / `0.332689`).
+  SAE ablation is split: feature-to-feature edge ablation is supported
+  (`drop=0.098423`, `p=0.009901`), while top-feature activation ablation
+  remains open (`drop=0.033124`, `p=0.128713`). SAE recurrence is input-ready
+  for the base vectors and waiting on matching `prompt_set_02` / `rerun_02`
+  dense V8 activation exports.
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are now mapped as candidate bridges, not closed
@@ -218,34 +231,35 @@ Completed enough to show:
 
 Immediate next work:
 
-1. run MLP-depth expansion on `prompt_set_02`, preferably all layers or a
-   denser layer grid, then compare against base / `rerun_02`
-2. extend the SAE pilot into edge-specific controls, `prompt_set_02` /
-   `rerun_02` recurrence, feature-frequency baselines, degree / centrality
-   controls, and optional ablations
-3. keep the `Nest 1` full lane inventory as the public index for the formal
+1. export matching `prompt_set_02` / `rerun_02` dense V8 activation vectors for
+   SAE recurrence
+2. run SAE recurrence and direct feature/circuit ablations against those
+   matching dense vectors
+3. treat MLP prompt_set_02 as directional/open until recurrence or a stronger
+   layer-grid/control pass closes it
+4. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
-4. apply the same standard lane by lane: real artifact, locked baseline,
+5. apply the same standard lane by lane: real artifact, locked baseline,
    scored result, honest status
-5. review and publish the local `Nest 1` control-closeout, graph-strengthened,
+6. review and publish the local `Nest 1` control-closeout, graph-strengthened,
    Phase 12B control-closeout, and remaining-lane closeout passes
-6. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
+7. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
    Latin-square order rotation and raw `RR` capture whenever available
-7. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
+8. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
    rerun density, local-neighborhood topology, layer-transition branch
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-7. move `Engine 02` beyond real-data mapping by adding curated element,
+9. move `Engine 02` beyond real-data mapping by adding curated element,
    molecule, crystal, spectral, environmental fate, and reaction datasets
-8. run `Engine 02V` with `RDKit` and a public molecule benchmark such as
+10. run `Engine 02V` with `RDKit` and a public molecule benchmark such as
    `QM9`, `ZINC`, or `ChEMBL`
-9. add `ASE`, `pymatgen`, and materials-model adapter paths where
+11. add `ASE`, `pymatgen`, and materials-model adapter paths where
    useful
-10. build the contaminant / PFAS validation lane against known degradation
+12. build the contaminant / PFAS validation lane against known degradation
    pathway data
-11. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
-12. keep the companion updated as each engine becomes real
+13. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
+14. keep the companion updated as each engine becomes real
 
 Companion-facing prototype lanes:
 

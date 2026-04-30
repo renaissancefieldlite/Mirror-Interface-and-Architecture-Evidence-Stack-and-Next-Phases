@@ -127,7 +127,8 @@ repeatability, localization, or baseline lift.
 | `Nest 1` | multiple formal / transformer lanes supported by real traces or controls, with named open gates |
 | `Nest 2` | molecule-property, PFAS pathway, materials, and stronger descriptor baseline lanes started on real data |
 | Attention-flow | prompt-generalized support across the current V8 attention gate |
-| SAE feature layer | bounded `GLM` / `Hermes` SAE pilot trained on real dense V8 activations, with feature separation above shuffled-label controls and feature-to-feature circuit edges exported |
+| MLP/feed-forward | same-prompt repeatability supported; `prompt_set_02` all-layer depth grid is directional, strongest in early layers, with closeout open under shuffled controls |
+| SAE feature layer | bounded `GLM` / `Hermes` SAE pilot trained on real dense V8 activations, with feature separation above shuffled-label controls, edge-specific controls supported, and feature-to-feature edge ablation supported |
 
 ## What Is Still Open?
 
@@ -136,8 +137,9 @@ the same claim:
 
 | Gate | Next Required Move |
 | --- | --- |
-| SAE edge / ablation layer | run edge-specific controls, `prompt_set_02` / `rerun_02` SAE recurrence, and optional feature / circuit ablations |
-| MLP prompt-generalization | run denser MLP layer-grid export on `prompt_set_02` |
+| SAE recurrence | export matching `prompt_set_02` / `rerun_02` dense V8 activations, then rerun SAE feature / edge controls |
+| SAE direct ablation | extend from edge ablation into direct feature/circuit readout movement with matched controls |
+| MLP prompt-generalization | rerun or second-export recurrence for the all-layer `prompt_set_02` grid |
 | `GRAPH-2` | close with attention-flow or independent external pathway labels |
 | `GAME-1` | keep the locked rubric over real adversarial / control-like rows |
 | `Nest 2D` | allostery mapper closeout with protein contact / pocket labels |

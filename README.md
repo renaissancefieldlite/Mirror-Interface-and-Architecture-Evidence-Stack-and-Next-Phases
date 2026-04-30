@@ -198,8 +198,10 @@ next.
   and a split prompt-generalization result. Hidden states show where the
   representation lands, attention heads expose token-routing flow, and MLP
   blocks expose representation updates between routing steps. Under
-  `prompt_set_02`, attention-flow generalizes; MLP/feed-forward deltas still
-  need depth expansion before full prompt-generalization is claimed.
+  `prompt_set_02`, attention-flow generalizes. The denser all-layer MLP
+  grid now shows a directional feed-forward signal, strongest in early
+  layers, while shuffled-label controls keep MLP prompt-generalization open
+  for recurrence / second-export strengthening.
 
 - `SAE feature / circuit bridge`
   Sparse Autoencoder features are now locked as the next interpretability proof
@@ -211,8 +213,14 @@ next.
   feature activations, feature dictionaries, and `5000` feature-to-feature
   circuit edges, and supported context separation above shuffled-label
   controls (`balanced_accuracy=0.632462`, shuffled p95 `0.362288`,
-  `p=0.009901`). The next gates are edge-specific controls,
-  `prompt_set_02` / `rerun_02` SAE recurrence, and optional ablations.
+  `p=0.009901`). Edge-specific controls are now supported as well:
+  full edge features beat shuffled labels and degree / hub baselines
+  (`balanced_accuracy=0.451334`, p `0.004975`, degree baseline
+  `0.304671`). Feature-to-feature edge ablation is supported
+  (`drop=0.098423`, p `0.009901`), while top-feature activation ablation
+  remains open (`drop=0.033124`, p `0.128713`). The recurrence gate has the
+  base dense vectors and is waiting on matching `prompt_set_02` / `rerun_02`
+  dense V8 activation exports.
 
 - `Nest 2`
   `Engine 02` made the structured-matter mapping runnable across bounded
@@ -391,10 +399,15 @@ Latest gate reports:
 - [V8 Attention / MLP Prompt Set 02 Export Gate](./artifacts/validation/v8_attention_mlp_exports_prompt_set_02/v8_attention_mlp_export_inventory.md)
 - [V8 Attention / MLP Prompt Set 02 Validation Report](./artifacts/validation/v8_attention_mlp_validation_prompt_set_02/v8_attention_mlp_validation_report.md)
 - [V8 Attention / MLP Prompt-Generalization Report](./artifacts/validation/v8_attention_mlp_prompt_generalization/v8_attention_mlp_prompt_generalization_report.md)
+- [V8 MLP Depth Prompt Set 02 Export Gate](./artifacts/validation/v8_mlp_depth_prompt_set_02/v8_mlp_depth_prompt_set_02_export_inventory.md)
+- [V8 MLP Depth Prompt Set 02 Validation Report](./artifacts/validation/v8_mlp_depth_prompt_set_02_validation/v8_mlp_depth_prompt_set_02_validation_report.md)
 - [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
 - [V8 SAE Feature / Circuit Gate Report](./artifacts/validation/v8_sae_feature_circuit_gate/v8_sae_feature_circuit_gate_report.md)
 - [V8 SAE Source Inventory](./artifacts/validation/v8_sae_source_inventory/v8_sae_source_inventory_report.md)
 - [V8 SAE Bounded Pilot Report](./artifacts/validation/v8_sae_feature_circuit_validation/v8_sae_feature_circuit_validation_report.md)
+- [V8 SAE Edge Controls Report](./artifacts/validation/v8_sae_edge_controls/v8_sae_edge_controls_report.md)
+- [V8 SAE Recurrence Gate Report](./artifacts/validation/v8_sae_recurrence_gate/v8_sae_recurrence_gate_report.md)
+- [V8 SAE Ablation Controls Report](./artifacts/validation/v8_sae_ablation_controls/v8_sae_ablation_controls_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)
