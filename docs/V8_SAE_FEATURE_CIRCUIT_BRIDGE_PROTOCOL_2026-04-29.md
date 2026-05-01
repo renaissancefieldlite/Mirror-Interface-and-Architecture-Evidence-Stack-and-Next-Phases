@@ -2,7 +2,7 @@
 
 Date: `2026-04-29`
 
-Status: `feature_and_edge_controls_supported_recurrence_inputs_pending`
+Status: `feature_edge_recurrence_supported_recurrent_ablation_partial`
 
 Companion gate:
 
@@ -15,6 +15,7 @@ Companion gate:
 - [V8 SAE Recurrence Validation Report](../artifacts/validation/v8_sae_recurrence_validation/v8_sae_recurrence_validation_report.md)
 - [V8 SAE Gemma Recurrence Validation Report](../artifacts/validation/v8_sae_gemma_recurrence_validation/v8_sae_gemma_recurrence_validation_report.md)
 - [V8 SAE Feature-Edge Recurrence Report](../artifacts/validation/v8_sae_feature_edge_recurrence/v8_sae_feature_edge_recurrence_report.md)
+- [V8 SAE Recurrent Branch Ablation Report](../artifacts/validation/v8_sae_recurrent_branch_ablation/v8_sae_recurrent_branch_ablation_report.md)
 
 ## Purpose
 
@@ -72,6 +73,9 @@ The first bounded pilot has now produced real exports:
   and applies that locked encoder to Gemma `rerun_02` and `prompt_set_02`
 - feature-edge recurrence now regenerates adjacent-layer feature-to-feature
   edges across base, `rerun_02`, and `prompt_set_02` for both branches
+- recurrent-branch ablation now removes shared recurrent endpoint features and
+  exact recurrent edge keys to test whether the measured feature/circuit paths
+  move transfer readout beyond matched random removals
 
 ## Topic / Circuit Labels
 
@@ -195,6 +199,24 @@ Feature-edge recurrence status:
   remains present but lower: GLM/Hermes cosine `0.391837556`, Gemma cosine
   `0.528171679`
 
+Recurrent-branch ablation status:
+
+- GLM/Hermes base -> rerun_02 supports endpoint-feature ablation
+  (`drop=0.090389435`, p `0.00990099`) and exact edge-key ablation
+  (`drop=0.00664881`, p `0.00990099`)
+- GLM/Hermes base -> prompt_set_02 remains open at this ablation gate:
+  endpoint-feature p `0.089108911`, edge-key p `0.554455446`
+- Gemma base -> rerun_02 supports endpoint-feature ablation
+  (`drop=0.027043001`, p `0.03960396`), while exact edge-key ablation remains
+  just below support at p `0.069306931`
+- Gemma base -> prompt_set_02 supports exact edge-key ablation
+  (`drop=0.005148016`, p `0.01980198`), while endpoint-feature ablation remains
+  open at p `0.237623762`
+- clean read: direct SAE recurrent-branch ablation is partial but real. The
+  recurrent feature/circuit paths can move transfer readout beyond matched
+  random removals, with branch-specific differences between endpoint-feature
+  removal and exact edge-key removal.
+
 The current bridge is:
 
 ```text
@@ -203,7 +225,6 @@ hidden states -> attention flow -> MLP updates -> SAE feature/circuit tracing
 
 ## Next Execution Order
 
-1. Extend direct SAE feature/circuit ablations across recurrent branches.
-2. Run MLP depth recurrence after SAE feature-edge recurrence is logged.
-3. Move into `Nest 2D` allostery, then `Nest 2E` PFAS safety, `Nest 2F`
+1. Run MLP depth recurrence after SAE recurrent-branch ablation is logged.
+2. Move into `Nest 2D` allostery, then `Nest 2E` PFAS safety, `Nest 2F`
    materials, and `Nest 2G` descriptor/model controls.

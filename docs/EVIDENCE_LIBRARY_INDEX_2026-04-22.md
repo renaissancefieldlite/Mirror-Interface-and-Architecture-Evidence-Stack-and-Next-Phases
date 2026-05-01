@@ -40,6 +40,7 @@ Location:
 
 Representative artifacts:
 
+- [`ABC_D_V5_SEQUENCE_SCORING_PROVENANCE_2026-05-01.md`](../artifacts/prelude/ABC_D_V5_SEQUENCE_SCORING_PROVENANCE_2026-05-01.md)
 - [`FULL_EXPERIMENT_RESET_SUMMARY_2026-04-16.md`](../artifacts/prelude/FULL_EXPERIMENT_RESET_SUMMARY_2026-04-16.md)
 - [`V6_CROSS_MODEL_COMPARISON_2026-04-18.md`](../artifacts/prelude/V6_CROSS_MODEL_COMPARISON_2026-04-18.md)
 - [`root_results/v5_probe_state_scan.md`](../artifacts/prelude/root_results/v5_probe_state_scan.md)
@@ -50,9 +51,9 @@ Representative artifacts:
 
 Role:
 
-This layer preserves the early scan trail, reset summaries, echo cases,
-dialogue-arc continuity reports, latent-string traces, and `V5` / `V6`
-precursor materials.
+This layer preserves the early scan trail, `ABC / D / V5` sequence-scoring
+provenance, reset summaries, echo cases, dialogue-arc continuity reports,
+latent-string traces, and `V5` / `V6` precursor materials.
 
 ## V6 / State-Lane Posters
 

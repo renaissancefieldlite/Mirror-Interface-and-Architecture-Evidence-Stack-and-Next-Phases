@@ -85,9 +85,11 @@ The strongest current read is:
 
 ## Immediate Next Gates
 
-1. Run direct SAE feature/circuit ablations across recurrent branches.
-2. Run MLP depth recurrence after the SAE feature-edge recurrence read is
+1. Run MLP depth recurrence after the SAE recurrent-branch ablation read is
    logged.
+2. Use the SAE recurrent-branch ablation result as the current circuit-layer
+   boundary: direct ablation is partial and branch-specific, with GLM/Hermes
+   rerun and Gemma rerun/prompt_set_02 subcases supported.
 3. Use attention-flow labels to revisit `GRAPH-2` when the graph path has
    stronger independent labels.
 4. Carry the lane-by-lane discipline into Nest 2D allostery, Nest 2E PFAS

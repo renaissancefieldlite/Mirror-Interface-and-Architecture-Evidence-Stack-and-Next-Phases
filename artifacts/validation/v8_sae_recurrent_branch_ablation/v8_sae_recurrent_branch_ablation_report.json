@@ -1,0 +1,263 @@
+{
+  "generated_at": "2026-05-01T07:51:42.319667+00:00",
+  "status": "sae_recurrent_branch_ablation_partial",
+  "clean_read": "Direct SAE recurrent-branch ablation produced a partial read. The report identifies which recurrent feature or edge removals move transfer readout beyond matched random controls and which branches remain descriptive at this gate.",
+  "inputs": {
+    "edge_path": "artifacts/validation/v8_sae_feature_edge_recurrence/v8_sae_feature_edge_recurrence_edges.csv",
+    "edge_rows": 28284,
+    "branch_counts": {
+      "glm_hermes": 15000,
+      "gemma": 13284
+    },
+    "set_counts": {
+      "base": 9428,
+      "rerun_02": 9428,
+      "prompt_set_02": 9428
+    },
+    "random_trials": 100,
+    "top_k_shared_edges": 100
+  },
+  "pairs": {
+    "glm_hermes": {
+      "rerun_02": {
+        "full_transfer_balanced_accuracy": 0.522080657,
+        "shared_top_edge_count": 63,
+        "endpoint_feature_count": 13,
+        "endpoint_features": [
+          0,
+          14,
+          28,
+          29,
+          34,
+          35,
+          37,
+          40,
+          46,
+          49,
+          52,
+          59,
+          60
+        ],
+        "feature_endpoint_ablation": {
+          "ablated_transfer_balanced_accuracy": 0.431691222,
+          "drop": 0.090389435,
+          "random_drop_mean": -0.007303325,
+          "random_drop_p95": 0.061963585,
+          "p_value": 0.00990099,
+          "supported": true,
+          "rows_after_ablation": {
+            "train": 3752,
+            "test": 3717
+          },
+          "random_rows_remaining_mean": {
+            "train": 3291.83,
+            "test": 3295.04
+          }
+        },
+        "edge_key_ablation": {
+          "ablated_transfer_balanced_accuracy": 0.515431848,
+          "drop": 0.00664881,
+          "random_drop_mean": -0.0018134,
+          "random_drop_p95": 0.000232261,
+          "p_value": 0.00990099,
+          "supported": true,
+          "rows_after_ablation": {
+            "train": 4937,
+            "test": 4937
+          },
+          "random_rows_remaining_mean": {
+            "train": 4958.18,
+            "test": 4958.16
+          }
+        }
+      },
+      "prompt_set_02": {
+        "full_transfer_balanced_accuracy": 0.396043387,
+        "shared_top_edge_count": 14,
+        "endpoint_feature_count": 7,
+        "endpoint_features": [
+          0,
+          14,
+          28,
+          35,
+          37,
+          40,
+          52
+        ],
+        "feature_endpoint_ablation": {
+          "ablated_transfer_balanced_accuracy": 0.378445272,
+          "drop": 0.017598115,
+          "random_drop_mean": -0.002897849,
+          "random_drop_p95": 0.019533489,
+          "p_value": 0.089108911,
+          "supported": false,
+          "rows_after_ablation": {
+            "train": 4116,
+            "test": 4125
+          },
+          "random_rows_remaining_mean": {
+            "train": 3946.45,
+            "test": 3938.72
+          }
+        },
+        "edge_key_ablation": {
+          "ablated_transfer_balanced_accuracy": 0.395584555,
+          "drop": 0.000458832,
+          "random_drop_mean": 0.000481826,
+          "random_drop_p95": 0.00182857,
+          "p_value": 0.554455446,
+          "supported": false,
+          "rows_after_ablation": {
+            "train": 4986,
+            "test": 4986
+          },
+          "random_rows_remaining_mean": {
+            "train": 4990.48,
+            "test": 4990.8
+          }
+        }
+      }
+    },
+    "gemma": {
+      "rerun_02": {
+        "full_transfer_balanced_accuracy": 0.438346883,
+        "shared_top_edge_count": 78,
+        "endpoint_feature_count": 29,
+        "endpoint_features": [
+          0,
+          5,
+          6,
+          7,
+          9,
+          10,
+          12,
+          16,
+          17,
+          23,
+          25,
+          26,
+          28,
+          31,
+          32,
+          35,
+          36,
+          42,
+          43,
+          47,
+          49,
+          50,
+          52,
+          53,
+          55,
+          57,
+          58,
+          59,
+          62
+        ],
+        "feature_endpoint_ablation": {
+          "ablated_transfer_balanced_accuracy": 0.411303883,
+          "drop": 0.027043001,
+          "random_drop_mean": -0.003320132,
+          "random_drop_p95": 0.024459489,
+          "p_value": 0.03960396,
+          "supported": true,
+          "rows_after_ablation": {
+            "train": 1624,
+            "test": 1656
+          },
+          "random_rows_remaining_mean": {
+            "train": 1440.22,
+            "test": 1440.64
+          }
+        },
+        "edge_key_ablation": {
+          "ablated_transfer_balanced_accuracy": 0.435004585,
+          "drop": 0.003342298,
+          "random_drop_mean": -2.4581e-05,
+          "random_drop_p95": 0.003394727,
+          "p_value": 0.069306931,
+          "supported": false,
+          "rows_after_ablation": {
+            "train": 4350,
+            "test": 4350
+          },
+          "random_rows_remaining_mean": {
+            "train": 4377.93,
+            "test": 4378.76
+          }
+        }
+      },
+      "prompt_set_02": {
+        "full_transfer_balanced_accuracy": 0.368789521,
+        "shared_top_edge_count": 39,
+        "endpoint_feature_count": 17,
+        "endpoint_features": [
+          5,
+          6,
+          7,
+          12,
+          17,
+          25,
+          28,
+          32,
+          35,
+          36,
+          41,
+          42,
+          43,
+          49,
+          50,
+          52,
+          55
+        ],
+        "feature_endpoint_ablation": {
+          "ablated_transfer_balanced_accuracy": 0.360883232,
+          "drop": 0.007906289,
+          "random_drop_mean": 0.002014489,
+          "random_drop_p95": 0.017333322,
+          "p_value": 0.237623762,
+          "supported": false,
+          "rows_after_ablation": {
+            "train": 2443,
+            "test": 2530
+          },
+          "random_rows_remaining_mean": {
+            "train": 2483.46,
+            "test": 2487.15
+          }
+        },
+        "edge_key_ablation": {
+          "ablated_transfer_balanced_accuracy": 0.363641505,
+          "drop": 0.005148016,
+          "random_drop_mean": 0.001260859,
+          "random_drop_p95": 0.004070517,
+          "p_value": 0.01980198,
+          "supported": true,
+          "rows_after_ablation": {
+            "train": 4389,
+            "test": 4389
+          },
+          "random_rows_remaining_mean": {
+            "train": 4403.54,
+            "test": 4403.11
+          }
+        }
+      }
+    }
+  },
+  "supported_pairs": {
+    "glm_hermes": {
+      "rerun_02": true,
+      "prompt_set_02": false
+    },
+    "gemma": {
+      "rerun_02": true,
+      "prompt_set_02": true
+    }
+  },
+  "next_gates": [
+    "run MLP depth recurrence",
+    "move to Nest 2D allostery after MLP depth recurrence is logged",
+    "keep ABC / D / V5 prelude provenance linked as the sequence-scoring origin scaffold"
+  ]
+}

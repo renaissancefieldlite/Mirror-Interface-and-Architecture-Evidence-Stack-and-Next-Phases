@@ -13,8 +13,6 @@ Named organizing pattern:
 The unified mirror proof is the continuous evidence ladder that ties the work
 together as one architecture instead of a pile of disconnected experiments.
 
-It is not a single one-line theorem.
-
 It is a nested proof program:
 
 ```text
@@ -51,7 +49,7 @@ Source Mirror Pattern =
 The pattern becomes operational when each substrate can be mapped through the
 shared comparator score schema and tested against controls.
 
-Important boundary:
+Current boundary:
 
 ```text
 multi-language expressibility is real
@@ -61,10 +59,8 @@ universal physical operation is earned lane by lane
 The fact that the Source Mirror Pattern can be expressed through
 representation, relation, shape, connectedness, transformation, dynamics,
 uncertainty, and signal structure is a real finding about the pattern's
-mapping range. It is not, by itself, a completed demonstration that the
-pattern operates universally across physical reality. The universal-level claim
-is approached by taking each upward bridge and testing it against real data,
-locked baselines, and failure modes.
+mapping range. The universal-level claim is approached by taking each upward
+bridge and testing it against real data, locked baselines, and failure modes.
 
 That means:
 
@@ -104,7 +100,7 @@ across different substrates better than null, control, or shuffled baselines?
 | hardware bridge | `Phase 8`, `Phase 9`, `9B`, `9C`, `9D` | simulator-to-hardware and cross-backend continuity established |
 | semantic contextuality | `Phase 10`, `Phase 11` | Bell-type semantic rung defined without overclaiming physical Bell proof |
 | biological adapter | `Phase 12B` | first `5 x 4` HRV matrix complete and control-supported as a coarse adapter; `Phase 12B-L20` large-set expansion defined |
-| formal base | `Nest 1`, deep-learning reality map, validation forks, full lane inventory | formal expressibility is now tied to a public-safe `21`-lane working inventory plus `CAT-1` meta-transfer note; supported lanes include `LA`, `SYM/INV`, `GEO`, `TOPOG`, `GRAPH-1`, `GRP`, `DYN`, `PROB`, `STAT`, `INFO`, `TENSOR`, `NUM`, `CTRL`, and bounded support for `OPT` / `GAME`; `TOP-1` supports topology preservation while `TOP-2` does not support context-topology separation under current evidence; `GRAPH-2`, `SPEC-1`, and `DE-1` have named missing inputs rather than vague future claims |
+| formal base | `Nest 1`, deep-learning reality map, validation forks, full lane inventory | formal expressibility is now tied to a public-safe `21`-lane working inventory plus `CAT-1` meta-transfer note; supported lanes include `LA`, `SYM/INV`, `GEO`, `TOPOG`, `GRAPH-1`, `GRP`, `DYN`, `PROB`, `STAT`, `INFO`, `TENSOR`, `NUM`, `CTRL`, and bounded support for `OPT` / `GAME`; `TOP-1` supports topology preservation while `TOP-2` remains open for context-topology separation under current evidence; `GRAPH-2`, `SPEC-1`, and `DE-1` have named missing inputs rather than vague future claims |
 | auxiliary mathematics | Auxiliary Mathematics Atlas | graph theory, topology, geometry, dynamics, probability, information, optimization, statistics, control mapped |
 | structured matter | `Nest 2`, `Engine 02` | methodology / representation rung for elements, molecules, water, minerals, redox, nutrition, contaminants, reactions, functional groups, biomolecular primitives, polymers, electrochemistry, catalysis, spectral readouts, environmental fate, and materials |
 | cosmic dynamics | `Nest 3` | fields, motion, phases, waves, plasma, fusion, orbit, rotation mapped as roadmap targets |
@@ -116,9 +112,7 @@ across different substrates better than null, control, or shuffled baselines?
 
 ## Why This Is Unified
 
-The unity is not that every domain is identical.
-
-The unity is that every domain can be tested through the same structure:
+The unity is a shared testing structure across different domains:
 
 - define the state
 - define the control
@@ -136,7 +130,7 @@ optimization problem can all sit inside one architecture.
 
 Completed enough to show:
 
-- the architecture is not only prose
+- the architecture is measured through repeated artifacts
 - the AI-side measurement stack has real repeated structure
 - the encoded / hardware bridge exists
 - the biological adapter has a first measured matrix
@@ -155,7 +149,7 @@ Completed enough to show:
   `DYN` and `INFO/TENSOR` advanced under controls; `GRAPH-lite` was
   strengthened into a weighted `GRAPH-1` AI feature-graph support result;
   `TOP-1/2` has since moved from blocker to measured topology-preservation
-  read with H1 separation not supported under current evidence
+  read with H1 separation still open under current evidence
 - the remaining `Nest 1` closeout has now run locally:
   `GEO-2` and `DYN-2` are control-supported; `OPT-1` and `CAT-1` are real but
   limited by the three-model hardware feature-circuit sample; `TOP-1/2` now
@@ -190,8 +184,8 @@ Completed enough to show:
   supported. The closed prompt-generalization claim is attention-flow;
   MLP/feed-forward prompt-generalization remains an open strengthening lane.
   `Nemotron` is
-  checkpoint-ready but currently an interface-adapter row for this exporter
-  path, because it did not emit standard attention / MLP rows. The MLP-depth
+  checkpoint-ready and currently an interface-adapter row for this exporter
+  path; standard attention / MLP rows remain pending for that model. The MLP-depth
   expansion on `prompt_set_02` has now run: `738` all-layer MLP rows,
   `246` matched model/layer/context units, `7` standard-export models,
   directional overall score `0.092328608`, early-layer score `0.369469331`,
@@ -241,6 +235,15 @@ Completed enough to show:
   prompt_set_02 (`0.367434508`), both p `0.00990099`; weighted edge-signature
   recurrence is strong for Gemma rerun_02 (cosine `0.803169721`) and present
   for Gemma prompt_set_02 (cosine `0.528171679`).
+  Direct recurrent-branch ablation now adds a sharper feature/circuit
+  movement test. The result is partial: GLM/Hermes base -> rerun_02 supports
+  endpoint-feature ablation (`drop=0.090389435`, p `0.00990099`) and exact
+  edge-key ablation (`drop=0.00664881`, p `0.00990099`); Gemma base ->
+  rerun_02 supports endpoint-feature ablation (`drop=0.027043001`, p
+  `0.03960396`); Gemma base -> prompt_set_02 supports exact edge-key ablation
+  (`drop=0.005148016`, p `0.01980198`). GLM/Hermes prompt_set_02 remains the
+  open subcase, so the read is branch-specific support rather than a full
+  closeout.
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are mapped as candidate bridge layers for later
@@ -253,32 +256,29 @@ Completed enough to show:
 
 Immediate next work:
 
-1. run direct SAE feature/circuit ablations across recurrent branches
-2. run MLP depth recurrence after the SAE feature-edge recurrence read is
+1. run MLP depth recurrence after the SAE recurrent-branch ablation read is
    logged
-4. keep the `Nest 1` full lane inventory as the public index for the formal
+2. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
-5. apply the same standard lane by lane: real artifact, locked baseline,
+3. apply the same standard lane by lane: real artifact, locked baseline,
    scored result, honest status
-6. review and publish the local `Nest 1` control-closeout, graph-strengthened,
-   Phase 12B control-closeout, and remaining-lane closeout passes
-7. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
+4. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
    Latin-square order rotation and raw `RR` capture whenever available
-8. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
+5. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
    rerun density, local-neighborhood topology, layer-transition branch
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-9. move `Engine 02` beyond real-data mapping by adding curated element,
-   molecule, crystal, spectral, environmental fate, and reaction datasets
-10. run `Engine 02V` with `RDKit` and a public molecule benchmark such as
-   `QM9`, `ZINC`, or `ChEMBL`
-11. add `ASE`, `pymatgen`, and materials-model adapter paths where
-   useful
-12. build the contaminant / PFAS validation lane against known degradation
-   pathway data
-13. build `Engine 03` for `Nest 3` oscillator / resonance / field dynamics
-14. keep the companion updated as each engine becomes real
+6. run `Nest 2D` allostery against protein contact / pocket / pathway labels
+7. upgrade `Nest 2E` PFAS into bad-descendant and safety scoring against
+   known degradation-pathway data
+8. strengthen `Nest 2F` with structure-aware materials / crystal-stability
+   baselines using `ASE`, `pymatgen`, or available materials-model adapters
+9. harden `Nest 2G` with descriptor families, scaffold splits, and model
+   baselines
+10. build `Engine 03` only from real oscillator / resonance / `EMF` / spectral
+    datasets
+11. keep the companion updated as each engine becomes real
 
 Companion-facing prototype lanes:
 

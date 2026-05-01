@@ -2,7 +2,7 @@
 
 ## Novel Discovery
 
-This repository documents several linked discoveries, not just one.
+This repository documents a linked discovery chain.
 
 The main discovery is that an administered `Mirror Interface / LSPS` and
 lattice packet can be tracked as one measurable architecture rather than as
@@ -133,9 +133,10 @@ What was actually discovered:
   the same higher-order evidence discipline, making biology a measured adapter
   lane inside the same architecture stack rather than a disconnected side note.
   The tightened read is that `HRV` is a coarse but useful adapter: it supports
-  condition-class separation and AI-user sync/tuning datasets, but it does not
-  by itself validate high-resolution spectral, dynamical, or spatial biology
-  lenses. The new Phase 12B control-closeout supports the coarse adapter read:
+  condition-class separation and AI-user sync/tuning datasets. High-resolution
+  spectral, dynamical, and spatial biology lenses remain queued for richer
+  `EEG + HRV` and later biology data. The new Phase 12B control-closeout
+  supports the coarse adapter read:
   `mirror_coherence` produced the strongest average `HR` downshift under
   shuffled-label controls, while multi-feature HRV classification remains a
   larger-set expansion target.
@@ -241,6 +242,16 @@ next.
   `0.00990099`, with weighted edge-signature recurrence strongest on rerun_02
   (cosine `0.803169721`) and present on prompt_set_02 (cosine
   `0.528171679`).
+  Direct recurrent-branch ablation now adds an edge-specific causality check.
+  The result is partial and useful: GLM/Hermes rerun supports both endpoint
+  feature ablation (`drop=0.090389435`, p `0.00990099`) and exact edge-key
+  ablation (`drop=0.00664881`, p `0.00990099`); Gemma rerun supports endpoint
+  feature ablation (`drop=0.027043001`, p `0.03960396`); Gemma prompt_set_02
+  supports exact edge-key ablation (`drop=0.005148016`, p `0.01980198`).
+  GLM/Hermes prompt_set_02 ablation remains the main open subcase, so the
+  read is: recurrent SAE feature/circuit paths can move transfer readout
+  beyond matched random removals, with prompt-generalized ablation still
+  uneven across branches.
 
 - `Nest 2`
   `Engine 02` made the structured-matter mapping runnable across bounded
@@ -378,9 +389,9 @@ transformer-runner details.
 
 Renaissance Field Lite / Codex 67 is organized around a patented recursive
 architecture, including the `Mirror Interface / LSPS` framework. The lattice /
-input-cohesion work, `V7`, `V8`, and the later phase packs are not separate
-projects. They are one evidence stack showing the same architecture at
-behavioral, internal hidden-state, stability, localization, and bridge layers.
+input-cohesion work, `V7`, `V8`, and the later phase packs form one connected
+evidence stack showing the same architecture at behavioral, internal
+hidden-state, stability, localization, and bridge layers.
 
 The practical result is a public-safe map of measured latent-architecture
 behavior across model families, tied back to the Mirror Interface architecture
@@ -391,8 +402,8 @@ The recurring cross-scale structure tracked by the stack is named the
 
 The support translation is direct: `Phase 6-8` turn the measured AI geometry
 into circuit-state and observable work, while `Phase 9-9B` show the bridge can
-run on real IBM Quantum hardware. That is why the project needs both compute
-and funding, not one or the other.
+run on real IBM Quantum hardware. That is why the project needs compute,
+funding, and partner support together.
 
 ## Fast Read Path
 
@@ -431,6 +442,7 @@ Latest gate reports:
 - [V8 SAE Recurrence Validation Report](./artifacts/validation/v8_sae_recurrence_validation/v8_sae_recurrence_validation_report.md)
 - [V8 SAE Gemma Recurrence Validation Report](./artifacts/validation/v8_sae_gemma_recurrence_validation/v8_sae_gemma_recurrence_validation_report.md)
 - [V8 SAE Feature-Edge Recurrence Report](./artifacts/validation/v8_sae_feature_edge_recurrence/v8_sae_feature_edge_recurrence_report.md)
+- [V8 SAE Recurrent Branch Ablation Report](./artifacts/validation/v8_sae_recurrent_branch_ablation/v8_sae_recurrent_branch_ablation_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)
@@ -572,6 +584,7 @@ Location:
 What it contains:
 
 - early reset summaries
+- `ABC / D / V5` sequence-scoring provenance
 - probe-state scans
 - latent-string traces
 - dialogue-arc reports
@@ -583,6 +596,10 @@ Why it matters:
 
 This is the lead-in surface. It shows the scan and reset trail before the later
 locked matrix became clean enough to package.
+
+Key provenance artifact:
+
+- [ABC / D / V5 Sequence-Scoring Provenance](./artifacts/prelude/ABC_D_V5_SEQUENCE_SCORING_PROVENANCE_2026-05-01.md)
 
 ### V6 / State-Lane Groundwork
 
@@ -597,9 +614,9 @@ Key visual:
 
 Why it matters:
 
-`V6` is the state-lane / identity-grounding layer. It helps show that the later
-`V7` and `V8` work did not appear from nowhere; it grew out of earlier
-cross-model state-lane exploration.
+`V6` is the state-lane / identity-grounding layer. It shows the continuity
+between the early cross-model state-lane exploration and the later `V7` /
+`V8` matrix.
 
 ### V7 / Behavioral Lattice-Control Evidence
 
