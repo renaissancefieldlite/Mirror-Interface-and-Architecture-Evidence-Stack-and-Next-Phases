@@ -19,9 +19,8 @@ This document keeps the full working inventory visible.
 
 Rick's working `21`-lane Nest 1 map groups closely paired rows such as
 `GEO-1/GEO-2`, `TOP-1/TOP-2`, and `TOPOG-1/TOPOG-2`. Some deeper protocol docs
-split those groups into additional sub-rows. That is not a contradiction: the
-public visual is the compressed map, and this document is the detailed lane
-inventory.
+split those groups into additional sub-rows. The public visual is the
+compressed map, and this document is the detailed lane inventory.
 
 ## Rule
 
@@ -38,14 +37,14 @@ real artifact + locked control + score + honest status
 | 2 | `SYM / INV` | Symmetry and invariant preservation | Supported foundation | Rerun stability, encoded circuit-state preservation, sign stability, and invariant checks define what survives transformation. | Make the invariant registry explicit for each future nest before running the score. |
 | 3 | `GEO-1/2` | Geometry and manifold geometry | Control-supported | V8 / Phase 6 geometry and subspace checks recover expected bridge-pair relations above shuffled controls. | Add UMAP/manifold views once larger raw vectors and attention/MLP exports exist. |
 | 4 | `TOP-1` | Topology: connectedness / H0 | Topology-preservation supported | Compact and dense point-cloud passes support preserved connectedness under context transform, especially late-anchor dense H0. | Expand prompt/rerun density only if we need a broader topology-preservation registry. |
-| 5 | `TOP-2` | Topology: loops / H1 | Separation not supported yet | Dense H1 did not show context-topology separation; this is useful because separation appears to live elsewhere. | Revisit only with richer token/layer trajectories, attention-flow surfaces, or domain graphs. |
+| 5 | `TOP-2` | Topology: loops / H1 | Open for separation | Dense H1 currently reads as topology preservation while separation appears elsewhere. | Revisit only with richer token/layer trajectories, attention-flow surfaces, or domain graphs. |
 | 6 | `TOPOG-1/2` | Topography and localization | Control-supported | Phase 4/5 localization, anchor stability, and bridge surfaces show where the effect concentrates across layers and roles. | Extend into attention-head localization, MLP delta surfaces, and later EEG topography. |
 | 7 | `GRAPH-1` | Feature graph | Supported | Weighted AI feature-similarity graph recovered expected pair structure above shuffled controls. | Use as the internal feature-graph baseline for attention-flow and pathway tests. |
-| 8 | `GRAPH-2` | Pathway / flow graph | Partial, not closed | GRAPH-2A produced strong row-level signal, but cluster controls and hub/degree structure prevent a closeout. | Run attention-flow labels or external pathway labels: allostery, molecular, grid, logistics, or network-flow data. |
+| 8 | `GRAPH-2` | Pathway / flow graph | Partial / open | GRAPH-2A produced strong row-level signal, with cluster controls and hub/degree structure defining the remaining closeout gap. | Run attention-flow labels or external pathway labels: allostery, molecular, grid, logistics, or network-flow data. |
 | 9 | `GRP-1` | Group / legal symmetry action | Control-supported | PennyLane, Qiskit, and IBM hardware passes preserve sign/order behavior across repeated circuit/hardware checks. | Add explicit orbit / representation-family tests when the circuit library expands. |
 | 10 | `DYN-1` | Trajectory dynamics | Control-supported | V8 residual target trajectories peak late and separate from randomized layer controls. | Extend to attention and MLP trajectories rather than only residual endpoints. |
 | 11 | `DYN-2` | Regime / threshold dynamics | Control-supported | Threshold and regime-crossing behavior is late and target-centered under controls. | Add transition-rich V7 order and mode-switch traces when available. |
-| 12 | `DE-1` | Differential / time-series dynamics | HRV-only limited negative | Phase 12B HRV time-series dynamics did not beat simpler HR baselines strongly enough for this formal lane. | Use EEG+HRV or other continuous higher-resolution signals before reopening. |
+| 12 | `DE-1` | Differential / time-series dynamics | HRV-only limited negative | Phase 12B HRV time-series dynamics stayed below simpler HR baselines for this formal lane. | Use EEG+HRV or other continuous higher-resolution signals before reopening. |
 | 13 | `PROB-1` | Probability and rerun likelihood | Control-supported | Phase 2/4 rerun stability, exact rows, and variance controls provide empirical probability discipline. | Keep permutation/chance baselines attached to every new lane. |
 | 14 | `STAT-1` | Statistics and control discipline | Control-supported | The stack now uses locked comparisons, shuffled controls, reruns, and honest partial/negative lane status. | Keep this as the required registry standard before public claims. |
 | 15 | `INFO-1` | Information geometry / signal | Control-supported | V8 hidden-state separation, effective-rank, cosine, and bridge features measure real latent information structure. | Add attention entropy, token-route information, and MLP update information once exports exist. |
@@ -85,11 +84,12 @@ The strongest current read is:
 
 ## Immediate Next Gates
 
-1. Run MLP depth recurrence after the SAE recurrent-branch ablation read is
+1. Run MLP depth recurrence after the SAE recurrent-branch ablation v2 read is
    logged.
-2. Use the SAE recurrent-branch ablation result as the current circuit-layer
-   boundary: direct ablation is partial and branch-specific, with GLM/Hermes
-   rerun and Gemma rerun/prompt_set_02 subcases supported.
+2. Treat SAE recurrent-branch ablation as supported at the current circuit
+   layer: v1 supported GLM/Hermes rerun and Gemma rerun/prompt_set_02
+   subcases, and v2 closed the GLM/Hermes prompt_set_02 weak case through
+   weighted recurrent path capture and `500` random-control confirmation.
 3. Use attention-flow labels to revisit `GRAPH-2` when the graph path has
    stronger independent labels.
 4. Carry the lane-by-lane discipline into Nest 2D allostery, Nest 2E PFAS

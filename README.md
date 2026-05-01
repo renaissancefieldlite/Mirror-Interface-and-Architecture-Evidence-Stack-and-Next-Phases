@@ -248,10 +248,16 @@ next.
   ablation (`drop=0.00664881`, p `0.00990099`); Gemma rerun supports endpoint
   feature ablation (`drop=0.027043001`, p `0.03960396`); Gemma prompt_set_02
   supports exact edge-key ablation (`drop=0.005148016`, p `0.01980198`).
-  GLM/Hermes prompt_set_02 ablation remains the main open subcase, so the
-  read is: recurrent SAE feature/circuit paths can move transfer readout
-  beyond matched random removals, with prompt-generalized ablation still
-  uneven across branches.
+  The targeted v2 strengthening pass then closed the GLM/Hermes prompt_set_02
+  weak subcase by increasing shared-path capture, ranking weighted recurrent
+  paths, and confirming the best candidates with `500` random controls.
+  Exact edge-key ablation on weighted recurrent paths supported the sharper
+  circuit-path read: `k=1000` edge-key ablation dropped transfer by
+  `0.027632329` with p `0.001996008`, and `k=500` edge-key ablation dropped
+  transfer by `0.025587609` with p `0.001996008`. Endpoint-feature ablation
+  also supported the broad high-impact path read, including
+  weighted_recurrent `k=250` (`drop=0.058192729`, p `0.001996008`) and
+  top_overlap `k=1000` (`drop=0.058914327`, p `0.001996008`).
 
 - `Nest 2`
   `Engine 02` made the structured-matter mapping runnable across bounded
@@ -443,6 +449,7 @@ Latest gate reports:
 - [V8 SAE Gemma Recurrence Validation Report](./artifacts/validation/v8_sae_gemma_recurrence_validation/v8_sae_gemma_recurrence_validation_report.md)
 - [V8 SAE Feature-Edge Recurrence Report](./artifacts/validation/v8_sae_feature_edge_recurrence/v8_sae_feature_edge_recurrence_report.md)
 - [V8 SAE Recurrent Branch Ablation Report](./artifacts/validation/v8_sae_recurrent_branch_ablation/v8_sae_recurrent_branch_ablation_report.md)
+- [V8 SAE Recurrent Branch Ablation V2 Report](./artifacts/validation/v8_sae_recurrent_branch_ablation_v2/v8_sae_recurrent_branch_ablation_v2_report.md)
 - [GAME-1 V7 Locked Rubric](./docs/GAME1_V7_LOCKED_RUBRIC_2026-04-27.md)
 - [GAME-1 V7 Locked-Rubric Report](./artifacts/validation/game1_v7_locked_rubric/game1_v7_locked_rubric_report.md)
 - [OPT-1 Perspective-Nest Benchmark](./docs/OPT1_PERSPECTIVE_NEST_BENCHMARK_2026-04-27.md)

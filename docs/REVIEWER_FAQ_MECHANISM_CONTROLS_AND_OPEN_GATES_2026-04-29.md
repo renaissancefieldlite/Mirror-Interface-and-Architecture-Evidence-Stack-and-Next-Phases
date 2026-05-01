@@ -130,7 +130,7 @@ repeatability, localization, or baseline lift.
 | MLP/feed-forward | same-prompt repeatability supported; `prompt_set_02` all-layer depth grid is directional, strongest in early layers, with closeout open under shuffled controls |
 | SAE feature layer | bounded `GLM` / `Hermes` SAE pilot trained on real dense V8 activations, with feature separation above shuffled-label controls, edge-specific controls supported, feature-to-feature edge ablation supported, and recurrence supported across base / `rerun_02` / `prompt_set_02`; Gemma is integrated as a model-native third SAE recurrence branch with hidden size `2560` and supported within-set plus base-transfer controls |
 | SAE feature-edge recurrence | GLM/Hermes edge recurrence supported across within-set and base-transfer controls; Gemma edge transfer supported into rerun_02 and prompt_set_02 with strong weighted edge-signature recurrence, while Gemma within-set edge separation remains open |
-| SAE recurrent-branch ablation | partial direct support: GLM/Hermes rerun supports endpoint-feature and exact edge-key ablation; Gemma rerun supports endpoint-feature ablation; Gemma prompt_set_02 supports exact edge-key ablation; GLM/Hermes prompt_set_02 remains the open subcase |
+| SAE recurrent-branch ablation | supported after v2 strengthening: GLM/Hermes rerun supports endpoint-feature and exact edge-key ablation; Gemma rerun supports endpoint-feature ablation; Gemma prompt_set_02 supports exact edge-key ablation; the original GLM/Hermes prompt_set_02 weak case closes under weighted recurrent path capture and `500` random-control confirmation |
 
 ## What Is Still Open?
 

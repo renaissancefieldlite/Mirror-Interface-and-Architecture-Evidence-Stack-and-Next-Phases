@@ -16,6 +16,7 @@ Companion gate:
 - [V8 SAE Gemma Recurrence Validation Report](../artifacts/validation/v8_sae_gemma_recurrence_validation/v8_sae_gemma_recurrence_validation_report.md)
 - [V8 SAE Feature-Edge Recurrence Report](../artifacts/validation/v8_sae_feature_edge_recurrence/v8_sae_feature_edge_recurrence_report.md)
 - [V8 SAE Recurrent Branch Ablation Report](../artifacts/validation/v8_sae_recurrent_branch_ablation/v8_sae_recurrent_branch_ablation_report.md)
+- [V8 SAE Recurrent Branch Ablation V2 Report](../artifacts/validation/v8_sae_recurrent_branch_ablation_v2/v8_sae_recurrent_branch_ablation_v2_report.md)
 
 ## Purpose
 
@@ -217,6 +218,27 @@ Recurrent-branch ablation status:
   random removals, with branch-specific differences between endpoint-feature
   removal and exact edge-key removal.
 
+Targeted v2 ablation status:
+
+- the v2 pass focused on the original weak subcase: GLM/Hermes base ->
+  prompt_set_02
+- it increased shared edge capture to `250`, `500`, and `1000`, ranked
+  weighted recurrent paths, added graph-neighborhood feature ablation, and
+  confirmed the strongest candidates with `500` random controls
+- exact edge-key ablation now supports the prompt-generalized circuit-path
+  read: weighted_recurrent `k=1000` dropped transfer by `0.027632329`, p
+  `0.001996008`; weighted_recurrent `k=500` dropped transfer by
+  `0.025587609`, p `0.001996008`; top_overlap `k=1000` dropped transfer by
+  `0.014680568`, p `0.001996008`
+- endpoint-feature ablation also supports the broader recurrent-path read:
+  weighted_recurrent `k=250` dropped transfer by `0.058192729`, p
+  `0.001996008`, and top_overlap `k=1000` dropped transfer by `0.058914327`,
+  p `0.001996008`
+- clean read: the GLM/Hermes prompt_set_02 gap was a small-path-capture issue.
+  Once the recurrent paths were ranked by weighted recurrence and confirmed
+  against stronger random controls, the direct SAE feature/circuit ablation
+  gate became supported.
+
 The current bridge is:
 
 ```text
@@ -225,6 +247,6 @@ hidden states -> attention flow -> MLP updates -> SAE feature/circuit tracing
 
 ## Next Execution Order
 
-1. Run MLP depth recurrence after SAE recurrent-branch ablation is logged.
+1. Run MLP depth recurrence after SAE recurrent-branch ablation v2 is logged.
 2. Move into `Nest 2D` allostery, then `Nest 2E` PFAS safety, `Nest 2F`
    materials, and `Nest 2G` descriptor/model controls.

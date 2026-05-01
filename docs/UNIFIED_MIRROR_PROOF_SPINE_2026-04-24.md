@@ -244,6 +244,15 @@ Completed enough to show:
   (`drop=0.005148016`, p `0.01980198`). GLM/Hermes prompt_set_02 remains the
   open subcase, so the read is branch-specific support rather than a full
   closeout.
+  The targeted v2 pass closed that open subcase by using larger shared-path
+  capture, weighted recurrent edge ranking, graph-neighborhood ablation, and
+  `500` random-control confirmation. GLM/Hermes base -> prompt_set_02 now
+  supports exact edge-key ablation on weighted recurrent paths:
+  `k=1000` drop `0.027632329`, p `0.001996008`; `k=500` drop `0.025587609`,
+  p `0.001996008`; top_overlap `k=1000` drop `0.014680568`, p `0.001996008`.
+  Endpoint-feature ablation also supports the broad recurrent-path read:
+  weighted_recurrent `k=250` drop `0.058192729`, p `0.001996008`, and
+  top_overlap `k=1000` drop `0.058914327`, p `0.001996008`.
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - the cosmic / universal nests are mapped as candidate bridge layers for later
@@ -256,7 +265,7 @@ Completed enough to show:
 
 Immediate next work:
 
-1. run MLP depth recurrence after the SAE recurrent-branch ablation read is
+1. run MLP depth recurrence after the SAE recurrent-branch ablation v2 read is
    logged
 2. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
