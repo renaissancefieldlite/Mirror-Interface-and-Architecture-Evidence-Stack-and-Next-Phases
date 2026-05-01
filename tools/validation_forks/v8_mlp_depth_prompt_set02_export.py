@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""MLP-only depth export for prompt_set_02.
+"""MLP-only depth export for V8 recurrence sets.
 
-The earlier prompt_set_02 attention/MLP export used the early/middle/late layer
-grid. This runner focuses only on MLP/feed-forward modules so every available
-MLP layer can be exported without requesting full attention tensors again.
+The earlier attention/MLP export used the early/middle/late layer grid. This
+runner focuses only on MLP/feed-forward modules so every available MLP layer
+can be exported without requesting full attention tensors again. The original
+prompt_set_02 defaults are preserved, while --set-name allows base / rerun_02
+depth grids for recurrence tests.
 """
 
 from __future__ import annotations
@@ -36,6 +38,7 @@ from v8_attention_mlp_export import (  # noqa: E402
     resolve_device,
     select_models,
     selected_contexts,
+    slug,
     summarize_mlp_delta,
 )
 
@@ -51,9 +54,10 @@ DEFAULT_OUT = ROOT / "artifacts" / "validation" / "v8_mlp_depth_prompt_set_02"
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Export MLP-only prompt_set_02 depth rows.")
+    parser = argparse.ArgumentParser(description="Export MLP-only V8 depth rows.")
     parser.add_argument("--manifest", default=str(DEFAULT_MANIFEST), help="Prompt-set manifest JSON.")
     parser.add_argument("--results-dir", default=str(DEFAULT_OUT), help="Output directory.")
+    parser.add_argument("--set-name", default="prompt_set_02", help="Set label for filenames and report text.")
     parser.add_argument("--model", action="append", default=[], help="Display model name. Repeatable.")
     parser.add_argument("--context", action="append", default=[], help="Context label. Defaults to all manifest contexts.")
     parser.add_argument("--checkpoint", action="append", help="Override checkpoint as DisplayName=/path.")
@@ -89,7 +93,8 @@ def readiness_inventory(
 def export_mlp_rows(args: argparse.Namespace, manifest: dict[str, Any], selected_models: set[str], selected_contexts_set: set[str], overrides: dict[str, str]) -> dict[str, Any]:
     results_dir = Path(args.results_dir).resolve()
     results_dir.mkdir(parents=True, exist_ok=True)
-    mlp_path = results_dir / "v8_mlp_depth_prompt_set_02.csv"
+    set_slug = slug(args.set_name)
+    mlp_path = results_dir / f"v8_mlp_depth_{set_slug}.csv"
     device = resolve_device(args.device)
     rows_written = 0
     model_summaries = []
@@ -181,7 +186,7 @@ def export_mlp_rows(args: argparse.Namespace, manifest: dict[str, Any], selected
 
 def write_markdown(report: dict[str, Any], path: Path) -> None:
     lines = [
-        "# V8 MLP Depth Prompt Set 02 Export",
+        f"# V8 MLP Depth {report['set_name']} Export",
         "",
         f"Status: `{report['status']}`",
         "",
@@ -192,6 +197,7 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
         "## Scope",
         "",
         f"- manifest: `{report['manifest']}`",
+        f"- set name: `{report['set_name']}`",
         f"- selected models: `{', '.join(report['selected_models']) or 'all'}`",
         f"- selected contexts: `{', '.join(report['selected_contexts']) or 'all'}`",
         f"- device: `{report['device']}`",
@@ -241,6 +247,7 @@ def main() -> int:
     report = {
         "generated_at": datetime.now(UTC).isoformat(),
         "status": status,
+        "set_name": args.set_name,
         "manifest": str(manifest_path),
         "selected_models": [item["display_name"] for item in inventory if item["checkpoint_status"] == "ready"],
         "selected_contexts": sorted(selected_contexts_set),
@@ -250,14 +257,15 @@ def main() -> int:
         "inventory": inventory,
         "exports": exports,
         "clean_read": (
-            "MLP-depth prompt_set_02 export is complete. This artifact expands the feed-forward gate from the earlier "
+            f"MLP-depth {args.set_name} export is complete. This artifact expands the feed-forward gate from the earlier "
             "early/middle/late sample into every available MLP layer for the selected models and contexts."
             if status == "export_complete"
-            else "MLP-depth prompt_set_02 readiness has been recorded."
+            else f"MLP-depth {args.set_name} readiness has been recorded."
         ),
     }
-    json_path = output_dir / "v8_mlp_depth_prompt_set_02_export_inventory.json"
-    md_path = output_dir / "v8_mlp_depth_prompt_set_02_export_inventory.md"
+    set_slug = slug(args.set_name)
+    json_path = output_dir / f"v8_mlp_depth_{set_slug}_export_inventory.json"
+    md_path = output_dir / f"v8_mlp_depth_{set_slug}_export_inventory.md"
     json_path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     write_markdown(report, md_path)
     print(json.dumps({"status": status, "report": str(md_path), "exports": exports}, indent=2))

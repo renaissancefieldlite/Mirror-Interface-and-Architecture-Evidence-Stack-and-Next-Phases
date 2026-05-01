@@ -30,6 +30,8 @@ measurements, feature vectors, circuits, observables, and independent controls.
 
 For detailed mechanism translation and reviewer orientation, see:
 
+[Chronological Experiment Log](./docs/CHRONOLOGICAL_EXPERIMENT_LOG_2026-05-01.md)
+
 [Mirror Architecture Mechanism Explainer](./docs/MIRROR_ARCHITECTURE_MECHANISM_EXPLAINER_2026-04-29.md)
 
 [Reviewer FAQ: Mechanism, Controls, And Open Gates](./docs/REVIEWER_FAQ_MECHANISM_CONTROLS_AND_OPEN_GATES_2026-04-29.md)
@@ -181,18 +183,23 @@ p-values. The nesting layer is the map for where those real-data tests expand
 next.
 
 - `Nest 1`
-  The `Source Mirror Pattern` has now been expressed across every checked
-  formal lane: linear algebra, symmetry, invariants, encoded states, geometry,
-  topology, topography, graph theory, group theory, dynamics, differential
-  equations, probability, information theory, statistics, optimization,
-  numerical computation, tensor methods, spectral methods, control theory,
-  game / decision theory, and compositional structure. The current standard is
-  that every lane must point to real AI objects, real traces, real hardware,
-  real datasets, or a real benchmark before it is treated as more than a design
-  lane. Current closeouts include `GRAPH-1`, `GEO-2`, `DYN-2`, `CTRL-1`,
-  `GAME-1`, `OPT-1`, and `CAT-1`, with topology reading as invariance rather
-  than context-topology separation. Internal `GRAPH-2` remains parked until
-  attention-flow or external pathway labels close the missing-label gap.
+  Nest 1 is the formal and transformer-internal foundation. It asks whether
+  the same measured state path can be expressed in the math that actually
+  carries machine learning: linear algebra, tensor operations, geometry,
+  topology / topography, graph structure, probability, statistics,
+  information theory, optimization, numerical computation, dynamics, control,
+  spectral methods, decision theory, and compositional transfer.
+
+  The experiment shape is lane-by-lane: choose the formal lens, bind it to a
+  real object (`V8` hidden vectors, attention heads, MLP deltas, circuit
+  vectors, IBM hardware outputs, `HRV` rows, or benchmark datasets), declare a
+  control, then score whether the target/control relation survives the
+  transform. Current closeouts include `GRAPH-1`, `GEO-2`, `DYN-2`,
+  `CTRL-1`, `GAME-1`, `OPT-1`, and `CAT-1`. Topology currently reads as
+  preserved connectedness across context transform; context-topology
+  separation remains a denser-vector question. Internal `GRAPH-2` is parked
+  until attention-flow or external pathway labels supply stronger independent
+  path labels.
 
 - `Attention / MLP bridge`
   The transformer-internal Nest 1 gate now has broad same-prompt repeatability
@@ -200,75 +207,49 @@ next.
   representation lands, attention heads expose token-routing flow, and MLP
   blocks expose representation updates between routing steps. Under
   `prompt_set_02`, attention-flow generalizes. The denser all-layer MLP
-  grid now shows a directional feed-forward signal, strongest in early
-  layers, while shuffled-label controls keep MLP prompt-generalization open
-  for recurrence / second-export strengthening.
+  grid shows a directional feed-forward signal, strongest in early layers.
+  The direct recurrence read has now run: `base -> rerun_02` recurs perfectly
+  across the all-layer MLP grid (`cosine=1.0`, `p=0.00019996`), while the
+  independent `prompt_set_02` surface breaks the MLP depth pattern
+  (`cosine=-0.166467701`, p around `0.67`). Clean read: MLP repeats under the
+  same prompt and remains measured under prompt shift, but attention-flow and
+  SAE are the stronger prompt-generalized middle-layer carriers right now.
 
 - `SAE feature / circuit bridge`
-  Sparse Autoencoder features are now locked as the next interpretability proof
-  layer. The purpose is to trace which sparse features and feature-to-feature
-  circuits carry the architecture topics through the model: `Mirror Interface /
-  LSPS`, `Mirror Architecture`, `Source Mirror Pattern`, quantum bridge
-  language, neutral controls, and technical controls. The first bounded pilot
-  has now trained on real `GLM` / `Hermes` dense V8 activations, exported SAE
-  feature activations, feature dictionaries, and `5000` feature-to-feature
-  circuit edges, and supported context separation above shuffled-label
-  controls (`balanced_accuracy=0.632462`, shuffled p95 `0.362288`,
-  `p=0.009901`). Edge-specific controls are now supported as well:
-  full edge features beat shuffled labels and degree / hub baselines
-  (`balanced_accuracy=0.451334`, p `0.004975`, degree baseline
-  `0.304671`). Feature-to-feature edge ablation is supported
-  (`drop=0.098423`, p `0.009901`), while top-feature activation ablation
-  remains open (`drop=0.033124`, p `0.128713`). SAE recurrence is now
-  supported across base, `rerun_02`, and `prompt_set_02`: within-set
-  feature separation beats shuffled controls for all three dense exports, and
-  base-trained transfer holds for rerun (`0.629265629`) and prompt_set_02
-  (`0.45959596`) with p `0.00990099`. Gemma is now integrated as a
-  model-native third SAE branch: Gemma dense V8 vectors use hidden size
-  `2560`, so a Gemma-native SAE was trained on real Gemma base activations
-  and carried into Gemma `rerun_02` and `prompt_set_02`. The Gemma branch is
-  supported across within-set separation and base-to-set transfer against
-  shuffled controls: base `0.479140512`, rerun_02 `0.493431208`,
-  prompt_set_02 `0.418165016`, base -> rerun_02 `0.510737628`, and
-  base -> prompt_set_02 `0.389542484`, all p `0.00990099`.
-  Feature-edge recurrence has now run across both branches. GLM/Hermes closes
-  cleanly at the edge level: within-set edge separation is supported for base
-  (`0.455882927`), rerun_02 (`0.464051642`), and prompt_set_02
-  (`0.376823065`), and base-trained edge transfer is supported into rerun_02
-  (`0.52387397`) and prompt_set_02 (`0.395827668`), all p `0.00990099`.
-  Gemma edge recurrence is split but useful: within-set Gemma edge separation
-  remains open, while base-trained Gemma edge transfer is supported into
-  rerun_02 (`0.438121048`) and prompt_set_02 (`0.367434508`), both p
-  `0.00990099`, with weighted edge-signature recurrence strongest on rerun_02
-  (cosine `0.803169721`) and present on prompt_set_02 (cosine
-  `0.528171679`).
-  Direct recurrent-branch ablation now adds an edge-specific causality check.
-  The result is partial and useful: GLM/Hermes rerun supports both endpoint
-  feature ablation (`drop=0.090389435`, p `0.00990099`) and exact edge-key
-  ablation (`drop=0.00664881`, p `0.00990099`); Gemma rerun supports endpoint
-  feature ablation (`drop=0.027043001`, p `0.03960396`); Gemma prompt_set_02
-  supports exact edge-key ablation (`drop=0.005148016`, p `0.01980198`).
-  The targeted v2 strengthening pass then closed the GLM/Hermes prompt_set_02
-  weak subcase by increasing shared-path capture, ranking weighted recurrent
-  paths, and confirming the best candidates with `500` random controls.
-  Exact edge-key ablation on weighted recurrent paths supported the sharper
-  circuit-path read: `k=1000` edge-key ablation dropped transfer by
-  `0.027632329` with p `0.001996008`, and `k=500` edge-key ablation dropped
-  transfer by `0.025587609` with p `0.001996008`. Endpoint-feature ablation
-  also supported the broad high-impact path read, including
-  weighted_recurrent `k=250` (`drop=0.058192729`, p `0.001996008`) and
-  top_overlap `k=1000` (`drop=0.058914327`, p `0.001996008`).
+  SAE is the feature/circuit interpretability layer after hidden states,
+  attention, and MLP. It trains sparse features on real dense `V8` activations,
+  exports feature dictionaries, builds feature-to-feature circuit edges, and
+  tests whether those features and edges carry the architecture state across
+  rerun and prompt shift.
+
+  Current read: the `GLM/Hermes` SAE branch supports feature separation,
+  edge-specific controls, recurrence across `base`, `rerun_02`, and
+  `prompt_set_02`, feature-edge transfer, and v2 recurrent-path ablation. Gemma
+  is integrated as its own `2560`-dimensional SAE branch and supports
+  within-set feature recurrence plus base-to-set feature and edge transfer.
+  The detailed values live in the dedicated SAE reports below so the front
+  door stays balanced across the whole evidence stack.
 
 - `Nest 2`
-  `Engine 02` made the structured-matter mapping runnable across bounded
-  matter rows: element-family recovery, molecular graph validity, `H2O` motif
-  structure, mineral / redox / nutrition rows, and contaminant
-  bad-descendant scoring. `Engine 02V` adds real molecule-data validation using
-  `RDKit`; `Nest 2C` expands across `ESOL`, `Lipophilicity`, `FreeSolv`, and
-  `QM9 alpha`, with two shuffled-control seeds per dataset and `5000`
-  permutations per run. `Nest 2D -> 2G` adds allostery benchmark extraction,
-  PFAS pathway-coherence validation, Matbench / Materials Project
-  formation-energy validation, and stronger RDKit descriptor baselines.
+  Nest 2 is the constrained structured-matter layer. The first map covered
+  elements and periodic families, molecular graphs and bond validity, `H2O`,
+  minerals and lattice / charge balance, oxygen / redox rows, nutrition
+  chemistry before metabolism, contaminants, reaction paths, and
+  bad-descendant scoring.
+
+  The expanded atlas keeps the earlier mapped lanes visible: organic
+  functional groups, biomolecular primitives, polymers / plastics,
+  electrochemistry, catalysis / treatment conditions, spectral signatures,
+  environmental fate, and materials / semiconductors. Those rows are the
+  matter base for the later bridges into `Nest 3` resonance / field dynamics,
+  `Nest 4` biology and metabolism, and `Nest 5` environmental convergence.
+
+  The validation path is now staged: `Engine 02` made the matter map runnable;
+  `Engine 02V` adds `RDKit` molecule-data validation; `Nest 2C` expands across
+  `ESOL`, `Lipophilicity`, `FreeSolv`, and `QM9 alpha` with shuffled controls;
+  `Nest 2D -> 2G` carry the real-data gates into allostery, PFAS pathway
+  coherence and safety logic, materials formation-energy validation, and
+  stronger descriptor / model baselines.
 
 - `Nest 3`
   The classical-coherence map is the planned bridge from matter structure into
@@ -415,6 +396,7 @@ funding, and partner support together.
 
 Latest gate reports:
 
+- [Chronological Experiment Log](./docs/CHRONOLOGICAL_EXPERIMENT_LOG_2026-05-01.md)
 - [Nest 1 And Nest 2 Visual Explainer](./docs/NEST1_NEST2_VISUAL_EXPLAINER_2026-04-28.md)
 - [Nest 1 Formal / Transformer Substrate Visual](./visuals/nest1_formal_transformer_substrate.svg)
 - [Nest 1 Full Lane Inventory](./docs/NEST1_FULL_LANE_INVENTORY_2026-04-28.md)
@@ -438,6 +420,9 @@ Latest gate reports:
 - [V8 Attention / MLP Prompt-Generalization Report](./artifacts/validation/v8_attention_mlp_prompt_generalization/v8_attention_mlp_prompt_generalization_report.md)
 - [V8 MLP Depth Prompt Set 02 Export Gate](./artifacts/validation/v8_mlp_depth_prompt_set_02/v8_mlp_depth_prompt_set_02_export_inventory.md)
 - [V8 MLP Depth Prompt Set 02 Validation Report](./artifacts/validation/v8_mlp_depth_prompt_set_02_validation/v8_mlp_depth_prompt_set_02_validation_report.md)
+- [V8 MLP Depth Base Export Gate](./artifacts/validation/v8_mlp_depth_base/v8_mlp_depth_base_export_inventory.md)
+- [V8 MLP Depth Rerun 02 Export Gate](./artifacts/validation/v8_mlp_depth_rerun_02/v8_mlp_depth_rerun_02_export_inventory.md)
+- [V8 MLP Depth Recurrence Report](./artifacts/validation/v8_mlp_depth_recurrence/v8_mlp_depth_recurrence_report.md)
 - [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
 - [V8 SAE Feature / Circuit Gate Report](./artifacts/validation/v8_sae_feature_circuit_gate/v8_sae_feature_circuit_gate_report.md)
 - [V8 SAE Source Inventory](./artifacts/validation/v8_sae_source_inventory/v8_sae_source_inventory_report.md)

@@ -127,7 +127,7 @@ repeatability, localization, or baseline lift.
 | `Nest 1` | multiple formal / transformer lanes supported by real traces or controls, with named open gates |
 | `Nest 2` | molecule-property, PFAS pathway, materials, and stronger descriptor baseline lanes started on real data |
 | Attention-flow | prompt-generalized support across the current V8 attention gate |
-| MLP/feed-forward | same-prompt repeatability supported; `prompt_set_02` all-layer depth grid is directional, strongest in early layers, with closeout open under shuffled controls |
+| MLP/feed-forward | all-layer same-prompt recurrence supported (`base -> rerun_02` cosine `1.0`, p `0.00019996`); prompt-shift recurrence remains open under `prompt_set_02` |
 | SAE feature layer | bounded `GLM` / `Hermes` SAE pilot trained on real dense V8 activations, with feature separation above shuffled-label controls, edge-specific controls supported, feature-to-feature edge ablation supported, and recurrence supported across base / `rerun_02` / `prompt_set_02`; Gemma is integrated as a model-native third SAE recurrence branch with hidden size `2560` and supported within-set plus base-transfer controls |
 | SAE feature-edge recurrence | GLM/Hermes edge recurrence supported across within-set and base-transfer controls; Gemma edge transfer supported into rerun_02 and prompt_set_02 with strong weighted edge-signature recurrence, while Gemma within-set edge separation remains open |
 | SAE recurrent-branch ablation | supported after v2 strengthening: GLM/Hermes rerun supports endpoint-feature and exact edge-key ablation; Gemma rerun supports endpoint-feature ablation; Gemma prompt_set_02 supports exact edge-key ablation; the original GLM/Hermes prompt_set_02 weak case closes under weighted recurrent path capture and `500` random-control confirmation |
@@ -139,7 +139,7 @@ the same claim:
 
 | Gate | Next Required Move |
 | --- | --- |
-| MLP prompt-generalization | run MLP depth recurrence for the all-layer `prompt_set_02` grid |
+| MLP prompt-generalization | keep as measured open gate; next strengthening would require denser prompt families or feature-neighborhood scoring |
 | `GRAPH-2` | close with attention-flow or independent external pathway labels |
 | `GAME-1` | keep the locked rubric over real adversarial / control-like rows |
 | `Nest 2D` | allostery mapper closeout with protein contact / pocket labels |

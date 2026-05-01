@@ -189,12 +189,17 @@ Completed enough to show:
   expansion on `prompt_set_02` has now run: `738` all-layer MLP rows,
   `246` matched model/layer/context units, `7` standard-export models,
   directional overall score `0.092328608`, early-layer score `0.369469331`,
-  and overall shuffled-label p `0.318936213`. Clean read: depth expansion
-  strengthened the MLP lane from the earlier three-layer negative score into
-  a directional early-layer signal, while MLP prompt-generalization remains an
-  open recurrence gate.
-- the Sparse Autoencoder feature / circuit bridge is now protocol-locked as
-  the next interpretability proof layer:
+  and overall shuffled-label p `0.318936213`. The matching all-layer `base`
+  and `rerun_02` exports have now run with `738` rows each. The direct
+  recurrence read supports same-prompt MLP recurrence: `base -> rerun_02`
+  cosine `1.0`, p `0.00019996`, with early, middle, and late depth buckets all
+  recurring. Prompt-shift recurrence stays open: `base -> prompt_set_02`
+  cosine `-0.166467701`, p `0.669466107`, and
+  `rerun_02 -> prompt_set_02` cosine `-0.166467701`, p `0.671465707`. Clean
+  read: MLP/feed-forward is repeatable on the same prompt; attention-flow and
+  SAE remain the stronger prompt-generalized middle-layer carriers.
+- the Sparse Autoencoder feature / circuit bridge is now a live
+  interpretability proof layer:
   hidden states show where the representation lands, attention heads show
   token-routing flow, MLP blocks show representation updates, and SAE features
   can expose sparse interpretable features plus feature-to-feature circuits.
@@ -265,29 +270,27 @@ Completed enough to show:
 
 Immediate next work:
 
-1. run MLP depth recurrence after the SAE recurrent-branch ablation v2 read is
-   logged
-2. keep the `Nest 1` full lane inventory as the public index for the formal
+1. keep the `Nest 1` full lane inventory as the public index for the formal
    substrate and update it only when lane status changes
-3. apply the same standard lane by lane: real artifact, locked baseline,
+2. apply the same standard lane by lane: real artifact, locked baseline,
    scored result, honest status
-4. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
+3. expand Phase 12B into `Phase 12B-L20`: `20` blocks x `4` conditions with
    Latin-square order rotation and raw `RR` capture whenever available
-5. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
+4. strengthen `TOP-1/2` with a larger real point-cloud set: more prompts,
    rerun density, local-neighborhood topology, layer-transition branch
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-6. run `Nest 2D` allostery against protein contact / pocket / pathway labels
-7. upgrade `Nest 2E` PFAS into bad-descendant and safety scoring against
+5. run `Nest 2D` allostery against protein contact / pocket / pathway labels
+6. upgrade `Nest 2E` PFAS into bad-descendant and safety scoring against
    known degradation-pathway data
-8. strengthen `Nest 2F` with structure-aware materials / crystal-stability
+7. strengthen `Nest 2F` with structure-aware materials / crystal-stability
    baselines using `ASE`, `pymatgen`, or available materials-model adapters
-9. harden `Nest 2G` with descriptor families, scaffold splits, and model
+8. harden `Nest 2G` with descriptor families, scaffold splits, and model
    baselines
-10. build `Engine 03` only from real oscillator / resonance / `EMF` / spectral
+9. build `Engine 03` only from real oscillator / resonance / `EMF` / spectral
     datasets
-11. keep the companion updated as each engine becomes real
+10. keep the companion updated as each engine becomes real
 
 Companion-facing prototype lanes:
 

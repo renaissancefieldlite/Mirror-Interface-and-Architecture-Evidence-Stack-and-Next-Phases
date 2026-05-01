@@ -2,7 +2,7 @@
 
 Date: `2026-04-28`
 
-Status: `attention_prompt_generalization_supported_mlp_depth_directional`
+Status: `attention_prompt_generalization_supported_mlp_same_prompt_recurrence_supported`
 
 Companion gate:
 
@@ -22,13 +22,15 @@ Companion gate:
 - [V8 Attention / MLP Prompt-Generalization Report](../artifacts/validation/v8_attention_mlp_prompt_generalization/v8_attention_mlp_prompt_generalization_report.md)
 - [V8 MLP Depth Prompt Set 02 Export Gate](../artifacts/validation/v8_mlp_depth_prompt_set_02/v8_mlp_depth_prompt_set_02_export_inventory.md)
 - [V8 MLP Depth Prompt Set 02 Validation Report](../artifacts/validation/v8_mlp_depth_prompt_set_02_validation/v8_mlp_depth_prompt_set_02_validation_report.md)
+- [V8 MLP Depth Base Export Gate](../artifacts/validation/v8_mlp_depth_base/v8_mlp_depth_base_export_inventory.md)
+- [V8 MLP Depth Rerun 02 Export Gate](../artifacts/validation/v8_mlp_depth_rerun_02/v8_mlp_depth_rerun_02_export_inventory.md)
+- [V8 MLP Depth Recurrence Report](../artifacts/validation/v8_mlp_depth_recurrence/v8_mlp_depth_recurrence_report.md)
 
 ## Purpose
 
 The V8 stack already measures hidden-state / residual-stream separation.
-
-That is not the same thing as measuring attention heads or feed-forward / MLP
-blocks.
+This protocol adds the transformer-internal mechanism layers: attention heads
+and feed-forward / MLP blocks.
 
 The clean transformer-internal split is:
 
@@ -45,8 +47,7 @@ This protocol locks those missing internals as a Nest 1 validation bridge.
 Nest 1 is the smallest formal system layer and the real mathematical substrate
 of machine learning.
 
-Attention and MLP blocks are not extra metaphor. They are actual transformer
-objects:
+Attention and MLP blocks are actual transformer objects:
 
 | Transformer object | Nest 1 lane |
 | --- | --- |
@@ -117,14 +118,25 @@ Current execution read:
   remain above the observed score (`p=0.318936213` overall), so MLP
   prompt-generalization stays open while the result records a real
   early-layer directional signal.
-- next gate:
-  recurrence / second export for MLP depth, then leave-one-prompt /
-  model-family controls
+- MLP-depth recurrence:
+  matching all-layer `base` and `rerun_02` exports produced `738` rows each
+  across the same `7` standard-export models. The recurrence report supports
+  same-prompt recurrence: `base -> rerun_02` cosine `1.0`, p `0.00019996`,
+  with early, middle, and late depth buckets all recurring at cosine `1.0`.
+  The independent prompt shift remains open: `base -> prompt_set_02` cosine
+  `-0.166467701`, p `0.669466107`, and `rerun_02 -> prompt_set_02` cosine
+  `-0.166467701`, p `0.671465707`.
+- clean read:
+  attention-flow carries the stronger prompt-generalized routing result; SAE
+  carries the stronger feature/circuit interpretability result; MLP/feed-forward
+  is repeatable on the same prompt and stays open under prompt shift.
 - next interpretability layer:
-  Sparse Autoencoder feature / circuit tracing is now protocol-locked in
-  `docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md`. It is not yet
-  evidence-closed; it requires real SAE activations, feature dictionaries,
-  circuit edges, and controls before promotion.
+  Sparse Autoencoder feature / circuit tracing has moved from protocol into
+  evidence. `GLM/Hermes` and Gemma-native SAE branches now provide sparse
+  feature activations, dictionaries, feature-to-feature circuit edges,
+  recurrence, transfer, and recurrent-path ablation controls. The detailed
+  support values live in `docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md`
+  and the linked SAE reports.
 
 ## GRAPH-2 Connection
 
