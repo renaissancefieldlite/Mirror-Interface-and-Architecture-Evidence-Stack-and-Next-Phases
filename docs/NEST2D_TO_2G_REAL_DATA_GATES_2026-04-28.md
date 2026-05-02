@@ -12,6 +12,7 @@ Companion reports:
 - [Nest 2D Allostery Graph Mapper](../artifacts/validation/nest2d_allostery_graph_mapper/nest2d_allostery_graph_mapper_report.md)
 - [Nest 2D-2 Allostery Pocket / Path Mapper](../artifacts/validation/nest2d_allostery_pocket_path_mapper/nest2d_allostery_pocket_path_mapper_report.md)
 - [Nest 2D-3 Allostery Ligand-Contact Diagnostic](../artifacts/validation/nest2d_allostery_ligand_contact_diagnostic/nest2d_allostery_ligand_contact_diagnostic_report.md)
+- [Nest 2D-4 Blind Pocket Split Mapper](../artifacts/validation/nest2d_allostery_blind_pocket_split_mapper/nest2d_allostery_blind_pocket_split_mapper_report.md)
 - [Nest 2E PFAS Pathway Validation](../artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
 - [Nest 2E PFAS Pathway Rerun](../artifacts/validation/nest2e_pfas_pathway_rerun02/nest2e_pfas_pathway_report.md)
 - [Nest 2F Materials Stability Validation](../artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
@@ -27,7 +28,7 @@ real public dataset, a real measurement surface, or a real benchmark table.
 
 | Gate | Dataset / Source | Status | Clean Read |
 | --- | --- | --- | --- |
-| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures | `pocket_path_partial / ligand_contact_supported` | 98 benchmark rows join to real labels and contact graphs; 2D-2 pocket/path scoring beats graph controls while PASSer remains the blind-prediction bar; 2D-3 bound-ligand contacts confirm real pocket/contact geometry |
+| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures | `blind_pocket_split_boundary_set` | 98 benchmark rows join to real labels and contact graphs; 2D-2 pocket/path scoring beats graph controls; 2D-3 bound-ligand contacts confirm real pocket/contact geometry; 2D-4 sets the blind-CV boundary and points the next gate to external pocket candidates or stronger ligand-informed features |
 | `Nest 2E` PFAS pathways | EPA PFAS reaction library `EnvLib + MetaLib` | `supported` | true parent/product transformations beat shuffled parent/product controls |
 | `Nest 2F` materials stability | Matbench / Materials Project `mp_e_form` | `supported` | composition/structure descriptors recover DFT formation energy above shuffled-target controls |
 | `Nest 2G` stronger baselines | ESOL, Lipophilicity, FreeSolv, QM9 alpha | `supported` | multifeature RDKit train/test baselines strengthen the molecule-property lane |
@@ -89,10 +90,10 @@ First graph mapper pass:
 Clean graph read:
 
 ```text
-Nest 2D now has real labels joined to real protein structures, but the
-contact-only residue mapper remains open. The next move is pocket/path scoring:
-chain-resolved active sites, pocket candidate graphs, and active-site to
-allosteric-site communication-path recovery.
+Nest 2D now has real labels joined to real protein structures. The
+contact-only residue mapper sets the first biological graph boundary, and the
+next move is pocket/path scoring: chain-resolved active sites, pocket candidate
+graphs, and active-site to allosteric-site communication-path recovery.
 ```
 
 2D-2 pocket/path result:
@@ -132,6 +133,30 @@ pocket/contact structure and supplies a validated feature source for the next
 blind allosteric mapper.
 ```
 
+2D-4 blind pocket split result:
+
+- scored rows: `98`
+- folds: `5`
+- random trials: `500`
+- CV blind Mirror pocket/path mean Jaccard: `0.017703`
+- previous 2D-2 pocket/path mean Jaccard: `0.032975`
+- best existing tool mean Jaccard on scored rows: `0.201357`
+- degree pocket mean Jaccard: `0.008222`
+- closeness pocket mean Jaccard: `0.015044`
+- active-proximity pocket mean Jaccard: `0.015651`
+- random candidate mean Jaccard: `0.014310`
+- random-control p-value: `0.251497`
+- label-shuffle p-value: `0.061876`
+
+Clean 2D-4 read:
+
+```text
+The held-out structural pocket/path mapper carries directional signal over
+simple graph controls. The AlloBench tool bar and the 2D-2 same-surface score
+set the next closeout targets, with external pocket candidates or stronger
+ligand-informed features as the upgrade path.
+```
+
 Combined closeout design:
 
 Use the same `100` PDB rows and compare the Mirror mapper against:
@@ -145,6 +170,17 @@ The first move condition is beating the `PASSer_Ensemble` mean Jaccard
 baseline of `0.19733` while also beating graph-naive controls. The stronger
 move condition is repeating on a second seed / split or second allostery
 benchmark family.
+
+Immediate 2D-5 move:
+
+- keep the same `98/100` scored AlloBench/PDB surface
+- add external pocket candidates from `fpocket`, `P2Rank`, or `PrankWeb` where
+  available
+- add ligand-informed training features while preserving held-out evaluation
+- score communication paths from active-site sources to candidate allosteric
+  pockets
+- compare against `PASSer_Ensemble`, pocket-tool baselines, graph controls,
+  random pockets, and shuffled labels
 
 ## Nest 2E: PFAS Pathway Validation
 

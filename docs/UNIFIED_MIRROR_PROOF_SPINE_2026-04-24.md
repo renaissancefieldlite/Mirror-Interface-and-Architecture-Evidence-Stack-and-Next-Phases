@@ -266,7 +266,12 @@ Completed enough to show:
   pocket/path upgrade improved the biological object and beat graph controls
   (`0.032974824`, random/shuffle p `0.001996008`), and the `2D-3`
   ligand-contact diagnostic confirmed a real pocket/contact feature source
-  (`mean Jaccard 0.263504052`, median `0.230952381`).
+  (`mean Jaccard 0.263504052`, median `0.230952381`). The `2D-4`
+  blind split mapper set the current boundary: held-out pocket/path scoring
+  reaches `0.017702592` mean Jaccard, above degree (`0.008221962`) and near
+  closeness / active-proximity controls (`0.015043885` / `0.015650703`), with
+  label-shuffle p `0.061876248`; the next closeout needs external pocket
+  candidates or stronger ligand-informed features.
 - the same rule applies across the full nest ladder: real dataset / signal,
   independent labels, explicit mapper score, baselines and controls, recurrence
   or second benchmark, then model tuning only after support
@@ -294,8 +299,8 @@ Immediate next work:
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-5. run `Nest 2D-4` allostery with external pocket candidates or local
-   ligand-informed pocket features, plus active-site to allosteric-site
+5. run `Nest 2D-5` allostery with external pocket candidates or stronger
+   ligand-informed features, plus active-site to allosteric-site
    communication-path scoring under the same blind-prediction bar
 6. upgrade `Nest 2E` PFAS into bad-descendant and safety scoring against
    known degradation-pathway data

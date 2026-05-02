@@ -2,7 +2,7 @@
 
 Date: `2026-05-02`
 
-Status: `pocket_path_upgrade_complete_partial`
+Status: `blind_pocket_split_boundary_set`
 
 Companion inputs:
 
@@ -12,6 +12,7 @@ Companion inputs:
 - [Nest 2D Allostery Graph Mapper Report](../artifacts/validation/nest2d_allostery_graph_mapper/nest2d_allostery_graph_mapper_report.md)
 - [Nest 2D-2 Allostery Pocket / Path Mapper Report](../artifacts/validation/nest2d_allostery_pocket_path_mapper/nest2d_allostery_pocket_path_mapper_report.md)
 - [Nest 2D-3 Allostery Ligand-Contact Diagnostic](../artifacts/validation/nest2d_allostery_ligand_contact_diagnostic/nest2d_allostery_ligand_contact_diagnostic_report.md)
+- [Nest 2D-4 Blind Pocket Split Mapper](../artifacts/validation/nest2d_allostery_blind_pocket_split_mapper/nest2d_allostery_blind_pocket_split_mapper_report.md)
 
 ## Purpose
 
@@ -112,8 +113,8 @@ Remaining gate:
 
 - mapper support moves through pocket/path scoring rather than contact-only
   residue scoring
-- allostery needs pocket-level and communication-path scoring, not just exact
-  residue recovery from plain contact graphs
+- allostery is better represented through pocket-level and communication-path
+  scoring than through exact residue recovery from plain contact graphs
 
 ## 2D-2 Pocket / Path Upgrade
 
@@ -149,9 +150,8 @@ blind-prediction closeout bar.
 
 ## 2D-3 Ligand-Contact Diagnostic
 
-The local environment currently has no `fpocket`, `P2Rank`, or `PrankWeb`
-binary available, so the next available feature-source diagnostic used bound
-ligand/contact geometry already present in the PDB files.
+The next feature-source diagnostic used bound ligand/contact geometry already
+present in the PDB files while the external pocket-tool lane remains queued.
 
 Result:
 
@@ -170,6 +170,40 @@ Clean read:
 Bound-ligand contact geometry confirms the AlloBench labels map onto real
 pocket/contact structure and supplies a strong feature source for the next
 blind allosteric mapper.
+```
+
+## 2D-4 Blind Pocket Split Mapper
+
+The blind split pass tested the pocket/path idea under held-out evaluation.
+It trained structural feature weights on `5` folds and evaluated held-out PDB
+rows using structural pocket/path features only:
+
+- geometric pocket candidates
+- chain-resolved active-site sources
+- active-site-to-pocket distance and communication-path features
+- degree, closeness, active-proximity, random, and label-shuffle controls
+
+Result:
+
+| Metric | Value |
+| --- | ---: |
+| CV blind Mirror pocket/path mean Jaccard | `0.017703` |
+| 2D-2 untuned pocket/path mean Jaccard | `0.032975` |
+| Best existing AlloBench tool mean Jaccard on scored rows | `0.201357` |
+| Degree pocket mean Jaccard | `0.008222` |
+| Closeness pocket mean Jaccard | `0.015044` |
+| Active-proximity pocket mean Jaccard | `0.015651` |
+| Random candidate mean Jaccard | `0.014310` |
+| Random-control p-value | `0.251497` |
+| Label-shuffle p-value | `0.061876` |
+
+Clean read:
+
+```text
+2D-4 sets the blind-CV boundary. Structural pocket/path features carry
+directional signal over simple graph controls, while held-out allostery
+recovery points the closeout path toward stronger pocket candidates or
+ligand-informed features.
 ```
 
 ## Execution Sequence
@@ -250,17 +284,17 @@ and
 repeat holds on second split / benchmark
 ```
 
-## Immediate 2D-4 Upgrade
+## Immediate 2D-5 Upgrade
 
-The next run keeps the same benchmark surface and adds true pocket-tool or
-ligand-informed features to the blind mapper:
+The next run keeps the same benchmark surface and adds external pocket-tool or
+stronger ligand-informed features to the blind mapper:
 
 - add real pocket-tool candidates where available: `fpocket`, `P2Rank`, or
   `PrankWeb`
-- add ligand/contact geometry as training / feature guidance while preserving a
-  blind-prediction evaluation split
+- add ligand/contact geometry as training / feature guidance while preserving
+  held-out evaluation
 - score active-site to allosteric-site communication paths and bottlenecks
 - compare pocket/path recovery against `PASSer_Ensemble`, graph controls,
   random pockets, and shuffled labels
-- repeat on a second split or second allostery set only after the same-100-PDB
-  pocket/path run beats controls
+- repeat on a second split or second allostery set after the same-100-PDB
+  pocket/path run beats controls and approaches the tool bar
