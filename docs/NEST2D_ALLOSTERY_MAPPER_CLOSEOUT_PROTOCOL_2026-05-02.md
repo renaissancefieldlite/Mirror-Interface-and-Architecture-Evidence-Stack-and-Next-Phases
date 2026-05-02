@@ -13,6 +13,7 @@ Companion inputs:
 - [Nest 2D-2 Allostery Pocket / Path Mapper Report](../artifacts/validation/nest2d_allostery_pocket_path_mapper/nest2d_allostery_pocket_path_mapper_report.md)
 - [Nest 2D-3 Allostery Ligand-Contact Diagnostic](../artifacts/validation/nest2d_allostery_ligand_contact_diagnostic/nest2d_allostery_ligand_contact_diagnostic_report.md)
 - [Nest 2D-4 Blind Pocket Split Mapper](../artifacts/validation/nest2d_allostery_blind_pocket_split_mapper/nest2d_allostery_blind_pocket_split_mapper_report.md)
+- [Nest 2D-5 Ligand-Informed Split Mapper](../artifacts/validation/nest2d_allostery_ligand_informed_split_mapper/nest2d_allostery_ligand_informed_split_mapper_report.md)
 
 ## Purpose
 
@@ -206,6 +207,42 @@ recovery points the closeout path toward stronger pocket candidates or
 ligand-informed features.
 ```
 
+## 2D-5 Ligand-Informed Split Mapper
+
+The 2D-5 pass ran the better-input branch in the ligand-bound application
+setting. It kept the 2D-4 held-out fold discipline and added bound modulator
+geometry as an input surface:
+
+- ligand-contact pocket candidate from PDB `HETATM` geometry
+- ligand proximity and contact-fraction features
+- same `98` AlloBench/PDB rows
+- same `5` held-out folds
+- same graph, random, shuffled-label, and same-row tool comparisons
+
+Result:
+
+| Metric | Value |
+| --- | ---: |
+| CV ligand-informed Mirror mean Jaccard | `0.260713` |
+| 2D-4 structural-only blind mean Jaccard | `0.017703` |
+| Best existing AlloBench tool mean Jaccard on scored rows | `0.201357` |
+| Ligand-contact baseline mean Jaccard | `0.260713` |
+| Degree pocket mean Jaccard | `0.008222` |
+| Closeness pocket mean Jaccard | `0.015044` |
+| Active-proximity pocket mean Jaccard | `0.016029` |
+| Random candidate mean Jaccard | `0.016261` |
+| Random-control p-value | `0.001996` |
+| Label-shuffle p-value | `0.001996` |
+
+Clean read:
+
+```text
+2D-5 supports the ligand-informed application branch. Bound modulator geometry
+matches the direct ligand-contact candidate baseline and beats the same-row
+AlloBench tool bar, graph controls, random controls, and shuffled-label
+controls.
+```
+
 ## Execution Sequence
 
 1. Pull the `100` PDB structures listed in the AlloBench table.
@@ -284,17 +321,17 @@ and
 repeat holds on second split / benchmark
 ```
 
-## Immediate 2D-5 Upgrade
+## Immediate 2D-6 Upgrade
 
-The next run keeps the same benchmark surface and adds external pocket-tool or
-stronger ligand-informed features to the blind mapper:
+The next run keeps the same benchmark surface and broadens the better-input
+branch beyond bound-ligand contact geometry:
 
 - add real pocket-tool candidates where available: `fpocket`, `P2Rank`, or
   `PrankWeb`
-- add ligand/contact geometry as training / feature guidance while preserving
-  held-out evaluation
-- score active-site to allosteric-site communication paths and bottlenecks
+- compare pocket-tool candidates against the 2D-5 ligand-contact candidate
+- score active-site to allosteric-site communication paths and bottlenecks as
+  separate metrics
 - compare pocket/path recovery against `PASSer_Ensemble`, graph controls,
   random pockets, and shuffled labels
 - repeat on a second split or second allostery set after the same-100-PDB
-  pocket/path run beats controls and approaches the tool bar
+  ligand-informed run

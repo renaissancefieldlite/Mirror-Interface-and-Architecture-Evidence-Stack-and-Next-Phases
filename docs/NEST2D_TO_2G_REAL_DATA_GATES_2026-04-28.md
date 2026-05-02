@@ -13,6 +13,7 @@ Companion reports:
 - [Nest 2D-2 Allostery Pocket / Path Mapper](../artifacts/validation/nest2d_allostery_pocket_path_mapper/nest2d_allostery_pocket_path_mapper_report.md)
 - [Nest 2D-3 Allostery Ligand-Contact Diagnostic](../artifacts/validation/nest2d_allostery_ligand_contact_diagnostic/nest2d_allostery_ligand_contact_diagnostic_report.md)
 - [Nest 2D-4 Blind Pocket Split Mapper](../artifacts/validation/nest2d_allostery_blind_pocket_split_mapper/nest2d_allostery_blind_pocket_split_mapper_report.md)
+- [Nest 2D-5 Ligand-Informed Split Mapper](../artifacts/validation/nest2d_allostery_ligand_informed_split_mapper/nest2d_allostery_ligand_informed_split_mapper_report.md)
 - [Nest 2E PFAS Pathway Validation](../artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
 - [Nest 2E PFAS Pathway Rerun](../artifacts/validation/nest2e_pfas_pathway_rerun02/nest2e_pfas_pathway_report.md)
 - [Nest 2F Materials Stability Validation](../artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
@@ -28,7 +29,7 @@ real public dataset, a real measurement surface, or a real benchmark table.
 
 | Gate | Dataset / Source | Status | Clean Read |
 | --- | --- | --- | --- |
-| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures | `blind_pocket_split_boundary_set` | 98 benchmark rows join to real labels and contact graphs; 2D-2 pocket/path scoring beats graph controls; 2D-3 bound-ligand contacts confirm real pocket/contact geometry; 2D-4 sets the blind-CV boundary and points the next gate to external pocket candidates or stronger ligand-informed features |
+| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures | `ligand_informed_split_supported` | 98 benchmark rows join to real labels and contact graphs; 2D-2 pocket/path scoring beats graph controls; 2D-3 bound-ligand contacts confirm real pocket/contact geometry; 2D-4 sets the structural-only blind boundary; 2D-5 supports the ligand-informed application branch above the same-row AlloBench tool bar and controls |
 | `Nest 2E` PFAS pathways | EPA PFAS reaction library `EnvLib + MetaLib` | `supported` | true parent/product transformations beat shuffled parent/product controls |
 | `Nest 2F` materials stability | Matbench / Materials Project `mp_e_form` | `supported` | composition/structure descriptors recover DFT formation energy above shuffled-target controls |
 | `Nest 2G` stronger baselines | ESOL, Lipophilicity, FreeSolv, QM9 alpha | `supported` | multifeature RDKit train/test baselines strengthen the molecule-property lane |
@@ -171,14 +172,39 @@ baseline of `0.19733` while also beating graph-naive controls. The stronger
 move condition is repeating on a second seed / split or second allostery
 benchmark family.
 
-Immediate 2D-5 move:
+2D-5 ligand-informed split result:
+
+- scored rows: `98`
+- folds: `5`
+- random trials: `500`
+- CV ligand-informed Mirror mean Jaccard: `0.260713`
+- 2D-4 structural-only blind mean Jaccard: `0.017703`
+- best existing tool mean Jaccard on scored rows: `0.201357`
+- ligand-contact baseline mean Jaccard: `0.260713`
+- degree pocket mean Jaccard: `0.008222`
+- closeness pocket mean Jaccard: `0.015044`
+- active-proximity pocket mean Jaccard: `0.016029`
+- random candidate mean Jaccard: `0.016261`
+- random-control p-value: `0.001996`
+- label-shuffle p-value: `0.001996`
+
+Clean 2D-5 read:
+
+```text
+The better-input branch worked. In the ligand-bound application setting,
+bound modulator geometry matches the direct ligand-contact candidate baseline
+and beats the same-row AlloBench tool bar, graph controls, random controls,
+and shuffled-label controls.
+```
+
+Immediate 2D-6 move:
 
 - keep the same `98/100` scored AlloBench/PDB surface
 - add external pocket candidates from `fpocket`, `P2Rank`, or `PrankWeb` where
   available
-- add ligand-informed training features while preserving held-out evaluation
+- compare pocket-tool candidates against the 2D-5 ligand-contact candidate
 - score communication paths from active-site sources to candidate allosteric
-  pockets
+  pockets as a separate metric
 - compare against `PASSer_Ensemble`, pocket-tool baselines, graph controls,
   random pockets, and shuffled labels
 

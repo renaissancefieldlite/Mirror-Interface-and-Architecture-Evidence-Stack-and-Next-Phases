@@ -271,7 +271,11 @@ Completed enough to show:
   reaches `0.017702592` mean Jaccard, above degree (`0.008221962`) and near
   closeness / active-proximity controls (`0.015043885` / `0.015650703`), with
   label-shuffle p `0.061876248`; the next closeout needs external pocket
-  candidates or stronger ligand-informed features.
+  candidates or stronger ligand-informed features. The `2D-5`
+  ligand-informed split supplied that stronger input branch: held-out mean
+  Jaccard `0.260712639`, same-row `PASSer_Ensemble` bar `0.201357143`,
+  ligand-contact baseline `0.260712639`, random p `0.001996008`, and
+  label-shuffle p `0.001996008`.
 - the same rule applies across the full nest ladder: real dataset / signal,
   independent labels, explicit mapper score, baselines and controls, recurrence
   or second benchmark, then model tuning only after support
@@ -299,9 +303,9 @@ Immediate next work:
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-5. run `Nest 2D-5` allostery with external pocket candidates or stronger
-   ligand-informed features, plus active-site to allosteric-site
-   communication-path scoring under the same blind-prediction bar
+5. run `Nest 2D-6` allostery with external pocket candidates where available,
+   second split / benchmark recurrence, and active-site to allosteric-site
+   communication-path scoring under the same benchmark bar
 6. upgrade `Nest 2E` PFAS into bad-descendant and safety scoring against
    known degradation-pathway data
 7. strengthen `Nest 2F` with structure-aware materials / crystal-stability
