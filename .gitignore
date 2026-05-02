@@ -6,6 +6,7 @@ artifacts/validation/datasets/matbench_mp_e_form_co_0.parquet
 artifacts/validation/engine02v_qm9_alpha/
 artifacts/validation/engine02v_qm9_alpha_rerun02/
 artifacts/validation/nest2e_pfas_pathway_rerun03/
+artifacts/validation/datasets/rcsb_pdb/
 artifacts/v8/residual_stream_bridge/point_clouds/
 artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory/
 artifacts/v8/residual_stream_bridge/point_clouds_dense_trajectory_rerun_02/

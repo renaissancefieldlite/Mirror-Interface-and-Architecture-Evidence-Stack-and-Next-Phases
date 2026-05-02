@@ -260,6 +260,11 @@ Completed enough to show:
   top_overlap `k=1000` drop `0.058914327`, p `0.001996008`.
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
+- `Nest 2D` now has an executed allostery graph pass: official AlloBench labels
+  join to `98` RCSB PDB contact graphs, but the contact-only residue mapper
+  remains open (`Mirror mean Jaccard 0.013451875` vs `PASSer_Ensemble 0.19733`
+  and active-proximity control `0.031329339`). This turns the next allostery
+  gate into a precise pocket/pathway upgrade rather than a missing-data claim.
 - the cosmic / universal nests are mapped as candidate bridge layers for later
   real-data gates
 - the local visual companion can demonstrate the whole lattice
@@ -281,7 +286,8 @@ Immediate next work:
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-5. run `Nest 2D` allostery against protein contact / pocket / pathway labels
+5. run `Nest 2D-2` allostery with chain-resolved active-site mapping, pocket
+   candidates, and active-site to allosteric-site communication-path scoring
 6. upgrade `Nest 2E` PFAS into bad-descendant and safety scoring against
    known degradation-pathway data
 7. strengthen `Nest 2F` with structure-aware materials / crystal-stability

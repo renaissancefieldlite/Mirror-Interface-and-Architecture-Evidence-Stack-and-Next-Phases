@@ -2,13 +2,14 @@
 
 Date: `2026-05-02`
 
-Status: `closeout_protocol_locked_after_label_bridge`
+Status: `first_graph_mapper_run_complete_open`
 
 Companion inputs:
 
 - [Nest 2D Allostery Benchmark Extraction](../artifacts/validation/nest2d_allostery_benchmark/nest2d_allostery_benchmark_report.md)
 - [Nest 2D Allostery Label Bridge](../artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_bridge_report.md)
 - [Nest 2D Allostery Label Manifest Template](../artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_manifest_template.csv)
+- [Nest 2D Allostery Graph Mapper Report](../artifacts/validation/nest2d_allostery_graph_mapper/nest2d_allostery_graph_mapper_report.md)
 
 ## Purpose
 
@@ -63,6 +64,53 @@ Use the same `100` PDB rows and compare:
 | shortest active-site path | graph-naive communication-path control |
 | random pocket | random structural control |
 | shuffled allosteric labels | label-shuffle control |
+
+## First Graph Mapper Execution
+
+The first implementation pass is now complete:
+
+- official AlloBench source CSV joined to the benchmark rows
+- source label overlap: `98/100` PDB rows
+- RCSB structures resolved into residue-contact graphs: `98`
+- scored rows: `98`
+- contact cutoff: `8.0 A`
+- random trials: `500`
+
+Result:
+
+| Metric | Value |
+| --- | ---: |
+| Mirror mean Jaccard | `0.013452` |
+| Best existing AlloBench tool mean Jaccard | `0.197330` |
+| Best existing tool | `PASSer_Ensemble` |
+| Degree mean Jaccard | `0.006597` |
+| Closeness mean Jaccard | `0.017282` |
+| Active-proximity mean Jaccard | `0.031329` |
+| Random mean Jaccard | `0.014990` |
+| Random-control p-value | `0.722555` |
+
+Clean read:
+
+```text
+The first contact-only residue graph mapper does not close Nest 2D.
+It validates the data bridge and the execution mechanics, but exact residue
+top-k contact scoring is weaker than the strongest AlloBench tool baseline and
+weaker than the active-proximity graph control.
+```
+
+What moved:
+
+- allosteric labels are now attached from the public AlloBench source
+- active-site labels are attached
+- real PDB structures are cached locally for execution
+- residue-contact graphs exist for the scored rows
+- graph controls and random / shuffled controls run on the same objects
+
+What did not move:
+
+- mapper support is not claimed on contact-only residue scoring
+- allostery needs pocket-level and communication-path scoring, not just exact
+  residue recovery from plain contact graphs
 
 ## Execution Sequence
 
@@ -142,16 +190,15 @@ and
 repeat holds on second split / benchmark
 ```
 
-## Immediate Next Build
+## Immediate 2D-2 Upgrade
 
-Build `nest2d_allostery_graph_mapper.py` with these stages:
+The next run keeps the same benchmark surface and strengthens the biological
+representation:
 
-- `download_structures`: pull PDB/mmCIF files for the manifest PDB IDs
-- `build_contact_graphs`: residue nodes, spatial-contact edges
-- `build_pocket_graphs`: pocket / residue-cluster nodes and proximity edges
-- `attach_labels`: allosteric-site and active-site labels
-- `run_baselines`: degree, centrality, shortest path, random pocket, shuffled labels
-- `run_mapper`: candidate Mirror mapper path / pocket score
-- `score`: Jaccard, communication-path recovery, permutation controls
-- `report`: table against AlloBench tools, added pocket tools, and controls
-
+- chain-resolve active-site labels instead of broad residue-number matching
+- build pocket candidates from local geometry or external pocket tools where available
+- score active-site to allosteric-site communication paths and bottlenecks
+- compare pocket/path recovery against `PASSer_Ensemble`, graph controls,
+  random pockets, and shuffled labels
+- repeat on a second split or second allostery set only after the same-100-PDB
+  pocket/path run beats controls

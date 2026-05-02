@@ -9,6 +9,7 @@ Companion reports:
 - [Nest 2D Allostery Benchmark Extraction](../artifacts/validation/nest2d_allostery_benchmark/nest2d_allostery_benchmark_report.md)
 - [Nest 2D Allostery Label Bridge](../artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_bridge_report.md)
 - [Nest 2D Allostery Mapper Closeout Protocol](./NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
+- [Nest 2D Allostery Graph Mapper](../artifacts/validation/nest2d_allostery_graph_mapper/nest2d_allostery_graph_mapper_report.md)
 - [Nest 2E PFAS Pathway Validation](../artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
 - [Nest 2E PFAS Pathway Rerun](../artifacts/validation/nest2e_pfas_pathway_rerun02/nest2e_pfas_pathway_report.md)
 - [Nest 2F Materials Stability Validation](../artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
@@ -17,20 +18,14 @@ Companion reports:
 
 ## Purpose
 
-This pass continues the Nest 2 rule:
-
-```text
-no synthetic-only chemistry claims
-```
-
-Each gate must touch a real public dataset, a real measurement surface, or a
-real benchmark table.
+This pass continues the Nest 2 rule: each gate earns its status by touching a
+real public dataset, a real measurement surface, or a real benchmark table.
 
 ## Gate Summary
 
 | Gate | Dataset / Source | Status | Clean Read |
 | --- | --- | --- | --- |
-| `Nest 2D` allostery | AlloBench supporting-information benchmark table | `label_bridge_ready` | real allostery benchmark surface extracted and converted into a contact / pocket / residue-label manifest for the mapper scoring pass |
+| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures | `graph_mapper_open` | 98 benchmark rows now join to real allosteric / active-site labels and residue-contact graphs; first contact-only mapper is weaker than PASSer and active-proximity controls, so 2D-2 moves to pocket/path scoring |
 | `Nest 2E` PFAS pathways | EPA PFAS reaction library `EnvLib + MetaLib` | `supported` | true parent/product transformations beat shuffled parent/product controls |
 | `Nest 2F` materials stability | Matbench / Materials Project `mp_e_form` | `supported` | composition/structure descriptors recover DFT formation energy above shuffled-target controls |
 | `Nest 2G` stronger baselines | ESOL, Lipophilicity, FreeSolv, QM9 alpha | `supported` | multifeature RDKit train/test baselines strengthen the molecule-property lane |
@@ -78,6 +73,24 @@ Clean bridge read:
 Nest 2D now has a real allostery benchmark surface, baseline difficulty
 statistics, and a contact / pocket / residue-label manifest template for the
 mapper scoring pass.
+```
+
+First graph mapper pass:
+
+- public AlloBench source-label overlap: `98/100`
+- RCSB PDB contact graphs scored: `98`
+- Mirror mean Jaccard: `0.013452`
+- best existing tool mean Jaccard: `0.197330` (`PASSer_Ensemble`)
+- active-proximity control mean Jaccard: `0.031329`
+- random-control p-value: `0.722555`
+
+Clean graph read:
+
+```text
+Nest 2D now has real labels joined to real protein structures, but the
+contact-only residue mapper remains open. The next move is pocket/path scoring:
+chain-resolved active sites, pocket candidate graphs, and active-site to
+allosteric-site communication-path recovery.
 ```
 
 Combined closeout design:
@@ -177,8 +190,9 @@ It now has:
 - stronger RDKit descriptor / baseline support
 - real PFAS pathway-coherence support
 - real materials-stability support
-- a real allostery benchmark surface extracted and a mapper-readiness bridge
-  prepared for contact / pocket / residue labels
+- a real allostery benchmark surface with source residue labels joined to
+  `98` PDB contact graphs; the first contact-only mapper run remains open and
+  points to pocket/path scoring as the proper closeout route
 
 The claim remains bounded:
 

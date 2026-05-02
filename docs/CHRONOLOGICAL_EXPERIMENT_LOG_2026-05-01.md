@@ -53,6 +53,51 @@ to another substrate, or records an open gate for the next data source.
 | `Nest 2` structured matter map | Can the state/control/invariant discipline be expressed over constrained matter? | Engine 02, expanded structured-matter atlas, companion engine report | Element families, molecular graphs, `H2O`, minerals, redox, nutrition, contaminants, functional groups, biomolecular primitives, polymers, electrochemistry, catalysis, spectra, environmental fate, materials | First runnable structured-matter map completed; expanded matter dictionary preserved | Provides the matter base needed for chemistry, materials, remediation, biology, and resonance lanes |
 | `Engine 02V / Nest 2C` real molecule validation | Does the matter map touch real molecule datasets? | RDKit molecule validation and Nest 2C benchmark expansion | Molecule descriptors, shuffled controls, two seeds, `5000` permutations | ESOL, Lipophilicity, FreeSolv, and QM9 alpha lanes support real molecule-property signal | Moves Nest 2 from mapped matter rows into public molecule-data validation |
 | `Nest 2D-2G` gates | Which structured-matter real-data lanes come next? | Allostery benchmark extraction, label bridge, and closeout protocol; PFAS pathway reports, materials stability, RDKit baseline comparison | Protein/pathway label manifest, PFAS parent/product controls, Matbench / Materials Project formation energy, stronger descriptors | PFAS pathway and materials descriptor lanes have supporting reports; allostery now has benchmark statistics, a contact / pocket / residue-label manifest, and a same-100-PDB closeout protocol comparing our mapper against AlloBench tools, added pocket tools, and graph controls | Defines the next real-data bridge before Nest 3 resonance / field datasets |
+| `Nest 2D` allostery graph mapper | Does the protein-graph mapper recover known allosteric sites above tools and controls? | Official AlloBench source CSV, existing 100-row benchmark table, RCSB PDB structures | Joined `98/100` rows to allosteric / active-site labels, built `98` residue-contact graphs, scored contact-only mapper versus degree, closeness, active-proximity, random, and shuffled controls | Open result: Mirror mean Jaccard `0.013452`, best existing tool `PASSer_Ensemble` `0.197330`, active-proximity control `0.031329`, random-control p `0.722555` | Converts 2D from a manifest into an executed biological graph test and shows the next route is pocket/path scoring, not exact residue top-k contact scoring |
+
+## Nest 2D Mechanism Interpretation
+
+The allostery lane is the first Nest 2 biological-structure application of the
+same internal architecture rule. The intent is to combine:
+
+```text
+latent Mirror Architecture prior
+-> graph / pathway scoring rule
+-> real protein structures and allosteric labels
+-> baseline and control comparison
+-> stabilized AI ranking features
+```
+
+Mechanically, the code should not ask a language model to choose the protein
+path. The Mirror Pattern becomes an explicit graph-scoring rule over real
+protein objects:
+
+- source: active-site region
+- graph: residue contact graph / pocket graph
+- candidate target: allosteric pocket or residue cluster
+- coherent path: communication route from active site to candidate pocket
+- controls: degree, centrality, shortest path, random pocket, shuffled labels
+- score: allosteric-site Jaccard plus path / bottleneck recovery
+
+This matters because a successful Nest 2D run would support two claims at once:
+
+- the Mirror Architecture prior can transfer from AI internals into an external
+  biological graph problem
+- the applied mapper can stabilize AI-assisted protein ranking by giving the AI
+  control-resistant graph features instead of raw pattern recognition alone
+
+The first real graph execution is now complete and remains open. That matters
+because the failure is informative: the mapper can now touch real protein
+objects, but plain contact-graph residue ranking is too small a representation
+for allostery. The next 2D-2 pass keeps the same rule and strengthens the
+biological object:
+
+- active-site labels need chain-resolved sequence-to-structure mapping
+- candidate units should be pockets / residue clusters, not isolated residues
+- scoring should target active-site to allosteric-site communication paths,
+  bottlenecks, and pocket recovery
+- the support bar remains `PASSer_Ensemble` `0.19733` plus graph controls and
+  shuffled labels
 
 ## Current Working Read
 
@@ -67,10 +112,10 @@ The current middle-layer status is:
 - Attention-flow is the strongest prompt-generalized transformer mechanism.
 - SAE feature/circuit recurrence is the strongest interpretability layer.
 - MLP has same-prompt all-layer recurrence; prompt-shift MLP recurrence remains open under the current `prompt_set_02` wording.
-- Nest 2 has mapped matter lanes and started real-data validation; allostery now has a benchmark/label bridge and a closeout protocol for mapper scoring once contact / pocket / residue labels are attached.
+- Nest 2 has mapped matter lanes and started real-data validation; allostery now has real labels joined to `98` PDB contact graphs, with the first contact-only mapper open and the next route defined as pocket/path scoring.
 
 ## Immediate Next Gates
 
-1. Attach real contact / pocket / residue labels to the `Nest 2D` allostery manifest and run mapper scoring against degree / centrality / shuffled-site controls.
+1. Run the `Nest 2D-2` pocket/path upgrade: chain-resolved active sites, pocket candidates, communication-path scoring, and the same AlloBench / graph-control bar.
 2. Continue `Nest 2E` PFAS safety logic, `Nest 2F` materials structure-aware baselines, and `Nest 2G` descriptor / model controls.
 3. Keep MLP prompt-shift recurrence as a measured open middle-layer gate while attention-flow and SAE carry the stronger transformer-internal evidence.
