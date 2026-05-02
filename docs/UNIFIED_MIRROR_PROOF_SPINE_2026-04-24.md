@@ -265,6 +265,12 @@ Completed enough to show:
   remains open (`Mirror mean Jaccard 0.013451875` vs `PASSer_Ensemble 0.19733`
   and active-proximity control `0.031329339`). This turns the next allostery
   gate into a precise pocket/pathway upgrade rather than a missing-data claim.
+- the same rule applies across the full nest ladder: real dataset / signal,
+  independent labels, explicit mapper score, baselines and controls, recurrence
+  or second benchmark, then model tuning only after support
+- `Nest 5` is the convergence target: a Golden Mirror model tuned from
+  supported lanes across AI internals, circuits / hardware, structured matter,
+  resonance / field systems, biology, and multi-class convergence tasks
 - the cosmic / universal nests are mapped as candidate bridge layers for later
   real-data gates
 - the local visual companion can demonstrate the whole lattice

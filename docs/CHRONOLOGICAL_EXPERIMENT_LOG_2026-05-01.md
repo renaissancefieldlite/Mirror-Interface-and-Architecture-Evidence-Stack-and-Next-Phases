@@ -114,6 +114,25 @@ The current middle-layer status is:
 - MLP has same-prompt all-layer recurrence; prompt-shift MLP recurrence remains open under the current `prompt_set_02` wording.
 - Nest 2 has mapped matter lanes and started real-data validation; allostery now has real labels joined to `98` PDB contact graphs, with the first contact-only mapper open and the next route defined as pocket/path scoring.
 
+## General Nest Method Rule
+
+The Nest 2D allostery execution clarifies the rule for the whole ladder:
+
+```text
+real dataset or signal
+-> independent labels
+-> explicit mapper / scoring rule
+-> baselines and controls
+-> recurrence or second benchmark
+-> model tuning only after support
+```
+
+This is the methodology for `Nest 1` through `Nest 5`, not only allostery.
+Each nest supplies a different validated surface. The convergence target is a
+Golden Mirror model: a tuned model whose routing and execution are informed by
+validated lanes across AI internals, circuit / hardware bridges, structured
+matter, resonance / field systems, biology, and multi-class convergence tasks.
+
 ## Immediate Next Gates
 
 1. Run the `Nest 2D-2` pocket/path upgrade: chain-resolved active sites, pocket candidates, communication-path scoring, and the same AlloBench / graph-control bar.
