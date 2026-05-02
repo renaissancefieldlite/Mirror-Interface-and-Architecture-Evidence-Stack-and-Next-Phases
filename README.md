@@ -251,17 +251,17 @@ next.
   coherence and safety logic, materials formation-energy validation, and
   stronger descriptor / model baselines.
 
-  `Nest 2D` has now moved from mapper-readiness into the first real protein
-  graph execution pass. The AlloBench source labels join to `98/100` benchmark
-  PDB rows, `98` RCSB structures were resolved into residue-contact graphs,
-  and the first contact-only mapper was scored against degree, closeness,
-  active-proximity, random-residue, and shuffled-label controls. The result is
-  open rather than supported: Mirror mean Jaccard `0.013452` trails the
-  strongest existing AlloBench tool baseline (`PASSer_Ensemble`, `0.19733`)
-  and the active-proximity graph control (`0.031329`). The useful finding is
-  mechanical: residue labels and contact graphs are now attached, and the
-  next 2D-2 pass must use chain-resolved active-site mapping, pocket candidates,
-  and communication-path scoring rather than exact residue top-k alone.
+  `Nest 2D` has moved from mapper-readiness into executed protein graph runs.
+  The AlloBench source labels join to `98/100` benchmark PDB rows, and `98`
+  RCSB structures were resolved into residue-contact graphs. The first
+  contact-only mapper was a useful low baseline (`Mirror mean Jaccard
+  0.013452`). The 2D-2 pocket/path upgrade improved the biological object and
+  beat graph pocket controls (`Mirror pocket/path 0.032975`, random/shuffle
+  p `0.001996`), while the strongest existing AlloBench tool remains the
+  higher blind-prediction bar (`PASSer_Ensemble`, `0.19733`). The 2D-3
+  bound-ligand contact diagnostic then confirmed the real pocket/contact
+  feature source: mean ligand-contact Jaccard `0.263504`, median `0.230952`,
+  `56` rows >= `0.2`, and `12` rows >= `0.5`.
 
 - `Nest 3`
   The classical-coherence map is the planned bridge from matter structure into
@@ -460,6 +460,8 @@ Latest gate reports:
 - [Nest 2D Allostery Mapper Closeout Protocol](./docs/NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
 - [Nest 2D Allostery Label Bridge Report](./artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_bridge_report.md)
 - [Nest 2D Allostery Graph Mapper Report](./artifacts/validation/nest2d_allostery_graph_mapper/nest2d_allostery_graph_mapper_report.md)
+- [Nest 2D-2 Allostery Pocket / Path Mapper Report](./artifacts/validation/nest2d_allostery_pocket_path_mapper/nest2d_allostery_pocket_path_mapper_report.md)
+- [Nest 2D-3 Allostery Ligand-Contact Diagnostic](./artifacts/validation/nest2d_allostery_ligand_contact_diagnostic/nest2d_allostery_ligand_contact_diagnostic_report.md)
 - [Nest 2E PFAS Pathway Validation Report](./artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
 - [Nest 2F Materials Stability Report](./artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
 - [Nest 2G RDKit Stronger Baseline Report](./artifacts/validation/nest2g_rdkit_baseline_comparison/nest2g_rdkit_baseline_comparison_report.md)
@@ -513,9 +515,11 @@ Start here if you only have a few minutes:
 45. [Nest 2D Allostery Mapper Closeout Protocol](./docs/NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
 46. [Nest 2D Allostery Label Bridge Report](./artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_bridge_report.md)
 47. [Nest 2D Allostery Graph Mapper Report](./artifacts/validation/nest2d_allostery_graph_mapper/nest2d_allostery_graph_mapper_report.md)
-48. [Nest 2E PFAS Pathway Report](./artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
-49. [Nest 2F Materials Stability Report](./artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
-50. [Nest 2G RDKit Stronger Baseline Report](./artifacts/validation/nest2g_rdkit_baseline_comparison/nest2g_rdkit_baseline_comparison_report.md)
+48. [Nest 2D-2 Allostery Pocket / Path Mapper Report](./artifacts/validation/nest2d_allostery_pocket_path_mapper/nest2d_allostery_pocket_path_mapper_report.md)
+49. [Nest 2D-3 Allostery Ligand-Contact Diagnostic](./artifacts/validation/nest2d_allostery_ligand_contact_diagnostic/nest2d_allostery_ligand_contact_diagnostic_report.md)
+50. [Nest 2E PFAS Pathway Report](./artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
+51. [Nest 2F Materials Stability Report](./artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
+52. [Nest 2G RDKit Stronger Baseline Report](./artifacts/validation/nest2g_rdkit_baseline_comparison/nest2g_rdkit_baseline_comparison_report.md)
 50. [Crossover Precursor Prototype Lanes](./docs/CROSSOVER_PRECURSOR_PROTOTYPE_LANES_2026-04-24.md)
 51. [Nest 2 Constrained Structured Systems Foundation](./docs/NEST2_CONSTRAINED_STRUCTURED_SYSTEMS_FOUNDATION_2026-04-24.md)
 52. [Nest 2 Structured Matter Completion](./docs/NEST2_STRUCTURED_MATTER_COMPLETION_2026-04-24.md)

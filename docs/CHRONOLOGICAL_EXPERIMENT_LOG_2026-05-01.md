@@ -54,6 +54,8 @@ to another substrate, or records an open gate for the next data source.
 | `Engine 02V / Nest 2C` real molecule validation | Does the matter map touch real molecule datasets? | RDKit molecule validation and Nest 2C benchmark expansion | Molecule descriptors, shuffled controls, two seeds, `5000` permutations | ESOL, Lipophilicity, FreeSolv, and QM9 alpha lanes support real molecule-property signal | Moves Nest 2 from mapped matter rows into public molecule-data validation |
 | `Nest 2D-2G` gates | Which structured-matter real-data lanes come next? | Allostery benchmark extraction, label bridge, and closeout protocol; PFAS pathway reports, materials stability, RDKit baseline comparison | Protein/pathway label manifest, PFAS parent/product controls, Matbench / Materials Project formation energy, stronger descriptors | PFAS pathway and materials descriptor lanes have supporting reports; allostery now has benchmark statistics, a contact / pocket / residue-label manifest, and a same-100-PDB closeout protocol comparing our mapper against AlloBench tools, added pocket tools, and graph controls | Defines the next real-data bridge before Nest 3 resonance / field datasets |
 | `Nest 2D` allostery graph mapper | Does the protein-graph mapper recover known allosteric sites above tools and controls? | Official AlloBench source CSV, existing 100-row benchmark table, RCSB PDB structures | Joined `98/100` rows to allosteric / active-site labels, built `98` residue-contact graphs, scored contact-only mapper versus degree, closeness, active-proximity, random, and shuffled controls | Open result: Mirror mean Jaccard `0.013452`, best existing tool `PASSer_Ensemble` `0.197330`, active-proximity control `0.031329`, random-control p `0.722555` | Converts 2D from a manifest into an executed biological graph test and shows the next route is pocket/path scoring, not exact residue top-k contact scoring |
+| `Nest 2D-2` pocket/path mapper | Does a better biological object improve allostery recovery? | Official AlloBench labels, cached RCSB PDB structures, residue-contact graphs | Chain-resolved active-site sources, geometric pocket candidates, active-site-to-pocket path / bottleneck scoring, degree / closeness / active-proximity / random / shuffled controls | `Mirror pocket/path` mean Jaccard `0.032975` beats previous contact-only `0.013452`, degree `0.010861`, closeness `0.018515`, active-proximity `0.014508`, random `0.012007`, with random/shuffle p `0.001996`; `PASSer_Ensemble` `0.197330` remains the stronger blind-prediction bar | Confirms the Waka strategy direction: allostery needs pocket/path objects, and the next blind closeout needs real pocket-tool or ligand-contact features |
+| `Nest 2D-3` ligand-contact diagnostic | Do the AlloBench labels align with real bound-pocket contact geometry? | Official AlloBench modulator fields plus cached RCSB PDB `HETATM` ligand geometry | Bound ligand residues matched to PDB coordinates, protein residues within `5.0 A`, Jaccard against AlloBench allosteric labels | Mean ligand-contact Jaccard `0.263504`, median `0.230952`, `56` rows >= `0.2`, `12` rows >= `0.5`, above `PASSer_Ensemble` mean `0.197330` | Validates the pocket/contact feature source for the next blind allosteric mapper while keeping prediction closeout separate |
 
 ## Nest 2D Mechanism Interpretation
 
@@ -98,6 +100,12 @@ biological object:
   bottlenecks, and pocket recovery
 - the support bar remains `PASSer_Ensemble` `0.19733` plus graph controls and
   shuffled labels
+- the Waka strategy upgrade improved the biological representation: pocket/path
+  scoring beat graph controls with p `0.001996` while remaining below the
+  strongest tool bar
+- bound-ligand contact geometry recovered the labels above the strongest
+  mean-Jaccard tool bar (`0.263504` vs `0.197330`), confirming the next feature
+  source is real pocket/contact structure
 
 ## Current Working Read
 
@@ -112,7 +120,7 @@ The current middle-layer status is:
 - Attention-flow is the strongest prompt-generalized transformer mechanism.
 - SAE feature/circuit recurrence is the strongest interpretability layer.
 - MLP has same-prompt all-layer recurrence; prompt-shift MLP recurrence remains open under the current `prompt_set_02` wording.
-- Nest 2 has mapped matter lanes and started real-data validation; allostery now has real labels joined to `98` PDB contact graphs, with the first contact-only mapper open and the next route defined as pocket/path scoring.
+- Nest 2 has mapped matter lanes and started real-data validation; allostery now has real labels joined to `98` PDB contact graphs, pocket/path scoring that beats graph controls, and a supported bound-ligand contact feature diagnostic.
 
 ## General Nest Method Rule
 
@@ -135,6 +143,6 @@ matter, resonance / field systems, biology, and multi-class convergence tasks.
 
 ## Immediate Next Gates
 
-1. Run the `Nest 2D-2` pocket/path upgrade: chain-resolved active sites, pocket candidates, communication-path scoring, and the same AlloBench / graph-control bar.
+1. Run the `Nest 2D-4` blind mapper upgrade: external pocket-tool candidates or local ligand-informed pocket features, communication-path scoring, and the same AlloBench / graph-control bar.
 2. Continue `Nest 2E` PFAS safety logic, `Nest 2F` materials structure-aware baselines, and `Nest 2G` descriptor / model controls.
 3. Keep MLP prompt-shift recurrence as a measured open middle-layer gate while attention-flow and SAE carry the stronger transformer-internal evidence.

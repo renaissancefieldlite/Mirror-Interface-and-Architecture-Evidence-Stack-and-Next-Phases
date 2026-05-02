@@ -261,10 +261,12 @@ Completed enough to show:
 - the matter nest is mapped and has a local `Engine 02` methodology
   demonstrator
 - `Nest 2D` now has an executed allostery graph pass: official AlloBench labels
-  join to `98` RCSB PDB contact graphs, but the contact-only residue mapper
-  remains open (`Mirror mean Jaccard 0.013451875` vs `PASSer_Ensemble 0.19733`
-  and active-proximity control `0.031329339`). This turns the next allostery
-  gate into a precise pocket/pathway upgrade rather than a missing-data claim.
+  join to `98` RCSB PDB contact graphs. The contact-only residue mapper set
+  the low baseline (`Mirror mean Jaccard 0.013451875`), the `2D-2`
+  pocket/path upgrade improved the biological object and beat graph controls
+  (`0.032974824`, random/shuffle p `0.001996008`), and the `2D-3`
+  ligand-contact diagnostic confirmed a real pocket/contact feature source
+  (`mean Jaccard 0.263504052`, median `0.230952381`).
 - the same rule applies across the full nest ladder: real dataset / signal,
   independent labels, explicit mapper score, baselines and controls, recurrence
   or second benchmark, then model tuning only after support
@@ -292,8 +294,9 @@ Immediate next work:
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-5. run `Nest 2D-2` allostery with chain-resolved active-site mapping, pocket
-   candidates, and active-site to allosteric-site communication-path scoring
+5. run `Nest 2D-4` allostery with external pocket candidates or local
+   ligand-informed pocket features, plus active-site to allosteric-site
+   communication-path scoring under the same blind-prediction bar
 6. upgrade `Nest 2E` PFAS into bad-descendant and safety scoring against
    known degradation-pathway data
 7. strengthen `Nest 2F` with structure-aware materials / crystal-stability

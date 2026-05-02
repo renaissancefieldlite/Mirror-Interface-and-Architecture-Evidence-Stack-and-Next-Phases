@@ -2,7 +2,7 @@
 
 Date: `2026-05-02`
 
-Status: `first_graph_mapper_run_complete_open`
+Status: `pocket_path_upgrade_complete_partial`
 
 Companion inputs:
 
@@ -10,6 +10,8 @@ Companion inputs:
 - [Nest 2D Allostery Label Bridge](../artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_bridge_report.md)
 - [Nest 2D Allostery Label Manifest Template](../artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_manifest_template.csv)
 - [Nest 2D Allostery Graph Mapper Report](../artifacts/validation/nest2d_allostery_graph_mapper/nest2d_allostery_graph_mapper_report.md)
+- [Nest 2D-2 Allostery Pocket / Path Mapper Report](../artifacts/validation/nest2d_allostery_pocket_path_mapper/nest2d_allostery_pocket_path_mapper_report.md)
+- [Nest 2D-3 Allostery Ligand-Contact Diagnostic](../artifacts/validation/nest2d_allostery_ligand_contact_diagnostic/nest2d_allostery_ligand_contact_diagnostic_report.md)
 
 ## Purpose
 
@@ -92,10 +94,10 @@ Result:
 Clean read:
 
 ```text
-The first contact-only residue graph mapper does not close Nest 2D.
-It validates the data bridge and the execution mechanics, but exact residue
-top-k contact scoring is weaker than the strongest AlloBench tool baseline and
-weaker than the active-proximity graph control.
+The first contact-only residue graph mapper sets the low baseline for Nest 2D.
+It validates the data bridge and the execution mechanics, while exact residue
+top-k contact scoring stays below the strongest AlloBench tool baseline and
+below the active-proximity graph control.
 ```
 
 What moved:
@@ -106,11 +108,69 @@ What moved:
 - residue-contact graphs exist for the scored rows
 - graph controls and random / shuffled controls run on the same objects
 
-What did not move:
+Remaining gate:
 
-- mapper support is not claimed on contact-only residue scoring
+- mapper support moves through pocket/path scoring rather than contact-only
+  residue scoring
 - allostery needs pocket-level and communication-path scoring, not just exact
   residue recovery from plain contact graphs
+
+## 2D-2 Pocket / Path Upgrade
+
+The Waka strategy upgrade is now complete on the same `98` scored structures:
+
+- chain-resolved active-site sources
+- geometric pocket candidates from residue-contact neighborhoods
+- active-site-to-pocket path / bottleneck score
+- graph pocket controls: degree, closeness, active proximity, random pockets,
+  and shuffled labels
+
+Result:
+
+| Metric | Value |
+| --- | ---: |
+| Mirror pocket/path mean Jaccard | `0.032975` |
+| Previous contact-only Mirror mean Jaccard | `0.013452` |
+| Degree pocket mean Jaccard | `0.010861` |
+| Closeness pocket mean Jaccard | `0.018515` |
+| Active-proximity pocket mean Jaccard | `0.014508` |
+| Random pocket mean Jaccard | `0.012007` |
+| Random-control p-value | `0.001996` |
+| Label-shuffle p-value | `0.001996` |
+| Best existing AlloBench tool mean Jaccard | `0.197330` |
+
+Clean read:
+
+```text
+Pocket/path scoring improves the biological representation and beats graph
+pocket controls. The strongest existing AlloBench tool remains the higher
+blind-prediction closeout bar.
+```
+
+## 2D-3 Ligand-Contact Diagnostic
+
+The local environment currently has no `fpocket`, `P2Rank`, or `PrankWeb`
+binary available, so the next available feature-source diagnostic used bound
+ligand/contact geometry already present in the PDB files.
+
+Result:
+
+| Metric | Value |
+| --- | ---: |
+| Scored source rows | `94` |
+| Mean ligand-contact Jaccard | `0.263504` |
+| Median ligand-contact Jaccard | `0.230952` |
+| Rows >= `0.2` Jaccard | `56` |
+| Rows >= `0.5` Jaccard | `12` |
+| Best existing AlloBench tool mean Jaccard | `0.197330` |
+
+Clean read:
+
+```text
+Bound-ligand contact geometry confirms the AlloBench labels map onto real
+pocket/contact structure and supplies a strong feature source for the next
+blind allosteric mapper.
+```
 
 ## Execution Sequence
 
@@ -190,13 +250,15 @@ and
 repeat holds on second split / benchmark
 ```
 
-## Immediate 2D-2 Upgrade
+## Immediate 2D-4 Upgrade
 
-The next run keeps the same benchmark surface and strengthens the biological
-representation:
+The next run keeps the same benchmark surface and adds true pocket-tool or
+ligand-informed features to the blind mapper:
 
-- chain-resolve active-site labels instead of broad residue-number matching
-- build pocket candidates from local geometry or external pocket tools where available
+- add real pocket-tool candidates where available: `fpocket`, `P2Rank`, or
+  `PrankWeb`
+- add ligand/contact geometry as training / feature guidance while preserving a
+  blind-prediction evaluation split
 - score active-site to allosteric-site communication paths and bottlenecks
 - compare pocket/path recovery against `PASSer_Ensemble`, graph controls,
   random pockets, and shuffled labels

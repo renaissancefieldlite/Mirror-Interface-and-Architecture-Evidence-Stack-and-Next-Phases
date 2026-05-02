@@ -10,6 +10,8 @@ Companion reports:
 - [Nest 2D Allostery Label Bridge](../artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_bridge_report.md)
 - [Nest 2D Allostery Mapper Closeout Protocol](./NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
 - [Nest 2D Allostery Graph Mapper](../artifacts/validation/nest2d_allostery_graph_mapper/nest2d_allostery_graph_mapper_report.md)
+- [Nest 2D-2 Allostery Pocket / Path Mapper](../artifacts/validation/nest2d_allostery_pocket_path_mapper/nest2d_allostery_pocket_path_mapper_report.md)
+- [Nest 2D-3 Allostery Ligand-Contact Diagnostic](../artifacts/validation/nest2d_allostery_ligand_contact_diagnostic/nest2d_allostery_ligand_contact_diagnostic_report.md)
 - [Nest 2E PFAS Pathway Validation](../artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
 - [Nest 2E PFAS Pathway Rerun](../artifacts/validation/nest2e_pfas_pathway_rerun02/nest2e_pfas_pathway_report.md)
 - [Nest 2F Materials Stability Validation](../artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
@@ -25,7 +27,7 @@ real public dataset, a real measurement surface, or a real benchmark table.
 
 | Gate | Dataset / Source | Status | Clean Read |
 | --- | --- | --- | --- |
-| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures | `graph_mapper_open` | 98 benchmark rows now join to real allosteric / active-site labels and residue-contact graphs; first contact-only mapper is weaker than PASSer and active-proximity controls, so 2D-2 moves to pocket/path scoring |
+| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures | `pocket_path_partial / ligand_contact_supported` | 98 benchmark rows join to real labels and contact graphs; 2D-2 pocket/path scoring beats graph controls while PASSer remains the blind-prediction bar; 2D-3 bound-ligand contacts confirm real pocket/contact geometry |
 | `Nest 2E` PFAS pathways | EPA PFAS reaction library `EnvLib + MetaLib` | `supported` | true parent/product transformations beat shuffled parent/product controls |
 | `Nest 2F` materials stability | Matbench / Materials Project `mp_e_form` | `supported` | composition/structure descriptors recover DFT formation energy above shuffled-target controls |
 | `Nest 2G` stronger baselines | ESOL, Lipophilicity, FreeSolv, QM9 alpha | `supported` | multifeature RDKit train/test baselines strengthen the molecule-property lane |
@@ -93,6 +95,43 @@ chain-resolved active sites, pocket candidate graphs, and active-site to
 allosteric-site communication-path recovery.
 ```
 
+2D-2 pocket/path result:
+
+- scored rows: `98`
+- previous contact-only Mirror mean Jaccard: `0.013452`
+- Mirror pocket/path mean Jaccard: `0.032975`
+- degree pocket mean Jaccard: `0.010861`
+- closeness pocket mean Jaccard: `0.018515`
+- active-proximity pocket mean Jaccard: `0.014508`
+- random-control p-value: `0.001996`
+- label-shuffle p-value: `0.001996`
+- strongest existing AlloBench tool mean Jaccard: `0.197330`
+
+Clean 2D-2 read:
+
+```text
+Pocket/path scoring improves the biological object and beats graph pocket
+controls, while the strongest tool bar remains the blind-prediction closeout
+target.
+```
+
+2D-3 ligand-contact diagnostic:
+
+- source rows in benchmark: `98`
+- scored bound-ligand contact rows: `94`
+- mean ligand-contact Jaccard: `0.263504`
+- median ligand-contact Jaccard: `0.230952`
+- rows >= `0.2` Jaccard: `56`
+- rows >= `0.5` Jaccard: `12`
+
+Clean 2D-3 read:
+
+```text
+Bound-ligand contact geometry confirms the AlloBench labels map onto real
+pocket/contact structure and supplies a validated feature source for the next
+blind allosteric mapper.
+```
+
 Combined closeout design:
 
 Use the same `100` PDB rows and compare the Mirror mapper against:
@@ -132,8 +171,8 @@ Important boundary read:
 - rows with any fluorine or C-F bond reduction: `0.3370`
 - rows retaining high fluorination / C-F burden: `0.8424`
 
-This means the pathway-coherence comparator is supported, but PFAS
-mineralization / safe byproduct generation is not claimed.
+This means the pathway-coherence comparator is supported, while PFAS
+mineralization / safe byproduct generation remains its own scoring pass.
 
 ## Nest 2F: Materials / Crystal Stability
 
@@ -182,7 +221,8 @@ held-out prediction controls
 
 ## Overall Read
 
-`Nest 2` is no longer only a structured-matter validation map map.
+`Nest 2` has moved beyond a structured-matter validation map into executed
+real-data gates.
 
 It now has:
 
@@ -191,8 +231,9 @@ It now has:
 - real PFAS pathway-coherence support
 - real materials-stability support
 - a real allostery benchmark surface with source residue labels joined to
-  `98` PDB contact graphs; the first contact-only mapper run remains open and
-  points to pocket/path scoring as the proper closeout route
+  `98` PDB contact graphs; pocket/path scoring improves and beats graph
+  controls, and ligand-contact geometry confirms a real pocket/contact feature
+  source for the next blind mapper
 
 The claim remains bounded:
 
