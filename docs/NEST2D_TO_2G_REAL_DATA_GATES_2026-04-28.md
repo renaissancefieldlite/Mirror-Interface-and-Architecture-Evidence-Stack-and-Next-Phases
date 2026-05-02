@@ -7,6 +7,8 @@ Status: `completed_mixed_real_data_closeout`
 Companion reports:
 
 - [Nest 2D Allostery Benchmark Extraction](../artifacts/validation/nest2d_allostery_benchmark/nest2d_allostery_benchmark_report.md)
+- [Nest 2D Allostery Label Bridge](../artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_bridge_report.md)
+- [Nest 2D Allostery Mapper Closeout Protocol](./NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
 - [Nest 2E PFAS Pathway Validation](../artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
 - [Nest 2E PFAS Pathway Rerun](../artifacts/validation/nest2e_pfas_pathway_rerun02/nest2e_pfas_pathway_report.md)
 - [Nest 2F Materials Stability Validation](../artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
@@ -28,7 +30,7 @@ real benchmark table.
 
 | Gate | Dataset / Source | Status | Clean Read |
 | --- | --- | --- | --- |
-| `Nest 2D` allostery | AlloBench supporting-information benchmark table | `benchmark_extracted_mapper_not_scored` | real allostery benchmark surface extracted; Mirror mapper still needs residue/contact graph labels |
+| `Nest 2D` allostery | AlloBench supporting-information benchmark table | `label_bridge_ready` | real allostery benchmark surface extracted and converted into a contact / pocket / residue-label manifest for the mapper scoring pass |
 | `Nest 2E` PFAS pathways | EPA PFAS reaction library `EnvLib + MetaLib` | `supported` | true parent/product transformations beat shuffled parent/product controls |
 | `Nest 2F` materials stability | Matbench / Materials Project `mp_e_form` | `supported` | composition/structure descriptors recover DFT formation energy above shuffled-target controls |
 | `Nest 2G` stronger baselines | ESOL, Lipophilicity, FreeSolv, QM9 alpha | `supported` | multifeature RDKit train/test baselines strengthen the molecule-property lane |
@@ -50,18 +52,47 @@ Clean read:
 real allostery benchmark surface found and extracted
 ```
 
-Boundary:
-
-```text
-the Mirror mapper is not scored yet
-```
-
-The missing input is now exact:
+Mapper scoring begins after the following inputs are attached:
 
 - protein contact graph or pocket graph per PDB row
 - known allosteric-site residue / pocket labels
 - mapper score for candidate communication path
 - controls against degree / centrality / shuffled-site labels
+
+Label bridge result:
+
+- real PDB benchmark rows: `100`
+- allosteric-site prediction tool columns: `10`
+- best mean Jaccard tool: `PASSer_Ensemble`
+- best mean Jaccard: `0.19733`
+- mean best-per-protein Jaccard: `0.38549`
+- median best-per-protein Jaccard: `0.381`
+- rows with any tool >= `0.2` Jaccard: `68`
+- rows with any tool >= `0.5` Jaccard: `38`
+- rows where all tools are zero / failed: `8`
+- mean pairwise tool-score correlation: `0.235671399`
+
+Clean bridge read:
+
+```text
+Nest 2D now has a real allostery benchmark surface, baseline difficulty
+statistics, and a contact / pocket / residue-label manifest template for the
+mapper scoring pass.
+```
+
+Combined closeout design:
+
+Use the same `100` PDB rows and compare the Mirror mapper against:
+
+- the `10` existing AlloBench tools
+- added pocket tools where available: `fpocket`, `P2Rank`, and `PrankWeb`
+- graph-naive controls: degree, centrality, shortest active-site path, random
+  pocket, and shuffled labels
+
+The first move condition is beating the `PASSer_Ensemble` mean Jaccard
+baseline of `0.19733` while also beating graph-naive controls. The stronger
+move condition is repeating on a second seed / split or second allostery
+benchmark family.
 
 ## Nest 2E: PFAS Pathway Validation
 
@@ -114,8 +145,8 @@ Result:
 
 Boundary:
 
-This validates a real materials-property descriptor lane. It does not claim
-completed crystal design, synthesis, or universal materials prediction.
+This validates a real materials-property descriptor lane. Crystal design,
+synthesis, and broad materials prediction remain separate scoring passes.
 
 ## Nest 2G: Stronger Descriptor / Baseline Comparison
 
@@ -146,8 +177,8 @@ It now has:
 - stronger RDKit descriptor / baseline support
 - real PFAS pathway-coherence support
 - real materials-stability support
-- a real allostery benchmark surface extracted, with mapper validation still
-  waiting on contact / residue labels
+- a real allostery benchmark surface extracted and a mapper-readiness bridge
+  prepared for contact / pocket / residue labels
 
 The claim remains bounded:
 
@@ -156,5 +187,5 @@ the Source Mirror / Mirror Architecture comparator spine can be grounded in
 real structured-matter datasets across multiple lanes
 ```
 
-It does not claim all chemistry, all biology, all materials, or PFAS remediation
-is solved.
+Chemistry, biology, materials design, and PFAS remediation each require their
+own completed dataset-specific scoring lanes.

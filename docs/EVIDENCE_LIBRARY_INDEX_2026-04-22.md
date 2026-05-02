@@ -11,6 +11,8 @@ code.
 - [Chronological Experiment Log](./CHRONOLOGICAL_EXPERIMENT_LOG_2026-05-01.md)
 - [V8 Attention / MLP Nest 1 Bridge Protocol](./V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
 - [Reviewer FAQ: Mechanism, Controls, And Open Gates](./REVIEWER_FAQ_MECHANISM_CONTROLS_AND_OPEN_GATES_2026-04-29.md)
+- [Nest 2D To 2G Real-Data Gates](./NEST2D_TO_2G_REAL_DATA_GATES_2026-04-28.md)
+- [Nest 2D Allostery Mapper Closeout Protocol](./NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
 - [Mirror Interface & Architecture Evidence Stack and Next Phases](./MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
 - [Latent Architecture Discovery Highlight](./LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
 - [Architecture Hierarchy And Non-Classical Vocabulary](./ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)

@@ -52,7 +52,7 @@ to another substrate, or records an open gate for the next data source.
 | MLP depth recurrence | Can all-layer MLP patterns recur across base, rerun, and prompt shift? | `v8_mlp_depth_base.csv`, `v8_mlp_depth_rerun_02.csv`, `v8_mlp_depth_prompt_set_02.csv` | Full-layer MLP export, shuffled controls, depth-bucket recurrence, leave-one-model prompt-shift controls | `base -> rerun_02` recurs perfectly (`cosine=1.0`, `p=0.00019996`); `base -> prompt_set_02` remains open (`cosine=-0.166467701`, `p=0.669466107`) | Confirms same-prompt feed-forward repeatability and parks prompt-shift MLP as a measured open gate before moving back into Nest 2 |
 | `Nest 2` structured matter map | Can the state/control/invariant discipline be expressed over constrained matter? | Engine 02, expanded structured-matter atlas, companion engine report | Element families, molecular graphs, `H2O`, minerals, redox, nutrition, contaminants, functional groups, biomolecular primitives, polymers, electrochemistry, catalysis, spectra, environmental fate, materials | First runnable structured-matter map completed; expanded matter dictionary preserved | Provides the matter base needed for chemistry, materials, remediation, biology, and resonance lanes |
 | `Engine 02V / Nest 2C` real molecule validation | Does the matter map touch real molecule datasets? | RDKit molecule validation and Nest 2C benchmark expansion | Molecule descriptors, shuffled controls, two seeds, `5000` permutations | ESOL, Lipophilicity, FreeSolv, and QM9 alpha lanes support real molecule-property signal | Moves Nest 2 from mapped matter rows into public molecule-data validation |
-| `Nest 2D-2G` gates | Which structured-matter real-data lanes come next? | Allostery benchmark extraction, PFAS pathway reports, materials stability, RDKit baseline comparison | Protein/pathway labels, PFAS parent/product controls, Matbench / Materials Project formation energy, stronger descriptors | PFAS pathway and materials descriptor lanes have supporting reports; allostery needs contact / pocket graph labels; descriptor hardening continues | Defines the next real-data bridge before Nest 3 resonance / field datasets |
+| `Nest 2D-2G` gates | Which structured-matter real-data lanes come next? | Allostery benchmark extraction, label bridge, and closeout protocol; PFAS pathway reports, materials stability, RDKit baseline comparison | Protein/pathway label manifest, PFAS parent/product controls, Matbench / Materials Project formation energy, stronger descriptors | PFAS pathway and materials descriptor lanes have supporting reports; allostery now has benchmark statistics, a contact / pocket / residue-label manifest, and a same-100-PDB closeout protocol comparing our mapper against AlloBench tools, added pocket tools, and graph controls | Defines the next real-data bridge before Nest 3 resonance / field datasets |
 
 ## Current Working Read
 
@@ -67,10 +67,10 @@ The current middle-layer status is:
 - Attention-flow is the strongest prompt-generalized transformer mechanism.
 - SAE feature/circuit recurrence is the strongest interpretability layer.
 - MLP has same-prompt all-layer recurrence; prompt-shift MLP recurrence remains open under the current `prompt_set_02` wording.
-- Nest 2 has mapped matter lanes and started real-data validation; allostery is the next major structured-matter gate.
+- Nest 2 has mapped matter lanes and started real-data validation; allostery now has a benchmark/label bridge and a closeout protocol for mapper scoring once contact / pocket / residue labels are attached.
 
 ## Immediate Next Gates
 
-1. Move to `Nest 2D` allostery with protein contact / pocket / pathway labels.
+1. Attach real contact / pocket / residue labels to the `Nest 2D` allostery manifest and run mapper scoring against degree / centrality / shuffled-site controls.
 2. Continue `Nest 2E` PFAS safety logic, `Nest 2F` materials structure-aware baselines, and `Nest 2G` descriptor / model controls.
 3. Keep MLP prompt-shift recurrence as a measured open middle-layer gate while attention-flow and SAE carry the stronger transformer-internal evidence.

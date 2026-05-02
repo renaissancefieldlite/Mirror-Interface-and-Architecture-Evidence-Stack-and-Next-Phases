@@ -251,6 +251,12 @@ next.
   coherence and safety logic, materials formation-energy validation, and
   stronger descriptor / model baselines.
 
+  `Nest 2D` now has a mapper-readiness bridge on top of the AlloBench
+  extraction. It summarizes `100` real PDB benchmark rows, `10` allosteric-site
+  prediction tool columns, the current best mean Jaccard baseline
+  (`PASSer_Ensemble`, `0.19733`), and a contact / pocket / residue-label
+  manifest template for the next mapper scoring pass.
+
 - `Nest 3`
   The classical-coherence map is the planned bridge from matter structure into
   energy, timing, field, and resonance comparators: oscillators, spectra,
@@ -445,6 +451,8 @@ Latest gate reports:
 - [Nest 2C Molecule Benchmark Expansion](./docs/NEST2C_MOLECULE_BENCHMARK_EXPANSION_2026-04-28.md)
 - [Nest 2C Molecule Benchmark Expansion Report](./artifacts/validation/nest2c_molecule_benchmark_expansion/nest2c_molecule_benchmark_expansion_report.md)
 - [Nest 2D To 2G Real-Data Gates](./docs/NEST2D_TO_2G_REAL_DATA_GATES_2026-04-28.md)
+- [Nest 2D Allostery Mapper Closeout Protocol](./docs/NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
+- [Nest 2D Allostery Label Bridge Report](./artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_bridge_report.md)
 - [Nest 2E PFAS Pathway Validation Report](./artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
 - [Nest 2F Materials Stability Report](./artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
 - [Nest 2G RDKit Stronger Baseline Report](./artifacts/validation/nest2g_rdkit_baseline_comparison/nest2g_rdkit_baseline_comparison_report.md)
@@ -495,13 +503,15 @@ Start here if you only have a few minutes:
 42. [Nest 2C Molecule Benchmark Expansion Report](./artifacts/validation/nest2c_molecule_benchmark_expansion/nest2c_molecule_benchmark_expansion_report.md)
 43. [Nest 2D To 2G Real-Data Gates](./docs/NEST2D_TO_2G_REAL_DATA_GATES_2026-04-28.md)
 44. [Nest 2D Allostery Benchmark Report](./artifacts/validation/nest2d_allostery_benchmark/nest2d_allostery_benchmark_report.md)
-45. [Nest 2E PFAS Pathway Report](./artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
-46. [Nest 2F Materials Stability Report](./artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
-47. [Nest 2G RDKit Stronger Baseline Report](./artifacts/validation/nest2g_rdkit_baseline_comparison/nest2g_rdkit_baseline_comparison_report.md)
-48. [Crossover Precursor Prototype Lanes](./docs/CROSSOVER_PRECURSOR_PROTOTYPE_LANES_2026-04-24.md)
-49. [Nest 2 Constrained Structured Systems Foundation](./docs/NEST2_CONSTRAINED_STRUCTURED_SYSTEMS_FOUNDATION_2026-04-24.md)
-50. [Nest 2 Structured Matter Completion](./docs/NEST2_STRUCTURED_MATTER_COMPLETION_2026-04-24.md)
-51. [Nest 2 Expanded Structured Matter Atlas](./docs/NEST2_EXPANDED_STRUCTURED_MATTER_ATLAS_2026-04-24.md)
+45. [Nest 2D Allostery Mapper Closeout Protocol](./docs/NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
+46. [Nest 2D Allostery Label Bridge Report](./artifacts/validation/nest2d_allostery_label_bridge/nest2d_allostery_label_bridge_report.md)
+47. [Nest 2E PFAS Pathway Report](./artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
+48. [Nest 2F Materials Stability Report](./artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
+49. [Nest 2G RDKit Stronger Baseline Report](./artifacts/validation/nest2g_rdkit_baseline_comparison/nest2g_rdkit_baseline_comparison_report.md)
+50. [Crossover Precursor Prototype Lanes](./docs/CROSSOVER_PRECURSOR_PROTOTYPE_LANES_2026-04-24.md)
+51. [Nest 2 Constrained Structured Systems Foundation](./docs/NEST2_CONSTRAINED_STRUCTURED_SYSTEMS_FOUNDATION_2026-04-24.md)
+52. [Nest 2 Structured Matter Completion](./docs/NEST2_STRUCTURED_MATTER_COMPLETION_2026-04-24.md)
+53. [Nest 2 Expanded Structured Matter Atlas](./docs/NEST2_EXPANDED_STRUCTURED_MATTER_ATLAS_2026-04-24.md)
 47. [Terahertz Cellular Resonance Bridge](./docs/TERAHERTZ_CELLULAR_RESONANCE_BRIDGE_2026-04-24.md)
 48. [Terahertz Chemical Remediation Bridge](./docs/TERAHERTZ_CHEMICAL_REMEDIATION_BRIDGE_2026-04-24.md)
 49. [Mirror Interface & Architecture Evidence Stack and Next Phases](./docs/MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
