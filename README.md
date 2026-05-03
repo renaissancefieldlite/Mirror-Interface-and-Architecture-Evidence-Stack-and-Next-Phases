@@ -28,6 +28,17 @@ The output text is the first visible surface. The actual object being tested
 is the measured state/control relation that continues through internal model
 measurements, feature vectors, circuits, observables, and independent controls.
 
+## Public Release Boundary
+
+This public repository is now the documentation and evidence-narrative layer.
+Runnable tools, raw/generated artifacts, dense exports, model states, local
+machine paths, and private workbench files stay local or private unless they
+are explicitly cleared for public release.
+
+See:
+
+[Public Release Safety Gate](./docs/PUBLIC_RELEASE_SAFETY_GATE_2026-05-03.md)
+
 For detailed mechanism translation and reviewer orientation, see:
 
 [Chronological Experiment Log](./docs/CHRONOLOGICAL_EXPERIMENT_LOG_2026-05-01.md)

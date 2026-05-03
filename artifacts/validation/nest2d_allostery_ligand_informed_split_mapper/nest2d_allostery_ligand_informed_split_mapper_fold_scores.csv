@@ -1,6 +1,0 @@
-fold,train_rows,test_rows,train_mean_jaccard,test_mean_jaccard,w_path_band,w_bridge_band,w_cluster_density,w_cluster_closeness,w_cluster_clustering,w_cluster_proximity,w_size_fit,w_source_separation,w_ligand_contact_fraction,w_ligand_proximity,w_ligand_overlap_jaccard,w_active_ligand_bridge
-0,78,20,0.25092782943333,0.29887339456973816,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
-1,78,20,0.27675456421900035,0.19814912890562372,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
-2,78,20,0.24621482325348495,0.3172541186711336,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
-3,79,19,0.27195461187483183,0.21396969732014662,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
-4,79,19,0.25760705179762905,0.2736253418516739,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0

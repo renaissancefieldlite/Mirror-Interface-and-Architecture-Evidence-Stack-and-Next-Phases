@@ -2,6 +2,21 @@ __pycache__/
 *.py[cod]
 .DS_Store
 .matplotlib-cache/
+
+# Public-safe boundary: keep runnable code, raw/generated artifacts, and model
+# states local/private unless explicitly approved for public release.
+artifacts/
+tools/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz
+*.npy
+*.parquet
+*.pkl
+*.joblib
+
 artifacts/validation/datasets/matbench_mp_e_form_co_0.parquet
 artifacts/validation/engine02v_qm9_alpha/
 artifacts/validation/engine02v_qm9_alpha_rerun02/

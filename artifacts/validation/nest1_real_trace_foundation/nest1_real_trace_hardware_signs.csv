@@ -1,8 +1,0 @@
-circuit,passes,backends,mean_parity,std_parity,min_parity,max_parity,sign_stable,dominant_bitstring_mode,dominant_bitstring_counts
-bell_phi_plus_xx,3,"ibm_fez,ibm_kingston",0.979167,0.014731,0.96875,1.0,True,11,"{'11': 2, '00': 1}"
-bell_phi_plus_yy,3,"ibm_fez,ibm_kingston",-0.895833,0.038976,-0.9375,-0.84375,True,01,"{'01': 2, '10': 1}"
-bell_phi_plus_zz,3,"ibm_fez,ibm_kingston",0.927083,0.058926,0.84375,0.96875,True,11,"{'00': 1, '11': 2}"
-phase6_feature_hermes,3,"ibm_fez,ibm_kingston",-0.677083,0.145087,-0.875,-0.53125,True,10,{'10': 3}
-phase6_feature_mistral,3,"ibm_fez,ibm_kingston",-0.6875,0.051031,-0.75,-0.625,True,10,{'10': 3}
-phase6_feature_nemotron,3,"ibm_fez,ibm_kingston",-0.666667,0.145087,-0.8125,-0.46875,True,10,{'10': 3}
-product_00_zz,3,"ibm_fez,ibm_kingston",0.927083,0.014731,0.90625,0.9375,True,00,{'00': 3}

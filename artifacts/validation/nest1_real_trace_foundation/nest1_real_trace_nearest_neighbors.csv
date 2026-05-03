@@ -1,9 +1,0 @@
-model,nearest_model,nearest_distance,second_nearest_model,second_nearest_distance
-Mistral,Hermes,1.334634,Qwen,3.882733
-Qwen,DeepSeek,3.367389,SmolLM3,3.662068
-Gemma,Qwen,5.167898,Mistral,5.294575
-DeepSeek,Qwen,3.367389,Nemotron,4.406534
-Hermes,Mistral,1.334634,Qwen,4.553729
-GLM,Hermes,4.619472,Mistral,4.800328
-Nemotron,DeepSeek,4.406534,Qwen,4.874268
-SmolLM3,Qwen,3.662068,DeepSeek,4.6114

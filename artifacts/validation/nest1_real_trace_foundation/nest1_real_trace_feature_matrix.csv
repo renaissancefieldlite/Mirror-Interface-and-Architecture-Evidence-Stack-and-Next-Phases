@@ -1,9 +1,0 @@
-model,path_archetype,dominant_anchor,variance_note,peak_percentile,band_width,target_peak,last_peak,phase3_last_to_target,target_to_context,target_to_surround,phase5_last_to_target,anchor_layer_span,overlap_count,overlap_jaccard,dominant_anchor_code,pc1,pc2,pc3
-Mistral,late-context supported target,mid_window,exact-match reruns after baseline,0.9688,0.0,0.49468,0.275207,0.579229,0.816609,0.914064,0.579389,0.0,0.75,0.230769,0.2,-2.068425,0.291169,1.670587
-Qwen,front-context loaded,early_window,not in focused localization variance subset,0.9444,0.0,0.230169,0.162552,0.708003,0.766394,0.783508,0.705465,0.0,0.0,0.0,0.0,0.700112,0.791766,0.408843
-Gemma,readout-led,last_token,exact-match reruns after baseline,0.9762,0.0,0.12319,0.208666,1.0,0.886583,1.0,1.0,0.0,0.0,0.0,1.0,-2.227252,1.650398,-3.299541
-DeepSeek,front-context loaded,early_window,exact-match reruns after baseline,0.9286,0.0,0.678834,0.416034,0.63514,0.539476,0.704434,0.673711,1.0,0.25,0.066667,0.0,2.244437,-1.019241,1.500845
-Hermes,late-context supported target,mid_window,exact-match reruns after baseline,0.9688,0.0,0.496177,0.320982,0.665947,0.816148,0.884156,0.666345,0.0,1.0,0.333333,0.2,-2.423002,-0.449587,1.731378
-GLM,late-context to readout bridge,mid_window,exact-match reruns after baseline,0.95,0.0,1.0,1.0,1.0,0.79618,0.852697,1.0,0.0,0.5,0.142857,0.2,-1.002858,-3.187406,-0.95047
-Nemotron,front-context to readout bridge,early_window,"anchor stable, magnitude drifting",0.9524,1.0,0.399124,0.516633,1.0,0.214217,0.754216,1.0,1.0,0.0,0.0,0.0,3.105696,-1.037492,-1.765159
-SmolLM3,late-context supported target,mid_window,not in focused localization variance subset,0.9444,1.0,0.0,0.0,0.556058,0.857402,0.868924,0.556058,1.0,0.0,0.0,0.2,1.671292,2.960392,0.703516

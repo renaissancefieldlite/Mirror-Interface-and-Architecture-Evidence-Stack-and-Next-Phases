@@ -1,1 +1,0 @@
-trial_id,run_id,scenario_id,condition,agent_id,objective,perturbation_id,task_success,policy_consistency,exploit_score,drift_score,stability_score,transcript_uri,scorer_id,score_lock_date,notes

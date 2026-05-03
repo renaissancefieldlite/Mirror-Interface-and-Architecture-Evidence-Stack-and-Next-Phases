@@ -46,8 +46,7 @@ another TDA backend is installed and the exported point clouds are rich enough.
 The private V8 residual-stream runner now supports an explicit export mode:
 
 ```bash
-python3 /Users/renaissancefieldlite1.0/Documents/Playground/RICK_NON_PROVISIONAL/05_activation_mapping/run_v8_residual_stream_probe.py \
-  --export-point-clouds
+python3 <private_v8_residual_stream_runner> --export-point-clouds
 ```
 
 That mode writes compressed `.npz` point clouds before the summary JSON strips

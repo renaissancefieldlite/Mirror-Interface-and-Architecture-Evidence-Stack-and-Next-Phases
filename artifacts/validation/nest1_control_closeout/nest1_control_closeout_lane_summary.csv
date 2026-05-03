@@ -1,5 +1,0 @@
-lane,status,headline
-LA/GEO,control_supported,Observed 2/3 mutual bridge-pair hits against exact shuffled-label null p=0.014286.
-STAT/PROB,control_supported,Phase 2 / Phase 4 exact rerun structure tested against run-label permutation controls.
-NUM/GRP,control_supported,Observed 7/7 sign-stable circuits against pass-shuffled null p=0.001.
-TOPOG,control_supported,Phase 4 anchor/layer stability tested against random-anchor controls.

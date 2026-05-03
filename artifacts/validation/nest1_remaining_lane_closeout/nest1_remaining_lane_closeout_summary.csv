@@ -1,9 +1,0 @@
-lane,status,read
-GEO-2,control_supported,"Expected bridge-pair relation is preserved above controls in the full, Phase 3, and Phase 5 subspaces; narrower context/overlap subspaces are weaker."
-DYN-2,control_supported,The target/control trajectory does not merely peak late; its threshold crossing and center-of-mass are late relative to within-model random layer-order controls.
-OPT-1,limited_small_n_partial,"A real artifact selection objective can be evaluated over the three hardware-executed Phase 6 feature circuits, and Phase 6 selects the same best pair as hardware parity similarity. The sample is only three models, so this is a limited benchmark, not a closed optimization lane."
-CAT-1,limited_small_n_transfer_partial,"The Phase 6 feature relation transfers directionally into the Phase 9D hardware parity-vector relation for the three executed feature circuits, but the sample is too small to close CAT-1."
-TOP-1/2,blocked_raw_point_clouds_required,"export raw hidden-state vectors / point clouds, not only layer summaries and scalar deltas"
-GRAPH-2,blocked_domain_graph_labels_required,"provide real pathway, attention-flow, allostery, grid, molecular, or other domain graph labels"
-CTRL-1,blocked_lsps_transition_trace_required,"export LSPS / Oracle transition trace CSV with observed mode, expected mode, stability score, and drift/error columns"
-GAME-1,blocked_adversarial_protocol_required,"define a real multi-agent, adversarial, or decision-theory benchmark artifact before scoring"
