@@ -14,6 +14,7 @@ Companion inputs:
 - [Nest 2D-3 Allostery Ligand-Contact Diagnostic](../artifacts/validation/nest2d_allostery_ligand_contact_diagnostic/nest2d_allostery_ligand_contact_diagnostic_report.md)
 - [Nest 2D-4 Blind Pocket Split Mapper](../artifacts/validation/nest2d_allostery_blind_pocket_split_mapper/nest2d_allostery_blind_pocket_split_mapper_report.md)
 - [Nest 2D-5 Ligand-Informed Split Mapper](../artifacts/validation/nest2d_allostery_ligand_informed_split_mapper/nest2d_allostery_ligand_informed_split_mapper_report.md)
+- [Nest 2D-6 Allostery Recurrence / Path Mapper](../artifacts/validation/nest2d_allostery_recurrence_path_mapper/nest2d_allostery_recurrence_path_mapper_report.md)
 
 ## Purpose
 
@@ -335,3 +336,81 @@ branch beyond bound-ligand contact geometry:
   random pockets, and shuffled labels
 - repeat on a second split or second allostery set after the same-100-PDB
   ligand-informed run
+
+## 2D-6 Recurrence / Communication-Path Result
+
+The 2D-6 pass executed the second-split recurrence and separated the readout
+into pocket recovery and communication-path recovery.
+
+External pocket-tool availability was recorded locally:
+
+| Tool | Available |
+| --- | --- |
+| `fpocket` | `false` |
+| `P2Rank` | `false` |
+| `PrankWeb` | `false` |
+
+Pocket recurrence:
+
+| Metric | Value |
+| --- | ---: |
+| Alternate-split pocket mean Jaccard | `0.249009` |
+| 2D-5 pocket mean Jaccard | `0.260713` |
+| Best existing AlloBench tool mean Jaccard on scored rows | `0.201357` |
+| Ligand-contact baseline mean Jaccard | `0.260713` |
+| Degree pocket mean Jaccard | `0.008222` |
+| Closeness pocket mean Jaccard | `0.015044` |
+| Active-proximity pocket mean Jaccard | `0.016029` |
+| Random pocket mean Jaccard | `0.015148` |
+| Pocket random-control p-value | `0.001996` |
+| Pocket label-shuffle p-value | `0.001996` |
+
+Communication-path separation:
+
+| Metric | Value |
+| --- | ---: |
+| Mirror path-truth Jaccard | `0.211530` |
+| Mirror path-truth recall | `0.345859` |
+| Degree path-truth recall | `0.034344` |
+| Closeness path-truth recall | `0.051651` |
+| Active-proximity path-truth recall | `0.034921` |
+| Random path-truth recall | `0.054600` |
+| Path random-control p-value | `0.001996` |
+| Path label-shuffle p-value | `0.001996` |
+
+Clean read:
+
+```text
+2D-6 supports recurrence of the ligand-informed allostery branch. It also
+separates the mechanism: pocket recovery stays above the same-row tool bar and
+controls, while the active-site to predicted-pocket corridor recovers known
+allosteric labels above graph, random, and shuffled-label controls.
+```
+
+## Progression Read
+
+The numbers moved because the biological object became fuller:
+
+| Pass | Representation | Main Read |
+| --- | --- | --- |
+| `2D-1` | exact contact-residue ranking | real label / PDB bridge exists, but residue-only scoring is too small |
+| `2D-2` | pocket and path candidates | better biological object; beats graph controls but remains below the tool bar |
+| `2D-3` | bound ligand-contact diagnostic | confirms the labels live in real pocket/contact geometry |
+| `2D-4` | held-out structural-only split | sets the blind structural boundary |
+| `2D-5` | ligand-informed held-out split | better input surface moves recovery above the tool bar and controls |
+| `2D-6` | alternate split plus separate path scoring | recurrence holds, and active-site communication corridors carry label structure |
+
+Plain read:
+
+```text
+The lane progressed as the mapper moved from isolated residues to pockets,
+ligand-informed pockets, and then active-site communication paths. The tighter
+p-values mean the supported branch is far above random and shuffled-label
+controls under the measured benchmark surface.
+```
+
+Next expansion:
+
+- add external pocket-tool candidates when local execution is available
+- source a second allostery benchmark family
+- keep pocket overlap and communication-path recovery as separate metrics

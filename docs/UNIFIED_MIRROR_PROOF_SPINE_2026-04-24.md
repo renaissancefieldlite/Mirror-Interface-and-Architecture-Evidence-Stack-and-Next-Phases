@@ -275,7 +275,13 @@ Completed enough to show:
   ligand-informed split supplied that stronger input branch: held-out mean
   Jaccard `0.260712639`, same-row `PASSer_Ensemble` bar `0.201357143`,
   ligand-contact baseline `0.260712639`, random p `0.001996008`, and
-  label-shuffle p `0.001996008`.
+  label-shuffle p `0.001996008`. The `2D-6` recurrence / path pass repeated
+  the ligand-informed branch under an alternate split and separated pocket
+  recovery from communication-path recovery: alternate-split pocket Jaccard
+  `0.249008634`, Mirror path-truth recall `0.345859202`, graph path controls
+  `0.034343966` / `0.051650681` / `0.034920932`, random path recall
+  `0.054600238`, and pocket / path random and shuffled p-values
+  `0.001996008`.
 - the same rule applies across the full nest ladder: real dataset / signal,
   independent labels, explicit mapper score, baselines and controls, recurrence
   or second benchmark, then model tuning only after support
@@ -303,9 +309,9 @@ Immediate next work:
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-5. run `Nest 2D-6` allostery with external pocket candidates where available,
-   second split / benchmark recurrence, and active-site to allosteric-site
-   communication-path scoring under the same benchmark bar
+5. expand `Nest 2D` with external pocket candidates where available and a
+   second allostery benchmark family, keeping pocket overlap and active-site
+   communication-path recovery as separate outputs
 6. upgrade `Nest 2E` PFAS into bad-descendant and safety scoring against
    known degradation-pathway data
 7. strengthen `Nest 2F` with structure-aware materials / crystal-stability

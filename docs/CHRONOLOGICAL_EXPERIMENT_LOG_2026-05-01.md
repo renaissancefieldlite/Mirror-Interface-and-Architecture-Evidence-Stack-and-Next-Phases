@@ -58,6 +58,7 @@ to another substrate, or records an open gate for the next data source.
 | `Nest 2D-3` ligand-contact diagnostic | Do the AlloBench labels align with real bound-pocket contact geometry? | Official AlloBench modulator fields plus cached RCSB PDB `HETATM` ligand geometry | Bound ligand residues matched to PDB coordinates, protein residues within `5.0 A`, Jaccard against AlloBench allosteric labels | Mean ligand-contact Jaccard `0.263504`, median `0.230952`, `56` rows >= `0.2`, `12` rows >= `0.5`, above `PASSer_Ensemble` mean `0.197330` | Validates the pocket/contact feature source for the next blind allosteric mapper while keeping prediction closeout separate |
 | `Nest 2D-4` blind pocket split mapper | Does the pocket/path mapper hold on held-out PDB rows? | Same `98` AlloBench/PDB rows, structural pocket/path features, `5` CV folds | Trained structural feature weights on training folds, evaluated held-out rows, compared against degree, closeness, active-proximity, random, and shuffled-label controls | Boundary result: CV blind Mirror pocket/path mean Jaccard `0.017703`; degree `0.008222`; closeness `0.015044`; active-proximity `0.015651`; random `0.014310`; random p `0.251497`; label-shuffle p `0.061876`; best existing tool `0.201357` | Sets the blind-CV boundary: structural pocket/path features carry directional signal over simple graph controls, while the next closeout needs external pocket candidates or stronger ligand-informed features |
 | `Nest 2D-5` ligand-informed split mapper | Do the better inputs move the held-out allostery branch? | Same `98` AlloBench/PDB rows plus bound modulator `HETATM` geometry | Added ligand-contact candidate pockets, ligand proximity/contact features, `5` held-out folds, graph controls, random controls, and shuffled-label controls | Supported result: CV ligand-informed mean Jaccard `0.260713`, structural-only 2D-4 `0.017703`, same-row `PASSer_Ensemble` `0.201357`, ligand-contact baseline `0.260713`, random p `0.001996`, label-shuffle p `0.001996` | Confirms the better-input direction: in the ligand-bound application setting, bound modulator geometry supplies the feature surface that moves allostery above the tool bar and controls |
+| `Nest 2D-6` recurrence / path mapper | Does the ligand-informed branch repeat, and does the communication path itself carry label structure? | Same `98` AlloBench/PDB rows, alternate held-out split, ligand-informed candidates, cached active-site path corridors | Repeated the 2D-5 branch under a second split; separated pocket Jaccard from active-site -> predicted-pocket path recall; compared against graph, random, and shuffled-label controls | Supported result: alternate-split pocket Jaccard `0.249009` vs 2D-5 `0.260713` and same-row `PASSer_Ensemble` `0.201357`; Mirror path-truth recall `0.345859` vs degree `0.034344`, closeness `0.051651`, active-proximity `0.034921`, random `0.054600`; pocket and path p-values `0.001996` | Confirms the lane is not a one-pass pocket overlap: the better-input branch recurs, and active-site communication corridors recover allosteric labels above controls |
 
 ## Nest 2D Mechanism Interpretation
 
@@ -115,6 +116,10 @@ biological object:
 - the ligand-informed branch supplied that stronger feature surface: bound
   modulator geometry moved held-out recovery to `0.260713`, matching the direct
   ligand-contact candidate baseline and beating the same-row AlloBench tool bar
+- the recurrence / path pass then tested whether that stronger branch repeats:
+  alternate-split pocket recovery stayed high at `0.249009`, and the active-site
+  to predicted-pocket corridor recovered known allosteric labels with recall
+  `0.345859`, far above graph, random, and shuffled-label controls
 
 ## Current Working Read
 
@@ -152,6 +157,6 @@ matter, resonance / field systems, biology, and multi-class convergence tasks.
 
 ## Immediate Next Gates
 
-1. Run the `Nest 2D-6` allostery upgrade: external pocket-tool candidates where available, second split / benchmark recurrence, and separate communication-path scoring on the same AlloBench / graph-control bar.
+1. Add external pocket-tool candidates for `Nest 2D` when available and source a second allostery benchmark family for broader recurrence.
 2. Continue `Nest 2E` PFAS safety logic, `Nest 2F` materials structure-aware baselines, and `Nest 2G` descriptor / model controls.
 3. Keep MLP prompt-shift recurrence as a measured open middle-layer gate while attention-flow and SAE carry the stronger transformer-internal evidence.
