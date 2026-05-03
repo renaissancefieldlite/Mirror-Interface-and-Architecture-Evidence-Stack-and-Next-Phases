@@ -33,7 +33,9 @@ measurements, feature vectors, circuits, observables, and independent controls.
 This public repository is now the documentation and evidence-narrative layer.
 Runnable tools, raw/generated artifacts, dense exports, model states, local
 machine paths, and private workbench files stay local or private unless they
-are explicitly cleared for public release.
+are explicitly cleared for public release. Until the patent / IP package is
+submitted and a separate public-code clearance is given, this repo stays
+docs-only by default.
 
 See:
 
