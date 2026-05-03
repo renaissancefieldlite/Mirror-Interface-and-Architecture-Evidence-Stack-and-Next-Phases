@@ -59,6 +59,7 @@ to another substrate, or records an open gate for the next data source.
 | `Nest 2D-4` blind pocket split mapper | Does the pocket/path mapper hold on held-out PDB rows? | Same `98` AlloBench/PDB rows, structural pocket/path features, `5` CV folds | Trained structural feature weights on training folds, evaluated held-out rows, compared against degree, closeness, active-proximity, random, and shuffled-label controls | Boundary result: CV blind Mirror pocket/path mean Jaccard `0.017703`; degree `0.008222`; closeness `0.015044`; active-proximity `0.015651`; random `0.014310`; random p `0.251497`; label-shuffle p `0.061876`; best existing tool `0.201357` | Sets the blind-CV boundary: structural pocket/path features carry directional signal over simple graph controls, while the next closeout needs external pocket candidates or stronger ligand-informed features |
 | `Nest 2D-5` ligand-informed split mapper | Do the better inputs move the held-out allostery branch? | Same `98` AlloBench/PDB rows plus bound modulator `HETATM` geometry | Added ligand-contact candidate pockets, ligand proximity/contact features, `5` held-out folds, graph controls, random controls, and shuffled-label controls | Supported result: CV ligand-informed mean Jaccard `0.260713`, structural-only 2D-4 `0.017703`, same-row `PASSer_Ensemble` `0.201357`, ligand-contact baseline `0.260713`, random p `0.001996`, label-shuffle p `0.001996` | Confirms the better-input direction: in the ligand-bound application setting, bound modulator geometry supplies the feature surface that moves allostery above the tool bar and controls |
 | `Nest 2D-6` recurrence / path mapper | Does the ligand-informed branch repeat, and does the communication path itself carry label structure? | Same `98` AlloBench/PDB rows, alternate held-out split, ligand-informed candidates, cached active-site path corridors | Repeated the 2D-5 branch under a second split; separated pocket Jaccard from active-site -> predicted-pocket path recall; compared against graph, random, and shuffled-label controls | Supported result: alternate-split pocket Jaccard `0.249009` vs 2D-5 `0.260713` and same-row `PASSer_Ensemble` `0.201357`; Mirror path-truth recall `0.345859` vs degree `0.034344`, closeness `0.051651`, active-proximity `0.034921`, random `0.054600`; pocket and path p-values `0.001996` | Confirms the lane is not a one-pass pocket overlap: the better-input branch recurs, and active-site communication corridors recover allosteric labels above controls |
+| `Nest 2D-7A` P2Rank external pocket coverage | Can a real external pocket predictor emit useful allostery candidates on the same benchmark surface? | `P2Rank 2.5.1`, cached AlloBench/RCSB PDB rows, P2Rank residue-pocket CSVs, AlloBench allosteric labels | Installed local P2Rank, generated / reused `98` prediction files, parsed residue pockets, pruned to allosteric-label size, compared top-1 and top-3 coverage against random and shuffled controls over `5000` permutations | Supported result: top-1 P2Rank Jaccard `0.096418` vs random `0.016878`, p `0.000200`; top-3 candidate envelope `0.189177`; same-row `PASSer_Ensemble` `0.201863`; 2D-6 Mirror `0.249009` | Turns external pocket tools from a placeholder into a real candidate source; P2Rank supplies supported pocket overlap and near-tool-bar top-3 coverage, while 2D-7B must merge ranking and path scoring |
 | `Nest 2E` PFAS safety logic | Do coherent PFAS transformations produce safer descendants or bad descendants that retain PFAS burden? | EPA PFAS reaction library `EnvLib + MetaLib`, existing scored `184` parent/product rows | Retained F/C-F burden, mineralization-quality proxy, coherent bad-descendant score, shuffled-burden controls over `5000` permutations | Supported result: mean coherent bad-descendant score `0.595067` vs shuffled `0.554863`, bad-descendant flag fraction `0.733696` vs shuffled `0.532891`, high retained-burden fraction `0.842391`, low mineralization-quality fraction `0.842391`, p `0.000200` | Separates pathway transformation from safety: most coherent PFAS descendants still retain fluorination / C-F burden and should remain flagged |
 
 ## Nest 2D Mechanism Interpretation
@@ -121,6 +122,10 @@ biological object:
   alternate-split pocket recovery stayed high at `0.249009`, and the active-site
   to predicted-pocket corridor recovered known allosteric labels with recall
   `0.345859`, far above graph, random, and shuffled-label controls
+- the P2Rank external pass then supplied the first real local pocket-tool
+  candidate branch: top-1 external pockets beat random and shuffled controls
+  (`0.096418` vs `0.016878`, p `0.000200`), and top-3 coverage reached
+  `0.189177`, close to the same-row `PASSer_Ensemble` bar
 
 ## Current Working Read
 
@@ -135,7 +140,7 @@ The current middle-layer status is:
 - Attention-flow is the strongest prompt-generalized transformer mechanism.
 - SAE feature/circuit recurrence is the strongest interpretability layer.
 - MLP has same-prompt all-layer recurrence; prompt-shift MLP recurrence remains open under the current `prompt_set_02` wording.
-- Nest 2 has mapped matter lanes and started real-data validation; allostery now has real labels joined to `98` PDB contact graphs, pocket/path scoring that beats graph controls, a supported bound-ligand contact feature diagnostic, a blind-CV boundary for structural-only scoring, a supported ligand-informed recurrence/path branch, and PFAS now has supported bad-descendant / safety-triage scoring.
+- Nest 2 has mapped matter lanes and started real-data validation; allostery now has real labels joined to `98` PDB contact graphs, pocket/path scoring that beats graph controls, a supported bound-ligand contact feature diagnostic, a blind-CV boundary for structural-only scoring, a supported ligand-informed recurrence/path branch, a supported P2Rank external pocket-candidate source, and PFAS now has supported bad-descendant / safety-triage scoring.
 
 ## General Nest Method Rule
 
@@ -158,6 +163,6 @@ matter, resonance / field systems, biology, and multi-class convergence tasks.
 
 ## Immediate Next Gates
 
-1. Add external pocket-tool candidates for `Nest 2D` when available and source a second allostery benchmark family for broader recurrence.
+1. Run `Nest 2D-7B`: optimized external-pocket communication paths, held-out merged ranking across P2Rank plus ligand-informed candidates, and a second allostery benchmark family when sourced.
 2. Continue `Nest 2F` materials structure-aware baselines and `Nest 2G` descriptor / model controls.
 3. Keep MLP prompt-shift recurrence as a measured open middle-layer gate while attention-flow and SAE carry the stronger transformer-internal evidence.

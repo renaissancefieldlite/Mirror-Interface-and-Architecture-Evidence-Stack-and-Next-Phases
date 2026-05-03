@@ -399,6 +399,7 @@ The numbers moved because the biological object became fuller:
 | `2D-4` | held-out structural-only split | sets the blind structural boundary |
 | `2D-5` | ligand-informed held-out split | better input surface moves recovery above the tool bar and controls |
 | `2D-6` | alternate split plus separate path scoring | recurrence holds, and active-site communication corridors carry label structure |
+| `2D-7A` | local P2Rank external pocket candidates | P2Rank top-1 pockets beat random / shuffled controls; top-3 coverage approaches the PASSer bar |
 
 Plain read:
 
@@ -409,8 +410,39 @@ p-values mean the supported branch is far above random and shuffled-label
 controls under the measured benchmark surface.
 ```
 
+## 2D-7A P2Rank External Pocket Coverage Result
+
+The first external pocket-tool branch is now local and scored. `P2Rank 2.5.1`
+was installed into the workspace, run over the same AlloBench/PDB surface, and
+parsed into residue-level pocket candidates.
+
+| Metric | Value |
+| --- | ---: |
+| P2Rank prediction files | `98` |
+| Scored rows | `95` |
+| Top-1 P2Rank pocket Jaccard | `0.096418` |
+| Top-3 P2Rank candidate envelope Jaccard | `0.189177` |
+| 2D-6 Mirror pocket Jaccard | `0.249009` |
+| Same-row `PASSer_Ensemble` Jaccard | `0.201863` |
+| Random pocket Jaccard | `0.016878` |
+| Top-1 random-control p-value | `0.000200` |
+| Top-1 label-shuffle p-value | `0.000200` |
+
+Clean read:
+
+```text
+P2Rank is a real external candidate source on this benchmark surface. Its
+top-1 pockets recover allosteric labels above random and shuffled controls,
+and its top-3 coverage comes close to the PASSer bar. It now sits beside the
+2D-6 ligand-informed Mirror branch as an independent pocket source for the
+next merged-ranking and path-scoring pass.
+```
+
 Next expansion:
 
-- add external pocket-tool candidates when local execution is available
+- run 2D-7B with optimized graph construction for external-pocket
+  communication paths
+- merge P2Rank candidates with the 2D-6 ligand-informed branch under held-out
+  ranking
 - source a second allostery benchmark family
 - keep pocket overlap and communication-path recovery as separate metrics

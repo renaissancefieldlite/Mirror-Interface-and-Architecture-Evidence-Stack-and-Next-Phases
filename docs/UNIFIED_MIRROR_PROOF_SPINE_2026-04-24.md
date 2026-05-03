@@ -281,7 +281,14 @@ Completed enough to show:
   `0.249008634`, Mirror path-truth recall `0.345859202`, graph path controls
   `0.034343966` / `0.051650681` / `0.034920932`, random path recall
   `0.054600238`, and pocket / path random and shuffled p-values
-  `0.001996008`.
+  `0.001996008`. The `2D-7A` external pocket pass then installed and ran
+  `P2Rank 2.5.1` over the same AlloBench/PDB surface. It emitted `98`
+  prediction files and scored `95` rows: top-1 P2Rank pocket Jaccard
+  `0.096418221` versus random `0.016877619`, random / shuffled p
+  `0.000199960`, and top-3 candidate envelope `0.189176538` versus the
+  same-row `PASSer_Ensemble` bar `0.201863158`. This makes P2Rank a supported
+  external candidate source while leaving merged ranking and optimized
+  external-pocket path scoring as the next allostery branch.
 - the same rule applies across the full nest ladder: real dataset / signal,
   independent labels, explicit mapper score, baselines and controls, recurrence
   or second benchmark, then model tuning only after support
@@ -318,9 +325,10 @@ Immediate next work:
    topology, and pooled cross-model controls; the immediate locked step is the
    `GLM` / `Hermes` dense-trajectory pilot with full prompt tokens x all
    layers and preregistered late-layer lattice-vs-neutral criteria
-5. expand `Nest 2D` with external pocket candidates where available and a
-   second allostery benchmark family, keeping pocket overlap and active-site
-   communication-path recovery as separate outputs
+5. expand `Nest 2D` from the supported P2Rank candidate branch into `2D-7B`:
+   optimized external-pocket communication paths, held-out merged ranking with
+   the ligand-informed branch, and a second allostery benchmark family when
+   sourced
 6. continue `Nest 2E` only when richer degradation-success / mineralization
    labels are available; current PFAS safety-triage support is logged
 7. strengthen `Nest 2F` with structure-aware materials / crystal-stability

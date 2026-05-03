@@ -31,7 +31,7 @@ real public dataset, a real measurement surface, or a real benchmark table.
 
 | Gate | Dataset / Source | Status | Clean Read |
 | --- | --- | --- | --- |
-| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures | `ligand_informed_recurrence_and_path_supported` | 98 benchmark rows join to real labels and contact graphs; 2D-2 pocket/path scoring beats graph controls; 2D-3 bound-ligand contacts confirm real pocket/contact geometry; 2D-4 sets the structural-only blind boundary; 2D-5 supports the ligand-informed application branch above the same-row AlloBench tool bar and controls; 2D-6 repeats the branch under an alternate split and separates active-site communication-path recovery |
+| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures, local `P2Rank` pocket predictions | `p2rank_external_top1_overlap_supported` plus `ligand_informed_recurrence_and_path_supported` | 98 benchmark rows join to real labels and contact graphs; 2D-2 pocket/path scoring beats graph controls; 2D-3 bound-ligand contacts confirm real pocket/contact geometry; 2D-4 sets the structural-only blind boundary; 2D-5 supports the ligand-informed application branch above the same-row AlloBench tool bar and controls; 2D-6 repeats the branch under an alternate split and separates active-site communication-path recovery; 2D-7A adds a real external P2Rank candidate branch |
 | `Nest 2E` PFAS pathways / safety | EPA PFAS reaction library `EnvLib + MetaLib` | `pfas_bad_descendant_safety_logic_supported` | true parent/product transformations beat shuffled parent/product controls, and coherent bad-descendant scoring separates retained PFAS burden from transformation alone |
 | `Nest 2F` materials stability | Matbench / Materials Project `mp_e_form` | `supported` | composition/structure descriptors recover DFT formation energy above shuffled-target controls |
 | `Nest 2G` stronger baselines | ESOL, Lipophilicity, FreeSolv, QM9 alpha | `supported` | multifeature RDKit train/test baselines strengthen the molecule-property lane |
@@ -241,9 +241,33 @@ the active-site to predicted-pocket communication corridor carries allosteric
 label structure above graph, random, and shuffled-label controls.
 ```
 
+2D-7A P2Rank external pocket-tool result:
+
+- P2Rank version: `2.5.1`
+- P2Rank prediction files: `98`
+- scored rows after residue-label matching: `95`
+- top-1 P2Rank pocket Jaccard: `0.096418`
+- top-3 P2Rank candidate envelope Jaccard: `0.189177`
+- 2D-6 Mirror pocket Jaccard: `0.249009`
+- same-row `PASSer_Ensemble` Jaccard: `0.201863`
+- random pocket Jaccard: `0.016878`
+- top-1 random / shuffled p-values: `0.000200` / `0.000200`
+
+Clean 2D-7A read:
+
+```text
+P2Rank is now a real external pocket-candidate source on the AlloBench slice.
+Its top-1 emitted pockets recover known allosteric labels above random and
+shuffled controls. The top-3 envelope rises close to the PASSer bar, which
+makes merged ranking and path scoring the next useful allostery upgrade.
+```
+
 Next allostery expansion:
 
-- add external pocket-tool candidates when available
+- run 2D-7B external-pocket communication paths with optimized graph
+  construction
+- merge P2Rank candidate pockets with the 2D-6 ligand-informed branch under
+  held-out ranking
 - run a second allostery benchmark family if one is sourced
 - keep pocket overlap and communication-path recovery as separate outputs
 

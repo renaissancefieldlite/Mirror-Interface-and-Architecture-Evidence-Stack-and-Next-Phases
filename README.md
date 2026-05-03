@@ -283,6 +283,15 @@ next.
   metric also separated: Mirror path-truth recall `0.345859` versus degree
   `0.034344`, closeness `0.051651`, active-proximity `0.034921`, and random
   `0.054600`, with path random / shuffled p `0.001996`.
+  The 2D-7A external pocket-tool pass then installed and ran `P2Rank 2.5.1`
+  on the same AlloBench/PDB surface. P2Rank emitted `98` prediction files and
+  scored `95` rows after residue-label matching. Direct top-1 P2Rank pockets
+  recovered known allosteric labels above random and shuffled controls
+  (`Jaccard 0.096418` versus random `0.016878`, p `0.000200`), while the
+  top-3 candidate envelope rose to `0.189177`, close to the same-row
+  `PASSer_Ensemble` bar `0.201863`. This makes P2Rank a real external
+  candidate source; the stronger 2D-7B move is optimized path scoring and
+  held-out merged ranking across P2Rank plus the ligand-informed branch.
   `Nest 2E` then upgraded PFAS from pathway coherence into safety logic. The
   EPA `EnvLib + MetaLib` pathway rows remain coherent, but the safety scorer
   now flags coherent bad descendants: mean coherent bad-descendant score
@@ -367,8 +376,9 @@ Current best read:
   scoring, and the expanded structured-matter lanes needed for higher nests.
   `Engine 02V` now runs against multiple real molecule-property datasets with
   RDKit and supports a repeated multi-benchmark cheminformatics validation
-  lane; broader chemistry, PFAS, allostery, and materials claims remain future
-  dataset-specific validations.
+  lane. PFAS pathway / safety, allostery graph / pocket candidates, and
+  materials descriptor baselines are now dataset-specific validation branches
+  with their own support levels and next gates.
 - The clean physical-data upgrade path is `Engine 02V`: `RDKit` plus a public
   molecule benchmark such as `QM9`, `ZINC`, or `ChEMBL`, followed by a PFAS /
   contaminant degradation-pathway validation lane and a materials stability
