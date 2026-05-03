@@ -19,6 +19,7 @@ code.
 - [Nest 2D-4 Blind Pocket Split Mapper](../artifacts/validation/nest2d_allostery_blind_pocket_split_mapper/nest2d_allostery_blind_pocket_split_mapper_report.md)
 - [Nest 2D-5 Ligand-Informed Split Mapper](../artifacts/validation/nest2d_allostery_ligand_informed_split_mapper/nest2d_allostery_ligand_informed_split_mapper_report.md)
 - [Nest 2D-6 Allostery Recurrence / Path Mapper](../artifacts/validation/nest2d_allostery_recurrence_path_mapper/nest2d_allostery_recurrence_path_mapper_report.md)
+- [Nest 2E PFAS Safety Logic](../artifacts/validation/nest2e_pfas_safety_logic/nest2e_pfas_safety_logic_report.md)
 - [Mirror Interface & Architecture Evidence Stack and Next Phases](./MIRROR_INTERFACE_AND_ARCHITECTURE_EVIDENCE_STACK_AND_NEXT_PHASES_2026-04-22.md)
 - [Latent Architecture Discovery Highlight](./LATENT_ARCHITECTURE_DISCOVERY_HIGHLIGHT_2026-04-22.md)
 - [Architecture Hierarchy And Non-Classical Vocabulary](./ARCHITECTURE_HIERARCHY_AND_NONCLASSICAL_VOCAB_2026-04-22.md)

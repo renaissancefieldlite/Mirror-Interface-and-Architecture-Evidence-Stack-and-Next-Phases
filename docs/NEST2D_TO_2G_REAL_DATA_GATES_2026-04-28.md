@@ -16,6 +16,7 @@ Companion reports:
 - [Nest 2D-5 Ligand-Informed Split Mapper](../artifacts/validation/nest2d_allostery_ligand_informed_split_mapper/nest2d_allostery_ligand_informed_split_mapper_report.md)
 - [Nest 2D-6 Allostery Recurrence / Path Mapper](../artifacts/validation/nest2d_allostery_recurrence_path_mapper/nest2d_allostery_recurrence_path_mapper_report.md)
 - [Nest 2E PFAS Pathway Validation](../artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
+- [Nest 2E PFAS Safety Logic](../artifacts/validation/nest2e_pfas_safety_logic/nest2e_pfas_safety_logic_report.md)
 - [Nest 2E PFAS Pathway Rerun](../artifacts/validation/nest2e_pfas_pathway_rerun02/nest2e_pfas_pathway_report.md)
 - [Nest 2F Materials Stability Validation](../artifacts/validation/nest2f_materials_stability/nest2f_materials_stability_report.md)
 - [Nest 2F Materials Stability Rerun](../artifacts/validation/nest2f_materials_stability_rerun02/nest2f_materials_stability_report.md)
@@ -31,7 +32,7 @@ real public dataset, a real measurement surface, or a real benchmark table.
 | Gate | Dataset / Source | Status | Clean Read |
 | --- | --- | --- | --- |
 | `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures | `ligand_informed_recurrence_and_path_supported` | 98 benchmark rows join to real labels and contact graphs; 2D-2 pocket/path scoring beats graph controls; 2D-3 bound-ligand contacts confirm real pocket/contact geometry; 2D-4 sets the structural-only blind boundary; 2D-5 supports the ligand-informed application branch above the same-row AlloBench tool bar and controls; 2D-6 repeats the branch under an alternate split and separates active-site communication-path recovery |
-| `Nest 2E` PFAS pathways | EPA PFAS reaction library `EnvLib + MetaLib` | `supported` | true parent/product transformations beat shuffled parent/product controls |
+| `Nest 2E` PFAS pathways / safety | EPA PFAS reaction library `EnvLib + MetaLib` | `pfas_bad_descendant_safety_logic_supported` | true parent/product transformations beat shuffled parent/product controls, and coherent bad-descendant scoring separates retained PFAS burden from transformation alone |
 | `Nest 2F` materials stability | Matbench / Materials Project `mp_e_form` | `supported` | composition/structure descriptors recover DFT formation energy above shuffled-target controls |
 | `Nest 2G` stronger baselines | ESOL, Lipophilicity, FreeSolv, QM9 alpha | `supported` | multifeature RDKit train/test baselines strengthen the molecule-property lane |
 
@@ -274,6 +275,28 @@ Important boundary read:
 This means the pathway-coherence comparator is supported, while PFAS
 mineralization / safe byproduct generation remains its own scoring pass.
 
+2E safety-logic result:
+
+- scored rows: `184`
+- mean coherent bad-descendant score: `0.595067`
+- shuffled coherent bad-descendant score: `0.554863`
+- coherent bad-descendant p-value: `0.000200`
+- bad-descendant flag fraction: `0.733696`
+- shuffled bad-descendant flag fraction: `0.532891`
+- bad-descendant flag p-value: `0.000200`
+- high retained-burden fraction: `0.842391`
+- low mineralization-quality fraction: `0.842391`
+- rows with any F or C-F reduction: `0.336957`
+- safety-candidate fraction: `0.038043`
+
+Clean 2E safety read:
+
+```text
+True PFAS pathways are coherent, but the safety layer shows most coherent
+descendants still retain fluorination / C-F burden. The lane now separates
+pathway transformation from safer degradation.
+```
+
 ## Nest 2F: Materials / Crystal Stability
 
 The Matbench `mp_e_form` dataset was downloaded from the public Hugging Face
@@ -329,6 +352,7 @@ It now has:
 - repeated real molecule-property support
 - stronger RDKit descriptor / baseline support
 - real PFAS pathway-coherence support
+- real PFAS bad-descendant / safety-triage support
 - real materials-stability support
 - a real allostery benchmark surface with source residue labels joined to
   `98` PDB contact graphs; pocket/path scoring improves and beats graph

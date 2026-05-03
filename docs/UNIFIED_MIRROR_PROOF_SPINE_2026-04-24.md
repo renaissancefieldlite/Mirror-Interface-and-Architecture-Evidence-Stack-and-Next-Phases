@@ -285,6 +285,15 @@ Completed enough to show:
 - the same rule applies across the full nest ladder: real dataset / signal,
   independent labels, explicit mapper score, baselines and controls, recurrence
   or second benchmark, then model tuning only after support
+- `Nest 2E` now has PFAS safety-triage support on the EPA `EnvLib + MetaLib`
+  reaction library. The pathway-coherence lane was already supported
+  (`184` parent/product rows, true coherence `0.624682057` vs shuffled
+  `0.291177508`, p `0.000199960`). The safety upgrade separates
+  transformation from safer degradation: coherent bad-descendant score
+  `0.595066936` vs shuffled `0.554862857`, bad-descendant flag fraction
+  `0.733695652` vs shuffled `0.532891304`, high retained-burden fraction
+  `0.842391304`, low mineralization-quality fraction `0.842391304`, and p
+  `0.000199960`.
 - `Nest 5` is the convergence target: a Golden Mirror model tuned from
   supported lanes across AI internals, circuits / hardware, structured matter,
   resonance / field systems, biology, and multi-class convergence tasks
@@ -312,8 +321,8 @@ Immediate next work:
 5. expand `Nest 2D` with external pocket candidates where available and a
    second allostery benchmark family, keeping pocket overlap and active-site
    communication-path recovery as separate outputs
-6. upgrade `Nest 2E` PFAS into bad-descendant and safety scoring against
-   known degradation-pathway data
+6. continue `Nest 2E` only when richer degradation-success / mineralization
+   labels are available; current PFAS safety-triage support is logged
 7. strengthen `Nest 2F` with structure-aware materials / crystal-stability
    baselines using `ASE`, `pymatgen`, or available materials-model adapters
 8. harden `Nest 2G` with descriptor families, scaffold splits, and model
