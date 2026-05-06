@@ -15,6 +15,8 @@ Companion reports:
 - [Nest 2D-4 Blind Pocket Split Mapper](../artifacts/validation/nest2d_allostery_blind_pocket_split_mapper/nest2d_allostery_blind_pocket_split_mapper_report.md)
 - [Nest 2D-5 Ligand-Informed Split Mapper](../artifacts/validation/nest2d_allostery_ligand_informed_split_mapper/nest2d_allostery_ligand_informed_split_mapper_report.md)
 - [Nest 2D-6 Allostery Recurrence / Path Mapper](../artifacts/validation/nest2d_allostery_recurrence_path_mapper/nest2d_allostery_recurrence_path_mapper_report.md)
+- [Nest 2D-7A P2Rank External Pocket Coverage](../artifacts/validation/nest2d_p2rank_external_pocket_coverage/nest2d_p2rank_external_pocket_coverage_report.md)
+- [Nest 2D-7B External-Pocket Merged Path Mapper](../artifacts/validation/nest2d_allostery_external_pocket_merged_path_mapper/nest2d_allostery_external_pocket_merged_path_mapper_report.md)
 - [Nest 2E PFAS Pathway Validation](../artifacts/validation/nest2e_pfas_pathway/nest2e_pfas_pathway_report.md)
 - [Nest 2E PFAS Safety Logic](../artifacts/validation/nest2e_pfas_safety_logic/nest2e_pfas_safety_logic_report.md)
 - [Nest 2E PFAS Pathway Rerun](../artifacts/validation/nest2e_pfas_pathway_rerun02/nest2e_pfas_pathway_report.md)
@@ -31,7 +33,7 @@ real public dataset, a real measurement surface, or a real benchmark table.
 
 | Gate | Dataset / Source | Status | Clean Read |
 | --- | --- | --- | --- |
-| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures, local `P2Rank` pocket predictions | `p2rank_external_top1_overlap_supported` plus `ligand_informed_recurrence_and_path_supported` | 98 benchmark rows join to real labels and contact graphs; 2D-2 pocket/path scoring beats graph controls; 2D-3 bound-ligand contacts confirm real pocket/contact geometry; 2D-4 sets the structural-only blind boundary; 2D-5 supports the ligand-informed application branch above the same-row AlloBench tool bar and controls; 2D-6 repeats the branch under an alternate split and separates active-site communication-path recovery; 2D-7A adds a real external P2Rank candidate branch |
+| `Nest 2D` allostery | AlloBench benchmark table, public AlloBench residue labels, RCSB PDB structures, local `P2Rank` pocket predictions | `external_merged_path_supported` | 98 benchmark rows join to real labels and contact graphs; 2D-2 pocket/path scoring beats graph controls; 2D-3 bound-ligand contacts confirm real pocket/contact geometry; 2D-4 sets the structural-only blind boundary; 2D-5 supports the ligand-informed application branch above the same-row AlloBench tool bar and controls; 2D-6 repeats the branch under an alternate split and separates active-site communication-path recovery; 2D-7A adds a real external P2Rank candidate branch; 2D-7B merges P2Rank with ligand-informed path candidates and stays supported above PASSer, graph controls, random candidates, and shuffled labels |
 | `Nest 2E` PFAS pathways / safety | EPA PFAS reaction library `EnvLib + MetaLib` | `pfas_bad_descendant_safety_logic_supported` | true parent/product transformations beat shuffled parent/product controls, and coherent bad-descendant scoring separates retained PFAS burden from transformation alone |
 | `Nest 2F` materials stability | Matbench / Materials Project `mp_e_form` | `supported` | composition/structure descriptors recover DFT formation energy above shuffled-target controls |
 | `Nest 2G` stronger baselines | ESOL, Lipophilicity, FreeSolv, QM9 alpha | `supported` | multifeature RDKit train/test baselines strengthen the molecule-property lane |
@@ -262,13 +264,39 @@ shuffled controls. The top-3 envelope rises close to the PASSer bar, which
 makes merged ranking and path scoring the next useful allostery upgrade.
 ```
 
+2D-7B external-pocket merged path result:
+
+- scored rows: `98`
+- folds: `5`
+- random trials: `500`
+- P2Rank rows with candidates: `95`
+- selected source counts: `ligand_mirror=98`
+- merged pocket Jaccard: `0.255807`
+- previous 2D-6 Mirror pocket Jaccard: `0.249009`
+- P2Rank top-1 Jaccard: `0.096418`
+- P2Rank top-3 envelope Jaccard: `0.189177`
+- same-row `PASSer_Ensemble` Jaccard: `0.201357`
+- random merged-candidate Jaccard: `0.015506`
+- pocket random / shuffled p-values: `0.001996` / `0.001996`
+- merged path-truth recall: `0.351995`
+- random path-truth recall: `0.056557`
+- path random / shuffled p-values: `0.001996` / `0.001996`
+
+Clean 2D-7B read:
+
+```text
+The merged external-pocket / ligand-informed branch is supported above PASSer,
+graph controls, random candidates, and shuffled labels. P2Rank is now a real
+external candidate source, but the held-out selector still chooses the
+ligand-informed Mirror/path branch on all rows, so direct P2Rank dominance is
+not claimed.
+```
+
 Next allostery expansion:
 
-- run 2D-7B external-pocket communication paths with optimized graph
-  construction
-- merge P2Rank candidate pockets with the 2D-6 ligand-informed branch under
+- source a second allostery benchmark family or optimize external-tool ranking
+- keep P2Rank candidate pockets merged with the ligand-informed branch under
   held-out ranking
-- run a second allostery benchmark family if one is sourced
 - keep pocket overlap and communication-path recovery as separate outputs
 
 ## Nest 2E: PFAS Pathway Validation
@@ -338,8 +366,10 @@ Result:
 - rows used after cleaning: `50,000`
 - test Pearson: `0.568810`
 - repeat test Pearson: `0.568895`
+- seed-69 refresh Pearson: `0.567628`
 - Pearson permutation p: `0.000999`
 - repeat Pearson permutation p: `0.000999`
+- seed-69 Pearson permutation p: `0.000999`
 - RMSE-improvement permutation p: `0.000999`
 
 Boundary:
@@ -358,6 +388,15 @@ comparison than the original single descriptor composite.
 | `Lipophilicity` | `4200` | `0.204180` | `0.524267` | `0.000999` |
 | `FreeSolv` | `642` | `0.395067` | `0.883146` | `0.000999` |
 | `QM9 alpha` | `50000` | `0.083271` | `0.911784` | `0.000999` |
+
+Seed-68 refresh:
+
+| Dataset | Rows | Composite abs r | Multifeature train/test abs r | RMSE improvement | p |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `ESOL` | `1128` | `0.558660` | `0.893422` | `0.555455` | `0.000999` |
+| `Lipophilicity` | `4200` | `0.204180` | `0.527449` | `0.148655` | `0.000999` |
+| `FreeSolv` | `642` | `0.395067` | `0.943685` | `0.657915` | `0.000999` |
+| `QM9 alpha` | `50000` | `0.090075` | `0.916655` | `0.600308` | `0.000999` |
 
 Clean read:
 
@@ -378,10 +417,13 @@ It now has:
 - real PFAS pathway-coherence support
 - real PFAS bad-descendant / safety-triage support
 - real materials-stability support
+- repeated seed-69 materials-stability support
 - a real allostery benchmark surface with source residue labels joined to
   `98` PDB contact graphs; pocket/path scoring improves and beats graph
-  controls, and ligand-contact geometry confirms a real pocket/contact feature
-  source for the next blind mapper
+  controls; ligand-contact geometry confirms a real pocket/contact feature
+  source; recurrence and communication-path scoring are supported; and P2Rank
+  is now a real external pocket-candidate source merged into the supported
+  allostery branch
 
 The claim remains bounded:
 

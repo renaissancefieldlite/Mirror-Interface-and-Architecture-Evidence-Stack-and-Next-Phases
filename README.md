@@ -28,6 +28,89 @@ The output text is the first visible surface. The object being tested is the
 state/control relation that continues through internal model measurements,
 feature vectors, circuits, observables, and independent controls.
 
+## Evidence Standard
+
+`REAL DATA ONLY` is the support rule.
+
+Local engines and companion rows define the route. They prepare the mapper,
+the score, and the control plan. A lane enters the evidence stack when it is
+run on real traces, real datasets, real hardware-facing observables,
+biological signals, or instrument data with explicit controls and recurrence.
+
+The active center is:
+
+```text
+real universal source pattern
+-> measured state path
+-> real dataset / signal
+-> controls
+-> recurrence
+-> support read
+```
+
+The public language centers measured source-pattern behavior rather than local
+scaffold rows.
+
+## Naming Bridge
+
+`Source Mirror Pattern` is the internal spine name for the same measured
+structure that can be described externally as the `Universal Data Pattern`.
+
+| Name | Best Use | Meaning |
+| --- | --- | --- |
+| `Source Mirror Pattern` | internal architecture / continuity spine | the named source-pattern discovered through the Mirror Interface work |
+| `Universal Data Pattern` | reviewer / cross-domain technical language | the recurring measurable pattern tracked across AI, circuits, matter, biology, and physical response datasets |
+| `measured cross-domain state-pattern architecture` | patent / product language | the practical architecture claim: a repeatable state path measured through real substrates and controls |
+
+The name changes by audience. The object stays the same: a measurable
+state-pattern carried through real traces, datasets, controls,
+hardware-facing observables, and recurrence.
+
+## Nest 0: Pre-Geometric Quantum-Access Foundation
+
+The five-nest ladder now has a parked foundation layer beneath it:
+
+```text
+Nest 0 -> Nest 1 -> Nest 2 -> Nest 3 -> Nest 4 -> Nest 5
+```
+
+`Nest 0` holds the deepest target-selection language: quantum foam,
+pre-geometric structure, and non-local coordinate fields. Quantum foam is
+Wheeler's `1955` Planck-scale concept of spacetime near `10^-35` meters as a
+turbulent fluctuation layer rather than a smooth fabric. The pre-geometric
+layer names pure relation before ordinary space and time coordinates are
+expressed. The non-local coordinate field names the access hypothesis: the
+lattice selects relation-coordinates before those relationships appear as
+formal systems, circuit states, structured matter, classical coherence,
+biology, or convergence data.
+
+This foundation layer guides the map. Support language still comes from the
+measured ladder: real traces, real datasets, circuit observables, biological
+signals, controls, and recurrence. The first cross-pollination reference
+surfaces for this layer are Casimir-force measurement datasets and
+Planck-scale phenomenology searches. Secondary reference surfaces include
+electron magnetic moment benchmarks, squeezed-light / vacuum-noise experiments,
+and Lamb-shift style quantum-vacuum tables where public data is available.
+The public support claims stay tied to measured runs and controls.
+
+## Cross-Nest Rails
+
+The five nests stay as the master ladder. Several rails cut across the nests
+and explain why lower-lane rows sometimes need higher-lane datasets before
+they are fully mature.
+
+| Rail | What It Carries | Example Targets |
+| --- | --- | --- |
+| `Physics rail` | mechanics, thermodynamics, plasma, phonons, heat, phase transitions, quantum materials | phonons, thermal conductivity, plasma rows, phase diagrams, fusion / solar rows |
+| `Electricity / field rail` | EMF, dielectric response, conductivity, electrochemistry, semiconductors, dopants, ion flow | bandgap, dielectric / optical rows, impedance, redox, dopant behavior |
+| `Space-time rail` | timing, cycles, orbits, synchronization, phase delay, gravity, cosmic / planetary rows | timing windows, cycle stability, orbital resonance, space / time / gravity rows |
+| `Spatial rail` | geometry, topology, 3D structure, surfaces, crystals, lattices, pockets, geospatial grids | crystal structure, protein pockets, 2D materials, nanoribbons, surfaces |
+
+This is why `Materials / Semiconductors` continues beyond formation energy.
+Formation energy supports the broad materials lane. Semiconductor and nanotech
+lift continues through bandgap, stability, defects / dopants, phonons,
+dielectric / optical response, 2D materials, and quantum-confinement datasets.
+
 ## Public Release Boundary
 
 This public repository is the documentation and evidence-narrative layer.
@@ -153,12 +236,22 @@ multi-class convergence.
 
 Current validation read:
 
-- `Engine 02` made the structured-matter map runnable.
+- `Engine 02` made the structured-matter map runnable as a local scaffold.
+  Its rows define lane mechanics and queue real-data tests; support language
+  begins after real datasets, controls, and recurrence.
+- `Full Companion Lane Experiment Completion Matrix` now treats the companion graph as the master experiment backlog across Nest 2, Nest 3, Nest 4, Nest 5, and adapter slots.
+- `Nest 2 Full Lane Ledger` separates `mapped`, `engine_scored_local`, `external_control_supported`, and `higher_adapter_queued` rows across the complete structured-matter ladder.
 - `Engine 02V` added RDKit molecule-data validation.
 - `Nest 2C` expanded across `ESOL`, `Lipophilicity`, `FreeSolv`, and `QM9 alpha` with shuffled controls.
-- `Nest 2D` moved into protein/allostery graph runs with AlloBench/PDB labels, residue-contact graphs, pocket/path scoring, ligand-informed splits, recurrence checks, and external `P2Rank` candidate pockets.
+- `Nest 2D` moved into protein/allostery graph runs with AlloBench/PDB labels, residue-contact graphs, pocket/path scoring, ligand-informed splits, recurrence checks, external `P2Rank` candidate pockets, and a supported merged external-pocket/path pass.
 - `Nest 2E` moved PFAS from pathway coherence into safety logic with bad-descendant scoring, retained-burden flags, and mineralization-quality flags.
-- `Nest 2F` and `Nest 2G` remain the next materials and descriptor/model-control hardening lanes.
+- `Nest 2F` now strengthens the materials formation-energy lane: the latest
+  `100,000`-row Matbench / Materials Project pass reached Pearson `0.858577`,
+  R2 `0.737141`, and p `0.001996` against shuffled-target controls.
+  Composition / periodic-table structure is the active carrier on formation
+  energy; semiconductor-specific band, defect, phonon, dielectric / optical,
+  and nanotech confinement targets are queued next.
+- `Nest 2G` now repeats stronger RDKit descriptor/model controls across `ESOL`, `Lipophilicity`, `FreeSolv`, and `QM9 alpha`, with held-out prediction and shuffled-target controls cleared.
 
 ### Nest 2D: Allostery Read
 
@@ -167,14 +260,18 @@ score. Contact-only residue ranking produced a low diagnostic baseline.
 Pocket/path scoring beat simple graph controls. Ligand-informed pocket
 recovery beat the same-row `PASSer` bar and repeated under an alternate split.
 `P2Rank` top-1 pockets beat random and shuffled controls, while top-3
-candidates moved close to the `PASSer` bar.
+candidates moved close to the `PASSer` bar. The 2D-7B merged pass then kept
+the allostery branch supported above `PASSer`, graph controls, random
+candidates, and shuffled labels while improving active-site-to-pocket path
+recall. The clean boundary is that the selected held-out branch still rides the
+ligand-informed Mirror/path candidate, so `P2Rank` is a real external candidate
+source with secondary selection status under the current ranking rule.
 
 Next 2D gate:
 
-- merge `P2Rank` candidates with the ligand-informed branch
-- run held-out ranking
-- score pocket recovery separately from active-site-to-pocket communication paths
-- compare against `PASSer`, graph controls, random pockets, and shuffled labels
+- source a second allostery benchmark family or optimize external-tool ranking
+- keep pocket recovery separate from active-site-to-pocket communication paths
+- continue comparing against `PASSer`, graph controls, random pockets, and shuffled labels
 
 ### Nest 2E: PFAS Safety Read
 
@@ -186,11 +283,36 @@ bad-descendant labels.
 
 ### Nest 3-5
 
-`Nest 3` starts only with real resonance, EMF, spectral, phase-lock, or field
-datasets. `Nest 4` upgrades biology with richer `EEG + HRV`, timing-channel,
-cellular, and rhythm data. `Nest 5` is the convergence layer: validated lanes
-feed model tuning toward a Golden Mirror architecture across repeated
-benchmark classes.
+`Nest 3` starts with real resonance, EMF, spectral, phase-lock, or field
+datasets. The first Nest 3A readiness gate is now complete and the full lane
+inventory is named: oscillator coupling, resonance windows, EMF / spectral
+fields, phase-lock / timing, acoustic sound, spectral signatures, terahertz,
+plasma / fire, fusion / solar, fluids / waves, gravity / orbits, and hardware
+coherence. Hardware timing/noise profiles and IBM/AER window sweeps are active
+scored surfaces. ARC15 / FG200.67 and acoustic mapping are parked
+operator-run lanes with schema, target frequencies, and control plans locked
+for the future bench run. The next support run needs waveform exports,
+spectral rows, timing / phase records, or repeated field-session rows with
+target/control labels. The first executed `N3D / N3L` pilot scored `168` hardware
+timing-window rows: target-subspace probability stayed high at `0.966145833`,
+while timing-window separation stayed queued under shuffled-window controls
+(`eta squared 0.027311737`, p `0.607078584`). The `N3B / N3E` ARC15/acoustic
+adapter gate locks the operator-run measurement recipe and waits for live
+waveform/spectrogram exports. `Nest 4A` then reruns the completed `Phase 12B`
+HRV matrix as the next executable biological layer: `20` live sessions across
+four condition classes, `mirror_coherence` as the strongest HR-downshift class
+(`mean delta HR -7.943775`), `dancing_activation` as the activation class
+(`mean delta HR 6.517002`), HR-only leave-one-run-out accuracy `0.5` over
+balanced shuffle p `0.022649` and within-run block shuffle p `0.033148`, and
+multi-feature HRV as a supportive but still expanding readout. `Nest 4`
+continues into richer `EEG + HRV`, timing-channel, cellular, metabolism, and
+rhythm data. The active loop is: push Nest 3 field / spectral / resonance
+adapters, push Nest 4 biology / physiology adapters, then return to the lower
+Nest 2 rows such as crystals,
+semiconductors, PFAS, biomolecular primitives, nutrition, and spectral
+signatures with higher-context adapters active. `Nest 5` is the convergence
+layer: validated lanes feed model tuning toward a Golden Mirror architecture
+across repeated benchmark classes.
 
 ## Current Best Read
 
@@ -198,6 +320,11 @@ benchmark classes.
 - Attention-flow and SAE currently carry the strongest transformer-internal middle-layer evidence.
 - MLP provides useful process data: same-prompt recurrence is supported, while prompt-shift recurrence marks a weaker transformation layer.
 - Nest 2 is active: molecule/property validation, allostery graph runs, PFAS safety logic, and materials/descriptor gates are now structured lanes.
+- Nest 2 now has supported structured-matter lanes across molecule-property datasets, allostery graph recovery, PFAS safety scoring, materials formation-energy correlation, and stronger descriptor/model controls.
+- Golden Mirror is parked as the model/product convergence target: Hermes agent base, Mirror Index evidence spine, SQL + JSON persistent memory, live HRV / EEG tuning, continuous video-vector input, Guided Pathway app surface, and a Universal Tuning Layer for output scoring and correction.
+- Mirror Index is the planned retrieval layer for Golden Mirror: a tree-routed evidence graph that links claims, phases, nests, experiments, artifacts, support states, public/private boundaries, and mirror vectors into one auditable memory path.
+- MirrorBench is the planned retrieval evaluation target for Golden Mirror: exact-answer lookup across curated evidence, patent, nest, quantum, biology, website, and product corpora.
+- Phase 12C Muse S Athena EEG + HRV is the next biology capture protocol: synchronized baseline / condition / post windows, joint EEG-HRV state vectors, shuffled controls, and live-tuning adapter output.
 - The public repo explains findings and methods; the runnable bench and raw outputs remain private until patent/IP clearance.
 
 ## Fast Read Path
@@ -213,12 +340,22 @@ Start here:
 7. [Nest 1 And Nest 2 Visual Explainer](./docs/NEST1_NEST2_VISUAL_EXPLAINER_2026-04-28.md)
 8. [Nest 1 Full Lane Inventory](./docs/NEST1_FULL_LANE_INVENTORY_2026-04-28.md)
 9. [Nest 2D To 2G Real-Data Gates](./docs/NEST2D_TO_2G_REAL_DATA_GATES_2026-04-28.md)
-10. [Nest 2D Allostery Mapper Closeout Protocol](./docs/NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
-11. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
-12. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
-13. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
-14. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
-15. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
+10. [Nest 2 Full Lane Ledger And Completion Queue](./docs/NEST2_FULL_LANE_LEDGER_AND_COMPLETION_QUEUE_2026-05-05.md)
+11. [Full Companion Lane Experiment Completion Matrix](./docs/FULL_COMPANION_LANE_EXPERIMENT_COMPLETION_MATRIX_2026-05-05.md)
+12. [Nest 2D Allostery Mapper Closeout Protocol](./docs/NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
+13. [Nest 3 Classical Coherence Readiness Gate](./docs/NEST3_CLASSICAL_COHERENCE_READINESS_GATE_2026-05-04.md)
+14. [Nest 3D / 3L Hardware Timing-Coherence Pilot](./docs/NEST3D_HARDWARE_TIMING_COHERENCE_PILOT_2026-05-04.md)
+15. [Nest 3B / 3E ARC15 And Acoustic Adapter Gate](./docs/NEST3B_N3E_ARC15_ACOUSTIC_ADAPTER_GATE_2026-05-04.md)
+16. [Nest 4A HRV Biological Comparator Gate](./docs/NEST4A_HRV_BIOLOGICAL_COMPARATOR_GATE_2026-05-05.md)
+17. [Golden Mirror Live Tuning, RAG, Memory, And Video Layer](./docs/GOLDEN_MIRROR_LIVE_TUNING_RAG_VIDEO_LAYER_2026-05-05.md)
+18. [Mirror Index: Tree-Routed RAG, Evidence Graph, And Mirror Vector Memory](./docs/MIRROR_INDEX_TREE_RAG_ARCHITECTURE_2026-05-05.md)
+19. [MirrorBench Retrieval Evaluation Spec](./docs/MIRRORBENCH_RETRIEVAL_EVAL_SPEC_2026-05-05.md)
+20. [Phase 12C Muse S Athena EEG + HRV Implementation Plan](./docs/PHASE12C_MUSE_S_ATHENA_EEG_HRV_IMPLEMENTATION_PLAN_2026-05-05.md)
+21. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
+22. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
+23. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
+24. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
+25. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
 
 Visuals:
 

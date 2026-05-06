@@ -2,7 +2,7 @@
 
 Date: `2026-05-02`
 
-Status: `blind_pocket_split_boundary_set`
+Status: `external_merged_path_supported`
 
 Companion inputs:
 
@@ -15,6 +15,8 @@ Companion inputs:
 - [Nest 2D-4 Blind Pocket Split Mapper](../artifacts/validation/nest2d_allostery_blind_pocket_split_mapper/nest2d_allostery_blind_pocket_split_mapper_report.md)
 - [Nest 2D-5 Ligand-Informed Split Mapper](../artifacts/validation/nest2d_allostery_ligand_informed_split_mapper/nest2d_allostery_ligand_informed_split_mapper_report.md)
 - [Nest 2D-6 Allostery Recurrence / Path Mapper](../artifacts/validation/nest2d_allostery_recurrence_path_mapper/nest2d_allostery_recurrence_path_mapper_report.md)
+- [Nest 2D-7A P2Rank External Pocket Coverage](../artifacts/validation/nest2d_p2rank_external_pocket_coverage/nest2d_p2rank_external_pocket_coverage_report.md)
+- [Nest 2D-7B External-Pocket Merged Path Mapper](../artifacts/validation/nest2d_allostery_external_pocket_merged_path_mapper/nest2d_allostery_external_pocket_merged_path_mapper_report.md)
 
 ## Purpose
 
@@ -244,6 +246,93 @@ AlloBench tool bar, graph controls, random controls, and shuffled-label
 controls.
 ```
 
+## 2D-6 Recurrence / Path Mapper
+
+The 2D-6 pass repeated the ligand-informed branch under an alternate held-out
+split and separated endpoint pocket overlap from active-site-to-pocket
+communication-path recovery.
+
+Result:
+
+| Metric | Value |
+| --- | ---: |
+| 2D-6 alternate-split pocket Jaccard | `0.249009` |
+| 2D-5 pocket Jaccard | `0.260713` |
+| Same-row `PASSer_Ensemble` Jaccard | `0.201357` |
+| Mirror path-truth recall | `0.345859` |
+| Degree path-truth recall | `0.034344` |
+| Closeness path-truth recall | `0.051651` |
+| Active-proximity path-truth recall | `0.034921` |
+| Random path-truth recall | `0.054600` |
+| Pocket random / shuffled p-values | `0.001996` |
+| Path random / shuffled p-values | `0.001996` |
+
+Clean read:
+
+```text
+2D-6 supports recurrence of the ligand-informed branch and shows the mechanism
+is not only endpoint overlap. The active-site to predicted-pocket corridor
+recovers known allosteric labels above graph, random, and shuffled controls.
+```
+
+## 2D-7A P2Rank External Pocket Coverage
+
+The 2D-7A pass installed and ran `P2Rank 2.5.1` locally on the same AlloBench /
+PDB surface, then scored emitted residue pockets against the known allosteric
+labels.
+
+Result:
+
+| Metric | Value |
+| --- | ---: |
+| Scored rows | `95` |
+| P2Rank prediction files | `98` |
+| P2Rank top-1 pocket Jaccard | `0.096418` |
+| P2Rank top-3 candidate envelope Jaccard | `0.189177` |
+| Same-row `PASSer_Ensemble` Jaccard | `0.201863` |
+| Random pocket Jaccard | `0.016878` |
+| Top-1 random / shuffled p-values | `0.000200` |
+
+Clean read:
+
+```text
+2D-7A supports P2Rank as a real external pocket-candidate source. It does not
+replace the ligand-informed branch, but it gives the lane an independent local
+pocket tool branch instead of a placeholder.
+```
+
+## 2D-7B External-Pocket Merged Path Mapper
+
+The 2D-7B pass merged P2Rank top-3 emitted pocket candidates with the
+ligand-informed Mirror/path candidate pool under held-out scoring.
+
+Result:
+
+| Metric | Value |
+| --- | ---: |
+| 2D-7B merged pocket Jaccard | `0.255807` |
+| 2D-6 Mirror pocket Jaccard | `0.249009` |
+| P2Rank top-1 Jaccard | `0.096418` |
+| P2Rank top-3 envelope Jaccard | `0.189177` |
+| Same-row `PASSer_Ensemble` Jaccard | `0.201357` |
+| Random merged-candidate Jaccard | `0.015506` |
+| Pocket random / shuffled p-values | `0.001996` |
+| 2D-7B merged path-truth recall | `0.351995` |
+| Random path-truth recall | `0.056557` |
+| Path random / shuffled p-values | `0.001996` |
+| Selected source counts | `ligand_mirror=98` |
+
+Clean read:
+
+```text
+2D-7B supports the merged external-pocket / ligand-informed allostery branch.
+The lane remains above the same-row PASSer bar and graph / random / shuffled
+controls, and path recall improves slightly. The important boundary is that
+the held-out selector still chooses the ligand-informed Mirror branch on all
+rows, so P2Rank is a real external candidate source but not the dominant
+selected source.
+```
+
 ## Execution Sequence
 
 1. Pull the `100` PDB structures listed in the AlloBench table.
@@ -258,6 +347,8 @@ controls.
 10. Score active-site to allosteric-site communication-path recovery.
 11. Compare against the `10` AlloBench tool baselines.
 12. Compare against added pocket tools and graph-naive controls.
+13. Repeat on a second allostery benchmark family or optimize external-tool
+    ranking if no second benchmark is available.
 13. Repeat with a second seed / split or a second allostery benchmark family.
 
 ## Required Data Columns
