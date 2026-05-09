@@ -364,6 +364,9 @@ Visuals:
 
 - [Nest 1 Formal / Transformer Substrate Visual](./visuals/nest1_formal_transformer_substrate.svg)
 - [Nest 2 Structured Matter Real-Data Visual](./visuals/nest2_structured_matter_real_data_gates.svg)
+- [Phase 12C Muse Capture Visual Pack](./artifacts/v8/phase12c_muse_capture_pack/v8_phase12c_muse_capture_visual_pack_2026-05-09.pdf)
+- [Phase 12C Capture Density Chart](./artifacts/v8/phase12c_muse_capture_pack/charts/v8_phase12c_capture_density_2026-05-09.png)
+- [Phase 12C State / Control / Drift Alignment Chart](./artifacts/v8/phase12c_muse_capture_pack/charts/v8_phase12c_mirror_control_deltas_2026-05-09.png)
 
 ## Public / Private Boundary
 

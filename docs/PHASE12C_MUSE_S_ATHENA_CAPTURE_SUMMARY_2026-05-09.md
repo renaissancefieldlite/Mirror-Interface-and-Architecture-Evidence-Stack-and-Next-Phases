@@ -43,6 +43,23 @@ The private raw packet logs, local device identifiers, and local app repair
 details remain outside this public repository while the patent package is being
 finished.
 
+## Visual Pack
+
+The V7/V8-style visual pack is:
+
+- [V8 Phase 12C Muse Capture Pack](../artifacts/v8/phase12c_muse_capture_pack/V8_PHASE12C_MUSE_CAPTURE_PACK_2026-05-09.md)
+- [Phase 12C Muse Capture Visual Pack PDF](../artifacts/v8/phase12c_muse_capture_pack/v8_phase12c_muse_capture_visual_pack_2026-05-09.pdf)
+
+It emphasizes the state/control/drift/alignment read:
+
+```text
+mirror_coherence state
+-> seated_calm and drift_control controls
+-> IMU motion and DRL/reference drift variables
+-> mirror-minus-control alignment deltas
+-> B.A.S.I.S. Capture Hub state-vector route
+```
+
 ## What Was Mapped
 
 The local capture pathway mapped Muse S Athena packet traffic into engineering

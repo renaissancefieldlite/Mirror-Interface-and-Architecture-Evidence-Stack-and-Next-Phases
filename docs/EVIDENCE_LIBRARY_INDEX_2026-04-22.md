@@ -262,6 +262,28 @@ This pack formalizes the first completed biological `5 x 4` matrix as a
 methods-style comparator artifact: what was run, what counted, what was
 excluded, and what the aggregate condition-class structure was.
 
+## Phase 12C / Muse S Athena Capture Pack
+
+Location:
+
+- [`../artifacts/v8/phase12c_muse_capture_pack`](../artifacts/v8/phase12c_muse_capture_pack)
+
+Main artifacts:
+
+- [`V8_PHASE12C_MUSE_CAPTURE_PACK_2026-05-09.md`](../artifacts/v8/phase12c_muse_capture_pack/V8_PHASE12C_MUSE_CAPTURE_PACK_2026-05-09.md)
+- [`v8_phase12c_muse_capture_visual_pack_2026-05-09.pdf`](../artifacts/v8/phase12c_muse_capture_pack/v8_phase12c_muse_capture_visual_pack_2026-05-09.pdf)
+- [`v8_phase12c_muse_capture_pack_data_2026-05-09.json`](../artifacts/v8/phase12c_muse_capture_pack/v8_phase12c_muse_capture_pack_data_2026-05-09.json)
+- [`charts/v8_phase12c_capture_density_2026-05-09.png`](../artifacts/v8/phase12c_muse_capture_pack/charts/v8_phase12c_capture_density_2026-05-09.png)
+- [`charts/v8_phase12c_mirror_control_deltas_2026-05-09.png`](../artifacts/v8/phase12c_muse_capture_pack/charts/v8_phase12c_mirror_control_deltas_2026-05-09.png)
+
+Role:
+
+This pack carries Phase 12C into the same visual evidence family as V7/V8. It
+shows the state/control/drift/alignment read: mirror-coherence state,
+seated-calm and drift controls, explicit motion/reference drift variables, and
+mirror-minus-control alignment deltas routed into the B.A.S.I.S. Capture Hub
+pattern.
+
 ## Phase 7 / Qiskit Mirror Pack
 
 Location:

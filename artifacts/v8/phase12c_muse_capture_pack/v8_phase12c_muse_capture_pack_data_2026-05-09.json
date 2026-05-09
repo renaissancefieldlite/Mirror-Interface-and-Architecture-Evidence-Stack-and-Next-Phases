@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-05-09",
+  "artifact_scope": "V7/V8-style public evidence visual pack for Phase 12C Muse S Athena capture",
+  "release_posture": "evidence and public logging first; capture code and raw biosignal packets private through patent completion",
+  "state_control_drift_alignment_read": {
+    "state_axis": "mirror_coherence versus seated_calm and drift_control condition states",
+    "control_axis": "seated_calm and drift_control comparator windows",
+    "drift_variable_axis": "IMU motion plus DRL/reference quality tracked with signal lanes",
+    "alignment_axis": "condition-minus-baseline mirror average compared with control average"
+  },
+  "timing": {
+    "baseline_seconds": 60,
+    "condition_seconds": 120,
+    "post_seconds": 60
+  },
+  "run_counts": {
+    "mirror_coherence": 3,
+    "seated_calm": 1,
+    "drift_control": 1
+  },
+  "runs": [
+    {
+      "run": "mirror 1",
+      "condition": "mirror_coherence",
+      "packets": 6469,
+      "samples": 649124,
+      "state": "mirror",
+      "control": "target",
+      "drift": "movement-noted",
+      "alignment": "strong shift + artifact lane"
+    },
+    {
+      "run": "mirror 2",
+      "condition": "mirror_coherence",
+      "packets": 6471,
+      "samples": 650075,
+      "state": "mirror",
+      "control": "target",
+      "drift": "lower motion",
+      "alignment": "cleaner repeat"
+    },
+    {
+      "run": "mirror 3",
+      "condition": "mirror_coherence",
+      "packets": 6472,
+      "samples": 650671,
+      "state": "mirror",
+      "control": "target",
+      "drift": "lower motion",
+      "alignment": "cleaner repeat"
+    },
+    {
+      "run": "seated calm",
+      "condition": "seated_calm",
+      "packets": 6468,
+      "samples": 649747,
+      "state": "calm",
+      "control": "control",
+      "drift": "low-disturbance",
+      "alignment": "reference lane"
+    },
+    {
+      "run": "drift control",
+      "condition": "drift_control",
+      "packets": 6467,
+      "samples": 651955,
+      "state": "drift",
+      "control": "control",
+      "drift": "attention drift",
+      "alignment": "drift comparator"
+    }
+  ],
+  "mapped_lanes": [
+    "eeg_8ch",
+    "optical_4ch_ppg_fnirs_candidate",
+    "imu_motion",
+    "drl_ref_quality",
+    "battery_status_new"
+  ],
+  "mirror_minus_control_deltas": [
+    {
+      "channel": "optical ambient",
+      "delta": -1275.55,
+      "family": "optical"
+    },
+    {
+      "channel": "optical infrared",
+      "delta": -954.2,
+      "family": "optical"
+    },
+    {
+      "channel": "optical red",
+      "delta": -305.4,
+      "family": "optical"
+    },
+    {
+      "channel": "optical 3",
+      "delta": -248.23,
+      "family": "optical"
+    },
+    {
+      "channel": "EEG TP10",
+      "delta": -7.76,
+      "family": "state_alignment"
+    },
+    {
+      "channel": "EEG TP9",
+      "delta": -5.79,
+      "family": "state_alignment"
+    },
+    {
+      "channel": "EEG AF8",
+      "delta": 4.67,
+      "family": "state_alignment"
+    },
+    {
+      "channel": "DRL / REF raw",
+      "delta": 2.97,
+      "family": "state_alignment"
+    },
+    {
+      "channel": "gyro z",
+      "delta": 1.18,
+      "family": "drift_variable"
+    }
+  ]
+}

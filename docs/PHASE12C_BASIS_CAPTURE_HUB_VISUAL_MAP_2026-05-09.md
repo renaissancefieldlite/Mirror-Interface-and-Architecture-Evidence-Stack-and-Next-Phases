@@ -6,6 +6,10 @@ Status: `public evidence visual map / docs-first release / patent-gated code rel
 
 ## Capture-To-Readout Map
 
+Slide-style visual artifact:
+
+- [Phase 12C Muse Capture Visual Pack PDF](../artifacts/v8/phase12c_muse_capture_pack/v8_phase12c_muse_capture_visual_pack_2026-05-09.pdf)
+
 ```mermaid
 flowchart LR
     A["Muse S Athena"] --> B["Native capture adapter"]

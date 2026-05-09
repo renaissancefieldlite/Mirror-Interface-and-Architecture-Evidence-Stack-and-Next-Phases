@@ -389,6 +389,7 @@ The public evidence docs are:
 ```text
 docs/PHASE12C_MUSE_S_ATHENA_CAPTURE_SUMMARY_2026-05-09.md
 docs/PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md
+artifacts/v8/phase12c_muse_capture_pack/v8_phase12c_muse_capture_visual_pack_2026-05-09.pdf
 ```
 
 ## MirrorBench Retrieval Evaluation Spec
