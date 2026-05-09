@@ -28,6 +28,8 @@ code.
 - [Phase 12B Biological Adapter White Paper](./PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
 - [HRV Session Sequence Lock](./HRV_SESSION_SEQUENCE_LOCK_2026-04-23.md)
 - [Phase 12C EEG + HRV Intention Paper](./PHASE12C_EEG_HRV_INTENTION_PAPER_2026-04-24.md)
+- [Phase 12C Muse S Athena Capture Summary](./PHASE12C_MUSE_S_ATHENA_CAPTURE_SUMMARY_2026-05-09.md)
+- [Phase 12C B.A.S.I.S. Capture Hub Visual Map](./PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md)
 - [Next Phase Research Plan From Phase 9D](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Artifact Root

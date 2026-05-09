@@ -368,6 +368,29 @@ The parked doc is:
 docs/PHASE12C_MUSE_S_ATHENA_EEG_HRV_IMPLEMENTATION_PLAN_2026-05-05.md
 ```
 
+## Phase 12C Muse S Athena Five-Run Capture Summary
+
+Phase 12C has now moved from implementation plan to a first public evidence
+summary. A local Muse S Athena capture pack landed five full windowed sessions:
+
+- `3` mirror-coherence condition runs
+- `1` seated-calm control
+- `1` drift-control comparator
+
+The local-only capture path produced dense Athena sensor-bus packet streams and
+decoded engineering lanes across baseline / condition / post windows. Public
+repo priority is evidence and public logging: the update records the B.A.S.I.S.
+Capture Hub adapter pathway, the measured five-run scale, the mapped lanes, and
+the preliminary mirror-vs-control signal structure while raw code and raw
+biosignal exports stay private through patent completion.
+
+The public evidence docs are:
+
+```text
+docs/PHASE12C_MUSE_S_ATHENA_CAPTURE_SUMMARY_2026-05-09.md
+docs/PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md
+```
+
 ## MirrorBench Retrieval Evaluation Spec
 
 The Golden Mirror retrieval evaluation is now defined as `MirrorBench`.

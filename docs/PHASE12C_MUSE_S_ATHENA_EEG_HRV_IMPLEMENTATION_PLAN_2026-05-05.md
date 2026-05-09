@@ -2,7 +2,7 @@
 
 Date: `2026-05-05`
 
-Status: `device_arrival_queued / protocol_ready / live_capture_next`
+Status: `implementation_plan / first_muse_capture_pack_landed`
 
 ## Purpose
 
@@ -224,3 +224,20 @@ Current support comes from `Nest 4A` HRV condition separation. `Phase 12C`
 starts when synchronized Muse + HRV export rows exist.
 
 This plan is ready for device arrival and operator execution.
+
+## 2026-05-09 Update
+
+The Muse S Athena lane has moved from plan to first capture pack. See:
+
+- [Phase 12C Muse S Athena Capture Summary](./PHASE12C_MUSE_S_ATHENA_CAPTURE_SUMMARY_2026-05-09.md)
+- [Phase 12C B.A.S.I.S. Capture Hub Visual Map](./PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md)
+
+Public evidence status:
+
+- five full Muse S Athena sessions captured locally under Phase 12C timing.
+- decoded engineering lanes recovered across baseline / condition / post.
+- first pack supports Capture Hub adapter design and preliminary
+  mirror-vs-control follow-up.
+- raw packets, local device identifiers, local code, and unreviewed biometric
+  data remain private through patent completion, with selected public code
+  release reserved for later review.
