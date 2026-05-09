@@ -389,8 +389,15 @@ The public evidence docs are:
 ```text
 docs/PHASE12C_MUSE_S_ATHENA_CAPTURE_SUMMARY_2026-05-09.md
 docs/PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md
+docs/PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md
 artifacts/v8/phase12c_muse_capture_pack/v8_phase12c_muse_capture_visual_pack_2026-05-09.pdf
 ```
+
+The Nest 4 read is now sharper: Phase 12B HRV remains the performed coarse
+autonomic adapter, while Phase 12C Muse S Athena supplies the owned
+EEG / optical / motion / quality adapter branch. The next B.A.S.I.S. Capture
+Hub gate is to combine HRV and Muse into one shared manifest, then verify real
+waveform EEG before deriving bandpower, phase, or topographic claims.
 
 ## MirrorBench Retrieval Evaluation Spec
 

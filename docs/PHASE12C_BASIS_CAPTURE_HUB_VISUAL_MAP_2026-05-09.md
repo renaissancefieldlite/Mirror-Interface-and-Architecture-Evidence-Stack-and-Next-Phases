@@ -125,3 +125,22 @@ The release discipline:
 
 `evidence and public logging first, raw code and raw biosignal data private
 through patent completion, selected public code later after review.`
+
+## Creator-Owned Capture Lane
+
+For `B.A.S.I.S.`, the important product lesson is ownership of the capture lane.
+The Capture Hub is not framed as a wrapper around a third-party app or API. The
+supported pattern is:
+
+```text
+owned adapter
+-> local raw evidence
+-> decoder
+-> lane table
+-> shared manifest
+-> state-vector bus
+```
+
+Public documents should describe the path at this level. Exact runnable code,
+raw packets, local device identifiers, and unreviewed biometric exports remain
+private until the patent and public-code review gates clear.

@@ -19,6 +19,12 @@ present public priority is evidence logging, architecture mapping, and measured
 run summaries. Raw capture code and raw biosignal packets stay private until
 the patent lane is complete and selected public-code release is reviewed.
 
+For the `B.A.S.I.S.` product lane, this is also the first owned capture-adapter
+precedent. The evidence path is not a dependency on a third-party API or vendor
+export. Publicly, the supported point is that an owned local adapter can capture
+the device stream, preserve raw local evidence, decode engineering lanes, and
+route those lanes into the B.A.S.I.S. state-vector pattern.
+
 ## What Was Captured
 
 Five seated Phase 12C sessions were captured under the same timing discipline
@@ -145,6 +151,26 @@ fragile manual exports or unlabeled device output. The capture hub needs:
 4. a decoder into normalized lane tables,
 5. a manifest that maps every sample back to baseline / condition / post, and
 6. controls before claims.
+
+## Nest 4 / HRV Continuity
+
+The Nebius `B.A.S.I.S.` framing treated Phase 12B HRV as the performed live
+biological adapter and Muse S Athena as the immediate multimodal expansion.
+Phase 12C now makes that expansion real.
+
+Current biological ladder:
+
+```text
+Phase 12B HRV
+-> Nest 4A coarse biological state separation
+-> Phase 12C Muse EEG / optical / motion / quality capture
+-> synchronized HRV + Muse state-vector windows
+-> real waveform EEG QA before bandpower / phase claims
+```
+
+See also:
+
+- [Phase 12C Nest 4 Biosignal Cross-Pollination Log](./PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
 
 ## Evidence And Release Posture
 

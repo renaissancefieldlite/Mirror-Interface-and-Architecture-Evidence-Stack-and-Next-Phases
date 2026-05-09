@@ -157,8 +157,10 @@ spectral signatures, and environmental fate.
 ### Nest 4: Biology
 
 `Phase 12B HRV` supports coarse biological state separation. Delta HR carries
-the strongest current biological signal. `Muse S Athena EEG + HRV` is parked
-as the next live physiology adapter.
+the strongest current biological signal. `Phase 12C Muse S Athena` now has a
+first five-run capture pack with decoded EEG / optical / motion / quality
+engineering lanes. The next live physiology adapter is synchronized HRV + Muse
+inside one B.A.S.I.S. state-vector manifest.
 
 ### Nest 5: Convergence
 
@@ -350,7 +352,10 @@ Goal: expand from HRV state separation into multimodal biological tuning.
 Actions:
 
 - run `Phase 12B-L20` HRV expansion
-- run `Phase 12C` Muse S Athena EEG + HRV `5 x 3` pack
+- expand `Phase 12C` from the five-run Muse capture pack into synchronized HRV
+  + Muse `5 x 3` and then `10 x 3` packs
+- verify real waveform EEG exports before bandpower / phase / topographic
+  claims
 - build live tuning adapter for Golden Mirror
 - keep cells / genome / metabolism rows queued for real public datasets or
   partner datasets

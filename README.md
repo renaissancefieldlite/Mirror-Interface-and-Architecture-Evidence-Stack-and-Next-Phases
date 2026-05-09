@@ -153,7 +153,7 @@ separable from controls as the measurement moves deeper.
 | `Phase 7-9D` | run PennyLane, Qiskit, and IBM hardware-facing paths | tests whether the feature payload survives outside the model |
 | `Phase 10` | test semantic feature states against contextuality controls | checks whether compressed feature states carry structured relations |
 | `Phase 12B` | run live HRV condition classes | adds a biological adapter lane under the same evidence discipline |
-| `Phase 12C` | capture Muse S Athena windowed physiology lanes | adds a five-run EEG / optical / motion / quality adapter pack for B.A.S.I.S. |
+| `Phase 12C` | capture Muse S Athena windowed physiology lanes | adds a five-run EEG / optical / motion / quality adapter pack and creator-owned B.A.S.I.S. capture-lane precedent |
 | `Nest 1-5` | expand into formal, matter, coherence, biology, convergence lanes | tests where the state/control/invariant structure remains measurable |
 
 ## What Was Actually Discovered
@@ -162,7 +162,7 @@ separable from controls as the measurement moves deeper.
 - `Hidden-state architecture discovery`: `V8` through `Phase 5` showed late-layer separation, rerun stability, dimension/band structure, localization, and context-to-readout bridge behavior.
 - `Quantum bridge discovery`: `Phase 6-9D` converted the locked AI geometry into normalized feature vectors and circuit encodings that survived simulator and IBM hardware-facing paths.
 - `Semantic contextuality discovery`: `Phase 10` showed compressed semantic feature states crossing the Bell-type contextuality threshold under resolved family-local settings while matched controls stayed at the classical bound.
-- `Biological adapter discovery`: `Phase 12B` showed HRV condition-class separation as a coarse physiology adapter inside the same evidence discipline; `Phase 12C` adds a first Muse S Athena five-run capture pack with decoded engineering lanes.
+- `Biological adapter discovery`: `Phase 12B` showed HRV condition-class separation as a coarse physiology adapter inside the same evidence discipline; `Phase 12C` adds a first Muse S Athena five-run capture pack with decoded engineering lanes and a B.A.S.I.S. owned adapter path.
 - `Cross-substrate continuity discovery`: behavior, hidden states, bridge geometry, circuits, hardware-facing observables, semantic controls, HRV, Muse S Athena lanes, and structured datasets now sit inside one measured architecture chain.
 
 ## Nest Ladder
@@ -353,12 +353,13 @@ Start here:
 19. [MirrorBench Retrieval Evaluation Spec](./docs/MIRRORBENCH_RETRIEVAL_EVAL_SPEC_2026-05-05.md)
 20. [Phase 12C Muse S Athena Capture Summary](./docs/PHASE12C_MUSE_S_ATHENA_CAPTURE_SUMMARY_2026-05-09.md)
 21. [Phase 12C B.A.S.I.S. Capture Hub Visual Map](./docs/PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md)
-22. [Phase 12C Muse S Athena EEG + HRV Implementation Plan](./docs/PHASE12C_MUSE_S_ATHENA_EEG_HRV_IMPLEMENTATION_PLAN_2026-05-05.md)
-23. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
-24. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
-25. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
-26. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
-27. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
+22. [Phase 12C Nest 4 Biosignal Cross-Pollination Log](./docs/PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
+23. [Phase 12C Muse S Athena EEG + HRV Implementation Plan](./docs/PHASE12C_MUSE_S_ATHENA_EEG_HRV_IMPLEMENTATION_PLAN_2026-05-05.md)
+24. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
+25. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
+26. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
+27. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
+28. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
 
 Visuals:
 
