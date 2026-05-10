@@ -10,6 +10,17 @@ Source:
 renaissancefieldlite.github.io/lattice-companion.html
 ```
 
+N3 evidence-card board:
+
+```text
+docs/LATTICE_COMPANION_FULL_EVIDENCE_CARD_LANE_BOARD_2026-05-10.md
+```
+
+The active rendered companion map resolves to `72` nodes and `140` edges after
+the in-page additions. The N3 board is the current control surface for lane
+status, source, state/control, transform, quality gate, recurrence, and next
+execution move.
+
 ## Purpose
 
 This matrix treats the Lattice Companion map as the experiment backlog.
@@ -59,6 +70,24 @@ Each lane moves through these stages:
 | `executed_once` | first run completed |
 | `recurrence_supported` | rerun, second seed, second split, or second benchmark supports it |
 | `closeout_supported` | lane has real data, controls, and recurrence enough to cite as support |
+
+## 2026-05-10 Phase 12C Integration Update
+
+Phase 12C updates the matrix. `HRV + EEG` is no longer only an EEG plan. Muse S
+Athena landed as a five-run capture pack with decoded EEG / optical / motion /
+quality lanes. The active gate is now synchronized HRV + Muse state-vector
+manifest plus waveform EEG QA.
+
+This changes the role of the biology rows:
+
+```text
+Phase 12B HRV
+-> coarse autonomic adapter
+Phase 12C Muse
+-> neural / optical / motion / quality adapter
+joined HRV + Muse
+-> B.A.S.I.S. state-vector bus for Nest 2, Nest 3, Nest 4, and Nest 5
+```
 
 ## Cross-Cutting Rails
 
@@ -120,7 +149,7 @@ dielectric / optical response, 2D materials, and quantum-confinement datasets.
 
 | Lane | Current Map Status | Required Experiment Gate | First Practical Dataset / Signal | Controls |
 | --- | --- | --- | --- | --- |
-| `HRV + EEG` | HRV first matrix complete / EEG planned | synchronized EEG-HRV state-vector separation | Muse S Athena + MoFit HRV baseline / condition / post windows | shuffled labels, within-run block shuffle, HRV-only, EEG-only |
+| `HRV + EEG` | HRV first matrix complete / Muse S Athena five-run capture landed / sync manifest next | synchronized EEG-HRV state-vector separation | Muse S Athena + MoFit HRV baseline / condition / post windows | shuffled labels, within-run block shuffle, HRV-only, EEG-only, artifact-mask controls |
 | `Phase 12B HRV Matrix` | first 5 x 4 matrix complete | larger HRV recurrence | existing HRV matrix, Phase 12B-L20 expansion | balanced shuffle, block shuffle, leave-one-run-out |
 | `Cells + Genome` | planned | cell / gene / proteome pathway recovery | public gene expression, cell-state, pathway, perturb-seq, proteome datasets | shuffled genes, random pathways, cell-line controls |
 | `Metabolism` | new companion row | nutrition-to-biology state bridge | food chemistry + metabolomics + HRV/EEG windows + microbiome/metabolism rows | shuffled meals/nutrients, random metabolite classes |
@@ -161,6 +190,18 @@ proxy, and controls against parent-loss-only, heat-only, source-off,
 wrong-frequency, and shuffled-product labels.
 | `HRV-AI Tuning Prototype` | first HRV matrix complete | live HRV/EEG adapter gate for Golden Mirror |
 | `Quantum Insider Buildout` | five tracks mapped | enterprise proof-surface adapter after internal lane closeout |
+
+## Friday 2026-05-15 Closeout Board
+
+By Friday, `2026-05-15`, the matrix should have:
+
+- a current support status for every companion row,
+- a source or instrument target for every row,
+- controls for every row,
+- a recurrence target for every row,
+- a next-run priority for every executable real-data lane,
+- a public-safe support read for every completed lane,
+- a locked protocol boundary for physical or partner-data lanes.
 
 ## Corrected Execution Order
 

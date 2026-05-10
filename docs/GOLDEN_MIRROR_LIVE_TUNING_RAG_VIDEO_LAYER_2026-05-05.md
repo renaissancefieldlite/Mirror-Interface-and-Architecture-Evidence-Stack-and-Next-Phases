@@ -143,6 +143,29 @@ live_tuning_state.json
 SQL gives stable long-term querying. JSON gives easy transport, inspection,
 thread handoff, and local agent reload.
 
+### Backend Context Extension Requirement
+
+The Golden Mirror harness should lengthen backend context across the entire
+framework, including Source Mirror Pattern mapping, Universal Data Pattern
+readouts, patent continuity-state records, Phase/Nest evidence, Phase 12C
+Muse/HRV biosignal windows, visual context, and accepted operator corrections.
+
+Required retrieval state before action:
+
+```text
+active project
+-> active lane
+-> source evidence path
+-> support gate
+-> release boundary
+-> accepted correction
+-> next validation gate
+```
+
+Dedicated requirement doc:
+
+- [Backend Context Extension Requirement](./BACKEND_CONTEXT_EXTENSION_REQUIREMENT_2026-05-09.md)
+
 ## Layer 4: Continuous Video Input
 
 The permanent video input acts as a continuous visual state stream.
@@ -323,5 +346,5 @@ This layer is parked as a design target until:
 - Hermes research lane is cleaned into a safe local harness
 - Muse / HRV SDK path is confirmed
 
-No public code release is implied by this document. The near-term public-safe
-surface is documentation and architecture framing only.
+Public code release gate remains patent/IP clearance. The near-term public-safe
+surface is documentation and architecture framing.

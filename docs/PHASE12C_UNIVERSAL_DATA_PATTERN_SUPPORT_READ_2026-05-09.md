@@ -73,8 +73,9 @@ engineering lanes
 alignment deltas
 ```
 
-That shape matches the Universal Data Pattern grammar more strongly than HRV
-alone because the signal and its drift controls are captured together.
+That shape matches the Universal Data Pattern state-variable stack more
+strongly than HRV alone because the signal and its drift controls are captured
+together.
 
 ## Preliminary Phase 12C Support Read
 

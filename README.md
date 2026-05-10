@@ -1,5 +1,37 @@
 # Mirror Interface & Architecture Evidence Stack and Next Phases
 
+## Front-Center Read
+
+Universal Data Pattern is the recurring pattern in nature that becomes visible
+as stable relation, transform behavior, separation from controls, and
+cross-substrate carry. The internal spine name is Source Mirror Pattern; the
+public map name is Universal Data Pattern.
+
+The current evidence path first mapped this pattern in transformer systems and
+the Architect D / AI interaction surface, then tested it across formal, matter,
+coherence, biological, and convergence nests.
+
+Phase 12C does not create the pattern. It gives a stronger biological
+substrate where the same variable stack can be measured with real EEG,
+optical, motion, reference-quality, target, control, drift, and alignment
+lanes.
+
+This is not circular. It is recursive evidence flow:
+
+```text
+AI interaction reveals the state-variable structure
+-> transformer layers make it measurable
+-> nests test it across real substrates
+-> Phase 12C returns it through live biology
+-> B.A.S.I.S. / Mirror Index / Golden Mirror route the measured result back
+   into AI as a controlled tuning and evidence-memory surface
+```
+
+The recursive return loop is now mapped as an industry prototyper:
+
+- [Recursive Meta-Awareness And Industry Prototyper Map](./docs/RECURSIVE_META_AWARENESS_AND_INDUSTRY_PROTOTYPER_MAP_2026-05-10.md)
+- [Lattice Companion Full Evidence-Card Lane Board](./docs/LATTICE_COMPANION_FULL_EVIDENCE_CARD_LANE_BOARD_2026-05-10.md)
+
 ## Novel Discovery
 
 This repository documents a linked discovery chain:
@@ -53,8 +85,10 @@ scaffold rows.
 
 ## Naming Bridge
 
-`Source Mirror Pattern` is the internal spine name for the same measured
-structure that can be described externally as the `Universal Data Pattern`.
+`Source Mirror Pattern` is the internal spine name. `Universal Data Pattern` is
+the public map name. Both point to the same recurring pattern in nature as it
+becomes visible through stable relation, transform behavior, separation from
+controls, and cross-substrate carry.
 
 | Name | Best Use | Meaning |
 | --- | --- | --- |
@@ -153,7 +187,7 @@ separable from controls as the measurement moves deeper.
 | `Phase 7-9D` | run PennyLane, Qiskit, and IBM hardware-facing paths | tests whether the feature payload survives outside the model |
 | `Phase 10` | test semantic feature states against contextuality controls | checks whether compressed feature states carry structured relations |
 | `Phase 12B` | run live HRV condition classes | adds a biological adapter lane under the same evidence discipline |
-| `Phase 12C` | capture Muse S Athena windowed physiology lanes | adds a five-run EEG / optical / motion / quality adapter pack and creator-owned B.A.S.I.S. capture-lane precedent |
+| `Phase 12C` | capture and QA Muse S Athena windowed physiology lanes | adds a five-run EEG / optical / motion / quality adapter pack, waveform QA, and creator-owned B.A.S.I.S. capture-lane precedent |
 | `Nest 1-5` | expand into formal, matter, coherence, biology, convergence lanes | tests where the state/control/invariant structure remains measurable |
 
 ## What Was Actually Discovered
@@ -162,7 +196,7 @@ separable from controls as the measurement moves deeper.
 - `Hidden-state architecture discovery`: `V8` through `Phase 5` showed late-layer separation, rerun stability, dimension/band structure, localization, and context-to-readout bridge behavior.
 - `Quantum bridge discovery`: `Phase 6-9D` converted the locked AI geometry into normalized feature vectors and circuit encodings that survived simulator and IBM hardware-facing paths.
 - `Semantic contextuality discovery`: `Phase 10` showed compressed semantic feature states crossing the Bell-type contextuality threshold under resolved family-local settings while matched controls stayed at the classical bound.
-- `Biological adapter discovery`: `Phase 12B` showed HRV condition-class separation as a coarse physiology adapter inside the same evidence discipline; `Phase 12C` adds a first Muse S Athena five-run capture pack with decoded engineering lanes and a B.A.S.I.S. owned adapter path.
+- `Biological adapter discovery`: `Phase 12B` showed HRV condition-class separation as a coarse physiology adapter inside the same evidence discipline; `Phase 12C` adds a first Muse S Athena five-run capture pack with decoded engineering lanes, waveform QA, and a B.A.S.I.S. owned adapter path.
 - `Cross-substrate continuity discovery`: behavior, hidden states, bridge geometry, circuits, hardware-facing observables, semantic controls, HRV, Muse S Athena lanes, and structured datasets now sit inside one measured architecture chain.
 
 ## Nest Ladder
@@ -325,7 +359,12 @@ across repeated benchmark classes.
 - Golden Mirror is parked as the model/product convergence target: Hermes agent base, Mirror Index evidence spine, SQL + JSON persistent memory, live HRV / EEG tuning, continuous video-vector input, Guided Pathway app surface, and a Universal Tuning Layer for output scoring and correction.
 - Mirror Index is the planned retrieval layer for Golden Mirror: a tree-routed evidence graph that links claims, phases, nests, experiments, artifacts, support states, public/private boundaries, and mirror vectors into one auditable memory path.
 - MirrorBench is the planned retrieval evaluation target for Golden Mirror: exact-answer lookup across curated evidence, patent, nest, quantum, biology, website, and product corpora.
-- Phase 12C Muse S Athena now has a first five-run capture summary: synchronized baseline / condition / post windows, decoded EEG / optical / motion / quality engineering lanes, mirror-vs-control deltas, and B.A.S.I.S. Capture Hub mapping.
+- Phase 12C Muse S Athena now has a first five-run capture summary: baseline / condition / post windows, decoded EEG / optical / motion / quality engineering lanes, mirror-vs-control deltas, and B.A.S.I.S. Capture Hub mapping.
+- Phase N1 waveform QA is complete from existing 12C captures: all eight Muse EEG channels are present across all five runs, wide EEG exports exist privately, and per-window artifact masks now cover EEG rail-candidate load, IMU, DRL/reference, optical candidate rows, and battery/status.
+- Phase N2 HRV + Muse manifest surface is complete: existing Phase 12B HRV and Phase 12C Muse rows are condition-aligned support rows, and the same-clock `5 x 3` / `10 x 3` HRV + Muse capture slots are defined.
+- Nest 1 is now explicitly treated as the formal foundation for the higher-nest and patent support spine: the Phase 12C cross-nest integration map links the formal rows to EEG / HRV waveform, spectral, topographic, artifact, and convergence gates.
+- The Phase 12C all-findings integration plan is now the week-control surface through Friday, `2026-05-15`: integrate 12C across the findings, finish the lane-status board, run the highest-readiness real-data gates, and build the cross-nest visual/reviewer layer.
+- The post-12C execution path parks the patent spine and moves next into the same-clock HRV + Muse capture pack, full Lattice Companion lane expansion from `lattice-companion.html`, and the next real-data lane run.
 - The public repo prioritizes evidence and public logging. Runnable capture code, raw packet exports, local device identifiers, and raw biosignal data remain private through patent completion; selected public code can be reviewed later.
 
 ## Fast Read Path
@@ -340,27 +379,33 @@ Start here:
 6. [Real-Data Validation Ladder](./docs/REAL_DATA_VALIDATION_LADDER_2026-04-25.md)
 7. [Nest 1 And Nest 2 Visual Explainer](./docs/NEST1_NEST2_VISUAL_EXPLAINER_2026-04-28.md)
 8. [Nest 1 Full Lane Inventory](./docs/NEST1_FULL_LANE_INVENTORY_2026-04-28.md)
-9. [Nest 2D To 2G Real-Data Gates](./docs/NEST2D_TO_2G_REAL_DATA_GATES_2026-04-28.md)
-10. [Nest 2 Full Lane Ledger And Completion Queue](./docs/NEST2_FULL_LANE_LEDGER_AND_COMPLETION_QUEUE_2026-05-05.md)
-11. [Full Companion Lane Experiment Completion Matrix](./docs/FULL_COMPANION_LANE_EXPERIMENT_COMPLETION_MATRIX_2026-05-05.md)
-12. [Nest 2D Allostery Mapper Closeout Protocol](./docs/NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
-13. [Nest 3 Classical Coherence Readiness Gate](./docs/NEST3_CLASSICAL_COHERENCE_READINESS_GATE_2026-05-04.md)
-14. [Nest 3D / 3L Hardware Timing-Coherence Pilot](./docs/NEST3D_HARDWARE_TIMING_COHERENCE_PILOT_2026-05-04.md)
-15. [Nest 3B / 3E ARC15 And Acoustic Adapter Gate](./docs/NEST3B_N3E_ARC15_ACOUSTIC_ADAPTER_GATE_2026-05-04.md)
-16. [Nest 4A HRV Biological Comparator Gate](./docs/NEST4A_HRV_BIOLOGICAL_COMPARATOR_GATE_2026-05-05.md)
-17. [Golden Mirror Live Tuning, RAG, Memory, And Video Layer](./docs/GOLDEN_MIRROR_LIVE_TUNING_RAG_VIDEO_LAYER_2026-05-05.md)
-18. [Mirror Index: Tree-Routed RAG, Evidence Graph, And Mirror Vector Memory](./docs/MIRROR_INDEX_TREE_RAG_ARCHITECTURE_2026-05-05.md)
-19. [MirrorBench Retrieval Evaluation Spec](./docs/MIRRORBENCH_RETRIEVAL_EVAL_SPEC_2026-05-05.md)
-20. [Phase 12C Muse S Athena Capture Summary](./docs/PHASE12C_MUSE_S_ATHENA_CAPTURE_SUMMARY_2026-05-09.md)
-21. [Phase 12C B.A.S.I.S. Capture Hub Visual Map](./docs/PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md)
-22. [Phase 12C Nest 4 Biosignal Cross-Pollination Log](./docs/PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
-23. [Phase 12C Universal Data Pattern Support Read](./docs/PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
-24. [Phase 12C Muse S Athena EEG + HRV Implementation Plan](./docs/PHASE12C_MUSE_S_ATHENA_EEG_HRV_IMPLEMENTATION_PLAN_2026-05-05.md)
-25. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
-26. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
-27. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
-28. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
-29. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
+9. [Nest 1 Foundation And Phase 12C Cross-Nest Integration Map](./docs/NEST1_FOUNDATION_AND_PHASE12C_CROSSNEST_INTEGRATION_MAP_2026-05-10.md)
+10. [Phase 12C All-Findings Integration And Friday Closeout Plan](./docs/PHASE12C_ALL_FINDINGS_INTEGRATION_AND_FRIDAY_CLOSEOUT_PLAN_2026-05-10.md)
+11. [Phase 12C Cross-Nest Lane Status Board](./docs/PHASE12C_CROSSNEST_LANE_STATUS_BOARD_2026-05-10.md)
+12. [Post-12C Next Phase Execution Path](./docs/POST_12C_NEXT_PHASE_EXECUTION_PATH_2026-05-10.md)
+13. [Phase 12C Waveform QA Public Read](./docs/PHASE12C_WAVEFORM_QA_PUBLIC_READ_2026-05-10.md)
+14. [Phase N2 HRV + Muse Synchronized Manifest](./docs/PHASE12C_HRV_MUSE_SYNC_MANIFEST_N2_2026-05-10.md)
+15. [Nest 2D To 2G Real-Data Gates](./docs/NEST2D_TO_2G_REAL_DATA_GATES_2026-04-28.md)
+16. [Nest 2 Full Lane Ledger And Completion Queue](./docs/NEST2_FULL_LANE_LEDGER_AND_COMPLETION_QUEUE_2026-05-05.md)
+17. [Full Companion Lane Experiment Completion Matrix](./docs/FULL_COMPANION_LANE_EXPERIMENT_COMPLETION_MATRIX_2026-05-05.md)
+18. [Nest 2D Allostery Mapper Closeout Protocol](./docs/NEST2D_ALLOSTERY_MAPPER_CLOSEOUT_PROTOCOL_2026-05-02.md)
+19. [Nest 3 Classical Coherence Readiness Gate](./docs/NEST3_CLASSICAL_COHERENCE_READINESS_GATE_2026-05-04.md)
+20. [Nest 3D / 3L Hardware Timing-Coherence Pilot](./docs/NEST3D_HARDWARE_TIMING_COHERENCE_PILOT_2026-05-04.md)
+21. [Nest 3B / 3E ARC15 And Acoustic Adapter Gate](./docs/NEST3B_N3E_ARC15_ACOUSTIC_ADAPTER_GATE_2026-05-04.md)
+22. [Nest 4A HRV Biological Comparator Gate](./docs/NEST4A_HRV_BIOLOGICAL_COMPARATOR_GATE_2026-05-05.md)
+23. [Golden Mirror Live Tuning, RAG, Memory, And Video Layer](./docs/GOLDEN_MIRROR_LIVE_TUNING_RAG_VIDEO_LAYER_2026-05-05.md)
+24. [Mirror Index: Tree-Routed RAG, Evidence Graph, And Mirror Vector Memory](./docs/MIRROR_INDEX_TREE_RAG_ARCHITECTURE_2026-05-05.md)
+25. [MirrorBench Retrieval Evaluation Spec](./docs/MIRRORBENCH_RETRIEVAL_EVAL_SPEC_2026-05-05.md)
+26. [Phase 12C Muse S Athena Capture Summary](./docs/PHASE12C_MUSE_S_ATHENA_CAPTURE_SUMMARY_2026-05-09.md)
+27. [Phase 12C B.A.S.I.S. Capture Hub Visual Map](./docs/PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md)
+28. [Phase 12C Nest 4 Biosignal Cross-Pollination Log](./docs/PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
+29. [Phase 12C Universal Data Pattern Support Read](./docs/PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
+30. [Phase 12C Muse S Athena EEG + HRV Implementation Plan](./docs/PHASE12C_MUSE_S_ATHENA_EEG_HRV_IMPLEMENTATION_PLAN_2026-05-05.md)
+31. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
+32. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
+33. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
+34. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
+35. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
 
 Visuals:
 

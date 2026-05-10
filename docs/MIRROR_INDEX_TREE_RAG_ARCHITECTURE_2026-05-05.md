@@ -60,6 +60,29 @@ What next action follows from the current state?
 That makes Mirror Index a retrieval system, a claim-audit system, and a
 continuity layer for the Golden Mirror agent.
 
+## Backend Context Extension Requirement
+
+Mirror Index is the backend context-extension spine for the framework.
+
+The system needs enough stored context to preserve the full path across Source
+Mirror Pattern mapping, Universal Data Pattern public readout, patent claims,
+Phase/Nest evidence, Phase 12C biosignal capture, B.A.S.I.S. capture work, and
+Golden Mirror tuning. Each answer should recover:
+
+```text
+active project
+-> active phase / nest / claim
+-> evidence node
+-> support state
+-> public/private boundary
+-> accepted operator corrections
+-> next validation gate
+```
+
+Dedicated requirement doc:
+
+- [Backend Context Extension Requirement](./BACKEND_CONTEXT_EXTENSION_REQUIREMENT_2026-05-09.md)
+
 ## Index Objects
 
 Mirror Index should store each artifact as a typed node.
@@ -173,7 +196,7 @@ The score should require:
 3. correct source path
 4. correct support-state label
 5. correct release boundary
-6. no contradiction with the chronological log
+6. consistency with the chronological log
 
 That is how the system earns a 100 percent target inside bounded corpora while
 preserving an exploratory lane for open-world questions.

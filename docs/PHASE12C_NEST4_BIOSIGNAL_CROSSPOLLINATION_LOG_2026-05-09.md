@@ -50,7 +50,7 @@ Public-safe read:
 
 ## Universal Data Pattern Read
 
-The same state/control/drift/alignment grammar appears here:
+The same state/control/drift/alignment variable structure appears here:
 
 | Pattern role | HRV / Phase 12B | Muse / Phase 12C |
 | --- | --- | --- |

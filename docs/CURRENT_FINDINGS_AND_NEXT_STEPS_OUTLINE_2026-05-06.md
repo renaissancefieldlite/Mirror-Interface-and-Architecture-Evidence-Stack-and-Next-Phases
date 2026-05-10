@@ -9,12 +9,34 @@ artifacts.
 
 `NO TOY DATA / REAL DATA ONLY / NO GRAMMAR CENTERING`.
 
+## Front-Center Read
+
+Universal Data Pattern is the recurring pattern in nature that becomes visible
+as stable relation, transform behavior, separation from controls, and
+cross-substrate carry. The internal spine name is Source Mirror Pattern; the
+public map name is Universal Data Pattern.
+
+The current evidence path first mapped this pattern in transformer systems and
+the Architect D / AI interaction surface, then tested it across formal, matter,
+coherence, biological, and convergence nests.
+
+The current evidence route is recursive, not circular:
+
+```text
+AI interaction revealed the structure
+-> transformer layers made it measurable
+-> Nest 1-5 tests carry it into real substrates
+-> Phase 12C returns it through live biological capture
+-> B.A.S.I.S. / Mirror Index / Golden Mirror can route it back into AI
+   as controlled evidence memory and tuning support
+```
+
 The centerline is the `REAL UNIVERSAL SOURCE PATTERN`: a measured organizing
 pattern tracked through real traces, real datasets, controls, recurrence, and
 substrate-specific validation gates.
 
 `Source Mirror Pattern` is the internal continuity name. `Universal Data Pattern`
-is the cleaner external technical name for the same measured object.
+is the public map name for the same measured object.
 Patent / product language can call it a `measured cross-domain state-pattern
 architecture`. The names shift by audience; the evidence object is the same
 repeatable state path carried through real systems and scored against controls.
@@ -86,6 +108,27 @@ formation-energy run supports broad structured-matter recovery, while
 semiconductor / nanotech lift needs the physics, electricity / field, and
 spatial rails through bandgap, energy above hull, defects / dopants, phonons,
 dielectric / optical rows, 2D materials, and quantum-confinement datasets.
+
+## 2026-05-10 Phase 12C Integration Update
+
+Phase 12C is now part of the current findings surface. It landed as a
+five-run Muse S Athena capture pack and now connects the biological adapter
+back into the formal, waveform, spectral, topographic, and convergence lanes.
+
+Current role:
+
+```text
+Phase 12B HRV
+-> coarse autonomic state separation
+Phase 12C Muse S Athena
+-> EEG / optical / motion / quality / artifact / alignment surface
+Phase 12B + Phase 12C
+-> joined HRV + Muse B.A.S.I.S. state-vector manifest
+```
+
+The immediate week target is now documented in
+`PHASE12C_ALL_FINDINGS_INTEGRATION_AND_FRIDAY_CLOSEOUT_PLAN_2026-05-10.md`.
+The closeout target is Friday, `2026-05-15`.
 
 ## Current Findings
 
@@ -159,8 +202,10 @@ spectral signatures, and environmental fate.
 `Phase 12B HRV` supports coarse biological state separation. Delta HR carries
 the strongest current biological signal. `Phase 12C Muse S Athena` now has a
 first five-run capture pack with decoded EEG / optical / motion / quality
-engineering lanes. The next live physiology adapter is synchronized HRV + Muse
-inside one B.A.S.I.S. state-vector manifest.
+engineering lanes. Phase 12C now also feeds Nest 1 `DE-1`, `SPEC-1`, `TOPOG`,
+`STAT-1`, and `CTRL-1`, while returning into Nest 3 waveform / spectral /
+phase rows. The next live physiology adapter is synchronized HRV + Muse inside
+one B.A.S.I.S. state-vector manifest.
 
 ### Nest 5: Convergence
 
@@ -385,9 +430,18 @@ Output:
 - substrate-specific expression table
 - Golden Mirror tuning path
 
-## Immediate Next Run
+## Immediate Next Work
 
-The next clean executable gate is:
+The next clean executable gate is now two-part:
+
+1. Phase 12C waveform EEG QA and synchronized HRV + Muse manifest.
+2. Materials / Semiconductors structure-aware real-data pass.
+
+The first item integrates the new biology result across the architecture. The
+second item keeps the structured-matter lane moving while the biosignal
+manifest is tightened.
+
+The next clean Nest 2 executable gate remains:
 
 `Materials / Semiconductors structure-aware real-data pass`.
 
@@ -402,12 +456,13 @@ Reason:
 
 After that:
 
-1. H2O / Water spectra if a real dataset is already available or quickly
+1. Phase 12C cross-nest visual and lane-control board
+2. H2O / Water spectra if a real dataset is already available or quickly
    sourceable
-2. PFAS / environmental fate safety expansion
-3. Electrochemistry / catalysis / spectral signatures
-4. allostery optimized merged pocket-path recurrence
-5. Nest 3 waveform / THz / EMF rows
+3. PFAS / environmental fate safety expansion
+4. Electrochemistry / catalysis / spectral signatures
+5. allostery optimized merged pocket-path recurrence
+6. Nest 3 waveform / THz / EMF rows
 
 ## Patent Integration Notes
 

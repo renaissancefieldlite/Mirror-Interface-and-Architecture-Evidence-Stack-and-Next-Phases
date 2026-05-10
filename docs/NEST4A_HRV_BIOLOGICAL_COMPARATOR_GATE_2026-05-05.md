@@ -128,6 +128,8 @@ same condition vocabulary
 raw RR export whenever available
 ```
 
-The longer-range `Nest 4` upgrade is simultaneous `EEG + HRV`, which supplies
-alpha/theta/band-power/phase-lock and topographic features beside the HRV
-autonomic adapter.
+The next `Nest 4` upgrade is now active because `Phase 12C Muse S Athena`
+landed as a five-run capture pack with decoded EEG / optical / motion /
+quality engineering lanes. The immediate `Nest 4C` gate is synchronized
+`EEG + HRV`, which supplies alpha/theta/band-power/phase-lock and topographic
+features beside the HRV autonomic adapter after waveform QA.
