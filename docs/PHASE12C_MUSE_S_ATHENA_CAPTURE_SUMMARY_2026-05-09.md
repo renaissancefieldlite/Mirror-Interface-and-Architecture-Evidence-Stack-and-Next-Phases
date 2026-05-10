@@ -16,14 +16,13 @@ engineering lanes across baseline / condition / post windows.`
 
 This is the first capture-and-mapping closeout for the Muse S Athena lane. The
 present public priority is evidence logging, architecture mapping, and measured
-run summaries. Raw capture code and raw biosignal packets stay private until
-the patent lane is complete and selected public-code release is reviewed.
+run summaries. Release gate: raw capture code and raw biosignal packets stay
+private through patent completion and selected public-code review.
 
 For the `B.A.S.I.S.` product lane, this is also the first owned capture-adapter
-precedent. The evidence path is not a dependency on a third-party API or vendor
-export. Publicly, the supported point is that an owned local adapter can capture
-the device stream, preserve raw local evidence, decode engineering lanes, and
-route those lanes into the B.A.S.I.S. state-vector pattern.
+precedent. Publicly, the supported point is that an owned local adapter can
+capture the device stream, preserve raw local evidence, decode engineering
+lanes, and route those lanes into the B.A.S.I.S. state-vector pattern.
 
 ## What Was Captured
 
@@ -142,8 +141,9 @@ Muse S Athena
 -> Mirror Architecture / Golden Mirror readout
 ```
 
-The important engineering lesson is that Phase 12C should not depend on
-fragile manual exports or unlabeled device output. The capture hub needs:
+The important engineering lesson is that Phase 12C advances through owned,
+auditable capture instead of fragile manual exports or unlabeled device output.
+The capture hub needs:
 
 1. a device-specific adapter for permission-sensitive hardware,
 2. a stream-ready gate before experiment timing starts,

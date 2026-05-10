@@ -25,8 +25,7 @@ contact-quality lanes under the same baseline / condition / post discipline.
 
 ## What Cross-Pollinated
 
-The cross-pollination is not a third-party app dependency. It is a creator-owned
-capture architecture:
+The cross-pollination is a creator-owned capture architecture:
 
 ```text
 owned device adapter
@@ -82,9 +81,8 @@ single B.A.S.I.S. state-vector record.
 ## B.A.S.I.S. Capture Lane Implication
 
 The Capture Hub is the product-owned sensor console. The public support claim is
-not that a vendor export or API solved the lane. The support claim is that the
-architecture now has an owned adapter pattern that can be repeated across
-devices:
+that the architecture now has an owned adapter pattern that can be repeated
+across devices:
 
 - device-specific adapter for permission-sensitive hardware,
 - raw local evidence before interpretation,
@@ -95,8 +93,8 @@ devices:
 
 ## Real Waveform EEG Gate
 
-The next technical gate is real waveform EEG, not another high-level summary.
-The required public-safe milestones are:
+The next technical gate is real waveform EEG. The required public-safe
+milestones are:
 
 1. export decoded `eeg_8ch` rows as per-channel time series,
 2. verify sample rate, dropped samples, packet sequence continuity, and channel
@@ -116,7 +114,7 @@ Phase 12C now adds a real five-run Muse S Athena capture lane, giving B.A.S.I.S.
 the owned EEG / optical / motion adapter surface needed for synchronized HRV +
 Muse state vectors and later real waveform EEG analysis.`
 
-Boundary:
+Release Gate:
 
 Raw BLE packets, local device identifiers, local capture code, and unreviewed
 biometric exports remain private through patent completion.

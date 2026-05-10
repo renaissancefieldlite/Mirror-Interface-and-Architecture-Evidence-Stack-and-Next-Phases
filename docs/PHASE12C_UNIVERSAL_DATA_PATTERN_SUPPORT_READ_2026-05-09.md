@@ -24,11 +24,11 @@ Mirror Architecture use:
 real biosignal capture
 -> Universal Data Pattern support surface
 -> higher-nest adapter activation
--> parked spectral / dynamics / topographic lanes reopened with better data
+-> queued spectral / dynamics / topographic lanes advanced with better data
 ```
 
-The Phase 12C Muse result is therefore not just a Capture Hub event. It is a
-new real-data biological substrate for testing whether the same measured
+The Phase 12C Muse result therefore functions as both a Capture Hub milestone
+and a new real-data biological substrate for testing whether the same measured
 state/control/drift/alignment structure persists beyond HRV.
 
 ## What HRV Already Supported
@@ -41,13 +41,13 @@ state/control/drift/alignment structure persists beyond HRV.
 - shuffled and block-control discipline,
 - coarse biological state separation.
 
-That was important, but HRV was a coarse autonomic lane. The project already
-recorded its boundary:
+That established the coarse autonomic lane and clarified the next biological
+support gate:
 
-- HRV-only `SPEC-1` did not support high-resolution spectral structure.
-- HRV-only `DE-1` did not support richer local dynamics.
-- HRV could support coarse state and AI-user sync, but not topographic neural
-  structure by itself.
+- `SPEC-1` needs EEG spectral / bandpower rows.
+- `DE-1` needs richer continuous waveform dynamics.
+- `TOPOG` needs electrode / spatial channel structure.
+- HRV remains the autonomic and AI-user sync branch inside the joined lane.
 
 ## What Phase 12C Adds
 
@@ -85,28 +85,28 @@ Five full Muse S Athena sessions landed:
 - `1` drift-control comparator.
 
 The first five-run read showed preliminary mirror-vs-control structure in
-optical, selected EEG, DRL/reference, and motion-linked lanes. This is not a
-final condition-separation proof. It is a real measured support surface showing
-that the administered state/control/drift/alignment pattern can be inspected in
-a richer biological substrate than HRV.
+optical, selected EEG, DRL/reference, and motion-linked lanes. Current support
+level: real measured support surface. Next support gate: condition-separation
+proof after waveform QA, synchronized HRV + Muse manifests, and repeated
+controls. The administered state/control/drift/alignment pattern can now be
+inspected in a richer biological substrate than HRV.
 
-## Parked Lanes This Supports
+## Higher-Nest Lanes This Supports
 
-| Parked / limited lane | Why it was parked | What Phase 12C changes |
+| Queued / active lane | Previous support gate | What Phase 12C adds |
 | --- | --- | --- |
 | `SPEC-1` | HRV-only spectra were too coarse | Muse EEG can supply real spectral / bandpower rows after waveform QA |
 | `DE-1` | HRV-only local dynamics underperformed simpler baselines | Muse waveform plus HRV can supply richer continuous-time dynamics |
 | `TOPOG` | HRV has no spatial/topographic channel structure | Muse electrode lanes can support first topographic biology tests |
 | `Nest 3 phase / spectral` | needed waveform, spectral, or phase rows | Muse EEG can feed waveform/spectral rows once validated |
-| `Nest 4 richer biology` | HRV proved coarse biology, not multimodal physiology | Muse adds EEG, optical, motion, and quality lanes |
+| `Nest 4 richer biology` | HRV proved coarse biology | Muse adds EEG, optical, motion, and quality lanes |
 | `Nest 2 higher_adapter_queued` | nutrition, biomolecular primitives, metabolism, and food chemistry needed physiology response adapters | HRV + Muse can become the response layer for later real datasets |
 | `Nest 5 convergence` | needs repeated class-level recurrence across substrates | Phase 12C adds another measured substrate class to the convergence stack |
 
 ## Nebius Deck Relationship
 
 The Nebius `B.A.S.I.S.` deck uses this same evidence for a narrower product
-purpose. The deck is not trying to prove the whole Mirror Architecture. It is
-showing that `B.A.S.I.S.` can be a real biosignal intelligence layer:
+purpose. The deck frames `B.A.S.I.S.` as a real biosignal intelligence layer:
 
 ```text
 wearable / sensor capture
@@ -156,6 +156,6 @@ Current supported statement:
 real Muse S Athena multi-lane biological substrate. This strengthens the
 Universal Data Pattern evidence path because state, control, drift, artifact,
 and alignment variables can now be inspected together in EEG / optical /
-motion-quality physiology, while keeping stronger spectral, dynamics,
-topographic, and clinical claims parked until waveform QA and repeated controls
-are complete.`
+motion-quality physiology. Stronger spectral, dynamics, topographic, and
+clinical-support statements advance through waveform QA, synchronized HRV +
+Muse manifests, and repeated controls.`

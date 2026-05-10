@@ -129,8 +129,7 @@ through patent completion, selected public code later after review.`
 ## Creator-Owned Capture Lane
 
 For `B.A.S.I.S.`, the important product lesson is ownership of the capture lane.
-The Capture Hub is not framed as a wrapper around a third-party app or API. The
-supported pattern is:
+The Capture Hub is framed as an owned adapter layer. The supported pattern is:
 
 ```text
 owned adapter
@@ -142,5 +141,5 @@ owned adapter
 ```
 
 Public documents should describe the path at this level. Exact runnable code,
-raw packets, local device identifiers, and unreviewed biometric exports remain
-private until the patent and public-code review gates clear.
+raw packets, local device identifiers, and unreviewed biometric exports move
+through the patent and public-code review gates before release.
