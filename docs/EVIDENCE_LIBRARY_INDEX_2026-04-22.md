@@ -31,6 +31,7 @@ code.
 - [Phase 12C Muse S Athena Capture Summary](./PHASE12C_MUSE_S_ATHENA_CAPTURE_SUMMARY_2026-05-09.md)
 - [Phase 12C B.A.S.I.S. Capture Hub Visual Map](./PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md)
 - [Phase 12C Nest 4 Biosignal Cross-Pollination Log](./PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
+- [Phase 12C Universal Data Pattern Support Read](./PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
 - [Next Phase Research Plan From Phase 9D](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Artifact Root
@@ -288,6 +289,7 @@ pattern.
 Related cross-pollination note:
 
 - [`PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md`](./PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
+- [`PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md`](./PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
 
 Role:
 
@@ -295,6 +297,11 @@ This note ties the Nebius `B.A.S.I.S.` pitch framing to the executed Phase 12C
 result: Phase 12B HRV is the performed coarse autonomic adapter, Muse S Athena
 is now the owned multimodal EEG / optical / motion adapter lane, and the next
 step is synchronized HRV + Muse state-vector capture with real waveform EEG QA.
+
+The Universal Data Pattern support read keeps the broader evidence claim
+separate from the product lane: Phase 12C is the richer biological substrate
+that can reopen parked `SPEC-1`, `DE-1`, `TOPOG`, Nest 3 waveform/spectral, Nest
+4 physiology, Nest 2 higher-adapter, and Nest 5 convergence work.
 
 ## Phase 7 / Qiskit Mirror Pack
 

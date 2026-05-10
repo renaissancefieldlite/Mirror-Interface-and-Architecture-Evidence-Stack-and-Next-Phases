@@ -354,12 +354,13 @@ Start here:
 20. [Phase 12C Muse S Athena Capture Summary](./docs/PHASE12C_MUSE_S_ATHENA_CAPTURE_SUMMARY_2026-05-09.md)
 21. [Phase 12C B.A.S.I.S. Capture Hub Visual Map](./docs/PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md)
 22. [Phase 12C Nest 4 Biosignal Cross-Pollination Log](./docs/PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
-23. [Phase 12C Muse S Athena EEG + HRV Implementation Plan](./docs/PHASE12C_MUSE_S_ATHENA_EEG_HRV_IMPLEMENTATION_PLAN_2026-05-05.md)
-24. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
-25. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
-26. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
-27. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
-28. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
+23. [Phase 12C Universal Data Pattern Support Read](./docs/PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
+24. [Phase 12C Muse S Athena EEG + HRV Implementation Plan](./docs/PHASE12C_MUSE_S_ATHENA_EEG_HRV_IMPLEMENTATION_PLAN_2026-05-05.md)
+25. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
+26. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
+27. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
+28. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
+29. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
 
 Visuals:
 
