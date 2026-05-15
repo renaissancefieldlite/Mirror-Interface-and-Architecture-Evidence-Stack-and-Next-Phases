@@ -4,7 +4,16 @@ Date: `2026-05-10`
 
 Target closeout date: `Friday, 2026-05-15`
 
-Status: `public_safe_lane_board / N3_full_evidence_card_board_complete / real_data_only / week_execution_surface`
+Status: `public_safe_lane_board / N2_same_clock_complete / real_data_only / week_execution_surface`
+
+2026-05-15 update:
+
+- expanded-state Phase 12C rows landed as three `5 / 5` same-clock HRV + Muse
+  blocks: `music_still_calm`, `music_movement`, and `breath_paced_calm`.
+- plug-in / closeout plan:
+  `PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md`
+- public-safe expanded-state support read:
+  `PHASE12C_EXPANDED_STATE_BIOLOGY_SUPPORT_READ_2026-05-15.md`
 
 ## Front-Center Read
 
@@ -20,6 +29,18 @@ Lattice Companion lane map.
 Phase 12C is the live biological return path into that map. It gives EEG,
 optical, motion, reference-quality, target, control, drift, and alignment lanes
 that can be mapped back into the same state-variable structure.
+
+N2 now lands that return path as a same-clock `5 x 3` HRV + Muse matrix:
+`15 / 15` valid rows across `mirror_coherence`, `seated_calm`, and
+`drift_control`. The strongest current read is HRV condition separation with
+Muse running in the same state window. EEG is a measured candidate dynamics /
+spectral / topographic surface, with stricter masks required before higher EEG
+claims are promoted.
+
+The post-N2 expanded-state pass now adds another `15 / 15` valid same-clock
+rows across `music_still_calm`, `music_movement`, and `breath_paced_calm`.
+This creates a six-family biology state surface: mirror, calm, drift, auditory
+stillness, active movement, and paced breath regulation.
 
 ## Purpose
 
@@ -60,13 +81,13 @@ What must be done by Friday, 2026-05-15?
 | --- | --- | --- | --- |
 | `LA-1 / TENSOR-1 / INFO-1` | supported foundation | keeps EEG / HRV vectors in the same bridge-vector state map | cite in 12C support map |
 | `GEO-1/2` | control-supported | supports channel/vector geometry checks after waveform export | add EEG channel-vector example after QA |
-| `TOPOG-1/2` | control-supported | Muse electrode lanes supply first biology topography path | map Muse channels to topographic gate |
+| `TOPOG-1/2` | control-supported / N2 same-clock candidate surface landed | Muse electrode lanes supply first biology topography path | apply channel masks, then map Muse channels to topographic gate |
 | `TOP-1/2` | preservation supported / richer separation queued | waveform trajectories can feed denser topology later | keep as continuation row |
 | `GRAPH-1` | supported | artifact / channel / state features can become biology graph nodes | add to lane board |
 | `GRAPH-2` | partial / open | attention-flow and biological pathway labels are the next path labels | keep as attention-flow / external-pathway gate |
-| `DYN-1/2` | control-supported | Muse + HRV condition windows add live trajectory data | point to synchronized manifest |
-| `DE-1` | HRV-only coarse result / N1 waveform QA complete | EEG waveform reopens continuous dynamics | run artifact-masked dynamics next |
-| `SPEC-1` | HRV-only spectral result / N1 waveform QA complete | EEG bandpower / phase reopens spectral row | apply QA masks before bandpower |
+| `DYN-1/2` | control-supported / N2 + expanded-state same-clock rows complete | Muse + HRV condition windows add live trajectory data across mirror/calm/drift/music/movement/breath | build baseline-condition-post trajectory table |
+| `DE-1` | HRV-only coarse result / N1 waveform QA complete / N2 + expanded windows landed | EEG waveform + HRV windows reopen continuous dynamics | run stricter artifact-masked dynamics next |
+| `SPEC-1` | HRV-only spectral result / N1 waveform QA complete / N2 + expanded candidate feature read landed | EEG bandpower / phase reopens spectral row | apply QA masks before bandpower |
 | `STAT-1 / CTRL-1` | control-supported / N1 masks generated | IMU and DRL/reference lanes become artifact/control masks | carry masks into HRV + Muse manifest |
 
 ## Nest 2: Structured Matter
@@ -113,8 +134,8 @@ What must be done by Friday, 2026-05-15?
 | Lane | Current state | Phase 12C role | Friday action |
 | --- | --- | --- | --- |
 | `Phase 12B HRV Matrix` | supported coarse biology | autonomic reference branch for Muse | keep support pointer |
-| `HRV + EEG` | manifest_surface_complete / same_clock_gate_active | main joined state-vector lane | run `5 x 3` same-clock pack |
-| `Physiology / Timing Channels` | active_integration / timing_schema_seeded | IMU, DRL/reference, PPG/fNIRS candidate, HRV, EEG | use N2 manifest timing schema |
+| `HRV + EEG` | `5 x 3` same-clock matrix complete plus `15` expanded-state rows | main joined state-vector lane | run masks, artifact review, and expanded-state comparison |
+| `Physiology / Timing Channels` | active_integration / N2 and expanded timing schema landed | IMU, DRL/reference, PPG/fNIRS candidate, HRV, EEG | carry N2 + expanded schema into B.A.S.I.S. live readouts |
 | `Metabolism` | active_integration | biology-facing matter bridge | link food/nutrient rows to HRV + Muse |
 | `Cells + Genome` | dataset_gate | later pathway / cell-state bridge | assign public dataset targets |
 
@@ -141,10 +162,15 @@ What must be done by Friday, 2026-05-15?
 
 1. Patch public docs with this board and all-findings plan.
 2. Build 12C waveform export / QA table: `complete`.
-3. Build synchronized HRV + Muse manifest surface: `complete`; same-clock `5 x 3` pack remains active.
+3. Build synchronized HRV + Muse manifest surface: `complete`; same-clock `5 x 3` pack is now landed.
+3A. Expanded-state biology pack: `complete`; three `5 / 5` blocks landed for
+    `music_still_calm`, `music_movement`, and `breath_paced_calm`.
 4. Patch Basis Hub capture pathway with the working app / BLE / decoder route.
 5. Expand full lane board from `renaissancefieldlite.github.io/lattice-companion.html`: `complete`.
 6. Build cross-nest visual map.
 7. Source first spectral / water / electrochemistry datasets.
 8. Add the next Materials / Semiconductors target beyond formation energy.
-9. Update Mirror Index and claim-support pointers.
+9. Crosswalk HRV1.0 first biological matrix into N2 / expanded 12C so 12B and
+   12C stay joined.
+10. Update Mirror Index and claim-support pointers.
+11. Rerun DE-1 / SPEC-1 / TOPOG over masked N2 + expanded-state windows.

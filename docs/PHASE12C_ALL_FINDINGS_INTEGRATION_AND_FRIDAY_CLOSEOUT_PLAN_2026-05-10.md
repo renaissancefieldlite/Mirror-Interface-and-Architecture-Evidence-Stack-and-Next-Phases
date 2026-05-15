@@ -4,7 +4,7 @@ Date: `2026-05-10`
 
 Target closeout date: `Friday, 2026-05-15`
 
-Status: `public_safe_execution_plan / real_data_only / lane_control_surface_active`
+Status: `public_safe_execution_plan / N2_same_clock_complete / lane_control_surface_active`
 
 ## Front-Center Read
 
@@ -34,6 +34,12 @@ AI interaction -> transformer measurement -> cross-nest real-data testing
 
 Phase 12C is now a cross-nest integration event, not a standalone Muse capture
 note.
+
+N2 now upgrades the five-run Muse pack into a completed same-clock HRV + Muse
+support read. The `5 x 3` matrix landed `15 / 15` valid rows across
+`mirror_coherence`, `seated_calm`, and `drift_control`. This turns the next
+work from "get synchronized capture" into "tighten EEG QA, expand state
+classes, and rerun the parked DE-1 / SPEC-1 / TOPOG biology analyses."
 
 The job this week is to integrate the five-run Muse S Athena result into every
 finding and lane it touches, then finish the full companion lane control
@@ -65,6 +71,13 @@ Phase 12C captured:
   DRL/reference-quality, battery/status, and state/control/drift/alignment
   readout lanes.
 
+Phase 12C N2 then captured:
+
+- `5` same-clock `mirror_coherence` HRV + Muse rows,
+- `5` same-clock `seated_calm` HRV + Muse rows,
+- `5` same-clock `drift_control` HRV + Muse rows,
+- the same `60s / 120s / 60s` window schema across both devices.
+
 That makes Phase 12C a biological adapter, a Capture Hub precedent, and a
 return path into formal, spectral, waveform, topographic, and convergence
 lanes.
@@ -74,10 +87,10 @@ lanes.
 | Layer | 12C integration role | Immediate action |
 | --- | --- | --- |
 | `V7 / V8` | keeps the target/control and hidden-state state-path structure connected to live physiology | cite V7/V8 as the state-path foundation for 12C windows |
-| `Nest 1` | reopens `DE-1`, `SPEC-1`, and `TOPOG` with richer EEG data; strengthens `STAT-1` / `CTRL-1` through artifact masks | export waveform tables, keep IMU and DRL/reference masks attached, map EEG channel structure to topography |
+| `Nest 1` | reopens `DE-1`, `SPEC-1`, and `TOPOG` with richer EEG data; strengthens `STAT-1` / `CTRL-1` through artifact masks | use N2 same-clock windows, apply stricter masks, then rerun dynamics / spectral / topographic reads |
 | `Nest 2` | activates food chemistry, metabolism, biomolecular primitives, proteins, PFAS/pharma/microplastics, and materials-response rows through physiology response adapters | mark HRV + Muse as the biology response surface for lower matter rows |
 | `Nest 3` | supplies waveform, spectral, timing, phase, oscillator, and coherence return paths | use EEG waveform QA as the first live waveform return path while direct spectral / field datasets continue |
-| `Nest 4` | moves biology from HRV-only into synchronized neural/autonomic state vectors | build the HRV + Muse shared manifest, then run repeated condition packs |
+| `Nest 4` | moves biology from HRV-only into synchronized neural/autonomic state vectors | N2 same-clock matrix is landed; run expanded state packs |
 | `Nest 5` | adds another measured substrate class to convergence and Golden Mirror tuning | update convergence matrix, Mirror Index pointers, and support-state table |
 | `Patent support` | strengthens claims 19-30, FIG. 10-FIG. 15, and external adapter embodiments | keep public evidence pointers connected to the claim ledger |
 | `B.A.S.I.S.` | proves creator-owned capture pathway and device-adapter discipline | carry app permission path, stream-ready gate, decoder, manifest, and public-safe summary forward |
@@ -108,7 +121,9 @@ Outputs:
 - raw and filtered waveform plots by channel,
 - IMU and DRL/reference artifact masks carried with every window,
 - synchronized HRV + Muse manifest,
-- first `5 x 3` Muse + HRV condition matrix plan,
+- first `5 x 3` Muse + HRV condition matrix landed,
+- stricter N2 EEG channel masks / artifact weighting,
+- expanded-state pack definitions,
 - `10 x 3` recurrence plan after the first sync matrix.
 
 ### Workstream C: Lane Control Surface
@@ -132,7 +147,7 @@ Goal: run the highest-readiness lanes first.
 
 Priority order:
 
-1. Phase 12C waveform EEG QA and sync manifest.
+1. Phase 12C N2 stricter EEG QA and expanded-state pack.
 2. Materials / semiconductors structure-aware extension.
 3. Spectral signatures dataset gate.
 4. H2O / water spectral or property gate.
@@ -190,7 +205,7 @@ Closeout surface:
 
 - Phase 12B HRV remains coarse biological state separation,
 - Phase 12C Muse S Athena is landed multimodal biology,
-- next gate is joined HRV + Muse state-vector manifest,
+- N2 same-clock HRV + Muse state-vector manifest is landed,
 - after QA: bandpower, phase, topography, and live tuning support.
 
 ### Nest 5
@@ -217,11 +232,17 @@ Phase 12C all-findings plan
 -> Rick spine / log update
 ```
 
-The first data-side step remains:
+The first data-side step is now:
 
 ```text
-Muse waveform export
--> sample-rate / packet-continuity QA
--> HRV + Muse manifest
--> 5 x 3 synchronized condition matrix
+N2 same-clock matrix
+-> stricter EEG masks / artifact weighting
+-> expanded state pack
+-> HRV1.0 first-matrix crosswalk
+```
+
+Expanded-state protocol:
+
+```text
+PHASE12C_POST_N2_EXPANDED_STATE_CAPTURE_PROTOCOL_2026-05-12.md
 ```

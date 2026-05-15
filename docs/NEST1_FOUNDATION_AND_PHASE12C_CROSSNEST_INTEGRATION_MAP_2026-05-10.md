@@ -95,9 +95,16 @@ public evidence stack. It adds a richer biological substrate than HRV alone:
 EEG, optical candidate channels, IMU motion, DRL/reference quality, battery /
 status, target windows, control windows, drift comparator, and alignment read.
 
+Phase 12C N2 extends that pack into a completed same-clock HRV + Muse support
+surface: `15 / 15` valid joined rows across `mirror_coherence`, `seated_calm`,
+and `drift_control`. The strongest current N2 read is HRV separation with Muse
+running in the same state window; EEG is now a candidate same-clock dynamics /
+spectral / topographic surface pending stricter masks.
+
 | Phase 12C captured surface | Cross-nest correlation | Integration job |
 | --- | --- | --- |
 | five real Muse runs: `3` mirror-coherence target, `1` seated calm, `1` drift control | Nest 4B biological adapter; Nest 5 convergence recurrence | treat as captured evidence, not plan language |
+| N2 same-clock HRV + Muse rows: `5` mirror-coherence, `5` seated calm, `5` drift control | Nest 4 joined state-vector lane; Nest 1 DE-1 / SPEC-1 / TOPOG return path | use as landed support read; run stricter EEG masks next |
 | EEG waveform-capable lane | Nest 1 `DE-1`, `SPEC-1`, `TOPOG`; Nest 3 waveform / spectral / phase rows | export waveform tables, verify sample rate / packet continuity, then derive bandpower and phase |
 | optical PPG / fNIRS candidate lane | Nest 4 physiology response; Nest 2 metabolism / nutrition bridge | keep conservative until stronger channel QA and synchronized HRV comparison |
 | IMU motion and DRL/reference quality | Nest 1 `STAT-1` / `CTRL-1`; artifact and drift-mask discipline | carry artifact masks with every future window and chart |
@@ -122,7 +129,7 @@ support and public evidence spine without expanding into loose claim sprawl.
 | --- | --- | --- |
 | 1 | build the `Nest 1 -> 12C` foundation table into the claim-support spine | shows that Muse/HRV are inheriting an existing measured state-variable architecture |
 | 2 | export and QA real Muse EEG waveforms by channel | unlocks `DE-1`, `SPEC-1`, `TOPOG`, and Nest 3 return paths |
-| 3 | create the synchronized HRV + Muse manifest | turns Phase 12B and 12C from parallel captures into one B.A.S.I.S. state-vector record |
+| 3 | crosswalk the HRV1.0 first matrix into the N2 read | turns Phase 12B and 12C from parallel captures into one biological evidence ladder |
 | 4 | write a cross-nest matrix for Nest 2 / 3 / 4 / 5 | prevents the 12C result from being trapped as only a Capture Hub demo |
 | 5 | update the patent claim ledger with public evidence pointers | gives claims 19-30 clearer evidence support through the public architecture folder |
 | 6 | add a visual cross-nest map | helps the public repo show state/control/drift/alignment travel across substrates |
@@ -167,7 +174,7 @@ Nest 3 datasets continue:
 
 Move from separate biological captures into one joined state-vector lane:
 
-- HRV + Muse synchronized manifest,
+- HRV + Muse synchronized manifest: N2 same-clock matrix landed,
 - repeated condition packs,
 - artifact masks from IMU and DRL/reference quality,
 - EEG waveform QA,

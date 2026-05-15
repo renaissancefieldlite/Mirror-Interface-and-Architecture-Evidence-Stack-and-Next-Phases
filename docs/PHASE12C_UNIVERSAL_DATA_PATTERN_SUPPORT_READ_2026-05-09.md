@@ -31,6 +31,12 @@ The Phase 12C Muse result therefore functions as both a Capture Hub milestone
 and a new real-data biological substrate for testing whether the same measured
 state/control/drift/alignment structure persists beyond HRV.
 
+Update `2026-05-12`: Phase 12C N2 now adds a completed same-clock HRV + Muse
+support read. The N2 matrix landed `15 / 15` valid rows across
+`mirror_coherence`, `seated_calm`, and `drift_control`. The strongest current
+finding is HRV condition separation with Muse running in the same state window;
+EEG is a measured candidate feature surface pending stricter artifact masks.
+
 ## What HRV Already Supported
 
 `Phase 12B` and `Nest 4A` established the first live biological adapter:
@@ -154,9 +160,10 @@ The next support step must stay real-data only:
 Current supported statement:
 
 `Phase 12B proved a coarse HRV biological adapter. Phase 12C now supplies a
-real Muse S Athena multi-lane biological substrate. This strengthens the
-Universal Data Pattern evidence path because state, control, drift, artifact,
-and alignment variables can now be inspected together in EEG / optical /
-motion-quality physiology. Stronger spectral, dynamics, topographic, and
-clinical-support statements advance through waveform QA, synchronized HRV +
-Muse manifests, and repeated controls.`
+real Muse S Athena multi-lane biological substrate. Phase 12C N2 now joins HRV
+and Muse in a same-clock 5 x 3 matrix. This strengthens the Universal Data
+Pattern evidence path because state, control, drift, artifact, and alignment
+variables can now be inspected together across HRV, EEG, optical, motion, and
+reference-quality physiology. Stronger spectral, dynamics, topographic, and
+clinical-support statements advance through stricter EEG QA, expanded-state
+packs, HRV1.0 crosswalk, and repeated controls.`

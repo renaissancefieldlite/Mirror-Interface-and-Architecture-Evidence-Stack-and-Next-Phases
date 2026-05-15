@@ -115,6 +115,28 @@ Phase 12C is now part of the current findings surface. It landed as a
 five-run Muse S Athena capture pack and now connects the biological adapter
 back into the formal, waveform, spectral, topographic, and convergence lanes.
 
+Phase 12C N2 has now landed as a same-clock HRV + Muse support read:
+`15 / 15` valid rows across `mirror_coherence`, `seated_calm`, and
+`drift_control`. The strongest current result is HRV condition separation with
+Muse running in the same state window. EEG now supplies a measured candidate
+dynamics / spectral / topographic surface, with stricter artifact masks required
+before higher EEG claims are promoted.
+
+Phase 12C expanded-state biology has also now landed as three additional
+five-run same-clock HRV + Muse blocks: `music_still_calm`, `music_movement`,
+and `breath_paced_calm`. The first-order read is a clean state-window contrast:
+still/music and breath-regulation rows lower condition HR, while music +
+movement raises condition HR on average. This is now the plug-in surface for
+Nest 4 biology, Nest 1 DE-1 / SPEC-1 / TOPOG, Nest 3 waveform/spectral return
+paths, Nest 2 physiology-response adapters, and Nest 5 convergence.
+
+Plug-in plan:
+
+```text
+docs/PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md
+docs/PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md
+```
+
 Current role:
 
 ```text
@@ -123,7 +145,7 @@ Phase 12B HRV
 Phase 12C Muse S Athena
 -> EEG / optical / motion / quality / artifact / alignment surface
 Phase 12B + Phase 12C
--> joined HRV + Muse B.A.S.I.S. state-vector manifest
+-> joined HRV + Muse B.A.S.I.S. state-vector manifest landed in N2
 ```
 
 The immediate week target is now documented in
@@ -202,10 +224,12 @@ spectral signatures, and environmental fate.
 `Phase 12B HRV` supports coarse biological state separation. Delta HR carries
 the strongest current biological signal. `Phase 12C Muse S Athena` now has a
 first five-run capture pack with decoded EEG / optical / motion / quality
-engineering lanes. Phase 12C now also feeds Nest 1 `DE-1`, `SPEC-1`, `TOPOG`,
-`STAT-1`, and `CTRL-1`, while returning into Nest 3 waveform / spectral /
-phase rows. The next live physiology adapter is synchronized HRV + Muse inside
-one B.A.S.I.S. state-vector manifest.
+engineering lanes. Phase 12C N2 now adds a same-clock `5 x 3` HRV + Muse matrix
+with `15 / 15` valid joined rows. Phase 12C now feeds Nest 1 `DE-1`, `SPEC-1`,
+`TOPOG`, `STAT-1`, and `CTRL-1`, while returning into Nest 3 waveform /
+spectral / phase rows. The next live physiology adapter is expanded-state HRV +
+Muse capture plus stricter EEG artifact masks inside one B.A.S.I.S. state-vector
+surface.
 
 ### Nest 5: Convergence
 
@@ -434,7 +458,7 @@ Output:
 
 The next clean executable gate is now two-part:
 
-1. Phase 12C waveform EEG QA and synchronized HRV + Muse manifest.
+1. Phase 12C expanded-state mask / QA, then DE-1 / SPEC-1 / TOPOG reruns.
 2. Materials / Semiconductors structure-aware real-data pass.
 
 The first item integrates the new biology result across the architecture. The

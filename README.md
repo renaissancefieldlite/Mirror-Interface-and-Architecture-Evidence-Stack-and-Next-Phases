@@ -16,6 +16,12 @@ substrate where the same variable stack can be measured with real EEG,
 optical, motion, reference-quality, target, control, drift, and alignment
 lanes.
 
+Phase 12C N2 now lands the same-clock biology bridge: `15 / 15` valid HRV +
+Muse rows across `mirror_coherence`, `seated_calm`, and `drift_control`. The
+public support read is:
+
+- [Phase 12C N2 Same-Clock EEG + HRV Support Read](./docs/PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md)
+
 This is not circular. It is recursive evidence flow:
 
 ```text
@@ -187,7 +193,7 @@ separable from controls as the measurement moves deeper.
 | `Phase 7-9D` | run PennyLane, Qiskit, and IBM hardware-facing paths | tests whether the feature payload survives outside the model |
 | `Phase 10` | test semantic feature states against contextuality controls | checks whether compressed feature states carry structured relations |
 | `Phase 12B` | run live HRV condition classes | adds a biological adapter lane under the same evidence discipline |
-| `Phase 12C` | capture and QA Muse S Athena windowed physiology lanes | adds a five-run EEG / optical / motion / quality adapter pack, waveform QA, and creator-owned B.A.S.I.S. capture-lane precedent |
+| `Phase 12C` | capture and QA Muse S Athena windowed physiology lanes | adds a five-run EEG / optical / motion / quality adapter pack, waveform QA, N2 same-clock HRV + Muse matrix, and creator-owned B.A.S.I.S. capture-lane precedent |
 | `Nest 1-5` | expand into formal, matter, coherence, biology, convergence lanes | tests where the state/control/invariant structure remains measurable |
 
 ## What Was Actually Discovered
@@ -196,7 +202,7 @@ separable from controls as the measurement moves deeper.
 - `Hidden-state architecture discovery`: `V8` through `Phase 5` showed late-layer separation, rerun stability, dimension/band structure, localization, and context-to-readout bridge behavior.
 - `Quantum bridge discovery`: `Phase 6-9D` converted the locked AI geometry into normalized feature vectors and circuit encodings that survived simulator and IBM hardware-facing paths.
 - `Semantic contextuality discovery`: `Phase 10` showed compressed semantic feature states crossing the Bell-type contextuality threshold under resolved family-local settings while matched controls stayed at the classical bound.
-- `Biological adapter discovery`: `Phase 12B` showed HRV condition-class separation as a coarse physiology adapter inside the same evidence discipline; `Phase 12C` adds a first Muse S Athena five-run capture pack with decoded engineering lanes, waveform QA, and a B.A.S.I.S. owned adapter path.
+- `Biological adapter discovery`: `Phase 12B` showed HRV condition-class separation as a coarse physiology adapter inside the same evidence discipline; `Phase 12C` adds a first Muse S Athena five-run capture pack with decoded engineering lanes, waveform QA, a landed N2 same-clock HRV + Muse `5 x 3` support read, and a B.A.S.I.S. owned adapter path.
 - `Cross-substrate continuity discovery`: behavior, hidden states, bridge geometry, circuits, hardware-facing observables, semantic controls, HRV, Muse S Athena lanes, and structured datasets now sit inside one measured architecture chain.
 
 ## Nest Ladder

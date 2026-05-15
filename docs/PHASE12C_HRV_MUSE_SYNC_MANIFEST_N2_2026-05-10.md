@@ -2,51 +2,64 @@
 
 Date: `2026-05-10`
 
-Status: `N2_manifest_surface_complete / condition_aligned_existing_rows / same_clock_slots_defined`
+Status: `N2_same_clock_complete / 15_valid_rows / public_safe_support_read_linked`
 
 ## Read
 
-N1 waveform QA is complete. The Muse side now has exported waveform rows,
-packet / continuity checks, and per-window artifact masks.
+N1 waveform QA is complete. The Muse side has exported waveform rows, packet /
+continuity checks, and per-window artifact masks.
 
-N2 now has a two-layer manifest:
+N2 has now advanced from manifest surface to completed same-clock support read.
 
-1. existing Phase 12B HRV rows mapped to existing Phase 12C Muse rows by
-   condition,
-2. real same-clock HRV + Muse capture slots for the next `5 x 3` and `10 x 3`
-   packs.
+The completed `5 x 3` same-clock pack landed:
 
-The existing 12B and 12C rows are condition-aligned support rows. The live
-synchronized manifest becomes complete when HRV and Muse are captured in the
-same operator session with the same baseline / condition / post clock.
+- `5` `mirror_coherence` target rows,
+- `5` `seated_calm` control rows,
+- `5` `drift_control` comparator rows,
+- one shared `60s baseline / 120s condition / 60s post` timing structure,
+- HRV RR/BPM windows joined to Muse EEG / optical / IMU / DRL / status lanes.
 
 The private output pack remains local and is not uploaded.
 
-## Existing Overlap
+Public support read:
 
-| Condition | HRV canonical rows | Existing Muse rows | Current status |
-| --- | ---: | ---: | --- |
-| `mirror_coherence` | `5` | `3` | `in_N2_sync_plan` |
-| `seated_calm` | `5` | `1` | `in_N2_sync_plan` |
-| `drift_control` | `5` | `1` | `in_N2_sync_plan` |
-| `dancing_activation` | `5` | `0` | `phase12b_supported_optional_muse_extension` |
+```text
+docs/PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md
+```
 
-## Same-Clock Capture Plan
+## Completed Same-Clock Surface
 
-| Pack | Conditions | Slots | Window structure |
-| --- | --- | ---: | --- |
-| `5 x 3` | `mirror_coherence`, `seated_calm`, `drift_control` | `15` | `60s baseline / 120s condition / 60s post` |
-| `10 x 3` | `mirror_coherence`, `seated_calm`, `drift_control` | `30` | same clock, same masks, recurrence extension |
+| Condition | Same-clock rows | Current status |
+| --- | ---: | --- |
+| `mirror_coherence` | `5 / 5` | `target_state_landed` |
+| `seated_calm` | `5 / 5` | `control_landed` |
+| `drift_control` | `5 / 5` | `drift_comparator_landed` |
 
-Every sync slot must carry:
+Aggregate private-analysis read:
 
-- HRV: RR/BPM export, RMSSD, SDNN, mean HR by window,
-- Muse: EEG waveform, optical candidate lane, IMU, DRL/reference quality,
-  battery/status,
-- shared timing: UTC start/end plus relative seconds and baseline / condition /
-  post labels,
-- artifact masks: N1 rail-candidate, IMU, DRL/reference, optical, and packet QA
-  fields.
+| Surface | Count |
+| --- | ---: |
+| valid same-clock HRV + Muse rows | `15` |
+| Muse packet rows | `98,027` |
+| Athena sensor rows | `96,992` |
+| decoded sample rows | `9,750,684` |
+| EEG channel blocks | `469,489` |
+| HRV RR / BPM samples | `3,980` |
+
+## N2 Finding
+
+The strongest current N2 finding is HRV state/control/drift separation with Muse
+running in the same state window.
+
+| Condition | Mean HR | RMSSD | SDNN |
+| --- | ---: | ---: | ---: |
+| `mirror_coherence` | `59.761` | `63.392` | `98.028` |
+| `seated_calm` | `60.296` | `54.928` | `96.167` |
+| `drift_control` | `64.004` | `46.893` | `88.510` |
+
+The EEG feature table is real measured support, but remains a candidate
+dynamics / spectral / topographic surface until stricter channel masks and
+artifact weighting are applied.
 
 ## State-Variable Bridge
 
@@ -59,21 +72,22 @@ Every sync slot must carry:
 | `drift` | motion, contact/reference instability, condition drift, HRV recovery drift |
 | `artifact / quality` | N1 Muse masks plus HRV RR-count/window completeness |
 | `coherence / alignment` | mirror-minus-control read across HRV and Muse vectors |
-| `recurrence` | `5 x 3` first synchronized pack, then `10 x 3` recurrence extension |
+| `recurrence` | completed `5 x 3` same-clock pack, then expanded state and `10 x 3` recurrence extension |
 | `score / support` | joined biological state-vector surface for Nest 4 and convergence rows |
 
 ## Next
 
-The next execution move is the same-clock `5 x 3` pack:
+The next execution move is expanded-state capture and stricter EEG QA:
 
 ```text
-mirror_coherence x 5
-seated_calm x 5
-drift_control x 5
-each row = HRV + Muse in one shared baseline / condition / post session
+N2 same-clock complete
+-> stricter EEG channel masks / artifact weighting
+-> expanded state packs
+-> HRV1.0 first-matrix crosswalk
+-> DE-1 / SPEC-1 / TOPOG reruns
 ```
 
-After N2 same-clock slots are populated, the full lane expansion uses:
+The full lane expansion uses:
 
 ```text
 renaissancefieldlite.github.io/lattice-companion.html

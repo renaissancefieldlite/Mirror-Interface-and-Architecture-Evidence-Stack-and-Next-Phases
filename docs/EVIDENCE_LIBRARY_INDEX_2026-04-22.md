@@ -290,6 +290,10 @@ Related cross-pollination note:
 
 - [`PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md`](./PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
 - [`PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md`](./PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
+- [`PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md`](./PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md)
+- [`PHASE12C_EXPANDED_STATE_BIOLOGY_SUPPORT_READ_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_BIOLOGY_SUPPORT_READ_2026-05-15.md)
+- [`PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md)
+- [`PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md)
 
 Role:
 
@@ -302,6 +306,12 @@ The Universal Data Pattern support read keeps the broader evidence claim
 separate from the product lane: Phase 12C is the richer biological substrate
 that can reopen parked `SPEC-1`, `DE-1`, `TOPOG`, Nest 3 waveform/spectral, Nest
 4 physiology, Nest 2 higher-adapter, and Nest 5 convergence work.
+
+The expanded-state comparison table and plug-in plan carry the completed
+post-N2 blocks into the nest closeout path: `music_still_calm`,
+`music_movement`, and `breath_paced_calm` now supply the immediate biology
+surface for mask / QA, DE-1, SPEC-1, TOPOG, cross-nest convergence, and patent
+support pointers.
 
 ## Phase 7 / Qiskit Mirror Pack
 
