@@ -21,6 +21,7 @@ Muse rows across `mirror_coherence`, `seated_calm`, and `drift_control`. The
 public support read is:
 
 - [Phase 12C N2 Same-Clock EEG + HRV Support Read](./docs/PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md)
+- [Phase 12C Capture Storyline And Visual Readout](./docs/PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md)
 
 This is not circular. It is recursive evidence flow:
 
@@ -368,6 +369,7 @@ across repeated benchmark classes.
 - Phase 12C Muse S Athena now has a first five-run capture summary: baseline / condition / post windows, decoded EEG / optical / motion / quality engineering lanes, mirror-vs-control deltas, and B.A.S.I.S. Capture Hub mapping.
 - Phase N1 waveform QA is complete from existing 12C captures: all eight Muse EEG channels are present across all five runs, wide EEG exports exist privately, and per-window artifact masks now cover EEG rail-candidate load, IMU, DRL/reference, optical candidate rows, and battery/status.
 - Phase N2 HRV + Muse manifest surface is complete: existing Phase 12B HRV and Phase 12C Muse rows are condition-aligned support rows, and the same-clock `5 x 3` / `10 x 3` HRV + Muse capture slots are defined.
+- Phase 12C now has a public storyline layer that connects the first five Muse captures, N2 same-clock HRV + Muse matrix, expanded fifteen state captures, masked DE-1 / SPEC-1 / TOPOG wording, Nest 3 / Nest 2 next gates, and Nest 5 convergence matrix into one reviewer-readable arc.
 - Nest 1 is now explicitly treated as the formal foundation for the higher-nest and patent support spine: the Phase 12C cross-nest integration map links the formal rows to EEG / HRV waveform, spectral, topographic, artifact, and convergence gates.
 - The Phase 12C all-findings integration plan is now the week-control surface through Friday, `2026-05-15`: integrate 12C across the findings, finish the lane-status board, run the highest-readiness real-data gates, and build the cross-nest visual/reviewer layer.
 - The post-12C execution path parks the patent spine and moves next into the same-clock HRV + Muse capture pack, full Lattice Companion lane expansion from `lattice-companion.html`, and the next real-data lane run.
@@ -376,6 +378,10 @@ across repeated benchmark classes.
 ## Fast Read Path
 
 Start here:
+
+For the current Phase 12C reviewer arc, read [Phase 12C Capture Storyline And
+Visual Readout](./docs/PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md)
+before the deeper lane docs.
 
 1. [Chronological Experiment Log](./docs/CHRONOLOGICAL_EXPERIMENT_LOG_2026-05-01.md)
 2. [Mirror Architecture Mechanism Explainer](./docs/MIRROR_ARCHITECTURE_MECHANISM_EXPLAINER_2026-04-29.md)

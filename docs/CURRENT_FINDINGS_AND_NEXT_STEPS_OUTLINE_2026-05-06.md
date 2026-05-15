@@ -138,9 +138,22 @@ expanded-state families.
 Plug-in plan:
 
 ```text
+docs/PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md
 docs/PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md
+```
+
+The reviewer arc is now:
+
+```text
+first five Muse captures
+-> N2 same-clock HRV + Muse 5 x 3
+-> expanded-state 15 captures
+-> masked DE-1 / SPEC-1 / TOPOG wording
+-> one Nest 3 physical waveform / spectral dataset
+-> one Nest 2 matter target
+-> Nest 5 convergence matrix
 ```
 
 Current role:

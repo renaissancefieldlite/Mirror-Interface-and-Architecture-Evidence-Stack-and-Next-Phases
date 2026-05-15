@@ -292,6 +292,7 @@ Related cross-pollination note:
 - [`PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md`](./PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
 - [`PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md`](./PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md)
 - [`PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md`](./PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md)
+- [`PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md`](./PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md)
 - [`PHASE12C_EXPANDED_STATE_BIOLOGY_SUPPORT_READ_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_BIOLOGY_SUPPORT_READ_2026-05-15.md)
 - [`PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md)
 - [`PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md)
@@ -317,6 +318,11 @@ support pointers.
 The Phase 12B-to-12C biology crosswalk keeps the HRV1.0 / Phase 12B matrix
 joined to the same-clock Muse + HRV capture work so the patent support surface
 does not split into parallel biology lanes.
+
+The capture storyline and visual readout is the reviewer-facing arc: first five
+Muse captures -> N2 same-clock matrix -> expanded fifteen -> Nest 1 formal
+return -> Nest 3 physical waveform/spectral row -> Nest 2 matter target -> Nest
+5 convergence matrix.
 
 ## Phase 7 / Qiskit Mirror Pack
 
