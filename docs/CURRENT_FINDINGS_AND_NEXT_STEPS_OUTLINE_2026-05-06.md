@@ -130,9 +130,15 @@ movement raises condition HR on average. This is now the plug-in surface for
 Nest 4 biology, Nest 1 DE-1 / SPEC-1 / TOPOG, Nest 3 waveform/spectral return
 paths, Nest 2 physiology-response adapters, and Nest 5 convergence.
 
+Phase 12B and Phase 12C are now crosswalked instead of parallel. Phase 12B is
+the coarse `5 x 4` HRV condition-class adapter; Phase 12C is the denser
+same-clock Muse + HRV extension with `30` valid HRV + Muse rows across N2 and
+expanded-state families.
+
 Plug-in plan:
 
 ```text
+docs/PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md
 ```

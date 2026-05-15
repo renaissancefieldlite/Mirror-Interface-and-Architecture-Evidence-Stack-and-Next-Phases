@@ -141,8 +141,8 @@ stricter artifact masks required before higher EEG claims are promoted.
 2. Run expanded state packs: breath-paced calm, guided coherence, eyes-open /
    eyes-closed, cognitive load, motion, and recovery. Emotion-linked rows stay
    private / optional unless separately cleared.
-3. Crosswalk the HRV1.0 first biological matrix into the Phase 12C N2 read so
-   Phase 12B and 12C stay joined instead of parallel.
+3. HRV1.0 / Phase 12B is now crosswalked into Phase 12C so the coarse HRV
+   adapter and same-clock Muse + HRV adapter stay joined instead of parallel.
 4. Patch B.A.S.I.S. Capture Hub around live readouts: HRV, EEG feature bands,
    IMU, DRL/reference, packet density, and state timer.
 5. Use the expanded same-clock packs to rerun DE-1, SPEC-1, TOPOG, and the

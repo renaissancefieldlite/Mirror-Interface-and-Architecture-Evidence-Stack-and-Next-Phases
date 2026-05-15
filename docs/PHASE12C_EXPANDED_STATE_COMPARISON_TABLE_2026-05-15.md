@@ -119,8 +119,10 @@ with full claim breadth tuned by counsel against prior art and section
    expanded-state Muse windows.
 4. Masked expanded-state `DE-1`, `SPEC-1`, and `TOPOG` feature pass landed
    locally.
-5. Patch the patent claim-to-paragraph-to-figure ledger for `FIG.10-FIG.15`
-   and claims `19-30`.
+5. Keep the already patched patent claim-to-paragraph-to-figure ledger pointed
+   at N2 plus expanded-state support; the FIG.10-FIG.15 integration gate is
+   already complete.
 6. Move to the next real-data non-biology target:
    `Spectral Signatures`, `H2O`, `Electrochemistry`, or second
    `Materials / Semiconductors` target.
+7. Build the Nest 5 convergence matrix from supported Nest 1-4 rows.

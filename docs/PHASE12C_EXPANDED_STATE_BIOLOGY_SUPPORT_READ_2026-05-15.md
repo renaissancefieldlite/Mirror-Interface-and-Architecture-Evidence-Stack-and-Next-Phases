@@ -122,12 +122,15 @@ a clinical, diagnostic, treatment, or wellness efficacy claim.
 
 ## Next Gates
 
-1. Apply IMU/contact/reference masks and RR artifact review across N2 plus
-   expanded-state rows.
-2. Build the three-state comparison table:
+1. IMU/contact/reference masks and RR artifact review across N2 plus
+   expanded-state rows have landed locally.
+2. The three-state comparison table has landed:
    `music_still_calm` vs `music_movement` vs `breath_paced_calm`.
-3. Rerun DE-1 / SPEC-1 / TOPOG against masked windows.
+3. Masked `DE-1` / `SPEC-1` / `TOPOG` feature pass has landed locally and is
+   the active Nest 1 support surface.
 4. Crosswalk HRV1.0 / Phase 12B into the expanded Phase 12C read.
-5. Patch the patent claim-support ledger so FIG. 14 / FIG. 15 and claims 19-30
-   point to N2 plus expanded-state support.
-6. Build the public-safe visual companion for expanded-state biology.
+5. Keep the already patched patent claim-support ledger pointed to N2 plus
+   expanded-state support; FIG.10-FIG.15 and claims 19-30 are already seated.
+6. Move to the remaining patent Nest gates: one real Nest 3 spectral/waveform
+   dataset, one real Nest 2 matter target, then the Nest 5 convergence matrix.
+7. Build the public-safe visual companion for expanded-state biology.

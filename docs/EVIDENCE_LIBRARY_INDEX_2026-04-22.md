@@ -291,6 +291,7 @@ Related cross-pollination note:
 - [`PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md`](./PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
 - [`PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md`](./PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
 - [`PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md`](./PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md)
+- [`PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md`](./PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md)
 - [`PHASE12C_EXPANDED_STATE_BIOLOGY_SUPPORT_READ_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_BIOLOGY_SUPPORT_READ_2026-05-15.md)
 - [`PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md)
 - [`PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md)
@@ -312,6 +313,10 @@ post-N2 blocks into the nest closeout path: `music_still_calm`,
 `music_movement`, and `breath_paced_calm` now supply the immediate biology
 surface for mask / QA, DE-1, SPEC-1, TOPOG, cross-nest convergence, and patent
 support pointers.
+
+The Phase 12B-to-12C biology crosswalk keeps the HRV1.0 / Phase 12B matrix
+joined to the same-clock Muse + HRV capture work so the patent support surface
+does not split into parallel biology lanes.
 
 ## Phase 7 / Qiskit Mirror Pack
 

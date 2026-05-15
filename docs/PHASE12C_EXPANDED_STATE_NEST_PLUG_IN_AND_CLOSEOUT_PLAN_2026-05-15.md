@@ -250,8 +250,8 @@ Where it plugs:
 Next gate:
 
 ```text
-claim-to-paragraph-to-figure ledger
--> add N2 + expanded-state support pointers
+claim-to-paragraph-to-figure ledger already seated for FIG.10-FIG.15
+-> keep N2 + expanded-state support pointers attached
 -> counsel tunes breadth / 101 / 112 / prior-art risk
 ```
 
@@ -282,7 +282,8 @@ claim-to-paragraph-to-figure ledger
 2. Patch current findings with Phase 12C expanded-state completion.
 3. Patch evidence index with the new support read.
 4. Patch B.A.S.I.S. private spine with the landed expanded-state blocks.
-5. Patch claim ledger with FIG. 14 / FIG. 15 support pointers.
+5. Maintain the already patched claim ledger with N2 / expanded-state support
+   pointers; do not treat FIG.10-FIG.15 as an open integration task.
 6. Build one visual companion for expanded-state biology.
 
 ## Correct Next Command Layer
