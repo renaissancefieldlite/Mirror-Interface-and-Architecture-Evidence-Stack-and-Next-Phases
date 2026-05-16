@@ -33,6 +33,7 @@ code.
 - [Phase 12C Nest 4 Biosignal Cross-Pollination Log](./PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
 - [Phase 12C Universal Data Pattern Support Read](./PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
 - [Nest 3 USGS ASTER Spectral Signature Support Read](./NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md)
+- [Nest 5 Convergence Matrix](./NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
 - [Next Phase Research Plan From Phase 9D](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Artifact Root
@@ -340,6 +341,12 @@ material-family states, spectral-angle centroid scoring, and `250`
 shuffled-label controls. It seats first support for `Nest 3 Waves / Spectra`
 and `Nest 2 Spectral Signatures`, then hands the result to the Nest 5
 convergence matrix.
+
+The Nest 5 convergence matrix now performs that handoff. It routes AI
+behavior, transformer internals, circuit / hardware-facing bridge rows,
+semantic contextuality boundary rows, Nest 1 formal returns, Nest 2 structured
+matter, Nest 3 physical spectra, and Nest 4 biology into a single
+support-state matrix for Mirror Index / Golden Mirror.
 
 ## Phase 7 / Qiskit Mirror Pack
 

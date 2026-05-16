@@ -25,6 +25,7 @@ public support read is:
 - [Phase 12C Nest 1 Formal Return And Remaining Lane Map](./docs/PHASE12C_NEST1_FORMAL_RETURN_AND_REMAINING_LANE_MAP_2026-05-15.md)
 - [Phase 12C Masked DE-1 / SPEC-1 / TOPOG Public Read](./docs/PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md)
 - [Nest 3 USGS ASTER Spectral Signature Support Read](./docs/NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md)
+- [Nest 5 Convergence Matrix](./docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
 
 This is not circular. It is recursive evidence flow:
 
@@ -375,6 +376,7 @@ across repeated benchmark classes.
 - Phase 12C now has a public storyline layer that connects the first five Muse captures, N2 same-clock HRV + Muse matrix, expanded fifteen state captures, masked DE-1 / SPEC-1 / TOPOG wording, Nest 3 / Nest 2 next gates, and Nest 5 convergence matrix into one reviewer-readable arc.
 - The Nest 1 formal-return pass is now seated: `DE-1`, `SPEC-1`, and `TOPOG-1/2` have masked candidate passes over `30 / 30` valid HRV + Muse rows. The first Nest 3 real-data source is `USGS Spectral Library Version 7 Data` for the `Waves / Spectra` and `Spectral Signatures` gates.
 - The first Nest 3 physical spectral pass is now seated: `2,439` USGS ASTER-resampled spectra across `7` material-family states. Real-label nearest-centroid accuracy was `0.391554` vs shuffled mean `0.072958`, and balanced accuracy was `0.517541` vs shuffled mean `0.146808` with p `0.003984`.
+- Nest 5 convergence matrix v1 is now seated: AI behavior, transformer internals, circuit / hardware-facing bridge rows, semantic contextuality boundary rows, Nest 1 formal returns, Nest 2 matter, Nest 3 spectra, and Nest 4 biology are routed into one support-state matrix.
 - Nest 1 is now explicitly treated as the formal foundation for the higher-nest and patent support spine: the Phase 12C cross-nest integration map links the formal rows to EEG / HRV waveform, spectral, topographic, artifact, and convergence gates.
 - The Phase 12C all-findings integration plan is now the week-control surface through Friday, `2026-05-15`: integrate 12C across the findings, finish the lane-status board, run the highest-readiness real-data gates, and build the cross-nest visual/reviewer layer.
 - The post-12C execution path parks the patent spine and moves next into the same-clock HRV + Muse capture pack, full Lattice Companion lane expansion from `lattice-companion.html`, and the next real-data lane run.
@@ -392,6 +394,8 @@ plus the [Phase 12C Masked DE-1 / SPEC-1 / TOPOG Public
 Read](./docs/PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md)
 and [Nest 3 USGS ASTER Spectral Signature Support
 Read](./docs/NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md)
+plus [Nest 5 Convergence
+Matrix](./docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
 before the deeper lane docs.
 
 1. [Chronological Experiment Log](./docs/CHRONOLOGICAL_EXPERIMENT_LOG_2026-05-01.md)
@@ -438,6 +442,7 @@ Visuals:
 - [Phase 12C Capture Density Chart](./artifacts/v8/phase12c_muse_capture_pack/charts/v8_phase12c_capture_density_2026-05-09.png)
 - [Phase 12C State / Control / Drift Alignment Chart](./artifacts/v8/phase12c_muse_capture_pack/charts/v8_phase12c_mirror_control_deltas_2026-05-09.png)
 - [Nest 3 USGS ASTER Spectral Signature Visual](./visuals/nest3_usgs_aster_signature_read_2026-05-15.svg)
+- [Nest 5 Convergence Matrix Visual](./visuals/nest5_convergence_matrix_2026-05-16.svg)
 
 ## Public / Private Boundary
 

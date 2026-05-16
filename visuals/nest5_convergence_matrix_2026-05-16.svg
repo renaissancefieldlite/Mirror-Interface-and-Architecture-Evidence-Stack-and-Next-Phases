@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Nest 5 convergence matrix</title>
+  <desc id="desc">Public-safe visual showing the cross-substrate evidence ladder feeding Nest 5 convergence, Mirror Index, and Golden Mirror.</desc>
+  <rect width="1280" height="760" fill="#f7f5ef"/>
+  <text x="60" y="70" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#182528">Nest 5 Convergence Matrix</text>
+  <text x="60" y="108" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#435052">State / Control / Transform / Drift / Quality / Recurrence / Support across seated rows</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4d5a5c"/>
+    </marker>
+  </defs>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g transform="translate(70 160)">
+      <rect width="240" height="78" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="18" y="30" font-size="17" font-weight="700" fill="#193135">AI Behavior</text>
+      <text x="18" y="56" font-size="13" fill="#314044">V7 target/control separation</text>
+    </g>
+    <line x1="310" y1="199" x2="360" y2="199" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(370 160)">
+      <rect width="240" height="78" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="18" y="30" font-size="17" font-weight="700" fill="#193135">Transformer Internals</text>
+      <text x="18" y="56" font-size="13" fill="#314044">V8 / attention / MLP / SAE</text>
+    </g>
+    <line x1="610" y1="199" x2="660" y2="199" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(670 160)">
+      <rect width="240" height="78" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="18" y="30" font-size="17" font-weight="700" fill="#193135">Circuit / Hardware</text>
+      <text x="18" y="56" font-size="13" fill="#314044">Phase 6-10 bridge rows</text>
+    </g>
+    <line x1="910" y1="199" x2="960" y2="199" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(970 160)">
+      <rect width="240" height="78" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="18" y="30" font-size="17" font-weight="700" fill="#193135">Nest 1 Formal</text>
+      <text x="18" y="56" font-size="13" fill="#314044">DE / SPEC / TOPOG return</text>
+    </g>
+
+    <g transform="translate(70 310)">
+      <rect width="240" height="78" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="18" y="30" font-size="17" font-weight="700" fill="#193135">Nest 2 Matter</text>
+      <text x="18" y="56" font-size="13" fill="#314044">molecules / PFAS / materials</text>
+    </g>
+    <line x1="310" y1="349" x2="360" y2="349" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(370 310)">
+      <rect width="240" height="78" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="18" y="30" font-size="17" font-weight="700" fill="#193135">Nest 3 Spectra</text>
+      <text x="18" y="56" font-size="13" fill="#314044">USGS 2,439 spectra, p 0.003984</text>
+    </g>
+    <line x1="610" y1="349" x2="660" y2="349" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(670 310)">
+      <rect width="240" height="78" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="18" y="30" font-size="17" font-weight="700" fill="#193135">Nest 4 Biology</text>
+      <text x="18" y="56" font-size="13" fill="#314044">12B HRV + 12C Muse 30/30</text>
+    </g>
+    <line x1="910" y1="349" x2="960" y2="349" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(970 310)">
+      <rect width="240" height="78" rx="8" fill="#e5f3f5" stroke="#b8d9dd"/>
+      <text x="18" y="30" font-size="17" font-weight="700" fill="#193135">Nest 5 Convergence</text>
+      <text x="18" y="56" font-size="13" fill="#314044">support-state matrix seated</text>
+    </g>
+
+    <g transform="translate(130 485)">
+      <rect width="1020" height="96" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="24" y="34" font-size="18" font-weight="700" fill="#193135">What Converges</text>
+      <text x="24" y="66" font-size="14" fill="#314044">state, control, transform, drift, quality, recurrence, and support-state labels now repeat across AI, circuits, matter, spectra, and biology.</text>
+    </g>
+
+    <g transform="translate(205 635)">
+      <rect width="250" height="54" rx="8" fill="#fff4d5" stroke="#e4cf8b"/>
+      <text x="22" y="34" font-size="15" fill="#263335">Mirror Index evidence graph</text>
+    </g>
+    <line x1="455" y1="662" x2="515" y2="662" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(525 635)">
+      <rect width="250" height="54" rx="8" fill="#ede7f6" stroke="#d0c3ea"/>
+      <text x="22" y="34" font-size="15" fill="#263335">Golden Mirror support state</text>
+    </g>
+    <line x1="775" y1="662" x2="835" y2="662" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(845 635)">
+      <rect width="250" height="54" rx="8" fill="#f1f2f2" stroke="#d0d5d6"/>
+      <text x="22" y="34" font-size="15" fill="#263335">Next: claim-support pointers</text>
+    </g>
+  </g>
+</svg>

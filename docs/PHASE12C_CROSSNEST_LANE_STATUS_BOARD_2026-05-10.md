@@ -18,6 +18,8 @@ Status: `public_safe_lane_board / N2_same_clock_complete / real_data_only / week
   `PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md`
 - first Nest 3 spectral support read:
   `NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md`
+- Nest 5 convergence read:
+  `NEST5_CONVERGENCE_MATRIX_2026-05-16.md`
 
 ## Front-Center Read
 
@@ -55,6 +57,11 @@ The first real Nest 3 physical spectral run is also seated: `2,439` USGS
 ASTER-resampled spectra across `7` material-family states with `250`
 shuffled-label controls. This turns `Waves / Spectra` and `Spectral
 Signatures` from selected source into first support pass.
+
+Nest 5 convergence matrix v1 is now seated as the support-state router across
+AI behavior, transformer internals, circuit / hardware-facing rows, semantic
+contextuality boundary rows, formal returns, structured matter, physical
+spectra, and biology.
 
 ## Purpose
 
@@ -157,7 +164,7 @@ What must be done by Friday, 2026-05-15?
 
 | Lane | Current state | Phase 12C role | Friday action |
 | --- | --- | --- | --- |
-| `Multi-Class Convergence` | convergence_queue | adds measured biology substrate class | build convergence matrix draft |
+| `Multi-Class Convergence` | convergence matrix v1 seated | joins measured biology with AI, circuit, matter, and spectra support states | patch claim-support pointers next |
 | `Ecosystem / Planet` | dataset_gate | environmental / biology-scale continuation | assign source targets |
 | `Stars / Planets` | dataset_gate | astrophysical spectral / orbit comparator | assign source targets |
 | `Dark-Matter Observables` | mapped boundary | mass-discrepancy comparator | assign source targets |
@@ -189,4 +196,4 @@ What must be done by Friday, 2026-05-15?
 10. Update Mirror Index and claim-support pointers.
 11. DE-1 / SPEC-1 / TOPOG masked candidate pass: `complete`; public read seated in `PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md`.
 12. USGS Spectral Library V7 ASTER subset for Nest 3 `Waves / Spectra` and Nest 2 `Spectral Signatures`: `complete`.
-13. Next clean gate: build the Nest 5 convergence matrix, then choose native spectra / H2O / THz / materials as the next tightening target.
+13. Nest 5 convergence matrix v1: `complete`; next clean gate is claim-support pointer pass, then native spectra / H2O / THz / materials as the next tightening target.

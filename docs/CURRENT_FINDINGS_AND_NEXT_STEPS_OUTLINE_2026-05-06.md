@@ -142,6 +142,7 @@ docs/PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md
 docs/PHASE12C_NEST1_FORMAL_RETURN_AND_REMAINING_LANE_MAP_2026-05-15.md
 docs/PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md
 docs/NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md
+docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md
 docs/PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md
@@ -172,6 +173,12 @@ Version 7 Data` (`10.5066/F7RR1WDJ`) supplied the ASTER-resampled subset for
 `Waves / Spectra` and the Nest 2 `Spectral Signatures` row. The public-safe
 read used `2,439` spectra across `7` material-family states and cleared
 `250` shuffled-label controls.
+
+Nest 5 convergence matrix v1 is now seated. It does not declare universal
+completion. It turns the current support stack into one auditable matrix:
+AI behavior, transformer internals, circuit / hardware-facing rows, semantic
+contextuality boundary rows, Nest 1 formal returns, Nest 2 structured matter,
+Nest 3 physical spectra, and Nest 4 biology.
 
 Current role:
 
@@ -261,6 +268,11 @@ accuracy `0.391554` against shuffled mean `0.072958`; balanced accuracy scored
 `0.517541` against shuffled mean `0.146808`, with p `0.003984`. This supports
 `Nest 3 Waves / Spectra` and the matter-facing `Nest 2 Spectral Signatures`
 row.
+
+`Nest 5 Convergence Matrix v1` is now seated as the reviewer arc connecting
+the supported rows. The matrix does not replace lane-specific controls; it
+stores their support states and boundaries so Mirror Index / Golden Mirror can
+route evidence without flattening it.
 
 ### Nest 4: Biology
 
@@ -502,13 +514,13 @@ Output:
 
 The next clean executable gate is now two-part:
 
-1. Nest 5 convergence matrix from the supported rows already seated.
+1. Claim-support pointer pass from the Nest 5 matrix into the patent spine.
 2. Either native `splib07a` spectral resolution, H2O / ice extraction,
    materials / semiconductors second target, or a THz / IR / Raman second
    spectral family.
 
-The first item turns the seated rows into the cross-substrate reviewer matrix.
-The second item tightens the spectral/matter lane without losing the current
+The first item turns the seated matrix into claim-to-evidence routing. The
+second item tightens the spectral/matter lane without losing the current
 support boundary.
 
 The next clean standalone Nest 2 executable gate after the USGS spectral pass
