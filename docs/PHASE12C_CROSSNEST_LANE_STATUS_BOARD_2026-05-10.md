@@ -20,6 +20,10 @@ Status: `public_safe_lane_board / N2_same_clock_complete / real_data_only / week
   `NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md`
 - Nest 5 convergence read:
   `NEST5_CONVERGENCE_MATRIX_2026-05-16.md`
+- Nest 5 claim-support pointer pass:
+  `NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md`
+- Lattice Companion full nest completion outline:
+  `LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md`
 
 ## Front-Center Read
 
@@ -62,6 +66,11 @@ Nest 5 convergence matrix v1 is now seated as the support-state router across
 AI behavior, transformer internals, circuit / hardware-facing rows, semantic
 contextuality boundary rows, formal returns, structured matter, physical
 spectra, and biology.
+
+The claim-support pointer pass now routes that matrix into FIG.10-FIG.15 and
+claims `19-30`. The full Lattice Companion outline now shows the active
+`72` node / `140` edge nest map with each lane marked as supported, partial,
+queued, or parked.
 
 ## Purpose
 
@@ -197,3 +206,4 @@ What must be done by Friday, 2026-05-15?
 11. DE-1 / SPEC-1 / TOPOG masked candidate pass: `complete`; public read seated in `PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md`.
 12. USGS Spectral Library V7 ASTER subset for Nest 3 `Waves / Spectra` and Nest 2 `Spectral Signatures`: `complete`.
 13. Nest 5 convergence matrix v1: `complete`; next clean gate is claim-support pointer pass, then native spectra / H2O / THz / materials as the next tightening target.
+14. Nest 5 claim-support pointer pass: `complete`; next clean gate is support-state index for Mirror Index / Golden Mirror, plus H2O / native spectra / materials second target.

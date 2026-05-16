@@ -34,6 +34,8 @@ code.
 - [Phase 12C Universal Data Pattern Support Read](./PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
 - [Nest 3 USGS ASTER Spectral Signature Support Read](./NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md)
 - [Nest 5 Convergence Matrix](./NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
+- [Nest 5 Claim-Support Pointer Pass](./NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
+- [Lattice Companion Full Nest Completion Outline](./LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
 - [Next Phase Research Plan From Phase 9D](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Artifact Root

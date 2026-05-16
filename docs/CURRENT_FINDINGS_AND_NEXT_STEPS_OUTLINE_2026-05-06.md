@@ -146,6 +146,8 @@ docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md
 docs/PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md
+docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md
+docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md
 ```
 
 The reviewer arc is now:
@@ -158,6 +160,8 @@ first five Muse captures
 -> one Nest 3 physical waveform / spectral dataset
 -> one Nest 2 matter target
 -> Nest 5 convergence matrix
+-> Nest 5 claim-support pointer pass
+-> full Lattice Companion completion outline
 ```
 
 Formal-return wording is now seated with a first masked candidate pass:
@@ -179,6 +183,12 @@ completion. It turns the current support stack into one auditable matrix:
 AI behavior, transformer internals, circuit / hardware-facing rows, semantic
 contextuality boundary rows, Nest 1 formal returns, Nest 2 structured matter,
 Nest 3 physical spectra, and Nest 4 biology.
+
+The Nest 5 claim-support pointer pass now maps that matrix into FIG.10-FIG.15
+and claims `19-30`. The Lattice Companion full nest completion outline now
+turns the active `72` node / `140` edge companion map into a clear list of
+seated lanes, partial lanes, queued real-data gates, and parked continuation
+lanes.
 
 Current role:
 

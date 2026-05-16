@@ -377,6 +377,8 @@ across repeated benchmark classes.
 - The Nest 1 formal-return pass is now seated: `DE-1`, `SPEC-1`, and `TOPOG-1/2` have masked candidate passes over `30 / 30` valid HRV + Muse rows. The first Nest 3 real-data source is `USGS Spectral Library Version 7 Data` for the `Waves / Spectra` and `Spectral Signatures` gates.
 - The first Nest 3 physical spectral pass is now seated: `2,439` USGS ASTER-resampled spectra across `7` material-family states. Real-label nearest-centroid accuracy was `0.391554` vs shuffled mean `0.072958`, and balanced accuracy was `0.517541` vs shuffled mean `0.146808` with p `0.003984`.
 - Nest 5 convergence matrix v1 is now seated: AI behavior, transformer internals, circuit / hardware-facing bridge rows, semantic contextuality boundary rows, Nest 1 formal returns, Nest 2 matter, Nest 3 spectra, and Nest 4 biology are routed into one support-state matrix.
+- Nest 5 claim-support pointer pass is now seated: the convergence matrix is mapped into FIG.10-FIG.15 and claims `19-30` as a public-safe evidence route.
+- Lattice Companion full nest completion outline is now seated from the active `72` node / `140` edge companion map, showing what is supported, partial, queued, and parked across every nest.
 - Nest 1 is now explicitly treated as the formal foundation for the higher-nest and patent support spine: the Phase 12C cross-nest integration map links the formal rows to EEG / HRV waveform, spectral, topographic, artifact, and convergence gates.
 - The Phase 12C all-findings integration plan is now the week-control surface through Friday, `2026-05-15`: integrate 12C across the findings, finish the lane-status board, run the highest-readiness real-data gates, and build the cross-nest visual/reviewer layer.
 - The post-12C execution path parks the patent spine and moves next into the same-clock HRV + Muse capture pack, full Lattice Companion lane expansion from `lattice-companion.html`, and the next real-data lane run.
@@ -396,6 +398,10 @@ and [Nest 3 USGS ASTER Spectral Signature Support
 Read](./docs/NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md)
 plus [Nest 5 Convergence
 Matrix](./docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
+and the [Nest 5 Claim-Support Pointer
+Pass](./docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
+plus the [Lattice Companion Full Nest Completion
+Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
 before the deeper lane docs.
 
 1. [Chronological Experiment Log](./docs/CHRONOLOGICAL_EXPERIMENT_LOG_2026-05-01.md)
@@ -428,11 +434,13 @@ before the deeper lane docs.
 28. [Phase 12C Nest 4 Biosignal Cross-Pollination Log](./docs/PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
 29. [Phase 12C Universal Data Pattern Support Read](./docs/PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
 30. [Phase 12C Muse S Athena EEG + HRV Implementation Plan](./docs/PHASE12C_MUSE_S_ATHENA_EEG_HRV_IMPLEMENTATION_PLAN_2026-05-05.md)
-31. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
-32. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
-33. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
-34. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
-35. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
+31. [Nest 5 Claim-Support Pointer Pass](./docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
+32. [Lattice Companion Full Nest Completion Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
+33. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
+34. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
+35. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
+36. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
+37. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
 
 Visuals:
 

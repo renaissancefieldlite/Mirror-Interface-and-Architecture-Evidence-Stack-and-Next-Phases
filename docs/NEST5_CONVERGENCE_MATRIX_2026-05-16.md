@@ -75,7 +75,7 @@ AI interaction / V7 behavior
 ## What The Matrix Shows
 
 The strongest read is not that every substrate is already closed. The strongest
-read is that the same measurement grammar of the architecture is repeatedly
+read is that the same measured state-variable sequence is repeatedly
 operational:
 
 ```text
@@ -137,8 +137,14 @@ architecture can be instantiated as:
 
 ```text
 Nest 5 convergence matrix v1 seated
--> patch claim-support pointers
+-> claim-support pointer pass seated
 -> build support-state index for Mirror Index / Golden Mirror
 -> choose next tightening target:
    native spectra, H2O extraction, THz / IR / Raman, or materials second target
 ```
+
+Pointer pass:
+`NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md`
+
+Full lane outline:
+`LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md`
