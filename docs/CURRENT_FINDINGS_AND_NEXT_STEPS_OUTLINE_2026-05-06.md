@@ -139,6 +139,9 @@ Plug-in plan:
 
 ```text
 docs/PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md
+docs/PHASE12C_NEST1_FORMAL_RETURN_AND_REMAINING_LANE_MAP_2026-05-15.md
+docs/PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md
+docs/NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md
 docs/PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md
@@ -150,11 +153,25 @@ The reviewer arc is now:
 first five Muse captures
 -> N2 same-clock HRV + Muse 5 x 3
 -> expanded-state 15 captures
--> masked DE-1 / SPEC-1 / TOPOG wording
+-> masked DE-1 / SPEC-1 / TOPOG candidate pass
 -> one Nest 3 physical waveform / spectral dataset
 -> one Nest 2 matter target
 -> Nest 5 convergence matrix
 ```
+
+Formal-return wording is now seated with a first masked candidate pass:
+
+```text
+DE-1 = masked candidate dynamics pass over 30 valid HRV + Muse rows
+SPEC-1 = masked candidate spectral pass over low/moderate-rail Muse features
+TOPOG-1/2 = channel topology pass complete with explicit quality boundary
+```
+
+The first sourced Nest 3 dataset is now executed: `USGS Spectral Library
+Version 7 Data` (`10.5066/F7RR1WDJ`) supplied the ASTER-resampled subset for
+`Waves / Spectra` and the Nest 2 `Spectral Signatures` row. The public-safe
+read used `2,439` spectra across `7` material-family states and cleared
+`250` shuffled-label controls.
 
 Current role:
 
@@ -238,6 +255,13 @@ FFT, or spectrogram rows exist.
 Nest 3 back into Nest 2 PFAS / pharma / microplastics, catalysis / conditions,
 spectral signatures, and environmental fate.
 
+`USGS ASTER Spectral Signatures` is now the first executed physical spectrum
+row after Phase 12C. Real material-family labels scored nearest-centroid
+accuracy `0.391554` against shuffled mean `0.072958`; balanced accuracy scored
+`0.517541` against shuffled mean `0.146808`, with p `0.003984`. This supports
+`Nest 3 Waves / Spectra` and the matter-facing `Nest 2 Spectral Signatures`
+row.
+
 ### Nest 4: Biology
 
 `Phase 12B HRV` supports coarse biological state separation. Delta HR carries
@@ -246,9 +270,10 @@ first five-run capture pack with decoded EEG / optical / motion / quality
 engineering lanes. Phase 12C N2 now adds a same-clock `5 x 3` HRV + Muse matrix
 with `15 / 15` valid joined rows. Phase 12C now feeds Nest 1 `DE-1`, `SPEC-1`,
 `TOPOG`, `STAT-1`, and `CTRL-1`, while returning into Nest 3 waveform /
-spectral / phase rows. The next live physiology adapter is expanded-state HRV +
-Muse capture plus stricter EEG artifact masks inside one B.A.S.I.S. state-vector
-surface.
+spectral / phase rows. The first masked DE-1 / SPEC-1 / TOPOG candidate pass is
+now complete over `30 / 30` valid HRV + Muse rows; the next live physiology work
+is tighter recurrence, stricter contact controls, and B.A.S.I.S. state-vector
+integration.
 
 ### Nest 5: Convergence
 
@@ -477,21 +502,25 @@ Output:
 
 The next clean executable gate is now two-part:
 
-1. Phase 12C expanded-state mask / QA, then DE-1 / SPEC-1 / TOPOG reruns.
-2. Materials / Semiconductors structure-aware real-data pass.
+1. Nest 5 convergence matrix from the supported rows already seated.
+2. Either native `splib07a` spectral resolution, H2O / ice extraction,
+   materials / semiconductors second target, or a THz / IR / Raman second
+   spectral family.
 
-The first item integrates the new biology result across the architecture. The
-second item keeps the structured-matter lane moving while the biosignal
-manifest is tightened.
+The first item turns the seated rows into the cross-substrate reviewer matrix.
+The second item tightens the spectral/matter lane without losing the current
+support boundary.
 
-The next clean Nest 2 executable gate remains:
+The next clean standalone Nest 2 executable gate after the USGS spectral pass
+remains:
 
 `Materials / Semiconductors structure-aware real-data pass`.
 
 Reason:
 
 - real Matbench / Materials Project data is already local
-- it upgrades a lower Nest 2 row that also needs Nest 3 context later
+- it upgrades a lower Nest 2 row that also benefits from Nest 3 spectral /
+  field context
 - it feeds patent examples around matter-state mapping and prototype routing
 - it keeps the execution path inside real data rather than scaffold rows
 - it opens the semiconductor / nanotech bridge into Nest 3 spectral / EMF /
@@ -499,13 +528,12 @@ Reason:
 
 After that:
 
-1. Phase 12C cross-nest visual and lane-control board
-2. H2O / Water spectra if a real dataset is already available or quickly
+1. H2O / Water spectra if a real dataset is already available or quickly
    sourceable
-3. PFAS / environmental fate safety expansion
-4. Electrochemistry / catalysis / spectral signatures
-5. allostery optimized merged pocket-path recurrence
-6. Nest 3 waveform / THz / EMF rows
+2. PFAS / environmental fate safety expansion
+3. Electrochemistry / catalysis / spectral signatures
+4. allostery optimized merged pocket-path recurrence
+5. Nest 3 waveform / THz / EMF rows
 
 ## Patent Integration Notes
 

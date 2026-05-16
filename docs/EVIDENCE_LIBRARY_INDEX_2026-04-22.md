@@ -32,6 +32,7 @@ code.
 - [Phase 12C B.A.S.I.S. Capture Hub Visual Map](./PHASE12C_BASIS_CAPTURE_HUB_VISUAL_MAP_2026-05-09.md)
 - [Phase 12C Nest 4 Biosignal Cross-Pollination Log](./PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
 - [Phase 12C Universal Data Pattern Support Read](./PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
+- [Nest 3 USGS ASTER Spectral Signature Support Read](./NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md)
 - [Next Phase Research Plan From Phase 9D](./NEXT_PHASE_RESEARCH_PLAN_FROM_PHASE8_2026-04-22.md)
 
 ## Artifact Root
@@ -293,6 +294,8 @@ Related cross-pollination note:
 - [`PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md`](./PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md)
 - [`PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md`](./PHASE12B_TO_12C_BIOLOGY_CROSSWALK_2026-05-15.md)
 - [`PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md`](./PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md)
+- [`PHASE12C_NEST1_FORMAL_RETURN_AND_REMAINING_LANE_MAP_2026-05-15.md`](./PHASE12C_NEST1_FORMAL_RETURN_AND_REMAINING_LANE_MAP_2026-05-15.md)
+- [`PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md`](./PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md)
 - [`PHASE12C_EXPANDED_STATE_BIOLOGY_SUPPORT_READ_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_BIOLOGY_SUPPORT_READ_2026-05-15.md)
 - [`PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md)
 - [`PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md`](./PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md)
@@ -312,7 +315,7 @@ that can reopen parked `SPEC-1`, `DE-1`, `TOPOG`, Nest 3 waveform/spectral, Nest
 The expanded-state comparison table and plug-in plan carry the completed
 post-N2 blocks into the nest closeout path: `music_still_calm`,
 `music_movement`, and `breath_paced_calm` now supply the immediate biology
-surface for mask / QA, DE-1, SPEC-1, TOPOG, cross-nest convergence, and patent
+surface for masked DE-1 / SPEC-1 / TOPOG, cross-nest convergence, and patent
 support pointers.
 
 The Phase 12B-to-12C biology crosswalk keeps the HRV1.0 / Phase 12B matrix
@@ -323,6 +326,20 @@ The capture storyline and visual readout is the reviewer-facing arc: first five
 Muse captures -> N2 same-clock matrix -> expanded fifteen -> Nest 1 formal
 return -> Nest 3 physical waveform/spectral row -> Nest 2 matter target -> Nest
 5 convergence matrix.
+
+The Nest 1 formal-return map locks the wording for `DE-1`, `SPEC-1`, and
+`TOPOG-1/2`: Phase 12C reopens those lanes with real Muse + HRV candidate
+surfaces. The masked public read now seats the first candidate pass over
+`30 / 30` valid HRV + Muse rows, while stronger promotion remains gated behind
+tighter artifact controls and recurrence. It also selects `USGS Spectral
+Library Version 7 Data` as the first real Nest 3 spectral source.
+
+The Nest 3 USGS ASTER spectral read executes that selected source as a real
+physical spectrum pass: `2,439` ASTER-resampled spectra across `7`
+material-family states, spectral-angle centroid scoring, and `250`
+shuffled-label controls. It seats first support for `Nest 3 Waves / Spectra`
+and `Nest 2 Spectral Signatures`, then hands the result to the Nest 5
+convergence matrix.
 
 ## Phase 7 / Qiskit Mirror Pack
 

@@ -14,6 +14,10 @@ Status: `public_safe_lane_board / N2_same_clock_complete / real_data_only / week
   `PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md`
 - public-safe expanded-state support read:
   `PHASE12C_EXPANDED_STATE_BIOLOGY_SUPPORT_READ_2026-05-15.md`
+- masked Nest 1 formal-return public read:
+  `PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md`
+- first Nest 3 spectral support read:
+  `NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md`
 
 ## Front-Center Read
 
@@ -41,6 +45,16 @@ The post-N2 expanded-state pass now adds another `15 / 15` valid same-clock
 rows across `music_still_calm`, `music_movement`, and `breath_paced_calm`.
 This creates a six-family biology state surface: mirror, calm, drift, auditory
 stillness, active movement, and paced breath regulation.
+
+The first masked DE-1 / SPEC-1 / TOPOG pass is now seated over `30 / 30` valid
+HRV + Muse rows. DE-1 carries a candidate dynamics pass, SPEC-1 carries a
+candidate spectral pass over low/moderate-rail channels, and TOPOG carries a
+channel-topology pass with the quality boundary explicit.
+
+The first real Nest 3 physical spectral run is also seated: `2,439` USGS
+ASTER-resampled spectra across `7` material-family states with `250`
+shuffled-label controls. This turns `Waves / Spectra` and `Spectral
+Signatures` from selected source into first support pass.
 
 ## Purpose
 
@@ -81,13 +95,13 @@ What must be done by Friday, 2026-05-15?
 | --- | --- | --- | --- |
 | `LA-1 / TENSOR-1 / INFO-1` | supported foundation | keeps EEG / HRV vectors in the same bridge-vector state map | cite in 12C support map |
 | `GEO-1/2` | control-supported | supports channel/vector geometry checks after waveform export | add EEG channel-vector example after QA |
-| `TOPOG-1/2` | control-supported / N2 same-clock candidate surface landed | Muse electrode lanes supply first biology topography path | apply channel masks, then map Muse channels to topographic gate |
+| `TOPOG-1/2` | control-supported / masked channel-topology pass complete | Muse electrode lanes supply first biology topography path with explicit quality boundary | keep final scalp-localization as later cleaner-channel gate |
 | `TOP-1/2` | preservation supported / richer separation queued | waveform trajectories can feed denser topology later | keep as continuation row |
 | `GRAPH-1` | supported | artifact / channel / state features can become biology graph nodes | add to lane board |
 | `GRAPH-2` | partial / open | attention-flow and biological pathway labels are the next path labels | keep as attention-flow / external-pathway gate |
 | `DYN-1/2` | control-supported / N2 + expanded-state same-clock rows complete | Muse + HRV condition windows add live trajectory data across mirror/calm/drift/music/movement/breath | build baseline-condition-post trajectory table |
-| `DE-1` | HRV-only coarse result / N1 waveform QA complete / N2 + expanded windows landed | EEG waveform + HRV windows reopen continuous dynamics | run stricter artifact-masked dynamics next |
-| `SPEC-1` | HRV-only spectral result / N1 waveform QA complete / N2 + expanded candidate feature read landed | EEG bandpower / phase reopens spectral row | apply QA masks before bandpower |
+| `DE-1` | HRV-only coarse result / N1 waveform QA complete / masked candidate dynamics pass complete | EEG waveform + HRV windows reopen continuous dynamics | tighten recurrence, recovery slope, and artifact controls |
+| `SPEC-1` | HRV-only spectral result / N1 waveform QA complete / masked candidate spectral pass complete | EEG bandpower / phase reopens spectral row under low/moderate-rail masks | tighten contact controls before higher EEG claims |
 | `STAT-1 / CTRL-1` | control-supported / N1 masks generated | IMU and DRL/reference lanes become artifact/control masks | carry masks into HRV + Muse manifest |
 
 ## Nest 2: Structured Matter
@@ -109,7 +123,7 @@ What must be done by Friday, 2026-05-15?
 | `Polymers / Plastics` | dataset_gate | microplastic degradation / environmental response | lock degradation dataset target |
 | `Electrochemistry` | dataset_gate | membrane / ion flow / device physiology bridge | lock battery/redox/impedance rows |
 | `Catalysis / Conditions` | dataset_gate | condition-selection bridge for PFAS / reactions | lock condition-control schema |
-| `Spectral Signatures` | dataset_gate | connects EEG spectral logic to material spectra | source IR/Raman/THz/NMR rows |
+| `Spectral Signatures` | first USGS ASTER support pass complete | connects EEG spectral logic to material spectra | tighten with native spectra, H2O extraction, or IR/Raman/THz rows |
 | `Environmental Fate` | convergence_queue | safety and exposure-response lane | lock fate endpoint controls |
 | `Materials / Semiconductors` | supported formation-energy / structure-aware extension complete / second target queued | materials response and device/sensor future bridge | add bandgap / hull / phonon / defect / dielectric / 2D-material target |
 
@@ -125,7 +139,7 @@ What must be done by Friday, 2026-05-15?
 | `Gravity / Orbits` | dataset_gate | convergence / cycle comparator | assign source targets |
 | `EMF / Fields` | instrument_gate | physiology and field-state response possible later | lock source-on/off controls |
 | `Oscillators / Resonance` | instrument_gate | EEG rhythm / phase connects to oscillator logic | lock oscillator controls |
-| `Waves / Spectra` | active_integration / waveform_QA_complete | Muse EEG waveform is first live waveform return path | apply masks, then spectral features |
+| `Waves / Spectra` | active_integration / waveform_QA_complete / first USGS ASTER support pass complete | Muse EEG waveform is first live waveform return path; USGS Spectral Library V7 is the first physical spectral source | tighten with native spectra, second spectral family, or instrument row |
 | `N3D / N3L Hardware Coherence` | executed support surface | timing / coherence state variables link to physiology timing | keep support pointer |
 | `ARC15 / Acoustic` | protocol_locked | waveform/spectrogram branch | keep physical export protocol |
 
@@ -134,7 +148,7 @@ What must be done by Friday, 2026-05-15?
 | Lane | Current state | Phase 12C role | Friday action |
 | --- | --- | --- | --- |
 | `Phase 12B HRV Matrix` | supported coarse biology | autonomic reference branch for Muse | keep support pointer |
-| `HRV + EEG` | `5 x 3` same-clock matrix complete plus `15` expanded-state rows | main joined state-vector lane | run masks, artifact review, and expanded-state comparison |
+| `HRV + EEG` | `5 x 3` same-clock matrix complete plus `15` expanded-state rows and masked DE/SPEC/TOPOG pass | main joined state-vector lane | tighten contact controls and carry state-vector read into B.A.S.I.S. |
 | `Physiology / Timing Channels` | active_integration / N2 and expanded timing schema landed | IMU, DRL/reference, PPG/fNIRS candidate, HRV, EEG | carry N2 + expanded schema into B.A.S.I.S. live readouts |
 | `Metabolism` | active_integration | biology-facing matter bridge | link food/nutrient rows to HRV + Muse |
 | `Cells + Genome` | dataset_gate | later pathway / cell-state bridge | assign public dataset targets |
@@ -168,9 +182,11 @@ What must be done by Friday, 2026-05-15?
 4. Patch Basis Hub capture pathway with the working app / BLE / decoder route.
 5. Expand full lane board from `renaissancefieldlite.github.io/lattice-companion.html`: `complete`.
 6. Build cross-nest visual map.
-7. Source first spectral / water / electrochemistry datasets.
+7. Source first spectral / water / electrochemistry datasets: `USGS Spectral Library Version 7 Data` is selected first for `Waves / Spectra` and `Spectral Signatures`.
 8. Add the next Materials / Semiconductors target beyond formation energy.
 9. Crosswalk HRV1.0 first biological matrix into N2 / expanded 12C so 12B and
    12C stay joined.
 10. Update Mirror Index and claim-support pointers.
-11. Rerun DE-1 / SPEC-1 / TOPOG over masked N2 + expanded-state windows.
+11. DE-1 / SPEC-1 / TOPOG masked candidate pass: `complete`; public read seated in `PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md`.
+12. USGS Spectral Library V7 ASTER subset for Nest 3 `Waves / Spectra` and Nest 2 `Spectral Signatures`: `complete`.
+13. Next clean gate: build the Nest 5 convergence matrix, then choose native spectra / H2O / THz / materials as the next tightening target.
