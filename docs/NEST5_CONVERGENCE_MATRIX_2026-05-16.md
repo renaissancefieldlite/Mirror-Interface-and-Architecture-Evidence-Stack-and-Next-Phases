@@ -55,8 +55,8 @@ AI interaction / V7 behavior
 | Circuit / hardware bridge | `Phase 6-9D` | normalized AI feature vectors and calibration circuits | PennyLane / Qiskit / IBM / remote hardware-facing encodings | simulator handoff and hardware runtime path established; Bell calibration reached CHSH `2.828427` while product control stayed `1.414214` | `supported_bridge_surface` |
 | Semantic contextuality | `Phase 10` | compressed semantic feature states vs matched unentangled controls | family-local Bell-type semantic settings | `8 / 8` semantic states show `S_max > 2`; mean entangled `S_max` `2.018908`; matched controls stay at `2.000000` | `supported_semantic_boundary` |
 | Nest 1 formal rows | formal / transformer foundation plus Phase 12C return | DE, SPEC, TOPOG, DYN, STAT, CTRL, GRAPH, topology rows | formal lenses applied to real traces and masked physiology windows | masked Phase 12C pass seats DE-1 / SPEC-1 / TOPOG over `30 / 30` valid HRV + Muse rows; formal rows remain bounded by lane-specific controls | `supported_plus_candidate_formal_return` |
-| Nest 2 structured matter | molecules, allostery, PFAS, materials, descriptors | molecule / protein / pathway / material state labels vs shuffled controls | graph, descriptor, safety, composition, and structure features | allostery external-pocket branch supported; PFAS safety logic supported; materials formation energy reached Pearson `0.858577`, R2 `0.737141`, p `0.001996` | `supported_matter_surface` |
-| Nest 3 physical spectra / coherence | USGS ASTER spectra, hardware timing-coherence rows | material-family spectral labels and hardware timing windows | spectral-angle centroids, ASTER bands, timing-window features | USGS ASTER run used `2,439` spectra, balanced accuracy `0.517541` vs shuffled `0.146808`, p `0.003984`; hardware timing target-subspace mean `0.966145833` with timing separation still queued | `supported_spectral_surface_with_open_coherence_rows` |
+| Nest 2 structured matter | molecules, allostery, PFAS, H2O/water, materials, descriptors | molecule / protein / pathway / material / water state labels vs shuffled controls | graph, descriptor, safety, composition, water-centroid, and structure features | allostery external-pocket branch supported; PFAS safety logic supported; H2O extraction AUC `0.918730` vs shuffled `0.498888`, p `0.001996`; materials formation energy reached Pearson `0.858577`, R2 `0.737141`, p `0.001996` | `supported_matter_surface` |
+| Nest 3 physical spectra / coherence | USGS ASTER spectra, H2O/water spectral extraction, hardware timing-coherence rows | material-family / water spectral labels and hardware timing windows | spectral-angle centroids, ASTER bands, timing-window features | USGS ASTER run used `2,439` spectra, balanced accuracy `0.517541` vs shuffled `0.146808`, p `0.003984`; H2O extraction over `23` water/ice rows vs `2,416` controls cleared shuffled labels; hardware timing target-subspace mean `0.966145833` with timing separation still queued | `supported_spectral_surface_with_open_coherence_rows` |
 | Nest 4 biology | Phase 12B HRV, Phase 12C HRV + Muse | human state windows vs seated calm / drift / baseline / post controls | HRV, EEG, optical candidate, IMU, DRL/reference, packet QA | Phase 12B HRV supports coarse biology; Phase 12C adds `30 / 30` valid same-clock HRV + Muse rows and masked DE/SPEC/TOPOG candidate passes | `supported_biology_surface` |
 | Nest 5 convergence / product routing | Mirror Index, B.A.S.I.S., Golden Mirror | evidence nodes, support states, boundaries, next gates | claim -> evidence -> artifact -> boundary -> tuning support | convergence matrix is now seated as the routing surface; live tuning remains gated behind support-state selection and private/raw-data boundary | `active_convergence_route` |
 
@@ -114,7 +114,8 @@ Supported:
 Still gated:
 
 - native high-resolution spectral rerun or a second spectral family;
-- H2O / ice / water extraction from the USGS lane;
+- water-specific native spectra / property rows beyond the first H2O ASTER
+  extraction;
 - materials / semiconductors second target beyond formation energy;
 - stronger Phase 12C contact controls and recurrence;
 - live B.A.S.I.S. state-vector integration into Golden Mirror;
@@ -148,3 +149,6 @@ Pointer pass:
 
 Full lane outline:
 `LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md`
+
+H2O tightening pass:
+`NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md`

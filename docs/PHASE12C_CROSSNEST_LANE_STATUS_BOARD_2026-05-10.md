@@ -24,6 +24,8 @@ Status: `public_safe_lane_board / N2_same_clock_complete / real_data_only / week
   `NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md`
 - Lattice Companion full nest completion outline:
   `LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md`
+- H2O / water skeptic-proof extraction:
+  `NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md`
 
 ## Front-Center Read
 
@@ -71,6 +73,10 @@ The claim-support pointer pass now routes that matrix into FIG.10-FIG.15 and
 claims `19-30`. The full Lattice Companion outline now shows the active
 `72` node / `140` edge nest map with each lane marked as supported, partial,
 queued, or parked.
+
+The H2O / water extraction pass now promotes the `H2O / Water` lane from mapped
+to first physical spectral support row inside the same USGS source: `23`
+water/ice rows, `2,416` non-water controls, ROC AUC `0.918730`, p `0.001996`.
 
 ## Purpose
 
@@ -127,7 +133,7 @@ What must be done by Friday, 2026-05-15?
 | `Elements` | supported | foundation for materials, nutrition minerals, electrochemistry | keep support pointer |
 | `Hydrogen` | dataset_gate | HRV + Muse physiology can later respond to hydration / isotope / plasma rows | assign source targets |
 | `Oxygen / Redox` | dataset_gate | physiology / metabolism response bridge | assign redox dataset/control target |
-| `H2O / Water` | dataset_gate | hydration and optical/EEG physiology bridge | source water property/spectral rows |
+| `H2O / Water` | first USGS ASTER extraction pass complete | hydration and optical/EEG physiology bridge | tighten with water-specific native spectra / property rows |
 | `Minerals` | dataset_gate | nutrition and materials bridge | source mineral lattice/surface rows |
 | `Food Chemistry` | active_integration | direct bridge to HRV + Muse state response | lock USDA/FooDB dataset plan |
 | `Proteins` | supported for allostery branch | biology response and pathway bridge | keep allostery support, add digestion/binding queue |
@@ -207,3 +213,4 @@ What must be done by Friday, 2026-05-15?
 12. USGS Spectral Library V7 ASTER subset for Nest 3 `Waves / Spectra` and Nest 2 `Spectral Signatures`: `complete`.
 13. Nest 5 convergence matrix v1: `complete`; next clean gate is claim-support pointer pass, then native spectra / H2O / THz / materials as the next tightening target.
 14. Nest 5 claim-support pointer pass: `complete`; next clean gate is support-state index for Mirror Index / Golden Mirror, plus H2O / native spectra / materials second target.
+15. H2O / water skeptic-proof extraction: `complete`; next clean gate is materials second target, native spectra, THz / IR / Raman, or electrochemistry.

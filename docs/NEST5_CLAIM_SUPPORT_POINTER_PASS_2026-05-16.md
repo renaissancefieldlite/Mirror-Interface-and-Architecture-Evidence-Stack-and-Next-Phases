@@ -78,6 +78,7 @@ continuation gates.
 | `Nest 1` formal returns | DE-1 / SPEC-1 / TOPOG measured-state lenses over real traces | `FIG.10`, `FIG.14`; claims `19`, `26`, `27`, `30` |
 | `Nest 2` structured matter | molecule, protein, contaminant, material, descriptor, safety, and spectral-signature support rows | `FIG.14`, `FIG.15`; claims `26-30` |
 | `Nest 3` USGS ASTER spectra | real public physical spectral dataset with shuffled controls | `FIG.14`, `FIG.15`; claims `26-30` |
+| `Nest 2` H2O / water extraction | narrower water/ice target extracted from the USGS ASTER source above shuffled controls | `FIG.14`, `FIG.15`; claims `26-30` |
 | `Nest 4` Phase 12B / Phase 12C biology | HRV and Muse same-clock human-state adapter surface with artifact/quality masks | `FIG.10`, `FIG.14`, `FIG.15`; claims `19`, `26-30` |
 | `Nest 5` convergence matrix | support-state routing across seated classes | `FIG.15`; claims `28-30` |
 
@@ -97,8 +98,8 @@ Continuation gates:
 
 - native high-resolution spectra or second spectral family beyond the first
   USGS ASTER pass;
-- H2O / ice / water extraction from the USGS lane or another water-specific
-  dataset;
+- water-specific native spectra / property rows beyond the first H2O ASTER
+  extraction;
 - materials / semiconductors second target beyond formation energy;
 - stronger Phase 12C contact-control recurrence and live B.A.S.I.S.
   state-vector integration;

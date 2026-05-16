@@ -148,6 +148,7 @@ docs/PHASE12C_EXPANDED_STATE_COMPARISON_TABLE_2026-05-15.md
 docs/PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md
 docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md
 docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md
+docs/NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md
 ```
 
 The reviewer arc is now:
@@ -162,6 +163,7 @@ first five Muse captures
 -> Nest 5 convergence matrix
 -> Nest 5 claim-support pointer pass
 -> full Lattice Companion completion outline
+-> H2O / water skeptic-proof extraction
 ```
 
 Formal-return wording is now seated with a first masked candidate pass:
@@ -189,6 +191,12 @@ and claims `19-30`. The Lattice Companion full nest completion outline now
 turns the active `72` node / `140` edge companion map into a clear list of
 seated lanes, partial lanes, queued real-data gates, and parked continuation
 lanes.
+
+The first H2O / water extraction pass is now seated from the same USGS ASTER
+source: `23` water/ice rows against `2,416` non-water controls, ROC AUC
+`0.918730`, shuffled AUC mean `0.498888`, and p `0.001996` across AUC,
+average precision, and precision@23. This promotes `H2O / Water` from mapped
+lane to first physical spectral support row.
 
 Current role:
 
