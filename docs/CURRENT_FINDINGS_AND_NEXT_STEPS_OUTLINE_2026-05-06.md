@@ -149,6 +149,7 @@ docs/PHASE12C_EXPANDED_STATE_NEST_PLUG_IN_AND_CLOSEOUT_PLAN_2026-05-15.md
 docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md
 docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md
 docs/NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md
+docs/NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md
 ```
 
 The reviewer arc is now:
@@ -164,6 +165,7 @@ first five Muse captures
 -> Nest 5 claim-support pointer pass
 -> full Lattice Companion completion outline
 -> H2O / water skeptic-proof extraction
+-> Minerals skeptic-proof extraction
 ```
 
 Formal-return wording is now seated with a first masked candidate pass:
@@ -180,8 +182,8 @@ Version 7 Data` (`10.5066/F7RR1WDJ`) supplied the ASTER-resampled subset for
 read used `2,439` spectra across `7` material-family states and cleared
 `250` shuffled-label controls.
 
-Nest 5 convergence matrix v1 is now seated. It does not declare universal
-completion. It turns the current support stack into one auditable matrix:
+Nest 5 convergence matrix v1 is now seated. It turns the current support stack
+and continuation gates into one auditable matrix:
 AI behavior, transformer internals, circuit / hardware-facing rows, semantic
 contextuality boundary rows, Nest 1 formal returns, Nest 2 structured matter,
 Nest 3 physical spectra, and Nest 4 biology.
@@ -197,6 +199,13 @@ source: `23` water/ice rows against `2,416` non-water controls, ROC AUC
 `0.918730`, shuffled AUC mean `0.498888`, and p `0.001996` across AUC,
 average precision, and precision@23. This promotes `H2O / Water` from mapped
 lane to first physical spectral support row.
+
+The first Minerals extraction pass is now seated from the same USGS ASTER
+source: `1,262` mineral rows against `1,177` non-mineral controls, ROC AUC
+`0.714217`, average precision `0.735238`, precision@1262 `0.657686`, and
+p `0.001996` across AUC, average precision, and precision@1262. This promotes
+`Minerals` from partial / mapped support to direct physical spectral support
+row.
 
 Current role:
 
@@ -288,9 +297,9 @@ accuracy `0.391554` against shuffled mean `0.072958`; balanced accuracy scored
 row.
 
 `Nest 5 Convergence Matrix v1` is now seated as the reviewer arc connecting
-the supported rows. The matrix does not replace lane-specific controls; it
-stores their support states and boundaries so Mirror Index / Golden Mirror can
-route evidence without flattening it.
+the supported rows. The matrix stores lane-specific controls, support states,
+and boundaries so Mirror Index / Golden Mirror can route evidence without
+flattening it.
 
 ### Nest 4: Biology
 

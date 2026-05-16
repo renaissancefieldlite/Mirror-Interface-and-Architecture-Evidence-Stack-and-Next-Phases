@@ -51,10 +51,10 @@ material classes and shuffled-label controls?
 ## Read
 
 This pass promotes `H2O / Water` from mapped lane to first physical spectral
-support row. It is not a standalone water-technology claim. It is a
-support-bearing extraction: the water/ice state family separates from the rest
-of the ASTER material library above shuffled-label controls using the same
-state/control/transform/drift/quality/support discipline.
+support row. The claim level is support-bearing extraction: the water/ice
+state family separates from the rest of the ASTER material library above
+shuffled-label controls using the same state/control/transform/drift/quality/
+support discipline.
 
 The important skeptic-proof value is that this is a narrower correlation
 inside the broader USGS physical spectral pass. The first USGS run showed
@@ -68,7 +68,7 @@ state. The answer is yes at aggregate support level.
 - `Nest 3`: strengthens Waves / Spectra by adding a narrower spectral
   extraction inside the broader USGS pass.
 - `Nest 4`: creates a future hydration / metabolism / physiology bridge for
-  HRV + Muse, without promoting clinical language.
+  HRV + Muse.
 - `Nest 5`: adds another independent support-state card to the convergence
   matrix.
 

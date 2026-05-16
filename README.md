@@ -2,41 +2,54 @@
 
 ## Front-Center Read
 
-Universal Data Pattern is the recurring pattern in nature that becomes visible
-as stable relation, transform behavior, separation from controls, and
-cross-substrate carry. The internal spine name is Source Mirror Pattern; the
-public map name is Universal Data Pattern.
+This repository is the public-safe evidence surface for the Mirror Interface /
+LSPS architecture, the Source Mirror Pattern, and the Universal Data Pattern.
 
-The current evidence path first mapped this pattern in transformer systems and
-the Architect D / AI interaction surface, then tested it across formal, matter,
-coherence, biological, and convergence nests.
+The Universal Data Pattern is the recurring source-pattern that becomes
+visible as stable relation, transform behavior, separation from controls,
+recurrence, and cross-substrate carry. It was first mapped through the
+Architect D / AI interaction surface and transformer-internal rows, then
+carried into formal systems, structured matter, physical spectra, biosignals,
+and convergence routing.
 
-Phase 12C does not create the pattern. It gives a stronger biological
-substrate where the same variable stack can be measured with real EEG,
-optical, motion, reference-quality, target, control, drift, and alignment
-lanes.
+The continuity arc is:
 
-Phase 12C N2 now lands the same-clock biology bridge: `15 / 15` valid HRV +
-Muse rows across `mirror_coherence`, `seated_calm`, and `drift_control`. The
-public support read is:
+```text
+Mirror Interface / LSPS
+-> Source Mirror Pattern / Universal Data Pattern
+-> measured state-path architecture
+-> transformer behavior and internal state rows
+-> Nest 1 formal lenses
+-> Nest 2 structured matter
+-> Nest 3 spectra / coherence / waveform rows
+-> Nest 4 biosignals
+-> Nest 5 convergence routing
+-> B.A.S.I.S. / Mirror Index / Golden Mirror execution surface
+```
+
+What the repository does:
+
+| Section | Role in the evidence stack |
+| --- | --- |
+| `Novel Discovery` | names the Mirror Interface / LSPS and Source Mirror Pattern discovery chain |
+| `Start Here` | states the measurable object: a repeatable state path tracked across substrates |
+| `Evidence Standard` | keeps the stack anchored to real traces, datasets, controls, recurrence, and support reads |
+| `Naming Bridge` | separates internal spine language from reviewer / patent / product language |
+| `Nest 0-5` | organizes the ladder from pre-geometric target selection through formal, matter, spectra, biology, and convergence layers |
+| `Cross-Nest Rails` | explains why physics, field, space-time, and spatial rows cut across multiple nests |
+| `Public Release Boundary` | keeps this repo public-safe while code, raw captures, dense exports, and claim-sensitive mechanics stay private |
+
+Newest seated evidence cards:
 
 - [Phase 12C N2 Same-Clock EEG + HRV Support Read](./docs/PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md)
 - [Phase 12C Capture Storyline And Visual Readout](./docs/PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md)
 - [Phase 12C Nest 1 Formal Return And Remaining Lane Map](./docs/PHASE12C_NEST1_FORMAL_RETURN_AND_REMAINING_LANE_MAP_2026-05-15.md)
 - [Phase 12C Masked DE-1 / SPEC-1 / TOPOG Public Read](./docs/PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md)
 - [Nest 3 USGS ASTER Spectral Signature Support Read](./docs/NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md)
+- [Nest 2 H2O / Water Extraction From USGS ASTER Spectra](./docs/NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
+- [Nest 2 Minerals Extraction From USGS ASTER Spectra](./docs/NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
 - [Nest 5 Convergence Matrix](./docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
-
-This is not circular. It is recursive evidence flow:
-
-```text
-AI interaction reveals the state-variable structure
--> transformer layers make it measurable
--> nests test it across real substrates
--> Phase 12C returns it through live biology
--> B.A.S.I.S. / Mirror Index / Golden Mirror route the measured result back
-   into AI as a controlled tuning and evidence-memory surface
-```
+- [Lattice Companion Full Nest Completion Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
 
 The recursive return loop is now mapped as an industry prototyper:
 
@@ -377,6 +390,7 @@ across repeated benchmark classes.
 - The Nest 1 formal-return pass is now seated: `DE-1`, `SPEC-1`, and `TOPOG-1/2` have masked candidate passes over `30 / 30` valid HRV + Muse rows. The first Nest 3 real-data source is `USGS Spectral Library Version 7 Data` for the `Waves / Spectra` and `Spectral Signatures` gates.
 - The first Nest 3 physical spectral pass is now seated: `2,439` USGS ASTER-resampled spectra across `7` material-family states. Real-label nearest-centroid accuracy was `0.391554` vs shuffled mean `0.072958`, and balanced accuracy was `0.517541` vs shuffled mean `0.146808` with p `0.003984`.
 - The first H2O / water skeptic-proof extraction is now seated from the same USGS ASTER source: `23` water/ice rows vs `2,416` non-water controls, ROC AUC `0.918730` vs shuffled mean `0.498888`, p `0.001996`.
+- The first Minerals skeptic-proof extraction is now seated from the same USGS ASTER source: `1,262` mineral rows vs `1,177` non-mineral controls, ROC AUC `0.714217`, average precision `0.735238`, precision@1262 `0.657686`, p `0.001996`.
 - Nest 5 convergence matrix v1 is now seated: AI behavior, transformer internals, circuit / hardware-facing bridge rows, semantic contextuality boundary rows, Nest 1 formal returns, Nest 2 matter, Nest 3 spectra, and Nest 4 biology are routed into one support-state matrix.
 - Nest 5 claim-support pointer pass is now seated: the convergence matrix is mapped into FIG.10-FIG.15 and claims `19-30` as a public-safe evidence route.
 - Lattice Companion full nest completion outline is now seated from the active `72` node / `140` edge companion map, showing what is supported, partial, queued, and parked across every nest.
@@ -399,6 +413,8 @@ and [Nest 3 USGS ASTER Spectral Signature Support
 Read](./docs/NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md)
 plus the [Nest 2 H2O / Water Extraction
 Read](./docs/NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
+and [Nest 2 Minerals Extraction
+Read](./docs/NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
 plus [Nest 5 Convergence
 Matrix](./docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
 and the [Nest 5 Claim-Support Pointer
@@ -438,13 +454,14 @@ before the deeper lane docs.
 29. [Phase 12C Universal Data Pattern Support Read](./docs/PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
 30. [Phase 12C Muse S Athena EEG + HRV Implementation Plan](./docs/PHASE12C_MUSE_S_ATHENA_EEG_HRV_IMPLEMENTATION_PLAN_2026-05-05.md)
 31. [Nest 2 H2O / Water Extraction From USGS ASTER Spectra](./docs/NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
-32. [Nest 5 Claim-Support Pointer Pass](./docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
-33. [Lattice Companion Full Nest Completion Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
-34. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
-35. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
-36. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
-37. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
-38. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
+32. [Nest 2 Minerals Extraction From USGS ASTER Spectra](./docs/NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
+33. [Nest 5 Claim-Support Pointer Pass](./docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
+34. [Lattice Companion Full Nest Completion Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
+35. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
+36. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
+37. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
+38. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
+39. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
 
 Visuals:
 

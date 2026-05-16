@@ -26,6 +26,8 @@ Status: `public_safe_lane_board / N2_same_clock_complete / real_data_only / week
   `LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md`
 - H2O / water skeptic-proof extraction:
   `NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md`
+- Minerals skeptic-proof extraction:
+  `NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md`
 
 ## Front-Center Read
 
@@ -77,6 +79,11 @@ queued, or parked.
 The H2O / water extraction pass now promotes the `H2O / Water` lane from mapped
 to first physical spectral support row inside the same USGS source: `23`
 water/ice rows, `2,416` non-water controls, ROC AUC `0.918730`, p `0.001996`.
+
+The Minerals extraction pass now promotes the `Minerals` lane from partial /
+mapped support to direct physical spectral support: `1,262` mineral rows,
+`1,177` non-mineral controls, ROC AUC `0.714217`, average precision
+`0.735238`, and p `0.001996` across AUC, average precision, and precision@1262.
 
 ## Purpose
 
@@ -134,7 +141,7 @@ What must be done by Friday, 2026-05-15?
 | `Hydrogen` | dataset_gate | HRV + Muse physiology can later respond to hydration / isotope / plasma rows | assign source targets |
 | `Oxygen / Redox` | dataset_gate | physiology / metabolism response bridge | assign redox dataset/control target |
 | `H2O / Water` | first USGS ASTER extraction pass complete | hydration and optical/EEG physiology bridge | tighten with water-specific native spectra / property rows |
-| `Minerals` | dataset_gate | nutrition and materials bridge | source mineral lattice/surface rows |
+| `Minerals` | first USGS ASTER extraction pass complete | nutrition, geology, materials, and spectral bridge | tighten with mineral-specific lattice / surface / adsorption rows |
 | `Food Chemistry` | active_integration | direct bridge to HRV + Muse state response | lock USDA/FooDB dataset plan |
 | `Proteins` | supported for allostery branch | biology response and pathway bridge | keep allostery support, add digestion/binding queue |
 | `Carbs + Fats` | dataset_gate | metabolism / physiology bridge | lock GlyTouCan/LIPID MAPS targets |
@@ -213,4 +220,5 @@ What must be done by Friday, 2026-05-15?
 12. USGS Spectral Library V7 ASTER subset for Nest 3 `Waves / Spectra` and Nest 2 `Spectral Signatures`: `complete`.
 13. Nest 5 convergence matrix v1: `complete`; next clean gate is claim-support pointer pass, then native spectra / H2O / THz / materials as the next tightening target.
 14. Nest 5 claim-support pointer pass: `complete`; next clean gate is support-state index for Mirror Index / Golden Mirror, plus H2O / native spectra / materials second target.
-15. H2O / water skeptic-proof extraction: `complete`; next clean gate is materials second target, native spectra, THz / IR / Raman, or electrochemistry.
+15. H2O / water skeptic-proof extraction: `complete`; next clean gate is minerals / materials second target / electrochemistry.
+16. Minerals skeptic-proof extraction: `complete`; next clean gate is materials second target, electrochemistry, catalysis / conditions, or native IR / Raman / THz spectra.

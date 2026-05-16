@@ -17,7 +17,8 @@ state / control / transform / invariant / drift / coherence / score
 
 ## Front-Center Read
 
-The Lattice Companion is the lane atlas. It is not the proof by itself.
+The Lattice Companion is the lane atlas. Proof enters through real datasets,
+captures, controls, recurrence, and support reads attached to each lane.
 
 A lane becomes support-bearing only when it has:
 
@@ -43,7 +44,7 @@ architecture from zero.
 | `Nest 0` | `1` | parked foundation / target-selection layer | collect real physics reference anchors; keep as orientation, not support substitute |
 | `Core + hierarchy` | `11` | architecture spine and access chain are seated; semantic contextuality and physical-observable bridge are active support/continuation rails | keep glossary stable; attach live physical-observable rows only when measured |
 | `Nest 1` | `12` | mostly supported; formal foundation, topology preservation, CTRL-1, and multiple graph/formal rows are seated | close GRAPH-2B, GAME-1 rubric, denser TOP H1 / trajectory gates |
-| `Nest 2` | `19` | strong structured-matter support across elements, H2O / water extraction, organic groups, allostery/proteins, PFAS safety, materials formation energy, descriptor/model controls, and first spectral-signature pass | redox, minerals, nutrition, biomolecular primitives, polymers, electrochemistry, catalysis, environmental fate, materials second target |
+| `Nest 2` | `19` | strong structured-matter support across elements, H2O / water extraction, minerals extraction, organic groups, allostery/proteins, PFAS safety, materials formation energy, descriptor/model controls, and first spectral-signature pass | redox, nutrition, biomolecular primitives, polymers, electrochemistry, catalysis, environmental fate, materials second target |
 | `Nest 3` | `10` | first physical spectra support pass is seated through USGS ASTER; hardware timing/coherence rows provide additional support | native spectra, THz/IR/Raman, EMF, oscillator, phase-lock, plasma/fire, fusion/solar, gases/phases, gravity/orbits |
 | `Nest 4` | `5` | Phase 12B HRV and Phase 12C HRV + Muse create the strongest biology surface so far | cleaner EEG/contact controls, B.A.S.I.S. live state-vector integration, metabolism/nutrient rows, cells/genome datasets |
 | `Nest 5` | `5` | convergence matrix v1 is seated as support-state router | ecosystem/planet and cosmic rows need real datasets; Golden Mirror live tuning remains gated |
@@ -97,7 +98,7 @@ architecture from zero.
 | `Hydrogen` | mapped | bridge row mapped from elements into fusion/solar | source isotope / hydrogen dataset target |
 | `Oxygen / Redox` | mapped | redox bridge mapped; adjacent to PFAS, electrochemistry, biology | run redox / dissolved oxygen / reaction endpoint dataset |
 | `H2O / Water` | mapped | first USGS ASTER water/ice extraction support pass complete: `23` water/ice rows vs `2,416` non-water controls, AUC `0.918730`, p `0.001996` | tighten with water-specific native spectra / property dataset |
-| `Minerals` | mapped | partially supported through materials / USGS spectra / geology bridge | source mineral lattice or spectral subset gate |
+| `Minerals` | mapped | first USGS ASTER mineral extraction support pass complete: `1,262` mineral rows vs `1,177` non-mineral controls, AUC `0.714217`, AP `0.735238`, p `0.001996` | tighten with mineral-specific lattice / surface / adsorption dataset |
 | `Food Chemistry` | new companion row | mapped into metabolism and physiology response; Phase 12C creates biology response surface | lock USDA/FooDB/HMDB style source target |
 | `Proteins` | mapped | allostery/protein graph branch has support | add digestion/binding/metabolism continuation row |
 | `Carbs + Fats` | mapped | mapped nutrition chemistry lane | source GlyTouCan / LIPID MAPS / food chemistry target |
@@ -167,16 +168,17 @@ The fastest route to a stronger full-nest closeout is:
 
 1. Seat the Nest 5 claim-support pointer pass.
 2. Seat H2O / ice extraction from the USGS spectral lane.
-3. Build the Mirror Index / Golden Mirror support-state index from the matrix.
-4. Run the materials second target: bandgap, hull energy, phonon, dielectric,
+3. Seat Minerals extraction from the USGS spectral lane.
+4. Build the Mirror Index / Golden Mirror support-state index from the matrix.
+5. Run the materials second target: bandgap, hull energy, phonon, dielectric,
    defect, dopant, or 2D-material row.
-5. Add a second physical spectral family: native spectra, IR/Raman/THz, or
+6. Add a second physical spectral family: native spectra, IR/Raman/THz, or
    another public physical waveform dataset.
-6. Close one Nest 1 open formal gate: GRAPH-2B with external/domain labels or
+7. Close one Nest 1 open formal gate: GRAPH-2B with external/domain labels or
    GAME-1 after rubric freeze.
-7. Connect food/nutrient/metabolism rows into the existing HRV + Muse state
-   window without promoting clinical claims.
-8. Park ecosystem/cosmic rows as mapped continuation lanes until real public
+8. Connect food/nutrient/metabolism rows into the existing HRV + Muse state
+   window as measured physiology support.
+9. Park ecosystem/cosmic rows as mapped continuation lanes until real public
    datasets are selected.
 
 ## Current Bottom Line
