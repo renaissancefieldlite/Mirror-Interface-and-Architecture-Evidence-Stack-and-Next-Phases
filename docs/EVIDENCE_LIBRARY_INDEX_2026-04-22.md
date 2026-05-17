@@ -37,6 +37,7 @@ code.
 - [Nest 2 Minerals Extraction From USGS ASTER Spectra](./NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
 - [Nest 2 Materials / Semiconductors Band-Gap Second-Target Read](./NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md)
 - [Nest 2 Electrochemistry / Redox NASA Battery Support Read](./NEST2_ELECTROCHEMISTRY_NASA_BATTERY_SUPPORT_READ_2026-05-16.md)
+- [Nest 2 Molecule Redox RedDB Support Read](./NEST2_MOLECULE_REDOX_REDDB_SUPPORT_READ_2026-05-16.md)
 - [Nest 5 Convergence Matrix](./NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
 - [Nest 5 Claim-Support Pointer Pass](./NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
 - [Lattice Companion Full Nest Completion Outline](./LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)

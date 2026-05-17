@@ -44,7 +44,7 @@ architecture from zero.
 | `Nest 0` | `1` | parked foundation / target-selection layer | collect real physics reference anchors; keep as orientation, not support substitute |
 | `Core + hierarchy` | `11` | architecture spine and access chain are seated; semantic contextuality and physical-observable bridge are active support/continuation rails | keep glossary stable; attach live physical-observable rows only when measured |
 | `Nest 1` | `12` | mostly supported; formal foundation, topology preservation, CTRL-1, and multiple graph/formal rows are seated | close GRAPH-2B, GAME-1 rubric, denser TOP H1 / trajectory gates |
-| `Nest 2` | `19` | strong structured-matter support across elements, H2O / water extraction, minerals extraction, organic groups, allostery/proteins, PFAS safety, materials formation energy, materials band-gap second target, electrochemistry / redox battery-aging pass, descriptor/model controls, and first spectral-signature pass | nutrition, biomolecular primitives, polymers, catalysis, environmental fate, materials response expansion, molecule-redox follow-up |
+| `Nest 2` | `19` | strong structured-matter support across elements, H2O / water extraction, minerals extraction, organic groups, allostery/proteins, PFAS safety, materials formation energy, materials band-gap second target, electrochemistry / redox battery-aging pass, molecule-redox RedDB pass, descriptor/model controls, and first spectral-signature pass | nutrition, biomolecular primitives, polymers, catalysis, environmental fate, materials response expansion, cyclic-voltammetry waveform follow-up |
 | `Nest 3` | `10` | first physical spectra support pass is seated through USGS ASTER; hardware timing/coherence rows provide additional support | native spectra, THz/IR/Raman, EMF, oscillator, phase-lock, plasma/fire, fusion/solar, gases/phases, gravity/orbits |
 | `Nest 4` | `5` | Phase 12B HRV and Phase 12C HRV + Muse create the strongest biology surface so far | cleaner EEG/contact controls, B.A.S.I.S. live state-vector integration, metabolism/nutrient rows, cells/genome datasets |
 | `Nest 5` | `5` | convergence matrix v1 is seated as support-state router | ecosystem/planet and cosmic rows need real datasets; Golden Mirror live tuning remains gated |
@@ -96,7 +96,7 @@ architecture from zero.
 | `Nest 2: Structured Matter` | mapped ladder | support-bearing through multiple real-data rows | keep as FIG.14 external adapter family |
 | `Elements` | mapped | real periodic-table gate seated with shuffled controls | keep support pointer |
 | `Hydrogen` | mapped | bridge row mapped from elements into fusion/solar | source isotope / hydrogen dataset target |
-| `Oxygen / Redox` | mapped | redox bridge mapped; adjacent to PFAS, electrochemistry, biology; NASA battery pass now seats the electrochemical aging side | run molecule redox / dissolved oxygen / reaction endpoint dataset |
+| `Oxygen / Redox` | mapped | redox bridge mapped; adjacent to PFAS, electrochemistry, biology; NASA battery pass seats the electrochemical aging side; RedDB seats molecule-level reaction energy and orbital shifts | add dissolved oxygen / cyclic-voltammetry waveform dataset |
 | `H2O / Water` | mapped | first USGS ASTER water/ice extraction support pass complete: `23` water/ice rows vs `2,416` non-water controls, AUC `0.918730`, p `0.001996` | tighten with water-specific native spectra / property dataset |
 | `Minerals` | mapped | first USGS ASTER mineral extraction support pass complete: `1,262` mineral rows vs `1,177` non-mineral controls, AUC `0.714217`, AP `0.735238`, p `0.001996` | tighten with mineral-specific lattice / surface / adsorption dataset |
 | `Food Chemistry` | new companion row | mapped into metabolism and physiology response; Phase 12C creates biology response surface | lock USDA/FooDB/HMDB style source target |
@@ -107,7 +107,7 @@ architecture from zero.
 | `Organic Functional Groups` | mapped / engine scored | real multi-dataset functional-group support seated | keep support pointer |
 | `Biomolecular Primitives` | mapped / engine scored | mapped as chemistry-to-biology bridge | run amino acid / nucleotide / lipid / sugar property surfaces |
 | `Polymers / Plastics` | mapped / engine scored | scaffolded by polymer/microplastic row and PFAS safety logic | source degradation / microplastic dataset |
-| `Electrochemistry` | mapped / engine scored | NASA battery aging support pass seated: discharge capacity Pearson `0.923872`, EIS degraded-state AUC `0.709188`, both p `0.003984` | RedPred / SOMAS or DUCK/CV molecule redox follow-up; improve continuous EIS-to-SOH gate |
+| `Electrochemistry` | mapped / engine scored | NASA battery aging support pass seated: discharge capacity Pearson `0.923872`, EIS degraded-state AUC `0.709188`, both p `0.003984`; RedDB molecule redox pass seated: reaction-energy Pearson `0.881991`, HOMO-shift Pearson `0.736113`, LUMO-shift Pearson `0.530190`, all p `0.003984` | add DUCK/CV or another cyclic-voltammetry waveform dataset; improve continuous EIS-to-SOH gate |
 | `Catalysis / Conditions` | mapped / engine scored | mapped condition-selection bridge | run reaction condition / catalyst endpoint dataset |
 | `Spectral Signatures` | mapped / engine scored | first support pass complete through USGS ASTER spectra | tighten with native spectra, H2O extraction, or IR/Raman/THz |
 | `Environmental Fate` | mapped / engine scored | mapped into ecosystem/planet and PFAS safety | source transport / leaching / bioaccumulation endpoint controls |
@@ -175,13 +175,14 @@ The fastest route to a stronger full-nest closeout is:
 6. Move materials continuation to
    dielectric / optical, phonon, defect, dopant, hull, or 2D-material rows.
 7. Seat Electrochemistry / Redox through the NASA battery-aging pass.
-8. Add a second physical spectral family: native spectra, IR/Raman/THz, or
+8. Seat Molecule Redox through the RedDB reaction-energy / orbital-shift pass.
+9. Add a second physical spectral family: native spectra, IR/Raman/THz, or
    another public physical waveform dataset.
-9. Close one Nest 1 open formal gate: GRAPH-2B with external/domain labels or
+10. Close one Nest 1 open formal gate: GRAPH-2B with external/domain labels or
    GAME-1 after rubric freeze.
-10. Connect food/nutrient/metabolism rows into the existing HRV + Muse state
+11. Connect food/nutrient/metabolism rows into the existing HRV + Muse state
    window as measured physiology support.
-11. Park ecosystem/cosmic rows as mapped continuation lanes until real public
+12. Park ecosystem/cosmic rows as mapped continuation lanes until real public
    datasets are selected.
 
 ## Current Bottom Line
@@ -192,7 +193,7 @@ single architecture instead of disconnected experiments.
 What remains is targeted completion:
 
 ```text
-molecule-redox follow-up
+cyclic-voltammetry waveform follow-up
 next materials response target beyond band gap
 second spectral / waveform family
 GRAPH-2B or GAME-1 formal closeout

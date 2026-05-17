@@ -26,6 +26,10 @@ and impedance profiles. The impedance measurements use electrochemical
 impedance spectroscopy from `0.1 Hz` to `5 kHz`, and repeated cycles track
 accelerated aging until end-of-life capacity fade.
 
+Visual card:
+
+![Nest 2 electrochemistry EIS visual card](../visuals/nest2_electrochemistry_eis_visual_card_2026-05-16.svg)
+
 ## State Map
 
 | Variable | Electrochemistry expression |
@@ -134,6 +138,7 @@ scripts, and local workbench outputs.
 ```text
 NASA battery aging seated
 -> update Nest 5 / Lattice / claim-support pointers
--> build impedance / EIS visual card
--> run RedPred / SOMAS or DUCK/CV molecule redox follow-up
+-> EIS visual card added
+-> RedDB molecule redox follow-up seated
+-> next: DUCK/CV or another cyclic-voltammetry waveform dataset
 ```

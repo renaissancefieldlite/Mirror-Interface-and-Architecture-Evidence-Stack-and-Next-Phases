@@ -32,6 +32,8 @@ Status: `public_safe_lane_board / N2_same_clock_complete / real_data_only / week
   `NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md`
 - Electrochemistry / Redox NASA battery support:
   `NEST2_ELECTROCHEMISTRY_NASA_BATTERY_SUPPORT_READ_2026-05-16.md`
+- Molecule Redox RedDB support:
+  `NEST2_MOLECULE_REDOX_REDDB_SUPPORT_READ_2026-05-16.md`
 
 ## Front-Center Read
 
@@ -99,6 +101,11 @@ NASA PCoE Battery Data Set: `34` batteries, `2,769` discharge-capacity rows
 with Pearson `0.923872`, R2 `0.833991`, p `0.003984`; EIS degraded-state ROC
 AUC `0.709188`, p `0.003984`.
 
+The Molecule Redox follow-up is now seated through RedDB v2: `15,882` real
+electroactive reaction rows, reaction-energy Pearson `0.881991`, HOMO-shift
+Pearson `0.736113`, LUMO-shift Pearson `0.530190`, all p `0.003984` against
+`250` shuffled controls.
+
 ## Purpose
 
 This board turns the companion map into the week execution surface after the
@@ -164,7 +171,7 @@ What must be done by Friday, 2026-05-15?
 | `Organic Functional Groups` | supported | chemistry handles for food, pharma, PFAS, biomolecules | keep support pointer |
 | `Biomolecular Primitives` | active_integration | amino acids/lipids/sugars become biology-state bridge | lock ChEBI/HMDB/LIPID MAPS targets |
 | `Polymers / Plastics` | dataset_gate | microplastic degradation / environmental response | lock degradation dataset target |
-| `Electrochemistry` | NASA battery aging support pass complete | membrane / ion flow / device physiology bridge | RedPred / SOMAS or DUCK/CV molecule redox follow-up; improve continuous EIS-to-SOH gate |
+| `Electrochemistry` | NASA battery aging and RedDB molecule-redox support passes complete | membrane / ion flow / device physiology bridge | add DUCK/CV or another cyclic-voltammetry waveform dataset; improve continuous EIS-to-SOH gate |
 | `Catalysis / Conditions` | dataset_gate | condition-selection bridge for PFAS / reactions | lock condition-control schema |
 | `Spectral Signatures` | first USGS ASTER support pass complete | connects EEG spectral logic to material spectra | tighten with native spectra, H2O extraction, or IR/Raman/THz rows |
 | `Environmental Fate` | convergence_queue | safety and exposure-response lane | lock fate endpoint controls |
@@ -238,4 +245,5 @@ What must be done by Friday, 2026-05-15?
 15. H2O / water skeptic-proof extraction: `complete`; next clean gate is water-specific native spectra / property rows or electrochemistry.
 16. Minerals skeptic-proof extraction: `complete`; next clean gate is mineral-specific lattice / surface / adsorption rows, electrochemistry, catalysis / conditions, or native IR / Raman / THz spectra.
 17. Materials / Semiconductors band-gap second target: `complete`; next clean gate is electrochemistry / redox, dielectric / optical response, phonons, or catalysis / conditions.
-18. Electrochemistry / Redox NASA battery-aging pass: `complete`; next clean gate is RedPred / SOMAS or DUCK/CV molecule redox follow-up, EIS visual card, or native IR / Raman / THz spectra.
+18. Electrochemistry / Redox NASA battery-aging pass: `complete`; EIS visual card added.
+19. Molecule Redox RedDB pass: `complete`; next clean gate is DUCK/CV or another cyclic-voltammetry waveform dataset, native IR / Raman / THz spectra, or continuous EIS-to-SOH improvement.

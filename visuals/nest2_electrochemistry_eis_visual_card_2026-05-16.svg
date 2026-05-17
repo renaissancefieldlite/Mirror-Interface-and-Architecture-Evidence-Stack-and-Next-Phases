@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Nest 2 Electrochemistry and EIS visual card</title>
+  <desc id="desc">Public-safe visual summary of NASA battery aging discharge-capacity recovery and impedance EIS degraded-state support.</desc>
+  <rect width="1200" height="720" fill="#f7f5ef"/>
+  <text x="60" y="70" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1c2426">Nest 2 Electrochemistry / Redox EIS Card</text>
+  <text x="60" y="105" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#435052">NASA PCoE Battery Data Set | 34 Li-ion batteries | discharge + impedance / EIS rows | shuffled controls</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4d5a5c"/>
+    </marker>
+  </defs>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g transform="translate(60 145)">
+      <rect width="330" height="170" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="24" y="38" font-size="18" font-weight="700" fill="#193135">Measured Substrate</text>
+      <text x="24" y="72" font-size="14" fill="#2c393b">34 real Li-ion battery cells</text>
+      <text x="24" y="98" font-size="14" fill="#2c393b">2,769 discharge-capacity rows</text>
+      <text x="24" y="124" font-size="14" fill="#2c393b">1,956 impedance / EIS rows</text>
+      <text x="24" y="150" font-size="14" fill="#2c393b">250 shuffled-control comparators</text>
+    </g>
+
+    <g transform="translate(435 145)">
+      <rect width="330" height="170" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="24" y="38" font-size="18" font-weight="700" fill="#193135">State-Variable Map</text>
+      <text x="24" y="72" font-size="14" fill="#2c393b">state: capacity / SOH / Re / Rct</text>
+      <text x="24" y="98" font-size="14" fill="#2c393b">control: shuffled targets</text>
+      <text x="24" y="124" font-size="14" fill="#2c393b">transform: voltage-current-temperature</text>
+      <text x="24" y="150" font-size="14" fill="#2c393b">drift: aging + impedance growth</text>
+    </g>
+
+    <g transform="translate(810 145)">
+      <rect width="330" height="170" rx="8" fill="#ffffff" stroke="#cfd8d9"/>
+      <text x="24" y="38" font-size="18" font-weight="700" fill="#193135">Support Read</text>
+      <text x="24" y="72" font-size="14" fill="#2c393b">capacity Pearson: 0.923872</text>
+      <text x="24" y="98" font-size="14" fill="#2c393b">capacity R2: 0.833991</text>
+      <text x="24" y="124" font-size="14" fill="#2c393b">EIS degraded AUC: 0.709188</text>
+      <text x="24" y="150" font-size="14" fill="#2c393b">p floor for both: 0.003984</text>
+    </g>
+
+    <g transform="translate(90 382)">
+      <text x="0" y="-28" font-size="18" font-weight="700" fill="#193135">Two Electrochemistry Support Surfaces</text>
+
+      <text x="0" y="0" font-size="14" fill="#263335">Discharge capacity recovery</text>
+      <rect x="250" y="-16" width="560" height="24" rx="4" fill="#d9e3e5"/>
+      <rect x="250" y="-16" width="517" height="24" rx="4" fill="#2f9eaa"/>
+      <text x="830" y="2" font-size="14" fill="#263335">Pearson 0.924</text>
+
+      <text x="0" y="54" font-size="14" fill="#263335">Capacity R2</text>
+      <rect x="250" y="38" width="560" height="24" rx="4" fill="#d9e3e5"/>
+      <rect x="250" y="38" width="467" height="24" rx="4" fill="#d7a928"/>
+      <text x="830" y="56" font-size="14" fill="#263335">R2 0.834</text>
+
+      <text x="0" y="108" font-size="14" fill="#263335">EIS degraded-state separation</text>
+      <rect x="250" y="92" width="560" height="24" rx="4" fill="#d9e3e5"/>
+      <rect x="250" y="92" width="397" height="24" rx="4" fill="#c96f4d"/>
+      <text x="830" y="110" font-size="14" fill="#263335">AUC 0.709</text>
+
+      <text x="0" y="162" font-size="14" fill="#263335">Shuffled-control floor</text>
+      <rect x="250" y="146" width="560" height="24" rx="4" fill="#d9e3e5"/>
+      <rect x="250" y="146" width="558" height="24" rx="4" fill="#5f9d6a"/>
+      <text x="830" y="164" font-size="14" fill="#263335">real beats all 250</text>
+    </g>
+
+    <g transform="translate(90 615)">
+      <rect width="245" height="52" rx="8" fill="#e5f3f5" stroke="#c7dfe3"/>
+      <text x="18" y="32" font-size="14" fill="#263335">Nest 2: redox / batteries</text>
+    </g>
+    <line x1="335" y1="641" x2="395" y2="641" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(405 615)">
+      <rect width="245" height="52" rx="8" fill="#fff4d5" stroke="#e4cf8b"/>
+      <text x="18" y="32" font-size="14" fill="#263335">Nest 3: impedance waveform</text>
+    </g>
+    <line x1="650" y1="641" x2="710" y2="641" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(720 615)">
+      <rect width="245" height="52" rx="8" fill="#ede7f6" stroke="#d0c3ea"/>
+      <text x="18" y="32" font-size="14" fill="#263335">Nest 5: support-state card</text>
+    </g>
+    <line x1="965" y1="641" x2="1015" y2="641" stroke="#4d5a5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(1025 615)">
+      <rect width="95" height="52" rx="8" fill="#f1f2f2" stroke="#d0d5d6"/>
+      <text x="18" y="22" font-size="12" fill="#263335">Next:</text>
+      <text x="18" y="39" font-size="12" fill="#263335">RedDB</text>
+    </g>
+  </g>
+</svg>

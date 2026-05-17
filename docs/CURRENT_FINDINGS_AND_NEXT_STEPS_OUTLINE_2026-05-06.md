@@ -152,6 +152,7 @@ docs/NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md
 docs/NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md
 docs/NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md
 docs/NEST2_ELECTROCHEMISTRY_NASA_BATTERY_SUPPORT_READ_2026-05-16.md
+docs/NEST2_MOLECULE_REDOX_REDDB_SUPPORT_READ_2026-05-16.md
 ```
 
 The reviewer arc is now:
@@ -170,6 +171,7 @@ first five Muse captures
 -> Minerals skeptic-proof extraction
 -> Materials / Semiconductors band-gap second target
 -> Electrochemistry / Redox NASA battery aging support pass
+-> Molecule Redox RedDB support pass
 ```
 
 Formal-return wording is now seated with a first masked candidate pass:
@@ -223,6 +225,12 @@ PCoE Battery Data Set: `34` batteries, `2,769` discharge-capacity rows with
 Pearson `0.923872`, R2 `0.833991`, p `0.003984`; EIS degraded-state ROC AUC
 `0.709188`, p `0.003984`. Continuous EIS-to-SOH regression remains the
 follow-up boundary.
+
+The Molecule Redox follow-up is now seated from RedDB v2: `15,882` real
+electroactive reaction rows, reaction-energy Pearson `0.881991`, R2
+`0.712436`, HOMO-shift Pearson `0.736113`, LUMO-shift Pearson `0.530190`,
+all p `0.003984` against `250` shuffled controls. This moves the redox lane
+from battery-aging device state into molecule-level electroactive chemistry.
 
 Current role:
 

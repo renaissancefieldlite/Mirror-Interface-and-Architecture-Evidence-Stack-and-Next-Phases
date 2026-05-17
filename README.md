@@ -50,6 +50,7 @@ Newest seated evidence cards:
 - [Nest 2 Minerals Extraction From USGS ASTER Spectra](./docs/NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
 - [Nest 2 Materials / Semiconductors Band-Gap Second-Target Read](./docs/NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md)
 - [Nest 2 Electrochemistry / Redox NASA Battery Support Read](./docs/NEST2_ELECTROCHEMISTRY_NASA_BATTERY_SUPPORT_READ_2026-05-16.md)
+- [Nest 2 Molecule Redox RedDB Support Read](./docs/NEST2_MOLECULE_REDOX_REDDB_SUPPORT_READ_2026-05-16.md)
 - [Nest 5 Convergence Matrix](./docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
 - [Lattice Companion Full Nest Completion Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
 
@@ -395,6 +396,7 @@ across repeated benchmark classes.
 - The first Minerals skeptic-proof extraction is now seated from the same USGS ASTER source: `1,262` mineral rows vs `1,177` non-mineral controls, ROC AUC `0.714217`, average precision `0.735238`, precision@1262 `0.657686`, p `0.001996`.
 - The Materials / Semiconductors second target is now seated through ColabFit / Matbench `Matbench_mp_gap`: `60,000` real band-gap rows, regression Pearson `0.654982`, gapped-material ROC AUC `0.904020`, p `0.003984` against `250` shuffled controls.
 - The Electrochemistry / Redox first battery-aging support pass is now seated through NASA PCoE Battery Data Set: `34` batteries, `2,769` discharge-capacity rows with Pearson `0.923872`, R2 `0.833991`, p `0.003984`; EIS degraded-state AUC `0.709188`, p `0.003984`, with continuous EIS-to-SOH regression held as the follow-up boundary.
+- The Molecule Redox follow-up is now seated through RedDB v2: `15,882` electroactive reaction rows, reaction-energy Pearson `0.881991`, R2 `0.712436`, HOMO-shift Pearson `0.736113`, LUMO-shift Pearson `0.530190`, all p `0.003984` against `250` shuffled controls.
 - Nest 5 convergence matrix v1 is now seated: AI behavior, transformer internals, circuit / hardware-facing bridge rows, semantic contextuality boundary rows, Nest 1 formal returns, Nest 2 matter, Nest 3 spectra, and Nest 4 biology are routed into one support-state matrix.
 - Nest 5 claim-support pointer pass is now seated: the convergence matrix is mapped into FIG.10-FIG.15 and claims `19-30` as a public-safe evidence route.
 - Lattice Companion full nest completion outline is now seated from the active `72` node / `140` edge companion map, showing what is supported, partial, queued, and parked across every nest.
@@ -423,6 +425,8 @@ plus the [Nest 2 Materials / Semiconductors Band-Gap Second-Target
 Read](./docs/NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md)
 plus the [Nest 2 Electrochemistry / Redox NASA Battery Support
 Read](./docs/NEST2_ELECTROCHEMISTRY_NASA_BATTERY_SUPPORT_READ_2026-05-16.md)
+plus the [Nest 2 Molecule Redox RedDB Support
+Read](./docs/NEST2_MOLECULE_REDOX_REDDB_SUPPORT_READ_2026-05-16.md)
 plus [Nest 5 Convergence
 Matrix](./docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
 and the [Nest 5 Claim-Support Pointer
@@ -465,13 +469,14 @@ before the deeper lane docs.
 32. [Nest 2 Minerals Extraction From USGS ASTER Spectra](./docs/NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
 33. [Nest 2 Materials / Semiconductors Band-Gap Second-Target Read](./docs/NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md)
 34. [Nest 2 Electrochemistry / Redox NASA Battery Support Read](./docs/NEST2_ELECTROCHEMISTRY_NASA_BATTERY_SUPPORT_READ_2026-05-16.md)
-35. [Nest 5 Claim-Support Pointer Pass](./docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
-36. [Lattice Companion Full Nest Completion Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
-37. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
-38. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
-39. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
-40. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
-41. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
+35. [Nest 2 Molecule Redox RedDB Support Read](./docs/NEST2_MOLECULE_REDOX_REDDB_SUPPORT_READ_2026-05-16.md)
+36. [Nest 5 Claim-Support Pointer Pass](./docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
+37. [Lattice Companion Full Nest Completion Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
+38. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
+39. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
+40. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
+41. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
+42. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
 
 Visuals:
 
@@ -481,6 +486,7 @@ Visuals:
 - [Phase 12C Capture Density Chart](./artifacts/v8/phase12c_muse_capture_pack/charts/v8_phase12c_capture_density_2026-05-09.png)
 - [Phase 12C State / Control / Drift Alignment Chart](./artifacts/v8/phase12c_muse_capture_pack/charts/v8_phase12c_mirror_control_deltas_2026-05-09.png)
 - [Nest 3 USGS ASTER Spectral Signature Visual](./visuals/nest3_usgs_aster_signature_read_2026-05-15.svg)
+- [Nest 2 Electrochemistry / Redox EIS Visual Card](./visuals/nest2_electrochemistry_eis_visual_card_2026-05-16.svg)
 - [Nest 5 Convergence Matrix Visual](./visuals/nest5_convergence_matrix_2026-05-16.svg)
 
 ## Public / Private Boundary
