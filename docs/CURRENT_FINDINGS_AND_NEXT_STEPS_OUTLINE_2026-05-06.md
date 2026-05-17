@@ -151,6 +151,7 @@ docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md
 docs/NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md
 docs/NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md
 docs/NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md
+docs/NEST2_ELECTROCHEMISTRY_NASA_BATTERY_SUPPORT_READ_2026-05-16.md
 ```
 
 The reviewer arc is now:
@@ -168,6 +169,7 @@ first five Muse captures
 -> H2O / water skeptic-proof extraction
 -> Minerals skeptic-proof extraction
 -> Materials / Semiconductors band-gap second target
+-> Electrochemistry / Redox NASA battery aging support pass
 ```
 
 Formal-return wording is now seated with a first masked candidate pass:
@@ -215,6 +217,12 @@ Pearson `0.654982`, R2 `0.428798`, gapped-material ROC AUC `0.904020`,
 average precision `0.891203`, and p `0.003984` against `250` shuffled
 controls. This moves the materials lane beyond formation energy into direct
 electronic-response support.
+
+The Electrochemistry / Redox first battery-aging pass is now seated from NASA
+PCoE Battery Data Set: `34` batteries, `2,769` discharge-capacity rows with
+Pearson `0.923872`, R2 `0.833991`, p `0.003984`; EIS degraded-state ROC AUC
+`0.709188`, p `0.003984`. Continuous EIS-to-SOH regression remains the
+follow-up boundary.
 
 Current role:
 

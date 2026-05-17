@@ -30,6 +30,8 @@ Status: `public_safe_lane_board / N2_same_clock_complete / real_data_only / week
   `NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md`
 - Materials / Semiconductors band-gap second target:
   `NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md`
+- Electrochemistry / Redox NASA battery support:
+  `NEST2_ELECTROCHEMISTRY_NASA_BATTERY_SUPPORT_READ_2026-05-16.md`
 
 ## Front-Center Read
 
@@ -92,6 +94,11 @@ Matbench `Matbench_mp_gap`: `60,000` real DFT-PBE band-gap rows, regression
 Pearson `0.654982`, gapped-material ROC AUC `0.904020`, and p `0.003984`
 against `250` shuffled controls.
 
+The Electrochemistry / Redox first battery-aging pass is now seated through
+NASA PCoE Battery Data Set: `34` batteries, `2,769` discharge-capacity rows
+with Pearson `0.923872`, R2 `0.833991`, p `0.003984`; EIS degraded-state ROC
+AUC `0.709188`, p `0.003984`.
+
 ## Purpose
 
 This board turns the companion map into the week execution surface after the
@@ -146,7 +153,7 @@ What must be done by Friday, 2026-05-15?
 | --- | --- | --- | --- |
 | `Elements` | supported | foundation for materials, nutrition minerals, electrochemistry | keep support pointer |
 | `Hydrogen` | dataset_gate | HRV + Muse physiology can later respond to hydration / isotope / plasma rows | assign source targets |
-| `Oxygen / Redox` | dataset_gate | physiology / metabolism response bridge | assign redox dataset/control target |
+| `Oxygen / Redox` | partial_support / molecule_redox_followup | physiology / metabolism response bridge; battery aging seats electrochemical state/fade side | assign molecule redox / dissolved oxygen / reaction endpoint target |
 | `H2O / Water` | first USGS ASTER extraction pass complete | hydration and optical/EEG physiology bridge | tighten with water-specific native spectra / property rows |
 | `Minerals` | first USGS ASTER extraction pass complete | nutrition, geology, materials, and spectral bridge | tighten with mineral-specific lattice / surface / adsorption rows |
 | `Food Chemistry` | active_integration | direct bridge to HRV + Muse state response | lock USDA/FooDB dataset plan |
@@ -157,7 +164,7 @@ What must be done by Friday, 2026-05-15?
 | `Organic Functional Groups` | supported | chemistry handles for food, pharma, PFAS, biomolecules | keep support pointer |
 | `Biomolecular Primitives` | active_integration | amino acids/lipids/sugars become biology-state bridge | lock ChEBI/HMDB/LIPID MAPS targets |
 | `Polymers / Plastics` | dataset_gate | microplastic degradation / environmental response | lock degradation dataset target |
-| `Electrochemistry` | dataset_gate | membrane / ion flow / device physiology bridge | lock battery/redox/impedance rows |
+| `Electrochemistry` | NASA battery aging support pass complete | membrane / ion flow / device physiology bridge | RedPred / SOMAS or DUCK/CV molecule redox follow-up; improve continuous EIS-to-SOH gate |
 | `Catalysis / Conditions` | dataset_gate | condition-selection bridge for PFAS / reactions | lock condition-control schema |
 | `Spectral Signatures` | first USGS ASTER support pass complete | connects EEG spectral logic to material spectra | tighten with native spectra, H2O extraction, or IR/Raman/THz rows |
 | `Environmental Fate` | convergence_queue | safety and exposure-response lane | lock fate endpoint controls |
@@ -231,3 +238,4 @@ What must be done by Friday, 2026-05-15?
 15. H2O / water skeptic-proof extraction: `complete`; next clean gate is water-specific native spectra / property rows or electrochemistry.
 16. Minerals skeptic-proof extraction: `complete`; next clean gate is mineral-specific lattice / surface / adsorption rows, electrochemistry, catalysis / conditions, or native IR / Raman / THz spectra.
 17. Materials / Semiconductors band-gap second target: `complete`; next clean gate is electrochemistry / redox, dielectric / optical response, phonons, or catalysis / conditions.
+18. Electrochemistry / Redox NASA battery-aging pass: `complete`; next clean gate is RedPred / SOMAS or DUCK/CV molecule redox follow-up, EIS visual card, or native IR / Raman / THz spectra.
