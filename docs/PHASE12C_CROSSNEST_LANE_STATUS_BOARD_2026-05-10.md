@@ -28,6 +28,8 @@ Status: `public_safe_lane_board / N2_same_clock_complete / real_data_only / week
   `NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md`
 - Minerals skeptic-proof extraction:
   `NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md`
+- Materials / Semiconductors band-gap second target:
+  `NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md`
 
 ## Front-Center Read
 
@@ -84,6 +86,11 @@ The Minerals extraction pass now promotes the `Minerals` lane from partial /
 mapped support to direct physical spectral support: `1,262` mineral rows,
 `1,177` non-mineral controls, ROC AUC `0.714217`, average precision
 `0.735238`, and p `0.001996` across AUC, average precision, and precision@1262.
+
+The Materials / Semiconductors second target is now seated through ColabFit /
+Matbench `Matbench_mp_gap`: `60,000` real DFT-PBE band-gap rows, regression
+Pearson `0.654982`, gapped-material ROC AUC `0.904020`, and p `0.003984`
+against `250` shuffled controls.
 
 ## Purpose
 
@@ -154,7 +161,7 @@ What must be done by Friday, 2026-05-15?
 | `Catalysis / Conditions` | dataset_gate | condition-selection bridge for PFAS / reactions | lock condition-control schema |
 | `Spectral Signatures` | first USGS ASTER support pass complete | connects EEG spectral logic to material spectra | tighten with native spectra, H2O extraction, or IR/Raman/THz rows |
 | `Environmental Fate` | convergence_queue | safety and exposure-response lane | lock fate endpoint controls |
-| `Materials / Semiconductors` | supported formation-energy / structure-aware extension complete / second target queued | materials response and device/sensor future bridge | add bandgap / hull / phonon / defect / dielectric / 2D-material target |
+| `Materials / Semiconductors` | formation-energy plus band-gap second target complete | materials response and device/sensor future bridge | add dielectric / optical, phonon, defect, dopant, hull, or 2D-material target |
 
 ## Nest 3: Classical Coherence
 
@@ -211,14 +218,16 @@ What must be done by Friday, 2026-05-15?
 4. Patch Basis Hub capture pathway with the working app / BLE / decoder route.
 5. Expand full lane board from `renaissancefieldlite.github.io/lattice-companion.html`: `complete`.
 6. Build cross-nest visual map.
-7. Source first spectral / water / electrochemistry datasets: `USGS Spectral Library Version 7 Data` is selected first for `Waves / Spectra` and `Spectral Signatures`.
-8. Add the next Materials / Semiconductors target beyond formation energy.
+7. Source first spectral / water / electrochemistry datasets: `USGS Spectral Library Version 7 Data` seated the first `Waves / Spectra`, H2O, and Minerals passes; electrochemistry / redox remains the next chemistry-facing target.
+8. Add the next Materials / Semiconductors target beyond formation energy:
+   `complete` through the band-gap second-target pass.
 9. Crosswalk HRV1.0 first biological matrix into N2 / expanded 12C so 12B and
    12C stay joined.
 10. Update Mirror Index and claim-support pointers.
 11. DE-1 / SPEC-1 / TOPOG masked candidate pass: `complete`; public read seated in `PHASE12C_MASKED_DE1_SPEC1_TOPOG_PUBLIC_READ_2026-05-15.md`.
 12. USGS Spectral Library V7 ASTER subset for Nest 3 `Waves / Spectra` and Nest 2 `Spectral Signatures`: `complete`.
-13. Nest 5 convergence matrix v1: `complete`; next clean gate is claim-support pointer pass, then native spectra / H2O / THz / materials as the next tightening target.
-14. Nest 5 claim-support pointer pass: `complete`; next clean gate is support-state index for Mirror Index / Golden Mirror, plus H2O / native spectra / materials second target.
-15. H2O / water skeptic-proof extraction: `complete`; next clean gate is minerals / materials second target / electrochemistry.
-16. Minerals skeptic-proof extraction: `complete`; next clean gate is materials second target, electrochemistry, catalysis / conditions, or native IR / Raman / THz spectra.
+13. Nest 5 convergence matrix v1: `complete`; next clean gate is support-state index for Mirror Index / Golden Mirror, plus electrochemistry / native spectra / THz.
+14. Nest 5 claim-support pointer pass: `complete`; next clean gate is support-state index for Mirror Index / Golden Mirror.
+15. H2O / water skeptic-proof extraction: `complete`; next clean gate is water-specific native spectra / property rows or electrochemistry.
+16. Minerals skeptic-proof extraction: `complete`; next clean gate is mineral-specific lattice / surface / adsorption rows, electrochemistry, catalysis / conditions, or native IR / Raman / THz spectra.
+17. Materials / Semiconductors band-gap second target: `complete`; next clean gate is electrochemistry / redox, dielectric / optical response, phonons, or catalysis / conditions.

@@ -150,6 +150,7 @@ docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md
 docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md
 docs/NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md
 docs/NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md
+docs/NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md
 ```
 
 The reviewer arc is now:
@@ -166,6 +167,7 @@ first five Muse captures
 -> full Lattice Companion completion outline
 -> H2O / water skeptic-proof extraction
 -> Minerals skeptic-proof extraction
+-> Materials / Semiconductors band-gap second target
 ```
 
 Formal-return wording is now seated with a first masked candidate pass:
@@ -206,6 +208,13 @@ source: `1,262` mineral rows against `1,177` non-mineral controls, ROC AUC
 p `0.001996` across AUC, average precision, and precision@1262. This promotes
 `Minerals` from partial / mapped support to direct physical spectral support
 row.
+
+The Materials / Semiconductors second target is now seated from ColabFit /
+Matbench `Matbench_mp_gap`: `60,000` real DFT-PBE band-gap rows, regression
+Pearson `0.654982`, R2 `0.428798`, gapped-material ROC AUC `0.904020`,
+average precision `0.891203`, and p `0.003984` against `250` shuffled
+controls. This moves the materials lane beyond formation energy into direct
+electronic-response support.
 
 Current role:
 

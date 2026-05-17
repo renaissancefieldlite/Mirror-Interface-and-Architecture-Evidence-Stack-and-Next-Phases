@@ -44,7 +44,7 @@ architecture from zero.
 | `Nest 0` | `1` | parked foundation / target-selection layer | collect real physics reference anchors; keep as orientation, not support substitute |
 | `Core + hierarchy` | `11` | architecture spine and access chain are seated; semantic contextuality and physical-observable bridge are active support/continuation rails | keep glossary stable; attach live physical-observable rows only when measured |
 | `Nest 1` | `12` | mostly supported; formal foundation, topology preservation, CTRL-1, and multiple graph/formal rows are seated | close GRAPH-2B, GAME-1 rubric, denser TOP H1 / trajectory gates |
-| `Nest 2` | `19` | strong structured-matter support across elements, H2O / water extraction, minerals extraction, organic groups, allostery/proteins, PFAS safety, materials formation energy, descriptor/model controls, and first spectral-signature pass | redox, nutrition, biomolecular primitives, polymers, electrochemistry, catalysis, environmental fate, materials second target |
+| `Nest 2` | `19` | strong structured-matter support across elements, H2O / water extraction, minerals extraction, organic groups, allostery/proteins, PFAS safety, materials formation energy, materials band-gap second target, descriptor/model controls, and first spectral-signature pass | redox, nutrition, biomolecular primitives, polymers, electrochemistry, catalysis, environmental fate, materials response expansion |
 | `Nest 3` | `10` | first physical spectra support pass is seated through USGS ASTER; hardware timing/coherence rows provide additional support | native spectra, THz/IR/Raman, EMF, oscillator, phase-lock, plasma/fire, fusion/solar, gases/phases, gravity/orbits |
 | `Nest 4` | `5` | Phase 12B HRV and Phase 12C HRV + Muse create the strongest biology surface so far | cleaner EEG/contact controls, B.A.S.I.S. live state-vector integration, metabolism/nutrient rows, cells/genome datasets |
 | `Nest 5` | `5` | convergence matrix v1 is seated as support-state router | ecosystem/planet and cosmic rows need real datasets; Golden Mirror live tuning remains gated |
@@ -111,7 +111,7 @@ architecture from zero.
 | `Catalysis / Conditions` | mapped / engine scored | mapped condition-selection bridge | run reaction condition / catalyst endpoint dataset |
 | `Spectral Signatures` | mapped / engine scored | first support pass complete through USGS ASTER spectra | tighten with native spectra, H2O extraction, or IR/Raman/THz |
 | `Environmental Fate` | mapped / engine scored | mapped into ecosystem/planet and PFAS safety | source transport / leaching / bioaccumulation endpoint controls |
-| `Materials / Semiconductors` | mapped / engine scored | formation-energy support seated; structure-aware row strong | second target: bandgap, hull energy, phonon, dielectric, defect, dopant, or 2D materials |
+| `Materials / Semiconductors` | mapped / engine scored | formation-energy support seated; band-gap second target complete with Pearson `0.654982`, gapped AUC `0.904020`, p `0.003984` | next response target: dielectric / optical, phonon, defect, dopant, hull, or 2D materials |
 
 ## Nest 3: Classical Coherence
 
@@ -170,15 +170,17 @@ The fastest route to a stronger full-nest closeout is:
 2. Seat H2O / ice extraction from the USGS spectral lane.
 3. Seat Minerals extraction from the USGS spectral lane.
 4. Build the Mirror Index / Golden Mirror support-state index from the matrix.
-5. Run the materials second target: bandgap, hull energy, phonon, dielectric,
-   defect, dopant, or 2D-material row.
-6. Add a second physical spectral family: native spectra, IR/Raman/THz, or
+5. Seat the materials second target: band-gap regression and gapped-material
+   classification.
+6. Move materials continuation to
+   dielectric / optical, phonon, defect, dopant, hull, or 2D-material rows.
+7. Add a second physical spectral family: native spectra, IR/Raman/THz, or
    another public physical waveform dataset.
-7. Close one Nest 1 open formal gate: GRAPH-2B with external/domain labels or
+8. Close one Nest 1 open formal gate: GRAPH-2B with external/domain labels or
    GAME-1 after rubric freeze.
-8. Connect food/nutrient/metabolism rows into the existing HRV + Muse state
+9. Connect food/nutrient/metabolism rows into the existing HRV + Muse state
    window as measured physiology support.
-9. Park ecosystem/cosmic rows as mapped continuation lanes until real public
+10. Park ecosystem/cosmic rows as mapped continuation lanes until real public
    datasets are selected.
 
 ## Current Bottom Line
@@ -189,7 +191,8 @@ single architecture instead of disconnected experiments.
 What remains is targeted completion:
 
 ```text
-materials second target
+electrochemistry / redox row
+next materials response target beyond band gap
 second spectral / waveform family
 GRAPH-2B or GAME-1 formal closeout
 B.A.S.I.S. live state-vector support-state index

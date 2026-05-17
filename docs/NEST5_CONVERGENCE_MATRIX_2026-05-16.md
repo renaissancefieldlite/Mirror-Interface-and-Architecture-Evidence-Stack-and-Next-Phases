@@ -55,8 +55,8 @@ AI interaction / V7 behavior
 | Circuit / hardware bridge | `Phase 6-9D` | normalized AI feature vectors and calibration circuits | PennyLane / Qiskit / IBM / remote hardware-facing encodings | simulator handoff and hardware runtime path established; Bell calibration reached CHSH `2.828427` while product control stayed `1.414214` | `supported_bridge_surface` |
 | Semantic contextuality | `Phase 10` | compressed semantic feature states vs matched unentangled controls | family-local Bell-type semantic settings | `8 / 8` semantic states show `S_max > 2`; mean entangled `S_max` `2.018908`; matched controls stay at `2.000000` | `supported_semantic_boundary` |
 | Nest 1 formal rows | formal / transformer foundation plus Phase 12C return | DE, SPEC, TOPOG, DYN, STAT, CTRL, GRAPH, topology rows | formal lenses applied to real traces and masked physiology windows | masked Phase 12C pass seats DE-1 / SPEC-1 / TOPOG over `30 / 30` valid HRV + Muse rows; formal rows remain bounded by lane-specific controls | `supported_plus_candidate_formal_return` |
-| Nest 2 structured matter | molecules, allostery, PFAS, H2O/water, minerals, materials, descriptors | molecule / protein / pathway / material / water / mineral state labels vs shuffled controls | graph, descriptor, safety, composition, water-centroid, mineral/control centroid-margin, and structure features | allostery external-pocket branch supported; PFAS safety logic supported; H2O extraction AUC `0.918730` vs shuffled `0.498888`, p `0.001996`; Minerals extraction AUC `0.714217`, AP `0.735238`, p `0.001996`; materials formation energy reached Pearson `0.858577`, R2 `0.737141`, p `0.001996` | `supported_matter_surface` |
-| Nest 3 physical spectra / coherence | USGS ASTER spectra, H2O/water spectral extraction, mineral spectral extraction, hardware timing-coherence rows | material-family / water / mineral spectral labels and hardware timing windows | spectral-angle centroids, ASTER bands, centroid-margin features, timing-window features | USGS ASTER run used `2,439` spectra, balanced accuracy `0.517541` vs shuffled `0.146808`, p `0.003984`; H2O extraction over `23` water/ice rows vs `2,416` controls cleared shuffled labels; Minerals extraction over `1,262` mineral rows vs `1,177` controls cleared shuffled labels; hardware timing target-subspace mean `0.966145833` with timing separation still queued | `supported_spectral_surface_with_open_coherence_rows` |
+| Nest 2 structured matter | molecules, allostery, PFAS, H2O/water, minerals, materials, electronic-response targets, descriptors | molecule / protein / pathway / material / water / mineral / band-gap state labels vs shuffled controls | graph, descriptor, safety, composition, water-centroid, mineral/control centroid-margin, structure, and periodic-composition features | allostery external-pocket branch supported; PFAS safety logic supported; H2O extraction AUC `0.918730` vs shuffled `0.498888`, p `0.001996`; Minerals extraction AUC `0.714217`, AP `0.735238`, p `0.001996`; materials formation energy Pearson `0.858577`, R2 `0.737141`, p `0.001996`; materials band-gap second target Pearson `0.654982`, gapped AUC `0.904020`, p `0.003984` | `supported_matter_surface` |
+| Nest 3 physical spectra / coherence | USGS ASTER spectra, H2O/water spectral extraction, mineral spectral extraction, materials electronic-response row, hardware timing-coherence rows | material-family / water / mineral spectral labels, band/electronic-response labels, and hardware timing windows | spectral-angle centroids, ASTER bands, centroid-margin features, periodic-composition features, timing-window features | USGS ASTER run used `2,439` spectra, balanced accuracy `0.517541` vs shuffled `0.146808`, p `0.003984`; H2O extraction over `23` water/ice rows vs `2,416` controls cleared shuffled labels; Minerals extraction over `1,262` mineral rows vs `1,177` controls cleared shuffled labels; band-gap second target used `60,000` rows with Pearson `0.654982` and gapped-material AUC `0.904020`; hardware timing target-subspace mean `0.966145833` with timing separation still queued | `supported_spectral_surface_with_open_coherence_rows` |
 | Nest 4 biology | Phase 12B HRV, Phase 12C HRV + Muse | human state windows vs seated calm / drift / baseline / post controls | HRV, EEG, optical candidate, IMU, DRL/reference, packet QA | Phase 12B HRV supports coarse biology; Phase 12C adds `30 / 30` valid same-clock HRV + Muse rows and masked DE/SPEC/TOPOG candidate passes | `supported_biology_surface` |
 | Nest 5 convergence / product routing | Mirror Index, B.A.S.I.S., Golden Mirror | evidence nodes, support states, boundaries, next gates | claim -> evidence -> artifact -> boundary -> tuning support | convergence matrix is now seated as the routing surface; live tuning remains gated behind support-state selection and private/raw-data boundary | `active_convergence_route` |
 
@@ -74,9 +74,8 @@ AI interaction / V7 behavior
 
 ## What The Matrix Shows
 
-The strongest read is not that every substrate is already closed. The strongest
-read is that the same measured state-variable sequence is repeatedly
-operational:
+The strongest read is the repeated operation of the same measured
+state-variable sequence across seated substrates:
 
 ```text
 define state
@@ -117,7 +116,8 @@ Still gated:
 - native high-resolution spectral rerun or a second spectral family;
 - water-specific native spectra / property rows beyond the first H2O ASTER
   extraction;
-- materials / semiconductors second target beyond formation energy;
+- materials / semiconductors next-response targets beyond band gap:
+  dielectric / optical response, phonons, defects, dopants, hull, or 2D rows;
 - stronger Phase 12C contact controls and recurrence;
 - live B.A.S.I.S. state-vector integration into Golden Mirror;
 - any public release of runnable code or raw biosignal/capture materials.
@@ -142,7 +142,8 @@ Nest 5 convergence matrix v1 seated
 -> claim-support pointer pass seated
 -> build support-state index for Mirror Index / Golden Mirror
 -> choose next tightening target:
-   native spectra, H2O extraction, THz / IR / Raman, or materials second target
+   electrochemistry / redox, native spectra, THz / IR / Raman, or the
+   next materials response target
 ```
 
 Pointer pass:
@@ -153,3 +154,9 @@ Full lane outline:
 
 H2O tightening pass:
 `NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md`
+
+Minerals tightening pass:
+`NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md`
+
+Materials band-gap second target:
+`NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md`

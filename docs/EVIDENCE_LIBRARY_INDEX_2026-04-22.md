@@ -35,6 +35,7 @@ code.
 - [Nest 3 USGS ASTER Spectral Signature Support Read](./NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md)
 - [Nest 2 H2O / Water Extraction From USGS ASTER Spectra](./NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
 - [Nest 2 Minerals Extraction From USGS ASTER Spectra](./NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
+- [Nest 2 Materials / Semiconductors Band-Gap Second-Target Read](./NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md)
 - [Nest 5 Convergence Matrix](./NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
 - [Nest 5 Claim-Support Pointer Pass](./NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
 - [Lattice Companion Full Nest Completion Outline](./LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)

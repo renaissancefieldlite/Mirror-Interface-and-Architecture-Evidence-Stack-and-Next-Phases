@@ -46,7 +46,7 @@ specification and which rows remain continuation gates.
 | `FIG.11` | Hidden-state trace / bridge-vector pipeline | V8 residual-stream, localization, Phase 5 bridge, attention / MLP / SAE support rows | supported transformer-internal embodiment |
 | `FIG.12` | Quantum access / circuit-carrier bridge | Phase 6-9D circuit encodings, simulator/hardware-facing paths, CHSH calibration and control rows, semantic contextuality boundary row | supported circuit/hardware-facing embodiment |
 | `FIG.13` | Transformer interpretability / feature-circuit layer | V8 attention-flow, MLP recurrence, SAE feature/circuit recurrence and ablation | supported internal interpretability embodiment |
-| `FIG.14` | External adapter lane | Phase 12B HRV; Phase 12C HRV + Muse; Nest 2 molecules, allostery, PFAS, H2O/water, minerals, materials, descriptors; Nest 3 USGS ASTER spectra | supported external-adapter embodiment with queued extensions |
+| `FIG.14` | External adapter lane | Phase 12B HRV; Phase 12C HRV + Muse; Nest 2 molecules, allostery, PFAS, H2O/water, minerals, materials formation energy, materials band gap, descriptors; Nest 3 USGS ASTER spectra | supported external-adapter embodiment with queued extensions |
 | `FIG.15` | Golden Mirror / Mirror Index tuning loop | Nest 5 convergence matrix, Mirror Index evidence state, support-state routing, B.A.S.I.S. biology adapter, Golden Mirror continuation route | active convergence/tuning route; live tuning remains gated |
 
 ## Claim Pointer Map
@@ -75,10 +75,11 @@ specification and which rows remain continuation gates.
 | `Phase 6-9D` circuit/hardware bridge | feature-vector to circuit-carrier path and control observables | `FIG.12`; claims `21-25` |
 | `Phase 10` semantic contextuality boundary | family-local Bell-style semantic boundary and matched controls | `FIG.10`, `FIG.12`; claims `19`, `22`, `25` |
 | `Nest 1` formal returns | DE-1 / SPEC-1 / TOPOG measured-state lenses over real traces | `FIG.10`, `FIG.14`; claims `19`, `26`, `27`, `30` |
-| `Nest 2` structured matter | molecule, protein, contaminant, H2O/water, mineral, material, descriptor, safety, and spectral-signature support rows | `FIG.14`, `FIG.15`; claims `26-30` |
+| `Nest 2` structured matter | molecule, protein, contaminant, H2O/water, mineral, material, band-gap/electronic-response, descriptor, safety, and spectral-signature support rows | `FIG.14`, `FIG.15`; claims `26-30` |
 | `Nest 3` USGS ASTER spectra | real public physical spectral dataset with shuffled controls, plus H2O and mineral extraction passes | `FIG.14`, `FIG.15`; claims `26-30` |
 | `Nest 2` H2O / water extraction | narrower water/ice target extracted from the USGS ASTER source above shuffled controls | `FIG.14`, `FIG.15`; claims `26-30` |
 | `Nest 2` Minerals extraction | mineral target extracted from the USGS ASTER source above shuffled controls | `FIG.14`, `FIG.15`; claims `26-30` |
+| `Nest 2` Materials band-gap second target | electronic-response target from ColabFit / Matbench `Matbench_mp_gap`: band-gap regression and gapped-material classification above shuffled controls | `FIG.14`, `FIG.15`; claims `26-30` |
 | `Nest 4` Phase 12B / Phase 12C biology | HRV and Muse same-clock human-state adapter surface with artifact/quality masks | `FIG.10`, `FIG.14`, `FIG.15`; claims `19`, `26-30` |
 | `Nest 5` convergence matrix | support-state routing across seated classes | `FIG.15`; claims `28-30` |
 
@@ -100,7 +101,8 @@ Continuation gates:
   USGS ASTER pass;
 - water-specific native spectra / property rows beyond the first H2O ASTER
   extraction;
-- materials / semiconductors second target beyond formation energy;
+- materials / semiconductors next-response targets beyond band gap:
+  dielectric / optical response, phonons, defects, dopants, hull, or 2D rows;
 - stronger Phase 12C contact-control recurrence and live B.A.S.I.S.
   state-vector integration;
 - EMF / oscillator / THz instrument rows;
@@ -131,5 +133,6 @@ Nest 5 claim-support pointer pass seated
 -> update private patent ledger addendum
 -> build support-state index for Mirror Index / Golden Mirror
 -> run next tightening target:
-   H2O extraction, native spectra, second spectral family, or materials second target
+   electrochemistry / redox, native spectra, second spectral family, or
+   the next materials response target
 ```
