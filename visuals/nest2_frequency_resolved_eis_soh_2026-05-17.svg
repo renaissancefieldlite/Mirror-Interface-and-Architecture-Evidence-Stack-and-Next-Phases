@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Frequency-resolved EIS-to-SOH support card</title>
+  <desc id="desc">Public-safe visual card summarizing frequency-resolved NASA EIS-to-SOH results.</desc>
+  <rect width="1200" height="700" fill="#f7f4ed"/>
+  <text x="56" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#121212">Frequency-Resolved EIS-to-SOH</text>
+  <text x="56" y="106" font-family="Arial, sans-serif" font-size="17" fill="#42413d">NASA battery EIS vectors mapped into clean SOH support modes</text>
+
+  <rect x="56" y="142" width="1088" height="112" rx="8" fill="#ffffff" stroke="#d6d1c6"/>
+  <text x="86" y="180" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#121212">Target QA</text>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#121212">
+    <text x="86" y="214">2,794 raw discharge rows -> 2,542 valid positive discharge rows</text>
+    <text x="560" y="214">1,956 raw EIS rows -> 1,477 clean linked EIS rows</text>
+    <text x="86" y="238">24 frequency bins per complex vector, 290 base frequency features, 250 shuffled controls</text>
+  </g>
+
+  <rect x="56" y="288" width="1088" height="274" rx="8" fill="#ffffff" stroke="#d6d1c6"/>
+  <text x="86" y="326" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#121212">Support Modes</text>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#121212">
+    <text x="86" y="370">Pure frequency bins, group holdout</text>
+    <rect x="390" y="354" width="28" height="22" rx="4" fill="#8d96a3"/>
+    <text x="438" y="371">Pearson 0.042 / p 0.254980</text>
+
+    <text x="86" y="416">Frequency bins + cycle, group holdout</text>
+    <rect x="390" y="400" width="188" height="22" rx="4" fill="#d9ad24"/>
+    <text x="598" y="417">Pearson 0.845 / R2 0.540 / p 0.003984</text>
+
+    <text x="86" y="462">Delta frequency + cycle, group holdout</text>
+    <rect x="390" y="446" width="192" height="22" rx="4" fill="#2f9aa8"/>
+    <text x="602" y="463">Pearson 0.855 / R2 0.685 / p 0.003984</text>
+
+    <text x="86" y="508">Delta frequency, same-battery temporal</text>
+    <rect x="390" y="492" width="214" height="22" rx="4" fill="#c5674f"/>
+    <text x="624" y="509">Pearson 0.948 / R2 0.796 / p 0.003984</text>
+
+    <text x="86" y="544">Delta frequency + cycle, same-battery temporal</text>
+    <rect x="390" y="528" width="230" height="22" rx="4" fill="#2f9aa8"/>
+    <text x="640" y="545">Pearson 0.954 / R2 0.856 / p 0.003984</text>
+  </g>
+
+  <rect x="56" y="594" width="1088" height="54" rx="8" fill="#101010"/>
+  <text x="86" y="628" font-family="Arial, sans-serif" font-size="17" fill="#ffffff">Read: pure uncalibrated cross-battery EIS remains open; cycle context and per-battery frequency deltas seat the continuous SOH tracking surface.</text>
+</svg>

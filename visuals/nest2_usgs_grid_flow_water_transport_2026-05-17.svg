@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">USGS grid-flow water-transport real-data row</title>
+  <desc id="desc">Public-safe visual card summarizing water transport support metrics across USGS discharge and gage-height rows.</desc>
+  <rect width="1200" height="680" fill="#f5f1e8"/>
+  <text x="54" y="72" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#171717">USGS Grid-Flow Water-Transport Row</text>
+  <text x="54" y="112" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#404040">Nest 2 H2O / environmental fate bridge -&gt; Nest 3 physical flow-state dynamics</text>
+
+  <rect x="54" y="148" width="318" height="154" rx="10" fill="#ffffff" stroke="#d5cbb9"/>
+  <text x="78" y="184" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#171717">Target QA</text>
+  <text x="78" y="218" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">54,825 same-hour support rows</text>
+  <text x="78" y="244" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">328 complete hydrology sites</text>
+  <text x="78" y="270" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">288,392 complete raw rows</text>
+
+  <rect x="394" y="148" width="356" height="154" rx="10" fill="#ffffff" stroke="#d5cbb9"/>
+  <text x="418" y="184" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#171717">State Variables</text>
+  <text x="418" y="218" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">state: discharge + high-flow class</text>
+  <text x="418" y="244" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">transform: gage height + site calibration</text>
+  <text x="418" y="270" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">control: shuffled flow labels</text>
+
+  <rect x="774" y="148" width="372" height="154" rx="10" fill="#ffffff" stroke="#d5cbb9"/>
+  <text x="798" y="184" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#171717">Support Read</text>
+  <text x="798" y="218" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">calibrated temporal Pearson 0.998131</text>
+  <text x="798" y="244" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">high-flow temporal AUC 0.991244</text>
+  <text x="798" y="270" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">all displayed modes p = 0.003984</text>
+
+  <text x="54" y="358" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#171717">Regression: Log Discharge Recovery</text>
+  <line x1="120" y1="572" x2="650" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <line x1="120" y1="392" x2="120" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <text x="72" y="398" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">1.0</text>
+  <text x="72" y="484" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">0.5</text>
+  <text x="78" y="576" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">0.0</text>
+  <rect x="164" y="480" width="88" height="92" fill="#2f9aa7"/>
+  <rect x="316" y="452" width="88" height="120" fill="#d2a922"/>
+  <rect x="468" y="392" width="88" height="180" fill="#596579"/>
+  <text x="168" y="472" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.5111</text>
+  <text x="320" y="444" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.6666</text>
+  <text x="472" y="384" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.9981</text>
+  <text x="142" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">stage site</text>
+  <text x="282" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">calibrated site</text>
+  <text x="440" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">calibrated temporal</text>
+  <text x="246" y="632" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#333333">Pearson correlation vs shuffled-control baseline</text>
+
+  <text x="705" y="358" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#171717">High-Flow Class: ROC AUC</text>
+  <line x1="760" y1="572" x2="1090" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <line x1="760" y1="392" x2="760" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <rect x="806" y="444" width="72" height="128" fill="#2f9aa7"/>
+  <rect x="916" y="396" width="72" height="176" fill="#d2a922"/>
+  <rect x="1026" y="394" width="72" height="178" fill="#596579"/>
+  <text x="803" y="436" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.7113</text>
+  <text x="913" y="388" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.9788</text>
+  <text x="1023" y="386" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.9912</text>
+  <text x="784" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">stage site</text>
+  <text x="888" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">cal site</text>
+  <text x="996" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">cal temporal</text>
+  <text x="828" y="632" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#333333">High flow: site-relative discharge &gt;= q75</text>
+</svg>

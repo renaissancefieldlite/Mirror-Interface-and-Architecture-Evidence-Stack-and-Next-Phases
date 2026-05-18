@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Li conductivity real-data row</title>
+  <desc id="desc">Public-safe visual card summarizing Li conductivity source-heldout regression and classification results.</desc>
+  <rect width="1200" height="700" fill="#f7f4ed"/>
+  <text x="56" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#121212">Li Conductivity Real-Data Row</text>
+  <text x="56" y="106" font-family="Arial, sans-serif" font-size="17" fill="#42413d">Membrane / ion-transport branch seated with public conductivity records</text>
+
+  <rect x="56" y="142" width="1088" height="108" rx="8" fill="#ffffff" stroke="#d6d1c6"/>
+  <text x="86" y="180" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#121212">Target QA</text>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#121212">
+    <text x="86" y="214">372 rows, 152 literature sources, 12 material families, 6 chemical families</text>
+    <text x="660" y="214">150 high-conductivity class rows, 250 shuffled controls</text>
+  </g>
+
+  <rect x="56" y="284" width="1088" height="252" rx="8" fill="#ffffff" stroke="#d6d1c6"/>
+  <text x="86" y="322" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#121212">Support Modes</text>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#121212">
+    <text x="86" y="366">Formula regression, source holdout</text>
+    <rect x="390" y="350" width="158" height="22" rx="4" fill="#2f9aa8"/>
+    <text x="570" y="367">Pearson 0.700 / R2 0.490 / p 0.003984</text>
+
+    <text x="86" y="412">Formula + family regression, source holdout</text>
+    <rect x="390" y="396" width="164" height="22" rx="4" fill="#d9ad24"/>
+    <text x="576" y="413">Pearson 0.723 / R2 0.497 / p 0.003984</text>
+
+    <text x="86" y="458">Formula + family classification, source holdout</text>
+    <rect x="390" y="442" width="202" height="22" rx="4" fill="#c5674f"/>
+    <text x="614" y="459">ROC AUC 0.891 / balanced acc 0.856 / p 0.003984</text>
+
+    <text x="86" y="504">Formula regression, family holdout</text>
+    <rect x="390" y="488" width="36" height="22" rx="4" fill="#8d96a3"/>
+    <text x="448" y="505">Pearson 0.106 / R2 -0.862 / p 0.314741</text>
+  </g>
+
+  <rect x="56" y="584" width="1088" height="64" rx="8" fill="#101010"/>
+  <text x="86" y="616" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Read: conductivity support is strong under source holdout; cross-family regression remains the hardening gate.</text>
+  <text x="86" y="638" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Bridge: Nest 2 electrochemistry -> Nest 3 charge transport -> Nest 4 membrane precursor.</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">EIS peak and band-family diagnostics</title>
+  <desc id="desc">Public-safe visual card summarizing NASA EIS peak and band-family SOH diagnostics.</desc>
+  <rect width="1200" height="700" fill="#f7f4ed"/>
+  <text x="56" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#121212">EIS Peak / Band-Family Diagnostics</text>
+  <text x="56" y="106" font-family="Arial, sans-serif" font-size="17" fill="#42413d">NASA battery EIS shape mapped into SOH support modes</text>
+
+  <rect x="56" y="142" width="1088" height="104" rx="8" fill="#ffffff" stroke="#d6d1c6"/>
+  <text x="86" y="180" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#121212">Target QA</text>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#121212">
+    <text x="86" y="214">1,477 clean linked EIS rows, 34 batteries, 24 ordered sweep bins per vector</text>
+    <text x="650" y="214">828 band / peak features, 250 shuffled controls</text>
+  </g>
+
+  <rect x="56" y="278" width="1088" height="274" rx="8" fill="#ffffff" stroke="#d6d1c6"/>
+  <text x="86" y="316" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#121212">Support Modes</text>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#121212">
+    <text x="86" y="360">Band-only group holdout</text>
+    <rect x="390" y="344" width="42" height="22" rx="4" fill="#8d96a3"/>
+    <text x="454" y="361">Pearson 0.149 / R2 -0.286 / p 0.003984</text>
+
+    <text x="86" y="406">Band + cycle group holdout</text>
+    <rect x="390" y="390" width="190" height="22" rx="4" fill="#d9ad24"/>
+    <text x="602" y="407">Pearson 0.844 / R2 0.515 / p 0.003984</text>
+
+    <text x="86" y="452">Delta-band group holdout</text>
+    <rect x="390" y="436" width="182" height="22" rx="4" fill="#2f9aa8"/>
+    <text x="594" y="453">Pearson 0.808 / R2 0.593 / p 0.003984</text>
+
+    <text x="86" y="498">Delta-band temporal</text>
+    <rect x="390" y="482" width="212" height="22" rx="4" fill="#c5674f"/>
+    <text x="624" y="499">Pearson 0.942 / R2 0.783 / p 0.003984</text>
+
+    <text x="86" y="534">Delta-band + cycle temporal</text>
+    <rect x="390" y="518" width="228" height="22" rx="4" fill="#2f9aa8"/>
+    <text x="640" y="535">Pearson 0.957 / R2 0.851 / p 0.003984</text>
+  </g>
+
+  <rect x="56" y="584" width="1088" height="64" rx="8" fill="#101010"/>
+  <text x="86" y="616" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Top families: delta rectified-impedance real / abs / imag and delta current-ratio bands.</text>
+  <text x="86" y="638" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Read: EIS shape movement explains the continuous SOH support surface.</text>
+</svg>

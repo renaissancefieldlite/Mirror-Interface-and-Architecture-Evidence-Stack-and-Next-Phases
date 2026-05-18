@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">EPA ozone oxidant-state real-data row</title>
+  <desc id="desc">Public-safe visual card summarizing EPA ozone support metrics across official daily ozone monitor rows.</desc>
+  <rect width="1200" height="680" fill="#f5f1e8"/>
+  <text x="54" y="72" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#171717">EPA Ozone Oxidant-State Row</text>
+  <text x="54" y="112" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#404040">Nest 2 oxygen/redox + ROS bridge -&gt; Nest 3 atmospheric oxidant-state dynamics</text>
+
+  <rect x="54" y="148" width="318" height="154" rx="10" fill="#ffffff" stroke="#d5cbb9"/>
+  <text x="78" y="184" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#171717">Target QA</text>
+  <text x="78" y="218" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">243,461 clean EPA rows</text>
+  <text x="78" y="244" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">1,205 monitor sites</text>
+  <text x="78" y="270" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">36,028 AQI &gt;= 51 rows</text>
+
+  <rect x="394" y="148" width="356" height="154" rx="10" fill="#ffffff" stroke="#d5cbb9"/>
+  <text x="418" y="184" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#171717">State Variables</text>
+  <text x="418" y="218" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">state: ozone ppm + AQI class</text>
+  <text x="418" y="244" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">transform: geography + season + site lag</text>
+  <text x="418" y="270" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">control: shuffled ozone / AQI labels</text>
+
+  <rect x="774" y="148" width="372" height="154" rx="10" fill="#ffffff" stroke="#d5cbb9"/>
+  <text x="798" y="184" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#171717">Support Read</text>
+  <text x="798" y="218" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">temporal Pearson 0.743096</text>
+  <text x="798" y="244" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">AQI temporal AUC 0.879495</text>
+  <text x="798" y="270" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">all displayed modes p = 0.003984</text>
+
+  <text x="54" y="358" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#171717">Regression: Daily Ozone PPM Recovery</text>
+  <line x1="120" y1="572" x2="650" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <line x1="120" y1="392" x2="120" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <text x="72" y="398" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">1.0</text>
+  <text x="72" y="484" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">0.5</text>
+  <text x="78" y="576" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">0.0</text>
+  <rect x="164" y="494" width="88" height="78" fill="#2f9aa7"/>
+  <rect x="316" y="493" width="88" height="79" fill="#d2a922"/>
+  <rect x="468" y="438" width="88" height="134" fill="#596579"/>
+  <text x="168" y="486" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.4322</text>
+  <text x="320" y="485" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.4386</text>
+  <text x="472" y="430" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.7431</text>
+  <text x="132" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">geo/season</text>
+  <text x="290" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">regional</text>
+  <text x="444" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">site temporal</text>
+  <text x="246" y="632" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#333333">Pearson correlation vs shuffled-control baseline</text>
+
+  <text x="705" y="358" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#171717">AQI &gt;= 51 Class: ROC AUC</text>
+  <line x1="760" y1="572" x2="1090" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <line x1="760" y1="392" x2="760" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <rect x="806" y="435" width="72" height="137" fill="#2f9aa7"/>
+  <rect x="916" y="435" width="72" height="137" fill="#d2a922"/>
+  <rect x="1026" y="414" width="72" height="158" fill="#596579"/>
+  <text x="803" y="427" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.7620</text>
+  <text x="913" y="427" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.7600</text>
+  <text x="1023" y="406" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.8795</text>
+  <text x="778" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">geo/season</text>
+  <text x="896" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">regional</text>
+  <text x="998" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">temporal</text>
+  <text x="838" y="632" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#333333">High ozone class: AQI &gt;= 51</text>
+</svg>

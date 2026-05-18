@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">USGS dissolved oxygen real-data row</title>
+  <desc id="desc">Public-safe visual card summarizing dissolved oxygen support metrics across USGS water-quality rows.</desc>
+  <rect width="1200" height="680" fill="#f5f1e8"/>
+  <text x="54" y="72" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#171717">USGS Dissolved Oxygen Real-Data Row</text>
+  <text x="54" y="112" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#404040">Nest 2 oxygen/redox + H2O/water bridge -> Nest 3 water-quality state dynamics</text>
+
+  <rect x="54" y="148" width="312" height="154" rx="10" fill="#ffffff" stroke="#d5cbb9"/>
+  <text x="78" y="184" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#171717">Target QA</text>
+  <text x="78" y="218" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">41,001 clean complete rows</text>
+  <text x="78" y="244" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">27 clean complete sites</text>
+  <text x="78" y="270" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">45,164 raw DO rows</text>
+
+  <rect x="390" y="148" width="356" height="154" rx="10" fill="#ffffff" stroke="#d5cbb9"/>
+  <text x="414" y="184" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#171717">State Variables</text>
+  <text x="414" y="218" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">state: dissolved oxygen mg/L</text>
+  <text x="414" y="244" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">transform: temp + pH + conductance + time</text>
+  <text x="414" y="270" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">control: shuffled labels, fixed split</text>
+
+  <rect x="770" y="148" width="376" height="154" rx="10" fill="#ffffff" stroke="#d5cbb9"/>
+  <text x="794" y="184" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#171717">Support Read</text>
+  <text x="794" y="218" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">site-heldout chemistry Pearson 0.841119</text>
+  <text x="794" y="244" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">temporal chemistry Pearson 0.943309</text>
+  <text x="794" y="270" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#333333">all displayed modes p = 0.003984</text>
+
+  <text x="54" y="358" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#171717">Regression: DO mg/L Recovery</text>
+  <line x1="120" y1="572" x2="650" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <line x1="120" y1="392" x2="120" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <text x="72" y="398" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">1.0</text>
+  <text x="72" y="484" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">0.5</text>
+  <text x="78" y="576" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">0.0</text>
+  <rect x="164" y="446" width="88" height="126" fill="#2f9aa7"/>
+  <rect x="316" y="421" width="88" height="151" fill="#d2a922"/>
+  <rect x="468" y="402" width="88" height="170" fill="#596579"/>
+  <text x="168" y="438" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.6997</text>
+  <text x="320" y="413" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.8411</text>
+  <text x="472" y="394" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.9433</text>
+  <text x="142" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">temp/time</text>
+  <text x="286" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">chemistry site</text>
+  <text x="444" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">chemistry temporal</text>
+  <text x="246" y="632" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#333333">Pearson correlation vs shuffled-control baseline</text>
+
+  <text x="705" y="358" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#171717">Low-Oxygen Class: ROC AUC</text>
+  <line x1="760" y1="572" x2="1090" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <line x1="760" y1="392" x2="760" y2="572" stroke="#7d7468" stroke-width="2"/>
+  <rect x="806" y="412" width="72" height="160" fill="#2f9aa7"/>
+  <rect x="916" y="405" width="72" height="167" fill="#d2a922"/>
+  <rect x="1026" y="397" width="72" height="175" fill="#596579"/>
+  <text x="803" y="404" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.8886</text>
+  <text x="913" y="397" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.9243</text>
+  <text x="1023" y="389" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#171717">0.9716</text>
+  <text x="784" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">temp/time</text>
+  <text x="886" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">chemistry site</text>
+  <text x="992" y="604" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#333333">chemistry temporal</text>
+  <text x="824" y="632" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#333333">Low DO threshold: &lt; 7.0 mg/L</text>
+</svg>
