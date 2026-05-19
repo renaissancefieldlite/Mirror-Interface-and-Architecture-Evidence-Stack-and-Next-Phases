@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">NOAA HMS Smoke + EPA PM2.5 Attribution Join</title>
+  <desc id="desc">Public-safe visual card summarizing the NOAA HMS smoke polygon attribution join against EPA PM2.5 particle-state rows.</desc>
+  <rect width="1200" height="700" fill="#f4f0e8"/>
+  <text x="54" y="70" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#171717">NOAA HMS Smoke + EPA PM2.5 Attribution</text>
+  <text x="54" y="110" font-family="Arial, sans-serif" font-size="17" fill="#2c2c2c">Nest 2 environmental fate -&gt; Nest 3 atmospheric dynamics -&gt; Nest 5 source-context routing</text>
+
+  <g transform="translate(54 146)">
+    <rect width="330" height="158" rx="8" fill="#ffffff" stroke="#d8c9b9"/>
+    <text x="24" y="38" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#202020">Target QA</text>
+    <text x="24" y="72" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">69,403 EPA PM2.5 rows</text>
+    <text x="24" y="98" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">24,238 NOAA HMS polygons</text>
+    <text x="24" y="124" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">16,317 rows under smoke</text>
+  </g>
+
+  <g transform="translate(414 146)">
+    <rect width="330" height="158" rx="8" fill="#ffffff" stroke="#d8c9b9"/>
+    <text x="24" y="38" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#202020">Smoke Contrast</text>
+    <text x="24" y="72" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">PM2.5 delta +3.803132 ug/m3</text>
+    <text x="24" y="98" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">high-PM2.5 rate delta +0.259518</text>
+    <text x="24" y="124" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">contrast p = 0.003984</text>
+  </g>
+
+  <g transform="translate(774 146)">
+    <rect width="372" height="158" rx="8" fill="#ffffff" stroke="#d8c9b9"/>
+    <text x="24" y="38" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#202020">Support Upgrade</text>
+    <text x="24" y="72" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">site AUC 0.789010 -&gt; 0.807164</text>
+    <text x="24" y="98" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">temporal AUC 0.850927 -&gt; 0.861054</text>
+    <text x="24" y="124" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">all model modes p = 0.003984</text>
+  </g>
+
+  <g transform="translate(54 360)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#171717">PM2.5 Regression Pearson</text>
+    <line x1="70" y1="214" x2="562" y2="214" stroke="#7f7468" stroke-width="2"/>
+    <line x1="70" y1="34" x2="70" y2="214" stroke="#7f7468" stroke-width="2"/>
+    <text x="28" y="218" font-family="Arial, sans-serif" font-size="13" fill="#333">0.0</text>
+    <text x="28" y="126" font-family="Arial, sans-serif" font-size="13" fill="#333">0.3</text>
+    <text x="28" y="38" font-family="Arial, sans-serif" font-size="13" fill="#333">0.6</text>
+    <rect x="126" y="76" width="80" height="138" fill="#8e9677"/>
+    <rect x="226" y="68" width="80" height="146" fill="#c45f36"/>
+    <rect x="352" y="35" width="80" height="179" fill="#369ba5"/>
+    <rect x="452" y="24" width="80" height="190" fill="#215a8a"/>
+    <text x="130" y="66" font-family="Arial, sans-serif" font-size="13" fill="#111">0.4607</text>
+    <text x="230" y="58" font-family="Arial, sans-serif" font-size="13" fill="#111">0.4864</text>
+    <text x="356" y="25" font-family="Arial, sans-serif" font-size="13" fill="#111">0.5965</text>
+    <text x="456" y="14" font-family="Arial, sans-serif" font-size="13" fill="#111">0.6345</text>
+    <text x="104" y="246" font-family="Arial, sans-serif" font-size="13" fill="#222">context</text>
+    <text x="207" y="246" font-family="Arial, sans-serif" font-size="13" fill="#222">+ HMS</text>
+    <text x="330" y="246" font-family="Arial, sans-serif" font-size="13" fill="#222">lag</text>
+    <text x="432" y="246" font-family="Arial, sans-serif" font-size="13" fill="#222">lag + HMS</text>
+  </g>
+
+  <g transform="translate(688 360)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#171717">High-PM2.5 AQI ROC AUC</text>
+    <line x1="62" y1="214" x2="546" y2="214" stroke="#7f7468" stroke-width="2"/>
+    <line x1="62" y1="34" x2="62" y2="214" stroke="#7f7468" stroke-width="2"/>
+    <text x="20" y="218" font-family="Arial, sans-serif" font-size="13" fill="#333">0.0</text>
+    <text x="20" y="126" font-family="Arial, sans-serif" font-size="13" fill="#333">0.5</text>
+    <text x="20" y="38" font-family="Arial, sans-serif" font-size="13" fill="#333">1.0</text>
+    <rect x="116" y="72" width="76" height="142" fill="#8e9677"/>
+    <rect x="212" y="69" width="76" height="145" fill="#c45f36"/>
+    <rect x="336" y="61" width="76" height="153" fill="#369ba5"/>
+    <rect x="432" y="59" width="76" height="155" fill="#215a8a"/>
+    <text x="120" y="62" font-family="Arial, sans-serif" font-size="13" fill="#111">0.7890</text>
+    <text x="216" y="59" font-family="Arial, sans-serif" font-size="13" fill="#111">0.8072</text>
+    <text x="340" y="51" font-family="Arial, sans-serif" font-size="13" fill="#111">0.8509</text>
+    <text x="436" y="49" font-family="Arial, sans-serif" font-size="13" fill="#111">0.8611</text>
+    <text x="96" y="246" font-family="Arial, sans-serif" font-size="13" fill="#222">context</text>
+    <text x="194" y="246" font-family="Arial, sans-serif" font-size="13" fill="#222">+ HMS</text>
+    <text x="318" y="246" font-family="Arial, sans-serif" font-size="13" fill="#222">lag</text>
+    <text x="412" y="246" font-family="Arial, sans-serif" font-size="13" fill="#222">lag + HMS</text>
+  </g>
+</svg>

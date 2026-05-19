@@ -55,6 +55,10 @@ Newest seated evidence cards:
 - [Nest 2 / Nest 3 USGS Dissolved Oxygen Real-Data Row](./docs/NEST2_USGS_DISSOLVED_OXYGEN_REALDATA_2026-05-17.md)
 - [Nest 2 / Nest 3 USGS Grid-Flow Water-Transport Real-Data Row](./docs/NEST2_USGS_GRID_FLOW_WATER_TRANSPORT_REALDATA_2026-05-17.md)
 - [Nest 2 / Nest 3 EPA Ozone Oxidant-State Real-Data Row](./docs/NEST2_EPA_OZONE_OXIDANT_STATE_REALDATA_2026-05-17.md)
+- [Nest 2 / Nest 3 EPA Ozone Precursor / Meteorology Expansion](./docs/NEST2_EPA_OZONE_PRECURSOR_METEOROLOGY_EXPANSION_2026-05-17.md)
+- [Nest 2 / Nest 3 EPA PM2.5 Atmospheric Particle-State Proxy](./docs/NEST2_EPA_PM25_SMOKE_PROXY_REALDATA_2026-05-18.md)
+- [Nest 2 / Nest 3 NOAA HMS Smoke + EPA PM2.5 Attribution Join](./docs/NEST2_NOAA_HMS_SMOKE_PM25_ATTRIBUTION_REALDATA_2026-05-18.md)
+- [Nest 2 / Nest 3 WQP ORP Redox-Potential Real-Data Row](./docs/NEST2_WQP_ORP_REDOX_REALDATA_2026-05-18.md)
 - [Nest 5 Convergence Matrix](./docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
 - [Lattice Companion Full Nest Completion Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
 
@@ -402,7 +406,13 @@ across repeated benchmark classes.
 - The Electrochemistry / Redox first battery-aging support pass is now seated through NASA PCoE Battery Data Set: `34` batteries, `2,769` discharge-capacity rows with Pearson `0.923872`, R2 `0.833991`, p `0.003984`; EIS degraded-state AUC `0.709188`, p `0.003984`, with continuous EIS-to-SOH regression held as the follow-up boundary.
 - The Molecule Redox follow-up is now seated through RedDB v2: `15,882` electroactive reaction rows, reaction-energy Pearson `0.881991`, R2 `0.712436`, HOMO-shift Pearson `0.736113`, LUMO-shift Pearson `0.530190`, all p `0.003984` against `250` shuffled controls.
 - The DUCK/CV waveform follow-up is now seated through real cyclic-voltammetry data: `201` raw I-V waveform rows, chemistry-family balanced accuracy `0.906863`, pH-state AUC `0.883333`, both p `0.003984`; continuous EIS-to-SOH now separates the cross-battery boundary from same-battery temporal support, Pearson `0.876422`, R2 `0.762003`, p `0.003984`.
+- The USGS dissolved-oxygen water-quality row is now seated through `41,001` clean same-clock rows, chemistry site-heldout Pearson `0.841119`, low-oxygen AUC `0.924256`, temporal Pearson `0.943309`, and p `0.003984`.
+- The USGS grid-flow water-transport row is now seated through `54,825` same-hour discharge/stage rows across `328` sites, calibrated temporal Pearson `0.998131`, high-flow AUC `0.991244`, and p `0.003984`.
 - The EPA ozone oxidant-state follow-up is now seated through official EPA AirData daily ozone monitor rows: `243,461` clean records across `1,205` sites, same-site temporal ozone Pearson `0.743096`, AQI `>= 51` temporal AUC `0.879495`, all displayed modes p `0.003984`.
+- The EPA ozone precursor / meteorology expansion is now seated through official EPA AirData NO2, CO, SO2, temperature, wind, pressure, humidity, and ozone rows: `76,020` support rows across `390` ozone sites, precursor + meteorology site-heldout ozone Pearson `0.731717`, AQI `>= 51` AUC `0.890602`, context + lag temporal Pearson `0.809667`, all displayed modes p `0.003984`.
+- The EPA PM2.5 atmospheric particle-state proxy is now seated through official EPA AirData rows: `69,403` support rows across `442` PM2.5 sites, particle-context site-heldout PM2.5 Pearson `0.460728`, high-PM2.5 AQI AUC `0.789010`, context + lag temporal AUC `0.850927`, all displayed modes p `0.003984`.
+- The NOAA HMS smoke + EPA PM2.5 attribution join is now seated through real NOAA smoke polygons and real EPA monitor coordinates: `24,238` smoke polygons parsed, `16,317` PM2.5 rows under smoke, PM2.5 smoke delta `+3.803132` ug/m3, high-PM2.5 rate delta `+0.259518`, context + HMS site-heldout AUC `0.807164`, context + lag + HMS temporal AUC `0.861054`, all displayed modes p `0.003984`.
+- The WQP ORP redox-potential row is now seated through official Water Quality Portal / NWIS rows: `814` support rows across `328` sites, redox-transform site-heldout SHE ORP Pearson `0.995849`, R2 `0.991323`, high-SHE ORP AUC `0.998237`, balanced accuracy `0.980200`, and p `0.003984`.
 - Nest 5 convergence matrix v1 is now seated: AI behavior, transformer internals, circuit / hardware-facing bridge rows, semantic contextuality boundary rows, Nest 1 formal returns, Nest 2 matter, Nest 3 spectra, and Nest 4 biology are routed into one support-state matrix.
 - Nest 5 claim-support pointer pass is now seated: the convergence matrix is mapped into FIG.10-FIG.15 and claims `19-30` as a public-safe evidence route.
 - Lattice Companion full nest completion outline is now seated from the active `72` node / `140` edge companion map, showing what is supported, partial, queued, and parked across every nest.
@@ -435,8 +445,20 @@ plus the [Nest 2 Molecule Redox RedDB Support
 Read](./docs/NEST2_MOLECULE_REDOX_REDDB_SUPPORT_READ_2026-05-16.md)
 plus the [Nest 2 DUCK/CV + EIS-to-SOH Follow-Up
 Read](./docs/NEST2_DUCK_CV_EIS_SOH_FOLLOWUP_2026-05-17.md)
+plus the [Nest 2 / Nest 3 USGS Dissolved Oxygen Real-Data
+Row](./docs/NEST2_USGS_DISSOLVED_OXYGEN_REALDATA_2026-05-17.md)
+plus the [Nest 2 / Nest 3 USGS Grid-Flow Water-Transport Real-Data
+Row](./docs/NEST2_USGS_GRID_FLOW_WATER_TRANSPORT_REALDATA_2026-05-17.md)
 plus the [Nest 2 / Nest 3 EPA Ozone Oxidant-State Real-Data
 Row](./docs/NEST2_EPA_OZONE_OXIDANT_STATE_REALDATA_2026-05-17.md)
+plus the [Nest 2 / Nest 3 EPA Ozone Precursor / Meteorology
+Expansion](./docs/NEST2_EPA_OZONE_PRECURSOR_METEOROLOGY_EXPANSION_2026-05-17.md)
+plus the [Nest 2 / Nest 3 EPA PM2.5 Atmospheric Particle-State
+Proxy](./docs/NEST2_EPA_PM25_SMOKE_PROXY_REALDATA_2026-05-18.md)
+plus the [Nest 2 / Nest 3 NOAA HMS Smoke + EPA PM2.5 Attribution
+Join](./docs/NEST2_NOAA_HMS_SMOKE_PM25_ATTRIBUTION_REALDATA_2026-05-18.md)
+plus the [Nest 2 / Nest 3 WQP ORP Redox-Potential Real-Data
+Row](./docs/NEST2_WQP_ORP_REDOX_REALDATA_2026-05-18.md)
 plus [Nest 5 Convergence
 Matrix](./docs/NEST5_CONVERGENCE_MATRIX_2026-05-16.md)
 and the [Nest 5 Claim-Support Pointer
@@ -481,14 +503,20 @@ before the deeper lane docs.
 34. [Nest 2 Electrochemistry / Redox NASA Battery Support Read](./docs/NEST2_ELECTROCHEMISTRY_NASA_BATTERY_SUPPORT_READ_2026-05-16.md)
 35. [Nest 2 Molecule Redox RedDB Support Read](./docs/NEST2_MOLECULE_REDOX_REDDB_SUPPORT_READ_2026-05-16.md)
 36. [Nest 2 DUCK/CV + EIS-to-SOH Follow-Up](./docs/NEST2_DUCK_CV_EIS_SOH_FOLLOWUP_2026-05-17.md)
-37. [Nest 2 / Nest 3 EPA Ozone Oxidant-State Real-Data Row](./docs/NEST2_EPA_OZONE_OXIDANT_STATE_REALDATA_2026-05-17.md)
-38. [Nest 5 Claim-Support Pointer Pass](./docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
-39. [Lattice Companion Full Nest Completion Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
-40. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
-41. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
-42. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
-43. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
-44. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
+37. [Nest 2 / Nest 3 USGS Dissolved Oxygen Real-Data Row](./docs/NEST2_USGS_DISSOLVED_OXYGEN_REALDATA_2026-05-17.md)
+38. [Nest 2 / Nest 3 USGS Grid-Flow Water-Transport Real-Data Row](./docs/NEST2_USGS_GRID_FLOW_WATER_TRANSPORT_REALDATA_2026-05-17.md)
+39. [Nest 2 / Nest 3 EPA Ozone Oxidant-State Real-Data Row](./docs/NEST2_EPA_OZONE_OXIDANT_STATE_REALDATA_2026-05-17.md)
+40. [Nest 2 / Nest 3 EPA Ozone Precursor / Meteorology Expansion](./docs/NEST2_EPA_OZONE_PRECURSOR_METEOROLOGY_EXPANSION_2026-05-17.md)
+41. [Nest 2 / Nest 3 EPA PM2.5 Atmospheric Particle-State Proxy](./docs/NEST2_EPA_PM25_SMOKE_PROXY_REALDATA_2026-05-18.md)
+42. [Nest 2 / Nest 3 NOAA HMS Smoke + EPA PM2.5 Attribution Join](./docs/NEST2_NOAA_HMS_SMOKE_PM25_ATTRIBUTION_REALDATA_2026-05-18.md)
+43. [Nest 2 / Nest 3 WQP ORP Redox-Potential Real-Data Row](./docs/NEST2_WQP_ORP_REDOX_REALDATA_2026-05-18.md)
+44. [Nest 5 Claim-Support Pointer Pass](./docs/NEST5_CLAIM_SUPPORT_POINTER_PASS_2026-05-16.md)
+45. [Lattice Companion Full Nest Completion Outline](./docs/LATTICE_COMPANION_FULL_NEST_COMPLETION_OUTLINE_2026-05-16.md)
+46. [V8 Attention / MLP Nest 1 Bridge Protocol](./docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
+47. [V8 SAE Feature / Circuit Bridge Protocol](./docs/V8_SAE_FEATURE_CIRCUIT_BRIDGE_PROTOCOL_2026-04-29.md)
+48. [Phase 12B Biological Adapter White Paper](./docs/PHASE12B_BIOLOGICAL_ADAPTER_WHITE_PAPER_2026-04-23.md)
+49. [Phase 12B Large-Set Expansion Protocol](./docs/PHASE12B_LARGE_SET_EXPANSION_PROTOCOL_2026-04-25.md)
+50. [TOP-1/2 Dense Trajectory Preregistration](./docs/TOP12_DENSE_TRAJECTORY_PREREGISTRATION_2026-04-26.md)
 
 Visuals:
 
@@ -501,6 +529,10 @@ Visuals:
 - [Nest 2 Electrochemistry / Redox EIS Visual Card](./visuals/nest2_electrochemistry_eis_visual_card_2026-05-16.svg)
 - [Nest 2 DUCK/CV + EIS-to-SOH Follow-Up Visual](./visuals/nest2_duck_cv_eis_soh_followup_2026-05-17.svg)
 - [Nest 2 EPA Ozone Oxidant-State Visual](./visuals/nest2_epa_ozone_oxidant_state_2026-05-17.svg)
+- [Nest 2 EPA Ozone Precursor / Meteorology Visual](./visuals/nest2_epa_ozone_precursor_meteorology_2026-05-17.svg)
+- [Nest 2 EPA PM2.5 Atmospheric Particle-State Visual](./visuals/nest2_epa_pm25_smoke_proxy_2026-05-18.svg)
+- [Nest 2 NOAA HMS Smoke + EPA PM2.5 Attribution Visual](./visuals/nest2_noaa_hms_smoke_pm25_attribution_2026-05-18.svg)
+- [Nest 2 WQP ORP Redox-Potential Visual](./visuals/nest2_wqp_orp_redox_realdata_2026-05-18.svg)
 - [Nest 5 Convergence Matrix Visual](./visuals/nest5_convergence_matrix_2026-05-16.svg)
 
 ## Public / Private Boundary
