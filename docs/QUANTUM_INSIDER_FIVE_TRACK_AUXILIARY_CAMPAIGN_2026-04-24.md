@@ -11,6 +11,9 @@ Source:
 Build folder:
 [Quantum Insider Build Out](../quantum_insider_build_out/README.md)
 
+Visual RAG layer:
+[Mirror Index Visual RAG For Quantum Insider](../quantum_insider_build_out/MIRROR_INDEX_VISUAL_RAG_QUANTUM_INSIDER_2026-05-23.md)
+
 ## Purpose
 
 The Lattice Model Node Companion creates a useful new possibility:
@@ -193,12 +196,23 @@ The strongest near-term tracks appear to be:
 Airbus and HSBC remain viable if the local predecessor engines are built
 clearly enough before submission.
 
+2026-05-23 posture update:
+
+- lock the first four tracks as the primary campaign:
+  `Cleveland Clinic`, `E.ON`, `Volkswagen Group Innovation`, and `Airbus`
+- keep `HSBC` as optional / parking-lot unless the anomaly graph predecessor
+  becomes strong enough
+- add Mirror Index Visual RAG as the shared backend so the companion can
+  retrieve sponsor-specific visual nodes, local engine outputs, support labels,
+  controls, drift modes, and quantum-enabled forks from one architecture
+
 ## Companion Role
 
 The companion should eventually include a `Quantum Insider Campaign` mode:
 
 - click a track
 - show the relevant nests
+- retrieve the visual nodes and evidence cards from Mirror Index Visual RAG
 - show the local predecessor engine
 - show the quantum-enabled fork
 - show the planned benchmark

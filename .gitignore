@@ -17,6 +17,16 @@ tools/
 *.pkl
 *.joblib
 
+# Keep large/raw third-party measurement payloads out of the public-safe repo.
+# Public docs should cite DOI/source manifests and checksums instead.
+experiments/**/data/*.zip
+experiments/**/data/*.lvm
+experiments/**/data/*.mat
+experiments/**/data/*.csv
+experiments/**/data/*.xls
+experiments/**/data/*.xlsx
+experiments/**/data/extracted/
+
 artifacts/validation/datasets/matbench_mp_e_form_co_0.parquet
 artifacts/validation/engine02v_qm9_alpha/
 artifacts/validation/engine02v_qm9_alpha_rerun02/

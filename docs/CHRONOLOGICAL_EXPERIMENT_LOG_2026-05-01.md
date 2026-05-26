@@ -451,3 +451,96 @@ docs/MIRRORBENCH_RETRIEVAL_EVAL_SPEC_2026-05-05.md
    score retrieval quality before model tuning.
 7. Integrate the Nest 2 / Nest 3 / Nest 4 / Golden Mirror implementation
    examples into the non-provisional claim-support control surface.
+
+## 2026-05-25 - Nest 3 FASER Forced-Oscillation Frequency-Sweep Gate
+
+The post-Silverbox explicit sweep gate used the University of Minnesota Digital
+Conservancy / NASA LaRC `FASER Test 158` forced-oscillation wind-tunnel package.
+The local source files are:
+
+```text
+experiments/nest3_oscillator_faser/data/FASER_Test_158_Forced_Oscillation_Reduced_Data.zip
+experiments/nest3_oscillator_faser/data/FASER_Test_158_Metadata.pdf
+experiments/nest3_oscillator_faser/data/Run_Log_Test_158.xls
+```
+
+The runner and report are:
+
+```text
+experiments/nest3_oscillator_faser/run_faser_forced_oscillation_frequency_sweep_gate.py
+experiments/nest3_oscillator_faser/results/nest3_oscillator_faser_frequency_sweep_gate_2026-05-25.json
+docs/NEST3_OSCILLATOR_FASER_FREQUENCY_SWEEP_GATE_2026-05-25.md
+```
+
+This gate excludes explicit setting/context columns from model features:
+run ID, tare, frequency, `k`, amplitude, nondimensional rate, qbar, velocity,
+alpha, and beta. It tests force/moment coefficient readout-surface summaries
+against frequency and amplitude labels.
+
+Results:
+
+- high `0.75/1.0 Hz` vs lower `0.25/0.53 Hz`: AUC `0.940536`, p `0.003984`,
+  feature-shuffle AUC `0.586607`, curve-order-destroyed AUC `0.797440`
+- `0.25 Hz` vs `0.53 Hz`: AUC `0.985000`, p `0.003984`,
+  feature-shuffle AUC `0.499000`, curve-order-destroyed AUC `0.827667`
+- `0.53 Hz` vs high `0.75/1.0 Hz`: AUC `0.894000`, p `0.003984`,
+  feature-shuffle AUC `0.319000`, curve-order-destroyed AUC `0.693667`
+- high amplitude `>=20` vs low amplitude `<=10`: AUC `0.916333`,
+  p `0.003984`, feature-shuffle AUC `0.365167`,
+  curve-order-destroyed AUC `0.751000`
+
+Interpretation: explicit forced-oscillation frequency/amplitude readout-surface
+support, with partial curve-state dependence. Because curve-order-destroyed
+scores remain partly elevated, this is not a raw phase-order closeout. Keep
+Silverbox as the public benchmark forced-oscillator phase-coupling closeout and
+FASER as the explicit sweep / amplitude support row.
+
+## 2026-05-26 - Nest 3 FrID Clamped Oscillator Frequency-Response Gate
+
+The next post-FASER oscillator continuation used the primary Zenodo FrID
+dataset, `FrID: Frequency response based identification`, DOI
+`10.5281/zenodo.13305097`. The local source files are:
+
+```text
+experiments/nest3_oscillator_frid/data/ClampedOsci.zip
+experiments/nest3_oscillator_frid/data/frid_zenodo_13305097.json
+```
+
+The local `ClampedOsci.zip` MD5 matches the Zenodo API checksum:
+
+```text
+0c97b222c71764ffe2629a3782edb521
+```
+
+The runner and report are:
+
+```text
+experiments/nest3_oscillator_frid/run_frid_clamped_oscillator_frequency_response_gate.py
+experiments/nest3_oscillator_frid/results/nest3_oscillator_frid_clamped_frequency_response_gate_2026-05-26.json
+docs/NEST3_OSCILLATOR_FRID_CLAMPED_FREQUENCY_RESPONSE_GATE_2026-05-26.md
+```
+
+The runner parsed `7078` measured LabVIEW forced-response segments from four
+amplitude sweeps (`0.5`, `1.0`, `1.5`, `2.0`) over `45.0` to `48.0 Hz`.
+Features exclude explicit amplitude/frequency labels, file and segment IDs,
+shaker-control input, noise fields, and comments.
+
+Results:
+
+- amplitude `2.0` vs `0.5`, frequency groups held out: AUC `1.000000`,
+  p `0.003984`, feature-shuffle AUC `0.526514`, distribution-only AUC
+  `1.000000`, time-order-destroyed AUC `1.000000`
+- amplitude `1.5/2.0` vs `0.5/1.0`, frequency groups held out: AUC
+  `1.000000`, p `0.003984`, feature-shuffle AUC `0.501185`,
+  distribution-only AUC `1.000000`, time-order-destroyed AUC `1.000000`
+- high frequency quartile `>=47.240 Hz` vs low quartile `<=45.740 Hz`,
+  amplitude groups held out: AUC `0.856880`, balanced accuracy `0.791806`,
+  p `0.003984`, feature-shuffle AUC `0.514505`, distribution-only AUC
+  `0.695644`, time-order-destroyed AUC `0.687492`
+
+Interpretation: measured nonlinear oscillator frequency-response support.
+Amplitude state is visible as response magnitude, not phase/order. The
+frequency quartile task is the stronger continuation row because it survives
+amplitude-heldout grouping and feature-shuffle collapse. This does not replace
+Silverbox as the clean phase-coupling closeout; it adds measured nonlinear
+forced-response amplitude/frequency support.

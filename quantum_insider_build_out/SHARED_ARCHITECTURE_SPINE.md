@@ -35,6 +35,42 @@ It should show:
 - the failure / drift mode
 - the PoC output
 
+## Mirror Index Visual RAG Layer
+
+The companion should not remain only a static visual map. It should sit on top
+of a `Mirror Index Visual RAG` layer that stores the track evidence as a
+tree-routed visual/vector memory system.
+
+Core relation:
+
+```text
+enterprise challenge
+-> nest lane
+-> local predecessor engine
+-> visual node
+-> semantic / visual vector
+-> support-state label
+-> control / invariant / drift tags
+-> retrieval trace
+-> proposal output
+```
+
+This layer gives each sponsor track a searchable proof surface:
+
+- `Cleveland Clinic`: protein / residue / allosteric-path visuals plus pathway
+  preservation controls
+- `E.ON`: distribution-grid graph visuals plus overload, resilience, capacity,
+  and cost-state controls
+- `Volkswagen`: scene / instruction / action-route visuals plus VLA grounding,
+  safety, and drift controls
+- `Airbus`: flow-field / geometry / pressure-state visuals plus aerodynamic
+  regime and instability controls
+- `HSBC` optional: transaction-graph visuals plus anomaly and false-positive
+  controls
+
+The vector layer finds visual and semantic neighbors. The tree route preserves
+the proof path, support status, release boundary, and next gate.
+
 ## Shared Proposal Skeleton
 
 Each proposal should answer:
@@ -59,4 +95,3 @@ Over-deliver in the local demonstrator.
 The campaign should feel like:
 
 one architecture, five serious technical doors.
-

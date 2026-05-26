@@ -304,6 +304,17 @@ Completed enough to show:
 - `Nest 5` is the convergence target: a Golden Mirror model tuned from
   supported lanes across AI internals, circuits / hardware, structured matter,
   resonance / field systems, biology, and multi-class convergence tasks
+- `Nest 3 / Oscillators / Resonance` now has a three-part public support chain:
+  Silverbox gives repeated-window forced-oscillator phase-coupling closeout;
+  FASER Test 158 adds explicit wind-tunnel forced-oscillation
+  frequency/amplitude readout-surface support; and the FrID ClampedOsci Zenodo
+  dataset adds measured nonlinear oscillator frequency-response support from
+  `7078` LabVIEW forced-response segments. FrID amplitude rows are
+  magnitude-surface support because distribution-only and time-order-destroyed
+  controls stay high. The frequency quartile row is stronger: amplitude groups
+  held out, observed AUC `0.856880`, label-shuffle p `0.003984`, and
+  feature-shuffle AUC `0.514505`. FASER and FrID should not be described as
+  raw phase-order closeouts; keep Silverbox as the clean phase-coupling row.
 - the cosmic / universal nests are mapped as candidate bridge layers for later
   real-data gates
 - the local visual companion can demonstrate the whole lattice

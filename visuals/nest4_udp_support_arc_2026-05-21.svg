@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Nest 4 / Nest 2 UDP Support Arc</title>
+  <desc id="desc">Public-safe visual card summarizing five real-data UDP support reads and their shuffled controls.</desc>
+  <rect width="1200" height="720" fill="#f4f0e8"/>
+  <text x="54" y="66" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#171717">Nest 4 / Nest 2 UDP Support Arc</text>
+  <text x="54" y="104" font-family="Arial, sans-serif" font-size="17" fill="#2c2c2c">Real data lanes: cells, metabolism, USDA nutrients, ChEBI class rows, and ChEBI ontology closure</text>
+
+  <g transform="translate(54 140)">
+    <rect width="1088" height="104" rx="8" fill="#ffffff" stroke="#d8c9b9"/>
+    <text x="24" y="36" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#202020">Pattern Read</text>
+    <text x="24" y="66" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">source -> state/control -> transform -> drift controls -> score -> support read</text>
+    <text x="24" y="90" font-family="Arial, sans-serif" font-size="15" fill="#2a2a2a">Observed separation stays high when the real pattern is preserved; shuffled labels and feature shuffles collapse near chance.</text>
+  </g>
+
+  <g transform="translate(54 290)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#171717">Observed ROC-AUC vs Controls</text>
+    <line x1="80" y1="300" x2="1080" y2="300" stroke="#7f7468" stroke-width="2"/>
+    <line x1="80" y1="36" x2="80" y2="300" stroke="#7f7468" stroke-width="2"/>
+    <text x="28" y="304" font-family="Arial, sans-serif" font-size="13" fill="#333">0.0</text>
+    <text x="28" y="171" font-family="Arial, sans-serif" font-size="13" fill="#333">0.5</text>
+    <text x="28" y="42" font-family="Arial, sans-serif" font-size="13" fill="#333">1.0</text>
+
+    <g transform="translate(118 0)">
+      <rect x="0" y="37" width="34" height="263" fill="#215a8a"/>
+      <rect x="42" y="167" width="34" height="133" fill="#c45f36"/>
+      <rect x="84" y="168" width="34" height="132" fill="#8e9677"/>
+      <text x="-2" y="28" font-family="Arial, sans-serif" font-size="12" fill="#111">0.995</text>
+      <text x="8" y="326" font-family="Arial, sans-serif" font-size="12" fill="#222">cells</text>
+    </g>
+
+    <g transform="translate(308 0)">
+      <rect x="0" y="46" width="34" height="254" fill="#215a8a"/>
+      <rect x="42" y="169" width="34" height="131" fill="#c45f36"/>
+      <rect x="84" y="168" width="34" height="132" fill="#8e9677"/>
+      <text x="-2" y="37" font-family="Arial, sans-serif" font-size="12" fill="#111">0.963</text>
+      <text x="-10" y="326" font-family="Arial, sans-serif" font-size="12" fill="#222">metab</text>
+    </g>
+
+    <g transform="translate(498 0)">
+      <rect x="0" y="40" width="34" height="260" fill="#215a8a"/>
+      <rect x="42" y="171" width="34" height="129" fill="#c45f36"/>
+      <rect x="84" y="156" width="34" height="144" fill="#8e9677"/>
+      <text x="-2" y="31" font-family="Arial, sans-serif" font-size="12" fill="#111">0.989</text>
+      <text x="-12" y="326" font-family="Arial, sans-serif" font-size="12" fill="#222">USDA</text>
+    </g>
+
+    <g transform="translate(688 0)">
+      <rect x="0" y="42" width="34" height="258" fill="#215a8a"/>
+      <rect x="42" y="168" width="34" height="132" fill="#c45f36"/>
+      <rect x="84" y="166" width="34" height="134" fill="#8e9677"/>
+      <text x="-2" y="33" font-family="Arial, sans-serif" font-size="12" fill="#111">0.981</text>
+      <text x="-16" y="326" font-family="Arial, sans-serif" font-size="12" fill="#222">ChEBI</text>
+    </g>
+
+    <g transform="translate(878 0)">
+      <rect x="0" y="38" width="34" height="262" fill="#215a8a"/>
+      <rect x="42" y="168" width="34" height="132" fill="#c45f36"/>
+      <rect x="84" y="166" width="34" height="134" fill="#8e9677"/>
+      <text x="-2" y="29" font-family="Arial, sans-serif" font-size="12" fill="#111">0.993</text>
+      <text x="-24" y="326" font-family="Arial, sans-serif" font-size="12" fill="#222">ontology</text>
+    </g>
+  </g>
+
+  <g transform="translate(54 646)">
+    <rect x="0" y="-18" width="16" height="16" fill="#215a8a"/>
+    <text x="24" y="-5" font-family="Arial, sans-serif" font-size="14" fill="#222">observed</text>
+    <rect x="130" y="-18" width="16" height="16" fill="#c45f36"/>
+    <text x="154" y="-5" font-family="Arial, sans-serif" font-size="14" fill="#222">shuffled labels</text>
+    <rect x="298" y="-18" width="16" height="16" fill="#8e9677"/>
+    <text x="322" y="-5" font-family="Arial, sans-serif" font-size="14" fill="#222">feature shuffle</text>
+    <text x="724" y="-5" font-family="Arial, sans-serif" font-size="14" fill="#555">Boundary: candidate support; not clinical, diet, or HRV/Muse response closeout.</text>
+  </g>
+</svg>
