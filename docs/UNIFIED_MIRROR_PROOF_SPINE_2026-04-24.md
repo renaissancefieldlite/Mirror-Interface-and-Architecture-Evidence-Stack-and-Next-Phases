@@ -315,6 +315,19 @@ Completed enough to show:
   held out, observed AUC `0.856880`, label-shuffle p `0.003984`, and
   feature-shuffle AUC `0.514505`. FASER and FrID should not be described as
   raw phase-order closeouts; keep Silverbox as the clean phase-coupling row.
+- `Nest 3 / Fusion + Solar` now has a first NASA OMNIWeb / SPDF source gate:
+  OMNI2 `2024-2025` hourly solar-wind / IMF / plasma rows, `12`-hour active
+  `Kp >= 5` windows versus quiet `Kp <= 2` windows, month-group holdout,
+  geomagnetic label columns excluded from features, observed AUC `0.997956`,
+  shuffled-label p `0.004975`, and feature-shuffle AUC `0.511353`.
+  Time-order-destroyed AUC remained high, so the read is
+  solar-plasma window-statistic support, not raw phase-order support.
+- `Nest 3 / Gases / Liquids / Phases` now has a first NIST Chemistry WebBook
+  thermophysical source gate: saturated liquid versus vapor rows for water,
+  carbon dioxide, methane, and nitrogen; `4808` records; species-held-out AUC
+  `0.929272`; shuffled-label p `0.004975`; feature-shuffle AUC `0.489769`;
+  pressure-temperature-only AUC `0.500000`. Read as thermophysical
+  liquid/vapor phase-state support, not full phase-diagram closeout.
 - the cosmic / universal nests are mapped as candidate bridge layers for later
   real-data gates
 - the local visual companion can demonstrate the whole lattice

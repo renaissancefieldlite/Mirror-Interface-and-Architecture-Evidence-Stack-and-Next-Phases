@@ -38,10 +38,16 @@ Current known state:
   Luther phase/order, Silverbox forced-oscillator phase coupling, FASER
   forced-oscillation sweep rows, and FrID measured nonlinear
   frequency-response rows.
-- `Fusion + Solar`, `Gases / Liquids / Phases`, `Gravity / Orbits`, and
-  `Terahertz` remain mapped continuation lanes until dedicated real source
-  packets are selected and scored. Adjacent rows may support parts of their
-  bridge logic, but they are not standalone lane closeouts yet.
+- `Fusion + Solar`: first NASA OMNIWeb / SPDF solar-plasma window support row
+  is seated. It carries a distribution/window-statistic caveat because
+  time-order-destroyed controls stayed high.
+- `Gases / Liquids / Phases`: first NIST Chemistry WebBook thermophysical
+  liquid/vapor support row is seated under species-held-out validation. It is
+  not a full phase-diagram closeout yet.
+- `Gravity / Orbits` and `Terahertz` remain mapped continuation lanes until
+  dedicated real source packets are selected and scored. Adjacent rows may
+  support parts of their bridge logic, but they are not standalone lane
+  closeouts yet.
 
 ## Priority Lane Table
 
@@ -51,8 +57,8 @@ Current known state:
 | `2` | `Fire + Plasma` | Tests high-energy reaction and field-regime dynamics without jumping to cosmic claims. | Select combustion emission, flame chemistry, plasma spectrum, or reaction-regime dataset. | flame/plasma regime vs baseline/wrong regime; shuffled wavelength or condition labels | `NEST3_FIRE_PLASMA_UDP_SUPPORT_READ` |
 | `3` | `EMF / Fields` | Turns field language into measurable source-on/off, intensity, frequency, distance, or environmental field rows. | Use instrument source-on/off captures or public field measurement data. | source-on vs source-off; distance/intensity/frequency bands; time-shifted/null controls | `NEST3_EMF_FIELDS_UDP_SUPPORT_READ` |
 | `4` | `Oscillators / Resonance` | Tests damping, forcing, entrainment, phase relation, and drift as real dynamics. | Use oscillator instrument row, public vibration/acoustic/pendulum/control dataset, or generated-from-instrument capture. | forced vs unforced; damped vs sustained; phase-lock vs shuffled phase | `NEST3_OSCILLATOR_RESONANCE_UDP_SUPPORT_READ` |
-| `5` | `Fusion + Solar` | Bridges hydrogen/isotope, plasma, and solar output as observable physical systems. | Select public solar irradiance / solar wind / spectral / hydrogen-isotope or plasma measurement source. | solar/plasma regime vs quiet/baseline windows; isotope or spectral class controls | `NEST3_FUSION_SOLAR_UDP_SUPPORT_READ` |
-| `6` | `Gases / Liquids / Phases` | Tests thermodynamic phase/state behavior with pressure, temperature, density, and phase controls. | Select NIST-style fluid/phase rows or public thermodynamic data. | gas/liquid/solid/phase transition vs wrong-condition controls | `NEST3_PHASE_FLUID_UDP_SUPPORT_READ` |
+| `5` | `Fusion + Solar` | Bridges hydrogen/isotope, plasma, and solar output as observable physical systems. | NASA OMNIWeb / SPDF OMNI2 hourly solar-wind rows now executed. | active `Kp >= 5` windows vs quiet `Kp <= 2` windows; geomagnetic labels excluded from features | `NEST3_FUSION_SOLAR_OMNIWEB_SUPPORT_READ_2026-05-26` |
+| `6` | `Gases / Liquids / Phases` | Tests thermodynamic phase/state behavior with pressure, temperature, density, and phase controls. | NIST Chemistry WebBook saturation fluid-property tables now executed. | saturated liquid vs vapor rows; species-held-out controls; pressure-temperature-only null | `NEST3_GASES_LIQUIDS_PHASES_NIST_SUPPORT_READ_2026-05-26` |
 | `7` | `Gravity / Orbits` | Keeps orbit/resonance lane observable and public-data disciplined. | Select public ephemeris/orbit dataset. | orbital window vs shuffled orbit/time windows; resonance class vs null | `NEST3_GRAVITY_ORBITS_UDP_SUPPORT_READ` |
 | `8` | `Terahertz cellular prototype` | Bridges physical spectra into water, biomolecules, cells, and DNA only after real THz/spectral source is seated. | Pair THz/spectral source with cellular or biomolecular response target. | exposure / spectral window vs baseline or wrong-window controls | `NEST3_THz_CELLULAR_BRIDGE_READ` |
 
@@ -69,12 +75,16 @@ Current known state:
    These are closest to the B.A.S.I.S. timing/coherence logic but must use
    physical captures or public measurements, not metaphor language.
 
-4. Run `Fusion + Solar` only after the first high-energy lane works.
-   Keep it observable: plasma, solar, spectra, time windows, hydrogen/isotope
-   rows, and controls.
+4. `Fusion + Solar` first source gate is complete through NASA OMNIWeb / SPDF.
+   Next layer: named storm / event-block holdouts, solar-cycle seasonal/null
+   controls, and NASA POWER solar-radiation adjacency.
 
-5. Keep `Gravity / Orbits` and cosmic-scale rows as observable-data continuation
-   lanes until smaller physical lanes have scores.
+5. `Gases / Liquids / Phases` first source gate is complete through NIST
+   saturation tables. Next layer: supercritical / isobaric rows,
+   pressure-band holdouts, and multi-phase extension.
+
+6. Keep `Gravity / Orbits`, `Terahertz`, and cosmic-scale rows as
+   observable-data continuation lanes until dedicated source gates have scores.
 
 ## Support Language Rules
 
@@ -109,11 +119,11 @@ and a recorded support read.
 
 ## Next Clean Gate
 
-Pick one source for the first Nest 3 second-family run:
+Pick one source for the next unseated Nest 3 physical lane:
 
 ```text
-Preferred first run: IR / Raman / THz spectral dataset
-Backup first run: combustion / plasma spectral dataset
+Preferred next run: Gravity / Orbits public ephemeris/orbit dataset
+Backup next run: Terahertz public spectral/exposure dataset
 ```
 
 Then produce:

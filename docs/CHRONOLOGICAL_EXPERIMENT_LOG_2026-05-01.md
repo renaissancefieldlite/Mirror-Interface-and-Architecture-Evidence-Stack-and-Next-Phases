@@ -544,3 +544,54 @@ frequency quartile task is the stronger continuation row because it survives
 amplitude-heldout grouping and feature-shuffle collapse. This does not replace
 Silverbox as the clean phase-coupling closeout; it adds measured nonlinear
 forced-response amplitude/frequency support.
+
+## 2026-05-26 - Nest 3 Fusion + Solar OMNIWeb Source Gate
+
+The first Fusion + Solar source gate used NASA OMNIWeb / SPDF OMNI2 hourly
+solar-wind rows from `2024` and `2025`.
+
+The local runner and report are:
+
+```text
+experiments/nest3_fusion_solar_omniweb/run_omniweb_solar_plasma_gate.py
+experiments/nest3_fusion_solar_omniweb/results/nest3_fusion_solar_omniweb_2026-05-26.json
+docs/NEST3_FUSION_SOLAR_OMNIWEB_SUPPORT_READ_2026-05-26.md
+```
+
+State/control: `12`-hour target windows with max `Kp >= 5` versus quiet
+windows with max `Kp <= 2`. Kp, Dst, AE, AL, AU, ap, PC(N), and other
+geomagnetic response labels are excluded from features; the feature packet is
+solar-wind / IMF / plasma / proton-flux / solar-activity window statistics.
+
+Results: `17544` source hourly rows, `1133` used windows, `249` target
+windows, `884` control windows, `324` features, and `24` month groups.
+Observed ROC AUC `0.997956`, balanced accuracy `0.987443`; shuffled-label
+mean AUC `0.500863`, p `0.004975`; feature-shuffle AUC `0.511353`.
+Time-order-destroyed AUC stayed high at `0.997851`, so the public read is
+`support; distribution/window-statistic caveat`, not raw phase-order support.
+
+## 2026-05-26 - Nest 3 Gases / Liquids / Phases NIST Source Gate
+
+The first Gases / Liquids / Phases source gate used NIST Chemistry WebBook
+thermophysical saturation-property downloads for water, carbon dioxide,
+methane, and nitrogen.
+
+The local runner and report are:
+
+```text
+experiments/nest3_gases_liquids_phases_nist/run_nist_fluid_phase_gate.py
+experiments/nest3_gases_liquids_phases_nist/results/nest3_gases_liquids_phases_nist_2026-05-26.json
+docs/NEST3_GASES_LIQUIDS_PHASES_NIST_SUPPORT_READ_2026-05-26.md
+```
+
+State/control: saturated liquid property rows versus saturated vapor property
+rows. Validation holds out entire species. Phase label, pair ID, and
+surface-tension missingness are excluded from features.
+
+Results: `4808` records, `2404` target liquid rows, `2404` vapor controls,
+`4` species, `2404` saturation pairs, and `13` features. Observed ROC AUC
+`0.929272`, balanced accuracy `0.849210`; shuffled-label mean AUC `0.499840`,
+p `0.004975`; feature-shuffle AUC `0.489769`. No-density/volume control
+stayed high at AUC `0.925063`, while pressure-temperature-only was chance at
+AUC `0.500000`. Read as first thermophysical phase-state support, not full
+phase-diagram closeout.

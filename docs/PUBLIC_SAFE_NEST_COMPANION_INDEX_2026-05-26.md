@@ -28,8 +28,8 @@ or claim-sensitive mechanics without explicit clearance.
 | `EMF / Fields` | waveform-state support complete; time-order caveat preserved | `NEST3_EMF_OSCILLATOR_RD_PCI_VI_SUPPORT_READ_2026-05-25.md` |
 | `Oscillators / Resonance` | multi-row support chain seated: NIST phase/order, Silverbox phase-coupling closeout, FASER sweep support, FrID measured frequency-response support | `NEST3_OSCILLATOR_LUTHER_NIST_PHASE_ORDER_SUPPORT_READ_2026-05-25.md`; `NEST3_OSCILLATOR_SILVERBOX_FORCED_CLOSEOUT_2026-05-25.md`; `NEST3_OSCILLATOR_FASER_FREQUENCY_SWEEP_GATE_2026-05-25.md`; `NEST3_OSCILLATOR_FRID_CLAMPED_FREQUENCY_RESPONSE_GATE_2026-05-26.md` |
 | `Hardware timing / coherence` | early public-safe pilot rows seated | `NEST3D_HARDWARE_TIMING_COHERENCE_PILOT_2026-05-04.md`; `NEST3B_N3E_ARC15_ACOUSTIC_ADAPTER_GATE_2026-05-04.md` |
-| `Fusion + Solar` | mapped continuation lane; needs dedicated solar/plasma/isotope source | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md` |
-| `Gases / Liquids / Phases` | mapped continuation lane; RD-PCI water/plasma and FrID oscillator rows are adjacent support only | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md` |
+| `Fusion + Solar` | first OMNIWeb solar-plasma source gate complete; support with distribution/window-statistic caveat | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md`; `NEST3_FUSION_SOLAR_SOURCE_GATE_PLAN_2026-05-26.md`; `NEST3_FUSION_SOLAR_OMNIWEB_SUPPORT_READ_2026-05-26.md` |
+| `Gases / Liquids / Phases` | first NIST thermophysical liquid/vapor source gate complete; species-held-out support | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md`; `NEST3_GASES_LIQUIDS_PHASES_SOURCE_GATE_PLAN_2026-05-26.md`; `NEST3_GASES_LIQUIDS_PHASES_NIST_SUPPORT_READ_2026-05-26.md` |
 | `Gravity / Orbits` | mapped continuation lane; NIST Luther is gravity-measurement oscillator support, not orbit closeout | `NEST3_OSCILLATOR_LUTHER_NIST_PHASE_ORDER_SUPPORT_READ_2026-05-25.md`; `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md` |
 | `Terahertz` | mapped continuation lane; needs real THz spectral or exposure dataset | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md` |
 
@@ -78,4 +78,3 @@ Before pushing a public-safe repo:
 4. keep raw data as source manifest links unless the dataset license and repo
    size policy allow inclusion;
 5. run a final public/private boundary scan.
-

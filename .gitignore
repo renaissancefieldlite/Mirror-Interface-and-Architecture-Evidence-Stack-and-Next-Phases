@@ -20,6 +20,11 @@ tools/
 # Keep large/raw third-party measurement payloads out of the public-safe repo.
 # Public docs should cite DOI/source manifests and checksums instead.
 experiments/**/data/*.zip
+experiments/**/data/*.dat
+experiments/**/data/*.text
+experiments/**/data/*.txt
+experiments/**/data/*.tsv
+experiments/**/data/*.html
 experiments/**/data/*.lvm
 experiments/**/data/*.mat
 experiments/**/data/*.csv
