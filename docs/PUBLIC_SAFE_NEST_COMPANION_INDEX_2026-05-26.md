@@ -19,19 +19,28 @@ source page / DOI / manifest -> state/control -> score -> boundary -> next gate
 Do not publish private biometric captures, device identifiers, raw local code,
 or claim-sensitive mechanics without explicit clearance.
 
+## Current Closeout Board
+
+| Closeout surface | Role |
+| --- | --- |
+| `FINAL_NEST_CLOSEOUT_BOARD_2026-07-14.md` | lane-by-lane closed / support-bearing / pending-row / optional-extension map |
+| `NEST3_BACKFILL_CLOSEOUT_VERIFICATION_2026-07-14.md` | rerun verification for Fusion + Solar and Gases / Liquids / Phases hardening |
+| `../visuals/final_nest_closeout_board_2026-07-14.svg` | public visual board for the full Nest closeout state |
+| `../visuals/nest3_backfill_closeout_verification_2026-07-14.svg` | public visual board for the two completed Nest 3 backfill gates |
+
 ## Nest 3: Classical Coherence / Field-Physical Lanes
 
 | Lane | Current public-safe state | Companion docs |
 | --- | --- | --- |
-| `Waves / Spectra / Phase-Lock` | supported physical spectra rows; Raman still class-transition support, not pure phase-lock | `NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md`; `NEST3_RAMDB_RAMAN_UDP_SUPPORT_READ_2026-05-24.md`; `NEST3_RAMDB_RAMAN_HARD_CONTROLS_2026-05-24.md` |
+| `Waves / Spectra / Phase-Lock` | supported physical spectra rows plus cross-spectral and same-family NIST IR / NIST THz / NASA Ames Raman panels; THz repeated-scan sample/reference row is support-bearing with nuisance caveat; THz biological GEO panel seats real exposure-response rows, while the harmonized shared-feature/pathway holdout stays weak/mixed; still not pure phase-lock | `NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md`; `NEST3_RAMDB_RAMAN_UDP_SUPPORT_READ_2026-05-24.md`; `NEST3_RAMDB_RAMAN_HARD_CONTROLS_2026-05-24.md`; `NEST3_SECOND_SPECTRAL_NIST_GAS_IR_SUPPORT_READ_2026-05-27.md`; `NEST3_CROSS_SPECTRAL_FAMILY_PANEL_READ_2026-06-11.md`; `NEST3_SAME_FAMILY_SPECTRAL_PANEL_READ_2026-06-11.md`; `NEST3_THZ_SOURCE_REFERENCE_GATE_READ_2026-06-11.md`; `NEST3_THZ_REPLICATE_SOURCE_REFERENCE_GATE_READ_2026-06-11.md`; `NEST3_THZ_BIOLOGICAL_GEO_PANEL_READ_2026-06-11.md`; `NEST3_THZ_BIOLOGY_MANIFEST_SHARED_HOLDOUT_READ_2026-06-12.md` |
 | `Fire + Plasma` | first plasma OES source gate complete | `NEST3_FIRE_PLASMA_RD_PCI_OES_SUPPORT_READ_2026-05-24.md` |
 | `EMF / Fields` | waveform-state support complete; time-order caveat preserved | `NEST3_EMF_OSCILLATOR_RD_PCI_VI_SUPPORT_READ_2026-05-25.md` |
 | `Oscillators / Resonance` | multi-row support chain seated: NIST phase/order, Silverbox phase-coupling closeout, FASER sweep support, FrID measured frequency-response support | `NEST3_OSCILLATOR_LUTHER_NIST_PHASE_ORDER_SUPPORT_READ_2026-05-25.md`; `NEST3_OSCILLATOR_SILVERBOX_FORCED_CLOSEOUT_2026-05-25.md`; `NEST3_OSCILLATOR_FASER_FREQUENCY_SWEEP_GATE_2026-05-25.md`; `NEST3_OSCILLATOR_FRID_CLAMPED_FREQUENCY_RESPONSE_GATE_2026-05-26.md` |
 | `Hardware timing / coherence` | early public-safe pilot rows seated | `NEST3D_HARDWARE_TIMING_COHERENCE_PILOT_2026-05-04.md`; `NEST3B_N3E_ARC15_ACOUSTIC_ADAPTER_GATE_2026-05-04.md` |
-| `Fusion + Solar` | first OMNIWeb solar-plasma source gate complete; support with distribution/window-statistic caveat | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md`; `NEST3_FUSION_SOLAR_SOURCE_GATE_PLAN_2026-05-26.md`; `NEST3_FUSION_SOLAR_OMNIWEB_SUPPORT_READ_2026-05-26.md` |
-| `Gases / Liquids / Phases` | first NIST thermophysical liquid/vapor source gate complete; species-held-out support | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md`; `NEST3_GASES_LIQUIDS_PHASES_SOURCE_GATE_PLAN_2026-05-26.md`; `NEST3_GASES_LIQUIDS_PHASES_NIST_SUPPORT_READ_2026-05-26.md` |
-| `Gravity / Orbits` | mapped continuation lane; NIST Luther is gravity-measurement oscillator support, not orbit closeout | `NEST3_OSCILLATOR_LUTHER_NIST_PHASE_ORDER_SUPPORT_READ_2026-05-25.md`; `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md` |
-| `Terahertz` | mapped continuation lane; needs real THz spectral or exposure dataset | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md` |
+| `Fusion + Solar` | OMNIWeb source gate plus event-block / seasonal hardening complete; support remains window-statistic, not raw phase-order | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md`; `NEST3_FUSION_SOLAR_SOURCE_GATE_PLAN_2026-05-26.md`; `NEST3_FUSION_SOLAR_OMNIWEB_SUPPORT_READ_2026-05-26.md`; `NEST3_FUSION_SOLAR_OMNIWEB_HARDENING_READ_2026-05-26.md` |
+| `Gases / Liquids / Phases` | NIST saturation liquid/vapor plus isobaric supercritical hardening complete; stronger phase-diagram support with boundary caveat | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md`; `NEST3_GASES_LIQUIDS_PHASES_SOURCE_GATE_PLAN_2026-05-26.md`; `NEST3_GASES_LIQUIDS_PHASES_NIST_SUPPORT_READ_2026-05-26.md`; `NEST3_GASES_LIQUIDS_PHASES_NIST_HARDENING_READ_2026-05-26.md` |
+| `Gravity / Orbits` | first NASA Exoplanet Archive adjacent-orbit source gate complete; support with first-pass orbit-architecture caveat | `NEST3_OSCILLATOR_LUTHER_NIST_PHASE_ORDER_SUPPORT_READ_2026-05-25.md`; `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md`; `NEST3_GRAVITY_ORBITS_EXOPLANET_SUPPORT_READ_2026-05-26.md` |
+| `Terahertz` | NIST THz spectral gate complete, same-family THz stress rows executed, hard cross-material source/reference transfer weak/null, repeated-scan THz-TDS source/reference support seated, first biological GEO exposure-response panel scored, and harmonized manifest complete; cross-source shared-feature/pathway transfer remains weak/mixed, so full sham/off-window/heat/frequency/power/duration/temperature matrix remains open | `NEST3_FIELD_PHYSICAL_LANE_ROADMAP_2026-05-24.md`; `NEST3_TERAHERTZ_NIST_MATERIAL_FAMILY_SUPPORT_READ_2026-05-27.md`; `NEST3_CROSS_SPECTRAL_FAMILY_PANEL_READ_2026-06-11.md`; `NEST3_SAME_FAMILY_SPECTRAL_PANEL_READ_2026-06-11.md`; `NEST3_THZ_SOURCE_REFERENCE_GATE_READ_2026-06-11.md`; `NEST3_THZ_REPLICATE_SOURCE_REFERENCE_GATE_READ_2026-06-11.md`; `NEST3_THZ_BIOLOGICAL_GEO_PANEL_READ_2026-06-11.md`; `NEST3_THZ_BIOLOGY_MANIFEST_SHARED_HOLDOUT_READ_2026-06-12.md` |
 
 ## Nest 4: Biology / Biomolecular / Metabolic Lanes
 
@@ -40,7 +49,7 @@ or claim-sensitive mechanics without explicit clearance.
 | `Cells + Genome` | first real clinical/genomic tabular support row complete | `NEST4_CELLS_GENOME_WDBC_UDP_SUPPORT_READ_2026-05-21.md` |
 | `Metabolism` | first clinical/metabolic support pass complete; small source limitation preserved | `NEST4_METABOLISM_DIABETES_UDP_SUPPORT_READ_2026-05-21.md` |
 | `Food / Nutrient Composition` | first USDA/FoodData-style support row complete | `NEST4_FOOD_NUTRIENT_USDA_UDP_SUPPORT_READ_2026-05-21.md` |
-| `Metabolite / Ontology` | ChEBI metabolite class and ontology closure support rows complete | `NEST4_METABOLITE_CLASS_CHEBI_UDP_SUPPORT_READ_2026-05-21.md`; `NEST4_BIOMOLECULAR_PRIMITIVES_CHEBI_ONTOLOGY_CLOSURE_READ_2026-05-21.md` |
+| `Metabolite / Ontology` | ChEBI metabolite class, amino/fatty ontology closure, nucleotide/carbohydrate ontology closure, independent LIPID MAPS lipid-core support, GlyTouCan/GlyCosmos glycan-source support, and HMDB access-gate read complete | `NEST4_METABOLITE_CLASS_CHEBI_UDP_SUPPORT_READ_2026-05-21.md`; `NEST4_BIOMOLECULAR_PRIMITIVES_CHEBI_ONTOLOGY_CLOSURE_READ_2026-05-21.md`; `NEST4_NUCLEOTIDE_CARBOHYDRATE_CHEBI_CLOSURE_READ_2026-05-27.md`; `NEST4_LIPIDMAPS_LMSD_CORE_CONFIRMATION_READ_2026-05-27.md`; `NEST4_GLYTOUCAN_GLYCAN_SOURCE_CONFIRMATION_READ_2026-05-27.md`; `NEST4_HMDB_ACCESS_GATE_2026-05-27.md` |
 | `B.A.S.I.S. capture bridge` | public-safe arc summary only; private raw Muse/MoFit/Withings captures stay out of public repo unless cleared | `NEST4_UDP_SUPPORT_ARC_PUBLIC_SAFE_SUMMARY_2026-05-21.md` |
 
 ## Cross-Program Public-Safe Buildout Docs

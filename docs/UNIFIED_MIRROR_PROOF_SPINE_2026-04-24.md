@@ -322,12 +322,119 @@ Completed enough to show:
   shuffled-label p `0.004975`, and feature-shuffle AUC `0.511353`.
   Time-order-destroyed AUC remained high, so the read is
   solar-plasma window-statistic support, not raw phase-order support.
+- `Nest 3 / Fusion + Solar` hardening adds event-block and seasonal/null
+  controls: `57` storm/event blocks, event-block AUC `0.998851`,
+  shuffled-label p `0.004975`, within-month shuffle AUC `0.574688`,
+  feature-shuffle AUC `0.501022`, same-active-month AUC `0.998667`, and
+  calendar/season-only AUC `0.630742`. Read as hardened solar-plasma
+  window-statistic support, not raw phase-order proof.
 - `Nest 3 / Gases / Liquids / Phases` now has a first NIST Chemistry WebBook
   thermophysical source gate: saturated liquid versus vapor rows for water,
   carbon dioxide, methane, and nitrogen; `4808` records; species-held-out AUC
   `0.929272`; shuffled-label p `0.004975`; feature-shuffle AUC `0.489769`;
   pressure-temperature-only AUC `0.500000`. Read as thermophysical
   liquid/vapor phase-state support, not full phase-diagram closeout.
+- `Nest 3 / Gases / Liquids / Phases` hardening adds NIST isobaric rows for
+  liquid, vapor, and supercritical phases across water, carbon dioxide,
+  methane, and nitrogen: `931` records, `276` supercritical targets,
+  `655` controls, `20` source tables, species-pressure holdout AUC
+  `0.996067`, shuffled-label p `0.004975`, feature-shuffle AUC `0.485563`,
+  species-heldout AUC `0.996465`, no-temperature/pressure AUC `0.949132`, and
+  temperature/pressure-only AUC `0.941515`. Read as hardened phase-diagram
+  support with expected pressure-temperature boundary signal, not a complete
+  thermodynamic atlas.
+- `Nest 3 / Gravity / Orbits` now has a first NASA Exoplanet Archive source
+  gate: confirmed exoplanet orbital rows from the `pscomppars` table, adjacent
+  multi-planet pairs, near low-order period-ratio resonance versus far
+  off-resonance controls, host-system-held-out AUC `0.943642`,
+  shuffled-label p `0.004975`, and feature-shuffle AUC `0.464407`. Read as
+  first-pass orbit-architecture support, not a full dynamical resonance or
+  ephemeris-propagation closeout.
+- `Nest 3 / Terahertz` now has a first NIST Chemistry WebBook THz source gate:
+  `36` public THz entries discovered, `34` JCAMP-DX spectra downloaded,
+  `32` main-family spectra used after dropping two small biological rows, and
+  two NIST entries skipped because no JCAMP link was exposed on the detail
+  page. The broad four-family material classifier stayed candidate
+  (balanced accuracy `0.246528`, p `0.432836`), but the `pharma_drug` versus
+  non-pharma main-family contrast was support-bearing: AUC `0.851852`,
+  balanced accuracy `0.733333`, shuffled-label p `0.039801`,
+  band-position shuffle AUC `0.259259`, and distribution-only AUC `0.496296`.
+  Read as partial Terahertz spectral-family support, not cellular exposure or
+  medical THz tuning.
+- `Nest 3 / Native spectra / IR` now has a second NIST Chemistry WebBook source
+  family gate using public gas-phase IR JCAMP-DX spectra: `34` common
+  compounds requested, `32` spectra downloaded, `6` functional families,
+  `299` common-grid bins, and `598` spectral features. The six-family
+  classifier reached balanced accuracy `0.588889` while shuffled-label control
+  collapsed to `0.174944` with p `0.004975`; band-position shuffle dropped to
+  `0.277778`, and distribution-only stayed at `0.500000`. Read as second
+  spectral-family functional IR support, not THz exposure-response or
+  biological-response support.
+- `Nest 3 / Cross-spectral family panel` now ties NIST gas-phase IR, NIST THz,
+  and NASA Ames Ramdb Raman rows into one public-source spectral panel and adds
+  a NIST IR family-heldout check: `32` records, observed AUC `0.797619`,
+  balanced accuracy `0.746032`, shuffled-label mean AUC `0.491647`, and p
+  `0.004975`. Read as cross-spectral physical-source support. Boundary: not
+  THz biological exposure-response, not medical THz tuning, and not pure
+  phase-lock closeout because distribution-only and band-shuffle controls
+  remain informative in places.
+
+- `Nest 3 / Same-family spectral panel` hardens the public spectra lane by
+  narrowing the cross-spectral result into same-family stress rows: IR carbonyl
+  ketone-vs-aldehyde weak/null, IR hydrocarbon aromatic-vs-alkane partial
+  support, IR oxygenated alcohol-vs-carbonyl candidate, THz carbohydrate simple
+  sugars-vs-starch/cellulose partial support with nuisance controls preserved,
+  THz inorganic salt/carbonate-vs-silicate/clay candidate, and NASA Ames Ramdb
+  amino-acid internal Raman candidate. Read as mixed same-family physical
+  spectral support. Boundary: not THz exposure-response, not cellular response,
+  not medical THz tuning.
+  Artifact: `docs/NEST3_SAME_FAMILY_SPECTRAL_PANEL_READ_2026-06-11.md`.
+- `Nest 3 / THz source-reference transfer` tested real public THz-TDS sample
+  and reference traces from SfeirLab MTMM and YaleTHz Nelly under
+  leave-material/pair-out plus cross-repository holdout. The transfer test was
+  weak/null: observed AUC `0.474720`, balanced accuracy `0.459746`,
+  shuffled-label mean AUC `0.494143`, and p `0.713147`. Read as useful boundary
+  information: a generic sample/reference signature did not transfer across
+  unrelated materials and repositories.
+  Artifact: `docs/NEST3_THZ_SOURCE_REFERENCE_GATE_READ_2026-06-11.md`.
+- `Nest 3 / THz repeated-scan source-reference` then used a cleaner matched
+  instrument gate: `30` Fe10nm-on-MgO sample scans versus `30` MgO
+  substrate/reference scans from public `xpA076/THz` substrate-referenced
+  THz-TDS files. Held-out scan-block AUC and balanced accuracy were both
+  `1.000000`; chronological holdout was also `1.000000`; shuffled-label mean
+  AUC collapsed to `0.458778` with p `0.003984`. Read as support-bearing for a
+  real repeated THz-TDS source/reference row with nuisance caveat. Boundary:
+  nuisance controls also stayed high, so this is not pure phase-lock, not
+  cellular treatment response, and not biological THz tuning.
+  Artifact: `docs/NEST3_THZ_REPLICATE_SOURCE_REFERENCE_GATE_READ_2026-06-11.md`.
+- `Nest 3 / THz biological GEO panel` moved the biology-facing bridge from
+  future language into real public exposure-response rows. Seven GEO studies
+  with THz/control or THz/sham biological expression rows were scored:
+  `GSE178729` was support-bearing (AUC `0.950617`, balanced accuracy
+  `0.833333`, exact label p `0.100000`), `GSE248763`, `GSE41084`, and
+  `GSE44671` were candidate, and `GSE243842`, `GSE41083`, and `GSE41085` were
+  weak/null under the public-safe scorer. Boundary: this is biological
+  source-gate support, not therapeutic proof and not medical THz tuning; the
+  complete heat/off-window/frequency/power/duration/temperature control matrix
+  remains open.
+  Artifact: `docs/NEST3_THZ_BIOLOGICAL_GEO_PANEL_READ_2026-06-11.md`.
+- `Nest 3 / THz biology manifest + shared-feature holdout` then harmonized
+  the seven public biological THz sources and ran stricter cross-source
+  transfer tests. The manifest seats frequency, power, duration, temperature,
+  control type, organism/surface, assay type, and cross-source role. The harder
+  holdouts stayed weak/mixed: same-platform mMSC shared probes reached AUC
+  `0.518519`, mouse shared gene symbols reached AUC `0.465278`, and mouse
+  shared GO-process pathway terms reached AUC `0.548611`, all with label and
+  feature controls near the observed rows. Read as useful boundary evidence:
+  source-specific biological THz rows remain live, but broad shared biological
+  pathway transfer is not seated yet.
+  Artifact: `docs/NEST3_THZ_BIOLOGY_MANIFEST_SHARED_HOLDOUT_READ_2026-06-12.md`.
+- `Final Nest closeout board` now converts the open lane chase into a public
+  lane-status map: closed current level, support-bearing, pending-row,
+  private raw boundary, and optional extension. It names the two hard remaining
+  gates as THz/EMF biology physical-control rows and B.A.S.I.S. synchronized
+  public-safe capture packaging.
+  Artifact: `docs/FINAL_NEST_CLOSEOUT_BOARD_2026-07-14.md`.
 - the cosmic / universal nests are mapped as candidate bridge layers for later
   real-data gates
 - the local visual companion can demonstrate the whole lattice

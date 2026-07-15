@@ -26,6 +26,10 @@ controls collapse toward chance.
 | `Food / Nutrients` | USDA FoodData Central Foundation Foods | protein/fat/mineral categories vs fruit/vegetable categories | `0.988659` | `0.489304` | `0.547055` | `candidate_support`; nutrient-composition bridge |
 | `Biomolecular Primitives` | ChEBI class text + chemical properties | amino-acid vs fatty-acid rows | `0.981367` | `0.501045` | `0.508480` | `candidate_support`; first biochemical primitive read |
 | `Biomolecular Primitives` | ChEBI `is_a` ontology + chemical properties | amino-acid descendants vs fatty-acid descendants | `0.993090` | `0.498564` | `0.508743` | `candidate_support`; ontology-backed closure gate |
+| `Biomolecular Primitives` | ChEBI `is_a` ontology + chemical properties | nucleotide descendants vs carbohydrate descendants | `0.999957` | `0.499336` | `0.496904` | `candidate_support`; second ontology-backed closure gate |
+| `Biomolecular Primitives` | LIPID MAPS LMSD public structure rows | glycerophospholipids vs sphingolipids | `0.999506` | `0.500031` | `0.510393` | `candidate_support`; independent lipid-source confirmation |
+| `Biomolecular Primitives` | LIPID MAPS LMSD public structure rows | eight-way lipid-core panel | `0.918646` balanced accuracy | `0.125333` balanced accuracy | `0.124583` balanced accuracy | `candidate_support`; multiclass lipid-core panel |
+| `Biomolecular Primitives` | GlyTouCan/GlyCosmos RDF glycan sequence rows | human source glycans vs mouse source glycans | `0.739219` | `0.499838` | `0.525007` | `candidate_support`; independent glycan-source confirmation |
 
 ## Public-Safe Interpretation
 
@@ -49,7 +53,7 @@ specific remaining gates.
 | `N4-04 Metabolism` | diabetes + USDA + ChEBI bridge candidate support | direct metabolomics or HRV/Muse response pairing |
 | `N2-07 Food Chemistry` | USDA nutrient-vector candidate support | FooDB / HMDB / paired physiology response |
 | `N2-10 Vitamins + Nutrients` | USDA nutrient/mineral features seated | cofactor/HMDB class rows |
-| `N2-13 Biomolecular Primitives` | ChEBI ontology-backed candidate support | nucleotide/sugar closure, LIPID MAPS, GlyTouCan, HMDB |
+| `N2-13 Biomolecular Primitives` | ChEBI ontology-backed candidate support plus independent LIPID MAPS lipid-core and GlyTouCan glycan-source confirmations; HMDB verified as access-gated continuation | HMDB permission/download clearance |
 
 ## Figure / Visual Hook
 
@@ -70,8 +74,5 @@ metabolomics closeout, or direct HRV/Muse response completion.
 
 ## Next Gates
 
-1. Run nucleotide versus carbohydrate ontology closure.
-2. Run an independent lipid source confirmation through LIPID MAPS.
-3. Run an independent glycan/carbohydrate source confirmation through GlyTouCan.
-4. Clear HMDB access if possible.
-5. Pair nutrient/metabolite rows to HRV/Muse state windows.
+1. Clear HMDB permission/download path if possible.
+2. Pair nutrient/metabolite rows to HRV/Muse/Thermo state windows.

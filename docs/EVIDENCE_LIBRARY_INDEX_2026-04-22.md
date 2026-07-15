@@ -9,6 +9,8 @@ code.
 ## Top-Level Docs
 
 - [Chronological Experiment Log](./CHRONOLOGICAL_EXPERIMENT_LOG_2026-05-01.md)
+- [Final Nest Closeout Board](./FINAL_NEST_CLOSEOUT_BOARD_2026-07-14.md)
+- [Nest 3 Backfill Closeout Verification](./NEST3_BACKFILL_CLOSEOUT_VERIFICATION_2026-07-14.md)
 - [V8 Attention / MLP Nest 1 Bridge Protocol](./V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md)
 - [Reviewer FAQ: Mechanism, Controls, And Open Gates](./REVIEWER_FAQ_MECHANISM_CONTROLS_AND_OPEN_GATES_2026-04-29.md)
 - [Nest 2D To 2G Real-Data Gates](./NEST2D_TO_2G_REAL_DATA_GATES_2026-04-28.md)
@@ -33,6 +35,14 @@ code.
 - [Phase 12C Nest 4 Biosignal Cross-Pollination Log](./PHASE12C_NEST4_BIOSIGNAL_CROSSPOLLINATION_LOG_2026-05-09.md)
 - [Phase 12C Universal Data Pattern Support Read](./PHASE12C_UNIVERSAL_DATA_PATTERN_SUPPORT_READ_2026-05-09.md)
 - [Nest 3 USGS ASTER Spectral Signature Support Read](./NEST3_USGS_ASTERSPECTRAL_SIGNATURE_SUPPORT_READ_2026-05-15.md)
+- [Nest 3 Terahertz NIST Material-Family Support Read](./NEST3_TERAHERTZ_NIST_MATERIAL_FAMILY_SUPPORT_READ_2026-05-27.md)
+- [Nest 3 Second Spectral NIST Gas IR Support Read](./NEST3_SECOND_SPECTRAL_NIST_GAS_IR_SUPPORT_READ_2026-05-27.md)
+- [Nest 3 Cross-Spectral Family Panel Read](./NEST3_CROSS_SPECTRAL_FAMILY_PANEL_READ_2026-06-11.md)
+- [Nest 3 Same-Family Spectral Panel Read](./NEST3_SAME_FAMILY_SPECTRAL_PANEL_READ_2026-06-11.md)
+- [Nest 3 THz Source-Reference Gate Read](./NEST3_THZ_SOURCE_REFERENCE_GATE_READ_2026-06-11.md)
+- [Nest 3 THz Replicate Source-Reference Gate Read](./NEST3_THZ_REPLICATE_SOURCE_REFERENCE_GATE_READ_2026-06-11.md)
+- [Nest 3 THz Biological GEO Panel Read](./NEST3_THZ_BIOLOGICAL_GEO_PANEL_READ_2026-06-11.md)
+- [Nest 3 THz Biology Manifest + Shared-Feature Holdout Read](./NEST3_THZ_BIOLOGY_MANIFEST_SHARED_HOLDOUT_READ_2026-06-12.md)
 - [Nest 2 H2O / Water Extraction From USGS ASTER Spectra](./NEST2_H2O_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
 - [Nest 2 Minerals Extraction From USGS ASTER Spectra](./NEST2_MINERALS_USGS_ASTERSPECTRAL_EXTRACTION_READ_2026-05-16.md)
 - [Nest 2 Materials / Semiconductors Band-Gap Second-Target Read](./NEST2_MATERIALS_BANDGAP_SECOND_TARGET_READ_2026-05-16.md)

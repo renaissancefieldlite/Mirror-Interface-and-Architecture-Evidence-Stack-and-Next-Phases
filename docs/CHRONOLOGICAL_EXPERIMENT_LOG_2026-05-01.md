@@ -595,3 +595,404 @@ p `0.004975`; feature-shuffle AUC `0.489769`. No-density/volume control
 stayed high at AUC `0.925063`, while pressure-temperature-only was chance at
 AUC `0.500000`. Read as first thermophysical phase-state support, not full
 phase-diagram closeout.
+
+## 2026-05-26 - Nest 3 Gravity / Orbits Exoplanet Source Gate
+
+The first Gravity / Orbits source gate used NASA Exoplanet Archive Planetary
+Systems Composite Parameters (`pscomppars`) confirmed-exoplanet orbital rows.
+
+The local runner and report are:
+
+```text
+experiments/nest3_gravity_orbits_exoplanet/run_exoplanet_orbit_resonance_gate.py
+experiments/nest3_gravity_orbits_exoplanet/results/nest3_gravity_orbits_exoplanet_resonance_2026-05-26.json
+docs/NEST3_GRAVITY_ORBITS_EXOPLANET_SUPPORT_READ_2026-05-26.md
+```
+
+State/control: adjacent planet pairs inside multi-planet systems. Target rows
+are pairs within `3%` of low-order period ratios (`5:4`, `4:3`, `3:2`,
+`5:3`, `2:1`, `3:1`); controls are adjacent pairs at least `12%` away from
+the same resonance set. Host-system-held-out validation is used. The direct
+nearest-resonance label and direct resonance-distance column are excluded from
+features.
+
+Results: `5951` source planet rows, `4382` source systems, `1049`
+multi-planet systems, `836` used adjacent pairs, `378` target pairs, `458`
+controls, `637` host-system groups, and `60` features. Observed ROC AUC
+`0.943642`, balanced accuracy `0.859754`; shuffled-label mean AUC `0.498468`,
+p `0.004975`; feature-shuffle AUC `0.464407`. Geometry-only AUC was
+`0.961917`, while no-orbit-geometry AUC dropped to `0.729053`.
+
+Interpretation: first public orbital-architecture support row for
+`Nest 3 / Gravity / Orbits`. This is not a full dynamical resonance proof and
+not an ephemeris-propagation closeout.
+
+## 2026-05-26 - Nest 3 Fusion + Solar OMNIWeb Hardening Gate
+
+The Fusion + Solar backfill loop hardened the first OMNIWeb read by adding
+storm/event-block holdouts, same-active-month controls, within-month label
+shuffles, a calendar/season-only null, and feature-shuffle controls.
+
+The local runner and report are:
+
+```text
+experiments/nest3_fusion_solar_omniweb/run_omniweb_solar_plasma_hardening_gate.py
+experiments/nest3_fusion_solar_omniweb/results/nest3_fusion_solar_omniweb_hardening_2026-05-26.json
+docs/NEST3_FUSION_SOLAR_OMNIWEB_HARDENING_READ_2026-05-26.md
+```
+
+State/control: active `12`-hour windows with max `Kp >= 5` versus quiet
+windows with max `Kp <= 2`, with active windows grouped into named
+storm/event blocks separated by more than `36` hours. Geomagnetic response
+labels remain excluded; features stay solar-wind, IMF, plasma, proton-flux,
+and solar-activity window statistics.
+
+Results: `17544` source hourly rows, `1133` windows, `249` target windows,
+`884` controls, `57` event blocks, and `324` features. Event-block holdout AUC
+`0.998851`, balanced accuracy `0.990582`; shuffled-label mean AUC `0.500907`,
+p `0.004975`; within-month shuffle AUC `0.574688`; feature-shuffle AUC
+`0.501022`. Same-active-month subset AUC `0.998667`; calendar/season-only AUC
+`0.630742`.
+
+Interpretation: hardened solar-plasma support with a preserved
+window-statistic caveat. This strengthens the source gate but is still not raw
+phase-order proof or a full solar-cycle closeout.
+
+## 2026-05-26 - Nest 3 Gases / Liquids / Phases NIST Hardening Gate
+
+The Gases / Liquids / Phases backfill loop hardened the NIST saturation pass by
+adding isobaric fluid-property rows that include liquid, vapor, and
+supercritical phases.
+
+The local runner and report are:
+
+```text
+experiments/nest3_gases_liquids_phases_nist/run_nist_isobaric_supercritical_gate.py
+experiments/nest3_gases_liquids_phases_nist/results/nest3_gases_liquids_phases_nist_isobaric_supercritical_2026-05-26.json
+docs/NEST3_GASES_LIQUIDS_PHASES_NIST_HARDENING_READ_2026-05-26.md
+```
+
+State/control: NIST `Phase` rows marked `supercritical` as target versus
+`liquid` or `vapor` controls, across water, carbon dioxide, methane, and
+nitrogen at pressure bands `0.40Pc`, `0.75Pc`, `1.10Pc`, `1.50Pc`, and
+`2.00Pc`. Validation includes species-pressure-band and species holdouts;
+phase label and source identifiers are excluded from features.
+
+Results: `931` records, `276` supercritical targets, `655` liquid/vapor
+controls, `4` species, `5` pressure bands, `20` source tables, and `15`
+features. Species-pressure holdout AUC `0.996067`, balanced accuracy
+`0.944275`; shuffled-label mean AUC `0.495844`, p `0.004975`;
+feature-shuffle AUC `0.485563`. Species-heldout AUC `0.996465`.
+No-temperature/pressure AUC stayed strong at `0.949132`, while
+temperature/pressure-only AUC was also high at `0.941515`.
+
+Interpretation: hardened phase-diagram support. The pressure-temperature
+boundary is expected to carry signal because supercritical phase is physically
+defined by critical temperature and pressure; the no-temperature/pressure
+control preserves a separate property-vector support read. This is not a
+complete thermodynamic state atlas.
+
+## 2026-05-27 - Nest 3 Terahertz NIST Material-Family Source Gate
+
+The Terahertz lane moved from mapped continuation into a first public THz
+spectral source gate using the NIST Chemistry WebBook THz Spectral Database.
+
+The local runner and report are:
+
+```text
+experiments/nest3_terahertz_nist_thz/run_nist_thz_material_family_gate.py
+experiments/nest3_terahertz_nist_thz/results/nest3_terahertz_nist_material_family_2026-05-27.json
+docs/NEST3_TERAHERTZ_NIST_MATERIAL_FAMILY_SUPPORT_READ_2026-05-27.md
+```
+
+State/control: NIST JCAMP-DX THz transmission spectra were downloaded from
+per-spectrum WebBook links and assigned conservative material-family labels
+from sample names. Sample name, NIST ID, URLs, labels, and metadata were
+excluded from features. Controls included shuffled labels, band-position
+shuffle, and distribution-only summaries.
+
+Results: `36` source entries were discovered, `34` JCAMP spectra downloaded,
+and `2` entries skipped because the NIST detail page exposed no JCAMP link.
+The main four-family material classifier used `32` spectra, `4` families,
+`161` grid bins, and `322` spectral features. Four-family balanced accuracy
+was `0.246528` with shuffled-label p `0.432836`, so broad family
+classification remains candidate. The support-bearing row was
+`pharma_drug` versus non-pharma main-family controls: AUC `0.851852`,
+balanced accuracy `0.733333`, shuffled-label p `0.039801`, band-position
+shuffle AUC `0.259259`, and distribution-only AUC `0.496296`.
+
+Interpretation: partial Terahertz spectral-family support. This seats a real
+THz spectral source surface and one support-bearing contrast, but it does not
+close broad material-family classification and it is not a cellular-response
+or medical exposure result.
+
+## 2026-05-27 - Nest 3 Second Spectral NIST Gas IR Source Gate
+
+The second spectral-family gate used public NIST Chemistry WebBook gas-phase
+IR JCAMP-DX spectra as an independent source family beyond the first THz pass.
+
+The local runner and report are:
+
+```text
+experiments/nest3_second_spectral_nist_ir/run_nist_gas_ir_functional_family_gate.py
+experiments/nest3_second_spectral_nist_ir/results/nest3_second_spectral_nist_gas_ir_functional_family_2026-05-27.json
+docs/NEST3_SECOND_SPECTRAL_NIST_GAS_IR_SUPPORT_READ_2026-05-27.md
+```
+
+State/control: conservative functional-family labels were assigned to common
+NIST gas/vapor IR spectra across alcohol, aldehyde, ketone, alkane, aromatic,
+and halocarbon rows. Compound name, family label, NIST ID, formula, source URL,
+and metadata were excluded from features. Controls included shuffled labels,
+band-position shuffle, and distribution-only summaries. The common grid used
+`720-3700 cm^-1` with absorbance bins and first-derivative bins.
+
+Results: `34` source compounds requested, `32` spectra downloaded, `2`
+skipped compounds, `6` functional families, `299` common-grid bins, and `598`
+spectral features. Six-family balanced accuracy was `0.588889`;
+shuffled-label mean balanced accuracy collapsed to `0.174944` with p
+`0.004975`; band-position shuffle dropped to balanced accuracy `0.277778`;
+distribution-only stayed at `0.500000`. Binary rows were mixed:
+oxygenated-vs-nonoxygenated AUC `0.928571` but with high distribution and
+band-shuffle controls, carbonyl-vs-alcohol stayed candidate, and
+halocarbon-vs-hydrocarbon AUC `0.888889` with label-shuffle p `0.009950` but
+distribution-only AUC `1.000000`.
+
+Interpretation: second spectral-family functional IR support. This strengthens
+the `Native spectra / IR / Raman / THz` lane as a public spectral-source
+layer, but it is not Terahertz exposure-response support and not
+biological-response support.
+
+## 2026-06-11 - Nest 3 Cross-Spectral Family Panel Gate
+
+The parked primary THz exposure-response gate remained open because no clean
+public sham/off-window/heat-matched source was seated in this run. The backup
+panel used the existing public NIST THz, NIST gas-phase IR, and NASA Ames
+Ramdb Raman evidence rows and added a family-heldout NIST IR check.
+
+The local runner and report are:
+
+```text
+experiments/nest3_cross_spectral_family_panel/run_cross_spectral_family_panel.py
+experiments/nest3_cross_spectral_family_panel/results/nest3_cross_spectral_family_panel_2026-06-11.json
+docs/NEST3_CROSS_SPECTRAL_FAMILY_PANEL_READ_2026-06-11.md
+```
+
+State/control: the new IR family-heldout check used oxygenated functional
+families (`alcohol`, `aldehyde`, `ketone`) against controls (`alkane`,
+`aromatic`, `halocarbon`) with heldout family-pair folds. Compound name,
+family label, NIST ID, source URLs, and metadata were excluded from features.
+The panel then summarized already seated NIST gas IR, NIST THz, and NASA Ames
+Ramdb Raman rows.
+
+Results: the new IR family-heldout check used `32` records, observed AUC
+`0.797619`, balanced accuracy `0.746032`, shuffled-label mean AUC `0.491647`
+with p `0.004975`, band-position shuffle AUC `0.611111`, and
+distribution-only AUC `0.829365`. Cross-panel rows preserved support reads for
+NIST gas IR six-family functional IR, NIST THz pharma-vs-non-pharma partial
+support, and two NASA Ames Ramdb Raman class-transition rows.
+
+Interpretation: this strengthens `Nest 3 / Waves / Spectra / Phase-Lock` as a
+multi-source physical spectral lane. It does not close pure band-position /
+phase-lock because distribution-only and band-shuffle controls remain
+informative in places.
+
+Boundary: this is not Terahertz biological exposure-response evidence, not
+medical THz tuning, and not cellular response. The clean THz-specific return
+gate remains a real exposure-response dataset with sham/off-window/heat-
+matched controls or local/partner source-on/source-off instrument rows.
+
+## 2026-06-11 - Nest 3 Same-Family Spectral Panel Gate
+
+The primary THz exposure-response gate still did not seat as a clean public
+sample-level source. The inspected `2023` Scientific Reports THz melanoma
+supplement is useful as literature support, but it provides a KEGG/GSEA pathway
+table rather than raw sham, heat-matched, off-window, or source-on/source-off
+rows.
+
+The backup gate executed a harder same-family stress panel over public NIST gas
+IR, NIST THz, and NASA Ames Ramdb Raman sources.
+
+The local runner and report are:
+
+```text
+experiments/nest3_same_family_spectral_panel/run_same_family_spectral_panel.py
+experiments/nest3_same_family_spectral_panel/results/nest3_same_family_spectral_panel_2026-06-11.json
+docs/NEST3_SAME_FAMILY_SPECTRAL_PANEL_READ_2026-06-11.md
+```
+
+Results: `IR carbonyl ketone vs aldehyde` was weak/null (AUC `0.666667`);
+`IR hydrocarbon aromatic vs alkane` was partial support (AUC `0.805556`,
+shuffled-label p `0.069652`, band shuffle `0.333333`); `IR oxygenated alcohol
+vs carbonyl` was candidate (AUC `0.770833`, p `0.089552`); `THz carbohydrate
+simple sugars vs starch/cellulose` was partial support (AUC `1.000000`,
+shuffled-label p `0.034826`) but band-position and distribution-only controls
+also stayed high (`0.857143` / `0.857143`); `THz inorganic salt/carbonate vs
+silicate/clay` was candidate (AUC `0.850000`, p `0.109453`, band shuffle
+`0.100000`); and the within-project Raman amino-acid row remained candidate
+(compound-group AUC `0.703704`, group-shuffled p `0.179104`).
+
+Interpretation: mixed same-family spectral support. This is a stronger stress
+test than the broad panel because it removes several easy family separations,
+but it is not a THz exposure-response result and not a biological/cellular
+claim. The Terahertz return gate remains sample-level exposure-response or
+local/partner source-on/source-off instrument rows.
+
+Explanatory arc: the clean THz exposure-response source was the target, but the
+public source found so far did not expose the raw sham/heat/off-window matrix.
+Rather than stretch that into proof, this run moved to the harder backup: test
+whether real public spectra still carry state structure inside narrower
+same-family contrasts. The result is intentionally mixed. It strengthens the
+physical spectra layer and clarifies the next evidence requirement without
+claiming biological THz response.
+
+## 2026-06-11 - Nest 3 THz Source-Reference Transfer Gate
+
+The next Terahertz strengthening gate tested real public THz-TDS sample and
+reference traces from SfeirLab MTMM and YaleTHz Nelly. The goal was to see
+whether a generic sample/reference signature transfers across unrelated public
+materials and repositories.
+
+The local runner and report are:
+
+```text
+experiments/nest3_thz_source_reference_gate/run_thz_source_reference_gate.py
+experiments/nest3_thz_source_reference_gate/results/nest3_thz_source_reference_gate_2026-06-11.json
+docs/NEST3_THZ_SOURCE_REFERENCE_GATE_READ_2026-06-11.md
+```
+
+Results: `472` public waveform-window rows were scored. Leave-material/pair-out
+transfer was weak/null: observed balanced accuracy `0.459746`, AUC `0.474720`,
+shuffled-label mean AUC `0.494143`, and p `0.713147`. Cross-repository holdout
+also stayed near chance (balanced accuracy `0.529661`, AUC `0.533378`).
+
+Interpretation: useful boundary result. The public sample/reference rows did
+not show a universal transferable source/reference signature across unrelated
+materials and repositories. That kept the lane honest and pointed to the better
+instrument gate: repeated matched source/reference scans.
+
+## 2026-06-11 - Nest 3 THz Repeated-Scan Source-Reference Gate
+
+The follow-up gate used a cleaner repeated-scan THz-TDS source: public
+substrate-referenced data from `xpA076/THz`, with `30` Fe10nm-on-MgO sample
+scan files and `30` matched MgO substrate/reference scan files.
+
+The local runner and report are:
+
+```text
+experiments/nest3_thz_source_reference_gate/run_thz_replicate_source_reference_gate.py
+experiments/nest3_thz_source_reference_gate/results/nest3_thz_replicate_source_reference_gate_2026-06-11.json
+docs/NEST3_THZ_REPLICATE_SOURCE_REFERENCE_GATE_READ_2026-06-11.md
+```
+
+Results: held-out scan-block balanced accuracy and AUC were both `1.000000`;
+chronological holdout was also `1.000000`; shuffled-label mean AUC collapsed to
+`0.458778` with p `0.003984`. Shape-only, time-order-shuffled,
+distribution-only, and amplitude-only controls also remained high at
+`1.000000`.
+
+Interpretation: support-bearing repeated THz-TDS source/reference row with a
+nuisance caveat. The sample/reference split is real in this matched instrument
+dataset, but the nuisance controls show the separation can be carried by
+amplitude, attenuation, delay, sensitivity scaling, or broad waveform/path
+effects. This strengthens the THz instrument bridge; it does not close pure
+phase-lock, cellular exposure-response, medical THz tuning, or biological
+treatment response.
+
+Explanatory arc: physical spectra support is stronger, and THz now has a real
+repeated sample/reference instrument row. The biology-facing bridge still needs
+sample-level exposure-response rows with sham, off-window, heat-matched,
+frequency, duration, power, and temperature controls.
+
+## 2026-06-11 - Nest 3 THz Biological GEO Panel Gate
+
+The next gate moved from material spectra and instrument traces into public
+biological THz exposure-response rows. NCBI GEO / GDS was searched for
+`terahertz`, and seven scored public sources with THz/control or THz/sham
+biological expression rows were seated:
+
+```text
+experiments/nest3_thz_bio_exposure_geo_2026_06_11/results/nest3_thz_bio_geo_panel_result.json
+docs/NEST3_THZ_BIOLOGICAL_GEO_PANEL_READ_2026-06-11.md
+```
+
+Results: `GSE178729` landed as the strongest support-bearing biological THz row:
+balanced accuracy `0.833333`, AUC `0.950617`, exact balanced-label p
+`0.100000`, and feature-identity shuffle mean AUC `0.582469`. `GSE248763`,
+`GSE41084`, and `GSE44671` were candidate rows. `GSE243842`, `GSE41083`, and
+`GSE41085` were weak/null under this held-out expression-score read.
+
+Interpretation: this seats real biological THz source-gate support. The lane is
+no longer only spectra or THz-TDS instrument separation; it now includes public
+biological expression-response rows. The read remains bounded because the public
+sources do not yet expose one complete heat-matched, off-window, frequency,
+power, duration, temperature, and source-disabled matrix.
+
+Explanatory arc: the biology-facing THz bridge is now open on real source rows,
+not speculation. The stronger closeout is a harmonized THz biology manifest plus
+local/partner source-on/source-off rows where the public metadata leaves gaps.
+
+## 2026-06-12 - Nest 3 THz Biology Manifest + Shared-Feature Holdout Gate
+
+The follow-up Terahertz biology hardening gate built the harmonized source
+manifest that the prior GEO panel requested, then ran stricter cross-source
+shared-feature tests.
+
+The local runner and report are:
+
+```text
+run_nest3_thz_bio_manifest_shared_holdout.py
+experiments/nest3_thz_bio_exposure_geo_2026_06_11/results/nest3_thz_bio_manifest_shared_holdout_result.json
+experiments/nest3_thz_bio_exposure_geo_2026_06_11/results/nest3_thz_bio_harmonized_manifest_2026-06-12.csv
+docs/NEST3_THZ_BIOLOGY_MANIFEST_SHARED_HOLDOUT_READ_2026-06-12.md
+```
+
+Manifest result: seven public biological THz sources were harmonized with
+frequency, power, duration, temperature, control type, biological surface,
+assay type, and cross-source role. The manifest seats HUVEC, C. elegans, mMSC,
+mouse skin, and mouse neuron culture rows as real public source metadata.
+
+Cross-source result: all transfer gates stayed weak/mixed. Same-platform mMSC
+shared probes reached AUC `0.518519` and balanced accuracy `0.555556`; mouse
+shared gene symbols reached AUC `0.465278` and balanced accuracy `0.500000`;
+mouse shared GO-process pathway terms reached AUC `0.548611` and balanced
+accuracy `0.541667`. Label-shuffle and feature-identity controls stayed close
+to the observed rows.
+
+Interpretation: this hardens the boundary. The biological THz lane has real
+source-specific expression-response support and a clean manifest, but the
+shared-feature/pathway projection does not yet support a broad universal THz
+biology pathway claim.
+
+Explanatory arc: the manifest is no longer the missing piece. The missing piece
+is now a matched physical-control source: source-on/source-off or
+source-disabled rows with temperature, power, distance, duration, and
+instrument-state logging, or a public/partner biological THz matrix with
+sham/off-window/heat-matched controls.
+
+## 2026-07-14 - Nest 3 Backfill Closeout Verification And Final Board
+
+The parked backfill loop was rerun and converted into a public-safe closeout
+surface:
+
+```text
+docs/NEST3_BACKFILL_CLOSEOUT_VERIFICATION_2026-07-14.md
+docs/FINAL_NEST_CLOSEOUT_BOARD_2026-07-14.md
+visuals/nest3_backfill_closeout_verification_2026-07-14.svg
+visuals/final_nest_closeout_board_2026-07-14.svg
+```
+
+Fusion + Solar: the NASA OMNIWeb hardening rerun used `17,544` hourly rows,
+`1,133` event windows, and `57` event blocks. Event-block AUC was `0.998851`;
+feature-shuffle AUC collapsed to `0.501022`; the calendar/season-only null was
+`0.630742`. Read: hardened support with a window-statistic boundary.
+
+Gases / Liquids / Phases: the NIST thermophysical hardening rerun used `931`
+records across four species and five pressure bands. Species-pressure AUC was
+`0.996067`; feature-shuffle AUC collapsed to `0.485563`. Read: hardened support
+with a visible pressure-temperature phase-boundary caveat.
+
+Interpretation: the Nest is now mapped as a closeout board rather than an
+infinite lane chase. The hard remaining physical-control gap is not the whole
+Nest; it is the THz/EMF biology source-disabled / heat-matched / off-window /
+distance / power / duration / temperature packet, plus the B.A.S.I.S.
+synchronized public-safe capture package.

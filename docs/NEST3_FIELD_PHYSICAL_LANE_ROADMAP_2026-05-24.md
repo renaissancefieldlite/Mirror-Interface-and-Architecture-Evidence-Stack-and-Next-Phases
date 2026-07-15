@@ -20,6 +20,11 @@ real source -> state/control -> transform -> drift controls -> score -> support 
 No lane is support-bearing until it has a real dataset, capture, instrument
 export, or public measurement source plus controls and a recorded score.
 
+Closeout board:
+
+- `FINAL_NEST_CLOSEOUT_BOARD_2026-07-14.md`
+- `NEST3_BACKFILL_CLOSEOUT_VERIFICATION_2026-07-14.md`
+
 ## Current Anchor
 
 The Lattice Companion already seats Nest 3 as `Classical Coherence`.
@@ -27,7 +32,11 @@ The Lattice Companion already seats Nest 3 as `Classical Coherence`.
 Current known state:
 
 - `Waves / Spectra / Phase-Lock`: first physical spectra support pass is seated
-  through USGS ASTER-style spectra.
+  through USGS ASTER-style spectra, Raman has class-transition support, NIST
+  THz has partial material-family support, NIST gas-phase IR has functional
+  spectral-family support, and cross-spectral plus same-family spectral panels
+  are now seated. Do not call pure phase-lock until raw phase controls or
+  source-on/off instrument rows close it.
 - `Hardware timing / coherence`: existing hardware timing rows support the
   timing/coherence direction.
 - `Fire + Plasma`: first plasma optical-emission support row is seated through
@@ -38,34 +47,66 @@ Current known state:
   Luther phase/order, Silverbox forced-oscillator phase coupling, FASER
   forced-oscillation sweep rows, and FrID measured nonlinear
   frequency-response rows.
-- `Fusion + Solar`: first NASA OMNIWeb / SPDF solar-plasma window support row
-  is seated. It carries a distribution/window-statistic caveat because
-  time-order-destroyed controls stayed high.
-- `Gases / Liquids / Phases`: first NIST Chemistry WebBook thermophysical
-  liquid/vapor support row is seated under species-held-out validation. It is
-  not a full phase-diagram closeout yet.
-- `Gravity / Orbits` and `Terahertz` remain mapped continuation lanes until
-  dedicated real source packets are selected and scored. Adjacent rows may
-  support parts of their bridge logic, but they are not standalone lane
-  closeouts yet.
+- `Fusion + Solar`: NASA OMNIWeb / SPDF solar-plasma window support is seated
+  and hardened with storm/event-block holdouts plus seasonal/null controls. It
+  remains window-statistic support, not raw phase-order support.
+- `Gases / Liquids / Phases`: NIST Chemistry WebBook thermophysical support is
+  seated across saturated liquid/vapor rows and hardened with isobaric
+  supercritical rows. It is stronger phase-diagram support, not a complete
+  thermodynamic atlas.
+- `Gravity / Orbits`: first NASA Exoplanet Archive adjacent-orbit support row
+  is seated. It is a first-pass orbit-architecture read, not a full dynamical
+  resonance or ephemeris-propagation closeout.
+- `Terahertz`: first NIST Chemistry WebBook THz spectral gate is seated. It is
+  partial spectral-family support through the pharma-vs-non-pharma contrast;
+  broad four-family material classification remains candidate. Same-family
+  THz carbohydrate and inorganic rows add mixed support. A hard cross-material
+  public source/reference transfer test was weak/null, but the repeated-scan
+  THz-TDS gate using `30` Fe10nm-on-MgO sample scans vs `30` MgO reference scans
+  is support-bearing for matched instrument source/reference separation with a
+  nuisance caveat. A biological GEO panel now seats real THz exposure-response
+  rows: `GSE178729` is support-bearing, `GSE248763`, `GSE41084`, and
+  `GSE44671` are candidate, and `GSE243842`, `GSE41083`, and `GSE41085` are
+  weak/null under the public-safe scorer. The harmonized THz biology manifest
+  is complete, but same-platform probe, mouse gene-symbol, and mouse
+  GO-process cross-source holdouts stayed weak/mixed. The full
+  heat/off-window/frequency/power/duration/temperature control matrix remains
+  open.
 
 ## Priority Lane Table
 
 | Priority | Lane | Why it matters | First executable source gate | State / control idea | Output target |
 | ---: | --- | --- | --- | --- | --- |
-| `1` | `Native spectra / IR / Raman / THz` | Gives Nest 3 a second physical spectral family beyond the first spectra pass. | Select public IR, Raman, or THz spectral set. | material / molecule / water class vs wrong-class spectra; shuffled bands; null windows | `NEST3_SECOND_SPECTRAL_FAMILY_UDP_SUPPORT_READ` |
+| `1` | `Native spectra / IR / Raman / THz` | Gives Nest 3 a multi-source physical spectral panel beyond the first spectra pass. | NIST Chemistry WebBook gas-phase IR spectra, NIST THz, NASA Ames Ramdb Raman, public THz-TDS source/reference traces, and public biological THz GEO rows now tied into cross-spectral, same-family, repeated-scan, manifest, and weak/mixed shared-feature panels. | family-heldout folds; same-family stress rows; sample/reference trace rows; biological manifest rows; shared-feature holdouts; shuffled labels; band-position/time-order shuffle; distribution-only controls | `NEST3_THZ_BIOLOGY_MANIFEST_SHARED_HOLDOUT_READ_2026-06-12.md` |
 | `2` | `Fire + Plasma` | Tests high-energy reaction and field-regime dynamics without jumping to cosmic claims. | Select combustion emission, flame chemistry, plasma spectrum, or reaction-regime dataset. | flame/plasma regime vs baseline/wrong regime; shuffled wavelength or condition labels | `NEST3_FIRE_PLASMA_UDP_SUPPORT_READ` |
 | `3` | `EMF / Fields` | Turns field language into measurable source-on/off, intensity, frequency, distance, or environmental field rows. | Use instrument source-on/off captures or public field measurement data. | source-on vs source-off; distance/intensity/frequency bands; time-shifted/null controls | `NEST3_EMF_FIELDS_UDP_SUPPORT_READ` |
 | `4` | `Oscillators / Resonance` | Tests damping, forcing, entrainment, phase relation, and drift as real dynamics. | Use oscillator instrument row, public vibration/acoustic/pendulum/control dataset, or generated-from-instrument capture. | forced vs unforced; damped vs sustained; phase-lock vs shuffled phase | `NEST3_OSCILLATOR_RESONANCE_UDP_SUPPORT_READ` |
-| `5` | `Fusion + Solar` | Bridges hydrogen/isotope, plasma, and solar output as observable physical systems. | NASA OMNIWeb / SPDF OMNI2 hourly solar-wind rows now executed. | active `Kp >= 5` windows vs quiet `Kp <= 2` windows; geomagnetic labels excluded from features | `NEST3_FUSION_SOLAR_OMNIWEB_SUPPORT_READ_2026-05-26` |
-| `6` | `Gases / Liquids / Phases` | Tests thermodynamic phase/state behavior with pressure, temperature, density, and phase controls. | NIST Chemistry WebBook saturation fluid-property tables now executed. | saturated liquid vs vapor rows; species-held-out controls; pressure-temperature-only null | `NEST3_GASES_LIQUIDS_PHASES_NIST_SUPPORT_READ_2026-05-26` |
-| `7` | `Gravity / Orbits` | Keeps orbit/resonance lane observable and public-data disciplined. | Select public ephemeris/orbit dataset. | orbital window vs shuffled orbit/time windows; resonance class vs null | `NEST3_GRAVITY_ORBITS_UDP_SUPPORT_READ` |
-| `8` | `Terahertz cellular prototype` | Bridges physical spectra into water, biomolecules, cells, and DNA only after real THz/spectral source is seated. | Pair THz/spectral source with cellular or biomolecular response target. | exposure / spectral window vs baseline or wrong-window controls | `NEST3_THz_CELLULAR_BRIDGE_READ` |
+| `5` | `Fusion + Solar` | Bridges hydrogen/isotope, plasma, and solar output as observable physical systems. | NASA OMNIWeb / SPDF OMNI2 hourly solar-wind rows now executed and hardened. | active `Kp >= 5` windows vs quiet `Kp <= 2`; event-block holdouts; same-month / calendar null controls | `NEST3_FUSION_SOLAR_OMNIWEB_HARDENING_READ_2026-05-26.md` |
+| `6` | `Gases / Liquids / Phases` | Tests thermodynamic phase/state behavior with pressure, temperature, density, and phase controls. | NIST Chemistry WebBook saturation and isobaric fluid-property tables now executed. | liquid/vapor/supercritical rows; species and species-pressure holdouts; feature/label shuffles | `NEST3_GASES_LIQUIDS_PHASES_NIST_HARDENING_READ_2026-05-26.md` |
+| `7` | `Gravity / Orbits` | Keeps orbit/resonance lane observable and public-data disciplined. | NASA Exoplanet Archive adjacent multi-planet orbital rows now executed. | near low-order adjacent period-ratio resonance vs far off-resonance pairs; host-system holdout | `NEST3_GRAVITY_ORBITS_EXOPLANET_SUPPORT_READ_2026-05-26` |
+| `8` | `Terahertz cellular prototype` | Bridges physical spectra into water, biomolecules, cells, and DNA only after real THz/spectral source is seated. | NIST Chemistry WebBook THz spectra, same-family carbohydrate/inorganic stress rows, repeated-scan THz-TDS sample/reference rows, GEO biological THz/control or THz/sham expression rows, and a harmonized biological THz manifest are seated; cross-source biological transfer remains weak/mixed. | material-family labels; repeated sample/reference scans; biological THz/control rows; exact label permutation; feature-identity shuffle; gene-block controls; shared-feature/pathway holdouts; missing heat/off-window/frequency/power/duration/temperature closeout | `NEST3_THZ_BIOLOGY_MANIFEST_SHARED_HOLDOUT_READ_2026-06-12.md` |
 
 ## Execution Order
 
-1. Close `Native spectra / IR / Raman / THz` first.
-   This is the cleanest second physical family after the existing spectra pass.
+1. `Native spectra / IR / Raman / THz` now has a first Terahertz source gate,
+   a second NIST gas-phase IR source gate, and a cross-spectral family panel
+   tying NIST IR, NIST THz, and NASA Ames Ramdb Raman rows together, plus a
+   same-family stress panel. A hard public THz sample/reference transfer test
+   was weak/null, then a repeated-scan THz-TDS source/reference gate landed as
+   support-bearing for matched instrument separation. The next biological pass
+   seated seven public GEO THz exposure-response rows: one support-bearing,
+   three candidate, and three weak/null under controls. The harmonized
+   manifest is now complete, and the stricter same-platform/gene/pathway
+   cross-source holdouts stayed weak/mixed. Next layer is local/partner
+   source-disabled rows or a fully matched public exposure matrix with sham,
+   off-window, heat, frequency, power, duration, and temperature controls.
+
+   Plain-English arc: the spectra lane now shows real public source structure,
+   including harder same-family rows and repeated THz-TDS sample/reference
+   scans. The biology-facing THz bridge now reaches real expression-response
+   rows, but shared-feature/pathway transfer does not yet carry across public
+   biological sources. It still needs a full physical-control matrix before it
+   can be promoted beyond source-gate support.
 
 2. Run `Fire + Plasma` next.
    It gives a visible high-energy lane with real regime controls and keeps the
@@ -75,16 +116,24 @@ Current known state:
    These are closest to the B.A.S.I.S. timing/coherence logic but must use
    physical captures or public measurements, not metaphor language.
 
-4. `Fusion + Solar` first source gate is complete through NASA OMNIWeb / SPDF.
-   Next layer: named storm / event-block holdouts, solar-cycle seasonal/null
-   controls, and NASA POWER solar-radiation adjacency.
+4. `Fusion + Solar` first source gate and hardening loop are complete through
+   NASA OMNIWeb / SPDF. Next layer: NASA POWER solar-radiation adjacency or a
+   longer solar-cycle span with event-family holdouts.
 
-5. `Gases / Liquids / Phases` first source gate is complete through NIST
-   saturation tables. Next layer: supercritical / isobaric rows,
-   pressure-band holdouts, and multi-phase extension.
+5. `Gases / Liquids / Phases` first source gate and hardening loop are complete
+   through NIST saturation and isobaric tables. Next layer: isochoric or
+   two-phase dome rows, leave-one-pressure-band-out controls, and a second
+   thermodynamic table family.
 
-6. Keep `Gravity / Orbits`, `Terahertz`, and cosmic-scale rows as
-   observable-data continuation lanes until dedicated source gates have scores.
+6. `Gravity / Orbits` first source gate is complete through NASA Exoplanet
+   Archive adjacent planet-pair rows. Next layer: random-pair nulls,
+   resonance-family holdouts, and a cleaner public ephemeris / orbit
+   propagation source if available.
+
+7. Keep cosmic-scale rows as observable-data continuation lanes until
+   dedicated source gates have scores. Keep Terahertz cellular language bounded
+   to the GEO exposure-response panel until the heat/off-window/frequency/
+   power/duration/temperature controls are harmonized or locally captured.
 
 ## Support Language Rules
 
@@ -119,11 +168,11 @@ and a recorded support read.
 
 ## Next Clean Gate
 
-Pick one source for the next unseated Nest 3 physical lane:
+Pick one source for the next unseated or under-hardened Nest 3 physical lane:
 
 ```text
-Preferred next run: Gravity / Orbits public ephemeris/orbit dataset
-Backup next run: Terahertz public spectral/exposure dataset
+Preferred next run: local/partner source-on/source-off THz/EMF rows with source-disabled baseline and environmental logging
+Backup next run: fully matched public/partner THz biology matrix with sham/off-window, heat, frequency, power, duration, and temperature controls
 ```
 
 Then produce:
