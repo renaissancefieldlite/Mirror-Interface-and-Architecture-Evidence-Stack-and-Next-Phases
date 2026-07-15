@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840" role="img" aria-labelledby="title desc">
+  <title id="title">Phase 12C B.A.S.I.S. Public-Safe Aggregate Read</title>
+  <desc id="desc">Public-safe aggregate board for B.A.S.I.S. HRV plus Muse paired capture and masked biology readout.</desc>
+  <defs>
+    <radialGradient id="bg" cx="68%" cy="22%" r="78%">
+      <stop offset="0%" stop-color="#102a3b"/>
+      <stop offset="48%" stop-color="#031018"/>
+      <stop offset="100%" stop-color="#000406"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#83d8ff" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#83d8ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#83d8ff" stop-opacity="0.18"/>
+    </linearGradient>
+    <style>
+      .bg { fill: url(#bg); }
+      .grid { stroke: #27485a; stroke-width: 1; opacity: 0.22; }
+      .halo { fill: none; stroke: #83d8ff; stroke-width: 1.4; opacity: 0.28; }
+      .trace { fill: none; stroke: url(#line); stroke-width: 2; opacity: 0.75; }
+      .box { fill: rgba(2,16,24,0.74); stroke: #49758a; stroke-width: 1.4; }
+      .box2 { fill: rgba(5,23,32,0.84); stroke: #83d8ff; stroke-width: 1.8; }
+      .title { font-family: Arial, Helvetica, sans-serif; fill: #d9f3ff; font-size: 42px; font-weight: 800; letter-spacing: 0; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; fill: #8fdcff; font-size: 21px; font-weight: 700; letter-spacing: 0; }
+      .label { font-family: Arial, Helvetica, sans-serif; fill: #9bdfff; font-size: 18px; font-weight: 800; letter-spacing: 0; }
+      .text { font-family: Arial, Helvetica, sans-serif; fill: #d8e8ef; font-size: 18px; font-weight: 500; letter-spacing: 0; }
+      .small { font-family: Arial, Helvetica, sans-serif; fill: #88a9b8; font-size: 14px; font-weight: 700; letter-spacing: 0; }
+      .num { font-family: Arial, Helvetica, sans-serif; fill: #ffffff; font-size: 52px; font-weight: 900; letter-spacing: 0; }
+      .footer { font-family: Arial, Helvetica, sans-serif; fill: #6f94a5; font-size: 15px; font-weight: 700; letter-spacing: 0; }
+    </style>
+  </defs>
+  <rect class="bg" width="1400" height="840"/>
+  <g>
+    <path class="grid" d="M90 0v840M210 0v840M330 0v840M450 0v840M570 0v840M690 0v840M810 0v840M930 0v840M1050 0v840M1170 0v840M1290 0v840"/>
+    <path class="grid" d="M0 90h1400M0 180h1400M0 270h1400M0 360h1400M0 450h1400M0 540h1400M0 630h1400M0 720h1400"/>
+    <circle class="halo" cx="1050" cy="240" r="170"/>
+    <circle class="halo" cx="1050" cy="240" r="260"/>
+    <path class="trace" d="M70 515 C180 420,260 560,360 495 S560 382,690 462 S870 580,1010 410 S1210 340,1330 455"/>
+    <path class="trace" d="M120 650 C230 690,310 580,420 625 S625 725,750 610 S960 500,1105 602 S1245 685,1340 590"/>
+  </g>
+
+  <text class="small" x="70" y="68">PHASE 12C / B.A.S.I.S. / PUBLIC-SAFE AGGREGATE</text>
+  <text class="title" x="70" y="128">HRV + Muse Bridge Is Support-Bearing</text>
+  <text class="subtitle" x="72" y="166">Thermo remains an auxiliary sidecar until true same-clock triple capture closes.</text>
+
+  <rect class="box2" x="70" y="225" width="275" height="155"/>
+  <text class="label" x="96" y="268">SAME-CLOCK FOLDERS</text>
+  <text class="num" x="96" y="330">62</text>
+  <text class="small" x="98" y="355">private capture inventory</text>
+
+  <rect class="box2" x="380" y="225" width="300" height="155"/>
+  <text class="label" x="406" y="268">COMPLETE HRV + MUSE</text>
+  <text class="num" x="406" y="330">32</text>
+  <text class="small" x="408" y="355">artifact folders support bridge</text>
+
+  <rect class="box2" x="715" y="225" width="270" height="155"/>
+  <text class="label" x="741" y="268">MASKED BIOLOGY</text>
+  <text class="num" x="741" y="330">30</text>
+  <text class="small" x="743" y="355">valid DE/SPEC/TOPOG rows</text>
+
+  <rect class="box2" x="1020" y="225" width="310" height="155"/>
+  <text class="label" x="1046" y="268">CONDITIONS</text>
+  <text class="num" x="1046" y="330">6</text>
+  <text class="small" x="1048" y="355">state/control families preserved</text>
+
+  <rect class="box" x="70" y="430" width="390" height="210"/>
+  <text class="label" x="96" y="475">WHAT THIS SHOWS</text>
+  <text class="text" x="96" y="515">Repeated paired physiology rows exist.</text>
+  <text class="text" x="96" y="550">Condition labels are preserved.</text>
+  <text class="text" x="96" y="585">Quality masks stay inside the evidence path.</text>
+  <text class="text" x="96" y="620">Public read exposes arc, not raw biosignals.</text>
+
+  <rect class="box" x="505" y="430" width="405" height="210"/>
+  <text class="label" x="531" y="475">MASKED READOUT</text>
+  <text class="text" x="531" y="515">DE-1: dynamics-style condition comparison.</text>
+  <text class="text" x="531" y="550">SPEC-1: waveform/band features masked.</text>
+  <text class="text" x="531" y="585">TOPOG: channel presence and quality.</text>
+  <text class="text" x="531" y="620">No final clinical or localization claim.</text>
+
+  <rect class="box" x="955" y="430" width="375" height="210"/>
+  <text class="label" x="981" y="475">NEXT CLEAN GATE</text>
+  <text class="text" x="981" y="515">HRV + Muse + temperature</text>
+  <text class="text" x="981" y="550">same session clock, same condition</text>
+  <text class="text" x="981" y="585">artifact and quality masks preserved</text>
+  <text class="text" x="981" y="620">1 temperature link; 0 true triples</text>
+
+  <line x1="70" y1="735" x2="1330" y2="735" stroke="#345d70" stroke-width="1"/>
+  <text class="footer" x="70" y="772">PRIVATE RAW CAPTURES HELD BACK / NO DEVICE IDS / NO BIOMETRIC EXPORTS / JULY 15 POST-CAPTURE COUNTS</text>
+</svg>

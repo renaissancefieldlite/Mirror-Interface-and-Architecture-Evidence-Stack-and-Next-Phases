@@ -50,7 +50,7 @@ or claim-sensitive mechanics without explicit clearance.
 | `Metabolism` | first clinical/metabolic support pass complete; small source limitation preserved | `NEST4_METABOLISM_DIABETES_UDP_SUPPORT_READ_2026-05-21.md` |
 | `Food / Nutrient Composition` | first USDA/FoodData-style support row complete | `NEST4_FOOD_NUTRIENT_USDA_UDP_SUPPORT_READ_2026-05-21.md` |
 | `Metabolite / Ontology` | ChEBI metabolite class, amino/fatty ontology closure, nucleotide/carbohydrate ontology closure, independent LIPID MAPS lipid-core support, GlyTouCan/GlyCosmos glycan-source support, and HMDB access-gate read complete | `NEST4_METABOLITE_CLASS_CHEBI_UDP_SUPPORT_READ_2026-05-21.md`; `NEST4_BIOMOLECULAR_PRIMITIVES_CHEBI_ONTOLOGY_CLOSURE_READ_2026-05-21.md`; `NEST4_NUCLEOTIDE_CARBOHYDRATE_CHEBI_CLOSURE_READ_2026-05-27.md`; `NEST4_LIPIDMAPS_LMSD_CORE_CONFIRMATION_READ_2026-05-27.md`; `NEST4_GLYTOUCAN_GLYCAN_SOURCE_CONFIRMATION_READ_2026-05-27.md`; `NEST4_HMDB_ACCESS_GATE_2026-05-27.md` |
-| `B.A.S.I.S. capture bridge` | public-safe arc summary only; private raw Muse/MoFit/Withings captures stay out of public repo unless cleared | `NEST4_UDP_SUPPORT_ARC_PUBLIC_SAFE_SUMMARY_2026-05-21.md` |
+| `B.A.S.I.S. capture bridge` | public-safe arc summary plus July aggregate read: HRV + Muse bridge complete across `62` private same-clock folders and `32` complete paired artifact folders; fresh direct Muse and same-clock HRV + Muse rows inserted; Thermo remains sidecar/open until true same-clock triple capture closes | `NEST4_UDP_SUPPORT_ARC_PUBLIC_SAFE_SUMMARY_2026-05-21.md`; `PHASE12C_BASIS_PUBLIC_SAFE_AGGREGATE_READ_2026-07-15.md`; `../visuals/phase12c_basis_public_safe_aggregate_2026-07-15.svg` |
 
 ## Cross-Program Public-Safe Buildout Docs
 

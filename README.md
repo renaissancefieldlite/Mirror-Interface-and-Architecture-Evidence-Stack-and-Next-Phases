@@ -45,6 +45,8 @@ Newest seated evidence cards:
 - [Final Nest Closeout Board Visual](./visuals/final_nest_closeout_board_2026-07-14.svg)
 - [Nest 3 Backfill Closeout Verification](./docs/NEST3_BACKFILL_CLOSEOUT_VERIFICATION_2026-07-14.md)
 - [Nest 3 Backfill Closeout Verification Visual](./visuals/nest3_backfill_closeout_verification_2026-07-14.svg)
+- [Phase 12C B.A.S.I.S. Public-Safe Aggregate Read](./docs/PHASE12C_BASIS_PUBLIC_SAFE_AGGREGATE_READ_2026-07-15.md)
+- [Phase 12C B.A.S.I.S. Public-Safe Aggregate Visual](./visuals/phase12c_basis_public_safe_aggregate_2026-07-15.svg)
 - [Phase 12C N2 Same-Clock EEG + HRV Support Read](./docs/PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md)
 - [Phase 12C Capture Storyline And Visual Readout](./docs/PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md)
 - [Phase 12C Nest 1 Formal Return And Remaining Lane Map](./docs/PHASE12C_NEST1_FORMAL_RETURN_AND_REMAINING_LANE_MAP_2026-05-15.md)
@@ -435,6 +437,7 @@ across repeated benchmark classes.
 - Phase 12C Muse S Athena now has a first five-run capture summary: baseline / condition / post windows, decoded EEG / optical / motion / quality engineering lanes, mirror-vs-control deltas, and B.A.S.I.S. Capture Hub mapping.
 - Phase N1 waveform QA is complete from existing 12C captures: all eight Muse EEG channels are present across all five runs, wide EEG exports exist privately, and per-window artifact masks now cover EEG rail-candidate load, IMU, DRL/reference, optical candidate rows, and battery/status.
 - Phase N2 HRV + Muse manifest surface is complete: existing Phase 12B HRV and Phase 12C Muse rows are condition-aligned support rows, and the same-clock `5 x 3` / `10 x 3` HRV + Muse capture slots are defined.
+- Phase 12C B.A.S.I.S. July aggregate is now seated as a public-safe update: `62` same-clock folders discovered, `32` complete HRV + Muse artifact folders, six condition families represented, a fresh direct Muse row, a fresh same-clock HRV + Muse row, and a `30` row masked DE-1 / SPEC-1 / TOPOG rerun complete; Thermo remains sidecar/open until true same-clock triple capture closes.
 - Phase 12C now has a public storyline layer that connects the first five Muse captures, N2 same-clock HRV + Muse matrix, expanded fifteen state captures, masked DE-1 / SPEC-1 / TOPOG wording, Nest 3 / Nest 2 next gates, and Nest 5 convergence matrix into one reviewer-readable arc.
 - The Nest 1 formal-return pass is now seated: `DE-1`, `SPEC-1`, and `TOPOG-1/2` have masked candidate passes over `30 / 30` valid HRV + Muse rows. The first Nest 3 real-data source is `USGS Spectral Library Version 7 Data` for the `Waves / Spectra` and `Spectral Signatures` gates.
 - The first Nest 3 physical spectral pass is now seated: `2,439` USGS ASTER-resampled spectra across `7` material-family states. Real-label nearest-centroid accuracy was `0.391554` vs shuffled mean `0.072958`, and balanced accuracy was `0.517541` vs shuffled mean `0.146808` with p `0.003984`.
@@ -465,6 +468,8 @@ Start here:
 
 For the current Phase 12C reviewer arc, read [Phase 12C Capture Storyline And
 Visual Readout](./docs/PHASE12C_CAPTURE_STORYLINE_AND_VISUAL_READOUT_2026-05-15.md)
+plus the [Phase 12C B.A.S.I.S. Public-Safe Aggregate
+Read](./docs/PHASE12C_BASIS_PUBLIC_SAFE_AGGREGATE_READ_2026-07-15.md)
 and [Phase 12C Nest 1 Formal Return And Remaining Lane
 Map](./docs/PHASE12C_NEST1_FORMAL_RETURN_AND_REMAINING_LANE_MAP_2026-05-15.md)
 plus the [Phase 12C Masked DE-1 / SPEC-1 / TOPOG Public
