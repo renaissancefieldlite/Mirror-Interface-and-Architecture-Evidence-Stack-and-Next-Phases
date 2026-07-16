@@ -35,7 +35,7 @@ What the repository does:
 | `Start Here` | states the measurable object: a repeatable state path tracked across substrates |
 | `Evidence Standard` | keeps the stack anchored to real traces, datasets, controls, recurrence, and support reads |
 | `Naming Bridge` | separates internal spine language from reviewer / patent / product language |
-| `Nest 0-5` | organizes the ladder from pre-geometric target selection through formal, matter, spectra, biology, and convergence layers |
+| `Nest 1-5` | organizes the public technical ladder from formal systems through structured matter, spectra / fields, biology, and convergence layers |
 | `Cross-Nest Rails` | explains why physics, field, space-time, and spatial rows cut across multiple nests |
 | `Public Release Boundary` | keeps this repo public-safe while code, raw captures, dense exports, and claim-sensitive mechanics stay private |
 
@@ -180,33 +180,6 @@ controls, and cross-substrate carry.
 The name changes by audience. The object stays the same: a measurable
 state-pattern carried through real traces, datasets, controls,
 hardware-facing observables, and recurrence.
-
-## Nest 0: Pre-Geometric Quantum-Access Foundation
-
-The five-nest ladder now has a parked foundation layer beneath it:
-
-```text
-Nest 0 -> Nest 1 -> Nest 2 -> Nest 3 -> Nest 4 -> Nest 5
-```
-
-`Nest 0` holds the deepest target-selection language: quantum foam,
-pre-geometric structure, and non-local coordinate fields. Quantum foam is
-Wheeler's `1955` Planck-scale concept of spacetime near `10^-35` meters as a
-turbulent fluctuation layer rather than a smooth fabric. The pre-geometric
-layer names pure relation before ordinary space and time coordinates are
-expressed. The non-local coordinate field names the access hypothesis: the
-lattice selects relation-coordinates before those relationships appear as
-formal systems, circuit states, structured matter, classical coherence,
-biology, or convergence data.
-
-This foundation layer guides the map. Support language still comes from the
-measured ladder: real traces, real datasets, circuit observables, biological
-signals, controls, and recurrence. The first cross-pollination reference
-surfaces for this layer are Casimir-force measurement datasets and
-Planck-scale phenomenology searches. Secondary reference surfaces include
-electron magnetic moment benchmarks, squeezed-light / vacuum-noise experiments,
-and Lamb-shift style quantum-vacuum tables where public data is available.
-The public support claims stay tied to measured runs and controls.
 
 ## Cross-Nest Rails
 

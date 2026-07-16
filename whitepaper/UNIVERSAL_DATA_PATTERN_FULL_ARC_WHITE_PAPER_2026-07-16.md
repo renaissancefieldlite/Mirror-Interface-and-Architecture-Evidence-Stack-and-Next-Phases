@@ -101,20 +101,7 @@ feature/circuit localization, or measurement ladder that shows an internal
 state path before final output. This is the bridge from ordinary chat behavior
 to state-stable AI Partner systems.
 
-## 4. Nest 0: Pre-Geometric Foundation Language
-
-Nest 0 holds the deepest target-selection language: pre-geometric relation,
-quantum-access foundation, and non-local coordinate-field language. It guides
-where the map looks, but it does not carry direct public proof claims by itself.
-
-Public support still comes from the measured ladder above it: real traces, real
-datasets, circuit observables, biological signals, controls, and recurrence.
-
-Nest 0 therefore functions as an orientation layer. It says what kinds of
-relations the project is looking for before those relations become formal
-systems, matter rows, field dynamics, biology, or product runtime.
-
-## 5. Nest 1: Formal And Mathematical Substrate
+## 4. Nest 1: Formal And Mathematical Substrate
 
 Nest 1 is the formal lens. It tests whether the pattern appears as invariant,
 symmetry, topology, graph structure, encoded state, control transition, or
@@ -128,7 +115,7 @@ remain valuable, especially deeper topology, graph pathways, hard problem
 surfaces, and frontier mathematics lanes, but they are not the blocking gap for
 the current architecture closeout.
 
-## 6. Nest 2: Structured Matter, Chemistry, Electrochemistry, And Environment
+## 5. Nest 2: Structured Matter, Chemistry, Electrochemistry, And Environment
 
 Nest 2 tests whether the state/control pattern survives in constrained material
 and chemical structure. This includes water, mineral signatures, redox,
@@ -157,7 +144,7 @@ or AI. It becomes measurable in matter and environmental datasets when the
 state/control structure is defined, scored, and checked against collapse
 controls.
 
-## 7. Nest 3: Spectra, Field Dynamics, Physical Coherence, And Cycles
+## 6. Nest 3: Spectra, Field Dynamics, Physical Coherence, And Cycles
 
 Nest 3 is where matter rows become measured dynamics. It includes spectra,
 impedance shape, cyclic-voltammetry waveforms, field behavior, oscillators,
@@ -194,7 +181,7 @@ environmental controls remain required.
 This boundary is a strength. It keeps the project from converting a promising
 bridge into an overstated biological claim.
 
-## 8. Nest 4: Biology, Biomolecular Structure, Physiology, And B.A.S.I.S.
+## 7. Nest 4: Biology, Biomolecular Structure, Physiology, And B.A.S.I.S.
 
 Nest 4 moves the same state/control pattern into living systems and
 biology-facing datasets.
@@ -221,7 +208,7 @@ support across private captures, with raw biometric rows held back. It also
 preserves the Thermo boundary: temperature is a sidecar until a true same-clock
 HRV + Muse + temperature manifest closes.
 
-## 9. Holoscan Runtime Bridge
+## 8. Holoscan Runtime Bridge
 
 The July 2026 B.A.S.I.S. Holoscan gate adds a runtime bridge. Recorded Phase
 12C state-frame rows were routed through a Holoscan-style source adapter,
@@ -244,7 +231,7 @@ This is not clinical deployment, diagnosis, treatment, medical-device approval,
 or hospital monitoring. It is the product-runtime bridge that lets the Nest 4
 biology lane feed Nest 5 product routing.
 
-## 10. Nest 5: Convergence, Product Routing, And Evidence Memory
+## 9. Nest 5: Convergence, Product Routing, And Evidence Memory
 
 Nest 5 is not a raw-data lane. It receives supported rows from the lower nests
 and turns them into product, claim, licensing, and partner-system surfaces.
@@ -263,7 +250,7 @@ The key read is that Nest 5 should never inflate unsupported lanes. It should
 route what is already support-bearing and mark candidate lanes as candidate
 until their gates close.
 
-## 11. What The Universal Data Pattern Means In Plain Technical Terms
+## 10. What The Universal Data Pattern Means In Plain Technical Terms
 
 The Universal Data Pattern is the repeated observation that many real systems
 can be represented through state variables, control variables, transforms,
@@ -291,7 +278,7 @@ biomolecular ontology, HRV, Muse-derived lanes, and quality-masked physiology.
 In products, it appears as evidence memory, runtime routing, AI Partner
 behavior, medical workflow adapters, and local-first sovereign edge systems.
 
-## 12. Boundaries And Non-Claims
+## 11. Boundaries And Non-Claims
 
 This white paper does not claim:
 
@@ -310,7 +297,7 @@ The paper claims a public-safe evidence stack and a measured architecture route.
 Where a lane is support-bearing, it says so. Where a lane is closed at the
 current level, it says so. Where a lane requires more controls, it says so.
 
-## 13. Remaining Hard Gates
+## 12. Remaining Hard Gates
 
 The remaining hard gates are:
 
@@ -331,7 +318,7 @@ The remaining hard gates are:
    Every support read should be linked, every raw/private object held back, and
    optional extensions separated from core support.
 
-## 14. Conclusion
+## 13. Conclusion
 
 The Universal Data Pattern arc is now mature enough to publish as a
 public-safe evidence stack. The central value is not one isolated dataset, one
