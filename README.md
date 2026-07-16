@@ -24,7 +24,7 @@ Mirror Interface / LSPS
 -> Nest 3 spectra / coherence / waveform rows
 -> Nest 4 biosignals
 -> Nest 5 convergence routing
--> B.A.S.I.S. / Mirror Index / Golden Mirror execution surface
+-> B.A.S.I.S. / Holoscan runtime bridge / Mirror Index / Golden Mirror execution surface
 ```
 
 What the repository does:
@@ -41,6 +41,12 @@ What the repository does:
 
 Newest seated evidence cards:
 
+- [Universal Data Pattern Full Arc White Paper Draft](./whitepaper/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_2026-07-16.md)
+- [Universal Data Pattern Full Arc White Paper Review PDF](./output/pdf/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_REVIEW_COPY_2026-07-16.pdf)
+- [Universal Data Pattern Full Arc Visual](./visuals/universal_data_pattern_full_arc_2026-07-16.svg)
+- [Phase 12C B.A.S.I.S. Holoscan Public-Safe Bridge Read](./docs/PHASE12C_BASIS_HOLOSCAN_PUBLIC_SAFE_BRIDGE_READ_2026-07-16.md)
+- [Phase 12C B.A.S.I.S. Holoscan Bridge Visual](./visuals/phase12c_basis_holoscan_bridge_2026-07-16.svg)
+- [Phase 12C B.A.S.I.S. Synchronized Manifest And Holoscan Next Gate](./docs/PHASE12C_BASIS_SYNC_MANIFEST_AND_HOLOSCAN_NEXT_GATE_2026-07-16.md)
 - [Final Nest Closeout Board](./docs/FINAL_NEST_CLOSEOUT_BOARD_2026-07-14.md)
 - [Final Nest Closeout Board Visual](./visuals/final_nest_closeout_board_2026-07-14.svg)
 - [Nest 3 Backfill Closeout Verification](./docs/NEST3_BACKFILL_CLOSEOUT_VERIFICATION_2026-07-14.md)

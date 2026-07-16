@@ -48,7 +48,8 @@ Current read:
 ```text
 The Nest is mostly mapped and mostly support-bearing.
 The remaining hard evidence gap is not the whole Nest.
-It is the THz/EMF biology physical-control packet plus B.A.S.I.S. synchronized public-safe capture packaging.
+It is the THz/EMF biology physical-control packet plus B.A.S.I.S. live synchronized public-safe capture packaging.
+The recorded B.A.S.I.S. Holoscan runtime bridge is now seated as support-bearing.
 ```
 
 ## Closeout Summary
@@ -59,8 +60,8 @@ It is the THz/EMF biology physical-control packet plus B.A.S.I.S. synchronized p
 | `Nest 1 formal / mathematical substrate` | `closed_current_level_with_named_extensions` | Broad formal lane inventory is support-bearing; remaining extensions are specific pathway/attention/graph or deeper topology gates, not a blank map. |
 | `Nest 2 structured matter / electrochemistry / environment` | `support_bearing_to_closed_current_level` | Water, redox, oxygen, ozone, smoke/PM2.5, EIS, Li conductivity, and material/environment rows are public-safe support-bearing. |
 | `Nest 3 field / physical coherence` | `mostly_closed_current_level` | Most physical lanes now have support reads. THz/EMF biology remains the main pending-row gate. |
-| `Nest 4 biology / biomolecular / physiology` | `support_bearing_with_private_raw_boundary` | Cells/genome, metabolism, food/nutrients, ChEBI, lipids, glycans are public-safe support-bearing. B.A.S.I.S. synchronized capture is the main live product/evidence gate. |
-| `Nest 5 convergence / product / IP routing` | `integration_layer` | Not a raw-data lane. It receives supported rows and converts them into product, claim, licensing, and Golden Field Lite / Mirror Index surfaces. |
+| `Nest 4 biology / biomolecular / physiology` | `support_bearing_with_private_raw_boundary` | Cells/genome, metabolism, food/nutrients, ChEBI, lipids, glycans are public-safe support-bearing. HRV + Muse and recorded B.A.S.I.S. Holoscan routing are support-bearing. Live synchronized manifest and Thermo triple remain gated. |
+| `Nest 5 convergence / product / IP routing` | `integration_layer_with_runtime_bridge` | Not a raw-data lane. It receives supported rows and converts them into product, claim, licensing, Golden Field Lite / Mirror Index surfaces, and now a B.A.S.I.S. runtime-routing bridge. |
 
 ## Nest 3 Field / Physical Closeout Board
 
@@ -89,6 +90,7 @@ It is the THz/EMF biology physical-control packet plus B.A.S.I.S. synchronized p
 | `GlyTouCan / GlyCosmos glycans` | `support_bearing` | Human vs mouse glycan sequence/source rows, AUC `0.739219`; controls collapse | Moderate support, not clinical glycomics. | Optional extension: larger glycan panels or paired metabolomics. |
 | `HMDB` | `access_gated` | Official access/download gate verified; Cloudflare/download permission issue blocks scoring | No HMDB support score run. | Clear permission/download path or use alternate open metabolomics source. |
 | `B.A.S.I.S. HRV + Muse` | `support_bearing_private_raw_boundary` | Same-clock HRV/Muse bridge and private capture manifest; public-safe summaries exist | Raw biometric/device captures remain private; EEG waveform QA and masks still matter. | Build synchronized public-safe manifest with HRV + Muse + packet QA; keep raw exports private until cleared. |
+| `B.A.S.I.S. Holoscan runtime bridge` | `support_bearing_recorded_runtime_bridge` | Recorded B.A.S.I.S. state frames: `468` input/source/guard/sink rows, `7` lane sink files, `0` drops, `0` sequence gaps; multi-segment gate preserves `2` recorded windows with `0` global and segment gaps | Recorded runtime bridge, not live clinical deployment or medical-device approval. | Next gate is live or freshly recorded B.A.S.I.S. rows -> Holoscan source adapter -> timing/quality guard -> lane sink receipt -> synchronized public-safe manifest. |
 | `B.A.S.I.S. Thermo / Withings sidecars` | `pending_row` | Thermo troubleshooting and display/API artifacts exist as sidecar progress | Not yet repeatable enough for support-bearing paired evidence. | Keep as product troubleshooting lane; do not make it core proof. |
 
 ## Nest 5 Convergence / Product Closeout Board
@@ -97,7 +99,7 @@ It is the THz/EMF biology physical-control packet plus B.A.S.I.S. synchronized p
 | --- | --- | --- | --- | --- |
 | `Golden Field Lite / AI Expert partner` | `integration_layer` | Converts supported evidence rows into long-context evidence memory, domain tools, and tuned partner surfaces | Not a standalone proof row. | Use only support-bearing lanes as sources. |
 | `Mirror Index / visual RAG` | `optional_extension` | Retrieval and evidence-routing surface for supported rows | Concept/product layer until implemented against public-safe docs. | Build after final public-safe index cleanup. |
-| `B.A.S.I.S.` | `active_product_lane` | Applied biosignal lane: HRV/Muse/Thermo/MoFit/medical workflow integration | Product lane has live captures but public proof must stay bounded. | Prioritize synchronized manifest and NVIDIA stack mapping. |
+| `B.A.S.I.S.` | `active_product_lane_with_runtime_bridge` | Applied biosignal lane: HRV/Muse/Thermo/MoFit/medical workflow integration plus recorded Holoscan source / guard / sink routing | Product lane has live captures but public proof must stay bounded. Recorded runtime routing is support-bearing; live deployment remains gated. | Prioritize synchronized manifest, live-ingest bridge, and NVIDIA stack mapping. |
 | `YRA Core / Sovereign Edge` | `productization_layer` | Hardware deployment surface for local-first Mirror Architecture / Golden Field Lite | Not evidence by itself. | Use as deployment packaging, not proof language. |
 | `Quantum / frontier math / hard-problem surfaces` | `continuation_lane` | Investor/research expansion surface tied to existing formal and physical rows | Keep separate from current Nest proof closeout unless a real source gate is run. | Route into campaign docs, not core proof inflation. |
 
@@ -114,9 +116,11 @@ Only these are still core closeout blockers:
      and
      `experiments/nest3_thz_emf_source_on_off_gate/NEST3_THZ_EMF_PARTNER_READY_PACKET_2026-07-14.md`.
 
-2. `B.A.S.I.S. synchronized public-safe capture manifest`
+2. `B.A.S.I.S. live synchronized public-safe capture manifest`
    - Needs HRV + Muse packet continuity, waveform EEG QA, IMU/DRL masks, and
      public-safe artifact summary.
+   - Recorded Holoscan runtime bridge is seated; live or freshly recorded
+     source adapter -> guard -> sink receipt remains the next stronger gate.
    - Thermo remains sidecar until repeatable.
 
 3. `Final public-safe index cleanup`
@@ -130,8 +134,8 @@ Only these are still core closeout blockers:
 | --- | ---: |
 | Nest lane mapping | `90%` |
 | Evidence/control closeout | `80%` |
-| Public-safe packaging | `70-75%` |
-| Product/Nest 5 routing | `65-70%` |
+| Public-safe packaging | `80%` |
+| Product/Nest 5 routing | `75%` |
 
 ## Final Instruction
 
@@ -141,5 +145,6 @@ Default next move:
 
 ```text
 THz/EMF packet waits for real rows.
-Meanwhile, finish final public-safe index cleanup and B.A.S.I.S. synchronized manifest.
+Meanwhile, finish final public-safe index cleanup, B.A.S.I.S. synchronized manifest,
+and live-ingest Holoscan bridge.
 ```

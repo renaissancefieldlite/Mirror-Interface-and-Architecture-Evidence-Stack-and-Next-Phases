@@ -23,6 +23,9 @@ or claim-sensitive mechanics without explicit clearance.
 
 | Closeout surface | Role |
 | --- | --- |
+| `../whitepaper/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_2026-07-16.md` | arXiv-style public-safe full-arc white paper draft for Mirror Architecture and Universal Data Pattern |
+| `../output/pdf/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_REVIEW_COPY_2026-07-16.pdf` | review-copy PDF generated from the public-safe full-arc white paper draft |
+| `../visuals/universal_data_pattern_full_arc_2026-07-16.svg` | public visual map for the whole Universal Data Pattern arc |
 | `FINAL_NEST_CLOSEOUT_BOARD_2026-07-14.md` | lane-by-lane closed / support-bearing / pending-row / optional-extension map |
 | `NEST3_BACKFILL_CLOSEOUT_VERIFICATION_2026-07-14.md` | rerun verification for Fusion + Solar and Gases / Liquids / Phases hardening |
 | `../visuals/final_nest_closeout_board_2026-07-14.svg` | public visual board for the full Nest closeout state |
@@ -50,7 +53,7 @@ or claim-sensitive mechanics without explicit clearance.
 | `Metabolism` | first clinical/metabolic support pass complete; small source limitation preserved | `NEST4_METABOLISM_DIABETES_UDP_SUPPORT_READ_2026-05-21.md` |
 | `Food / Nutrient Composition` | first USDA/FoodData-style support row complete | `NEST4_FOOD_NUTRIENT_USDA_UDP_SUPPORT_READ_2026-05-21.md` |
 | `Metabolite / Ontology` | ChEBI metabolite class, amino/fatty ontology closure, nucleotide/carbohydrate ontology closure, independent LIPID MAPS lipid-core support, GlyTouCan/GlyCosmos glycan-source support, and HMDB access-gate read complete | `NEST4_METABOLITE_CLASS_CHEBI_UDP_SUPPORT_READ_2026-05-21.md`; `NEST4_BIOMOLECULAR_PRIMITIVES_CHEBI_ONTOLOGY_CLOSURE_READ_2026-05-21.md`; `NEST4_NUCLEOTIDE_CARBOHYDRATE_CHEBI_CLOSURE_READ_2026-05-27.md`; `NEST4_LIPIDMAPS_LMSD_CORE_CONFIRMATION_READ_2026-05-27.md`; `NEST4_GLYTOUCAN_GLYCAN_SOURCE_CONFIRMATION_READ_2026-05-27.md`; `NEST4_HMDB_ACCESS_GATE_2026-05-27.md` |
-| `B.A.S.I.S. capture bridge` | public-safe arc summary plus July aggregate read: HRV + Muse bridge complete across `62` private same-clock folders and `32` complete paired artifact folders; fresh direct Muse and same-clock HRV + Muse rows inserted; Thermo remains sidecar/open until true same-clock triple capture closes | `NEST4_UDP_SUPPORT_ARC_PUBLIC_SAFE_SUMMARY_2026-05-21.md`; `PHASE12C_BASIS_PUBLIC_SAFE_AGGREGATE_READ_2026-07-15.md`; `../visuals/phase12c_basis_public_safe_aggregate_2026-07-15.svg` |
+| `B.A.S.I.S. capture bridge` | public-safe arc summary plus July aggregate read: HRV + Muse bridge complete across `62` private same-clock folders and `32` complete paired artifact folders; fresh direct Muse and same-clock HRV + Muse rows inserted; recorded B.A.S.I.S. state frames now route through a Holoscan-style source / guard / sink path with `0` drops and `0` sequence gaps in the closed gate; Thermo remains sidecar/open until true same-clock triple capture closes | `NEST4_UDP_SUPPORT_ARC_PUBLIC_SAFE_SUMMARY_2026-05-21.md`; `PHASE12C_BASIS_PUBLIC_SAFE_AGGREGATE_READ_2026-07-15.md`; `PHASE12C_BASIS_HOLOSCAN_PUBLIC_SAFE_BRIDGE_READ_2026-07-16.md`; `PHASE12C_BASIS_SYNC_MANIFEST_AND_HOLOSCAN_NEXT_GATE_2026-07-16.md`; `../visuals/phase12c_basis_public_safe_aggregate_2026-07-15.svg`; `../visuals/phase12c_basis_holoscan_bridge_2026-07-16.svg` |
 
 ## Cross-Program Public-Safe Buildout Docs
 
@@ -58,7 +61,7 @@ or claim-sensitive mechanics without explicit clearance.
 | --- | --- | --- |
 | `Quantum Insider five-track campaign` | auxiliary campaign map and shared architecture spine present | `QUANTUM_INSIDER_FIVE_TRACK_AUXILIARY_CAMPAIGN_2026-04-24.md`; `quantum_insider_build_out/SHARED_ARCHITECTURE_SPINE.md` |
 | `Mirror Index / visual RAG` | concept map parked for Golden Mirror / Nest 5 retrieval productization | `quantum_insider_build_out/MIRROR_INDEX_VISUAL_RAG_QUANTUM_INSIDER_2026-05-23.md` |
-| `Nest 5 / Golden Field Lite` | convergence target; product-facing docs should cite only support-bearing lanes and mark candidate lanes cleanly | `UNIFIED_MIRROR_PROOF_SPINE_2026-04-24.md` |
+| `Nest 5 / Golden Field Lite` | convergence target; product-facing docs should cite only support-bearing lanes and mark candidate lanes cleanly. The B.A.S.I.S. Holoscan bridge now gives Nest 5 a runtime-routing proof row from the biology lane. | `UNIFIED_MIRROR_PROOF_SPINE_2026-04-24.md`; `PHASE12C_BASIS_HOLOSCAN_PUBLIC_SAFE_BRIDGE_READ_2026-07-16.md`; `../whitepaper/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_2026-07-16.md` |
 
 ## Public Repo Readiness
 

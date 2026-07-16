@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 .DS_Store
 .matplotlib-cache/
+tmp/
 
 # Public-safe boundary: keep runnable code, raw/generated artifacts, and model
 # states local/private unless explicitly approved for public release.
