@@ -20,9 +20,9 @@ identifiers, private runtime credentials, or claim-sensitive mechanics.
 ## Plain-English Read
 
 B.A.S.I.S. has now moved beyond static capture inventory. Recorded Phase 12C
-state-frame rows can be replayed through a Holoscan-style source / guard / sink
-runtime path and received as lane-separated output without packet loss or
-sequence gaps in the closed public-safe gate.
+state-frame rows can be routed through Holoscan source / guard / sink runtime
+paths and received as lane-separated output without packet loss or sequence
+gaps in the closed public-safe gates.
 
 That matters because it converts the biosignal lane from:
 
@@ -52,12 +52,13 @@ boundaries.
 | Lane sink receipt | `7` lane sink files received | no raw biometric payloads published |
 | Timing / quality guard | `0` drops and `0` sequence gaps in the closed segment gate | guard is engineering QA, not medical-device certification |
 | Multi-segment bridge | `468` rows across `2` recorded windows; `0` global gaps and `0` segment gaps | validates segment boundary handling, not population-scale performance |
+| Append-only live-row ingest bridge | `480` expected/source/guard/sink rows, `0` drops, `0` sequence gaps, source-disabled/on/off markers present, `8` lane sinks written | live-row software ingest over real state-frame rows, not direct live sensor capture |
 
 ## What The Gate Shows
 
 1. **B.A.S.I.S. state frames are routable.** The capture rows can be converted
-   into bounded state-frame events and passed through a streaming runtime
-   pattern.
+   into bounded state-frame events and passed through replay, segment, and
+   append-only live-row streaming runtime patterns.
 2. **Lane separation is preserved.** HRV, Muse-derived, quality, motion, and
    related lanes can be kept as named sink outputs instead of flattened into one
    opaque blob.
@@ -109,14 +110,16 @@ capture closes.
 The current support-bearing runtime claim is:
 
 ```text
-recorded B.A.S.I.S. state frames can pass through a Holoscan-style source,
-timing/quality guard, and lane sink path with sequence continuity preserved.
+recorded B.A.S.I.S. state frames can pass through Holoscan replay,
+multi-segment, and append-only live-row source paths with timing/quality guard
+checks, lane-separated sink receipts, source-control markers, and sequence
+continuity preserved.
 ```
 
 The stronger future claim requires:
 
 ```text
-live B.A.S.I.S. capture
+direct live B.A.S.I.S. device capture
 -> same-clock HRV + Muse + optional temperature sidecar
 -> Holoscan source adapter
 -> timing / quality guard
@@ -126,10 +129,14 @@ live B.A.S.I.S. capture
 
 ## Next Gate
 
-The next clean gate is the live-ingest version:
+The append-only live-row Holoscan bridge is now closed. The next clean gate is
+the direct live-device version:
 
 ```text
-live or freshly recorded B.A.S.I.S. rows
+direct live Muse / MoFit / optional Withings rows
+-> reset / power-state preflight
+-> source-disabled baseline
+-> source-on / source-off markers
 -> Holoscan source adapter
 -> timing / quality guard
 -> lane sink receipt

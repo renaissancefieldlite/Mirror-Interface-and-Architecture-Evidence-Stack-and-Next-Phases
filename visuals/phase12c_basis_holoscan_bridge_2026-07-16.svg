@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920" role="img" aria-labelledby="title desc">
   <title id="title">B.A.S.I.S. Holoscan Runtime Bridge</title>
-  <desc id="desc">Public-safe visual showing recorded B.A.S.I.S. state frames routed through a Holoscan source, timing guard, and lane sinks.</desc>
+  <desc id="desc">Public-safe visual showing recorded and append-only live-row B.A.S.I.S. state frames routed through a Holoscan source, timing guard, and lane sinks.</desc>
   <defs>
     <radialGradient id="bg" cx="68%" cy="24%" r="82%">
       <stop offset="0%" stop-color="#102b3e"/>
@@ -38,8 +38,8 @@
   </g>
 
   <text class="small" x="70" y="68">PHASE 12C / B.A.S.I.S. / HOLOSCAN PUBLIC-SAFE RUNTIME BRIDGE</text>
-  <text class="title" x="70" y="128">Recorded Biosignal State Frames Now Route Through A Runtime Bridge</text>
-  <text class="subtitle" x="72" y="166">The claim is engineering support: source adapter, timing guard, lane sinks, zero-drop receipts.</text>
+  <text class="title" x="70" y="128">Biosignal State Frames Now Route Through A Runtime Bridge</text>
+  <text class="subtitle" x="72" y="166">Recorded replay plus append-only live-row ingest: source adapter, timing guard, lane sinks, zero-drop receipts.</text>
 
   <rect class="boxHot" x="70" y="235" width="285" height="142"/>
   <text class="label" x="94" y="278">B.A.S.I.S. STATE FRAMES</text>
@@ -50,7 +50,7 @@
   <rect class="boxHot" x="555" y="235" width="285" height="142"/>
   <text class="label" x="579" y="278">HOLOSCAN SOURCE</text>
   <text class="text" x="579" y="316">recorded replay adapter</text>
-  <text class="text" x="579" y="347">1 ms source clock gate</text>
+  <text class="text" x="579" y="347">append-only live-row feed</text>
 
   <path class="flow" d="M855 306 C925 306,955 306,1025 306"/>
   <rect class="boxHot" x="1040" y="235" width="285" height="142"/>
@@ -61,8 +61,8 @@
   <path class="flow" d="M1180 390 C1180 455,1180 475,1180 530"/>
   <rect class="boxHot" x="1040" y="545" width="285" height="142"/>
   <text class="label" x="1064" y="588">LANE SINK RECEIPT</text>
-  <text class="text" x="1064" y="626">7 lane files received</text>
-  <text class="text" x="1064" y="657">HRV / Muse / quality lanes separated</text>
+  <text class="text" x="1064" y="626">8 lane files received</text>
+  <text class="text" x="1064" y="657">HRV / Muse / quality / source lanes separated</text>
 
   <rect class="box" x="70" y="455" width="280" height="185"/>
   <text class="label" x="94" y="498">SEGMENT BRIDGE</text>
@@ -77,15 +77,15 @@
   <text class="text" x="409" y="620">0 global gaps / 0 segment gaps</text>
 
   <rect class="box" x="700" y="455" width="280" height="185"/>
-  <text class="label" x="724" y="498">PUBLIC BOUNDARY</text>
-  <text class="text" x="724" y="540">no raw biometric export</text>
-  <text class="text" x="724" y="574">no device identifiers</text>
-  <text class="text" x="724" y="608">no clinical claim inflation</text>
+  <text class="label" x="724" y="498">LIVE-ROW INGEST</text>
+  <text class="num" x="724" y="560">480</text>
+  <text class="small" x="726" y="586">expected/source/guard/sink rows</text>
+  <text class="text" x="724" y="620">disabled / on / off markers present</text>
 
   <rect class="box" x="70" y="710" width="1255" height="92"/>
   <text class="label" x="94" y="750">NEST READ</text>
-  <text class="text" x="94" y="782">Nest 4 biology state rows now bridge into Nest 5 runtime routing. HRV + Muse remains support-bearing; Thermo stays sidecar until true same-clock triple closure.</text>
+  <text class="text" x="94" y="782">Nest 4 biology state rows now bridge into Nest 5 runtime routing. Public boundary: no raw biometrics, no device identifiers, no clinical claim inflation.</text>
 
   <line x1="70" y1="850" x2="1530" y2="850" stroke="#345d70" stroke-width="1"/>
-  <text class="footer" x="70" y="884">RENAISSANCE FIELD LITE / UNIVERSAL DATA PATTERN / RECORDED RUNTIME BRIDGE / PUBLIC-SAFE SUPPORT READ</text>
+  <text class="footer" x="70" y="884">RENAISSANCE FIELD LITE / UNIVERSAL DATA PATTERN / RECORDED + APPEND-ONLY LIVE-ROW RUNTIME BRIDGE / PUBLIC-SAFE SUPPORT READ</text>
 </svg>
