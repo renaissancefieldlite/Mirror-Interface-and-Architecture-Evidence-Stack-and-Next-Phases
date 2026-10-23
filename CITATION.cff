@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the versioned Zenodo preprint."
+title: "Mirror Architecture And The Universal Data Pattern"
+type: article
+version: 1.0.0
+date-released: 2026-10-23
+doi: 10.5281/zenodo.23602691
+url: "https://doi.org/10.5281/zenodo.23602691"
+repository-code: "https://github.com/renaissancefieldlite/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases"
+license: CC-BY-4.0
+authors:
+  - family-names: Patterson
+    given-names: Dean
+    affiliation: Renaissance Field Lite
+abstract: >-
+  A measured cross-disciplinary state architecture connecting the original
+  Mirror Interface and LSPS interaction surface to transformer state paths,
+  formal systems, structured matter, physical dynamics and solar mechanics,
+  biology, evidence convergence, and a controlled return into AI. The paper
+  distinguishes the 72-node Lattice Companion atlas, the recurring Universal
+  Data Pattern state relation, the substrate-native experimental method, and
+  typed evidence cards used for bounded reporting and return.
+keywords:
+  - Mirror Architecture
+  - Universal Data Pattern
+  - LSPS
+  - state-path architecture
+  - Nest 1-5
+  - B.A.S.I.S.
+  - Golden Mirror
+preferred-citation:
+  type: article
+  title: "Mirror Architecture And The Universal Data Pattern"
+  authors:
+    - family-names: Patterson
+      given-names: Dean
+  year: 2026
+  month: 10
+  day: 23
+  version: 1.0.0
+  publisher:
+    name: Zenodo
+  doi: 10.5281/zenodo.23602691

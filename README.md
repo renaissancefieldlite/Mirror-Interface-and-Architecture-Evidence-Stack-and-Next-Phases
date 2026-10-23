@@ -39,11 +39,19 @@ What the repository does:
 | `Cross-Nest Rails` | explains why physics, field, space-time, and spatial rows cut across multiple nests |
 | `Public Release Boundary` | keeps this repo public-safe while code, raw captures, dense exports, and claim-sensitive mechanics stay private |
 
+Full-arc v1.0 release:
+
+- [Universal Data Pattern Full Arc White Paper v1.0](./whitepaper/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_2026-07-16.md)
+- [Universal Data Pattern Full Arc White Paper v1.0 PDF](./output/pdf/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_V1_0_2026-10-23.pdf)
+- [Universal Data Pattern Full Arc Visual](./visuals/universal_data_pattern_full_arc_2026-07-16.svg)
+- [v1.0 Release Manifest](./docs/UNIVERSAL_DATA_PATTERN_FULL_ARC_V1_0_RELEASE_MANIFEST_2026-10-23.md)
+- [Zenodo DOI: 10.5281/zenodo.23602691](https://doi.org/10.5281/zenodo.23602691)
+
+The July review PDF remains in the repository as historical development
+evidence. The October v1.0 PDF is the release artifact.
+
 Newest seated evidence cards:
 
-- [Universal Data Pattern Full Arc White Paper Draft](./whitepaper/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_2026-07-16.md)
-- [Universal Data Pattern Full Arc White Paper Review PDF](./output/pdf/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_REVIEW_COPY_2026-07-16.pdf)
-- [Universal Data Pattern Full Arc Visual](./visuals/universal_data_pattern_full_arc_2026-07-16.svg)
 - [Phase 12C B.A.S.I.S. Holoscan Public-Safe Bridge Read](./docs/PHASE12C_BASIS_HOLOSCAN_PUBLIC_SAFE_BRIDGE_READ_2026-07-16.md)
 - [Phase 12C B.A.S.I.S. Holoscan Bridge Visual](./visuals/phase12c_basis_holoscan_bridge_2026-07-16.svg)
 - [Phase 12C B.A.S.I.S. Synchronized Manifest And Holoscan Next Gate](./docs/PHASE12C_BASIS_SYNC_MANIFEST_AND_HOLOSCAN_NEXT_GATE_2026-07-16.md)

@@ -23,9 +23,10 @@ or claim-sensitive mechanics without explicit clearance.
 
 | Closeout surface | Role |
 | --- | --- |
-| `../whitepaper/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_2026-07-16.md` | arXiv-style public-safe full-arc white paper draft for Mirror Architecture and Universal Data Pattern |
-| `../output/pdf/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_REVIEW_COPY_2026-07-16.pdf` | review-copy PDF generated from the public-safe full-arc white paper draft |
+| `../whitepaper/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_2026-07-16.md` | version 1.0 public-safe full-arc preprint for Mirror Architecture and Universal Data Pattern; DOI 10.5281/zenodo.23602691 |
+| `../output/pdf/UNIVERSAL_DATA_PATTERN_FULL_ARC_WHITE_PAPER_V1_0_2026-10-23.pdf` | visually verified 16-page version 1.0 release PDF |
 | `../visuals/universal_data_pattern_full_arc_2026-07-16.svg` | public visual map for the whole Universal Data Pattern arc |
+| `UNIVERSAL_DATA_PATTERN_FULL_ARC_V1_0_RELEASE_MANIFEST_2026-10-23.md` | version, DOI, release URLs, scope boundary, and SHA-256 release checksums |
 | `FINAL_NEST_CLOSEOUT_BOARD_2026-07-14.md` | lane-by-lane closed / support-bearing / pending-row / optional-extension map |
 | `NEST3_BACKFILL_CLOSEOUT_VERIFICATION_2026-07-14.md` | rerun verification for Fusion + Solar and Gases / Liquids / Phases hardening |
 | `../visuals/final_nest_closeout_board_2026-07-14.svg` | public visual board for the full Nest closeout state |

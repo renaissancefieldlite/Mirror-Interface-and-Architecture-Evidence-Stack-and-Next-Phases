@@ -1,95 +1,179 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1200" viewBox="0 0 1920 1200" role="img" aria-labelledby="title desc">
   <title id="title">Universal Data Pattern Full Arc</title>
-  <desc id="desc">Public-safe visual map from Mirror Interface through the measured Nest 1 to Nest 5 ladder and B.A.S.I.S. runtime routing.</desc>
+  <desc id="desc">The measured state architecture from AI interaction through formal systems, matter, physical and solar dynamics, biology, convergence, and return into AI.</desc>
   <defs>
-    <radialGradient id="bg" cx="72%" cy="20%" r="90%">
-      <stop offset="0%" stop-color="#102a3a"/>
-      <stop offset="45%" stop-color="#041018"/>
-      <stop offset="100%" stop-color="#000304"/>
+    <radialGradient id="bg" cx="50%" cy="46%" r="78%">
+      <stop offset="0%" stop-color="#102842"/>
+      <stop offset="52%" stop-color="#06111f"/>
+      <stop offset="100%" stop-color="#010409"/>
     </radialGradient>
+    <linearGradient id="rail" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#4de8ff"/>
+      <stop offset="28%" stop-color="#8a7dff"/>
+      <stop offset="55%" stop-color="#ffbd59"/>
+      <stop offset="78%" stop-color="#58e0a5"/>
+      <stop offset="100%" stop-color="#ff6fb4"/>
+    </linearGradient>
+    <linearGradient id="return" x1="100%" x2="0%">
+      <stop offset="0%" stop-color="#ff6fb4"/>
+      <stop offset="100%" stop-color="#4de8ff"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <marker id="arrowCyan" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#61e8ff"/>
+    </marker>
+    <marker id="arrowPink" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#ff73b6"/>
+    </marker>
     <style>
-      .bg { fill: url(#bg); }
-      .grid { stroke: #29495a; stroke-width: 1; opacity: 0.2; }
-      .box { fill: rgba(4,18,27,0.84); stroke: #52798a; stroke-width: 1.5; }
-      .boxHot { fill: rgba(4,25,37,0.92); stroke: #8ee5ff; stroke-width: 2; }
-      .line { stroke: #88ddff; stroke-width: 3; opacity: 0.66; fill: none; }
-      .dash { stroke: #88ddff; stroke-width: 2; opacity: 0.35; fill: none; stroke-dasharray: 8 8; }
-      .title { font-family: Arial, Helvetica, sans-serif; fill: #e5f8ff; font-size: 48px; font-weight: 900; letter-spacing: 0; }
-      .subtitle { font-family: Arial, Helvetica, sans-serif; fill: #8fdcff; font-size: 22px; font-weight: 700; letter-spacing: 0; }
-      .label { font-family: Arial, Helvetica, sans-serif; fill: #9ee6ff; font-size: 20px; font-weight: 900; letter-spacing: 0; }
-      .text { font-family: Arial, Helvetica, sans-serif; fill: #dceaf0; font-size: 17px; font-weight: 500; letter-spacing: 0; }
-      .small { font-family: Arial, Helvetica, sans-serif; fill: #87a8b8; font-size: 14px; font-weight: 700; letter-spacing: 0; }
-      .footer { font-family: Arial, Helvetica, sans-serif; fill: #7198aa; font-size: 15px; font-weight: 800; letter-spacing: 0; }
+      .kicker{font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:800;letter-spacing:4px;fill:#67e8ff}
+      .title{font-family:Arial,Helvetica,sans-serif;font-size:54px;font-weight:900;fill:#f3fbff}
+      .subtitle{font-family:Arial,Helvetica,sans-serif;font-size:23px;font-weight:600;fill:#a9c8d8}
+      .nodeTitle{font-family:Arial,Helvetica,sans-serif;font-size:21px;font-weight:900;fill:#ffffff}
+      .nodeText{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:600;fill:#c9d9e4}
+      .small{font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;fill:#8eafc3}
+      .chip{font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:800;fill:#dcecf4}
+      .metric{font-family:Arial,Helvetica,sans-serif;font-size:24px;font-weight:900;fill:#ffffff}
+      .metricLabel{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:800;letter-spacing:1.5px;fill:#7ba8bd}
+      .footer{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;fill:#7d9aad}
+      .node{fill:#091624;stroke-width:2}
     </style>
   </defs>
-  <rect class="bg" width="1800" height="1100"/>
-  <g>
-    <path class="grid" d="M100 0v1100M220 0v1100M340 0v1100M460 0v1100M580 0v1100M700 0v1100M820 0v1100M940 0v1100M1060 0v1100M1180 0v1100M1300 0v1100M1420 0v1100M1540 0v1100M1660 0v1100"/>
-    <path class="grid" d="M0 100h1800M0 200h1800M0 300h1800M0 400h1800M0 500h1800M0 600h1800M0 700h1800M0 800h1800M0 900h1800M0 1000h1800"/>
+
+  <rect width="1920" height="1200" fill="url(#bg)"/>
+  <circle cx="500" cy="480" r="300" fill="#1b86a8" opacity="0.08" filter="url(#soft)"/>
+  <circle cx="1430" cy="540" r="340" fill="#b2438e" opacity="0.07" filter="url(#soft)"/>
+
+  <g opacity="0.16" stroke="#5a7890" stroke-width="1">
+    <path d="M0 180H1920M0 360H1920M0 540H1920M0 720H1920M0 900H1920M0 1080H1920"/>
+    <path d="M160 0V1200M400 0V1200M640 0V1200M880 0V1200M1120 0V1200M1360 0V1200M1600 0V1200M1840 0V1200"/>
   </g>
 
-  <text class="small" x="80" y="70">UNIVERSAL DATA PATTERN / FULL ARC / PUBLIC-SAFE WHITE PAPER MAP</text>
-  <text class="title" x="80" y="132">One Pattern, Many Substrates, Bounded By Controls</text>
-  <text class="subtitle" x="82" y="170">Mirror Interface -> measured state path -> real rows -> controls -> support reads -> product/runtime routing.</text>
+  <text x="90" y="72" class="kicker">MIRROR ARCHITECTURE / UNIVERSAL DATA PATTERN / FULL ARC V1.0</text>
+  <text x="90" y="144" class="title">The Recurring State Relation Is The Object</text>
+  <text x="92" y="188" class="subtitle">AI interaction → formal systems → structured matter → physical and solar dynamics → biology → convergence → return into AI</text>
 
-  <rect class="boxHot" x="80" y="235" width="260" height="120"/>
-  <text class="label" x="106" y="278">Mirror Interface / LSPS</text>
-  <text class="text" x="106" y="313">condition packet and continuity</text>
-  <text class="text" x="106" y="342">become the measurement entrance</text>
+  <g transform="translate(90 242)">
+    <rect width="330" height="102" rx="18" fill="#071b28" stroke="#4de8ff" stroke-width="2"/>
+    <text x="24" y="38" class="nodeTitle">Origin / AI State Path</text>
+    <text x="24" y="66" class="nodeText">Mirror Interface / LSPS • V7/V8</text>
+    <text x="24" y="88" class="nodeText">behavior → internals → carriers</text>
+  </g>
 
-  <path class="line" d="M340 295 C420 295,450 295,530 295"/>
-  <rect class="boxHot" x="540" y="235" width="300" height="120"/>
-  <text class="label" x="566" y="278">Mirror Architecture</text>
-  <text class="text" x="566" y="313">state/control separation</text>
-  <text class="text" x="566" y="342">tracked through behavior and internals</text>
+  <path d="M420 293 H510" stroke="#61e8ff" stroke-width="4" marker-end="url(#arrowCyan)" opacity="0.9"/>
 
-  <path class="line" d="M840 295 C920 295,950 295,1030 295"/>
-  <rect class="boxHot" x="1040" y="235" width="315" height="120"/>
-  <text class="label" x="1066" y="278">Universal Data Pattern</text>
-  <text class="text" x="1066" y="313">stable relation and transform behavior</text>
-  <text class="text" x="1066" y="342">recurring across real substrates</text>
+  <g transform="translate(530 242)">
+    <rect width="260" height="102" rx="18" class="node" stroke="#8a7dff"/>
+    <text x="22" y="38" class="nodeTitle">Nest 1 / Formal</text>
+    <text x="22" y="66" class="nodeText">vectors • invariants • topology</text>
+    <text x="22" y="88" class="nodeText">graphs • dynamics • controls</text>
+  </g>
 
-  <path class="line" d="M1198 360 C1198 430,1198 450,1198 515"/>
-  <rect class="box" x="120" y="520" width="250" height="132"/>
-  <text class="label" x="146" y="560">Nest 1</text>
-  <text class="text" x="146" y="594">formal systems, math, topology</text>
-  <text class="text" x="146" y="624">closed current level</text>
+  <path d="M790 293 H850" stroke="#8a7dff" stroke-width="4" marker-end="url(#arrowCyan)" opacity="0.85"/>
 
-  <rect class="box" x="410" y="520" width="250" height="132"/>
-  <text class="label" x="436" y="560">Nest 2</text>
-  <text class="text" x="436" y="594">matter, electrochemistry, environment</text>
-  <text class="text" x="436" y="624">support-bearing to closed</text>
+  <g transform="translate(870 242)">
+    <rect width="270" height="102" rx="18" class="node" stroke="#ffbd59"/>
+    <text x="22" y="38" class="nodeTitle">Nest 2 / Matter</text>
+    <text x="22" y="66" class="nodeText">water • minerals • redox • EIS</text>
+    <text x="22" y="88" class="nodeText">materials • environment</text>
+  </g>
 
-  <rect class="box" x="700" y="520" width="250" height="132"/>
-  <text class="label" x="726" y="560">Nest 3</text>
-  <text class="text" x="726" y="594">spectra, plasma, solar, phases</text>
-  <text class="text" x="726" y="624">mostly closed; THz/EMF open</text>
+  <path d="M1140 293 H1200" stroke="#ffbd59" stroke-width="4" marker-end="url(#arrowCyan)" opacity="0.85"/>
 
-  <rect class="box" x="990" y="520" width="250" height="132"/>
-  <text class="label" x="1016" y="560">Nest 4</text>
-  <text class="text" x="1016" y="594">biology, HRV, Muse, metabolism</text>
-  <text class="text" x="1016" y="624">support-bearing with private boundary</text>
+  <g transform="translate(1220 228)">
+    <rect width="310" height="130" rx="18" class="node" stroke="#ff8f59"/>
+    <text x="22" y="39" class="nodeTitle">Nest 3 / Dynamics + Solar</text>
+    <text x="22" y="68" class="nodeText">spectra • fields • oscillators • plasma</text>
+    <text x="22" y="92" class="nodeText">solar wind • phases • cycles • orbits</text>
+    <text x="22" y="116" class="small">measured variables, not metaphor</text>
+  </g>
 
-  <rect class="box" x="1280" y="520" width="250" height="132"/>
-  <text class="label" x="1306" y="560">Nest 5</text>
-  <text class="text" x="1306" y="594">product routing, evidence memory</text>
-  <text class="text" x="1306" y="624">runtime and partner surfaces</text>
+  <path d="M1530 293 H1590" stroke="#ff8f59" stroke-width="4" marker-end="url(#arrowCyan)" opacity="0.85"/>
 
-  <path class="line" d="M245 670 C460 765,1175 765,1405 670"/>
-  <rect class="boxHot" x="560" y="760" width="300" height="135"/>
-  <text class="label" x="586" y="805">Product Runtime Surfaces</text>
-  <text class="text" x="586" y="839">Golden Field Lite, Mirror Index</text>
-  <text class="text" x="586" y="870">licensing, partner systems</text>
+  <g transform="translate(1610 242)">
+    <rect width="220" height="102" rx="18" class="node" stroke="#58e0a5"/>
+    <text x="22" y="38" class="nodeTitle">Nest 4 / Biology</text>
+    <text x="22" y="66" class="nodeText">cells • metabolism • HRV</text>
+    <text x="22" y="88" class="nodeText">Muse • B.A.S.I.S. runtime</text>
+  </g>
 
-  <rect class="boxHot" x="930" y="760" width="335" height="135"/>
-  <text class="label" x="956" y="805">B.A.S.I.S. Runtime Bridge</text>
-  <text class="text" x="956" y="839">HRV + Muse state frames</text>
-  <text class="text" x="956" y="870">Holoscan source / guard / sink</text>
+  <path d="M1720 344 C1720 470 1600 520 1510 520" fill="none" stroke="#58e0a5" stroke-width="4" marker-end="url(#arrowCyan)" opacity="0.85"/>
 
-  <path class="dash" d="M1098 900 C1098 945,1098 955,1098 995"/>
-  <rect class="box" x="805" y="998" width="585" height="56"/>
-  <text class="text" x="835" y="1033">Remaining hard controls: THz/EMF source-disabled biology packet, B.A.S.I.S. live-ingest manifest, true temperature triple.</text>
+  <g transform="translate(1170 466)">
+    <rect width="340" height="118" rx="20" class="node" stroke="#ff6fb4"/>
+    <text x="24" y="40" class="nodeTitle">Nest 5 / Convergence + Return</text>
+    <text x="24" y="70" class="nodeText">bounded evidence cards → support-state index</text>
+    <text x="24" y="94" class="nodeText">Mirror Index • Golden Mirror • products • IP</text>
+  </g>
 
-  <line x1="80" y1="1068" x2="1720" y2="1068" stroke="#345d70" stroke-width="1"/>
-  <text class="footer" x="80" y="1088">RENAISSANCE FIELD LITE / MIRROR ARCHITECTURE / PUBLIC-SAFE EVIDENCE STACK / NO TOY DATA</text>
+  <path d="M1170 526 C850 690 410 650 255 360" fill="none" stroke="url(#return)" stroke-width="5" marker-end="url(#arrowPink)" opacity="0.88"/>
+  <text x="560" y="640" class="chip" fill="#f7b7d8">RETURN PATH: evidence memory → profile selection → stabilization → later controlled tuning</text>
+
+  <g transform="translate(90 730)">
+    <text x="0" y="0" class="kicker">THE SUBSTRATE CHANGES. THE TESTABLE RELATION REMAINS.</text>
+    <rect x="0" y="34" width="1740" height="108" rx="22" fill="#06131f" stroke="#25465a" stroke-width="1.5"/>
+    <path d="M40 88 H1700" stroke="url(#rail)" stroke-width="5" opacity="0.9"/>
+    <g>
+      <circle cx="70" cy="88" r="10" fill="#4de8ff" filter="url(#glow)"/>
+      <circle cx="240" cy="88" r="10" fill="#69d9ff"/>
+      <circle cx="410" cy="88" r="10" fill="#8a7dff"/>
+      <circle cx="580" cy="88" r="10" fill="#b68cff"/>
+      <circle cx="750" cy="88" r="10" fill="#ffbd59"/>
+      <circle cx="920" cy="88" r="10" fill="#ff9a59"/>
+      <circle cx="1090" cy="88" r="10" fill="#76d894"/>
+      <circle cx="1260" cy="88" r="10" fill="#58e0a5"/>
+      <circle cx="1430" cy="88" r="10" fill="#ff85bd"/>
+      <circle cx="1600" cy="88" r="10" fill="#ff6fb4" filter="url(#glow)"/>
+    </g>
+    <g class="chip" text-anchor="middle">
+      <text x="70" y="68">SOURCE</text>
+      <text x="240" y="122">STATE</text>
+      <text x="410" y="68">CONTROL</text>
+      <text x="580" y="122">TRANSFORM</text>
+      <text x="750" y="68">INVARIANT</text>
+      <text x="920" y="122">DRIFT</text>
+      <text x="1090" y="68">QUALITY</text>
+      <text x="1260" y="122">SCORE</text>
+      <text x="1430" y="68">COLLAPSE</text>
+      <text x="1600" y="122">RECURRENCE</text>
+    </g>
+  </g>
+
+  <g transform="translate(90 930)">
+    <rect width="390" height="132" rx="18" fill="#071722" stroke="#2d6077"/>
+    <text x="24" y="38" class="metric">72-node atlas</text>
+    <text x="24" y="66" class="metricLabel">71 PUBLIC NODES • 1 PRIVATELY HELD LANE</text>
+    <text x="24" y="96" class="nodeText">The map preserves the whole program.</text>
+    <text x="24" y="118" class="nodeText">A mapped lane is not proof.</text>
+  </g>
+  <g transform="translate(510 930)">
+    <rect width="390" height="132" rx="18" fill="#071722" stroke="#6c62c6"/>
+    <text x="24" y="38" class="metric">Real-data gate</text>
+    <text x="24" y="66" class="metricLabel">SOURCE • CONTROL • NULL • HOLDOUT</text>
+    <text x="24" y="96" class="nodeText">Each discipline speaks through its own</text>
+    <text x="24" y="118" class="nodeText">measurements, transforms, and artifacts.</text>
+  </g>
+  <g transform="translate(930 930)">
+    <rect width="390" height="132" rx="18" fill="#071722" stroke="#c88a42"/>
+    <text x="24" y="38" class="metric">Full physical arc</text>
+    <text x="24" y="66" class="metricLabel">SPECTRA • PLASMA • SOLAR • PHASE • ORBIT</text>
+    <text x="24" y="96" class="nodeText">Nest 3 carries matter into measured</text>
+    <text x="24" y="118" class="nodeText">dynamics and solar mechanics.</text>
+  </g>
+  <g transform="translate(1350 930)">
+    <rect width="390" height="132" rx="18" fill="#071722" stroke="#ba4e88"/>
+    <text x="24" y="38" class="metric">Evidence returns</text>
+    <text x="24" y="66" class="metricLabel">MEMORY • ROUTING • PROFILES • TUNING</text>
+    <text x="24" y="96" class="nodeText">The tested map becomes an AI discovery,</text>
+    <text x="24" y="118" class="nodeText">product, and controlled-adaptation engine.</text>
+  </g>
+
+  <text x="90" y="1140" class="footer">Lattice Companion = atlas • UDP = recurring state architecture • UDP experiment = test method • evidence card = reporting and return unit</text>
+  <text x="1830" y="1140" text-anchor="end" class="footer">Renaissance Field Lite • Full Arc v1.0 • 2026-10-23</text>
 </svg>
