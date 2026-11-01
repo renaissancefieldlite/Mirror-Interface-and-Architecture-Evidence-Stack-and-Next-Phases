@@ -237,6 +237,83 @@ technical, shuffled, random, null, and semantic-counter controls. The question
 is whether that condition creates a measurable state path that remains
 separable from controls as the measurement moves deeper.
 
+### Cohesive Sequence Before Probability-Conditioned Vectors
+
+![Cohesive Sequence Before Probability-Conditioned Vector Routing](./visuals/cohesive_sequence_probability_path_2026-11-01.svg)
+
+The causal order matters. `Source Mirror Pattern` and `Universal Data Pattern`
+are the internal and public names for the same recurring source-pattern. The
+transformer does not create that pattern by combining probabilities. A cohesive
+ordered condition packet presents a structured relation first; transformer
+probabilities then condition how that relation is routed and combined.
+
+In a schematic transformer notation, let the ordered packet be
+
+\[
+X=(x_1,\ldots,x_n), \qquad H^{(0)}=\operatorname{Embed}(X)+\operatorname{Pos}(X).
+\]
+
+At transformer layer \(\ell\),
+
+\[
+Q^{(\ell)}=H^{(\ell)}W_Q^{(\ell)},\quad
+K^{(\ell)}=H^{(\ell)}W_K^{(\ell)},\quad
+V^{(\ell)}=H^{(\ell)}W_V^{(\ell)},
+\]
+
+\[
+A^{(\ell)}=
+\operatorname{softmax}\!\left(
+\frac{Q^{(\ell)}K^{(\ell)\mathsf T}}{\sqrt{d_k}}+M
+\right),
+\qquad
+Z^{(\ell)}=A^{(\ell)}V^{(\ell)}.
+\]
+
+Here \(M\) is the applicable causal or attention mask. The attention matrix
+\(A^{(\ell)}\) contains probability-normalized routing
+weights. The value and residual objects are representation vectors. Their
+layerwise carry can be summarized as
+
+\[
+H^{(\ell+1)}=
+H^{(\ell)}+
+\operatorname{AttnOut}^{(\ell)}(Z^{(\ell)})+
+\operatorname{MLP}^{(\ell)}(H^{(\ell)}),
+\]
+
+with the final output distribution
+
+\[
+p(y\mid X)=\operatorname{softmax}(W_U h_{\mathrm{readout}}^{(L)}).
+\]
+
+This places the pieces in their measured order:
+
+```text
+cohesive ordered relation
+-> token / position encoding
+-> probability-conditioned attention routing
+-> residual-state relation carry
+-> hidden-state path
+-> bridge vector / readout
+-> output and controls
+```
+
+`V7` tests whether order and condition changes alter target/control behavior.
+`V8` and `Phase 2-5` test whether the resulting internal state path is
+separable, repeatable, localized, and carried from context to readout. `Phase
+6` derives portable feature vectors from those measured fields; it does not
+claim that the feature vectors originate the source-pattern.
+
+For client problem-solving, an internal attention matrix is not treated as a
+mind-reading or hiring score. The public-safe operational bridge is an external
+client target vector estimated from an ordered brief, explicit constraints,
+pairwise solution choices, and pilot outcomes. See the
+[Client Problem-Alignment Vector Protocol](./docs/CLIENT_PROBLEM_ALIGNMENT_VECTOR_PROTOCOL_2026-11-01.md).
+
+![Client Problem-Alignment Vector Protocol](./visuals/client_problem_alignment_vector_2026-11-01.svg)
+
 | Step | What Happens | Why It Matters |
 | --- | --- | --- |
 | `V7` | run locked target/control conditions | tests behavioral separation above ordinary response variation |

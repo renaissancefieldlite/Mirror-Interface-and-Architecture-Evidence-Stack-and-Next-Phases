@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Client Problem-Alignment Vector Protocol</title>
+  <desc id="desc">Public-safe diagram showing ordered client evidence converted into a target criteria vector, evidence-backed candidate solution vectors, hard gates, pairwise calibration, a bounded pilot, and measured feedback.</desc>
+  <defs>
+    <radialGradient id="bg" cx="70%" cy="18%" r="92%">
+      <stop offset="0%" stop-color="#16344a"/>
+      <stop offset="46%" stop-color="#06151f"/>
+      <stop offset="100%" stop-color="#000304"/>
+    </radialGradient>
+    <linearGradient id="flow" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#72d5ff" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#9be8ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#72d5ff" stop-opacity="0.25"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8ee5ff"/>
+    </marker>
+    <style>
+      .bg { fill: url(#bg); }
+      .grid { stroke: #2b4f61; stroke-width: 1; opacity: 0.18; }
+      .box { fill: rgba(4,18,27,0.85); stroke: #557e8f; stroke-width: 1.5; }
+      .boxHot { fill: rgba(4,25,38,0.95); stroke: #92e7ff; stroke-width: 2.2; }
+      .gate { fill: rgba(33,19,12,0.93); stroke: #ffc777; stroke-width: 2; }
+      .flow { fill: none; stroke: url(#flow); stroke-width: 5; stroke-linecap: round; marker-end: url(#arrow); }
+      .feedback { fill: none; stroke: #86dafa; stroke-width: 2.5; stroke-dasharray: 10 9; opacity: 0.68; marker-end: url(#arrow); }
+      .title { font-family: Arial, Helvetica, sans-serif; fill: #e6f8ff; font-size: 48px; font-weight: 900; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; fill: #92ddf8; font-size: 22px; font-weight: 700; }
+      .label { font-family: Arial, Helvetica, sans-serif; fill: #a6ebff; font-size: 19px; font-weight: 900; }
+      .gateLabel { font-family: Arial, Helvetica, sans-serif; fill: #ffd69a; font-size: 19px; font-weight: 900; }
+      .text { font-family: Arial, Helvetica, sans-serif; fill: #dcebf1; font-size: 17px; font-weight: 500; }
+      .small { font-family: Arial, Helvetica, sans-serif; fill: #88aab9; font-size: 14px; font-weight: 700; }
+      .formula { font-family: Menlo, Consolas, monospace; fill: #f3fbff; font-size: 21px; font-weight: 700; }
+      .footer { font-family: Arial, Helvetica, sans-serif; fill: #739aaa; font-size: 15px; font-weight: 800; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1800" height="1100"/>
+  <g>
+    <path class="grid" d="M100 0v1100M220 0v1100M340 0v1100M460 0v1100M580 0v1100M700 0v1100M820 0v1100M940 0v1100M1060 0v1100M1180 0v1100M1300 0v1100M1420 0v1100M1540 0v1100M1660 0v1100"/>
+    <path class="grid" d="M0 100h1800M0 200h1800M0 300h1800M0 400h1800M0 500h1800M0 600h1800M0 700h1800M0 800h1800M0 900h1800M0 1000h1800"/>
+  </g>
+
+  <text class="small" x="76" y="64">CLIENT PROBLEM ALIGNMENT / PUBLIC-SAFE CALIBRATION / DIAGNOSTIC -> PILOT -> RECEIPT</text>
+  <text class="title" x="76" y="126">Turn An Ambiguous Client Problem Into A Measured Solution Path</text>
+  <text class="subtitle" x="78" y="166">The target vector represents problem-solving criteria—not mind reading, internal attention extraction, or hiring probability.</text>
+
+  <rect class="boxHot" x="75" y="220" width="330" height="180" rx="4"/>
+  <text class="label" x="102" y="261">ORDERED EVIDENCE PACKET</text>
+  <text class="text" x="102" y="297">problem -> outcome -> constraints</text>
+  <text class="text" x="102" y="328">evidence -> proof -> time/budget</text>
+  <text class="text" x="102" y="359">examples -> anti-examples -> ranking</text>
+
+  <path class="flow" d="M421 310 C460 310,485 310,524 310"/>
+  <rect class="boxHot" x="540" y="220" width="380" height="180" rx="4"/>
+  <text class="label" x="567" y="261">CLIENT TARGET VECTOR</text>
+  <text class="formula" x="567" y="304">q = (qO,qC,qE,qR,qT,qB,qA)</text>
+  <text class="formula" x="567" y="340">qi >= 0,   sum(qi) = 1</text>
+  <text class="text" x="567" y="368">outcome / constraints / evidence / risk</text>
+  <text class="small" x="567" y="391">time / budget / adoption</text>
+
+  <path class="flow" d="M936 310 C975 310,1000 310,1039 310"/>
+  <rect class="boxHot" x="1055" y="220" width="340" height="180" rx="4"/>
+  <text class="label" x="1082" y="261">CANDIDATE SOLUTION VECTORS</text>
+  <text class="formula" x="1082" y="304">sj in [0,1]^7</text>
+  <text class="text" x="1082" y="340">every score has evidence</text>
+  <text class="text" x="1082" y="374">missing facts remain unknown</text>
+
+  <path class="flow" d="M1411 310 C1450 310,1475 310,1514 310"/>
+  <rect class="gate" x="1530" y="220" width="200" height="180" rx="4"/>
+  <text class="gateLabel" x="1556" y="261">HARD GATE</text>
+  <text class="formula" x="1556" y="304">mj = 0 or 1</text>
+  <text class="text" x="1556" y="340">constraint failure</text>
+  <text class="text" x="1556" y="374">cannot hide in averages</text>
+
+  <rect class="box" x="75" y="480" width="520" height="170" rx="4"/>
+  <text class="label" x="102" y="522">EVIDENCE-RANKED FIT</text>
+  <text class="formula" x="102" y="565">Fj = mj q^T sj</text>
+  <text class="text" x="102" y="605">rank only after hard constraints pass</text>
+  <text class="small" x="102" y="632">Controls: shuffled order, paraphrase, anti-example, holdout candidate</text>
+
+  <path class="flow" d="M611 565 C660 565,690 565,739 565"/>
+  <rect class="box" x="755" y="480" width="560" height="170" rx="4"/>
+  <text class="label" x="782" y="522">PAIRWISE CALIBRATION</text>
+  <text class="formula" x="782" y="565">P(a &gt; b | q) = sigmoid(beta q^T(sa-sb))</text>
+  <text class="text" x="782" y="605">client chooses, explains, and exposes missing dimensions</text>
+  <text class="small" x="782" y="632">Update q, project to simplex, freeze a new version if the basis changes</text>
+
+  <path class="flow" d="M1331 565 C1380 565,1410 565,1459 565"/>
+  <rect class="boxHot" x="1475" y="480" width="255" height="170" rx="4"/>
+  <text class="label" x="1502" y="522">BOUNDED PILOT</text>
+  <text class="text" x="1502" y="565">one accepted path</text>
+  <text class="text" x="1502" y="600">one frozen success metric</text>
+  <text class="text" x="1502" y="630">one result receipt</text>
+
+  <path class="feedback" d="M1600 670 C1600 748,1330 785,1040 760 C750 735,450 740,240 670"/>
+
+  <rect class="boxHot" x="75" y="760" width="1655" height="150" rx="4"/>
+  <text class="label" x="102" y="804">PAID ENGAGEMENT PATH</text>
+  <text class="formula" x="102" y="846">fit screen -> paid diagnostic -> solution-path sprint -> bounded pilot -> implementation decision</text>
+  <text class="text" x="102" y="883">Proof of value: recover the problem accurately, predict the preferred path, test it, and return a measurable result.</text>
+
+  <rect class="box" x="325" y="940" width="1150" height="70" rx="4"/>
+  <text class="text" x="375" y="982">Hiring evidence = accepted diagnostic, approved pilot, contract, or payment receipt. The vector alone is not a sale.</text>
+
+  <line x1="76" y1="1030" x2="1724" y2="1030" stroke="#355f72" stroke-width="1"/>
+  <text class="footer" x="76" y="1065">RENAISSANCE FIELD LITE / CLIENT PROBLEM-ALIGNMENT VECTOR / OBSERVABLE CHOICES -> CALIBRATED PATH -> MEASURED PILOT</text>
+</svg>

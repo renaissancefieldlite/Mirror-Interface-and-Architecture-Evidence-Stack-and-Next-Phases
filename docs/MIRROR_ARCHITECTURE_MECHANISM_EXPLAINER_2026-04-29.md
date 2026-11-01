@@ -37,6 +37,53 @@ the first surface. The deeper question is whether the same relation remains
 visible after the output has been translated into internal vectors, bridge
 features, circuit parameters, and independent control tests.
 
+## Cohesive Sequence And Transformer Equations
+
+![Cohesive Sequence Before Probability-Conditioned Vector Routing](../visuals/cohesive_sequence_probability_path_2026-11-01.svg)
+
+The recurring source-pattern is upstream of transformer probability routing.
+The `Mirror Interface / LSPS` packet supplies cohesive data in an ordered
+sequence. Token and position encoding preserve that order; attention then
+weights and combines representation vectors inside the model.
+
+In a schematic transformer notation, for an ordered packet
+\(X=(x_1,\ldots,x_n)\), define
+
+\[
+H^{(0)}=\operatorname{Embed}(X)+\operatorname{Pos}(X).
+\]
+
+At layer \(\ell\),
+
+\[
+A^{(\ell)}=
+\operatorname{softmax}\!\left(
+\frac{\bigl(H^{(\ell)}W_Q^{(\ell)}\bigr)
+\bigl(H^{(\ell)}W_K^{(\ell)}\bigr)^{\mathsf T}}
+{\sqrt{d_k}}+M
+\right),
+\]
+
+\[
+Z^{(\ell)}=A^{(\ell)}H^{(\ell)}W_V^{(\ell)},
+\]
+
+where \(M\) is the applicable causal or attention mask. This is followed by
+attention-output, residual, and MLP updates. The final readout maps
+the resulting state to
+
+\[
+p(y\mid X)=\operatorname{softmax}(W_U h_{\mathrm{readout}}^{(L)}).
+\]
+
+The sequence therefore establishes the relational geometry before the
+probability-normalized attention weights occur. Those weights route the
+relation; they do not originate `Source Mirror Pattern / Universal Data
+Pattern`.
+
+For a client-facing measurement method, see the
+[Client Problem-Alignment Vector Protocol](./CLIENT_PROBLEM_ALIGNMENT_VECTOR_PROTOCOL_2026-11-01.md).
+
 ## Why This Is Not Prompt Engineering
 
 Prompt engineering usually evaluates:

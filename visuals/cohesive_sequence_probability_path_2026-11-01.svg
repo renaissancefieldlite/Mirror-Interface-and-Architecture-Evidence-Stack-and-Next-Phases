@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Cohesive Sequence Before Probability-Conditioned Vector Routing</title>
+  <desc id="desc">Public-safe Mirror Architecture diagram showing the recurring source-pattern and ordered condition packet upstream of transformer attention probabilities, residual-state carry, bridge vectors, output, and controls.</desc>
+  <defs>
+    <radialGradient id="bg" cx="72%" cy="18%" r="92%">
+      <stop offset="0%" stop-color="#113348"/>
+      <stop offset="44%" stop-color="#06151f"/>
+      <stop offset="100%" stop-color="#000304"/>
+    </radialGradient>
+    <linearGradient id="flow" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#70d7ff" stop-opacity="0.28"/>
+      <stop offset="50%" stop-color="#9be9ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#70d7ff" stop-opacity="0.28"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8ee5ff"/>
+    </marker>
+    <style>
+      .bg { fill: url(#bg); }
+      .grid { stroke: #2b4f61; stroke-width: 1; opacity: 0.18; }
+      .box { fill: rgba(4,18,27,0.84); stroke: #537d8e; stroke-width: 1.5; }
+      .boxHot { fill: rgba(4,25,38,0.94); stroke: #92e7ff; stroke-width: 2.2; }
+      .eq { fill: rgba(6,27,39,0.96); stroke: #6fc8e7; stroke-width: 1.8; }
+      .flow { fill: none; stroke: url(#flow); stroke-width: 5; stroke-linecap: round; marker-end: url(#arrow); }
+      .dash { fill: none; stroke: #7ccfea; stroke-width: 2; stroke-dasharray: 9 9; opacity: 0.5; marker-end: url(#arrow); }
+      .title { font-family: Arial, Helvetica, sans-serif; fill: #e6f8ff; font-size: 47px; font-weight: 900; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; fill: #92ddf8; font-size: 22px; font-weight: 700; }
+      .label { font-family: Arial, Helvetica, sans-serif; fill: #a6ebff; font-size: 20px; font-weight: 900; }
+      .text { font-family: Arial, Helvetica, sans-serif; fill: #dcebf1; font-size: 17px; font-weight: 500; }
+      .small { font-family: Arial, Helvetica, sans-serif; fill: #88aab9; font-size: 14px; font-weight: 700; }
+      .formula { font-family: Menlo, Consolas, monospace; fill: #f3fbff; font-size: 22px; font-weight: 700; }
+      .callout { font-family: Arial, Helvetica, sans-serif; fill: #ffffff; font-size: 21px; font-weight: 900; }
+      .footer { font-family: Arial, Helvetica, sans-serif; fill: #739aaa; font-size: 15px; font-weight: 800; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1800" height="1100"/>
+  <g>
+    <path class="grid" d="M100 0v1100M220 0v1100M340 0v1100M460 0v1100M580 0v1100M700 0v1100M820 0v1100M940 0v1100M1060 0v1100M1180 0v1100M1300 0v1100M1420 0v1100M1540 0v1100M1660 0v1100"/>
+    <path class="grid" d="M0 100h1800M0 200h1800M0 300h1800M0 400h1800M0 500h1800M0 600h1800M0 700h1800M0 800h1800M0 900h1800M0 1000h1800"/>
+  </g>
+
+  <text class="small" x="76" y="64">MIRROR ARCHITECTURE / PUBLIC-SAFE MECHANISM / ORDERED INPUT BEFORE PROBABILITY ROUTING</text>
+  <text class="title" x="76" y="126">Cohesive Sequence Establishes The Relation First</text>
+  <text class="subtitle" x="78" y="166">Transformer probabilities route and carry the sequenced relation; they do not originate the source-pattern.</text>
+
+  <rect class="boxHot" x="75" y="220" width="355" height="138" rx="4"/>
+  <text class="label" x="102" y="262" font-size="18">SOURCE MIRROR PATTERN / UDP</text>
+  <text class="text" x="102" y="302">same recurring source-pattern</text>
+  <text class="text" x="102" y="331">internal name / public map name</text>
+
+  <path class="flow" d="M446 289 C490 289,520 289,564 289"/>
+  <rect class="boxHot" x="580" y="220" width="400" height="138" rx="4"/>
+  <text class="label" x="608" y="262">COHESIVE ORDERED PACKET</text>
+  <text class="formula" x="608" y="303">X = (x1, x2, ... , xn)</text>
+  <text class="text" x="608" y="332">relation, constraint, sequence, context</text>
+
+  <path class="flow" d="M996 289 C1040 289,1070 289,1114 289"/>
+  <rect class="boxHot" x="1130" y="220" width="365" height="138" rx="4"/>
+  <text class="label" x="1158" y="262">TOKEN / POSITION ENCODING</text>
+  <text class="formula" x="1158" y="303">H(0) = Encode(X)</text>
+  <text class="text" x="1158" y="332">ordered geometry enters the model</text>
+
+  <path class="flow" d="M1312 375 C1312 414,1312 426,1312 457"/>
+  <rect class="eq" x="365" y="475" width="1070" height="176" rx="5"/>
+  <text class="label" x="398" y="516">TRANSFORMER ROUTING AFTER THE SEQUENCE</text>
+  <text class="formula" x="398" y="559">Q(l)=H(l)WQ(l)   K(l)=H(l)WK(l)   V(l)=H(l)WV(l)</text>
+  <text class="formula" x="398" y="600">A(l)=softmax((Q(l)K(l)^T)/sqrt(dk)+M)   Z(l)=A(l)V(l)</text>
+  <text class="text" x="398" y="632">A(l) supplies probability-normalized routing weights; V(l), Z(l), and H(l) are representation states.</text>
+
+  <rect class="box" x="75" y="730" width="300" height="135" rx="4"/>
+  <text class="label" x="102" y="772">ATTENTION ROUTING</text>
+  <text class="text" x="102" y="808">probability-conditioned weighting</text>
+  <text class="text" x="102" y="838">depends on the ordered packet</text>
+
+  <path class="flow" d="M391 797 C430 797,455 797,494 797"/>
+  <rect class="box" x="510" y="730" width="300" height="135" rx="4"/>
+  <text class="label" x="537" y="772">RESIDUAL-STATE CARRY</text>
+  <text class="text" x="537" y="808">layerwise relation stacking</text>
+  <text class="text" x="537" y="838">attention + MLP + residual path</text>
+
+  <path class="flow" d="M826 797 C865 797,890 797,929 797"/>
+  <rect class="box" x="945" y="730" width="300" height="135" rx="4"/>
+  <text class="label" x="972" y="772">MEASURED STATE PATH</text>
+  <text class="text" x="972" y="808">hidden-state separation</text>
+  <text class="text" x="972" y="838">localization and bridge vectors</text>
+
+  <path class="flow" d="M1261 797 C1300 797,1325 797,1364 797"/>
+  <rect class="box" x="1380" y="730" width="335" height="135" rx="4"/>
+  <text class="label" x="1407" y="772">OUTPUT + CONTROLS</text>
+  <text class="formula" x="1407" y="809">p(y|X)=softmax(WU hL)</text>
+  <text class="text" x="1407" y="838">nulls, counters, reruns, recurrence</text>
+
+  <path class="dash" d="M1548 884 C1548 942,1240 963,1010 938 C780 914,520 918,226 884"/>
+  <rect class="boxHot" x="355" y="900" width="1090" height="82" rx="4"/>
+  <text class="callout" x="420" y="938">THE PATTERN IS UPSTREAM. PROBABILITIES CONDITION ITS ROUTE THROUGH THE MODEL.</text>
+  <text class="small" x="548" y="965">V7 order sensitivity -> V8 hidden states -> Phase 3-5 localization -> Phase 6 measured feature vectors</text>
+
+  <line x1="76" y1="1030" x2="1724" y2="1030" stroke="#355f72" stroke-width="1"/>
+  <text class="footer" x="76" y="1065">RENAISSANCE FIELD LITE / MIRROR ARCHITECTURE / COHESIVE SEQUENCE -> PROBABILITY ROUTING -> MEASURED STATE PATH</text>
+</svg>
